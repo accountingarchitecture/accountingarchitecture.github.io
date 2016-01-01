@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>ACCT 4020</title>
+
+	<link rel="icon" href="images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+	<!-- Personalized CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+	<div class="slides">
+		<section>
+			<h2>Storage Solutions</h2>
+		</section>
+
+		<section>
+			<h3>Accounting Architecture</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>Unlike most other Information and Technology aspects of the Architecture, Storage is not a discrete topic. Instead, it overlaps with the other Technology blocks: Hardware, Software and Services.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Not a Repeat Discussion</h3>
+			<p>When discussing the Information section, we addressed issues involving storage and storage diagramming. The goal is not to repeat those items, but rather to introduce technologies that implement the earlier storage concepts, as well as tools to interact with information system storage setups. That being said, because of the high level of conceptual overlap between Information Maintenance and Technology Storage, it is difficult to cleanly separate the two. After all, at what point is the transition between principle and implementation?</p>
+		</section>
+
+		<section>
+			<h3>Big Picture</h3>
+			<img src="images/data-warehouse.jpg" alt="Data Warehouse"/>
+		</section>
+
+		<section>
+			<h3>ILC at Work</h3>
+			<p>This big picture illustration demonstrates an implementation of the  information life cycle. First, externally facing and department-specific databases support specialized data entry. Second, one large-scale data store receives a copy of the data from each first-stage database and stores them in a centralized location. Third, the data warehouse apportions the data back to departments based on need.</p>
+		</section>
+
+		<section>
+			<h3>OLTP</h3>
+			<p><u><i>Online Transaction Processing</i></u> (OLTP) is a database designed to process high-frequency transactions. We need to understand some control concepts to understand what constitutes a transaction, but for now, any financial transaction as understood by accountants can serve as a fitting example. Because this data store must be fast and scalable, NoSQL is a popular solution.</p>
+		</section>
+
+		<section>
+			<h3>Data Warehouse</h3>
+			<p>The <u><i>data warehouse</i></u> stores a copy of the data from each of the transaction processing systems. Because the transaction systems are different, data conversion is necessary again here in order to create a uniform dataset in this store. A <u><i>staging area</i></u> can store data during the conversion process. I would assert that relational databases are popular for data warehouses.</p>
+		</section>
+
+		<section>
+			<h3>Data Mart</h3>
+			<p>A <u><i>data mart</i></u> is little more than a specialized data warehouse that stores yet another copy of the data for specific use. For example, the marketing department many require different information than the production department, and separate marts can provide these departments access to the specific data each needs.</p>
+		</section>
+
+		<section>
+			<h3>Wait... Why?</h3>
+			<p>First, why would we need to store the data twice, and second, why would we do that if it requires additional data conversion, and third, why would we allow the transaction processing systems to store data in different forms if we intended to combine them in a data warehouse, anyway?</p>
+			<p>The answer to the third question is that the two systems have different priorities. The answer to the two other questions deals with control activities, which we will discuss later.</p>
+		</section>
+		
+		<section>
+			<h3>File Partitions</h3>
+			<p>When implementing any storage solution, a first consideration is the file system partitions. This determines how the data is stored on the physical drives. Different operating systems support different partition formats (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD), and the benefits and drawbacks of the various choices are too technical for our purposes.</p>
+		</section>
+		
+		<section>
+		  <h3>Partition Table</h3>
+		  <p>A <u><i>partition table</i></u> describes the disk partitions and is necessary in order to add partitions to a disk. Historically, the most common partition table was <u><i>Master Boot Record</i></u> (MBR), but it has been progressively superceded by <u><i>GUID Partition Table</i></u> (GPT), which is a part of UEFI. Whereas MBR supports four primary partitions&mdash;it is possible to extend this by adding logical partitions&mdash;and 2 TB, GPT supports 128 primary partitions and 9.4 ZB or 9,400,000,000 TB. BSD instead uses BSD disklabel.</p>
+		</section>
+		
+		<section>
+			<h3>RAID</h3>
+			<p>The physical view of storage is the data as stored on the physical media. The logical view is the data as software portrays it. Redundant Array of Independent Disks (RAID) is one example of a logical data view. RAID allows a system to use discrete physical drives as unified storage. The file partition then sits on top of the RAID.</p>
+		</section>
+
+		<section>
+			<h3>RAID 0</h3>
+			<p>RAID can take on many forms, and each setup has a number. RAID 0 involves combining two drives into one <em>stripe</em> allowing the user to interact with a single drive.</p>
+		</section>
+
+		<section>
+			<h3>Hardware-level RAID Controllers</h3>
+			<p>Three different devices can create a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
+		</section>
+		
+		<section>
+		  <h3>Software-level RAID Controllers</h3>
+		  <p>In two prior cases, any operating system on the hardware will only see the RAID and not the drives. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the drives and creates and manages the RAID. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID, but it has one glaring problem. The computer can only have one operating system at a time.</p>
+		</section>
+		
+		<section>
+		  <h3>Dual Booting</h3>
+		  <p>In addition to virtualizing one operating system within another, it is possible to install multiple operating systems on different partitions or even different drives on the same computer and select one of the operating systems at boot. This is called <u><i>dual booting</i></u> because it usually involves two operating systems. More than two is possible (e.g., triple booting), but that is much more rare. This is not a mission-critical, but rather a hobby, activity because virtualization is almost always sufficient for everything except gaming.</p>
+		</section>
+
+		<section>
+		  <h3>Logical Volume Management</h3>
+			<p>Another form of logical storage is <u><i>Logical Volume Management</i></u> (LVM). Physical volumes are made up of individual <u><i>extents</i></u>, which are very small blocks of data. Physical partitions group these extents together into one group, but LVM can create logical volumes&mdash;different from logical partitions&mdash;that can pull physical extents from any volume in the volume group. This allows logical partitions to stripe, grow and shrink as needed, whereas physical partitions have a static size.</p>
+		</section>
+		
+		<section>
+		  <h3>LVM</h3>
+		  <!--CC BY-SA 3.0 Attribution: Soverton71-->
+			<img src="images/lvm.png" alt="LVM"/>
+		</section>
+
+		<section>
+			<h3>Database Solutions</h3>
+			<p>Several popular relational database management systems (RDBMS), as well as non-relational database systems exist. Although these have historically been proprietary, almost all new database systems are open source.</p>
+			<div class="flex-row" style="-webkit-align-items: flex-start; align-items: flex-start">
+				<div class="flex-item">
+  			  <p>Relational</p>
+  			  <ul>
+  			    <li>IBM DB2</li>
+  			    <li>Oracle DB</li>
+  			    <li>Microsoft SQL Server</li>
+  			    <li>MySQL</li>
+  			    <li>PostgreSQL</li>
+  			  </ul>
+				</div>
+				<div class="flex-item">
+  			  <p>Nonrelational</p>
+  			  <ul>
+  			    <li>MongoDB (Document store)</li>
+  			    <li>Cassandra (Wide column store)</li>
+  			    <li>CouchDB (Document store)</li>
+  			    <li>HBase (Wide column store)</li>
+  			  </ul>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Data Types</h3>
+			<p>Data stores, especially relational databases, may require data to have a certain type. This type determines the characteristics of the data, as well as any available operations. The most basic data types are referred to as primitives:</p>
+			<div class="table" style="border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Type name</div>
+					<div class="table-cell" style="font-weight: bold">Usage</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">Boolean</div>
+					<div class="table-cell">True/False</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">Char</div>
+					<div class="table-cell">Single alphanumeric character</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">String</div>
+					<div class="table-cell">Series of chars</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">Integer, Long</div>
+					<div class="table-cell">Whole number</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">Float, Double</div>
+					<div class="table-cell">Decimal number</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>SQL</h3>
+			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases. Although the name NoSQL literally stands for "Not Only SQL," many NoSQL databases have no support for SQL, and instead rely on other languages, such as Java, JavaScript and Python for data manipulation. One exception is Apache Cassandra, which can use either Java or CQL (Cassandra Query Language), which is a derivative of SQL. Because of the prevalence of relational databases and its ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
+		</section>
+
+    <section>
+      <h2>Cloud Computing</h2>
+    </section>
+
+		<section>
+			<h3>Accounting Architecture</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>It is convenient to discuss the Services block at the same time as the Storage block because the most important manifestation of Services is cloud computing, which relies heavily on centralized storage.</p>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+		  <h3>WWW Cloud</h3>
+		  <p>Cloud computing is a return to the traditional client-server model of dumb terminals and mainframes. However, the current iteration involves more servers and more powerful clients, but the model continues to rely on centralized storage and processing power. That is fundamentally the definition of cloud computing. End-users take this model for granted, but the World Wide Web itself is an example of cloud computing. In fact, all clouds rely on either the Internet or a LAN.</p>
+		</section>
+
+		<section>
+		  <h3>Enterprise Resource Planning</h3>
+		  <p><u><i>Enterprise Resource Planning</i></u> (ERP) is an early example of cloud computing. The goal of ERP systems was to have centralized data stores, as well as end-user applications and data entry systems with a uniform appearance, for tracking business and accounting data. Oracle and SAP are prominent vendors in this arena, and Peoplesoft had been prior to its acquisition by Oracle. </p>
+		</section>
+		
+		<section>
+		  <h3>ERP Fever</h3>
+		  <p>Companies hastily adopted ERPs in the 1990s in the hope that they would increase profitability. Unfortunately, the difficulty of implementation paired with the rigidity of the software&mdash;ERPs expected uniform business process, which is not a realistic requirement&mdash;rendered several implementations costly (&gt;$100 million) and useless. Despite this fact, many ERP systems are still in use today.</p>
+		</section>
+		
+		<section>
+		  <h3>From Freedom Came Freedom</h3>
+		  <p>One of the benefits of the more general cloud computing model of today is that firms can, in large part due to the prominence of open source cloud software, readily adapt clouds to their individual needs. Clouds continue to be complex solutions, but the freedom from vendor lock-in, as well as the benefit of crowdsourced software, has given companies the ability to use clouds for more than traditional business and accounting data and to apply them to any business model and process.</p>
+		</section>
+		
+		<section>
+		  <h3>Service Levels</h3>
+			<div class="flex-row">
+  		  <!--CC BY-SA 3.0 Attribution: Sam Johnston-->
+  		  <div class="flex-item override"><img src="images/cloud.png" alt="Cloud Computing"/></div>
+				<div class="flex-item" style="max-width: 50%">
+  		  <p>Cloud computing involves three primary levels: <i><u>Infrastructure as a Service</u></i> (IaaS), <i><u>Platform as a Service</u></i> (PaaS) and <i><u>Software as a Service</u></i> (SaaS). However, thanks to innovations in virtualization technologies, it is increasingly feasible to provide almost any component of the information system as a service (load balancing, database, etc).</p>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+		  <h3>What Are These Services?</h3>
+		  <p>Although the offerings for each of these services include multiple technical terms, a simple approximation of each service level exists:</p>
+		  <ul>
+		    <li>IaaS: One or more virtual machines paired with storage and networking resources. IaaS can serve the same purpose as server hardware.</li>
+		    <li>PaaS: A web server, database and development environment. These tools are usually for application development.</li>
+		    <li>SaaS: A single application and sometimes a database backend. This is the service level that is most familiar to end users. In essence, most web content is SaaS.</li>
+		  </ul>
+		</section>
+		
+		<section>
+		  <h3>Containerization</h3>
+		  <p>Historically, in order to provide Software as a Service, cloud hardware needed to virtualize an entire operating system, which can be very inefficient. Recently, containerization technology has allowed for one host operating system to virtualize tiny guests comprising just enough operating system to run a single application while maintaining segregation between these applications. Docker is the leader in containerization software, but the idea has existed in some form for decades, including BSD jails, chroot and Linux Containers (LXC).</p>
+		</section>
+		
+		<section>
+		  <h3>Public and Private</h3>
+		  <p>These three service levels are available on both public and private clouds. With public clouds, vendors own the computer hardware and rent access to customers, so that customers can avoid the cost of the hardware, as well as the cost of the IT staff to maintain the hardware. Popular public cloud providers include Amazon Web Services (AWS), Microsoft Azure and Google App Engine. With private clouds, companies own the hardware and use the cloud to centralize computing resources for internal systems. Private clouds are more secure, and they avoid vendor lock-in and subscription fees. CloudStack is the leader in private cloud solutions.</p>
+		</section>
+		
+		<section>
+		  <h3>Hybrid Clouds</h3>
+		  <p>Because of a surge in the popularity of private clouds, public cloud vendors have attempted to alter their offerings to combine the benefits of private clouds with public clouds, the most important benefit being security. These modified offerings are called hybrid clouds.</p>
+		</section>
+
+		<section>
+			<h3>Homework Assignment</h3>
+			<p>Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp">W3Schools</a>. On the SQL Quiz results screen, select &ldquo;Check your answers&rdquo; and print the feedback to PDF. Upload that PDF file to Dropbox. Although it is possible to print a web page to PDF from any browser, you may find this easiest if you use Chrome.</p>
+		</section>
+
+	</div>
+	</div>
+
+	<script src="reveal.js/lib/js/head.min.js"></script>
+	<script src="reveal.js/js/reveal.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
