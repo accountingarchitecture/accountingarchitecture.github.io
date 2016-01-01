@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>ACCT 4020</title>
+
+	<link rel="icon" href="images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+	<!-- Personalized CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+	<div class="slides">
+		<section>
+			<h2>Business Process Diagrams</h2>
+		</section>
+
+		<section>
+			<h3>Accounting Architecture</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>As we begin our discussion of the arch, we first focus on the foundation. Accountants must measure the activities in the business model, and in order to understand those activities, we must add a tool to our toolkit.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Diagram</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width:50%">
+					<p>A visual representation of logic useful for communicating a series of processes in an efficient manner.</p>
+				</div>
+				<div class="flex-item"><img src="images/accounting-curriculum.png" alt="Ungraduate Accounting Curriculum" style="max-height: 600px"/>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+			<h3>Diagrams in Action</h3>
+			<div class="flex-row" style="-webkit-justify-content: flex-start; justify-content: flex-start">
+				<div class="flex-item" style="max-width: 90%"><blockquote>I'm going to make a flow process chart for each of the parts that make up the gun. These charts will show, step by step, how the part is made.<br>&ndash; Alan Mogensen</blockquote></div>
+			</div>
+			<div class="flex-row" style="-webkit-justify-content: flex-end; justify-content: flex-end">
+				<div class="flex-item" style="max-width: 90%"><blockquote>I made the chart and I found out that we were doing some dumb stupid things that I didn't realize we were doing so we're fixing them.<br>&ndash; Remington Arms Company foreman</blockquote></div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Two Types of Models</h3>
+			<ul>
+				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
+				<li><u><i>Structure models</i></u> describe the characteristics of people, assets and data and their relationships with one another.</li>
+			</ul>
+			<p>Business process modeling relies on activity models. Later in the course, when we discuss data storage, we will investigate structure models as a tool for modeling data and databases.</p>
+		</section>
+
+		<section>
+			<h3>Modeling Standards</h3>
+			<p>Although many diagramming frameworks exist, we will focus on four well-known options:</p>
+			<ul>
+				<li>Flowchart</li>
+				<li>Data flow diagram (DFD)</li>
+				<li>Unified Modeling Language (UML) Activity Diagram</li>
+				<li>Business Process Model and Notation (BPMN)</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Flowcharts</h3>
+			<ul>
+				<li>1921: Frank Gilbreth introduces flow process charts to the American Society of Mechanical Engineers.</li>
+				<li>1930s: Allan Mogensen begins training business people to use flow process charts.</li>
+				<li>1944: Ben Graham modifies single-flow process charts into multi-flow process charts to accommodate multiple document flows in information processing.</li>
+				<li>1949: Douglas Hartree publishes a flowchart to plan computer programs.</li>
+				<li>1969: IBM introduces the set of flowcharting symbols that we continue to use today.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Multiple Types</h3>
+			<p>Disagreement exists over the number of different types of flowcharts, but IBM proposed two types:</p>
+			<ul>
+				<li><u><i>System flowcharts</i></u> show the flow of data through the system and the controls at the physical level that ensure process integrity.</li>
+				<li><u><i>Program flowcharts</i></u> show the flow of data through a program and the program controls that ensure data integrity.</li>
+			</ul>
+			<p>The relevant distinction between these two is that one is micro (program) and one is macro (system) as a system can contain multiple programs. In the context of business processes, existing accounting systems textbooks teach system flowcharts.</p>
+		</section>
+
+		<section>
+			<h3>What is a Process?</h3>
+			<p>Processes are individual activities in a system, such as prepare sales order, issue payment or update general ledger. Processes are also the entire sequence of events, such as the payroll process. Unfortunately, process has two meanings, so it is important not to become confused.</p>
+		</section>
+
+		<section>
+			<h3>What is Control?</h3>
+			<p>Process and data integrity are necessary traits of a business process, and as a result, control is an important concept. However, control has two different meanings in diagramming, and it is not feasible to understand a diagram without understanding these two concepts.</p>
+		</section>
+
+		<section>
+			<h3>Control vs. Control Flow</h3>
+			<ul>
+				<li><u><i>Controls</i></u> are checks that ensure accuracy and integrity. At the program level, these may involve verifying completeness of a file before and after processing. At the system level, these may include checking for credit worthiness before authorizing a sale on credit or requiring two signatures on all checks.</li>
+				<li><u><i>Control flow</i></u> tracks the execution of a process as if it were a turn-based activity. Control is had by the current step in the process. Data may flow in and out of other steps, no steps in the process should execute until control has passed on to them. For example, accounts payable may receive a purchase order but may not pay until control has passed to the proper step after receiving the goods and an invoice.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>IBM Template</h3>
+			<img src="images/flowchart-template.jpg" style="max-height: 600px;" alt="IBM Template"/>
+		</section>
+
+		<section>
+			<h3>Flowchart Shapes</h3>
+			<div class="override"><img src="images/Flowchart.png" alt="Flowchart Shapes"/></div>
+		</section>
+
+		<section>
+			<h3>Flowchart Conventions</h3>
+			<ul>
+				<li>Flowcharts read from top to bottom and left to right.</li>
+				<li>Flow of data and control is signified by arrows with arrowheads.</li>
+				<li>Arrows should generally only point vertically or horizontally with 90&deg; angles.</li>
+				<li>Although arrows should cross as infrequently as possible, when arrows cross, flow should continue in a straight line.</li>
+				<li>For system flowcharts with multiple agents, flowcharts are subdivided into swimlanes, which are columns that signify which activities belong to which agent.</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h3>Sample Flowchart</h3>
+			<div class="override"><img src="images/sample-flowchart.png" alt="Sample Flowchart" style="max-height: 550px"/></div>
+		</section>
+
+		<section>
+			<h3>A Funny One</h3>
+			<div class="override"><img src="images/funny.png" alt="Deal Flowchart" style="max-height: 550px"/></div>
+		</section>
+
+		<section>
+			<h3>Flowchart Strengths and Weaknesses</h3>
+			<ul>
+				<li>Strengths</li>
+				<ul>
+					<li>Swimlanes highlight accountability.</li>
+					<li>Plethora of shapes identifies the form of data, nature of the activity and the number of copies of physical documents.</li>
+				</ul>
+				<li>Weaknesses</li>
+				<ul>
+					<li>High number of shapes can decrease readability.</li>
+				</ul>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Data Flow Diagrams</h3>
+			<ul>
+				<li>1975: Edward Yourdon and Larry Constantine develop data flow diagrams to model computer logic.</li>
+				<li>1979: Chris Gane and Trish Sarson propose and alternative set of data flow diagram symbols and apply these diagrams to business processes.</li>
+			</ul>
+			<p>Although these two groups receive credit for DFD conventions, they seem suspiciously similar to earlier functional flow block diagrams developed by TRW Incorporated in the 1950s.</p>
+		</section>
+
+		<section>
+			<h3>Two <i>Simple</i> Sets of Shapes</h3>
+			<div class="override"><img src="images/DFD.png" alt="DFD Shapes"/>
+		</section>
+
+		<section>
+			<h3>Black Boxes</h3>
+			<p>The Entity shape of the Gane-Sarson DFD approximates a black box. In any business process, some activities are opaque, especially those that involve counter-parties outside of the firm. Even some internal parties can engage in opaque activities when the information is confidential or when the agent is siloed (i.e., no one else participates in or understands certain tasks).</p>
+		</section>
+
+		<section>
+			<h3>DFD Conventions</h3>
+			<ul>
+				<li>DFDs have no predetermined direction or swimlanes.</li>
+				<li>Flow of data and control is signified by arrows with arrowheads just as with flowcharts.</li>
+				<li>Because DFDs have no data shapes (only data storage), the data transfered from step to step is displayed as a label for the arrow between the two steps.</li>
+				<li>Gane-Sarson arrows only point vertically or horizontally with 90&deg; angles, but Yourdon arrows can point in any direction and even curve.</li>
+				<li>Although arrows should cross as infrequently as possible, when arrows cross, flow should continue in a straight line.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>DFD Levels</h3>
+			<p>Program steps that contain multiple substeps can necessitate the creation of multiple levels of DFDs which are linked together by numbers. The highest level DFD (Level 0) numbers processes with whole numbers (1, 2, 3, etc). The second level (Level 1) adds a decimal after the number of the decomposed process (Process 1 becomes 1.1, 1.2, 1.3, etc.). The third level (Level 2) adds an additional decimal number (Process 1.3 becomes 1.3.1, 1.3.2, etc.)</p>
+		</section>
+		
+		<section>
+			<h3>Sample DFD</h3>
+			<div class="override"><img src="images/sample-dfd.png" alt="Sample DFD" style="max-height: 450px"/>
+		</section>
+
+		<section>
+			<h3>DFD Strengths and Weaknesses</h3>
+			<ul>
+				<li>Strengths</li>
+				<ul>
+					<li>Reduced number of shapes keeps the diagrams simple by focusing on data flows and processes and not the form of the data.</li>
+				</ul>
+				<li>Weaknesses</li>
+				<ul>
+					<li>Lack of predetermined direction reduces readability.</li>
+					<li>Lack of swimlanes hides accountability.</li>
+				</ul>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Unified Modeling Language</h3>
+			<p>As the name suggests, UML is a general-purpose modeling language designed to standardize system visualization.</p>
+			<ul>
+				<li>1994: Grady Booch, Ivar Jacobson and James Rumbaugh begin developing UML to support object-oriented software engineering.</li>
+				<li>1997: Object Management Group adopts UML.</li>
+				<li>2005: International Organization for Standardization approves UML 2.0 as an ISO standard.</li>
+			</ul>
+			<p>UML is new, but many consider it to be an extension of traditional flowcharts.</p>
+		</section>
+
+		<section>
+			<h3>UML Adoption</h3>
+			<p>UML has seen relatively little adoption in practice. My assumption is that this has one primary cause: In practice, diagramming is not standardized. People generally create diagrams <i>ad-hoc</i> to solve an immediate problem and use whatever conventions necessary to record and communicate their thoughts. As a result, newer, improved methods may not satisfy a need if the existing tools are sufficient.</p>
+			</ol>
+		</section>
+
+		<section>
+			<h3>UML Shapes</h3>
+			<p>UML has may different types of diagrams: class, object, package, activty, etc, and each serves to model a different scenario. The shapes for activity diagrams have changed considerably from UML 1.X to UML 2.0, but these are the main UML 2.0 shapes:</p>
+			<div class="override"><img src="images/UML.png" alt="UML Shapes"/></div>
+		</section>
+
+		<section>
+			<h3>Sample UML</h3>
+			<div class="override"><img src="images/sample-uml.png" alt="Sample UML" style="max-height: 450px"/>
+		</section>
+
+		<section>
+			<h3>UML Strengths and Weaknesses</h3>
+			<ul>
+				<li>Strengths</li>
+				<ul>
+					<li>Small number of shapes in activity diagrams keeps the diagrams readable.</li>
+					<li>UML focuses on diagramming conventions that a computer can interpret. Most other frameworks require some human intervention to interpret the diagram.</li>
+					<li>The connection between UML and object-oriented programming makes it easy to generate pseudo-code from the diagram.</li>
+				</ul>
+				<li>Weaknesses</li>
+				<ul>
+					<li>Lack of swimlanes hides accountability.</li>
+					<li>Other weaknesses that have limited adoption in practice.</li>
+				</ul>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Business Process Model and Notation</h3>
+			<ul>
+				<li>2000: Business Process Management Initiative (BPMI) is formed to promote the development of business process management tools.</li>
+				<li>2004: BPMN 1.0 is released.</li>
+				<li>2005: BPMI merges with the Object Management Group.</li>
+				<li>2010: BPMN 2.0 is released.</li>
+				<li>2013: International Organization for Standardization accepts BPMN 2.0 as an ISO standard.</li>
+			</ul>
+			<p>BPMN is an attempt to create a modeling notation specifically for business processes that promotes collaboration between operations specialists who design the process, managers who use the process and technologists who support the process.</p>
+		</section>
+
+		<section>
+			<h3>BPMN Adoption</h3>
+			<p>Although BPMN finds its roots in UML activity diagrams, BPMN seems to have surpassed UML in popularity as the <i>de facto</i> process diagramming solution. This may be the result of its focus on business processes instead of the more agnostic perspective of activity diagrams and flowcharts with respect to computer logic and business processes.</p>
+		</section>
+
+		<section>
+			<h3>BPMN 2.0 Basic Shapes</h3>
+			<div class="override"><img src="images/BPMN.png" alt="Basic BPMN Shapes"/></div>
+		</section>
+
+		<section>
+			<h3>Advanced Shapes</h3>
+			<p>BPMN is different from other models in one interesting way. Although it wants to allow for many different situations, instead of adopting many different shapes or only a few shapes which ignore the specifics of the object, BPMN uses a few shapes and adds icons to the shapes to incorporate specificity.</p>
+			<div class="override"><img src="images/BPMNAdvanced.png" alt="Advanced BPMN Shapes"/></div>
+		</section>
+
+		<section>
+			<h3>BPMN Conventions</h3>
+			<ul>
+				<li>Unlike flowcharts, swimlanes in BPMN are generally horizontal rows, not vertical columns.</li>
+				<li>Diagrams are read left-to-right and top-to-bottom.</li>
+				<li>Control and data flow lines are horizontal or vertical with 90&deg; angles, but unlike flowcharts and DFD, the angles have rounded corners.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Four Types of Diagrams</h3>
+			<ul>
+				<li><u><i>Orchestrations</i></u> place all agents lanes into a single pool and hide communications between them.</li>
+				<li><u><i>Collaborations</i></u> place agents into discrete pools and show communications between them.</li>
+				<li><u><i>Conversations</i></u> discard pools and swimlanes and depict agents as individual objects and the communications between them as black boxes.</li>
+				<li><u><i>Choreographies</i></u> discard pools and swimlanes and portray individual interactions between agents as single objects.</li>
+			</ul>
+			<p>Accounting Architecture prefers diagrams that explicitly portray communication because communication is the flow of data and information.</p>
+		</section>
+
+		<section>
+			<h3>BPMN Strengths and Weaknesses</h3>
+			<ul>
+				<li>Strengths</li>
+				<ul>
+					<li>Use of flowchart-style swimlanes highlights accountability. Choreographies uniquely capture accountability without swimlanes.</li>
+					<li>BPMN can combine all four types of diagrams into any single drawing.</li>
+					<li>BPMN allows for sub-processes in the top level diagram, instead of requiring subsequent diagrams as in DFDs.</li>
+				</ul>
+				<li>Weaknesses</li>
+				<ul>
+					<li>Large number of different shapes, sub-shapes and lines can prevent uniform application of BPMN.</li>
+					<li>Not designed to model the flow of data.</li>
+				</ul>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Sample Collaboration</h3>
+			<div class="override"><img src="images/sample-collaboration.png" alt="Sample BPMN Collaboration" style="max-height: 650px"/>
+		</section>
+
+		<section>
+			<h3>Sample Choreography</h3>
+			<div class="override"><img src="images/sample-choreography.png" alt="Sample BPMN Choreography" style="max-height: 650px"/>
+		</section>
+
+		<section>
+			<h3>Why Diagrams Matter to You</h3>
+			<p>Traditionally, accounting information systems texts taught modeling because of the belief that accountants should constrain business models. This is misguided. Operations specialists should develop processes. Accountants should understand the processes and ensure that the correct data flows through them. Accountants should also be able to communicate to technologists how to support the informational needs of the process.</p>
+		</section>
+
+		<section>
+			<h3>Potential Pitfall of Diagrams</h3>
+			<p>When using a standard set of shapes, it is possible to have a computer generate software code to model the functionality in the diagram. This is sometimes referred to as computer-aided software engineering or CASE. Although diagrams can make process logic and algorithms easier to visualize and communicate, it is unwise to expect a computer to correctly interpret the shapes and generate efficient and accurate code. UML attempts to overcome this, but over-reliance on CASE tools remains risky.</p>
+		</section>
+
+		<section>
+			<h3>Next Steps</h3>
+			<p>Next we will see diagrams in action by modeling sample business processes.</p>
+		</section>
+
+	</div>
+	</div>
+
+	<script src="reveal.js/lib/js/head.min.js"></script>
+	<script src="reveal.js/js/reveal.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
