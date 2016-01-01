@@ -1,0 +1,84 @@
+#lecture {
+	-webkit-flex: 0 1 auto;
+	flex: 0 1 auto;
+	margin: 20px auto;
+	box-shadow: 0 0 7px rgba(0,0,0,0.1);
+	background-color: ghostwhite;
+	padding: 30px;
+	width: 92%;
+	max-width: 850px;
+}
+p {
+	margin-bottom: 20px;
+}
+blockquote {
+	font-style: italic;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 2px solid lightgray;
+	padding-left: 30px;
+	margin-bottom: 20px;
+	max-width: 80%;
+}
+blockquote > p {
+	font-style: italic;
+}
+ol, ul {
+	margin-left: 50px;
+	margin-bottom: 10px;
+	text-indent: -30px;
+}
+li {
+	list-style-position: inside;
+	margin-bottom: 10px;
+}
+
+/********** Media Queries **********/
+@media screen and (max-width: 650px) {
+	p {
+		font: 15px/22px Arial, sans-serif;
+	}
+	blockquote {
+		font: 14px/21px Arial, sans-serif;
+	}
+	blockquote > p {
+		font: 14px/21px Arial, sans-serif;
+	}
+}
+@media print {
+	#lecture {
+		margin: 0;
+	}
+	header {
+ 		padding-bottom: 10px;
+	}
+	footer {
+		page-break-after: always;
+	}
+	section {
+		margin-top: 5px;
+		padding-bottom: 10px;
+	}
+	h1 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	h2 {
+		font-size: 14px;
+		line-height: 18px;
+		padding-bottom: 5px;
+	}
+	p {
+		font-size: 12px;
+		line-height: 16px;
+		margin-bottom: 5px;
+	}
+	blockquote {
+		padding-top: 0px;
+	}
+	ol, ul, li {
+		font-size: 12px;
+		line-height: 16px;
+ 		margin-bottom: 5px;
+	}
+}

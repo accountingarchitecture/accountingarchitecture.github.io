@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>ACCT 4020</title>
+
+	<link rel="icon" href="images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+	<!-- Personalized CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+	<div class="slides">
+		<section data-background="images/bitcoin.png">
+			<h2>Cryptocurrency</h2>
+		</section>
+		
+		<section>
+			<h3>Encryption</h3>
+			<p>Permissions, authentication and hardening serve to prevent unauthorized access to sensitive content. However, in at least two situations, these are not sufficient. The first is if an unauthorized user gains physical access to a digital asset. The second is in the case of digital communication because these tools cannot protect a message in transit. In these two settings, encryption is necessary to prevent unauthorized users from reading data by using an encryption algorithm (i.e., key) to turn plain text into unreadable cypher text. In order to render the data useful, a recipient must either have, or guess, the decryption key.</p>
+		</section>
+
+		<section>
+			<h3>What is a Key?</h3>
+			<p>An encryption or decryption key is nothing other than a sequence of characters that determines a transformation of plain text to obtain cypher text. For example, drafting cypher text that relies on shifting the letters in the alphabet by one is an example of encryption using a key. The only difference is that guessing enterprise-grade encryption keys can take years, or even lifetimes.</p>
+			<blockquote>Zydeco's unbreakable. It's a four kilobyte code. No, an algorithmic code that takes up four kilobytes of space is beyond secure. No, it would take longer than the whole life of the universe to crack it. That's impossible.</blockquote>
+		</section>
+
+		<section>
+			<h3>Two Forms of Encryption</h3>
+			<p>Encryption keys can either be symmetric or asymmetric. In symmetric, or private, key encryption, the encryption and decryption keys are the same, and both the sender and the recipient must have the same key. In asymmetric, or public, key encryption, the key to encrypt the data is publicly distributed and a paired private key is used for decryption. Public key encryption is secure so long as users keep their own private keys secret because, although users share their encryption keys, it is not feasible to infer the private decryption key from the public encryption key.</p>
+		</section>
+
+		<section>
+			<h3>Public Keys in Action</h3>
+			<div class="flex-row">
+				<div class="flex-item"><img src="images/keygen.png" alt="Key Generation"/></div>
+				<div class="flex-item"><img src="images/public-key.png" alt="Public Key Cryptography"/></div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Cryptographic Hash</h3>
+			<p>In both symmetric and asymmetric encryption, the encryption algorithm is reversible in order to render the cypher text readable. Cryptography also serves to create hashes, which are not reversible. Although it may seem useless to have un-decrpytable cypher text, these hashes actually serve important roles. One role is the verification of data integrity. Because the hash of any digital content will change if the underlying data is modified in any way, a hash can confirm that a message was not modified in transit. This is frequently used to verify that the integrity of a downloaded file.</p>
+		</section>
+
+		<section>
+			<h3>Digital Signature</h3>
+			<p>Another important role of hashes is to verify the identity of the sender of a message. Unlike verifying data integrity which uses a universal encryption key (e.g., MD5 or SHA) so that every user would obtain the same hash from the same data, digital signatures rely on unique private keys from asymmetric key encryption. The signature is a hash of the message using the sender's private key. If the sender's public key creates a hash that is the same as the hash of the message, then the identity of the sender is verified.</p>
+		</section>
+
+		<section>
+			<h3>Again, With Pictures</h3>
+			<img src="images/signature.png" height="550" alt="Digital Signature">
+		</section>
+
+		<section>
+			<h3>Crypto-currency</h3>
+			<p>Bitcoin, and other related forms of digital currency, rely on these encryption tools to create a secure and anonymous source of money. This leaves two questions unanswered. First, how can a computer <em>create</em> currency? Second, how can a group of individuals use cryptography to make a viable method of exchange?</p>
+		</section>
+
+		<section>
+			<h3>What Is Money?</h3>
+			<p>In order to understand how a computer can create currency, it is necessary to review the three characteristics of money:</p>
+			<ul>
+				<li>Method of exchange</li>
+				<li>Unit of measurement</li>
+				<li>Store of value</li>
+			</ul>
+			<p>Given this definition and what we know about money, is not the creation of currency restricted to central banks?</p>
+		</section>
+
+	  <section>
+			<h3>We Make Money All The Time</h3>
+			<p>Of course, anyone can create currency. Any good can meet the three criteria of money. Every time we barter, we create money. The fixation on the US dollar as money (e.g., the Monetary Unit Principle of the FASB's Conceptual Framework) is arbitrary. We only adopt it for tractability and convenience.</p>
+			<p>That being said, what about digital content? Can binary code create currency?</p>
+			<p>We already have examples of digital money: Rewards points, PayPal and especially, bank money through the creation of credit. Incidentally, the Euro initially only existed as digital currency.</p>
+		</section>
+
+		<section>
+			<h3>Credit Creates Money</h3>
+			<img src="images/moneycreation.png" height="90%">
+		</section>
+		
+		<section>
+			<h3>Brief Intro</h3>
+			<video src="videos/bitcoin.mp4" width="853" height="480" controls></video>
+			<!--<iframe width="853" height="480" src="//www.youtube.com/embed/l9jOJk30eQs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>-->
+		</section>
+
+		<section>
+			<h3>Basic Attributes</h3>
+			<p>All transactions are stored in a ledger called the block chain. The ledger is the only manifestation of unspent coins. Because the ledger only tracks transactions, no record of current balances exists. Past receipts become the inputs to a payment transaction as evidence of available balance. Each transaction can have multiple inputs, which may sum to more than necessary. Each transaction can also have multiple outputs, one of which is self-payment of surplus as change. Receipt of change can be used as a subsequent transaction input. By using past transactions as transaction inputs, each transaction is linked to all past transactions in a chain (not the same as the block chain).</p>
+		</section>
+
+		<section>
+			<h3>Transactions</h3>
+			<p>Bitcoin transactions rely on public key encryption. Each participant in this market must have at least one public key and at least one private key. A payer uses the payee's public key to send coins. The transaction is signed with the payer's private key to prove ownership of the coins. The benefit of public key encryption is that transactions are completely anonymous, but if a private key is lost, all coins associated with that private key become permanently parked.</p>
+		</section>
+		
+		<section>
+			<h3>Updating the Ledger</h3>
+			<p>Transactions are initially stored in a set of unordered transactions because different network nodes can receive transactions in a different order and the timestamp is not trustworthy. Power users select transactions from this set and create a block. This block is added onto the end of the block chain as the next set of transactions for the ledger. The updated ledger is distributed to all network participants.</p>
+		</section>
+
+		<section>
+			<h3>Benefits of Decentralization</h3>
+			<p>Unlike common banking systems, the Bitcoin ledger is decentralized. This is both benefits and drawbacks.</p>
+			<ul>
+				<li>Incorruptibility of data: Many copies of the ledger exist.</li>
+				<li>Independence: Each participating computer has a complete copy of the ledger and can independently verify the validity of all past transactions.</li>
+				<li>Incorruptibility of people: High levels of collusion are necessary to circumvent the system</li>
+				<li>Anonymity: No need to register with an authority to participate.</li>
+				<li>Freedom: Ability to transact without restriction.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Drawbacks of Decentralization</h3>
+			<ul>
+				<li>No trust: The network is comprised of many self-interested strangers.</li>
+				<li>No insurance: No body can address fraud, losses or grievances.</li>
+				<li>No authority: No master copy of the ledger.</li>
+			</ul>
+			<p>The lack of a central authority or a master copy of the ledger results in some substantial issues.</p>
+		</section>							
+		
+		<section>
+			<h3>Duplicate Chains</h3>
+			<p>Users simultaneously try to add discrete blocks to their own (decentralized) version of the black chain. No central authority or master ledger to settle disputes regarding correctness of one version over another.</p>
+			<p><b>Solution</b>: Always build on the longest chain.</p>
+			<p><b>New issue</b>: This can result in transactions formerly added to a particular version of the block chain being placed back in the unordered pool.</p>
+		</section>
+
+		<section>
+			<h3>Duplicate Payments</h3>
+			<p>Transactions are not immediately verified. Nothing prevents a user from including the same prior transactions as inputs to any number of current transactions. As a result, unverified transactions can prove valueless, and even transactions attached to a version of the block chain can prove valueless.</p>
+			<p><b>Solution</b>: Only the first verified use of the funds is honored.</p>
+			<p><b>New issue</b>: What is the definition of first if transactions begin in and can possible return to an <em>unordered</em> pool? What prevents a user from retroactively modifying a prior transaction to reallocate coins?</p>
+		</section>
+
+		<section>
+			<h3>BitCoin Mining</h3>
+			<p>The solution to these problems is embedded in the transaction verification, or mining, process. Users select transactions to verify and group them in blocks. The verification process involves having the computer find a hash of the block and the hash value of the previous block that is less than a predetermined number by appending a random, incrementing, non-repeating number (nonce) to the end of the block until the hash value is small enough. Once the correct hash value is found, the "miner" adds this block to a local ledger copy and distributes copies to all other users.</p> 
+		</section>
+		
+		<section>
+			<h3>BitCoin Security</h3>
+			<p>The sole purpose for this math problem is to make it non-trivial to verify transactions. The difficulty of the math problem is adjusted as a function of the number of computers processing transaction blocks so that a new block is added at constant intervals. By making each block in the chain a function of the prior block, any attempt to modify a block would require a modification of all subsequent blocks. The difficulty of the math problem coupled with the number of computers continuously trying to find additional blocks makes it impossible for one member to modify an entire section of a chain. A successful attempt would require enough computing power to outpace all other computers on the network combined.</p>
+		</section>
+
+		<section>
+			<h3>Get Paid</h3>
+			<p>Processing transactions requires significant computing power. Members must receive an incentive to validate transactions. This incentive comes in two forms. Newly issued coins are awarded to the member who finds the next block in the chain. In order to encourage the inclusion of a transaction in a block, senders can also pay a transaction fee. In order to limit the creation of new coins, at some point in the future, the only incentive will be transaction fees.</p>
+		</section>
+
+		<section>
+			<h3>Mining Pools</h3>
+			<p>Because of the difficulty in solving the math problem, many miners never successfully add blocks.Users can pool computing resources to solve a single block. Rewards are then distributed to members of the pool. Large pools create a risk. The more blocks one pool can add, the lower the ability for independent verification.</p>
+		</section>
+
+		<section>
+			<h3>Adoption</h3>
+			<iframe src="http://realtimebitcoin.info?theme=bubble&currency=usd" width="1000"></iframe>
+		</section>
+		
+		<section>
+			<h3>Hurdles To Adoption</h3>
+			<ul>
+				<li>Volatility</li>
+				<ul>
+					<li>Cyptocurrency is very thinly traded (illiquid).</li>
+					<li>As a result, it is not useful as a unit of measure or a store of value.</li>
+					<li>This problem will persist as long as members tend to hoard coins.</li>
+				</ul>
+				<li>Lack of understanding of the system</li>
+				<li>Inability to exchange for fiat currency</li>
+				<li>Fear of fraud, especially considering lack of restriction against the issuance of additional coins</li>
+				<li>Implicit associations between anonymity and the black market (e.g., money laundering, drug sales)</li>
+				<li>Regulatory pressure</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h3>Benefits Of Adoption</h3>
+			<ul>
+				<li>Because of anonymity and freedom, it is an excellent method of exchange.</li>
+				<li>Some vendors accept bitcoin to allow for digital payment while avoiding credit card fees.</li>
+				<ul>
+					<li>Vendors may offer discounts on wares for bitcoin payments.</li>
+				</ul>
+				<li>Transaction fees are at the discretion of the payor.</li>
+				<li>Recently, Bitcoin ATMs have surfaced which allow exchange of bitcoins for cash.</li>
+				<li>Notarization through the block chain.</li>
+			</ul>
+		</section>
+		
+		<section>
+			<section>
+				<h3>How To Join Bitcoin</h3>
+				<ul>
+					<li>Anyone can participate in the Bitcoin network.</li>
+					<li>Get a wallet (web-based, software, mobile, hardware).</li>
+					<li>Download the transaction ledger.</li>
+						<ul>
+							<li>Because the ledger relies on independent verification, it is wise to verify the ledger when first received.</li>
+						</ul>
+					<li>Keep the private key associated with that wallet safe.</li>
+					<li>Use the public key of the wallet to purchase coins or receive them in exchange for goods or services.</li>
+					<li>To be a miner, first acquire mining hardware.</li>
+					<li>Then, join a mining pool.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Mining Hardware</h3>
+				<ul>
+					<li>Initially, CPU-based mining was sufficient.</li>
+					<li>As more computers competed to solve the math problems, it became necessary to use GPU-based mining.</li>
+					<li>Now, hardware using application-specific integrated circuits (ASIC) is manufactured specifically for mining.</li>
+					<li>These computers are very expensive and yield a relatively small return of coins.</li>
+					<ul>
+						<li>This payout has decreased from 50 coins to 25 coins per block and will continue to decrease in the future.</li>
+					</ul>
+				</ul>
+			</section>
+		</section>
+		
+		<section>
+			<h3>The Future Of Cryptocurrency</h3>
+			<ul>
+				<li class=>In 2013, Ron Paul said, "If I can't put it in my pocket, I have reservations."</li>
+				<li class=>In 2014, Ron Paul said, "Bitcoin is the future, US dollar collapse coming!"</li>
+				<li class=>What is your opinion?</li>
+			</ul>
+		</section>
+
+		<section data-background="images/bitcoin.png">
+			<h2><strong>The End</strong></h2>
+		</section>
+		
+	</div>
+	</div>
+
+	<script src="reveal.js/lib/js/head.min.js"></script>
+	<script src="reveal.js/js/reveal.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
