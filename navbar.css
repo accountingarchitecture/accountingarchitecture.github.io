@@ -180,7 +180,7 @@ a.menu-item:hover, .menu-item.current {
 		height: 100%;
 	}
 	::-webkit-scrollbar {
-    	width: 0px;
+			width: 0px;
 	}
 	#wrapper {
 		overflow-x: hidden;
