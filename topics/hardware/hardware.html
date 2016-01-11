@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>ACCT 4020</title>
+
+	<meta name="author" content="Joshua G. Coyne, PhD">
+	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+	<!-- Personalized CSS -->
+	<link rel="stylesheet" href="../../css/slides.css">
+
+	<!--[if lt IE 9]>
+	<script src="../../reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+	<div class="slides">
+		<section>
+			<h2>Hardware</h2>
+		</section>
+
+		<section>
+			<h3>Accounting Architecture - Information</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>Until now, our discussions have covered the components of the Information Life Cycle. The principles by which data become information are general enough to apply to digital and non-digital systems alike. Because the majority of accounting information systems are digital, when appropriate, we have focused on a digital application of these principles (e.g., relational databases).</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Accounting Architecture - Technology</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 65%">
+					<p>Now we turn our attention towards more physical topics. The information life cycle is not manifest in the physical world. The tangible components of the information system are the implementation of this life cycle. The life cycle teaches us what the system should <em>do</em>, and an understanding of technology identifies what the system should <em>be</em>.</p>
+				</div>
+				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+			</div>
+		</section>
+
+		<section>
+			<h3><a href="http://www.newegg.com/" target="_blank">Let Us Build a Computer!</a></h3>
+		</section>
+
+		<section>
+			<h3>Where Shall We Begin?</h3>
+			<p>Each computer part influences the possible specifications of the other parts, so it is difficult to determine where to start. We will assume that the first consideration is available space, and the component that determines the size of the computer is the <u><i>case</i></u>. Several sizes exist, and beyond aesthetics, the size determines the type of <u><i>motherboard</i></u>, access to <u><i>expansion slots</i></u> and <u><i>rackability</i></u>.</p>
+		</section>
+
+		<section>
+			<h3>Server Racks</h3>
+			<p>Despite their fancy moniker and appearance, nothing is special about server racks. They are simply special closets for computers that use a certain type of case. Racks are convenient for organizing these computers and may include lockable doors to allow for added physical security.</p>
+			<img src="../../images/racks.jpg" alt="Server Rack" style="max-height: 300px"/>
+		</section>
+
+		<section>
+			<h3>Rackable U</h3>
+			<p>Rackable computers are shorter, wider and deeper than desktop computers. They have uniform width (ca. 430 mm), and their height is in multiples of U (e.g., 1U, 2U, 3U, etc), where 1U = 44 mm, so that they can screw into brackets on standardized racks.</p>
+			<!--License: CC-BY-SA 3.0 Attribution: Virtorgrigas-->
+			<img src="../../images/usizes.png" alt="U Sizes" style="max-height: 300px"/>
+		</section>
+
+		<section>
+			<h3>Second Step</h3>
+			<p>Although an obvious second step would be to select a motherboard, the selection of <i><u>central processing unit</u></i> (CPU) and motherboard are extremely closely intertwined through the CPU socket on the motherboard, and users generally care more about the choice of CPU than the choice of motherboard.</p>
+		</section>
+
+		<section>
+			<h3>Central Processing Unit</h3>
+			<p>The central processing unit (CPU) carries out the computer instructions by fetching data from memory, performing an operation on the data and returning the result of the operation to memory. Important considerations when choosing a CPU are <u><i>architecture</i></u> and <u><i>speed</i></u>.Additionally, because the CPU generates heat, it is necessary to cool it with either a fan or a heatsink. The latter allows for silent cooling.</p>
+			<!--License: CC-BY-SA 2.0 Attribution: Andrew Dunn-->
+			<img src="../../images/cpu.jpg" alt="CPU" style="max-height: 250px"/>
+		</section>
+
+		<section>
+			<h3>Arch</h3>
+			<p>The manner in which the CPU interprets computer instructions depends on the <u><i>instruction set architecture</i></u> (ISA). Since the inception of the CPU, manufacturers have offered many different architectures, but currently, two are the most prominent. Software that runs on one architecture is inherently incompatible with any other.</p> 
+		<p>Computer processing also depends on <u><i>word length</i></u> or the number of bits the CPU can process at once.</p>
+		</section>
+
+		<section>
+			<h3>X86</h3>
+			<p>In 1978. Intel released the 8086 processor. Although the instruction set has since expanded, the 8086 processor launched the x86 line of processors which Intel continues to offer as the most popular architecture in personal computers and many servers. Advanced Micro Devices is also well known for their x86-compatible lines of processors. These processors rely on <u><i>complex instruction set computing</i></u> (CISC).</p>
+		</section>
+		
+		<section>
+			<h3>ARM</h3>
+			<p>Another popular line of processors have the ARM architecture which implement <u><i>reduced instruction set computing</i></u> (RISC), which as its name indicates, contains fewer potential instructions than CISC. Unlike Intel, ARM Holdings is not a manufacturer of processors. Instead, it licenses its IP to several other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. (Think about how this compares to the potential for an open standard.) Because of the smaller instruction set, these processors require fewer transistors and less power, which makes them a superior choice for mobile devices.</p>
+		</section>
+		
+		<section>
+			<h3>Word Length</h3>
+			<p>Currently, the two most common word lengths are 32 and 64 bits. Because of reverse compatibility, applications written for 32-bit processors are not inherently incompatible with a 64-bit processor. One of the limitations of 32-bit processors is that they only support 4 gigabytes of <u><i>random-access memory</i></u> (RAM).Prior to the introduction of 64-bit processors, manufacturers would add <u><i>physical address extension</i></u> to 32-bit processors that would remove the 4 GB cap.</p>
+			<p>In addition to increasing processing speed, 64-bit processors can accommodate up to 16 exabytes of memory. The 64-bit architecture is frequently labeled by the abbreviation x64. The majority of new processors are 64-bit.</p>
+		</section>
+
+		<section>
+			<h3>Real-world Problem</h3>
+			<p>Unfortunately, the limitations of 32-bit word length extends beyond processing speed and memory caps. Similar to the Y2K bug in which, in order to save storage space, programmers dropped the first two digits of the year leading to uncertainty how computers would interpret 00, the Y2K38 bug represents the inability of 32-bit processors to count forward in time past 03:14:08 on 19 January 2038.</p>
+			<img src="../../images/Year_2038_problem.gif" alt="Y2K38" style="margin: 0"/>
+			<p>(Incidentally, in multiple cases the Y2K bug resulted in clocks reporting 1 January 19100, which is neither 2000 nor 1900...)</p>
+		</section>
+
+		<section>
+			<h3>How Fast?</h3>
+			<p>Both word length and instruction set affect the efficiency and speed of a processor, but the common measures of speed are <u><i>clock speed</i></u> and <u><i>instructions per second</i></u> or <u><i>floating-point operations per second</i></u> (FLOPS). The most familiar of these is clock speed or the number of cycles per second, which is calculated in Hertz. A cycle is the period of time in which the processor can execute an instruction. Clock speed is the metric generally used to advertise processors. Because processors may be able to execute more than one instruction per cycle, a more useful measure of performance may be instructions per second which is the product of clock speed and instructions per cycle.</p>
+		</section>
+
+		<section>
+			<h3>Multi-core Processors</h3>
+			<p>Although it is not possible to increase the clock speed of a CPU with bound, it is possible to add additional processors to one computer or even additional cores to a single processor to improve performance by virtue of <u><i>parallel processing</i></u>. The theoretical upper bound of the FLOPS of a multi-core processor is the FLOPS of a single core multiplied by the number of cores, but realized performance is less because it is not always possible to split instructions among cores and have them execute simultaneously.</p>
+		</section>
+
+		<section>
+			<h3>Hyper-threading</h3>
+			<p>Just as the physical and logical views of storage differ, the physical and logical views of processors can differ. In an attempt to increase the efficiency of their processors, Intel developed technology that would allow the operating system to see two logical or virtual cores for every physical core. This is one example of software allowing for more efficient use of hardware. We will discuss more examples of this when we focus on the Software block of the Architecture.</p>
+		</section>
+
+		<section>
+			<h3>And Now...</h3>
+			<p>The third component to select is the <u><i>motherboard</i></u>. The motherboard is a circuit board that holds the system components and allows communication between them. Some motherboards include integrated audio, video and network capabilities.</p>
+			<!--License: CC-BY-SA Attribution: Moxfyre at en.wikipedia-->
+			<img src="../../images/motherboard.png" alt="Motherboard" style="margin: 0; max-height: 350px"/>
+		</section>
+
+		<section>
+			<h3>One Size Fits One</h3>
+			<p>Although the size and shape of the computer case restrict the type of motherboard (ATX, micro ATX, ITX), the much more important consideration is the <u><i>CPU socket</i></u> because different manufacturers and even different families of processors from the same manufacturer have different pins.</p>
+		</section>
+
+		<section>
+			<h3>Never Forget</h3>
+			<p>In addition to a CPU, each computer requires <u><i>random-access memory</i></u> (RAM). RAM, frequently simply referred to as memory, is a type of volatile&mdash;it requires power to store data&mdash;computer storage that allows for fast retrieval of data. The greater the amount of memory, the faster the computer can operate because it can store more data in this fast-retrieval repository. Currently, RAM takes on the form of double data rate synchronous dynamic random-access memory (DDR SDRAM). The motherboard constrains RAM <u><i>size</i></u>, <u><i>speed</i></u> and <u><i>capacity</i></u>.</p>
+			<!--License: CC-BY 2.5 Attribution: Royan-->
+			<img src="../../images/ram.jpg" alt="RAM" style="max-height: 150px"/>
+		</section>
+
+		<section>
+			<h3>DIMM</h3>
+			<p>An individual stick of memory comes in two sizes: dual in-line memory module (DIMM) or small outline dual in-line memory module (SO-DIMM). The former is generally for workstations and servers, and the latter is for notebooks, smaller form-factor personal computers and network hardware.</p>
+		</section>
+
+		<section>
+			<h3>Keeping Up with the Jones</h3>
+			<p>Speed is important for RAM, just as it is for a CPU, but RAM has an additional reason for focusing on speed, as well. CPUs can process data faster than RAM can serve it, so RAM creates a bottleneck in data processing. Faster RAM decreases that bottleneck, but RAM cannot currently match the speed of the processor. RAM reports speed in two ways. The DDR prefix from DDR SDRAM includes a generation and a data rate in megatransfers per second; together these are the standard name which reports the peak transfer rate in megabytes per second. These map directly into module names, as well. Common examples are DDR3-1600 = PC3-12800 and DDR4-2400 = PC4-19200.</p>
+		</section>
+
+		<section>
+			<h3>Multiplicity</h3>
+			<p>The motherboard memory slots determine the supported sizes and speeds, but the slots also determine the supported capacity per DIMM, and the number of slots determines maximum capacity. DIMMs currently have common capacities of 2GB, 4GB, 8GB and 16GB, and motherboards generally have two or four slots. It is not necessary to fill all slots, nor is it necessary for all DIMMs to have the same capacity or speed. However, the computer will function at the speed of the slowest DIMM. It is important to remember that 32-bit processor word length continues to restrict supported RAM capacity even if the motherboard supports more than 4 GB.</p>
+		</section>
+
+		<section>
+			<h3>Swapping</h3>
+			<p>Historically, a computer could not handle complete consumption of available memory because the CPU would not be able to find the next instruction. Virtual memory overcame this problem by reserving a portion of the hard drive as secondary memory, called <u><i>swap space</i></u>. The process of moving data from main memory to secondary memory is called <u><i>paging</i></u>. Although it allows a computer to continue functioning, paging is very slow, and the computer can become unresponsive as a result.</p>
+		</section>
+
+		<section>
+			<h3>RAM Disk</h3>
+			<p>Much less common than paging, in which a physical drive assumes the role of secondary memory, RAM can assume the role of a physical drive by reserving a portion of available main memory as a <u><i>RAM disk</i></u>. This allows for faster data retrieval than accessing a physical drive, but because RAM is volatile, the stored data is lost if the computer loses power.</p>
+		</section>
+
+		<section>
+			<h3>Hard &ne; Solid</h3>
+			<p>In addition to volatile storage, a computer needs non-volatile storage. Customarily, this takes the form or either <u><i>hard disk drives</i></u> (HDD) or <u><i>solid-state drives</i></u> (SSD). Hard drives are mechanical and rely on multiple magnetized spinning disks to read and write data. Solid-state drives generally use NAND flash memory to read and write data more quickly. The speed with which the motherboard can access data from the drive is determined by the speed of the <u><i>Serial AT Attachment</i></u> (SATA) connection to the drive calculated in gigabits per second.</p>
+			<div class="flex-row">
+				<!--License: CC-BY-SA 3.0 Attribution: Evan-Amos-->
+				<div class="flex-item"><img src="../../images/hdd.jpg" alt="HDD" style="max-width: 50%; max-height: 350px; margin-top: 0"/></div>
+				<!--License: CC-BY-SA 3.0 Attribution: D-Kuru-->
+				<div class="flex-item"><img src="../../images/ssd.jpg" alt="SSD" style="max-width: 50%; max-height: 350px; margin-top: 0"/></div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Seeing is Believing</h3>
+			<p>Although not necessary, many computers also contain a video card. These cards contain their own processing unit, called a graphical processing unit (GPU), their own fan or heatsink, and their own memory (GDDR or SGRAM). These cards can draw graphical objects more quickly than a CPU. Many current computers require no video card because newer processors (e.g. i3 Intel processors) have both CPU cores and GPU cores. Motherboards also frequently contain integrated video outputs. Additionally, servers, which generally use no graphical environment, need no graphics capabilities beyond what the CPU can provide.</p>
+		</section>
+
+		<section>
+			<h3>Other Peripherals</h3>
+			<p>Depending on need, other hardware components may become valuable:</p>
+			<ul>
+				<li>Optical drives</li>
+				<li>Input/Output (I/O) devices</li>
+				<li>Expansion cards</li>
+			</ul>
+			<p>Optical drives have become increasingly rare, and I/O devices are generally for workstations and not servers.</p>
+		</section>
+
+		<section>
+			<h3>Powering It All</h3>
+			<p>The final requisite component is the <u><i>power supply unit</i></u> (PSU), which gives power directly to storage drives and indirectly to the CPU, RAM, other integrated components and expansion cards through the motherboard. The computer case determines the maximum supported PSU size, but the more important consideration is power needed. If the PSU provides insufficient power, not only can the components malfunction, but they can also degrade at an accelerated rate. It is difficult to determine exactly how much power will be necessary for a specific setup, but for a standard workstation or server 600 watts can suffice.</p>
+			<!--License: CC-BY-SA 3.0 Attribution: Danrok-->
+			<img src="../../images/psu.jpg" alt="PSU" style="max-height: 100px"/>
+		</section>
+
+		<section>
+			<h3>How Would This Be Different for Mobile Devices?</h3>
+			<p>Although mobile devices, such as smartphones and tablets, include the same set of components, the configuration looks different to conserve on space and energy. For example, instead of including a CPU, DIMMs of memory and a graphics card, these devices have a <u><i>System on a Chip</i></u> (SoC), in which CPU cores, memory, GPU cores and sometimes cell radios, are combined into a single chip. Many, though not all, of these use ARM processors because they further reduce energy consumption and generate less heat. However, Intel has fervently reduced the gap between x86 and ARM processors in an attempt to become more attractive to manufacturers of mobile devices.</p>
+		</section>
+
+		<section>
+			<h3>SoC is for SBC</h3>
+			<p>One common use for System on a Chip is Single Board Computers (SBCs). SBCs have a motherboard that differs from those found in workstations and servers. SBC boards have all components: CPU, GPU, RAM, etc soldered onto the board. These take less space and use less energy than their larger counterparts. Although tablets and smartphones almost certainly use SBCs, the most well-known example of an SBC is the Raspberry Pi.</p>
+			<!--License: CC-BY-SA 4.0 Attribution: Multicherry-->
+			<img src="../../images/raspberrypi.jpg" alt="Raspberry Pi 2" style="max-height: 200px"/>
+		</section>
+
+		<section>
+			<h3>What about &ldquo;Mainframes&rdquo;?</h3>
+			<p>Mainframes are rack-sized computers that combine dozens of processors and terabytes of memory into one computer to maximize the ability for parallel processing. The alternative would be to create a cluster of smaller servers or workstations. One mainframe can replace hundreds of clustered servers.</p>
+			<img src="../../images/mainframe.jpg" alt="Mainframe" style="max-height: 350px; margin-top: 0"/>
+		</section>
+
+		<section>
+			<h3>Networking</h3>
+			<p>Workstations, also referred to as <u><i>fat clients</i></u>, can perform may functions without the aid of a network. Historically, individual computers were <u><i>thin clients</i></u>&mdash;dumb terminals&mdash;that allowed for data entry into a centralized server. Today, thin clients have once again become popular (e.g., mobile devices, Chromebooks), but the underlying server setup has changed. Nowadays, we rely on the <u><i>local area networks</u></i> (LANs) and <u><i>wide area networks</i></u> (WANs), such as the Internet, to connect to servers. In order to take advantage of these resources, we need some extra hardware.</p>
+		</section>
+
+		<section>
+			<h3>Local Area Network</h3>
+			<p>A local area network allows for communication between computers generally over a small, localized area (e.g., one office building) using <u><i>routers</i></u> and <u><i>switches</i></u>. The differences between these are beyond our purview, but briefly, a switch allows network traffic to flow to multiple different devices, whereas a router creates a smaller network within a larger network and directs traffic between the smaller and larger networks. Category 5, 5E and 6 (Ethernet) cables and wireless fidelity (Wi-Fi) connect individual devices to the LAN. Each of these devices uses a network interface card (NIC) with a unique media access control (MAC) address to communicate with the network.</p>
+			<!--License: CC-BY-SA 3.0 Attribution: PassportDude at the English Language Wikipedia-->
+			<img src="../../images/switch.jpg" alt="Switch" style="max-height: 90px; margin-top: 0"/>
+		</section>
+
+		<section>
+			<h3>Wide Area Network</h3>
+			<p>Wide area networks comprise networks that cover a large geographical area, but frequently people use this term to mean the Internet because it is the most pervasive manifestation of a WAN. A LAN is sufficient to connect fat and thin clients and local servers together, but most information systems need WAN access, as well. Internet Service Providers (ISPs) use coaxial cable, phone lines, satellite, cell towers or fiber optics to allow individual residences and business access to the Internet. Modems, also referred to as radios, allow devices and LANs to access the WAN.</p>
+		</section>
+
+		<section>
+			<h3>Extra Credit Presentations</h3>
+			<ol>
+				<li>Explain how a central processing unit executes instructions using the following CPU components: control unit, program counter, arithmetic logic unit, opcode, operand, status, register and memory.</li>
+				<li>Introduce the Internet of Things (IoT) and explain its role in information systems.</li>
+				<li>Explain how GPUs are better than CPUs in two specific settings: video game consoles and Bitcoin mining.</li>
+				<li>Give a historical perspective of mainframes and explain why they have once again become popular.</li>
+			</ol>
+		</section>
+
+	</div>
+	</div>
+
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script src="../../js/slides.js"></script>
+	<script src="../../js/printing.js"></script>
+
+</body>
+</html>
