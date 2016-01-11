@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>ACCT 4020</title>
+
+	<meta name="author" content="Joshua G. Coyne, PhD">
+	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+	<!-- Personalized CSS -->
+	<link rel="stylesheet" href="../../css/slides.css">
+
+	<!--[if lt IE 9]>
+	<script src="../../reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+	<div class="slides">
+		<section>
+			<h2>Software</h2>
+		</section>
+
+		<section>
+			<h3>Accounting Architecture</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>Hardware is the first component of Technology. Although every part of this section has relevance towards implementing the principles in the information life cycle, software is the most important part.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>The Role of Software</h3>
+			<p>Software performs all of the automated and facilitates all of the manual tasks in the information system. Software stores and retrieves data; software analyses and generates reports; software provides end-user interfaces and serves web content. Without software, hardware is impotent.</p>
+		</section>
+
+		<section>
+			<h3>Firmware</h3>
+			<p>One important subset of software is firmware. Firmware provides hardware control for electronic devices, including computers and peripherals, consumer electronics and automobiles and aircraft. Although firmware was traditionally stored on non-volatile <u><i>read-only memory</i></u> (ROM), currently firmware is more commonly stored on flash memory. Hence the term &ldquo;flashing&rdquo; for updating firmware. The practice of updating firmware is much more common in the Internet era because the distribution of updates is easier and the threat of exploits is greater.</p>
+		</section>
+
+		<section>
+			<h3>Firmware Interface</h3>
+			<p>Because devices are idiosyncratic, firmware manifests is very different ways. However, for workstations and servers, the firmware interface is usually <u><i>Basic Input/Output System</i></u> (BIOS) or, more recently <u><i>Unified Extensible Firmware Interface</i></u> (UEFI). The difference between these two is not important for our purposes, except that UEFI adds support for newer components of the information system, such as larger storage disks and access to network devices before booting the operating system.</p>
+			<div class="override"><img src="../../images/efi.png" alt="EFI" style="max-height: 200px"/></div>
+		</section>
+
+		<section>
+			<h3>Bootloader</h3>
+			<p>Although this is frequently transparent (perhaps overly so) to Windows and OS X users, the next step after the hardware initialization by the BIOS or UEFI is not to load the operating system directly. Operating systems require a boot loader in order to initialize. The boot loader loads the operating system, and then the operating system takes control. It is also possible for a boot loader to initialize another boot loader that, in turn, loads the operating system. This is process is called <q>chainloading</q>.</p>
+		</section>
+
+		<section>
+			<h3>Operating System</h3>
+			<p>The operating system provides user applications access to the computer hardware.</p>
+			<!--License: CC-BY-SA 3.0 Attribution: Golftheman-->
+			<img src="../../images/operating_system.png" alt="Operating System" style="max-height: 450px"/>
+		</section>
+
+		<section>
+			<h3>Time-sharing</h3>
+			<p>Early operating systems focused on time sharing. At the time, computers were primarily mainframes with multiple dumb terminals. These dumb terminals competed for the mainframe's resources, and time-sharing operating systems determined how to allocate resources to jobs submitted by each of the terminals.</p>
+		</section>
+
+		<section>
+			<h3>Users and Tasks</h3>
+			<p>Early smart terminals (i.e., PCs) no longer needed time-sharing operating systems because only one application could execute at a time. These PCs were single-user, single-task. As workstations became more sophisticated, operating systems could support multi-user and multi-task environments. These are exactly as they seem: operating systems that support multiple different user logins and multiple simultaneous applications. Once operating systems became multi-task, they once again became time-sharing. However, this time sharing focused on local applications and not dumb terminals.</p>
+		</section>
+
+		<section>
+			<h3>Full Circle</h3>
+			<p>In the Internet era, we have returned again to the original time-sharing model, now servers must focus on allocating resources to web clients that access hosted web resources. Unlike the dumb terminals of the past, these web clients have their own operating systems, but they forego some functionality of workstations in favor of offloading processing requirements to remote servers.</p>
+		</section>
+
+		<section>
+			<h3>ROMs</h3>
+			<p>One popular contemporary form of thin clients is the mobile device. The two most widely used systems on mobile devices are Android and iOS, and they are somewhat unique in two aspects. First, although they are multi-task, they are single-user. Second, although they have the functionality of operating systems, they are, in fact, firmware.</p>
+		</section>
+
+		<section>
+			<h3>Forget about Windows and OS X</h3>
+			<p>Although Microsoft Windows and Apple OS X are the two dominant desktop computer operating systems, these are not nearly as relevant in all other components of the information system (e.g., servers, mobile devices, firmware). Unix, BSD and Linux run the majority of information system hardware.</p>
+		</section>
+
+		<section>
+			<h3>UNIX</h3>
+			<ul class="nobullet">
+				<li>1964: MIT, AT&amp;T Bell Laboratories and General Electric collaborate on a time-sharing operating system called Multics (Multiplexed Information and Computing Service).</li>
+				<li>1969: Researchers at Bell Labs became dissatisfied with Multics and decided to develop an alternative operating system, originally called Unics (Uniplexed Information and Computing Service), but they subsequently changed the name to UNIX. (UNIX is the trademark for the Unix operating system.)</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Unix Philosophy</h3>
+			<p>The Unix engineers operated under an implicit philosophy, which continues to govern coding practices in several software communities.</p>
+			<blockquote>
+				<p>Write programs that do one thing and do it well.<br>&ndash; Doug McIlroy</p>
+			</blockquote>
+			<blockquote>
+				<p>[T]he power of a system comes more from the relationships among programs than from the programs themselves.<br>&ndash; Brian Kernighan and Rob Pike</p>
+			</blockquote>
+		</section>
+
+		<section>
+			<h3>KISS</h3>
+			<p>One popular representation of the Unix philosophy is KISS (Keep It Simple, Stupid!) which serves as a reminder that simplicity is more virtuous than complexity.</p>
+		</section>
+
+		<section>
+			<h3>Additional Principles</h3>
+			<ul class="nobullet">
+				<li>Rule of Modularity: Write simple parts connected by clean interfaces.</li>
+				<li>Rule of Composition: Design programs to be connected to other programs.</li>
+				<li>Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.</li>
+				<li>Rule of Diversity: Distrust all claims for &ldquo;one true way.&rdquo;</li>
+				<li>Rule of Extensibility: Design for the future, because it will be here sooner than you think.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Portability</h3>
+			<ul class="nobullet">
+				<li>1972: Unix was rewritten in the C programming language thereby shattering the assumption that something as complicated as an operating system must be written in hardware-specific assembly language. Despite this transition, Unix continued to contain some machine-specific code, and engineers focused on only one or a few architectures at a time.</li>
+			</ul>
+			<p>(Remember, at this time, CPU architecture differed between machines; no standardized x86 or ARM processors existed.)</p>
+		</section>
+
+		<section>
+			<h3>Licensing</h3>
+			<ul class="nobullet">
+				<li>1973: AT&amp;T began selling UNIX licenses&mdash;AT&amp;T was a regulated company and could only sell licenses and not software&mdash;to universities. Unlike common current software licenses, UNIX licenses included source code and no other support. The availability of source code, the lack of commercial support and the distribution of licenses to universities motivated the development of communities that supported, modified and ported Unix to alternative hardware.</li>
+				<li>1978: Microsoft purchased a UNIX license and began creating Xenix for what Bill Gates believed was the impending proliferation of personal computers.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Another Microsoft Aside</h3>
+			<p>Microsoft eventually abandoned Xenix in favor of MS-DOS, but the existence of Xenix is evidence of a very important point: Unix, and other subsequent Unix-like operating systems, are not merely alternatives to Microsoft Windows. Unix was the operating system of choice before anyone had heard of Microsoft.</p>
+		</section>
+
+		<section>
+			<h3>System V</h3>
+			<ul class="nobullet">
+				<li>1983: Bell Systems broke up after an antitrust case, and AT&amp;T became able to sell Unix. AT&amp;T released a commercialized Unix System V and forbade access to Unix source code, which essentially ended community Unix development.</li>
+			</ul>
+			<blockquote>
+				<p>Knowing no other model than secrecy for collecting profits from software and no other model than centralized control for developing a commercial product, AT&amp;T clamped down hard on source-code distribution.<br>&ndash; Eric Raymond</p>
+			</blockquote>
+		</section>
+
+		<section>
+			<h3>Unix Impact</h3>
+			<div class="override"><img src="../../images/unix_history.png" alt="Unix History" style="max-height: 600px"/></div>
+		</section>
+
+		<section>
+			<h3>BSD</h3>
+			<ul class="nobullet">
+				<li>1974: AT&amp;T Bell Laboratories licensed UNIX to UC Berkeley.</li>
+				<li>1978: Berkeley released 1BSD (Berkeley Software Distribution) as an add-on to Unix 6.</li>
+				<li>1979: Berkeley released 3BSD (aka Virtual Memory Unix or VMUNIX) as a complete operating system. Consumers of 3BSD required an AT&amp;T Unix license.</li>
+				<li>1980: The Defense Advanced Research Project (DARPA) funded the creation of the Computer Systems Research Group to develop a Unix for ARPAnet.</li>
+				<li>1980: CSRG released 4BSD as the preferred operating system for many Unix licensees, including Bell Labs, who incorporated BSD code into Unix.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Another Standard</h3>
+			<p>Despite the appeal of both System V Unix and BSD Unix, disputes arose between the programming communities. In an attempt to reconcile differences, the Institute of Electrical and Electronics Engineers (IEEE) developed a set of <u><i>Portable Operating System Interface</i></u> (POSIX) standards based on System V Unix which continue to govern Unix and Unix-like operating systems today. The list of POSIX-certified operating systems contains the three most prominent Unix offerings: IBM AIX, HP-UX and Oracle Solaris. Although BSD continues not be POSIX-certified, it is mostly POSIX compliant.</p>
+		</section>
+
+		<section>
+			<h3>BSD Becomes Free</h3>
+			<ul class="nobullet">
+				<li>1989: CSRG began to distribute the network code from 4.3BSD, which contained no AT&amp;T code, as Network Release 1 (Net/1) under the free BSD license.</li>
+				<li>1991: With considerable help from the development community, CSRG rewrote almost all remaining proprietary files and subsequently released Network Release 2 (Net/2) as a nearly complete operating system without any AT&amp;T code.</li>
+				<li>1992: CSRG wrote the six remaining files necessary to complete Net/2 and released it as 386BSD for Intel's 386 processor.</li>
+				<li>1993: Two communities formed to support 386BSD under different philosophies. NetBSD chose to support as many platforms as possible and targeted technical users. FreeBSD focused on the PC market and targeted less technical users.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Opponents of BSD</h3>
+			<p>In 1992, AT&amp;T Unix Systems Laboratories (USL) sued Berkeley claiming that Net/2 contained proprietary code. After two years, the two sides reached a settlement that required minor changes and essentially exonerated Berkeley. The modifications resulted in 4.4BSD-lite.</p>
+		</section>
+
+		<section>
+			<h3>After the Suit</h3>
+			<p>Although Berkeley was exonerated, the legal uncertainty between 1992 and 1994 encouraged many developers to transition to Linux. However, BSD is still widely used and supported, and many flavors exist. The most prominent are FreeBSD, NetBSD, OpenBSD (a fork of NetBSD focused on security) and Mac OS X (and iOS, for that matter). Furthermore, most operating systems, including Microsoft Windows, use network tools from BSD. In 2006, InformationWeek rated 4.3BSD as the &ldquo;Greatest Software Ever Written&rdquo; and the &ldquo;theoretical undergirder of the Internet.&rdquo;</p>
+		</section>
+
+		<section>
+			<h3>Linux - The Stars Align</h3>
+			<p>Linus Torvalds began development of the Linux operating system on 25 August 1991. A number of discrete events coalesced to facilitate the initialization of this project:</p>
+			<ul>
+				<li>Richard Stallman's GNU project started in 1983 had not yet generated a working system, but it contained many useful tools.</li>
+				<li>Intel had released the first 32-bit x86 processor: the 80386.</li>
+				<li>Net/2 had not yet been ported to 80386.</li>
+				<li>Unix licenses were too expensive for private users.</li>
+				<li>MINIX, another Unix-like system, was not well suited to 386.</li>
+				<li>No widely adopted adopted, free kernel existed.</li>
+		</section>
+
+		<section>
+			<h3>What is a Kernel, You Might Ask</h3>
+			<p>The <u><i>kernel</i></u> is the part of the operating system that interacts with the computer hardware. This is the lowest level of the operating system. The remaining components live in <u><i>userland</i></u> because they interact with the user. Depending on the type of kernel, the kernel itself may handle operating system services (monolithic kernel) or these services may be handled by a series of servers in userland (microkernel).</p>
+			<div class="flex-row">
+				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
+				<div class="flex-item"><img src="../../images/monolithic.png" alt="Monolithic Kernel" style="max-width: 50%"/></div>
+				<div class="flex-item"><img src="../../images/microkernel.png" alt="Microkernel" style="max-width: 50%"/></div>
+			</div>
+		</section>
+
+		<section>
+			<h3>What is a Server, Anyway?</h3>
+			<p>Frequently, the word server is used to identify 1U computers stored in a rack, and it is true that workstations and servers frequently have slight differences in hardware setup (e.g., graphics and I/O capabilities). However, a more appropriate use of the word <q>server</q> would be <u><i>software that provides a service</i></u>.</p>
+		</section>
+
+		<section>
+			<h3>Daemon</h3>
+			<p>(Yes, that is not a misspelling...)</p>
+			<p>Daemons are a particularly useful example of software that provides a service. Unlike more visible interactive applications, daemons run in the background without user input. Network, audio and graphics hardware and web and database servers rely on daemons to continually serve content.</p>
+		</section>
+
+		<section>
+			<h3>Text...</h3>
+			<p>The kernel is the part of the operating system that interacts with the hardware; the <u><i>shell</i></u> is the part that interacts with the user. Shells can either be graphical or textual. Textual or text-based user interfaces (TUIs) present the user with an interactive command line. All Unix and Unix-like operating system have at least one TUI shell. Popular examples are the Bourne shell (sh) or the Bourne Again shell (bash).</p>
+			<div class="override"><img src="../../images/bash.png" alt="Bash Shell" style="max-height: 250px"/></div>
+		</section>
+			
+		<section>
+			<h3>...and Graphics</h3>
+			<p>Graphical user interfaces (GUIs) present the user with windows, menus, mouse pointers, etc. These are frequently part of desktop environment, which is a shell plus a collection of related applications. GNOME and KDE are two popular desktop environments. GNOME uses GNOME Shell and KDE uses the Plasma shell.</p>
+			<div class="override"><img src="../../images/gnome.png" alt="GNOME Shell" style="max-height: 300px"/></div>
+		</section>
+			
+		<section>
+			<h3>Modularity</h3>
+			<p>Shells are an excellent example of the principle of modularity. Unlike Microsoft Windows and OS X that each ship with one graphical and one text shell, Unix and Unix-like operating systems allow for multiple text and graphical shells that are each developed separately. The user can switch between shells at will. (Thanks to community support for the BSD components in OS X, it can be possible to install alternative shells there, as well.)</p>
+		</section>
+			
+		<section>
+			<h3>Linux - The Early Years</h3>
+			<ul class="nobullet">
+				<li>1991: Linus released Linux kernel 0.01 under its own license with some GNU userland tools.</li>
+				<li>1992: Linus released Linux kernel 0.99 under GNU GPL. He subsequently asserted that the license change was the best thing he had ever done. At the same time, MINIX author Andrew S. Tanenbaum stated, &ldquo;Linux is obsolete,&rdquo; in part, because it relied heavily on &lsquo;weird&rsquo; x86 processors.</li>
+			</ul>
+			<div class="flex-row">
+				<div class="flex-item">
+					<blockquote>
+						<p>If 386BSD had been available when I started on Linux, Linux would probably never had happened.</p>
+					</blockquote>
+				</div>
+				<div class="flex-item">
+					<blockquote>
+						<p>If the GNU kernel had been ready last spring, I'd not have bothered to even start my project.</p>
+					</blockquote>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Linux Today</h3>
+			<p>Linux is perhaps the most widely adopted operating system. 70% of internet servers, 55% of mobile devices and 97% of supercomputers run Linux. It is also a popular choice for IBM System z mainframes virtual machines, single-board computers and the Internet of Things.</p>
+		</section>
+
+		<section>
+			<h3>Virtualization</h3>
+			<p>Just as time-sharing operating systems attempt to allocate hardware resources efficiently, virtualization software attempts to maximize the number of platforms that can access the same hardware simultaneously. A <u><i>hypervisor</i></u> imitates the computer hardware and passes functionality to the <u><i>virtual machine</i></u>. The underlying system is the host, and the virtualized system is the guest.</p>
+			<div class="override"><img src="../../images/hypervisor.png" alt="Hypervisor"/></div>
+		</section>
+
+		<section>
+			<h3><a href="http://www.distrowatch.com/" target="_blank">Let Us Install an OS!</a></h3>
+		</section>
+
+		<section>
+			<h3>Extra Credit Presentations</h3>
+			<ol>
+				<li>Recount a brief history of the GNU project and explain the name GNU/Linux and whether it is the most appropriate name for the popular operating system. Express and provide support for your own opinion in the debate.</li>
+				<li>Give a historical perspective of (a) Microsoft's operating systems or (b) Apple's operating systems.</li>
+				<li>Provide a history of Ubuntu Linux and explain the role that it plays today.</li>
+				<li>Introduce Red Hat and describe the unique role it has played in the tech industry.</li>
+			</ol>
+		</section>
+
+		<section>
+			<h3>Homework Assignment</h3>
+			<p>Select a Linux, BSD or Unix operating system and install it in a virtual machine. During the installation process, select a username and/or hostname that can uniquely identify you as a student. Once the installation is complete, boot the virtual machine, open a terminal emulator and take a screenshot of your work. Upload the screenshot to Dropbox by Monday @ 23.59. At my discretion, I will award extra credit for installs of more complicated operating systems.</p>
+		</section>
+
+	</div>
+	</div>
+
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script src="../../js/slides.js"></script>
+	<script src="../../js/printing.js"></script>
+
+</body>
+</html>
