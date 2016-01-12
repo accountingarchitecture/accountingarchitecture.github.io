@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{graphicx}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\frenchspacing{}
+\clubpenalty 10000
+\widowpenalty 10000
+\newcommand{\AuthorsNote}[1]{\marginpar{\color{red}\tiny{}\raggedright{}\singlespace{}#1}}
+\newcommand{\Citation}[0]{{\color{red}(citation)}}
+\newcommand{\Abstract}[0]{\centerline{\textbf{\MakeUppercase{Abstract}}}\medskip{}}
+\newcommand{\Section}[2]{\vspace{.2in}\centerline{\normalsize{}\textbf{#1\quad{}\MakeUppercase{#2}}}\nopagebreak{}\smallskip{}\indent{}}
+\newcommand{\SubSection}[1]{\vspace{.15in}{\centering{}\normalsize{}\textbf{#1}}\\*\indent{}}
+\newcommand{\SubSubSection}[1]{{\centering{}\normalsize{}\textbf{\emph{#1}}}\\*\indent{}}
+\newcommand{\InsertGraphic}[1]{\vspace{.1in}\noindent{}\centerline{\MakeUppercase{---\quad{}Insert #1 here\quad{}---}}\vspace{.1in}}
+\newcommand{\Reference}[1]{\parindent=0pt\hangindent=3em\hangafter=1#1\vspace{.15in}}
+\begin{document}
+
+{\centerline{\large{}\textbf{Accounting Architecture: The New Face of AIS}}}\vspace{.1in}
+\Section{I.}{Introduction}
+In this paper, we introduce a new framework for accounting education that focuses on information creation and maintenance, data analysis and IT infrastructure that we call Accounting Architecture (AA). This new framework responds to the call by employers for accountants to increase their understanding of current technologies and data analytics (Deloitte 2013; AACSB 2014; PWC 2015). By combining knowledge across the disciplines of accounting and information systems, information technology and computer science, the AA framework provides a unifying view of what constitutes accounting information and explains how financial, tax and management accounting, audit and internal controls, business intelligence, programming and IT all fit into one system. Because this framework incorporates these principles in the context of one another, it can help prepare accountants to work as systems designers, data analysts and IT auditors. Accountants with IT and data analytics expertise occupy a unique position to guide corporate strategy by creating a link between business activities and the IT functions that support those activities.
+
+The goal of this framework is not to train accountants to replace IT specialists, but rather to provide accountants with sufficient understanding of information and technology to be able to actively participate in IT and IT audit roles. A recent article explained that IT innovation has increased the need for CIOs and their teams to work with business counterparts.\footnote{https://enterprisersproject.com/article/2015/5/cios-should-make-sure-their-teams-are-strong-their-networks} Accountants, as custodians of business information and reporting, are their business counterparts and must increase their ability to communicate with and assist IT teams. A former chairman of the New York State Society of Certified Public Accountant's Technology Assurance Committee observed that the current status quo was to hire information systems students to perform even the most menial IT audit and data analysis tasks because accountants lacked relevant knowledge. He went on to add that if we continued to refuse to learn their skills, IT specialists would learn ours and replace us. However, accountants are well positioned to overcome this risk. As a member of PWC internal audit stated, ``We prefer to train accountants to do IT tasks, than to train IT specialists to understand double-entry accounting.'' The Accounting Architecture framework proposed in this paper can instill in accountants the necessary abilities to meet the current demands placed on the profession.
+
+The rate of technological innovation has exploded in recent years, and with this increase has come unprecedented corporate investment in IT infrastructure. One of the motivations for this new level of IT adoption is the recent manifestation of vast amounts of structured and unstructured data and the understanding that, if properly analyzed and understood, this data would provide decision makers with insights into new strategies.
+
+As a result, data analytics has become a top strategic priority.\footnote{http://blogs.wsj.com/cio/2014/02/06/cios-rank-analytics-as-top-strategic-priority/} Firms collect new data each day, and the process of data creation has accelerated to the point that the world creates 2.5 quintillion bytes of data daily.\footnote{http://www-01.ibm.com/software/data/bigdata/what-is-big-data.html} More than 90 percent of all the data in the world is less than five years old (SINTEF 2013). The existence of this vast pool of structured and unstructured data (i.e., Big Data) has encouraged firms to invest in data analysis tools to learn about customer behavior, economic trends or any other insight the data can provide to create a competitive edge.
+
+New storage, analysis and cloud computing tools have facilitated the creation, collection and use of Big Data. However, the emergence of new technologies requires new expertise. As a result, companies increasingly demand individuals with expertise in Linux,\footnote{http://readwrite.com/2014/08/20/linux-jobs-demand-certification} CloudStack, NoSQL and Hadoop.\footnote{http://www.opensourceforu.com/2014/05/foss-skills-will-get-hired-year/} For example, in its recent white paper, PWC has demanded specific skill sets of future accountants (2015). Not surprisingly, some of these skills overlap with those demanded by companies at large, specifically NoSQL and Hadoop, but PWC also lists SQL, Python, R and Tableau as important skills. A solid understanding of these technologies would enable an accountant to collect, transform, analyze and visualize data.\footnote{It is likely that the decision to list R and not SAS or Python and not PERL is not an attempt by PWC to elevate one technology over another. Instead, these should represent example technologies for specific skill sets.}
+
+Currently, accounting education focuses almost exclusively on accounting regulation and compliance. Although this focus is beneficial because of the need to have a broad understanding of accounting rules, it fails to instill in students an understanding of the information system as a whole. Even those courses (i.e., management accounting and accounting information systems) that teach topics other than accounting rules and regulations emphasize business cycles, segregation of duties and cost formulas at the expense of providing perspective into the process by which data becomes information.
+
+One prominent exception is the frequency of Excel and Access training. Although the majority of technologies listed by PWC are not office software, PWC also lists these two as ``legacy technologies.'' The mention of Excel and Access highlights two important points. First, the pursuit of new expertise should not immediately supplant expertise in existing software. Excel remains a widely used business tool, and any loss of proficiency with it robs the accounting profession of some ability to master the information system. Second, different firms have different systems and different needs. Hadoop is a great tool for organizing data, but not all companies have petabytes of unstructured data. Some need only a small relational database or a few Excel spreadsheets or QuickBooks. The popularity of new, enterprise-grade data analysis tools should not negate the importance of less complex software and storage solutions.
+
+Because employers have begun to demand new skills of accountants, the academy should reevaluate the current model for accounting information systems and the encompassing curriculum to determine what revisions are necessary to train accountants with these requisite skills. The need for data analysts should represent only a starting point for identifying curriculum improvements. Many companies have expressed the desire for data analysts, but it is important not to allow this urgency for data analysis to cause the academy or the profession to miss the mark. One of the problems with the earlier wide adoption of ERP systems was that companies felt an urgency to have an ERP system. Without an understanding of information needs, benchmarks were unavailable to measure whether the ERP system would fill those needs. This same fever now exists for Big Data, but in order for any addition to the information system to be useful, the participants must understand the information system as a whole.
+
+This paper proceeds as follows. In the next section, we contrast the existing AIS model and its implementation in current curricula with the new Accounting Architecture framework. In section three, we decompose the new model and explain its individual components. In section four, we suggest curriculum modifications. In section five, we conclude.
+
+\Section{II.}{Model Comparison}
+Figure 1 displays a generalized accounting information systems (AIS) model prevalent in current AIS textbooks. This model includes three processes---data collection, data processing and information reporting---and one object---data storage. Data collection is the receipt of external sources of data. Data processing updates data storage with newly collected data and uses data in storage to calculate statistics. Information reporting presents statistics in a format that is accessible to decision makers. Data storage represents accounting journals and ledgers.
+
+\begin{figure}[!h]
+\begin{center}
+\textbf{\MakeUppercase{Figure 1}}\\[.2in]
+\textbf{Model of the Components of an Information System According to Existing AIS Curricula}\\[.4in]
+\includegraphics[scale=0.8]{Legacy.png}
+\end{center}
+\end{figure}
+
+A revision of this model and its implementation in current AIS curricula is needed to provide accountants with knowledge concerning key elements of an information system and their relationships, as well as the skills to meet employers' current expectations. With respect to data analytics, the revised model should include the technologies needed to convert structured and unstructured data into useful reports, and the curriculum should provide a conceptual understanding of and practical experience with multiple analytical tools. Although the current strong focus on data analytics within the accounting profession and industry makes this addition to the current model and curriculum worthwhile, additional modifications are necessary for two reasons. First, even an expert in analytical tools is not useful without a thorough understanding of data and the information system, and second, data analyst is not the only IT role that the accounting profession must fill.
+
+Accountants should also aid in systems design, maintenance and audit. A proper understanding of the information life cycle is essential to these roles, but because technology is the physical makeup of the information system, knowledge of the IT infrastructure is also paramount. The current model includes data storage as a technology, and textbooks discuss accounting journals and ledgers and relational databases as the implementation of data storage. Because the IT infrastructure necessary to support the information system involves more than data storage, the revised model should include additional IT components, and the curriculum should train students to interact with and audit these components. 
+
+IT auditors must also understand internal controls. The current AIS model includes no reference to controls, but the accounting curriculum's treatment of internal controls with respect to business cycles is extensive. However, a recent survey indicates that information security is a primary focus of firm controls, whereas fraud, asset misappropriation and business processes are only of secondary or tertiary significance (E\&Y 2013). Because internal controls should promote information security, the revised model should include them. Additionally, the revised curriculum should direct attention toward controls over information and focus less on controls over business cycles.
+
+Figure 2 displays the model of the Accounting Architecture (AA) framework. We selected the name Accounting Architecture for two reasons. First, by using a name other than Accounting Information Systems, we reinforce the differences between the existing AIS model and this revised model, as well as the differences in approaches to the curriculum. Second, as a prominent software engineer for Fidelity observed, an individual who understands both the business and the information system would constitute an ``accounting architect.''
+
+\begin{figure}[!h]
+\begin{center}
+\textbf{\MakeUppercase{Figure 2}}\\[.2in]
+\textbf{Model of the Components of an Information System According to Accounting Architecture}\\[.4in]
+\includegraphics[scale=0.8]{Arch5.png}
+\end{center}
+\end{figure}
+
+The arch visually represents the hierarchy of the components of an information system, and within each group are multiple building blocks that subdivide these components into their relevant constructs. Information is the most important and sits at the top of the arch. Technology and Control are the legs of the arch because they play supporting roles by providing the tools to create, store and analyze data and the controls to maintain data security and integrity. Finally, at the base of the arch is the foundation that comprises the constraints of a useful information system. The individual blocks in each section contain summary topics that are further divisible. The decision to include only summary topics increases the model's readability without restricting the number of potential subtopics within each construct.
+
+This new model extends the existing AIS model in several ways. First, the Information section of the arch portrays the activities in the information life cycle as currently understood by information scientists in three non-linear groups: creation, use and maintenance.\footnote{ARMA International, a professional organization of records and information managers, lists five groups of activities in this life cycle: create, classify, use, retain and dispose (Hoke 2011). Create includes needs assessment, acquisition, conversion and entry; classify comprises classification, storage, organization and indexing; use contains analysis and reporting; retain involves rights management, refreshing and interpretation; and dispose is deletion or, in the case of physical assets which is less relevant in our context, dispose can also involve returning borrowed materials. We combine these five into three constructs for two reasons. First, classification should occur at data creation, and storage, organization, indexing, rights management, refreshing interpretation and disposition are all ongoing maintenance activities (Upward 1996; Corrigan and Sprehe 2010). Second, by combining these five into three, we preserve the life cycle constructs as presented by ARMA while increasing the tractability of our model.} Creation comprises needs assessment, data acquisition, classification, conversion and data entry; use comprises searching, data analytics and reporting; and maintenance involves storage, organization, indexing, rights management, refreshing, interpretation and disposition. While creation activities should occur before use, maintenance activities do not always follow use. It is important to note that use, the keystone of the arch, is the primary purpose driving all the other activities. The ability to retrieve and analyze relevant information is paramount, and the entire goal of the framework. A proper understanding of the process by which data becomes information, and of how information should be managed, are necessary to comprehend the information system. This understanding will help prepare students to develop new systems, as well as support and audit existing systems.
+
+Second, including technology in the framework pairs information life cycle principles with the physical infrastructure that manifests those principles. The IT infrastructure is the application of information system principles, and although the principles apply across multiple different implementations, teaching applications trains accountants to use real-world tools to bring principles into practice.
+
+Third, this model explicitly includes control activities as supporting the information system. Internal controls are paramount to accountants, and a primary focus of control activities is information security.\footnote{The AICPA Trust Services Framework is evidence of accountants' understanding the importance of data security and integrity. We adopt this framework as the model for the Control section.} An understanding of this role of internal controls is necessary in order to train IT auditors and analysts.
+
+Fourth, by including compliance and the business model in the foundation, the model links the information system with accounting rules and business cycles as currently taught in accounting curricula. The ability to perceive this link will allow accountants to view financial, tax and management accounting, audit, the information system and the IT infrastructure as belonging to one unified system instead of disparate sets of regulations, policies and practices.
+
+\Section{III.}{Conclusion}
+Employers increasingly demand new skills in IT audit, systems design and data analytics. The current AIS model and most accounting curricula have focused on business processes since the inception of ERP, and a modification of the curriculum is necessary to train accountants in these new areas. The Accounting Architecture framework provides a model and revised undergraduate and graduate curricula that direct attention away from business cycles and toward the information life cycle, information technology and information security. This new framework gives a unifying perspective of accounting that can help students better understand information, the information system and how accounting standards affect the information needs of the firm. Moreover, the proposed curriculum does more than explain the general ledger system. It prepares students for a timely career as accounting architects.
+
+The fields of MIS and AIS already have considerable overlap. This overlap is the result of all internal and external business reports originating from the same information system, and these curriculum revisions will further train accountants in responsibilities that MIS graduates have traditionally assumed. Employers have requested that accountants assume these responsibilities, and as the custodians of business information, accountants are the best candidates for managing the entire information system, not just the general ledger.
+\newpage{}
+
+\centerline{\textbf{\MakeUppercase{Works Cited}}}
+\smallskip{}
+\singlespace{}
+\Reference{AICPA. 2014. \emph{Trust Services, Principles, Criteria, and Illustrations.} AICPA}
+
+\Reference{Atherton, J. 1985. From Life Cycle to Continuum: Some Thoughts on the Records Management-Archives Relationship. \emph{Archivaria} 21: 43-51.}
+
+\Reference{Coe, M.J. 2005. Trust Services: A Better Way to Evaluate IT Controls. \emph{Journal of Accountancy} 199 (3): 69.}
+
+\Reference{Corrigan, M., and J.T. Sprehe. 2010. Cleaning Up Your Information Wasteland. \emph{Information Management Journal} 44 (3): 26-30.}
+
+\Reference{Dederer, M.G., and A. Dmytrenko. 2015. 8 Steps to Effective Information Lifecycle Management. \emph{Information Management Journal} 49 (1): 32-35.}
+
+\Reference{Deloitte. 2013. Technology Trends: Elements of Postdigital. Available at:\\http://www2.deloitte.com/content/dam/Deloitte/us/Documents/technology/\\us-cons-tech-trends-2013.pdf}
+
+\Reference{Ernst \& Young. 2013. EMEIA FSO IT Risk Management Survey: Managing IT Risk in a Fast-changing Environment. Available at: http://www.ey.com/Publication/\\vwLUAssets/Managing\_IT\_risk\_in\_a\_fast\_changing\_environment/\$FILE/\\IT\_Risk\_Management\_Survey.pdf}
+
+\Reference{Franks, P.C. 2013. \emph{Records and Information Management.} American Library Association.}
+
+\Reference{Hoke, G.E.H. 2011. Records Life Cycle: A Cradle-to-grave Metaphor. \emph{Information Management Journal} 45 (5): 28-31.}
+
+\Reference{Jacobs, F.R., and F.C. Weston, Jr. 2007. Enterprise Resource Planning (ERP)---A Brief History. \emph{Journal of Operations Management} 25 (2): 357-363.}
+
+\Reference{Manning, C. D., Raghavan, P., and H. Sch\"utze. 2008. \emph{Introduction to Information Retrieval.} Cambridge University Press.}
+
+\Reference{PricewaterhouseCoopers. 2015. Data Driven: What Students Need to Succeed in a Rapidly Changing Business World. Available at: http://www.pwc.com/us/en/\\faculty-resource/assets/PwC-Data-driven-paper-Feb2015.pdf}
+
+\Reference{Scheer, A., and F. Habermann. 2000. Enterprise Resource Planning: Making ERP a Success. \emph{Communications of the ACM} 43 (4): 57-61.}
+
+\Reference{SINTEF. 2013. Big Data, For Better or Worse. Available at: http://www.sintef.no/\\home/corporate-news/big-data--for-better-or-worse/}
+
+\Reference{Upward, F. 1996. Structuring the Records Continuum Part One: Postcustodial Principles and Properties. \emph{Archives and Manuscripts} 24 (2): 268-285.}
+
+\end{document}
