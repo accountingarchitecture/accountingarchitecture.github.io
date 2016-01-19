@@ -39,8 +39,18 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>As we begin our discussion of the arch, we first focus on the foundation. Accountants must measure the activities in the business model, and in order to understand those activities, we must add a tool to our toolkit.</p>
+					<p>Business processes are the activities that the information system should support and measure. The Business Model block in the foundation encompasses these processes. As a result, an understanding of these processes is necessary in order to design an effective information system.</p>
 				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Informational Needs</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 65%">
+					<p>The first step in the information life cycle is needs assessment. Because the measurement of business processes is a need, a representation of processes is a valuable input into the needs assessment.</p>
+				</div>
+				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 			</div>
 		</section>
 
@@ -50,7 +60,7 @@
 				<div class="flex-item" style="max-width:50%">
 					<p>A visual representation of logic useful for communicating a series of processes in an efficient manner.</p>
 				</div>
-				<div class="flex-item"><img src="../../images/accounting-curriculum.png" alt="Ungraduate Accounting Curriculum" style="max-height: 600px"/>
+				<div class="flex-item"><img src="../../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/>
 				</div>
 			</div>
 		</section>
@@ -61,7 +71,7 @@
 				<div class="flex-item" style="max-width: 90%"><blockquote>I'm going to make a flow process chart for each of the parts that make up the gun. These charts will show, step by step, how the part is made.<br>&ndash; Alan Mogensen</blockquote></div>
 			</div>
 			<div class="flex-row" style="-webkit-justify-content: flex-end; justify-content: flex-end">
-				<div class="flex-item" style="max-width: 90%"><blockquote>I made the chart and I found out that we were doing some dumb stupid things that I didn't realize we were doing so we're fixing them.<br>&ndash; Remington Arms Company foreman</blockquote></div>
+				<div class="flex-item" style="max-width: 90%"><blockquote>I made the chart, and I found out that we were doing some dumb stupid things that I didn't realize we were doing so we're fixing them.<br>&ndash; Remington Arms Company foreman</blockquote></div>
 			</div>
 		</section>
 
@@ -69,9 +79,32 @@
 			<h3>Two Types of Models</h3>
 			<ul>
 				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
-				<li><u><i>Structure models</i></u> describe the characteristics of people, assets and data and their relationships with one another.</li>
+				<li><u><i>Structure models</i></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
 			</ul>
 			<p>Business process modeling relies on activity models. Later in the course, when we discuss data storage, we will investigate structure models as a tool for modeling data and databases.</p>
+		</section>
+
+		<section>
+			<h3>What is a Process?</h3>
+			<p>Processes are individual activities in a system, such as prepare sales order, issue payment, or update general ledger. Processes are also the entire sequence of events, such as the payroll process. In essence, any activity is a process; some activities are divisible; therefore, some processes comprise other smaller processes. If this lack of specificity is confusing, simply remember that all activities are processes.</p>
+		</section>
+
+		<section>
+			<h3>Flows</h3>
+			<p>Activity models track flow of resources, data, and control. We are particularly interested in the flow of data, but control flow is also important.</p>
+		</section>
+
+		<section>
+			<h3>Control vs. Control Flow</h3>
+			<ul>
+				<li><u><i>Controls</i></u> are checks that ensure accuracy and integrity. At the program level, these may involve verifying completeness of a file before and after processing. At the system level, these may include checking for credit worthiness before authorizing a sale on credit or requiring two signatures on all checks.</li>
+				<li><u><i>Control flow</i></u> tracks the execution of a process as if it were a turn-based activity. Control is had by the current step in the process. Data may flow in and out of other steps, no steps in the process should execute until control has passed on to them. For example, accounts payable may receive a purchase order but may not pay until control has passed to the proper step after receiving the goods and an invoice.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Data Flow &amp; Control Flow</h3>
+			<p>The flow of data and the flow of control in a process are not always aligned. Sometimes data is sent from one process to a another while the first process has control, even though the second process will not have control until several intermediate processes have completed. For example, students submit an application for graduation before courses have ended, but the receipt of an application is not evidence that graduation can occur until control has passed from all outstanding courses.</p>
 		</section>
 
 		<section>
@@ -103,30 +136,22 @@
 				<li><u><i>System flowcharts</i></u> show the flow of data through the system and the controls at the physical level that ensure process integrity.</li>
 				<li><u><i>Program flowcharts</i></u> show the flow of data through a program and the program controls that ensure data integrity.</li>
 			</ul>
-			<p>The relevant distinction between these two is that one is micro (program) and one is macro (system) as a system can contain multiple programs. In the context of business processes, existing accounting systems textbooks teach system flowcharts.</p>
+			<p>The relevant distinction between these two is that one is micro (program) and one is macro (system) as a system can contain multiple programs. In the context of business processes, system flowcharts are most applicable.</p>
 		</section>
 
 		<section>
-			<h3>What is a Process?</h3>
-			<p>Processes are individual activities in a system, such as prepare sales order, issue payment or update general ledger. Processes are also the entire sequence of events, such as the payroll process. Unfortunately, process has two meanings, so it is important not to become confused.</p>
-		</section>
-
-		<section>
-			<h3>What is Control?</h3>
-			<p>Process and data integrity are necessary traits of a business process, and as a result, control is an important concept. However, control has two different meanings in diagramming, and it is not feasible to understand a diagram without understanding these two concepts.</p>
-		</section>
-
-		<section>
-			<h3>Control vs. Control Flow</h3>
-			<ul>
-				<li><u><i>Controls</i></u> are checks that ensure accuracy and integrity. At the program level, these may involve verifying completeness of a file before and after processing. At the system level, these may include checking for credit worthiness before authorizing a sale on credit or requiring two signatures on all checks.</li>
-				<li><u><i>Control flow</i></u> tracks the execution of a process as if it were a turn-based activity. Control is had by the current step in the process. Data may flow in and out of other steps, no steps in the process should execute until control has passed on to them. For example, accounts payable may receive a purchase order but may not pay until control has passed to the proper step after receiving the goods and an invoice.</li>
-			</ul>
+			<h3>Controls</h3>
+			<p>Controls and control flow are not the same. As demonstrated in the Accounting Architecture, controls are a portion of the information system that promotes data integrity and information security. Control flow simply tracks the active process in a system or program.</p>
 		</section>
 
 		<section>
 			<h3>IBM Template</h3>
 			<img src="../../images/flowchart-template.jpg" style="max-height: 600px;" alt="IBM Template"/>
+		</section>
+
+		<section>
+			<h3>CASE (An Aside)</h3>
+			<p>One of the early purposes of program flowcharts was as an aide in writing computer software. Low-level programming languages, such as assembly code, were difficult, and flowcharts would allow the computer to understand the program logic and aide in development. This led to Computer-aided Software Engineering (CASE). Nowadays, flowcharts are more for interpersonal communication and not CASE.</p>
 		</section>
 
 		<section>
@@ -161,7 +186,7 @@
 				<li>Strengths</li>
 				<ul>
 					<li>Swimlanes highlight accountability.</li>
-					<li>Plethora of shapes identifies the form of data, nature of the activity and the number of copies of physical documents.</li>
+					<li>Plethora of shapes identifies the form of data, nature of the activity, and the number of copies of physical documents.</li>
 				</ul>
 				<li>Weaknesses</li>
 				<ul>
@@ -174,7 +199,7 @@
 			<h3>Data Flow Diagrams</h3>
 			<ul>
 				<li>1975: Edward Yourdon and Larry Constantine develop data flow diagrams to model computer logic.</li>
-				<li>1979: Chris Gane and Trish Sarson propose and alternative set of data flow diagram symbols and apply these diagrams to business processes.</li>
+				<li>1979: Chris Gane and Trish Sarson propose an alternative set of data flow diagram symbols and apply these diagrams to business processes.</li>
 			</ul>
 			<p>Although these two groups receive credit for DFD conventions, they seem suspiciously similar to earlier functional flow block diagrams developed by TRW Incorporated in the 1950s.</p>
 		</section>
@@ -194,7 +219,7 @@
 			<ul>
 				<li>DFDs have no predetermined direction or swimlanes.</li>
 				<li>Flow of data and control is signified by arrows with arrowheads just as with flowcharts.</li>
-				<li>Because DFDs have no data shapes (only data storage), the data transfered from step to step is displayed as a label for the arrow between the two steps.</li>
+				<li>Because DFDs have no data shapes other than data stores, the data transfered from step to step is displayed as a label for the arrow between the two steps.</li>
 				<li>Gane-Sarson arrows only point vertically or horizontally with 90&deg; angles, but Yourdon arrows can point in any direction and even curve.</li>
 				<li>Although arrows should cross as infrequently as possible, when arrows cross, flow should continue in a straight line.</li>
 			</ul>
@@ -202,7 +227,7 @@
 
 		<section>
 			<h3>DFD Levels</h3>
-			<p>Program steps that contain multiple substeps can necessitate the creation of multiple levels of DFDs which are linked together by numbers. The highest level DFD (Level 0) numbers processes with whole numbers (1, 2, 3, etc). The second level (Level 1) adds a decimal after the number of the decomposed process (Process 1 becomes 1.1, 1.2, 1.3, etc.). The third level (Level 2) adds an additional decimal number (Process 1.3 becomes 1.3.1, 1.3.2, etc.)</p>
+			<p>Program steps that contain multiple substeps can necessitate the creation of multiple levels of DFDs which are linked together by numbers. This allows DFDs to address the fact that processes can be divisible into sub-processes. The highest level DFD (Level 0) numbers processes with whole numbers (1, 2, 3, etc). The second level (Level 1) adds a decimal after the number of the decomposed process (Process 1 becomes 1.1, 1.2, 1.3, etc.). The third level (Level 2) adds an additional decimal number (Process 1.3 becomes 1.3.1, 1.3.2, etc.)</p>
 		</section>
 		
 		<section>
@@ -238,13 +263,12 @@
 
 		<section>
 			<h3>UML Adoption</h3>
-			<p>UML has seen relatively little adoption in practice. My assumption is that this has one primary cause: In practice, diagramming is not standardized. People generally create diagrams <i>ad-hoc</i> to solve an immediate problem and use whatever conventions necessary to record and communicate their thoughts. As a result, newer, improved methods may not satisfy a need if the existing tools are sufficient.</p>
-			</ol>
+			<p>UML has seen relatively little adoption in practice. My assumption is that this has one primary cause. In practice, diagramming is not standardized. People generally create diagrams <i>ad-hoc</i> to solve an immediate problem and use whatever conventions necessary to record and communicate their thoughts. As a result, newer, improved methods may not satisfy a need if the existing tools are sufficient.</p>
 		</section>
 
 		<section>
 			<h3>UML Shapes</h3>
-			<p>UML has may different types of diagrams: class, object, package, activty, etc, and each serves to model a different scenario. The shapes for activity diagrams have changed considerably from UML 1.X to UML 2.0, but these are the main UML 2.0 shapes:</p>
+			<p>UML has may different types of diagrams: class, object, package, activty, etc., and each serves to model a different scenario. The shapes for activity diagrams have changed considerably from UML 1.X to UML 2.0. These are the main UML 2.0 shapes:</p>
 			<div class="override"><img src="../../images/UML.png" alt="UML Shapes"/></div>
 		</section>
 
@@ -260,12 +284,10 @@
 				<ul>
 					<li>Small number of shapes in activity diagrams keeps the diagrams readable.</li>
 					<li>UML focuses on diagramming conventions that a computer can interpret. Most other frameworks require some human intervention to interpret the diagram.</li>
-					<li>The connection between UML and object-oriented programming makes it easy to generate pseudo-code from the diagram.</li>
 				</ul>
 				<li>Weaknesses</li>
 				<ul>
 					<li>Lack of swimlanes hides accountability.</li>
-					<li>Other weaknesses that have limited adoption in practice.</li>
 				</ul>
 			</ul>
 		</section>
@@ -279,7 +301,7 @@
 				<li>2010: BPMN 2.0 is released.</li>
 				<li>2013: International Organization for Standardization accepts BPMN 2.0 as an ISO standard.</li>
 			</ul>
-			<p>BPMN is an attempt to create a modeling notation specifically for business processes that promotes collaboration between operations specialists who design the process, managers who use the process and technologists who support the process.</p>
+			<p>BPMN is an attempt to create a modeling notation specifically for business processes that promotes collaboration between operations specialists who design the process, managers who use the process, and technologists who support the process.</p>
 		</section>
 
 		<section>
@@ -315,7 +337,7 @@
 				<li><u><i>Conversations</i></u> discard pools and swimlanes and depict agents as individual objects and the communications between them as black boxes.</li>
 				<li><u><i>Choreographies</i></u> discard pools and swimlanes and portray individual interactions between agents as single objects.</li>
 			</ul>
-			<p>Accounting Architecture prefers diagrams that explicitly portray communication because communication is the flow of data and information.</p>
+			<p>For our purposes, diagrams that explicitly portray communication are superior, but communication is data flow.</p>
 		</section>
 
 		<section>
@@ -329,10 +351,15 @@
 				</ul>
 				<li>Weaknesses</li>
 				<ul>
-					<li>Large number of different shapes, sub-shapes and lines can prevent uniform application of BPMN.</li>
+					<li>Large number of different shapes, sub-shapes, and lines can prevent uniform application of BPMN.</li>
 					<li>Not designed to model the flow of data.</li>
 				</ul>
 			</ul>
+		</section>
+
+		<section>
+			<h3>Communication But Not Data Flow</h3>
+			<p>The two previous slides may seem contradictory. Some BPMN diagrams explicitly portray communication, and communication is data flow, but BPMN is not designed to model the flow of data. Oddly enough, all of these statements are true. BPMN can model the flow of data, but the developers of BPMN definitively state that the purpose of BPMN is not to model data flow. This renders BPMN less useful for our purposes.</p>
 		</section>
 
 		<section>
@@ -346,18 +373,8 @@
 		</section>
 
 		<section>
-			<h3>Why Diagrams Matter to You</h3>
+			<h3>Accounting Tie-in</h3>
 			<p>Traditionally, accounting information systems texts taught modeling because of the belief that accountants should constrain business models. This is misguided. Operations specialists should develop processes. Accountants should understand the processes and ensure that the correct data flows through them. Accountants should also be able to communicate to technologists how to support the informational needs of the process.</p>
-		</section>
-
-		<section>
-			<h3>Potential Pitfall of Diagrams</h3>
-			<p>When using a standard set of shapes, it is possible to have a computer generate software code to model the functionality in the diagram. This is sometimes referred to as computer-aided software engineering or CASE. Although diagrams can make process logic and algorithms easier to visualize and communicate, it is unwise to expect a computer to correctly interpret the shapes and generate efficient and accurate code. UML attempts to overcome this, but over-reliance on CASE tools remains risky.</p>
-		</section>
-
-		<section>
-			<h3>Next Steps</h3>
-			<p>Next we will see diagrams in action by modeling sample business processes.</p>
 		</section>
 
 	</div>
