@@ -35,32 +35,40 @@
 		</section>
 
 		<section>
-			<h3>Accounting Architecture - Information</h3>
+			<h3>Accounting Architecture - Information and Technology</h3>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Until now, our discussions have covered the components of the Information Life Cycle. The principles by which data become information are general enough to apply to digital and non-digital systems alike. Because the majority of accounting information systems are digital, when appropriate, we have focused on a digital application of these principles (e.g., relational databases).</p>
+					<p>Now that we know the steps in the information life cycle and understand what a system should <em>do</em>, we can begin to investigate what a system should <em>be</em>, or in other words, what a system should comprise. The information life cycle applies to both digital and non-digital systems, but because of the prevalence of information technology, we will focus exclusively on the creation of digital information systems.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Accounting Architecture - Technology</h3>
-			<div class="flex-row">
-				<div class="flex-item" style="max-width: 65%">
-					<p>Now we turn our attention towards more physical topics. The information life cycle is not manifest in the physical world. The tangible components of the information system are the implementation of this life cycle. The life cycle teaches us what the system should <em>do</em>, and an understanding of technology identifies what the system should <em>be</em>.</p>
-				</div>
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
-			</div>
+			<h3>Technology Roadmap</h3>
+			<p>Over the next several weeks, we will discuss four different aspects of information technology:</p>
+			<ol>
+				<li><u><i>Hardware</i></u>: the physical components of the information system.</li>
+				<li><u><i>Software</i></u>: operating systems and server- and client-side applications.</li>
+				<li><u><i>Storage</i></u>: physical and logical data storage.</li>
+				<li><u><i>Services</i></u>: networking and cloud computing.</li>
+			</ol>
+			<p>All four aspects are interdependent, and each plays a vital role in enterprise-grade information systems. We begin with hardware because it is the most basic and foundational part of an information system. Without hardware, nothing else is possible. (Later we will discuss exceptions to this last statement...)</p>
 		</section>
 
 		<section>
 			<h3><a href="http://www.newegg.com/" target="_blank">Let Us Build a Computer!</a></h3>
+			<p>I cannot state with complete confidence what the best method is to teach the hardware components of an information system, but it seems to me that a great solution would be to build a hypothetical computer step-by-step and explain what purpose each additional component serves.</p>
+		</section>
+
+		<section>
+			<h3>What Shall We Build?</h3>
+			<p>An information system can have workstations, servers, mobile devices, laptops, wearable technology, etc. Although each of these has similar internal components, both the visibility and modularity of the individual pieces are greater with workstations and servers, so we will focus on these. Although the roles of workstations&mdash;for personal computing&mdash;and servers&mdash;for cloud computing&mdash; are different, their hardware makeup is not. These steps can apply to either.</p>
 		</section>
 
 		<section>
 			<h3>Where Shall We Begin?</h3>
-			<p>Each computer part influences the possible specifications of the other parts, so it is difficult to determine where to start. We will assume that the first consideration is available space, and the component that determines the size of the computer is the <u><i>case</i></u>. Several sizes exist, and beyond aesthetics, the size determines the type of <u><i>motherboard</i></u>, access to <u><i>expansion slots</i></u> and <u><i>rackability</i></u>.</p>
+			<p>Each computer part influences the possible specifications of the other parts, so it is difficult to determine where to start. We will assume that the first consideration is available space, and the component that determines the size of the computer is the <u><i>case</i></u>. Several sizes exist, and beyond aesthetics, the size determines the type of <u><i>motherboard</i></u>, access to <u><i>expansion slots</i></u>, and <u><i>rackability</i></u>.</p>
 		</section>
 
 		<section>
@@ -96,17 +104,17 @@
 
 		<section>
 			<h3>X86</h3>
-			<p>In 1978. Intel released the 8086 processor. Although the instruction set has since expanded, the 8086 processor launched the x86 line of processors which Intel continues to offer as the most popular architecture in personal computers and many servers. Advanced Micro Devices is also well known for their x86-compatible lines of processors. These processors rely on <u><i>complex instruction set computing</i></u> (CISC).</p>
+			<p>In 1978, Intel released the 8086 processor. Although the instruction set has since expanded, the 8086 processor launched the x86 line of processors which Intel continues to offer as the most popular architecture in personal computers and many servers. Advanced Micro Devices is also well known for their x86-compatible lines of processors. These processors rely on <u><i>complex instruction set computing</i></u> (CISC).</p>
 		</section>
 		
 		<section>
 			<h3>ARM</h3>
-			<p>Another popular line of processors have the ARM architecture which implement <u><i>reduced instruction set computing</i></u> (RISC), which as its name indicates, contains fewer potential instructions than CISC. Unlike Intel, ARM Holdings is not a manufacturer of processors. Instead, it licenses its IP to several other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. (Think about how this compares to the potential for an open standard.) Because of the smaller instruction set, these processors require fewer transistors and less power, which makes them a superior choice for mobile devices.</p>
+			<p>Another popular line of processors have the ARM architecture which implement <u><i>reduced instruction set computing</i></u> (RISC), which as its name indicates, contains fewer potential instructions than CISC. Unlike Intel, ARM Holdings is not a manufacturer of processors. Instead, it licenses its intellectual property to several other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. (Think about how this compares to the potential for an open standard.) Because of the smaller instruction set, these processors require fewer transistors and less power, which makes them a superior choice for mobile devices.</p>
 		</section>
 		
 		<section>
 			<h3>Word Length</h3>
-			<p>Currently, the two most common word lengths are 32 and 64 bits. Because of reverse compatibility, applications written for 32-bit processors are not inherently incompatible with a 64-bit processor. One of the limitations of 32-bit processors is that they only support 4 gigabytes of <u><i>random-access memory</i></u> (RAM).Prior to the introduction of 64-bit processors, manufacturers would add <u><i>physical address extension</i></u> to 32-bit processors that would remove the 4 GB cap.</p>
+			<p>Currently, the two most common word lengths are 32 and 64 bits. Because of reverse compatibility, applications written for 32-bit processors are not inherently incompatible with a 64-bit processor. One of the limitations of 32-bit processors is that they only support 4 gigabytes of <u><i>random-access memory</i></u> (RAM). Prior to the introduction of 64-bit processors, manufacturers would add <u><i>physical address extension</i></u> to 32-bit processors that would remove the 4 GB cap.</p>
 			<p>In addition to increasing processing speed, 64-bit processors can accommodate up to 16 exabytes of memory. The 64-bit architecture is frequently labeled by the abbreviation x64. The majority of new processors are 64-bit.</p>
 		</section>
 
@@ -229,31 +237,8 @@
 		</section>
 
 		<section>
-			<h3>Networking</h3>
-			<p>Workstations, also referred to as <u><i>fat clients</i></u>, can perform may functions without the aid of a network. Historically, individual computers were <u><i>thin clients</i></u>&mdash;dumb terminals&mdash;that allowed for data entry into a centralized server. Today, thin clients have once again become popular (e.g., mobile devices, Chromebooks), but the underlying server setup has changed. Nowadays, we rely on the <u><i>local area networks</u></i> (LANs) and <u><i>wide area networks</i></u> (WANs), such as the Internet, to connect to servers. In order to take advantage of these resources, we need some extra hardware.</p>
-		</section>
-
-		<section>
-			<h3>Local Area Network</h3>
-			<p>A local area network allows for communication between computers generally over a small, localized area (e.g., one office building) using <u><i>routers</i></u> and <u><i>switches</i></u>. The differences between these are beyond our purview, but briefly, a switch allows network traffic to flow to multiple different devices, whereas a router creates a smaller network within a larger network and directs traffic between the smaller and larger networks. Category 5, 5E and 6 (Ethernet) cables and wireless fidelity (Wi-Fi) connect individual devices to the LAN. Each of these devices uses a network interface card (NIC) with a unique media access control (MAC) address to communicate with the network.</p>
-			<!--License: CC-BY-SA 3.0 Attribution: PassportDude at the English Language Wikipedia-->
-			<img src="../../images/switch.jpg" alt="Switch" style="max-height: 90px; margin-top: 0"/>
-		</section>
-
-		<section>
-			<h3>Wide Area Network</h3>
-			<p>Wide area networks comprise networks that cover a large geographical area, but frequently people use this term to mean the Internet because it is the most pervasive manifestation of a WAN. A LAN is sufficient to connect fat and thin clients and local servers together, but most information systems need WAN access, as well. Internet Service Providers (ISPs) use coaxial cable, phone lines, satellite, cell towers or fiber optics to allow individual residences and business access to the Internet. Modems, also referred to as radios, allow devices and LANs to access the WAN.</p>
-		</section>
-
-		<section>
-			<h3>Extra Credit Presentations</h3>
-			<ol>
-				<li>Explain how a central processing unit executes instructions using the following CPU components: control unit, program counter, arithmetic logic unit, opcode, operand, status, register and memory.</li>
-				<li>Introduce the Internet of Things (IoT) and explain its role in information systems.</li>
-				<li>Explain how GPUs are better than CPUs in two specific settings: video game consoles and Bitcoin mining.</li>
-				<li>Give a historical perspective of mainframes and explain why they have once again become popular.</li>
-			</ol>
-		</section>
+			<h3>Accounting Tie-in</h3>
+			<p>It goes without saying that accountants could not function without computer hardware. Historically, invoices, customer orders, job tickets, time cards, etc., have been paper documents, and accounting journals and ledgers were literal journals and ledgers. Even if we ignore the additional data collection, analysis, and reporting roles that accountants must assume in the current technological environment, the conversion of accounting documents to accounting data, even in small businesses, makes computer hardware indispensable.</p>
 
 	</div>
 	</div>
