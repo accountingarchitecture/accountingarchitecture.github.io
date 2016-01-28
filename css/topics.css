@@ -20,6 +20,8 @@
 	display: none;
 }
 .header {
+	-webkit-flex: 1 1 auto;
+	flex: 1 1 auto;
 	margin-left: 20px;
 }
 .date {
