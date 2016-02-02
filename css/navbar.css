@@ -45,6 +45,16 @@ ul {
 ol, ul {
 	list-style-position: inside;
 }
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	font-weight: bold;
+}
+a:link, a:visited {
+	color: #004891;
+}
+a:hover, a:active {
+	color: darkgray;
+}
 
 /********** Page Settings **********/
 #wrapper {
