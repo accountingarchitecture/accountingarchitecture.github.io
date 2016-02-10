@@ -68,7 +68,7 @@
 
 		<section>
 			<h3>Where Shall We Begin?</h3>
-			<p>Each computer part influences the possible specifications of the other parts, so it is difficult to determine where to start. We will assume that the first consideration is available space, and the component that determines the size of the computer is the <u><i>case</i></u>. Several sizes exist, and beyond aesthetics, the size determines the type of <u><i>motherboard</i></u>, access to <u><i>expansion slots</i></u>, and <u><i>rackability</i></u>.</p>
+			<p>Each computer part influences the possible specifications of the other parts, so it is difficult to determine where to start. We will assume that the first consideration is available space, and the component that determines the size of the computer is the <u><i>case</i></u>. Several sizes exist, and beyond aesthetics, the size determines the type of <u><i>motherboard</i></u>, access to <u><i>expansion slots</i></u>, and <u><i>rackability</i></u> (i.e., the ability to store the computer in a server rack).</p>
 		</section>
 
 		<section>
@@ -79,19 +79,19 @@
 
 		<section>
 			<h3>Rackable U</h3>
-			<p>Rackable computers are shorter, wider and deeper than desktop computers. They have uniform width (ca. 430 mm), and their height is in multiples of U (e.g., 1U, 2U, 3U, etc), where 1U = 44 mm, so that they can screw into brackets on standardized racks.</p>
+			<p>Rackable computers are shorter, wider, and deeper than desktop computers. They have uniform width (ca. 430 mm), and their height is in multiples of U (e.g., 1U, 2U, 3U, etc.), where 1U = 44 mm, so that they can screw into brackets on standardized racks.</p>
 			<!--License: CC-BY-SA 3.0 Attribution: Virtorgrigas-->
 			<img src="../../images/usizes.png" alt="U Sizes" style="max-height: 300px"/>
 		</section>
 
 		<section>
 			<h3>Second Step</h3>
-			<p>Although an obvious second step would be to select a motherboard, the selection of <i><u>central processing unit</u></i> (CPU) and motherboard are extremely closely intertwined through the CPU socket on the motherboard, and users generally care more about the choice of CPU than the choice of motherboard.</p>
+			<p>Most every other hardware selection is the result of the choice of <i><u>central processing unit</u></i> (CPU). In importance, it exceeds that of the case, so we could have started with the selection of a CPU, but since we pretended that space was the first consideration, we will focus on the processor second.</p>
 		</section>
 
 		<section>
 			<h3>Central Processing Unit</h3>
-			<p>The central processing unit (CPU) carries out the computer instructions by fetching data from memory, performing an operation on the data and returning the result of the operation to memory. Important considerations when choosing a CPU are <u><i>architecture</i></u> and <u><i>speed</i></u>.Additionally, because the CPU generates heat, it is necessary to cool it with either a fan or a heatsink. The latter allows for silent cooling.</p>
+			<p>The central processing unit (CPU) carries out the computer instructions by fetching data from memory, performing an operation on the data and returning the result of the operation to memory. Important considerations when choosing a CPU are <u><i>architecture</i></u> and <u><i>speed</i></u>. Additionally, because the CPU generates heat, it is necessary to cool it with either a fan or a heatsink. The latter allows for silent cooling.</p>
 			<!--License: CC-BY-SA 2.0 Attribution: Andrew Dunn-->
 			<img src="../../images/cpu.jpg" alt="CPU" style="max-height: 250px"/>
 		</section>
@@ -109,13 +109,13 @@
 		
 		<section>
 			<h3>ARM</h3>
-			<p>Another popular line of processors have the ARM architecture which implement <u><i>reduced instruction set computing</i></u> (RISC), which as its name indicates, contains fewer potential instructions than CISC. Unlike Intel, ARM Holdings is not a manufacturer of processors. Instead, it licenses its intellectual property to several other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. (Think about how this compares to the potential for an open standard.) Because of the smaller instruction set, these processors require fewer transistors and less power, which makes them a superior choice for mobile devices.</p>
+			<p>Another popular line of processors have the ARM architecture which implement <u><i>reduced instruction set computing</i></u> (RISC), which as its name indicates, contains fewer potential instructions than CISC. Unlike Intel, ARM Holdings is not a manufacturer of processors. Instead, it licenses its intellectual property to several other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. (Think about how this compares to the potential for an open standard.) Because of the smaller instruction set, these processors require less power, which makes them a superior choice for mobile devices.</p>
 		</section>
 		
 		<section>
 			<h3>Word Length</h3>
-			<p>Currently, the two most common word lengths are 32 and 64 bits. Because of reverse compatibility, applications written for 32-bit processors are not inherently incompatible with a 64-bit processor. One of the limitations of 32-bit processors is that they only support 4 gigabytes of <u><i>random-access memory</i></u> (RAM). Prior to the introduction of 64-bit processors, manufacturers would add <u><i>physical address extension</i></u> to 32-bit processors that would remove the 4 GB cap.</p>
-			<p>In addition to increasing processing speed, 64-bit processors can accommodate up to 16 exabytes of memory. The 64-bit architecture is frequently labeled by the abbreviation x64. The majority of new processors are 64-bit.</p>
+			<p>Currently, the two most common word lengths are 32 and 64 bits. One of the limitations of 32-bit processors is that they only support 4 gigabytes of <u><i>random-access memory</i></u> (RAM). Prior to the introduction of 64-bit processors, manufacturers would add <u><i>physical address extension</i></u> to 32-bit processors that would remove the 4 GB cap.</p>
+			<p>In addition to increasing processing speed, 64-bit processors can accommodate up to 16 exabytes of memory. The 64-bit architecture is frequently labeled by the abbreviation x64 or x86_64 to signify the connection to the x86 instruction set. The majority of new processors are 64-bit.</p>
 		</section>
 
 		<section>
@@ -132,17 +132,12 @@
 
 		<section>
 			<h3>Multi-core Processors</h3>
-			<p>Although it is not possible to increase the clock speed of a CPU with bound, it is possible to add additional processors to one computer or even additional cores to a single processor to improve performance by virtue of <u><i>parallel processing</i></u>. The theoretical upper bound of the FLOPS of a multi-core processor is the FLOPS of a single core multiplied by the number of cores, but realized performance is less because it is not always possible to split instructions among cores and have them execute simultaneously.</p>
-		</section>
-
-		<section>
-			<h3>Hyper-threading</h3>
-			<p>Just as the physical and logical views of storage differ, the physical and logical views of processors can differ. In an attempt to increase the efficiency of their processors, Intel developed technology that would allow the operating system to see two logical or virtual cores for every physical core. This is one example of software allowing for more efficient use of hardware. We will discuss more examples of this when we focus on the Software block of the Architecture.</p>
+			<p>Although it is not possible to increase the clock speed of a CPU without bound, it is possible to add additional processors to one computer or even additional cores to a single processor to improve performance by virtue of <u><i>parallel processing</i></u>. The theoretical upper bound of the FLOPS of a multi-core processor is the FLOPS of a single core multiplied by the number of cores, but realized performance is less because it is not always possible to split instructions among cores and have them execute simultaneously.</p>
 		</section>
 
 		<section>
 			<h3>And Now...</h3>
-			<p>The third component to select is the <u><i>motherboard</i></u>. The motherboard is a circuit board that holds the system components and allows communication between them. Some motherboards include integrated audio, video and network capabilities.</p>
+			<p>The third component to select is the <u><i>motherboard</i></u>. The motherboard is a circuit board that holds the system components and allows communication between them. Some motherboards include integrated audio, video, and network capabilities.</p>
 			<!--License: CC-BY-SA Attribution: Moxfyre at en.wikipedia-->
 			<img src="../../images/motherboard.png" alt="Motherboard" style="margin: 0; max-height: 350px"/>
 		</section>
@@ -154,34 +149,30 @@
 
 		<section>
 			<h3>Never Forget</h3>
-			<p>In addition to a CPU, each computer requires <u><i>random-access memory</i></u> (RAM). RAM, frequently simply referred to as memory, is a type of volatile&mdash;it requires power to store data&mdash;computer storage that allows for fast retrieval of data. The greater the amount of memory, the faster the computer can operate because it can store more data in this fast-retrieval repository. Currently, RAM takes on the form of double data rate synchronous dynamic random-access memory (DDR SDRAM). The motherboard constrains RAM <u><i>size</i></u>, <u><i>speed</i></u> and <u><i>capacity</i></u>.</p>
+			<p>In addition to a CPU, each computer requires <u><i>random-access memory</i></u> (RAM). RAM, frequently simply referred to as memory, is a type of volatile&mdash;it requires power to store data&mdash;computer storage that allows for fast retrieval of data. The greater the amount of memory, the faster the computer can operate because it can store more data in this fast-retrieval repository. Currently, RAM takes on the form of double data rate synchronous dynamic random-access memory (DDR SDRAM). The motherboard constrains RAM <u><i>size</i></u>, <u><i>speed</i></u>, and <u><i>capacity</i></u>.</p>
 			<!--License: CC-BY 2.5 Attribution: Royan-->
 			<img src="../../images/ram.jpg" alt="RAM" style="max-height: 150px"/>
 		</section>
 
 		<section>
 			<h3>DIMM</h3>
-			<p>An individual stick of memory comes in two sizes: dual in-line memory module (DIMM) or small outline dual in-line memory module (SO-DIMM). The former is generally for workstations and servers, and the latter is for notebooks, smaller form-factor personal computers and network hardware.</p>
+			<p>An individual stick of memory comes in two sizes: dual in-line memory module (DIMM) or small outline dual in-line memory module (SO-DIMM). The former is generally for workstations and servers, and the latter is for notebooks, smaller form-factor personal computers, and network hardware.</p>
 		</section>
 
 		<section>
 			<h3>Keeping Up with the Jones</h3>
-			<p>Speed is important for RAM, just as it is for a CPU, but RAM has an additional reason for focusing on speed, as well. CPUs can process data faster than RAM can serve it, so RAM creates a bottleneck in data processing. Faster RAM decreases that bottleneck, but RAM cannot currently match the speed of the processor. RAM reports speed in two ways. The DDR prefix from DDR SDRAM includes a generation and a data rate in megatransfers per second; together these are the standard name which reports the peak transfer rate in megabytes per second. These map directly into module names, as well. Common examples are DDR3-1600 = PC3-12800 and DDR4-2400 = PC4-19200.</p>
+			<p>Speed is important for RAM, just as it is for a CPU, but RAM has an additional reason for focusing on speed, as well. CPUs with gigahertz clock rates can process data faster than RAM with only megahertz clock rates can supply it. This is a list of common transfer speeds of the third generation of DDR SDRAM.</p>
+			<img src="../../images/ddr3.png" alt="DDR3" style="max-height: 350px"/>
 		</section>
 
 		<section>
 			<h3>Multiplicity</h3>
-			<p>The motherboard memory slots determine the supported sizes and speeds, but the slots also determine the supported capacity per DIMM, and the number of slots determines maximum capacity. DIMMs currently have common capacities of 2GB, 4GB, 8GB and 16GB, and motherboards generally have two or four slots. It is not necessary to fill all slots, nor is it necessary for all DIMMs to have the same capacity or speed. However, the computer will function at the speed of the slowest DIMM. It is important to remember that 32-bit processor word length continues to restrict supported RAM capacity even if the motherboard supports more than 4 GB.</p>
+			<p>The motherboard memory slots determine the supported sizes and speeds, but the slots also determine the supported capacity per DIMM, and the number of slots determines maximum capacity. DIMMs currently have common capacities of 2GB, 4GB, 8GB and 16GB, and motherboards generally have two or four slots. It is not necessary to fill all slots, nor is it necessary for all DIMMs to have the same capacity or speed. However, the computer will function at the speed of the slowest DIMM.</p>
 		</section>
 
 		<section>
 			<h3>Swapping</h3>
-			<p>Historically, a computer could not handle complete consumption of available memory because the CPU would not be able to find the next instruction. Virtual memory overcame this problem by reserving a portion of the hard drive as secondary memory, called <u><i>swap space</i></u>. The process of moving data from main memory to secondary memory is called <u><i>paging</i></u>. Although it allows a computer to continue functioning, paging is very slow, and the computer can become unresponsive as a result.</p>
-		</section>
-
-		<section>
-			<h3>RAM Disk</h3>
-			<p>Much less common than paging, in which a physical drive assumes the role of secondary memory, RAM can assume the role of a physical drive by reserving a portion of available main memory as a <u><i>RAM disk</i></u>. This allows for faster data retrieval than accessing a physical drive, but because RAM is volatile, the stored data is lost if the computer loses power.</p>
+			<p>Historically, a computer could not handle consumption of all available memory because the CPU would not be able to find the next instruction. Virtual memory overcame this problem by reserving a portion of the hard drive as secondary memory, called <u><i>swap space</i></u>. If most of the physical memory was reserved, the operating system would move some of the data stored in physical memory to the swap space to free up physical memory. The process of moving data from main memory to secondary memory is called <u><i>paging</i></u>. Although it allows a computer to continue functioning, paging is very slow, and the computer can become unresponsive as a result.</p>
 		</section>
 
 		<section>
@@ -196,44 +187,32 @@
 		</section>
 
 		<section>
-			<h3>Seeing is Believing</h3>
-			<p>Although not necessary, many computers also contain a video card. These cards contain their own processing unit, called a graphical processing unit (GPU), their own fan or heatsink, and their own memory (GDDR or SGRAM). These cards can draw graphical objects more quickly than a CPU. Many current computers require no video card because newer processors (e.g. i3 Intel processors) have both CPU cores and GPU cores. Motherboards also frequently contain integrated video outputs. Additionally, servers, which generally use no graphical environment, need no graphics capabilities beyond what the CPU can provide.</p>
+			<h3>RAM Disk</h3>
+			<p>Much less common than paging, in which a physical drive assumes the role of secondary memory, RAM can assume the role of a physical drive by reserving a portion of available main memory as a <u><i>RAM disk</i></u>. This allows for faster data retrieval than accessing a physical drive, but because RAM is volatile, the stored data is lost if the computer loses power.</p>
 		</section>
 
 		<section>
-			<h3>Other Peripherals</h3>
-			<p>Depending on need, other hardware components may become valuable:</p>
-			<ul>
-				<li>Optical drives</li>
-				<li>Input/Output (I/O) devices</li>
-				<li>Expansion cards</li>
-			</ul>
-			<p>Optical drives have become increasingly rare, and I/O devices are generally for workstations and not servers.</p>
+			<h3>Seeing is Believing</h3>
+			<p>Although not necessary, many computers also contain a video card. These cards contain their own processing unit, called a graphical processing unit (GPU), their own fan or heatsink, and their own memory (GDDR or SGRAM). These cards can draw graphical objects more quickly than a CPU. Many current computers require no video card because newer processors (e.g. i3 Intel processors) have both CPU cores and integrated GPU cores. Graphics cards contain ports for connecting monitors, and motherboards also contain these ports for use with CPU-integrated graphics. Servers, which generally use no graphical environment, need no graphics capabilities beyond what the CPU can provide.</p>
 		</section>
 
 		<section>
 			<h3>Powering It All</h3>
-			<p>The final requisite component is the <u><i>power supply unit</i></u> (PSU), which gives power directly to storage drives and indirectly to the CPU, RAM, other integrated components and expansion cards through the motherboard. The computer case determines the maximum supported PSU size, but the more important consideration is power needed. If the PSU provides insufficient power, not only can the components malfunction, but they can also degrade at an accelerated rate. It is difficult to determine exactly how much power will be necessary for a specific setup, but for a standard workstation or server 600 watts can suffice.</p>
+			<p>The final requisite component is the <u><i>power supply unit</i></u> (PSU), which gives power directly to storage drives and indirectly to the CPU, RAM, and other components through the motherboard. The computer case determines the maximum supported PSU size, but the more important consideration is power needed. If the PSU provides insufficient power, not only can the components malfunction, but they can also degrade at an accelerated rate. It is difficult to determine exactly how much power will be necessary for a specific setup, but for a standard workstation or server 600 watts can suffice.</p>
 			<!--License: CC-BY-SA 3.0 Attribution: Danrok-->
 			<img src="../../images/psu.jpg" alt="PSU" style="max-height: 100px"/>
 		</section>
 
 		<section>
 			<h3>How Would This Be Different for Mobile Devices?</h3>
-			<p>Although mobile devices, such as smartphones and tablets, include the same set of components, the configuration looks different to conserve on space and energy. For example, instead of including a CPU, DIMMs of memory and a graphics card, these devices have a <u><i>System on a Chip</i></u> (SoC), in which CPU cores, memory, GPU cores and sometimes cell radios, are combined into a single chip. Many, though not all, of these use ARM processors because they further reduce energy consumption and generate less heat. However, Intel has fervently reduced the gap between x86 and ARM processors in an attempt to become more attractive to manufacturers of mobile devices.</p>
+			<p>Although mobile devices, such as smartphones and tablets, include the same set of components, the configuration looks different to conserve on space and energy. For example, instead of including a CPU, DIMMs of memory, and a graphics card, these devices have a <u><i>System on a Chip</i></u> (SoC), in which CPU cores, memory, GPU cores, and sometimes cell radios, are combined into a single chip. Many, though not all, of these use ARM processors because they further reduce energy consumption and generate less heat. However, Intel has fervently reduced the gap between x86 and ARM processors in an attempt to become more attractive to manufacturers of mobile devices.</p>
 		</section>
 
 		<section>
 			<h3>SoC is for SBC</h3>
-			<p>One common use for System on a Chip is Single Board Computers (SBCs). SBCs have a motherboard that differs from those found in workstations and servers. SBC boards have all components: CPU, GPU, RAM, etc soldered onto the board. These take less space and use less energy than their larger counterparts. Although tablets and smartphones almost certainly use SBCs, the most well-known example of an SBC is the Raspberry Pi.</p>
+			<p>One common use for System on a Chip is Single Board Computers (SBCs). SBCs have a motherboard that differs from those found in workstations and servers. SBC boards have all components: CPU, GPU, RAM, etc., soldered onto the board. These take less space and use less energy than their larger counterparts. Although tablets and smartphones almost certainly use SBCs, the most well-known example of an SBC is the Raspberry Pi.</p>
 			<!--License: CC-BY-SA 4.0 Attribution: Multicherry-->
 			<img src="../../images/raspberrypi.jpg" alt="Raspberry Pi 2" style="max-height: 200px"/>
-		</section>
-
-		<section>
-			<h3>What about &ldquo;Mainframes&rdquo;?</h3>
-			<p>Mainframes are rack-sized computers that combine dozens of processors and terabytes of memory into one computer to maximize the ability for parallel processing. The alternative would be to create a cluster of smaller servers or workstations. One mainframe can replace hundreds of clustered servers.</p>
-			<img src="../../images/mainframe.jpg" alt="Mainframe" style="max-height: 350px; margin-top: 0"/>
 		</section>
 
 		<section>
