@@ -176,6 +176,11 @@
 		</section>
 
 		<section>
+			<h3>Narrative</h3>
+			<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory that has fallen below its reorder point. Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy to Inventory Control to file with Inventory Control&rdquo;s copy of the purchase requisition, and sends a copy to the Vendor.</p>
+		</section>
+
+		<section>
 			<h3>A Funny One</h3>
 			<div class="override"><img src="../../images/funny.png" alt="Deal Flowchart" style="max-height: 550px"/></div>
 		</section>
@@ -236,6 +241,11 @@
 		</section>
 
 		<section>
+			<h3>Narrative</h3>
+			<p>The Vendor sends an invoice. The invoice is compared to the purchase order for discrepancies. Once the invoice is approved, a check is signed and sent to the Vendor. A journal entry is added to the cash disbursements journal, and a journal voucher is used to update the accounts payable subledger.</p>
+		</section>
+
+		<section>
 			<h3>DFD Strengths and Weaknesses</h3>
 			<ul>
 				<li>Strengths</li>
@@ -275,6 +285,11 @@
 		<section>
 			<h3>Sample UML</h3>
 			<div class="override"><img src="../../images/sample-uml.png" alt="Sample UML" style="max-height: 450px"/>
+		</section>
+
+		<section>
+			<h3>(Technical) Narrative</h3>
+			<p>When the ORDER ACTIVITY is invoked, a control token is placed at the initial node, and a data token with ordering information is placed at the input parameter object node. The control token flows from the initial node to the CREATE ORDER action, which begins executing. The data token flows from the parameter to the invocation action for FILL ORDER, which must wait for CREATE ORDER to provide its other input before starting. When FILL ORDER is done, a control token is passed to the final node and the activity terminates, returning control to execution that started it.</p>
 		</section>
 
 		<section>
@@ -346,6 +361,11 @@
 		</section>
 
 		<section>
+			<h3>Narrative</h3>
+			<p>The Help Desk receives a ticket from the customer and searches the help-desk database for a solution. If the Help Desk finds a solution, it sends the solution to the customer. Otherwise, it sends a message to the expert. When the Help Desk receives a response from the expert, it sends the solution to the customer.</p>
+		</section>
+
+		<section>
 			<h3>Sample Choreography</h3>
 			<div class="override"><img src="../../images/sample-choreography.png" alt="Sample BPMN Choreography" style="max-height: 650px"/>
 		</section>
@@ -379,7 +399,10 @@
 
 		<section>
 			<h3>Homework</h3>
+			<p><u>Part 1</u></p>
 			<p>On the course portal, you will find a process diagram. Your assignment is to read the diagram and type a narrative explaining the process in your own words. The goal is to demonstrate that you have learned how to read and understand diagrams.</p>
+			<p><u>Part 2</u></p>
+			<p>Now, using the same process diagram, you should create a replica. You may use any diagramming software that you choose, but I recommend that you use <a href="https://www.draw.io/">Draw.io</a> because it is the tool that I demonstrate in class.</p>
 		</section>
 
 	</div>
