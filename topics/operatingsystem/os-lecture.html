@@ -31,7 +31,7 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Software</h2>
+			<h2>Operating Systems</h2>
 		</section>
 
 		<section>
@@ -39,14 +39,9 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Hardware is the first component of Technology. Although every part of this section has relevance towards implementing the principles in the information life cycle, software is the most important part.</p>
+					<p>Although every part of the Technology section has relevance towards implementing the principles in the information life cycle, software is the most important part. Software performs all of the automated tasks and facilitates all of the manual tasks in the information system. Software stores and retrieves data; software analyses and generates report. Without software, hardware is useless.</p>
 				</div>
 			</div>
-		</section>
-
-		<section>
-			<h3>The Role of Software</h3>
-			<p>Software performs all of the automated and facilitates all of the manual tasks in the information system. Software stores and retrieves data; software analyses and generates reports; software provides end-user interfaces and serves web content. Without software, hardware is impotent.</p>
 		</section>
 
 		<section>
@@ -79,7 +74,7 @@
 
 		<section>
 			<h3>Users and Tasks</h3>
-			<p>Early smart terminals (i.e., PCs) no longer needed time-sharing operating systems because only one application could execute at a time. These PCs were single-user, single-task. As workstations became more sophisticated, operating systems could support multi-user and multi-task environments. These are exactly as they seem: operating systems that support multiple different user logins and multiple simultaneous applications. Once operating systems became multi-task, they once again became time-sharing. However, this time sharing focused on local applications and not dumb terminals.</p>
+			<p>Early PCs no longer needed time-sharing operating systems because only one application could execute at a time. These PCs were single-user, single-task. As workstations became more sophisticated, operating systems could support multi-user and multi-task environments. These are exactly as they seem: operating systems that support multiple different user logins and multiple simultaneous applications. Once operating systems became multi-task, they once again became time-sharing because of the need to allocate hardware resources between applications.</p>
 		</section>
 
 		<section>
@@ -94,7 +89,7 @@
 
 		<section>
 			<h3>Forget about Windows and OS X</h3>
-			<p>Although Microsoft Windows and Apple OS X are the two dominant desktop computer operating systems, these are not nearly as relevant in all other components of the information system (e.g., servers, mobile devices, firmware). Unix, BSD and Linux run the majority of information system hardware.</p>
+			<p>Although Microsoft Windows and Apple OS X are the two dominant desktop computer operating systems, these are not nearly as relevant in all other components of the information system (e.g., servers, mobile devices, firmware). Unix, BSD, and Linux run the majority of information system hardware.</p>
 		</section>
 
 		<section>
@@ -145,7 +140,7 @@
 		</section>
 
 		<section>
-			<h3>Another Microsoft Aside</h3>
+			<h3>A Microsoft Aside</h3>
 			<p>Microsoft eventually abandoned Xenix in favor of MS-DOS, but the existence of Xenix is evidence of a very important point: Unix, and other subsequent Unix-like operating systems, are not merely alternatives to Microsoft Windows. Unix was the operating system of choice before anyone had heard of Microsoft.</p>
 		</section>
 
@@ -174,7 +169,7 @@
 		</section>
 
 		<section>
-			<h3>Another Standard</h3>
+			<h3>An Open Standard</h3>
 			<p>Despite the appeal of both System V Unix and BSD Unix, disputes arose between the programming communities. In an attempt to reconcile differences, the Institute of Electrical and Electronics Engineers (IEEE) developed a set of <u><i>Portable Operating System Interface</i></u> (POSIX) standards based on System V Unix which continue to govern Unix and Unix-like operating systems today. The list of POSIX-certified operating systems contains the three most prominent Unix offerings: IBM AIX, HP-UX and Oracle Solaris. Although BSD continues not be POSIX-certified, it is mostly POSIX compliant.</p>
 		</section>
 
@@ -195,40 +190,51 @@
 
 		<section>
 			<h3>After the Suit</h3>
-			<p>Although Berkeley was exonerated, the legal uncertainty between 1992 and 1994 encouraged many developers to transition to Linux. However, BSD is still widely used and supported, and many flavors exist. The most prominent are FreeBSD, NetBSD, OpenBSD (a fork of NetBSD focused on security) and Mac OS X (and iOS, for that matter). Furthermore, most operating systems, including Microsoft Windows, use network tools from BSD. In 2006, InformationWeek rated 4.3BSD as the &ldquo;Greatest Software Ever Written&rdquo; and the &ldquo;theoretical undergirder of the Internet.&rdquo;</p>
+			<p>Although Berkeley was exonerated, the legal uncertainty between 1992 and 1994 encouraged many developers to transition to Linux. However, BSD is still widely used and supported, and many flavors exist. The most prominent are FreeBSD, NetBSD, OpenBSD (a fork of NetBSD focused on security) and Mac OS X (and iOS, for that matter). Furthermore, most operating systems, including Microsoft Windows, use network tools from BSD. In 2006, InformationWeek rated 4.3BSD as the &ldquo;Greatest Software Ever Written&rdquo; and the &ldquo;Theoretical undergirder of the Internet.&rdquo;</p>
 		</section>
 
 		<section>
-			<h3>Linux - The Stars Align</h3>
-			<p>Linus Torvalds began development of the Linux operating system on 25 August 1991. A number of discrete events coalesced to facilitate the initialization of this project:</p>
-			<ul>
-				<li>Richard Stallman's GNU project started in 1983 had not yet generated a working system, but it contained many useful tools.</li>
-				<li>Intel had released the first 32-bit x86 processor: the 80386.</li>
-				<li>Net/2 had not yet been ported to 80386.</li>
-				<li>Unix licenses were too expensive for private users.</li>
-				<li>MINIX, another Unix-like system, was not well suited to 386.</li>
-				<li>No widely adopted adopted, free kernel existed.</li>
+			<h3>Linux - The Early Years</h3>
+			<ul class="nobullet">
+				<li>1991: Linus Torvalds released Linux kernel 0.01 under its own license with some GNU userland tools.</li>
+				<li>1992: Linus released Linux kernel 0.99 under GNU GPL. He subsequently asserted that the license change was the best thing he had ever done. At the same time, MINIX author Andrew S. Tanenbaum stated, &ldquo;Linux is obsolete,&rdquo; in part, because it relied heavily on &lsquo;weird&rsquo; x86 processors.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Linus on Linux</h3>
+			<div class="flex-row">
+				<div class="flex-item">
+					<blockquote>If 386BSD had been available when I started on Linux, Linux would probably never had happened.</blockquote>
+				</div>
+				<div class="flex-item">
+					<blockquote>If the GNU kernel had been ready last spring, I'd not have bothered to even start my project.</blockquote>
+				</div>
+			</div>
 		</section>
 
 		<section>
 			<h3>What is a Kernel, You Might Ask</h3>
-			<p>The <u><i>kernel</i></u> is the part of the operating system that interacts with the computer hardware. This is the lowest level of the operating system. The remaining components live in <u><i>userland</i></u> because they interact with the user. Depending on the type of kernel, the kernel itself may handle operating system services (monolithic kernel) or these services may be handled by a series of servers in userland (microkernel).</p>
+			<p>The <u><i>kernel</i></u> is the part of the operating system that interacts with the computer hardware. This is the lowest level of the operating system. The remaining components live in <u><i>userland</i></u> because they interact with the user. Depending on the type of kernel, the kernel itself may handle operating system services (monolithic kernel) or these services may be handled by a series of servers (microkernel).</p>
 			<div class="flex-row">
 				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
-				<div class="flex-item"><img src="../../images/monolithic.png" alt="Monolithic Kernel" style="max-width: 50%"/></div>
-				<div class="flex-item"><img src="../../images/microkernel.png" alt="Microkernel" style="max-width: 50%"/></div>
+				<!--<div class="flex-item"><img src="../../images/monolithic.png" alt="Monolithic Kernel" style="max-width: 50%"/></div>-->
+				<!--License: CC-BY-SA 3.0 Attribution: Bobbo-->
+				<div class="flex-item"><img src="../../images/kernel.png" alt="Kernel" style="max-height: 250px"/></div>
+				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
+				<div class="flex-item"><img src="../../images/microkernel.png" alt="Microkernel" style="max-height: 250px"/></div>
 			</div>
 		</section>
 
 		<section>
 			<h3>What is a Server, Anyway?</h3>
-			<p>Frequently, the word server is used to identify 1U computers stored in a rack, and it is true that workstations and servers frequently have slight differences in hardware setup (e.g., graphics and I/O capabilities). However, a more appropriate use of the word <q>server</q> would be <u><i>software that provides a service</i></u>.</p>
+			<p>Frequently, the word server is used to identify 1U computers stored in a rack, and it is true that workstations and servers frequently have slight differences in hardware setup (e.g., graphics). However, a more appropriate use of the word <q>server</q> would be <u><i>software that provides a service</i></u>.</p>
 		</section>
 
 		<section>
 			<h3>Daemon</h3>
-			<p>(Yes, that is not a misspelling...)</p>
-			<p>Daemons are a particularly useful example of software that provides a service. Unlike more visible interactive applications, daemons run in the background without user input. Network, audio and graphics hardware and web and database servers rely on daemons to continually serve content.</p>
+			<p style="text-align: center">(Yes, that is not a misspelling...)</p>
+			<p>Daemons are a particularly useful example of software that provides a service. Unlike more visible interactive applications, daemons run in the background without user input. Network, audio, and graphics hardware and web and database servers rely on daemons to continually provide content.</p>
 		</section>
 
 		<section>
@@ -245,28 +251,18 @@
 			
 		<section>
 			<h3>Modularity</h3>
-			<p>Shells are an excellent example of the principle of modularity. Unlike Microsoft Windows and OS X that each ship with one graphical and one text shell, Unix and Unix-like operating systems allow for multiple text and graphical shells that are each developed separately. The user can switch between shells at will. (Thanks to community support for the BSD components in OS X, it can be possible to install alternative shells there, as well.)</p>
-		</section>
-			
-		<section>
-			<h3>Linux - The Early Years</h3>
-			<ul class="nobullet">
-				<li>1991: Linus released Linux kernel 0.01 under its own license with some GNU userland tools.</li>
-				<li>1992: Linus released Linux kernel 0.99 under GNU GPL. He subsequently asserted that the license change was the best thing he had ever done. At the same time, MINIX author Andrew S. Tanenbaum stated, &ldquo;Linux is obsolete,&rdquo; in part, because it relied heavily on &lsquo;weird&rsquo; x86 processors.</li>
-			</ul>
-			<div class="flex-row">
-				<div class="flex-item">
-					<blockquote>If 386BSD had been available when I started on Linux, Linux would probably never had happened.</blockquote>
-				</div>
-				<div class="flex-item">
-					<blockquote>If the GNU kernel had been ready last spring, I'd not have bothered to even start my project.</blockquote>
-				</div>
-			</div>
+			<p>Shells are an excellent example of the Unix Principle of Modularity. Unlike Microsoft Windows and OS X that each ship with one graphical and one text shell, Unix and Unix-like operating systems allow for multiple text and graphical shells that are each developed separately. The user can switch between shells at will. (Thanks to community support for the BSD components in OS X, it can be possible to install alternative shells there, as well.)</p>
 		</section>
 
 		<section>
+			<h3>Putting It All Together</h3>
+			<!--License: CC-BY-SA 3.0 Attribution: Shmuel Csaba Otto Traian-->
+			<div class="override"><img src="../../images/input-output-loop.png" alt="I/O Loop" style="max-height: 600px"/></div>
+		</section>
+			
+		<section>
 			<h3>Linux Today</h3>
-			<p>Linux is perhaps the most widely adopted operating system. 70% of internet servers, 55% of mobile devices and 97% of supercomputers run Linux. It is also a popular choice for IBM System z mainframes virtual machines, single-board computers and the Internet of Things.</p>
+			<p>Linux is perhaps the most widely adopted operating system. 70% of internet servers, 55% of mobile devices and 97% of supercomputers run Linux. It is also the operating system of choice for single-board computers, such as Raspberry Pi.</p>
 		</section>
 
 		<section>
@@ -276,14 +272,10 @@
 		</section>
 
 		<section>
-			<h3><a href="http://www.distrowatch.com/" target="_blank">Let Us Install an OS!</a></h3>
-		</section>
-
-		<section>
 			<h3>Extra Credit Presentations</h3>
 			<ol>
 				<li>Recount a brief history of the GNU project and explain the name GNU/Linux and whether it is the most appropriate name for the popular operating system. Express and provide support for your own opinion in the debate.</li>
-				<li>Give a historical perspective of (a) Microsoft's operating systems or (b) Apple's operating systems.</li>
+				<li>Give a historical perspective of Apple's operating systems with special focus on their reliance on open source technologies.</li>
 				<li>Provide a history of Ubuntu Linux and explain the role that it plays today.</li>
 				<li>Introduce Red Hat and describe the unique role it has played in the tech industry.</li>
 			</ol>
@@ -292,7 +284,7 @@
 		<section>
 			<h3>Homework Assignment</h3>
 			<p><u>Part 1</u></p>
-			<p>Investigate various Linux distributions or BSD flavors and identify one that you would use. <a href="http://distrowatch.com/">Distrowatch</a> is an excellent resource to begin your search. Explain your reasons for the distribution that you selected and upload your memo to Dropbox. This assignment is similar to the Technology memo only much smaller, so your memo should attempt to convince a hypothetical supervisor why to adopt your Linux distribution. (So that no confusion exists, no, your Technology report should not be based on this memo.) I will award extra credit if you also include in your memo a recommendation for desktop environment.</p>
+			<p>Investigate various Linux distributions or BSD flavors and identify one that you would use. <a href="http://distrowatch.com/">Distrowatch</a> is an excellent resource to begin your search. Explain your reasons for the distribution that you selected and upload your memo to Dropbox. This assignment is similar to the Technology memo only much smaller, so your memo should attempt to convince a hypothetical supervisor why to adopt your Linux distribution. (So that no confusion exists, your Technology report should <em>not</em> be based on this memo.) I will award extra credit if you also include in your memo a well-motivated recommendation for desktop environment.</p>
 		</section>
 
 	</div>
