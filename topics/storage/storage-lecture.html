@@ -31,7 +31,7 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Storage Models</h2>
+			<h2>Digital Storage</h2>
 		</section>
 
 		<section>
@@ -39,10 +39,93 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Now that we have an understanding of the components of the Information section, we can focus additional attention on the storage component of the Maintenance block.</p>
+					<p>Storage is a unique block in the Technology leg of the Architecture. It is not independent of the Hardware and Software blocks because digital storage comprises a combination of hardware and software components. Also, unlike the other blocks of the Architecture, the Storage block maps directly into a step of the Information Life Cycle: Storage.</p>
 				</div>
 			</div>
 		</section>
+
+		<section>
+			<h3>Types of Storage</h3>
+			<ul>
+				<li><u><i>File systems</i></u> contain data in separate files and folders. This is the traditional storage format we use in our individual computers.</li>
+				<li><u><i>Database systems</i></u> store all data in a single location.</li>
+			</ul>
+			<p>These two systems serve can accommodate physical and digital resources. However, for our purposes, we will exclusively focus on digital storage systems.</p>
+		</section>
+		
+		<section>
+			<h3>File or Flat-File?</h3>
+			<p>Some texts refer to file systems as &ldquo;flat-file&rdquo; systems because they contain flat files. Flat files are files that are completely read in to memory before use. Most of the files that we use are flat files (e.g., Office documents, PDFs, images, etc), but the term flat-file system is a misnomer. In truth, flat files can belong to either file systems or database systems. One popular example of this is Microsoft Access. Access is a database system because the data in the entire database is in one location, but an Access database is a flat file.</p>
+			<p>This is not the most important point about file systems, but it is worthwhile to understand the distinction between file systems and flat files.</p>
+		</section>
+
+		<section>
+			<h3>How Storage Looks</h3>
+			<p>Because storage is a combination of hardware and software, storage contents can appear differently under different circumstances. These different views or schemata (plural of schema) are not different storage methods, but rather distinct representations of the same data.</p>
+			<ul>
+				<li><u><i>Physical view</i></u>: how the data is stored on physical disks. For the most part, this view is too technical for our purposes.</li>
+				<li><u><i>Logical view</i></u>: how the file or database system presents the data. This view applies to system administrators.</li>
+				<li><u><i>User view</i></u>: how the end-user application presents the data. This view applies to end users.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>A Simple Example</h3>
+			<p>A single audio file on a personal computer represents a simple example of the three storage views. The audio file is broken into small blocks of data stored on the physical drive; the operating systems file system shows those blocks as a single logical file within a hierarchical system of folders (or directories, for those from the old school); a music player application uses the data in the file to send music to the user via the audio daemon and the metadata to display information about the track, such as name, artist, album, year, etc.</p>
+		</section>
+
+		<section>
+			<h3>A Logical Rabbit Hole</h3>
+			<p>It is relatively straightforward to understand that the same data can have multiple different user views. Depending on compliance and business need, different end users will see different contents. For example, students can see their own grades, but professors can see the grades of every student. Similarly, multiple logical views of data exist, but their characteristics and distinctions are more technical and more difficult to comprehend.</p>
+		</section>
+
+		<section>
+			<h3>File Partition</h3>
+			<p>When implementing any storage solution, a first consideration is the file system <u><i>partition</i></u>. This determines how the data is stored on <u><i>volumes</i></u>. Different operating systems support different partition formats (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD). The differences between these is too technical for our purposes, but many consider ZFS to be the <i>most awesome</i>. A <u><i>partition table</i></u> lists and describes the disk partitions and is necessary in order to add partitions to a disk.</p>
+		</section>
+			
+		<section>
+			<h3>Files and Folders</h3>
+			<p>The file partition also provides the logical hierarchical folder structure, so that any computer that reads the physical drive can interpret the same set of logical files and folders. (Think of storing files and folders on a USB drive and then reading that drive from another computer. The second computer recognizes the same file/folder structure even if it uses a different operating system.)</p>
+		</section>
+		
+		<section>
+			<h3>Volumes</h3>
+			<p>File partitions write data to volumes which may be either physical or logical. Physical volumes are physical disks; logical volumes are 
+
+		<section>
+			<h3>RAID</h3>
+			<p>The physical view of storage is the data as stored on the physical media. The logical view is the data as software portrays it. Redundant Array of Independent Disks (RAID) is one example of a logical data view. RAID allows a system to use discrete physical drives as unified storage. The file partition then sits on top of the RAID.</p>
+			<p>RAID can take on many forms, and each setup has a number. RAID 0 involves combining two drives into one <em>stripe</em> allowing the user to interact with a single drive.</p>
+		</section>
+
+		<section>
+			<h3>Hardware-level RAID Controllers</h3>
+			<p>Three different devices can create a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
+		</section>
+		
+		<section>
+		  <h3>Software-level RAID Controllers</h3>
+		  <p>In two prior cases, any operating system on the hardware will only see the RAID and not the drives. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the drives and creates and manages the RAID. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID, but it has one glaring problem. The computer can only have one operating system at a time.</p>
+		</section>
+		
+		<section>
+		  <h3>Dual Booting</h3>
+		  <p>In addition to virtualizing one operating system within another, it is possible to install multiple operating systems on different partitions or even different drives on the same computer and select one of the operating systems at boot. This is called <u><i>dual booting</i></u> because it usually involves two operating systems. More than two is possible (e.g., triple booting), but that is much more rare. This is not a mission-critical, but rather a hobby, activity because virtualization is almost always sufficient for everything except gaming.</p>
+		</section>
+
+		<section>
+		  <h3>Logical Volume Management</h3>
+			<p>Another form of logical storage is <u><i>Logical Volume Management</i></u> (LVM). Physical volumes are made up of individual <u><i>extents</i></u>, which are very small blocks of data. Physical partitions group these extents together into one group, but LVM can create logical volumes&mdash;different from logical partitions&mdash;that can pull physical extents from any volume in the volume group. This allows logical partitions to stripe, grow and shrink as needed, whereas physical partitions have a static size.</p>
+		</section>
+		
+		<section>
+		  <h3>LVM</h3>
+		  <!--CC BY-SA 3.0 Attribution: Soverton71-->
+			<img src="../../images/lvm.png" alt="LVM"/>
+		</section>
+
+
 
 		<section>
 			<h3>Two Types of Models</h3>
@@ -65,21 +148,6 @@
 		</section>
 
 		<section>
-			<h3>Types of Storage</h3>
-			<ul>
-				<li><u><i>File systems</i></u> contain data in separate files and folders. This is the traditional storage format we use in our individual computers.</li>
-				<li><u><i>Database systems</i></u> store all data in a single location.</li>
-			</ul>
-			<p>These two systems serve both physical and digital resources. However, for our purposes, we will exclusively focus on digital storage systems.</p>
-		</section>
-		
-		<section>
-			<h3>File or Flat-File?</h3>
-			<p>Some texts refer to file systems as &ldquo;flat-file&rdquo; systems because they contain flat files. Flat files are files that are completely read in to memory before use. Most of the files that we use are flat files (e.g., Office documents, PDFs, images, etc), but the term flat-file system is a misnomer. In truth, flat files can belong to either file systems or database systems. One popular example of this is Microsoft Access. Access is a database system because the data in the entire database is in one location, but an Access database is a flat file.</p>
-			<p>This is not the most important point about file systems, but it is worthwhile to understand the distinction between file systems and flat files.</p>
-		</section>
-
-		<section>
 			<h3>Three Schema Concept</h3>
 			<p>Storage employs three distinct views or <i>schemata</i> of data depending on the audience. These are not different methods for storing data, but rather three different ways of seeing the data stores.</p>
 			<ul>
@@ -90,29 +158,13 @@
 		</section>
 
 		<section>
-			<h3>Logical View</h3>
-			<p>Since the Three Schema Concept was introduced in 1975, an additional storage layer has become important. The logical view of data storage is closely related to the physical view. While the physical view is the data as stored on physical media, database management systems (DBMS) and logical volumes allow for a portrayal of the data on &ldquo;as-if&rdquo; storage media. For example, the DBMS portrays data in rows and columns, but the physical data has no such structure. Additionally, three physical drives may each have 1 TB of capacity, but a logical volume can show them as one 3 TB drive. Clearly, because no single 3 TB drive exists, the logical presentation of the data cannot be the same as the physical location of data as stored on the three 1 TB drives.</p>
-		</section>
-
-		<section>
-			<h3>Logical versus Physical View</h3>
-			<p>The difference between the logical and physical views is important for the discussion of file and database systems. The central nature of the data in a database system is only on the logical level. The physical view of a database system is a file system. This is the physical level of all storage. Because of this fact, the distinction between the logical and physical views is frequently taken for granted, and the logical view is what developers mean when they reference the physical view. I choose to distinguish between the two to make the different levels of storage explicit.</p>
-		</section>
-
-		<section>
-			<h3>Basic Functions of Storage</h3>
-			<p><b>CRUD</b></p>
-			<ul>
-				<li><u><i>Create</i></u> or add new entries.</li>
-				<li><u><i>Read</i></u>, retrieve, search or view existing entries.</li>
-				<li><u><i>Update</i></u> or edit existing entries.</li>
-				<li><u><i>Delete</i></u> or deactivate existing entries.</li>
-			</ul>
-		</section>
-
-		<section>
 			<h3>Benefits of Databases</h3>
 			<p>The benefits of database systems are highlighted by their treatment of the four basic functions of storage. By having all data in a central location, any data that is created, updated or deleted will result in an up-to-date copy for users that subsequently need to read the data.</p>
+		</section>
+
+		<section>
+			<h3>Database Views</h3>
+			<p>The difference between logical and physical views is especially important for the discussion of database systems. The central nature of the data in a database system is only on the logical level. The data on the database may span one or multiple physical disks. Additionally, an end-user application can always portray de-centralized files in a file system as a single central pool of data.</p>
 		</section>
 
 		<section>
