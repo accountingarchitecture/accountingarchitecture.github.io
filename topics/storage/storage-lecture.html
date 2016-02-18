@@ -54,12 +54,6 @@
 		</section>
 		
 		<section>
-			<h3>File or Flat-File?</h3>
-			<p>Some texts refer to file systems as &ldquo;flat-file&rdquo; systems because they contain flat files. Flat files are files that are completely read in to memory before use. Most of the files that we use are flat files (e.g., Office documents, PDFs, images, etc), but the term flat-file system is a misnomer. In truth, flat files can belong to either file systems or database systems. One popular example of this is Microsoft Access. Access is a database system because the data in the entire database is in one location, but an Access database is a flat file.</p>
-			<p>This is not the most important point about file systems, but it is worthwhile to understand the distinction between file systems and flat files.</p>
-		</section>
-
-		<section>
 			<h3>How Storage Looks</h3>
 			<p>Because storage is a combination of hardware and software, storage contents can appear differently under different circumstances. These different views or schemata (plural of schema) are not different storage methods, but rather distinct representations of the same data.</p>
 			<ul>
@@ -80,96 +74,45 @@
 		</section>
 
 		<section>
-			<h3>File Partition</h3>
-			<p>When implementing any storage solution, a first consideration is the file system <u><i>partition</i></u>. This determines how the data is stored on <u><i>volumes</i></u>. Different operating systems support different partition formats (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD). The differences between these is too technical for our purposes, but many consider ZFS to be the <i>most awesome</i>. A <u><i>partition table</i></u> lists and describes the disk partitions and is necessary in order to add partitions to a disk.</p>
-		</section>
-			
-		<section>
-			<h3>Files and Folders</h3>
-			<p>The file partition also provides the logical hierarchical folder structure, so that any computer that reads the physical drive can interpret the same set of logical files and folders. (Think of storing files and folders on a USB drive and then reading that drive from another computer. The second computer recognizes the same file/folder structure even if it uses a different operating system.)</p>
-		</section>
-		
-		<section>
 			<h3>Volumes</h3>
-			<p>File partitions write data to volumes which may be either physical or logical. Physical volumes are physical disks; logical volumes are 
+			<p>The lowest level of storage is the <u><i>physical volume</i></u>. For illustrative purposes, we can think of the physical volume as a <u><i>partition</i></u>, which is a portion of a physical disk. One or more <u><i>logical volumes</i></u> may sit between the physical volume and the file system, but they are not necessary. However, in the current technological landscape, at least one logical level between the physical volume and the file system is common.</p>
+			<div class="override"><img src="../../images/partition.png" alt="Partition" style="height: 150px"/></div>
+		</section>
 
 		<section>
 			<h3>RAID</h3>
-			<p>The physical view of storage is the data as stored on the physical media. The logical view is the data as software portrays it. Redundant Array of Independent Disks (RAID) is one example of a logical data view. RAID allows a system to use discrete physical drives as unified storage. The file partition then sits on top of the RAID.</p>
-			<p>RAID can take on many forms, and each setup has a number. RAID 0 involves combining two drives into one <em>stripe</em> allowing the user to interact with a single drive.</p>
+			<p>The lowest level of logical volume that we will consider is the Redundant Array of Independent Disks (RAID). A RAID combines multiple physical disks or volumes into group of logical volumes. RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined.</li>
 		</section>
 
 		<section>
 			<h3>Hardware-level RAID Controllers</h3>
-			<p>Three different devices can create a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
+			<p>Three different devices can create a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive, and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
 		</section>
 		
 		<section>
 		  <h3>Software-level RAID Controllers</h3>
-		  <p>In two prior cases, any operating system on the hardware will only see the RAID and not the drives. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the drives and creates and manages the RAID. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID, but it has one glaring problem. The computer can only have one operating system at a time.</p>
+		  <p>In two prior cases, any operating system on the hardware will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID, but it has one problem. The computer can only have one operating system at a time (i.e., dual booting is not possible).</p>
 		</section>
 		
-		<section>
-		  <h3>Dual Booting</h3>
-		  <p>In addition to virtualizing one operating system within another, it is possible to install multiple operating systems on different partitions or even different drives on the same computer and select one of the operating systems at boot. This is called <u><i>dual booting</i></u> because it usually involves two operating systems. More than two is possible (e.g., triple booting), but that is much more rare. This is not a mission-critical, but rather a hobby, activity because virtualization is almost always sufficient for everything except gaming.</p>
-		</section>
-
 		<section>
 		  <h3>Logical Volume Management</h3>
-			<p>Another form of logical storage is <u><i>Logical Volume Management</i></u> (LVM). Physical volumes are made up of individual <u><i>extents</i></u>, which are very small blocks of data. Physical partitions group these extents together into one group, but LVM can create logical volumes&mdash;different from logical partitions&mdash;that can pull physical extents from any volume in the volume group. This allows logical partitions to stripe, grow and shrink as needed, whereas physical partitions have a static size.</p>
+			<p>A higher level of logical storage is <u><i>Logical Volume Management</i></u> (LVM). LVM may sit directly on top of physical volumes, or it may sit on top of a RAID. LVM creates a volume group which can comprise as little as one physical partition or as much as multiple physical volumes. LVM then creates one logical volume within the volume group for each file system. One of the benefits of LVM is the ability to resize the logical volumes and their file systems at will, whereas partitions have a preselected static size.</p>
+			<img src="../../images/lvm.png" alt="LVM" style="max-height: 200px"/>
 		</section>
 		
 		<section>
-		  <h3>LVM</h3>
-		  <!--CC BY-SA 3.0 Attribution: Soverton71-->
-			<img src="../../images/lvm.png" alt="LVM"/>
+			<h3>File System</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 75%">
+					<p>The file system provides the familiar logical hierarchical folder structure. Different operating systems support file systems (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD). The differences between these is too technical for our purposes, but many consider ZFS to be the <i>most awesome</i>. The operating system and other application software reside on the file system.</p>
+				</div>
+				<div class="flex-item"><img src="../../images/das.png" alt="Direct Access Storage" style="max-width: 175px"/></div>
+			</div>
 		</section>
-
-
-
+			
 		<section>
-			<h3>Two Types of Models</h3>
-			<ul>
-				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
-				<li><u><i>Structure models</i></u> describe the characteristics of people, assets and data and their relationships with one another.</li>
-			</ul>
-			<p>Previously we used activity models to diagram business processes. In this lecture, we will investigate structure diagrams (or data structure diagrams) as a tool for modeling data and databases.</p>
-		</section>
-
-		<section>
-			<h3>Why More Diagrams?</h3>
-			<p>Once we know how to diagram business activities, why is it necessary to create <i>another</i> diagram about the objects in those activities?</p>
-			<p>A process diagram identifies players (agents, processes and data objects) in a system, but an information system needs more dimensionality for two reasons. First, without characteristics, each activity would have duplicate objects because no traits would distinguish each instance of an object. Second, employees cannot interact with the black box that a trait-less object would represent. For example, no one can fill a customer order if the only available information is that a customer order exists.</p>
-		</section>
-
-		<section>
-			<h3>Characteristics and Metadata</h3>
-			<p>The Creation block of the Information section of the architecture addresses data classification using metadata. These metadata are the characteristics of the objects in the structure diagram. Although data storage is a maintenance activity and classification a creation activity, the fact that the data storage must store the metadata is further evidence of the need for a completely designed information system prior to data acquisition. Because structure diagrams include object characteristics, these diagrams help to identify necessary metadata.</p>
-		</section>
-
-		<section>
-			<h3>Three Schema Concept</h3>
-			<p>Storage employs three distinct views or <i>schemata</i> of data depending on the audience. These are not different methods for storing data, but rather three different ways of seeing the data stores.</p>
-			<ul>
-				<li><u><i>External schema</i></u> or user view presents data in the form of end-user applications and reports.</li>
-				<li><u><i>Conceptual schema</i></u> graphically represents data objects, metadata and their relationships. Structure diagrams are graphical representations of the conceptual schema.</li>
-				<li><u><i>Internal schema</i></u> or computer view or physical view captures the file structure of the physical storage media.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Benefits of Databases</h3>
-			<p>The benefits of database systems are highlighted by their treatment of the four basic functions of storage. By having all data in a central location, any data that is created, updated or deleted will result in an up-to-date copy for users that subsequently need to read the data.</p>
-		</section>
-
-		<section>
-			<h3>Database Views</h3>
-			<p>The difference between logical and physical views is especially important for the discussion of database systems. The central nature of the data in a database system is only on the logical level. The data on the database may span one or multiple physical disks. Additionally, an end-user application can always portray de-centralized files in a file system as a single central pool of data.</p>
-		</section>
-
-		<section>
-			<h3>Relational and Non-relational Databases</h3>
-			<p>Several types of databases exist, but the most widely implemented databases are either relational or non-relational (i.e., NoSQL), but even in this group, relational databases are the most popular. We will primarily focus on relational database models, but we will also consider some characteristics of NoSQL databases.</p>
+			<h3>Database System</h3>
+			<p>The logical view of a database system is a centralized data store, but the data in the database actually resides on a file system. The database server collates the data in the file system and presents in an centralized manner. The most widely implemented database systems are either <u><i>relational database management systems</i></u> (RDBMS) or <u><i>non-relational databases</i></u> (NoSQL).</p>
 		</section>
 
 		<section>
@@ -211,16 +154,48 @@
 					<div class="table-cell">janine.cray@abc.xyz</div>
 				</div>
 			</div>
-			<p>Each relational database contains one of more two-dimensional tables, called relations. These tables are similar to spreadsheets found in office software. The individual rows in the relations are called records or tuples. The individual columns are called attributes, and all entries in a column must have the same data type. The intersection of a row and a column is a cell or field; cells hold a single value. These components are all part of the <i>logical view</i> of the database.</p>
+			<p>Each relational database contains one of more two-dimensional <i><u>tables</u></i>. The technical name for a table is a <u><i>relation</i></u>, hence <i>relational database</i>. These tables are similar to spreadsheets found in office software. The individual rows in the relations are called <u><i>records</i></u> or <u><i>tuples</i></u>. The individual columns are called <u><i>attributes</i></u> or <i><u>fields</u></i>. The intersection of a row and a column is a <i><u>cell</u></i>. Cells hold a single value.</p>
+		</section>
+
+		<section>
+			<h3>Data Types</h3>
+			<p>All cells for a single attribute must have the same <u><i>data type</i></u>. This type determines the characteristics of the data, as well as any available operations. The most basic data types are called <u><i>primitives</i></u>:</p>
+			<div class="table" style="border: 3px solid black; font-size: 24px">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Type name</div>
+					<div class="table-cell" style="font-weight: bold">Usage</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">Boolean</div>
+					<div class="table-cell">True/False</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">Char</div>
+					<div class="table-cell">Single alphanumeric character</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">String</div>
+					<div class="table-cell">Series of chars (not a primitive)</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">Integer, Long</div>
+					<div class="table-cell">Whole number</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">Float, Double</div>
+					<div class="table-cell">Decimal number</div>
+				</div>
+			</div>
 		</section>
 
 		<section>
 			<h3>Non-relational Databases</h3>
-			<p>Generically speaking, any database that is not relational could be considered non-relational, but in practice, non-relational (Not Only SQL; NoSQL) databases are a specific class of databases that abandoned the principles of relational databases in favor of alternative models. Although this class comprises several distinct models, we will focus on two popular examples:</p>
-			<ul>
-				<li>Document store</li>
-				<li>Column store</li>
-			</ul>
+			<p>Generically speaking, any database that is not relational could be considered non-relational, but in practice, non-relational (Not Only SQL; NoSQL) databases are a specific class of databases that abandoned the principles of relational databases in favor of alternative models. Although this class comprises several distinct models, we will focus on three popular examples: <u><i>key-value stores</i></u>, <u><i>document stores</i></u>, and <u><i>column stores</i></u>.
+		</section>
+
+		<section>
+			<h3>Key-value Store</h3>
+			<p>Key-value is the model that governs all metadata.</p>
 		</section>
 
 		<section>
@@ -338,6 +313,57 @@
 				<li><u><i>Scalability</i></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
 				<li><u><i>Speed</i></u>: Relational databases require data entry transactions to find the correct table and attribute for each value; NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a row. A document store could take the order and place all attributes and values into a single document.</li>
 			</ul>
+		</section>
+
+		<section>
+			<h3>Database Solutions</h3>
+			<p>Several popular relational database management systems (RDBMS), as well as non-relational database systems exist. Although these have historically been proprietary, almost all new database systems are open source.</p>
+			<div class="flex-row" style="-webkit-align-items: flex-start; align-items: flex-start">
+				<div class="flex-item">
+  			  <p>Relational</p>
+  			  <ul>
+  			    <li>IBM DB2</li>
+  			    <li>Oracle DB</li>
+  			    <li>Microsoft SQL Server</li>
+  			    <li>MySQL</li>
+  			    <li>PostgreSQL</li>
+  			  </ul>
+				</div>
+				<div class="flex-item">
+  			  <p>Nonrelational</p>
+  			  <ul>
+  			    <li>MongoDB (Document store)</li>
+  			    <li>Cassandra (Wide column store)</li>
+  			    <li>CouchDB (Document store)</li>
+  			    <li>HBase (Wide column store)</li>
+  			  </ul>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>SQL</h3>
+			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases. Although the name NoSQL literally stands for "Not Only SQL," many NoSQL databases have no support for SQL, and instead rely on other languages, such as Java, JavaScript and Python for data manipulation. One exception is Apache Cassandra, which can use either Java or CQL (Cassandra Query Language), which is a derivative of SQL. Because of the prevalence of relational databases and its ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
+		</section>
+
+		<section>
+			<h3>Two Types of Models</h3>
+			<ul>
+				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
+				<li><u><i>Structure models</i></u> describe the characteristics of people, assets and data and their relationships with one another.</li>
+			</ul>
+			<p>Previously we used activity models to diagram business processes. In this lecture, we will investigate structure diagrams (or data structure diagrams) as a tool for modeling data and databases.</p>
+		</section>
+
+		<section>
+			<h3>Why More Diagrams?</h3>
+			<p>Once we know how to diagram business activities, why is it necessary to create <i>another</i> diagram about the objects in those activities?</p>
+			<p>A process diagram identifies players (agents, processes and data objects) in a system, but an information system needs more dimensionality for two reasons. First, without characteristics, each activity would have duplicate objects because no traits would distinguish each instance of an object. Second, employees cannot interact with the black box that a trait-less object would represent. For example, no one can fill a customer order if the only available information is that a customer order exists.</p>
+		</section>
+
+		<section>
+			<h3>Characteristics and Metadata</h3>
+			<p>The Creation block of the Information section of the architecture addresses data classification using metadata. These metadata are the characteristics of the objects in the structure diagram. Although data storage is a maintenance activity and classification a creation activity, the fact that the data storage must store the metadata is further evidence of the need for a completely designed information system prior to data acquisition. Because structure diagrams include object characteristics, these diagrams help to identify necessary metadata.</p>
 		</section>
 
 		<section>
