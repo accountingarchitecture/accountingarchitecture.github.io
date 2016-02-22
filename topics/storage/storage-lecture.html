@@ -195,12 +195,43 @@
 
 		<section>
 			<h3>Key-value Store</h3>
-			<p>Key-value is the model that governs all metadata.</p>
+			<p>Key-value is the model that governs all metadata. A <u><i>key-value store</i></u> is a database that pairs unique keys or attributes (i.e., unique identifiers) with data objects. The data object can be anything from a primitive to an entire file (e.g., document, audio file, etc.). The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys.</p>
 		</section>
 
 		<section>
 			<h3>Document Store</h3>
-			<p>A document store is a special case of a <i><u>key-value store</u></i>. The key in a key-value store uniquely identifies a record, but unlike the attributes in a relational database, in a key-value store the value is an arbitrary object. In the case of document stores, this object is a text document with metadata attributes and values.
+			<p>A <i><u>document store</u></i> is a special case of a key-value store in which the value is a text file with a multiple metadata attributes and values, frequently in XML format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (the entire document).</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0 0 70px 0">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Key</div>
+					<div class="table-cell" style="font-weight: bold">Value</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">1</div>
+					<div class="table-cell">
+						<div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
+						<div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
+						<div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
+						<div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
+					</div>
+				</div>
+			</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0 0 70px 0">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">ID</div>
+					<div class="table-cell" style="font-weight: bold">First Name</div>
+					<div class="table-cell" style="font-weight: bold">Last Name</div>
+					<div class="table-cell" style="font-weight: bold">Job Title</div>
+					<div class="table-cell" style="font-weight: bold">Email</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">1</div>
+					<div class="table-cell">John</div>
+					<div class="table-cell">Smith</div>
+					<div class="table-cell">Manager</div>
+					<div class="table-cell">john.smith@abc.xyz</div>
+				</div>
+			</div>
 		</section>
 
 		<section>
