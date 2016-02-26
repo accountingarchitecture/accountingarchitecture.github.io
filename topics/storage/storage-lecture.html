@@ -201,48 +201,9 @@
 		<section>
 			<h3>Document Store</h3>
 			<p>A <i><u>document store</u></i> is a special case of a key-value store in which the value is a text file with a multiple metadata attributes and values, frequently in XML format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (the entire document).</p>
-			<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0 0 70px 0">
-				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-					<div class="table-cell" style="font-weight: bold">Key</div>
-					<div class="table-cell" style="font-weight: bold">Value</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">1</div>
-					<div class="table-cell">
-						<div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
-						<div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
-						<div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
-						<div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
-					</div>
-				</div>
-			</div>
-			<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0 0 70px 0">
-				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-					<div class="table-cell" style="font-weight: bold">ID</div>
-					<div class="table-cell" style="font-weight: bold">First Name</div>
-					<div class="table-cell" style="font-weight: bold">Last Name</div>
-					<div class="table-cell" style="font-weight: bold">Job Title</div>
-					<div class="table-cell" style="font-weight: bold">Email</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">1</div>
-					<div class="table-cell">John</div>
-					<div class="table-cell">Smith</div>
-					<div class="table-cell">Manager</div>
-					<div class="table-cell">john.smith@abc.xyz</div>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h3>Column Store</h3>
-			<p>A column store is likely also a special case of a key-value store, but it may not be very helpful to think about it in that manner. Each column contains a key and a value in the same sense as a metadata attribute and value pair. Additionally, each column has a timestamp. Wide-column stores can combine multiple related columns into rows that approximate a single record in a relational table except that because the attributes and values are paired in each column, each row can have a different selection of attributes.</p>
-		</section>
-
-		<section>
-			<h3>Relational Table or Column Store</h3>
-			<div class="flex-row" style="-webkit-justify-content: flex-start; justify-content: flex-start">
-				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0 0 70px 0">
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+				<div style="font-size: 24px">Relational Table</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
 					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 						<div class="table-cell" style="font-weight: bold">ID</div>
 						<div class="table-cell" style="font-weight: bold">First Name</div>
@@ -257,12 +218,40 @@
 						<div class="table-cell">Manager</div>
 						<div class="table-cell">john.smith@abc.xyz</div>
 					</div>
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell">2</div>
-						<div class="table-cell">Mary</div>
-						<div class="table-cell">Higgins</div>
-						<div class="table-cell">CEO</div>
-						<div class="table-cell">mary.higgins@abc.xyz</div>
+				</div>
+			</div>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+				<div style="font-size: 24px">Document Store</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+						<div class="table-cell" style="font-weight: bold">Key</div>
+						<div class="table-cell" style="font-weight: bold">Value</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">1</div>
+						<div class="table-cell">
+							<div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
+							<div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
+							<div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
+							<div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Column Store</h3>
+			<p>A <u><i>column store</i></u> is a key-value store that groups key and values into columns and multiple key-value pairs into families, similar to rows in relational tables. Unlike relational tables, these "rows" can have different attributes (i.e., keys), and attributes that appear in multiple rows can have different data types.</p>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+				<div style="font-size: 24px">Relational Table</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Job Title</div>
+						<div class="table-cell" style="font-weight: bold">Email</div>
 					</div>
 					<div class="table-row" style="background-color: white">
 						<div class="table-cell">3</div>
@@ -280,36 +269,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex-row" style="-webkit-justify-content: flex-end; justify-content: flex-end">
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+				<div style="font-size: 24px">Column Store</div>
 				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: white; border-bottom: 1px solid black">
-						<div class="table-cell" style="font-weight: bold">ID</div>
-						<div class="table-cell" style="font-weight: bold">First Name</div>
-						<div class="table-cell" style="font-weight: bold">Last Name</div>
-						<div class="table-cell" style="font-weight: bold">Job Title</div>
-						<div class="table-cell" style="font-weight: bold">Email</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">1</div>
-						<div class="table-cell">John</div>
-						<div class="table-cell">Smith</div>
-						<div class="table-cell">Manager</div>
-						<div class="table-cell">john.smith@abc.xyz</div>
-					</div>
-					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-						<div class="table-cell" style="font-weight: bold">ID</div>
-						<div class="table-cell" style="font-weight: bold">First Name</div>
-						<div class="table-cell" style="font-weight: bold">Last Name</div>
-						<div class="table-cell" style="font-weight: bold">Job Title</div>
-						<div class="table-cell" style="font-weight: bold">Email</div>
-					</div>
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell">2</div>
-						<div class="table-cell">Mary</div>
-						<div class="table-cell">Higgins</div>
-						<div class="table-cell">CEO</div>
-						<div class="table-cell">mary.higgins@abc.xyz</div>
-					</div>
 					<div class="table-row" style="background-color: white; border-bottom: 1px solid black">
 						<div class="table-cell" style="font-weight: bold">ID</div>
 						<div class="table-cell" style="font-weight: bold">First Name</div>
@@ -342,13 +304,13 @@
 			<h3>Benefits of NoSQL Databases</h3>
 			<ul>
 				<li><u><i>Scalability</i></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
-				<li><u><i>Speed</i></u>: Relational databases require data entry transactions to find the correct table and attribute for each value; NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a row. A document store could take the order and place all attributes and values into a single document.</li>
+				<li><u><i>Speed</i></u>: Relational databases must find each field for a write request. NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number, and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a family. A document store could take the order and place all attributes and values into a single document.</li>
 			</ul>
 		</section>
 
 		<section>
 			<h3>Database Solutions</h3>
-			<p>Several popular relational database management systems (RDBMS), as well as non-relational database systems exist. Although these have historically been proprietary, almost all new database systems are open source.</p>
+			<p>Several popular relational database management systems (RDBMS), as well as non-relational databases exist. Although the older systems are proprietary, almost all new database systems are open source.</p>
 			<div class="flex-row" style="-webkit-align-items: flex-start; align-items: flex-start">
 				<div class="flex-item">
   			  <p>Relational</p>
@@ -374,37 +336,33 @@
 
 		<section>
 			<h3>SQL</h3>
-			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases. Although the name NoSQL literally stands for "Not Only SQL," many NoSQL databases have no support for SQL, and instead rely on other languages, such as Java, JavaScript and Python for data manipulation. One exception is Apache Cassandra, which can use either Java or CQL (Cassandra Query Language), which is a derivative of SQL. Because of the prevalence of relational databases and its ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
+			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases. Although the name NoSQL literally stands for "Not Only SQL," NoSQL databases have little to no support for SQL, and instead rely on other languages, such as Java, JavaScript, and Python for data manipulation. One exception is Apache Cassandra, which can use either Java or CQL (Cassandra Query Language), which is a derivative of SQL. Because of the prevalence of relational databases and its ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
 		</section>
 
 		<section>
-			<h3>Two Types of Models</h3>
+			<h3>Structure Models for Relational Databases</h3>
 			<ul>
 				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
 				<li><u><i>Structure models</i></u> describe the characteristics of people, assets and data and their relationships with one another.</li>
 			</ul>
-			<p>Previously we used activity models to diagram business processes. In this lecture, we will investigate structure diagrams (or data structure diagrams) as a tool for modeling data and databases.</p>
+			<p>Relational databases are a popular context for discussing structure models because the models provide a conceptual view of data storage and identify what attributes are necessary prior to the implementation of the storage solution.</p>
 		</section>
 
 		<section>
 			<h3>Why More Diagrams?</h3>
 			<p>Once we know how to diagram business activities, why is it necessary to create <i>another</i> diagram about the objects in those activities?</p>
-			<p>A process diagram identifies players (agents, processes and data objects) in a system, but an information system needs more dimensionality for two reasons. First, without characteristics, each activity would have duplicate objects because no traits would distinguish each instance of an object. Second, employees cannot interact with the black box that a trait-less object would represent. For example, no one can fill a customer order if the only available information is that a customer order exists.</p>
+			<p>A process diagram identifies players (agents, processes, and data objects) in a system, but an information system needs more dimensionality. It needs the metadata about each of items in the activity diagram. For example, an activity diagram may include the object Invoice, but the information system needs to know the particulars of each instance (i.e., occurrence) of Invoice (e.g., vendor, amount due, due date, etc.).</p>
 		</section>
 
 		<section>
-			<h3>Characteristics and Metadata</h3>
-			<p>The Creation block of the Information section of the architecture addresses data classification using metadata. These metadata are the characteristics of the objects in the structure diagram. Although data storage is a maintenance activity and classification a creation activity, the fact that the data storage must store the metadata is further evidence of the need for a completely designed information system prior to data acquisition. Because structure diagrams include object characteristics, these diagrams help to identify necessary metadata.</p>
-		</section>
-
-		<section>
-			<h3>Structure Models for Relational Databases</h3>
-			<p>Despite the benefits of non-relational databases&mdash;we will discuss an additional benefit when we cover data manipulation later in the course&mdash;we will limit our discussion of structure models to relational databases. Three common structure models exist:</p>
+			<h3>Multiple Choices</h3>
+			<p>Three common structure models exist:</p>
 			<ul>
 				<li>Entity-Relationship (ER; E-R; ERD) diagrams</li>
 				<li>UML class diagrams</li>
 				<li>Resource-Entity-Agent (REA) diagrams</li>
 			</ul>
+			<p>We will focus primarily on E-R, but I will also introduce one aspect of UML class diagrams that I find particularly useful. We will not discuss REA diagrams because they are not a storage model, but rather an attempt&mdash;misguided, in my opinion&mdash;to convert business process activity models to static structure models. (Yes, it is as confusing as it sounds.)</p> 
 		</section>
 
 		<section>
@@ -413,13 +371,8 @@
 		</section>
 
 		<section>
-			<h3>Unfortunate Confusion</h3>
-			<p>E-R diagrams have three data models: conceptual, logical and physical. Unfortunately, these fail to correspond directly to views in the Three Schema Concept. Both the conceptual and the logical model relate to the conceptual schema, and the physical model relates to the logical view. Furthermore, interpretation of these three terms is not consistent across user. As a result, we will restrict our terminology to the four views we have previously identified.</p>
-		</section>
-
-		<section>
 			<h3>Entities</h3>
-			<p>An <u><i>entity</i></u> is something of importance that needs to be represented in the database. Examples of an entity may be Employee, Invoice, Inventory, Time Stamp, etc. It is important to note that these entities are concepts and not manifestations of concepts. For example, Employee is an entity, but a particular employee, Joe Smith, is an instance of that entity. Entities correspond to tables in the database, whereas instances correspond to records in those tables.
+			<p>An <u><i>entity</i></u> is something of importance that needs to be represented in the database. Examples of an entity may be Employee, Invoice, Inventory, Time Stamp, etc. It is important to note that these entities are concepts and not instances. For example, Employee is an entity, but a particular employee, Joe Smith, is an instance of that entity. Entities correspond to tables in the database, whereas instances correspond to records in those tables.
 		</section>
 
 		<section>
@@ -439,12 +392,12 @@
 					<img src="../../images/simple-chen-er.png" alt="Simple E-R Diagram with Chen Notation" style="max-height: 200px"/>
 				</div>
 			</div>
-			<p>The rounded rectangles represent the entities, and the connecting lines signify relationships. Chen notation adds a diamond to allow for explicit labeling of relationships. However, a complete E-R diagram incorporates attributes and cardinalities, as well. In other notations, these labels sit near the relationship line, but I exclude them in my diagrams to avoid clutter.</p>
+			<p>The rounded rectangles represent the entities, and the connecting lines signify relationships. Chen notation adds a diamond to allow for explicit labeling of relationships. In other notations, these labels may sit near the relationship line, but I exclude them in the left diagram to avoid clutter.</p>
 		</section>
 
 		<section>
 			<h3>Attributes</h3>
-			<p>An <u><i>attribute</i></u> is any relevant characteristic of an entity. These correspond to the columns in a database table. Common examples might include Name, SSN#, SKU, Customer ZIP, etc.</p>
+			<p>An <u><i>attribute</i></u> is any relevant characteristic of an entity. Unsurprisingly, E-R attributes correspond to attributes in a relational table.</p>
 		</section>
 
 		<section>
@@ -454,7 +407,7 @@
 
 		<section>
 			<h3>Coyne Rule of Zero</h3>
-			<p>Although this is not a widely accepted rule of cardinalities, I believe that each relationship must have at least one minimum cardinality of zero. The reason for this is that the database can only create one record at a time. If a sale is associated with at least one customer, then the customer record must exist prior to the sale. If however, a customer is associated with at least one sale, as well, then the sale record must exist prior to the creation of the customer. However, they cannot both exist first. As a result, one of the minimum cardinalities must be zero.</p>
+			<p>Although this is not a widely accepted rule of cardinalities, I believe that each relationship must have at least one minimum cardinality of zero. The reason for this is that the database can only create one record at a time. If a sale is associated with at least one customer, then the customer record must exist prior to the sale. If however, a customer is associated with at least one sale, as well, then the sale record must exist prior to the creation of the customer. However, they cannot both exist first. To avoid a Catch-22, one of the minimum cardinalities must be zero.</p>
 		</section>
 
 		<section>
@@ -472,12 +425,12 @@
 
 		<section>
 			<h3>Exceptions to Entities and Attributes</h3>
-			<p>Not everything that is important to represent is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are potential entities and attributes that are combinations of pre-existing attributes. One simple example of this relates to Inventory costs. Unit Cost and Quantity on Hand would be an attribute of the entity Inventory, but Total Cost (= Unit Cost x Quantity on Hand) would not. Another example would be employee supervisors. Supervisors would not be an entity because it would simply be a subset of the Employee entity. These would-be entities and attributes become <i><u>user views</u></i> because they are not stored in the database but can be provided to the user.</p>
+			<p>Not everything that is important to represent is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are potential entities and attributes that are combinations of pre-existing attributes. One simple example of this relates to Inventory costs. Unit Cost and Quantity on Hand would be attributes of the entity Inventory, but Total Cost (= Unit Cost x Quantity on Hand) would not. Another example would be employee supervisors. Supervisor would not be an entity because it would simply be a subset of the Employee entity. These would-be entities and attributes become <i><u>user views</u></i> because they are not stored in the database but can be provided to the user, as needed.</p>
 		</section>
 
 		<section>
 			<h3>Keys</h3>
-			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><i>primary key</i></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><i>foreign key</i></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign to identify the employee responsible for the sale.</p>
+			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><i>primary key</i></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><i>foreign key</i></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale.</p>
 		</section>
 
 		<section>
@@ -487,17 +440,17 @@
 
 		<section>
 			<h3>Redundancies</h3>
-			<p>The benefits of a database system rely on the avoidance of redundancy. In fact, one of the reasons to transition from a file system to a database system is to avoid redundancies from separate individuals tracking information in separate flat files. However, redundancies can also arise in database systems through the creation of <u><i>functional dependencies</i></u>. These dependencies create problematic anomalies.</p>
+			<p>The benefits of a database system rely on the avoidance of redundancy. In fact, one of the reasons to transition from a file system to a database system is to avoid redundancies from separate individuals tracking information in separate flat files. However, redundancies can also arise in database systems through the creation of <u><i>functional dependencies</i></u>. These dependencies create problematic <u><i>create</i></u>, <u><i>update</i></u>, and <u><i>delete anomalies</i></u>.</p>
 		</section>
 
 		<section>
 			<h3>Partial Dependencies</h3>
-			<p>A <u><i>partial dependency</i></u> arises if a non-key attribute depends on only part of a composite key. Again using the example of the course list, the composite key Semester, Year, Course and Section identify a unique record. However, the attribute Course Name exclusively depends on Course, which is only part of the composite key.</p>
+			<p>A <u><i>partial dependency</i></u> arises if a non-key attribute (i.e., an attribute that is not a primary key) depends on only part of a composite key. Again using the example of the course list, the composite key Semester, Year, Course, and Section identifies a unique record. However, the attribute Course Name exclusively depends on Course, which is only part of the composite key.</p>
 		</section>
 
 		<section>
 			<h3>Transitive Dependencies</h3>
-			<p>A <u><i>transitive dependency</i></u> arises when a non-key attribute (i.e., an attribute that is not a primary key) is dependent on another non-key attribute. For example, the entity Employee might include Employee ID, Employee Name, Department ID and Department Name. Employee ID is the primary key, and the employee's department (Department ID) depends on Employee ID. In other words, the instance of department depends on which employee is referenced. However, Department Name depends on Department ID, which is not a primary key. This is a transitive dependency because Employee ID &rarr; Department ID &rarr; Department Name, which creates a transitive link between Employee ID and Department Name.</p>
+			<p>A <u><i>transitive dependency</i></u> arises when a non-key attribute is dependent on another non-key attribute. For example, the entity Employee might include Employee ID, Employee Name, Department ID and Department Name. Employee ID is the primary key, and the employee's department (Department ID) depends on Employee ID. However, Department Name depends on Department ID, which is not a primary key. This is a transitive dependency because Employee ID &rarr; Department ID &rarr; Department Name, which creates a transitive link between Employee ID and Department Name.</p>
 		</section>
 
 		<section>
@@ -512,8 +465,8 @@
 					<div class="table-cell" style="font-weight: bold">Course Name</div>
 				</div>
 				<div class="table-row" style="background-color: white">
-					<div class="table-cell">Fall</div>
-					<div class="table-cell">2015</div>
+					<div class="table-cell">Spring</div>
+					<div class="table-cell">2016</div>
 					<div class="table-cell">ACCT 4020</div>
 					<div class="table-cell">001</div>
 					<div class="table-cell">Accounting Architecture</div>
@@ -538,7 +491,7 @@
 
 		<section>
 			<h3>Create Anomaly</h3>
-			<p>The <u><i>create anomaly</i></u> arises when it is not possible to add a record to a table because the new record has no value for the primary key. For example, if the Inventory table with SKU as primary key includes the name, address and contact info for the vendor. The company wishes to add an approved vendor to the vendor list, but the company has not yet ordered from that vendor. It is not possible to add that vendor to the database because no value for the primary key SKU exists.</p>
+			<p>The <u><i>create anomaly</i></u> arises when it is not possible to add a record to a table because the new record has no value for the primary key. For example, suppose the Inventory table with SKU as primary key includes the name, address, and contact info for the vendor. The company wishes to add an approved vendor to the vendor list, but the company has not yet identified with items to order from that vendor. It is not possible to add that vendor to the database because no value for the primary key SKU exists.</p>
 			<div class="table" style="font-size: 20px; border: 3px solid black">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">SKU</div>
@@ -622,12 +575,53 @@
 
 		<section>
 			<h3>Normalization</h3>
-			<p><u><i>Normalization</i></u> removes functional dependencies and their resulting anomalies by dividing non-normalized tables into multiple tables connected by foreign keys. Second normal form (2NF) removes partial dependencies, and third normal form (3NF) removes transitive dependencies. First normal form (1NF) also resolves anomalies, but it is too simplistic for our purposes. Third normal form is the minimum standard for a well-defined database.</p>
+			<p><u><i>Normalization</i></u> removes functional dependencies and their resulting anomalies by dividing tables with dependencies into multiple tables connected by foreign keys. Second normal form (2NF) removes partial dependencies, and third normal form (3NF) removes transitive dependencies. First normal form (1NF) also resolves anomalies, but it is too simplistic for our purposes. Third normal form is the minimum standard for a well-defined database.</p>
+		</section>
+
+		<section>
+			<h3>Example</h3>
+			<p>Using the example listed previously when introducing anomalies, normalize the Inventory table:</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Solution</h3>
+			<p>The anomalies occur because of the decision to store inventory and vendor information together. Normalization splits the original table into two which Vendor Name as the primary key of the newly created Vendor table and the foreign key in the Inventory table:</p>
+			<div style="font-size: 24px">Inventory Table</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black; margin-bottom: 50px">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+				</div>
+			</div>
+			<div style="font-size: 24px">Vendor Table</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+			</div>
+			<p>(Using this technique, can you successfully normalize the other tables used to depict transitory and partial dependencies?)</p>
 		</section>
 
 		<section>
 			<h3>Many-to-Many</h3>
-			<p>One indication that a dependency exists is a relationship with maximum cardinalities of many in both directions. The resolution of this issue is a <u><i>linking table</i></u> that includes the primary keys of both original entities as a composite primary key. Because these are also the primary keys of another entity, they are simultaneously primary and foreign keys.</p>
+			<p>One indication that a dependency exists is a relationship between two tables with maximum cardinalities of &ldquo;many&rdquo; in both directions. The resolution of this issue is a <u><i>linking table</i></u> that includes the primary keys of both original entities as a composite primary key. Because these are also the primary keys of another entity, they are simultaneously primary and foreign keys.</p>
+		</section>
+
+		<section>
+			<h3>Normalizing an E-R diagram</h3>
+			<p></p>
 		</section>
 
 		<section>
@@ -636,17 +630,12 @@
 		</section>
 
 		<section>
-			<h3>Extra Credit Presentations</h3>
-			<ol>
-				<li>Explain UML class diagrams.</li>
-				<li>Explain REA diagrams.</li>
-				<li>Explain Boyce-Codd normal form and fourth normal form.</li>
-			</ol>
+			<h3>Accounting Tie-in</h3>
 		</section>
 
 		<section>
 			<h3>Homework Assignment</h3>
-			<p>Think of a set of accounting records (e.g., Perdisco journals and ledgers). Present an E-R diagram of a database system in third normal form that captures all necessary information.</p>
+			<p>Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp">W3Schools</a>. On the SQL Quiz results screen, select &ldquo;Check your answers&rdquo; and print the feedback to PDF. (Although it is possible to print a web page to PDF from any browser, you may find this easiest if you use Google Chrome.)</p>
 		</section>
 
 	</div>
