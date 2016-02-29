@@ -303,9 +303,17 @@
 		<section>
 			<h3>Benefits of NoSQL Databases</h3>
 			<ul>
-				<li><u><i>Scalability</i></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
-				<li><u><i>Speed</i></u>: Relational databases must find each field for a write request. NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number, and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a family. A document store could take the order and place all attributes and values into a single document.</li>
+				<li><u><i>Volume</i></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
+				<li><u><i>Velocity</i></u>: Relational databases must find each field for a write request. NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number, and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a family. A document store could take the order and place all attributes and values into a single document.</li>
 			</ul>
+		</section>
+
+		<section>
+			<h3>Benefits of NoSQL Databases</h3>
+			<ul>
+				<li><u><i>Variety</i></u>: Unlike relational databases which primarily store primitives, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
+			</ul>
+			<p>These V's are the same V's that characterize Big Data. Unsurprisingly, NoSQL databases frequently serve as the stores for firms' Big Data.</p>
 		</section>
 
 		<section>
@@ -337,6 +345,16 @@
 		<section>
 			<h3>SQL</h3>
 			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases. Although the name NoSQL literally stands for "Not Only SQL," NoSQL databases have little to no support for SQL, and instead rely on other languages, such as Java, JavaScript, and Python for data manipulation. One exception is Apache Cassandra, which can use either Java or CQL (Cassandra Query Language), which is a derivative of SQL. Because of the prevalence of relational databases and its ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
+		</section>
+
+		<section>
+			<h3>Indexing</h3>
+			<p>One of the steps in the Maintenance section is indexing. This involves the creation of list of keys and pointers to increase the findability of those keys in a collection. One simple example of this is the index in the back of a textbook. The keywords are the keys, and the page numbers on which those keywords appear are the pointers. Database indices serve the same purpose. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index shrinks the size of the relation to a particular attribute and identifies which records in the relation have a particular key. This increases the speed of record retrieval.</p>
+		</section>
+
+		<section>
+			<h3>Homework Assignment</h3>
+			<p>Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp">W3Schools</a>. On the SQL Quiz results screen, select &ldquo;Check your answers&rdquo; and print the feedback to PDF. (Although it is possible to print a web page to PDF from any browser, you may find this easiest if you use Google Chrome.)</p>
 		</section>
 
 		<section>
@@ -621,21 +639,50 @@
 
 		<section>
 			<h3>Normalizing an E-R diagram</h3>
-			<p></p>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/unnormalized.png" alt="Unnormalized Table" style="max-width: 200px"/></div>
+				<div class="flex-item" style="max-width: 75%">
+					<p>This E-R diagram entity lists common attributes for a sales order. (By the way, extension is unit price multiplied by quantity.) However, it is not 3NF. Construct an E-R diagram that includes each of these attributes&mdash;except those that meet the criteria in the &ldquo;Exceptions to Entities and Attributes&rdquo; slide&mdash;in a set of 3NF entities.</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
-			<h3>Indexing</h3>
-			<p>One of the steps in the Maintenance section is indexing. This involves the creation of list of keys and pointers to increase the findability of those keys in a collection. One simple example of this is the index in the back of a textbook. The keywords are the keys, and the page numbers on which those keywords appear are the pointers. Database indices serve the same purpose. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index shrinks the size of the relation to a particular attribute and identifies which records in the relation have a particular key. This increases the speed of record retrieval.</p>
+			<h3>Customer</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step1.png" alt="Step 1" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>First, we create a Customer entity. By storing this data in a separate table, we avoid duplicating it each time that the customer places a new order. We select the customer's email address as a primary key [PK] because customer accounts are frequently identified by the email address.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Carrier</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step2.png" alt="Step 2" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Second, we create a Carrier entity to avoid duplicating carrier information for each order. The Carrier ID primary key could simply enumerate the carriers (i.e., 001, 002, 003, etc.). Not all primary keys have any interpretation. Sometimes they are nonsensical and only serve to uniquely identify records.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Inventory</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step3.png" alt="Step 3" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Third, we create an Inventory entity. Although quantity on hand is not normally on a sales order, it is an important Inventory attribute, so we add it to the Inventory table.SKU is an inventory identifier that is common to vendor and customer, so we can use it as an informative primary key.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>UML Class Diagrams</h3>
 		</section>
 
 		<section>
 			<h3>Accounting Tie-in</h3>
-		</section>
-
-		<section>
-			<h3>Homework Assignment</h3>
-			<p>Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp">W3Schools</a>. On the SQL Quiz results screen, select &ldquo;Check your answers&rdquo; and print the feedback to PDF. (Although it is possible to print a web page to PDF from any browser, you may find this easiest if you use Google Chrome.)</p>
 		</section>
 
 	</div>
