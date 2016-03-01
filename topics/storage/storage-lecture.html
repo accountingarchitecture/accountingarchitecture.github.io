@@ -50,7 +50,7 @@
 				<li><u><i>File systems</i></u> contain data in separate files and folders. This is the traditional storage format we use in our individual computers.</li>
 				<li><u><i>Database systems</i></u> store all data in a single location.</li>
 			</ul>
-			<p>These two systems serve can accommodate physical and digital resources. However, for our purposes, we will exclusively focus on digital storage systems.</p>
+			<p>These two systems can accommodate physical and digital resources. However, for our purposes, we will exclusively focus on digital storage systems.</p>
 		</section>
 		
 		<section>
@@ -81,7 +81,7 @@
 
 		<section>
 			<h3>RAID</h3>
-			<p>The lowest level of logical volume that we will consider is the Redundant Array of Independent Disks (RAID). A RAID combines multiple physical disks or volumes into group of logical volumes. RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined.</li>
+			<p>The lowest level of logical volume that we will consider is the Redundant Array of Independent Disks (RAID). A RAID combines multiple physical disks or volumes into a group of logical volumes. RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined.</li>
 		</section>
 
 		<section>
@@ -91,7 +91,7 @@
 		
 		<section>
 		  <h3>Software-level RAID Controllers</h3>
-		  <p>In two prior cases, any operating system on the hardware will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID, but it has one problem. The computer can only have one operating system at a time (i.e., dual booting is not possible).</p>
+		  <p>In the two prior cases, any operating system on the hardware will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID, but it has one problem. The computer can only have one operating system at a time (i.e., dual booting is not possible).</p>
 		</section>
 		
 		<section>
@@ -104,7 +104,7 @@
 			<h3>File System</h3>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width: 75%">
-					<p>The file system provides the familiar logical hierarchical folder structure. Different operating systems support file systems (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD). The differences between these is too technical for our purposes, but many consider ZFS to be the <i>most awesome</i>. The operating system and other application software reside on the file system.</p>
+					<p>The file system provides the familiar logical hierarchical folder structure. Different operating systems support different file systems (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD). The differences between these is too technical for our purposes, but many consider ZFS to be the <i>most awesome</i>. The operating system and other application software reside on the file system.</p>
 				</div>
 				<div class="flex-item"><img src="../../images/das.png" alt="Direct Access Storage" style="max-width: 175px"/></div>
 			</div>
@@ -112,7 +112,7 @@
 			
 		<section>
 			<h3>Database System</h3>
-			<p>The logical view of a database system is a centralized data store, but the data in the database actually resides on a file system. The database server collates the data in the file system and presents in an centralized manner. The most widely implemented database systems are either <u><i>relational database management systems</i></u> (RDBMS) or <u><i>non-relational databases</i></u> (NoSQL).</p>
+			<p>The logical view of a database system is a centralized data store, but the data in the database actually resides on a file system. The database server collates the data in the file system and presents it in a centralized manner. The most widely implemented database systems are either <u><i>relational database management systems</i></u> (RDBMS) or <u><i>non-relational databases</i></u> (NoSQL).</p>
 		</section>
 
 		<section>
@@ -200,7 +200,7 @@
 
 		<section>
 			<h3>Document Store</h3>
-			<p>A <i><u>document store</u></i> is a special case of a key-value store in which the value is a text file with a multiple metadata attributes and values, frequently in XML format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (the entire document).</p>
+			<p>A <i><u>document store</u></i> is a special case of a key-value store in which the value is a text file with multiple metadata attributes and values, frequently in XML format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (the entire document).</p>
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
 				<div style="font-size: 24px">Relational Table</div>
 				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
@@ -349,14 +349,14 @@
 
 		<section>
 			<h3>Indexing</h3>
-			<p>One of the steps in the Maintenance section is <u><i>indexing</i></u>. The purpose of an index is to increase data retrieval speed. One simple example of this is the index in the back of a textbook. An index contains keys and values, similar to metadata, with keywords as keys and the location (e.g., page numbers) as the values. One difference between an index and metadata is that each key in an index can have multiple values if the keyword occurs multiple times in the data store. Relational database use indices. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index tells the DBMS exactly where to find certain values. This increases the speed of record retrieval.</p>
+			<p>One of the steps in the Maintenance section is <u><i>indexing</i></u>. The purpose of an index is to increase data retrieval speed. One simple example of this is the index in the back of a textbook. An index contains keys and values, similar to metadata, with keywords as keys and the location (e.g., page numbers) as the values. One difference between an index and metadata is that each key in an index can have multiple values if the keyword occurs multiple times in the data store. Relational databases use indices. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index tells the DBMS exactly where to find certain values. This increases the speed of record retrieval.</p>
 		</section>
 
 		<section>
 			<h3>Structure Models for Relational Databases</h3>
 			<ul>
 				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
-				<li><u><i>Structure models</i></u> describe the characteristics of people, assets and data and their relationships with one another.</li>
+				<li><u><i>Structure models</i></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
 			</ul>
 			<p>Relational databases are a popular context for discussing structure models because the models provide a conceptual view of data storage and identify what attributes are necessary prior to the implementation of the storage solution.</p>
 		</section>
@@ -364,7 +364,7 @@
 		<section>
 			<h3>Why More Diagrams?</h3>
 			<p>Once we know how to diagram business activities, why is it necessary to create <i>another</i> diagram about the objects in those activities?</p>
-			<p>A process diagram identifies players (agents, processes, and data objects) in a system, but an information system needs more dimensionality. It needs the metadata about each of items in the activity diagram. For example, an activity diagram may include the object Invoice, but the information system needs to know the particulars of each instance (i.e., occurrence) of Invoice (e.g., vendor, amount due, due date, etc.).</p>
+			<p>A process diagram identifies players (agents, processes, and data objects) in a system, but an information system needs more dimensionality. It needs the metadata about each item in the activity diagram. For example, an activity diagram may include the object Invoice, but the information system needs to know the particulars of each instance (i.e., occurrence) of Invoice (e.g., vendor, amount due, due date, etc.).</p>
 		</section>
 
 		<section>
