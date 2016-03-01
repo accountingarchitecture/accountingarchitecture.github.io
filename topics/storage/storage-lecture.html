@@ -344,12 +344,12 @@
 
 		<section>
 			<h3>SQL</h3>
-			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases. Although the name NoSQL literally stands for "Not Only SQL," NoSQL databases have little to no support for SQL, and instead rely on other languages, such as Java, JavaScript, and Python for data manipulation. One exception is Apache Cassandra, which can use either Java or CQL (Cassandra Query Language), which is a derivative of SQL. Because of the prevalence of relational databases and its ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
+			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases to create, modify, and retrieve data. Although the name NoSQL literally stands for "Not Only SQL," NoSQL databases have little to no support for SQL, and instead rely on other languages, such as Java, JavaScript, and Python for data manipulation. One exception is Apache Cassandra, which can use either Java or CQL (Cassandra Query Language), which is a derivative of SQL. Because of the prevalence of relational databases and its ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
 		</section>
 
 		<section>
 			<h3>Indexing</h3>
-			<p>One of the steps in the Maintenance section is indexing. This involves the creation of list of keys and pointers to increase the findability of those keys in a collection. One simple example of this is the index in the back of a textbook. The keywords are the keys, and the page numbers on which those keywords appear are the pointers. Database indices serve the same purpose. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index shrinks the size of the relation to a particular attribute and identifies which records in the relation have a particular key. This increases the speed of record retrieval.</p>
+			<p>One of the steps in the Maintenance section is <u><i>indexing</i></u>. The purpose of an index is to increase data retrieval speed. One simple example of this is the index in the back of a textbook. The keywords are the keys, and the page numbers on which those keywords appear are the pointers. Database indices serve the same purpose. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index shrinks the size of the relation to a particular attribute and identifies which records in the relation have a particular key. This increases the speed of record retrieval.</p>
 		</section>
 
 		<section>
@@ -430,7 +430,7 @@
 
 		<section>
 			<h3>Keys</h3>
-			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><i>primary key</i></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><i>foreign key</i></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale. [ONLY ONE WAY]</p>
+			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><i>primary key</i></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><i>foreign key</i></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale. The foreign key belongs to the entity that has the instance that is created last. For example, an employee exists before a time card, so the primary key from the Employee entity becomes a foreign key with the Time Card entity.</p>
 		</section>
 
 		<section>
