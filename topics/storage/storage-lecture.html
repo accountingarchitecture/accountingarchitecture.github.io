@@ -349,7 +349,7 @@
 
 		<section>
 			<h3>Indexing</h3>
-			<p>One of the steps in the Maintenance section is <u><i>indexing</i></u>. The purpose of an index is to increase data retrieval speed. One simple example of this is the index in the back of a textbook. The keywords are the keys, and the page numbers on which those keywords appear are the pointers. Database indices serve the same purpose. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index shrinks the size of the relation to a particular attribute and identifies which records in the relation have a particular key. This increases the speed of record retrieval.</p>
+			<p>One of the steps in the Maintenance section is <u><i>indexing</i></u>. The purpose of an index is to increase data retrieval speed. One simple example of this is the index in the back of a textbook. An index contains keys and values, similar to metadata, with keywords as keys and the location (e.g., page numbers) as the values. One difference between an index and metadata is that each key in an index can have multiple values if the keyword occurs multiple times in the data store. Relational database use indices. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index tells the DBMS exactly where to find certain values. This increases the speed of record retrieval.</p>
 		</section>
 
 		<section>
@@ -441,8 +441,8 @@
 		<section>
 			<h3>Sample Diagram</h3>
 			<div class="flex-row">
-				<div class="flex-item" style="max-width: 55%">
-					<p>The cardinalities are read, as follows: an instance of Entity 1 is associated with at least zero and at most one instance of Entity 3, and an instance of Entity 3 is associated with exactly one instance of Entity 1. An instance of Entity 2 is associated with at least zero and at most many instances of Entity 3, and an instance of Entity 3 is associated with at least one and at most many instances of Entity 2.</p>
+				<div class="flex-item" style="max-width: 75%">
+					<p>Each course in the catalog has a unique number and each professor a unique ID as primary key [PK]. These primary keys also link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK/FK]. Each professor can teach zero or many scheduled courses, and each catalog entry can be scheduled zero or many times, but each scheduled course must have exactly one professor and one catalog reference.</p>
 				</div>
 				<div class="flex-item override">
 					<div>Crow's Foot Notation</div>
