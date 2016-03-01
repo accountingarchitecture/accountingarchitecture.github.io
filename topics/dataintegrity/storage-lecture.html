@@ -353,6 +353,11 @@
 		</section>
 
 		<section>
+			<h3>Homework Assignment</h3>
+			<p>Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp">W3Schools</a>. On the SQL Quiz results screen, select &ldquo;Check your answers&rdquo; and print the feedback to PDF. (Although it is possible to print a web page to PDF from any browser, you may find this easiest if you use Google Chrome.)</p>
+		</section>
+
+		<section>
 			<h3>Structure Models for Relational Databases</h3>
 			<ul>
 				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
@@ -424,6 +429,19 @@
 		</section>
 
 		<section>
+			<h3>Sample Diagram</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 55%">
+					<p>The cardinalities are read, as follows: an instance of Entity 1 is associated with at least zero and at most one instance of Entity 3, and an instance of Entity 3 is associated with exactly one instance of Entity 1. An instance of Entity 2 is associated with at least zero and at most many instances of Entity 3, and an instance of Entity 3 is associated with at least one and at most many instances of Entity 2.</p>
+				</div>
+				<div class="flex-item override">
+					<div>Crow's Foot Notation</div>
+					<img src="../../images/sample-er.png" alt="Sample E-R Diagram"/>
+				</div>
+			</div>
+		</section>
+
+		<section>
 			<h3>Exceptions to Entities and Attributes</h3>
 			<p>Not everything that is important to represent is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are potential entities and attributes that are combinations of pre-existing attributes. One simple example of this relates to Inventory costs. Unit Cost and Quantity on Hand would be attributes of the entity Inventory, but Total Cost (= Unit Cost x Quantity on Hand) would not. Another example would be employee supervisors. Supervisor would not be an entity because it would simply be a subset of the Employee entity. These would-be entities and attributes become <i><u>user views</u></i> because they are not stored in the database but can be provided to the user, as needed.</p>
 		</section>
@@ -439,43 +457,282 @@
 		</section>
 
 		<section>
-			<h3>Sample Diagram</h3>
-			<div class="flex-row">
-				<div class="flex-item" style="max-width: 55%">
-					<p>The cardinalities are read, as follows: an instance of Entity 1 is associated with at least zero and at most one instance of Entity 3, and an instance of Entity 3 is associated with exactly one instance of Entity 1. An instance of Entity 2 is associated with at least zero and at most many instances of Entity 3, and an instance of Entity 3 is associated with at least one and at most many instances of Entity 2.</p>
+			<h3>Redundancies</h3>
+			<p>The benefits of a database system rely on the avoidance of redundancy. In fact, one of the reasons to transition from a file system to a database system is to avoid redundancies from separate individuals tracking information in separate flat files. However, redundancies can also arise in database systems through the creation of <u><i>functional dependencies</i></u>. These dependencies create problematic <u><i>create</i></u>, <u><i>update</i></u>, and <u><i>delete anomalies</i></u>.</p>
+		</section>
+
+		<section>
+			<h3>Partial Dependencies</h3>
+			<p>A <u><i>partial dependency</i></u> arises if a non-key attribute (i.e., an attribute that is not a primary key) depends on only part of a composite key. Again using the example of the course list, the composite key Semester, Year, Course, and Section identifies a unique record. However, the attribute Course Name exclusively depends on Course, which is only part of the composite key.</p>
+		</section>
+
+		<section>
+			<h3>Transitive Dependencies</h3>
+			<p>A <u><i>transitive dependency</i></u> arises when a non-key attribute is dependent on another non-key attribute. For example, the entity Employee might include Employee ID, Employee Name, Department ID and Department Name. Employee ID is the primary key, and the employee's department (Department ID) depends on Employee ID. However, Department Name depends on Department ID, which is not a primary key. This is a transitive dependency because Employee ID &rarr; Department ID &rarr; Department Name, which creates a transitive link between Employee ID and Department Name.</p>
+		</section>
+
+		<section>
+			<h3>Dependencies Depicted</h3>
+			<div>Partial Dependency</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black; margin-bottom: 50px">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Semester</div>
+					<div class="table-cell" style="font-weight: bold">Year</div>
+					<div class="table-cell" style="font-weight: bold">Course</div>
+					<div class="table-cell" style="font-weight: bold">Section</div>
+					<div class="table-cell" style="font-weight: bold">Course Name</div>
 				</div>
-				<div class="flex-item override">
-					<div>Crow's Foot Notation</div>
-					<img src="../../images/sample-er.png" alt="Sample E-R Diagram"/>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">Spring</div>
+					<div class="table-cell">2016</div>
+					<div class="table-cell">ACCT 4020</div>
+					<div class="table-cell">001</div>
+					<div class="table-cell">Accounting Architecture</div>
+				</div>
+			</div>
+			<div>Transitive Dependency</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black;">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Employee ID</div>
+					<div class="table-cell" style="font-weight: bold">Employee Name</div>
+					<div class="table-cell" style="font-weight: bold">Department ID</div>
+					<div class="table-cell" style="font-weight: bold">Department Name</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">1</div>
+					<div class="table-cell">John Smith</div>
+					<div class="table-cell">A7</div>
+					<div class="table-cell">Administration</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Create Anomaly</h3>
+			<p>The <u><i>create anomaly</i></u> arises when it is not possible to add a record to a table because the new record has no value for the primary key. For example, suppose the Inventory table with SKU as primary key includes the name, address, and contact info for the vendor. The company wishes to add an approved vendor to the vendor list, but the company has not yet identified with items to order from that vendor. It is not possible to add that vendor to the database because no value for the primary key SKU exists.</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">0001</div>
+					<div class="table-cell">Spark Plug</div>
+					<div class="table-cell">Bosch</div>
+					<div class="table-cell">123 Sparky Way</div>
+					<div class="table-cell">800-555-1234</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell" style="color: red; font-weight: bold">X</div>
+					<div class="table-cell"></div>
+					<div class="table-cell">Remington</div>
+					<div class="table-cell">123 Tool Drive</div>
+					<div class="table-cell">888-555-1234</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Update Anomaly</h3>
+			<p>Repeating groups cause the <u><i>update anomaly</i></u>, which involves needing to change the same value more than once. If the Inventory table includes vendor contact info, and the vendor carries more than one inventory item, and the contact information for the vendor changes, it is necessary to find all references to that vendor in the table and update each separately.</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">0001</div>
+					<div class="table-cell">Spark Plug</div>
+					<div class="table-cell">Bosch</div>
+					<div class="table-cell">123 Sparky Way</div>
+					<div class="table-cell" style="color: red; font-weight: bold">800-555-1234</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">00X4</div>
+					<div class="table-cell">Distributor Cap</div>
+					<div class="table-cell">Bosch</div>
+					<div class="table-cell">123 Sparky Way</div>
+					<div class="table-cell" style="color: red; font-weight: bold">800-555-1234</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Delete Anomaly</h3>
+			<p>The <u><i>delete anomaly</i></u> is the loss of unintended information when a record is removed. If the Inventory table includes vendor contact info, and the company decides to discontinue the only item carried by that vendor, deleting the inventory record will also delete the vendor contact info even if the company intended to business with that vendor in the future.</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">0001</div>
+					<div class="table-cell">Spark Plug</div>
+					<div class="table-cell">Bosch</div>
+					<div class="table-cell">123 Sparky Way</div>
+					<div class="table-cell">800-555-1234</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell" style="text-decoration: line-through">0275</div>
+					<div class="table-cell" style="text-decoration: line-through">Drill Bits</div>
+					<div class="table-cell" style="text-decoration: line-through; color: red; font-weight: bold">Remington</div>
+					<div class="table-cell" style="text-decoration: line-through; color: red; font-weight: bold">123 Tool Drive</div>
+					<div class="table-cell" style="text-decoration: line-through; color: red; font-weight: bold">888-555-1234</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Normalization</h3>
+			<p><u><i>Normalization</i></u> removes functional dependencies and their resulting anomalies by dividing tables with dependencies into multiple tables connected by foreign keys. Second normal form (2NF) removes partial dependencies, and third normal form (3NF) removes transitive dependencies. First normal form (1NF) also resolves anomalies, but it is too simplistic for our purposes. Third normal form is the minimum standard for a well-defined database.</p>
+		</section>
+
+		<section>
+			<h3>Example</h3>
+			<p>Using the example listed previously when introducing anomalies, normalize the Inventory table:</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Solution</h3>
+			<p>The anomalies occur because of the decision to store inventory and vendor information together. Normalization splits the original table into two which Vendor Name as the primary key of the newly created Vendor table and the foreign key in the Inventory table:</p>
+			<div style="font-size: 24px">Inventory Table</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black; margin-bottom: 50px">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+				</div>
+			</div>
+			<div style="font-size: 24px">Vendor Table</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+			</div>
+			<p>(Using this technique, can you successfully normalize the other tables used to depict transitory and partial dependencies?)</p>
+		</section>
+
+		<section>
+			<h3>Many-to-Many</h3>
+			<p>One indication that a dependency exists is a relationship between two tables with maximum cardinalities of &ldquo;many&rdquo; in both directions. The resolution of this issue is a <u><i>linking table</i></u> that includes the primary keys of both original entities as a composite primary key. Because these are also the primary keys of another entity, they are simultaneously primary and foreign keys.</p>
+		</section>
+
+		<section>
+			<h3>Normalizing an E-R diagram</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/unnormalized.png" alt="Unnormalized Table" style="max-width: 200px"/></div>
+				<div class="flex-item" style="max-width: 75%">
+					<p>This E-R diagram entity lists common attributes for a sales order. (By the way, extension is unit price multiplied by quantity.) However, it is not 3NF. Construct an E-R diagram that includes each of these attributes&mdash;except those that meet the criteria in the &ldquo;Exceptions to Entities and Attributes&rdquo; slide&mdash;in a set of 3NF entities.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Customer</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step1.png" alt="Step 1" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>First, we create a Customer entity. By storing this data in a separate table, we avoid duplicating it each time that the customer places a new order. We select the customer's email address as a primary key [PK] because customer accounts are frequently identified by the email address.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Carrier</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step2.png" alt="Step 2" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Second, we create a Carrier entity to avoid duplicating carrier information for each order. The Carrier ID primary key could simply enumerate the carriers (i.e., 001, 002, 003, etc.). Not all primary keys have any interpretation. Sometimes they are nonsensical and only serve to uniquely identify records.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Inventory</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step3.png" alt="Step 3" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Third, we create an Inventory entity. Although quantity on hand is not normally on a sales order, it is an important Inventory attribute, so we add it to the Inventory table. SKU is an inventory identifier that is common to vendor and customer, so we can use it as an informative primary key.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Sales Tax</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step4.png" alt="Step 4" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Fourth, we create a Sales Tax entity to store the sales tax rates for each jurisdiction. Because jurisdictions are frequently identified by ZIP code, we can use that as the primary key.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step5.png" alt="Step 5" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Next, we assign relationships to the entities and cardinalities to the relationships. This involves some assumptions based on hypothetical business rules. Each customer is associated with at least zero and at most many sales orders. Each carrier is associated with at least zero and at most many sales orders. Each sales order is associated with exactly one customer and one carrier.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step6.png" alt="Step 6" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Although sales tax applies to a sales order, the customer's ZIP code resides in the Customer table. As a result, we will link the Sales Tax entity with the Customer entity with the assumption that each customer (by virtue of the customer's address) is associated with one sales tax rate, while each ZIP is associated with at least zero and at most many customers.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step7.png" alt="Step 7" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Finally, each sales order is associated with at least one and at most many inventory items, and each inventory item can be associated with at least zero and at most many sales orders. This many-to-many relationship is a problem, which a linking table will fix.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Foreign Keys</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step8.png" alt="Step 8" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Before creating a linking table, we add foreign keys to operationalize relationships. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity becomes a foreign key. This links customer ZIP to sales tax rate, and it restricts customers to ZIP codes already in the Sales Tax table.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
 			<h3>UML Class Diagrams</h3>
-			<p>E-R diagrams, especially those written in Chen notation, use labels to explain the form of the relationship between entities. For example, the relationship between Customer and Invoice may be &ldquo;pays&rdquo; because the customer pays the invoice. One of the benefits of UML diagrams is that they provide more structure for the actions that each entity may perform. As a result, entities, called classes in UML, contain attributes and <u><i>functions</i></u>. These functions determine how an instance of an entity can interact with the instances of other entities. In the sales process, the Customer class needs the function &ldquo;Create Sales Order,&rdquo; and the Employee class could have the function &ldquo;Cancel Sales Order.&rdquo; Object-oriented programming dictates the format of the function labels, but that is beyond the scope of this course.</p>
-		</section>
-
-		<section>
-			<h3>UML Class Diagrams</h3>
-			<div class="flex-row">
-				<div class="flex-item" style="max-width: 55%">
-					<p>Functions can also allow classes to interact with themselves and the system administrator to interact with the classes. As a result, many classes have a &ldquo;Set&rdquo; function paired with an attribute (e.g., Set Customer Name) to allow classes to create new instances or modify existing instances, as well as a &ldquo;Get&rdquo; function paired with an attribute (e.g., Get Unit Price) to retrieve the current value of a field.</p>
-				</div>
-				<div class="flex-item override">
-					<img src="../../images/sample-umlclass.png" alt="Sample UML Class Diagram"/>
-				</div>
-			</div>
 		</section>
 
 		<section>
 			<h3>Accounting Tie-in</h3>
-			<p>Accountants have always had the responsibility to store economic data in journals and ledgers. As the world becomes more digital, databases have replaced paper journals and ledgers, but that is only the beginning. eCommerce and Big Data have created the need for faster, more scalable data stores so that firms can capture customer data as fast as the customers create it. Because of mobile devices, which soon will outnumber humans on earth, this data is created constantly. Proper storage solutions are a necessary first step towards creating reports for internal and external stakeholders to support making strategic decisions.</p>
-		</section>
-
-		<section>
-			<h3>Homework Assignment</h3>
-			<p>Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp">W3Schools</a>. On the SQL Quiz results screen, select &ldquo;Check your answers&rdquo; and print the feedback to PDF. (Although it is possible to print a web page to PDF from any browser, you may find this easiest if you use Google Chrome.)</p>
 		</section>
 
 	</div>
