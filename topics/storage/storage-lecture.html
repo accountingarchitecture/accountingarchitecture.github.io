@@ -448,7 +448,7 @@
 
 		<section>
 			<h3>Keys</h3>
-			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><i>primary key</i></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><i>foreign key</i></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale.</p>
+			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><i>primary key</i></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><i>foreign key</i></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale. [ONLY ONE WAY]</p>
 		</section>
 
 		<section>
@@ -672,7 +672,57 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/normal-step3.png" alt="Step 3" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
-					<p>Third, we create an Inventory entity. Although quantity on hand is not normally on a sales order, it is an important Inventory attribute, so we add it to the Inventory table.SKU is an inventory identifier that is common to vendor and customer, so we can use it as an informative primary key.</p>
+					<p>Third, we create an Inventory entity. Although quantity on hand is not normally on a sales order, it is an important Inventory attribute, so we add it to the Inventory table. SKU is an inventory identifier that is common to vendor and customer, so we can use it as an informative primary key.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Sales Tax</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step4.png" alt="Step 4" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Fourth, we create a Sales Tax entity to store the sales tax rates for each jurisdiction. Because jurisdictions are frequently identified by ZIP code, we can use that as the primary key.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step5.png" alt="Step 5" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Next, we assign relationships to the entities and cardinalities to the relationships. This involves some assumptions based on hypothetical business rules. Each customer is associated with at least zero and at most many sales orders. Each carrier is associated with at least zero and at most many sales orders. Each sales order is associated with exactly one customer and one carrier.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step6.png" alt="Step 6" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Although sales tax applies to a sales order, the customer's ZIP code resides in the Customer table. As a result, we will link the Sales Tax entity with the Customer entity with the assumption that each customer (by virtue of the customer's address) is associated with one sales tax rate, while each ZIP is associated with at least zero and at most many customers.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step7.png" alt="Step 7" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Finally, each sales order is associated with at least one and at most many inventory items, and each inventory item can be associated with at least zero and at most many sales orders. This many-to-many relationship is a problem, which a linking table will fix.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Foreign Keys</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step8.png" alt="Step 8" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Before creating a linking table, we add foreign keys to operationalize relationships. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity becomes a foreign key. This links customer ZIP to sales tax rate, and it restricts customers to ZIP codes already in the Sales Tax table.</p>
 				</div>
 			</div>
 		</section>
