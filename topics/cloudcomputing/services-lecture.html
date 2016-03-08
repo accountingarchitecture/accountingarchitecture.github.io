@@ -31,7 +31,7 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Storage Solutions</h2>
+			<h2>Cloud Computing</h2>
 		</section>
 
 		<section>
@@ -39,31 +39,75 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Unlike most other Information and Technology aspects of the Architecture, Storage is not a discrete topic. Instead, it overlaps with the other Technology blocks: Hardware, Software and Services.</p>
+					<p>The Services block of the Architecture is the final block in the Technology leg. It comprises networking and cloud computing. In a nutshell, Services relies on the same technologies as the Hardware, Software, and Storage blocks, but Services uses these in a remote, and not a local, environment.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Not a Repeat Discussion</h3>
-			<p>When discussing the Information section, we addressed issues involving storage and storage diagramming. The goal is not to repeat those items, but rather to introduce technologies that implement the earlier storage concepts, as well as tools to interact with information system storage setups. That being said, because of the high level of conceptual overlap between Information Maintenance and Technology Storage, it is difficult to cleanly separate the two. After all, at what point is the transition between principle and implementation?</p>
+			<h3>Familiarity</h3>
+			<p>Because of the prevalence of digital devices, most students already rely on many of the technologies previously discussed throughout this course. With our connected lifestyle, this is especially true of network technologies. As a result, much of this discussion is an explanation of technologies, with which we are all already familiar.</p>
 		</section>
 		
 		<section>
-			<h3>Networking</h3>
-			<p>Workstations, also referred to as <u><i>fat clients</i></u>, can perform may functions without the aid of a network. Historically, individual computers were <u><i>thin clients</i></u>&mdash;dumb terminals&mdash;that allowed for data entry into a centralized server. Today, thin clients have once again become popular (e.g., mobile devices, Chromebooks), but the underlying server setup has changed. Nowadays, we rely on the <u><i>local area networks</u></i> (LANs) and <u><i>wide area networks</i></u> (WANs), such as the Internet, to connect to servers. In order to take advantage of these resources, we need some extra hardware.</p>
+			<h3>A Brief History</h3>
+			<p>Historically, individual computers were <u><i>thin clients</i></u>&mdash;dumb terminals&mdash;that allowed for use of <u><i>server-side</i></u> software on a centralized server. Server hardware was large and expensive, and in order to use that hardware efficiently, multiple dumb terminals shared the computing power. As processing power became less expensive, manufacturers created personal computers&mdash;<u><i>fat clients</i></u> or smart terminals&mdash;that could function independently using <u><i>client-side</i></u> software. To some extent, desktop and laptop computers continue to follow this model.</p>
 		</section>
 
 		<section>
-			<h3>Local Area Network</h3>
-			<p>A local area network allows for communication between computers generally over a small, localized area (e.g., one office building) using <u><i>routers</i></u> and <u><i>switches</i></u>. The differences between these are beyond our purview, but briefly, a switch allows network traffic to flow to multiple different devices, whereas a router creates a smaller network within a larger network and directs traffic between the smaller and larger networks. Category 5, 5E and 6 (Ethernet) cables and wireless fidelity (Wi-Fi) connect individual devices to the LAN. Each of these devices uses a network interface card (NIC) with a unique media access control (MAC) address to communicate with the network.</p>
+			<h3>Going Online</h3>
+			<p>With the advent of the Internet and the sharp reduction in data transmission cost, we have now returned to the original model of servers and thin clients, but we have added an additional concept. Applying terminology of today to the original server-client relationship, these dumb terminals communicated with their server using a <i><u>local area network</u></i> (LAN), which connects devices in the same geographical location, such as a residence or office. A <u><i>wide area network</i></u> (WAN), such as the Internet, connects devices in different locations. This allows for access to the World Wide Web, which is fundamentally data that is stored on servers in various remote locations.</p>
+		</section>
+
+		<section>
+			<h3>LAN Hardware</h3>
+			<p>A local area network uses <u><i>routers</i></u> and <u><i>switches</i></u>. The differences between these are beyond our purview, but briefly, a switch allows network traffic to flow to multiple different devices, whereas a router creates a smaller network within a larger network and directs traffic between the smaller and larger networks. Category 5, 5E and 6 (Ethernet) cables and wireless fidelity (Wi-Fi) connect individual devices to the LAN.</p>
 			<!--License: CC-BY-SA 3.0 Attribution: PassportDude at the English Language Wikipedia-->
 			<img src="../../images/switch.jpg" alt="Switch" style="max-height: 90px; margin-top: 0"/>
 		</section>
 
 		<section>
-			<h3>Wide Area Network</h3>
-			<p>Wide area networks comprise networks that cover a large geographical area, but frequently people use this term to mean the Internet because it is the most pervasive manifestation of a WAN. A LAN is sufficient to connect fat and thin clients and local servers together, but most information systems need WAN access, as well. Internet Service Providers (ISPs) use coaxial cable, phone lines, satellite, cell towers or fiber optics to allow individual residences and business access to the Internet. Modems, also referred to as radios, allow devices and LANs to access the WAN.</p>
+			<h3>WAN Hardware</h3>
+			<p>Modems, also referred to as radios, allow devices and LANs to access a WAN.  Internet Service Providers (ISPs) use coaxial cable, phone lines, satellite, cell towers, and fiber optics to allow individual residences and business access to a WAN, such as the Internet. Because the Internet encompasses multiple continents, undersea fiber optics are necessary to create the WAN interconnectivity that we take for granted.</p>
+		</section>
+
+		<section>
+			<h3>TCP/IP</h3>
+			<p>The Internet protocol suite is the set of protocols currently used to allow network devices to communicate. The two most important protocols are the Transmission Control Protocol (TCP) and the Internet Protocol (IP), hence the common name for the protocol suite: TCP/IP. The Internet Protocol dictates the form of the network address (i.e., IP address) issued to a computer's network interface card (NIC). Each NIC also has a unique media access control (MAC) address, which is essentially the NIC's serial number.</p>
+		</section>
+
+		<section>
+			<h3>IPv4</h3>
+			<p>The Internet protocol has two common versions. IPv4 has been the standard since 1983 and is still in use today. IPv4 uses 4 three-digit numbers to identify a unique network address (e.g., 192.168.001.010). This allows for just over 4 billion addresses available to the Internet. Unfortunately, because of the drastic increase in network devices, almost all available IPv4 addresses are in use. In order to address this shortage of available addresses, LANs create sub-networks so that the network devices within the LAN can use the same addresses as devices on other LANs.</p>
+		</section>
+		
+		<section>
+			<h3>IPv6</h3>
+			<p>The Internet Engineering Task Force (IETF) has also addressed the shortage of IP addresses by introducing IPv6. The number of potential IPv6 addresses is approximately 3.4 X 10<sup>38</sup>. Never say never, but I imagine that the pool of IPv6 addresses will never run out. Unfortunately, IPv6 is not yet widely adopted. Many modems and ISPs have not yet begun to support this protocol, and only some Web servers have IPv6 enabled.</p>
+		</section>
+		
+		<section>
+			<h3>DNS</h3>
+			<p>Closely related to the Internet Protocol is the Domain Name System (DNS). Each file in the World Wide Web has a unique Uniform Resource Locator (URL). This URL combines the address of the host (i.e., the server where the content is stored) and the path to the specific file. However, it is not feasible to remember the IP addresses of Internet hosts, but it is easy to remember hostnames. DNS servers store an index that pairs hostnames with IP addresses (e.g., google.com with 216.058.218.110) so that Web content is findable by hostname:en.wikipedia.org and path:/wiki/Main_Page without needing to remember the IP address.</p>
+		</section>
+
+		<section>
+			<h3>Transfer Protocols</h3>
+		</section>
+
+		<section>
+			<h3>Always Online</h3>
+			<p>The current status quo is for all of our devices to be connected to the Internet at all times. This somewhat opposes the premise of the personal computer, but it is perfectly in line with the idea behind the current generation of thin clients, such as smartphones, tablets, and Chromebooks. Personal computers commonly have higher processing power than thin clients to accommodate continued reliance on client-side applications, such as games, statistical analysis software, games, video and audio editing software&mdash;have I mentioned games&mdash;etc.</p>
+		</section>
+
+		<section>
+			<h3>Not Without Offline</h3>
+			<p>Even thin clients have considerable processing power for two reasons. First, consumers are not yet willing to accept a computer that cannot function offline, so even thin clients now have client-side applications&mdash;think of mobile apps, such as, dare I say it, games&mdash;and second, the consumption of server-side content currently requires significant client-side processing power. For example, simply keeping 10 browser tabs open requires approximately 2 GB of RAM.</p>
+		</section>
+
+		<section>
+			<h3>Not Really Client Side</h3>
+			<p>It is also worth mentioning that even client-side applications today rarely constitute <i>client-side-only</i> applications. Because computers are effectively always online, these client-side applications can communicate with remote servers to provide additional content, periodic updates, multiplayer functionality&mdash;yes, I mean games, again&mdash;or syncing between devices.</p>
 		</section>
 
 		<section>
