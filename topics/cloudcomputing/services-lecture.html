@@ -85,14 +85,20 @@
 			<h3>IPv6</h3>
 			<p>The Internet Engineering Task Force (IETF) has also addressed the shortage of IP addresses by introducing IPv6. The number of potential IPv6 addresses is approximately 3.4 X 10<sup>38</sup>. Never say never, but I imagine that the pool of IPv6 addresses will never run out. Unfortunately, IPv6 is not yet widely adopted. Many modems and ISPs have not yet begun to support this protocol, and only some Web servers have IPv6 enabled.</p>
 		</section>
+
+		<section>
+			<h3>Ports</h3>
+			<p>In addition to an IP address, each NIC also has 131,072 ports or sockets: 65,536 TCP ports and 65,536 UDP ports. Both TCP and UDP are part of the TCP/IP suite, and their differences are too technical for our purposes. The ports direct network traffic. Each port allows for a single stream of network traffic to or from a NIC. The first 1,024 ports in both protocols are reserved for system processes that provide network services.</p>
+		</section>
 		
 		<section>
 			<h3>DNS</h3>
-			<p>Closely related to the Internet Protocol is the Domain Name System (DNS). Each file in the World Wide Web has a unique Uniform Resource Locator (URL). This URL combines the address of the host (i.e., the server where the content is stored) and the path to the specific file. However, it is not feasible to remember the IP addresses of Internet hosts, but it is easy to remember hostnames. DNS servers store an index that pairs hostnames with IP addresses (e.g., google.com with 216.058.218.110) so that Web content is findable by hostname:en.wikipedia.org and path:/wiki/Main_Page without needing to remember the IP address.</p>
+			<p>Closely related to the Internet Protocol address is the Domain Name System (DNS). Each file in the World Wide Web has a unique Uniform Resource Locator (URL). This URL combines the address of the host (i.e., the server where the content is stored) and the path to the specific file. However, it is not feasible to remember the IP addresses of Internet hosts, but it is easy to remember hostnames. DNS servers store an index that pairs hostnames with IP addresses (e.g., google.com with 216.058.218.110) so that Web content is findable by hostname:en.wikipedia.org and path:/wiki/Main_Page without needing to remember the IP address.</p>
 		</section>
 
 		<section>
 			<h3>Transfer Protocols</h3>
+			<p>One additional component of a URL is the scheme, which I will call the transfer protocol. The most popular transfer protocol is the Hypertext Transfer Protocol (HTTP), which is used to serve Hypertext Markup Language (HTML) documents. The File Transfer Protocol (FTP) is used to transfer arbitrary files. The Mailto scheme allows for creating hyperlinks that include email addresses. Other schema exist, but they are much less common.</p>
 		</section>
 
 		<section>
@@ -108,6 +114,11 @@
 		<section>
 			<h3>Not Really Client Side</h3>
 			<p>It is also worth mentioning that even client-side applications today rarely constitute <i>client-side-only</i> applications. Because computers are effectively always online, these client-side applications can communicate with remote servers to provide additional content, periodic updates, multiplayer functionality&mdash;yes, I mean games, again&mdash;or syncing between devices.</p>
+		</section>
+
+		<section>
+			<h3>What is a Cloud?</h3>
+			<p>Cloud computing is currently a buzz word, but it is not a new, nor is it a complicated concept.</p>
 		</section>
 
 		<section>
