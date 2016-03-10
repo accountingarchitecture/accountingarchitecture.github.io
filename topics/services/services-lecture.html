@@ -118,17 +118,17 @@
 
 		<section>
 			<h3>What is a Cloud?</h3>
-			<p>Cloud computing is currently a buzz word, but it is not a new, nor is it a complicated concept. It essentially means server-based, as opposed to client-based, computing, just as in the dumb terminal days of yore. The Internet as a WAN is a cloud because it relies server-based computing, although <em>servers</em>-based might be a more appropriate term. Similarly, a LAN can also host a cloud if the LAN uses server-based computing. The original server-dumb terminal environment was a LAN-based cloud, except that no one called it that back then.</p>
+			<p>Cloud computing is currently a buzz word, but it is not a new, nor is it a complicated concept. It essentially means server-based, as opposed to client-based, computing, just as in the dumb terminal days of yore. The Internet as a WAN is a cloud because it relies on server-based computing, although <em>servers</em>-based might be a more appropriate term. Similarly, a LAN can also host a cloud if the LAN uses server-based computing. The original server-dumb terminal environment was a LAN-based cloud, except that no one called it that back then.</p>
 		</section>
 
 		<section>
 			<h3>Public Clouds</h3>
-			<p>The concept of WAN clouds and LAN clouds creates an important dichotomy for cloud computing. <u><i>Public clouds</i></u> are servers that are hosted by third parties and made available through Internet (i.e., WAN) access. The two most well-known public clouds are Amazon AWS and Microsoft Azure, but other popular offerings exist, such as Google Cloud Computing and Rackspace. The benefit of public clouds is the outsourced responsibility for purchasing and maintaining server and network hardware.</p>
+			<p>The concept of WAN clouds and LAN clouds creates an important dichotomy for cloud computing. <u><i>Public clouds</i></u> are servers that are hosted by third parties and made available through Internet (i.e., WAN) access. The two most well-known public clouds are Amazon AWS and Microsoft Azure, but other popular offerings exist, such as Google Cloud Computing and Rackspace. The benefit of public clouds is the outsourced responsibility for purchasing and maintaining server and network hardware. Public cloud providers then rent space on their servers to customers.</p>
 		</section>
 
 		<section>
 			<h3>Private Clouds</h3>
-			<p>However, not everyone is interested in outsourcing the IT function. As a result, <u><i>private clouds</i></u> have become increasingly popular. Private clouds are servers that are hosted on the companies own LAN. The company is responsible for purchasing and maintaining all hardware, but with that responsibility comes greater control and flexibility. Although any server-based computing can constitute cloud computing, some specific software offerings focus specifically on private cloud computing. The three most well-known solutions are OpenStack, CloudStack, and ownCloud. (ownCloud began as a residential-grade private cloud offering an email server, file server, and calendar server, but thanks to collaboration with CERN, it can now scale up to handle vast corporate clouds.)</p>
+			<p>However, not everyone is interested in outsourcing the IT function. As a result, <u><i>private clouds</i></u> have become increasingly popular. Private clouds are servers that are hosted on the company's own LAN. The company is responsible for purchasing and maintaining all hardware, but with that responsibility comes greater control and flexibility. Although any server-based computing can constitute cloud computing, some specific software offerings focus specifically on private cloud computing. The three most well-known solutions are OpenStack, CloudStack, and ownCloud. (ownCloud began as a residential-grade private cloud offering an email server, file server, and calendar server, but thanks to collaboration with CERN, it can now scale up to handle vast corporate clouds.)</p>
 		</section>
 
 		<section>
@@ -148,22 +148,27 @@
 
 		<section>
 			<h3>Cloud is a Service</h3>
-			<p>This block in the Architecture is named Services because premise behind cloud computing is to provide computing &ldquo;as a service,&rdquo; meaning that the CPU, RAM, storage, networking, and software on a server or servers are made available (or served) to end-user computing devices, as needed. Service in this sense has the same meaning as service in our earlier operating system discussion of servers and daemons: they provide computer functionality as a service.</p>
+			<p>This block in the Architecture is named Services because the premise behind cloud computing is to provide computing &ldquo;as a service,&rdquo; meaning that the CPU, RAM, storage, networking, and software on a server or servers are made available (or served) to end-user computing devices, as needed. Service in this sense has the same meaning as service in our earlier operating system discussion of servers and daemons: they provide computer functionality as a service.</p>
 		</section>
 
 		<section>
 			<h3>Service Levels</h3>
-			<p>In addition to different types of clouds (public, private, or hybrid, which is essentially a combination of public and private), depending on what functionality is served, the <u><i>service level</i></u> also differs. Traditionally, three service levels existed: <u><i>Infrastructure as a Service</i></u> (IaaS), <u><i>Platform as a Service</i></u> (PaaS), and <u><i>Software as a Service</i></u> (SaaS), but now clouds offer for more service levels, such as Load Balancing as a Service (LBaaS), Database as a Service (DBaaS), Containers as a Service (CaaS), or Metal as a Service (MaaS).</p>
+			<p>In addition to different types of clouds (public, private, or hybrid, which is essentially a combination of public and private), depending on what functionality is served, the <u><i>service level</i></u> also differs. Traditionally, three service levels existed: <u><i>Infrastructure as a Service</i></u> (IaaS), <u><i>Platform as a Service</i></u> (PaaS), and <u><i>Software as a Service</i></u> (SaaS), but now clouds offer far more service levels, such as Load Balancing as a Service (LBaaS), Database as a Service (DBaaS), Containers as a Service (CaaS), or Metal as a Service (MaaS).</p>
 		</section>
 
 		<section>
 			<h3>IaaS and PaaS</h3>
-			<p>Many public clouds provide either Infrastructure as a Service or Platform as a Service. The distinction between these two is not very important. They both essentially provide one or more virtual machines as server instances that the customer can access as if they were servers on their own network. Customer use these virtual machines to host databases, software development platforms, or end-users applications.</p>
+			<p>Many public clouds provide either Infrastructure as a Service or Platform as a Service. The distinction between these two is not very important. They both essentially provide one or more virtual machines as server instances that the customer can access as if they were servers on their own network. Customers use these virtual machines to host databases, software development platforms, or end-user applications.</p>
 		</section>
 
 		<section>
 			<h3>SaaS</h3>
-			<p>Software as a Service is the service level with which end users are most familiar, although they generally would not use that term. The World Wide Web is essentially a combination of SaaS offerings. Netflix, Google Docs, YouTube, Instagram, Facebook, Twitter, and other social media interfaces, even online email inboxes and search engines are examples of Software as a Service. Because of extended functionality, some offerings, such as Blogger and WordPress.com (different from WordPress) may rise to the level of PaaS, instead of SaaS. Interestingly, Netflix use Amazon AWS as IaaS to host their video platform, which they provide as SaaS.</p>
+			<p>Software as a Service is the service level with which end users are most familiar, although they generally would not use that term. The World Wide Web is essentially a combination of SaaS offerings. Netflix, Google Docs, YouTube, Instagram, Facebook, Twitter, and other social media interfaces, and even online email inboxes and search engines are examples of Software as a Service. Because of extended functionality, some offerings, such as Blogger and WordPress.com (different from WordPress) may rise to the level of PaaS, instead of SaaS. Interestingly, Netflix uses Amazon AWS as IaaS to host their video platform, which they provide as SaaS.</p>
+		</section>
+
+		<section>
+			<h3>Other-aaS</h3>
+			<p>Several newer service levels provide functionality that is beyond the scope of this course, but two (DBaaS and CaaS) are worth mentioning. Some companies wish to host their own online applications in-house but decide to outsource the database functionality because of the high demand frequent online transactions common to Big Data and eCommerce place on the database server. DBaaS is a convenient solution for these companies. Containers as a Service is one of the newest service levels, in part because the popularity of containerization is still quite new. Some companies only want just enough cloud to host or develop a single application. Containers provide an inexpensive alternative to entire platforms.</p>
 		</section>
 
 		<section>
