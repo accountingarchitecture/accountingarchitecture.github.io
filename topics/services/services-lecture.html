@@ -122,6 +122,21 @@
 		</section>
 
 		<section>
+			<h3>Cluster Computing</h3>
+			<p>Parallel computing involves including multiple CPUs or CPU cores on the same motherboard. This is the standard for most computing devices today. Distributed computing, on the other hand, involves combining multiple computers together in a cluster to share a processing task. Any computer, even a tiny SBC, can play the role of the server in a cloud, but the demands placed on a cloud (e.g., think about the number of users watching Netflix simultaneously) frequently exceeds the abilities of a single computer. Many clouds are supported by a server cluster, not a single server.</p>
+		</section>
+
+		<section>
+			<h3>Mainframes</h3>
+			<div class="flex-row">
+  		  <div class="flex-item override"><img src="../../images/mainframe.jpg" alt="Mainframe" style="max-height: 500px"/></div>
+				<div class="flex-item" style="max-width: 60%">
+					<p>In the old server-client model, the servers were called mainframes. Today, mainframes still exist as giant server-rack-sized computers. Mainframes have begun to replace lower-powered servers in larger clouds that utilize hundreds of clustered servers. One mainframe can have the processing power of as many as 200+ individual servers at a fraction of the hardware cost.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
 			<h3>Public Clouds</h3>
 			<p>The concept of WAN clouds and LAN clouds creates an important dichotomy for cloud computing. <u><i>Public clouds</i></u> are servers that are hosted by third parties and made available through Internet (i.e., WAN) access. The two most well-known public clouds are Amazon AWS and Microsoft Azure, but other popular offerings exist, such as Google Cloud Computing and Rackspace. The benefit of public clouds is the outsourced responsibility for purchasing and maintaining server and network hardware. Public cloud providers then rent space on their servers to customers.</p>
 		</section>
@@ -143,7 +158,7 @@
 
 		<section>
 			<h3>Aside: Monetizing Open Source</h3>
-			<p>Recent news provides a convenient opportunity to explain how to make money with open source software. Microsoft has recently announced that it will port SQL Server to Linux. (To port means to make a software originally designed for one operating system or CPU architecture available on another operating system or CPU.) Although Microsoft would prefer users run Windows Server, users prefer Linux servers. As a result, Microsoft supports Linux on its Azure cloud platform, and if their users prefer Linux, making SQL Server available for Linux can make SQL Server more attractive, as well. Microsoft uses open source Linux to make money from Azure and SQL Server, which despite being available on Linux, remains closed source.</p>
+			<p>Recent news provides a convenient opportunity to explain how to make money with open source software. Microsoft has recently announced that it will port SQL Server to Linux. (To port means to make a software originally designed for one operating system or CPU architecture available on another operating system or CPU.) Although Microsoft would prefer users run Windows Server, users prefer Linux servers. As a result, Microsoft supports Linux on its Azure cloud platform, and if their users prefer Linux, making SQL Server available for Linux can make SQL Server more attractive, as well. Microsoft uses open source Linux to make money from Azure and SQL Server, which, despite being available on Linux, remains closed source.</p>
 		</section>
 
 		<section>
@@ -153,24 +168,21 @@
 
 		<section>
 			<h3>Service Levels</h3>
-			<p>In addition to different types of clouds (public, private, or hybrid, which is essentially a combination of public and private), depending on what functionality is served, the <u><i>service level</i></u> also differs. Traditionally, three service levels existed: <u><i>Infrastructure as a Service</i></u> (IaaS), <u><i>Platform as a Service</i></u> (PaaS), and <u><i>Software as a Service</i></u> (SaaS), but now clouds offer far more service levels, such as Load Balancing as a Service (LBaaS), Database as a Service (DBaaS), Containers as a Service (CaaS), or Metal as a Service (MaaS).</p>
+			<div class="flex-row">
+  		  <!--CC BY-SA 3.0 Attribution: Sam Johnston-->
+  		  <div class="flex-item override"><img src="../../images/cloud.png" alt="Cloud Computing"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>In addition to different types of clouds (public, private, or hybrid, which is a combination of public and private), the <u><i>service level</i></u> can also differ. Traditionally, three service levels existed: <u><i>Infrastructure as a Service</i></u> (IaaS), <u><i>Platform as a Service</i></u> (PaaS), and <u><i>Software as a Service</i></u> (SaaS), but newer alternatives to these have emerged.</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
 			<h3>IaaS and PaaS</h3>
-			<p>Many public clouds provide either Infrastructure as a Service or Platform as a Service. The distinction between these two is not very important. They both essentially provide one or more virtual machines as server instances that the customer can access as if they were servers on their own network. Customers use these virtual machines to host databases, software development platforms, or end-user applications.</p>
+			<p>Many corporate-grade clouds provide Infrastructure as a Service. This service level usually involves providing one or more virtual machines. IaaS is essentially a replacement for a physical server or workstation. It also provides the user with the most flexibility of the three service levels.</p>
+			<p>Platform as a Service is more difficult to understand. It usually includes a database, a development environment, and one or more engines, which is code necessary to execute software applications (e.g., a Java engine can execute Java code). The primary role of PaaS is for software development and testing.</p>
 		</section>
 
-		<section>
-		  <h3>What Are These Services?</h3>
-		  <p>Although the offerings for each of these services include multiple technical terms, a simple approximation of each service level exists:</p>
-		  <ul>
-		    <li>IaaS: One or more virtual machines paired with storage and networking resources. IaaS can serve the same purpose as server hardware.</li>
-		    <li>PaaS: A web server, database and development environment. These tools are usually for application development.</li>
-		    <li>SaaS: A single application and sometimes a database backend. This is the service level that is most familiar to end users. In essence, most web content is SaaS.</li>
-		  </ul>
-		</section>
-		
 		<section>
 			<h3>SaaS</h3>
 			<p>Software as a Service is the service level with which end users are most familiar, although they generally would not use that term. The World Wide Web is essentially a combination of SaaS offerings. Netflix, Google Docs, YouTube, Instagram, Facebook, Twitter, and other social media interfaces, and even online email inboxes and search engines are examples of Software as a Service. Interestingly, Netflix uses Amazon AWS as IaaS to host their video platform, which they provide as SaaS.</p>
@@ -178,7 +190,7 @@
 
 		<section>
 			<h3>Other-aaS</h3>
-			<p>Several newer service levels provide functionality that is beyond the scope of this course, but two (DBaaS and CaaS) are worth mentioning. Some companies wish to host their own online applications in-house but decide to outsource the database functionality because of the high demand frequent online transactions common to Big Data and eCommerce place on the database server. DBaaS is a convenient solution for these companies. Containers as a Service is one of the newest service levels, in part because the popularity of containerization is still quite new. Some companies only want just enough cloud to host or develop a single application. Containers provide an inexpensive alternative to entire platforms.</p>
+			<p>Several newer service levels provide functionality that is beyond the scope of this course, but two (DBaaS and CaaS) are worth mentioning. Some companies wish to host their own online applications in-house but decide to outsource the database functionality because of the high demand frequent online transactions common to Big Data and eCommerce place on the database server. DBaaS is a convenient solution for these companies. Containers as a Service is one of the newest service levels, in part because the popularity of containerization is still quite new. Because containers are the new standard for software development and testing, CaaS will likely replace PaaS.</p>
 		</section>
 
 		<section>
@@ -233,10 +245,27 @@
 
 		<section>
 			<h3>In Or Out?</h3>
+			<p>At a recent meeting of the American Taxation Association, representatives from E&amp;Y's tax practice talked about data analytics and tax planning and compliance. One individual stated that because of increase in real-time analytical tools, data warehouses were no longer necessary. Given the roles that they play, I find this a bold statement. Later on in the presentation, it appeared that what the individual meant was that real-time analytics had replaced traditional pre-calculations, so it was no longer necessary to store OLAP cubes. I agree that real-time analytics have begun to replace traditional OLAP and MapReduce, but I would not agree that this removes the need for a data warehouse to archive data collected from transactional databases.</p>
 		</section>
 
 		<section>
 			<h3>Accounting Tie-in</h3>
+			<p>Our discussion of networking was primarily to explain the technologies that you rely on each day. In many accounting roles, this information is not directly relevant, but it is useful for accounting architects and IT auditors, who need a deeper understanding of IT. However, the concepts of cloud computing&mdash;public vs. private, service levels, transaction processing systems, and data warehousing&mdash;have broader importance. Data is everything to accountants, and in our current connected world, systems must be available to receive external data, storage systems must be able to preserve vital data, and accountants must have the analytical skills necessary to interpret the data for internal and external decision-makers.</p>
+		</section>
+
+		<section>
+			<h3>Taxation Tie-in</h3>
+			<p>According to E&amp;Y, the tax function has become the largest consumer of data in the enterprise. Two reasons for this trend are (1) data analysis enables taxes to drive corporate strategy and (2) tax authorities have begun to demand increased granularity in tax disclosure (i.e., underlying transactional data instead of summary figures). A well-designed cloud captures transactional data, cleans it, and stores it for the tax function to analyze.</p>
+		</section>
+
+		<section>
+			<h3>Extra Credit Presentations</h3>
+			<ol>
+				<li>Introduce the Internet of Things (IoT) and its role in cloud computing and Big Data.</li>
+				<li>Give a historical perspective of mainframes and explain why they have once again become popular.</li>
+				<li>ERP</li>
+				<li></li>
+			</ol>
 		</section>
 
 	</div>
