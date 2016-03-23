@@ -31,7 +31,7 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Control</h2>
+			<h2>Access Controls</h2>
 		</section>
 
 		<section>
@@ -39,7 +39,7 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Information is the keystone of any information system, and Technology is the set of tools necessary to implement that system. Control, however, is a choice. A system can function without proper controls. However, a system without proper controls exposes internal and external stakeholders to risks. The different blocks in the Control section combat the different risks these parties face.</p>
+					<p>Information is the keystone of any information system, and Technology is the set of tools necessary to implement that system. Control, however, is a choice. A system can function without proper controls. However, a system without proper controls exposes internal and external stakeholders to risks. The different blocks in the Control section represent different control objectives.</p>
 				</div>
 			</div>
 		</section>
@@ -56,49 +56,38 @@
 
 		<section>
 			<h3>Internal Stakeholders</h3>
-			<p>Regulations and contracts generally would not cover internal stakeholders, but just as external stakeholders, they wish to avoid misinformation, which would result in misled strategic decisions, and to protect their privacy (although <i>confidentiality</i> would be a more appropriate term, in this context). Because internal stakeholders are the biggest &ldquo;customer&rdquo; of the information system, protect them from risks becomes are primary goal of information system controls.</p>
+			<p>Regulations and contracts generally would not cover internal stakeholders, but just as external stakeholders, they wish to avoid misinformation, which would result in misled strategic decisions, and to protect their privacy (although <i>confidentiality</i> would be a more appropriate term in this context). Because internal stakeholders are the biggest &ldquo;customer&rdquo; of the information system, protect them from risks becomes are primary goal of information system controls.</p>
 		</section>
 
 		<section>
-			<h3>Cost-Benefit Analysis</h3>
-			<p>Two factors indicate the value of added control. <u><i>Likelihood</i></u> is the probability of a problem, and <u><i>exposure</i></u> is the magnitude of the loss should a problem arise. Loss can arise from litigation, fines, lost business, cost of restoring a system and its data, etc. The product likelihood and exposure is the expected loss. Frequently, the size of the loss makes even a small likelihood a big problem, especially when regulatory compliance is very strict.</p>
+			<h3><i>Cost</i>-Benefit Analysis</h3>
+			<p>Three different types of controls exist: preventive, detective, and corrective. Any implementation of controls is costly, although 100% prevention would clearly be the best, the cost is prohibitive. As a result, the only cost effective solution involves a combination of all three types: preventing what can be prevented and detecting and correcting what cannot be prevented.</p>
 		</section>
 
 		<section>
-			<h3>Prevention/Detection/Correction</h3>
-			<p>In any system, prevention of problems is the first goal. Unfortunately, perfect prevention requires infinite resources, so detective and corrective controls accompany preventive (or preventative, if you prefer) controls. Intuitively, detective controls detect problems and corrective controls correct problems.</p>
-		</section>
-
-		<section>
-			<h3>Are They Necessary?</h3>
-			<p>Accounting architects have two perspectives on internal controls. The first comes from their role as architects. From this perspective controls are necessary to avoid the &ldquo;garbage in, garbage out&rdquo; problem. Information is only useful if it is derived from accurate data, and controls protect data integrity. Additionally, architects wish to preserve trade secrets. The second perspective is as accountants. Regulatory compliance dictates proper controls over the financial reporting process to ensure accurate financial statements. This is similar to the &ldquo;garbage in, garbage out&rdquo; principle, but in this case, the beneficiaries of the controls are external stakeholders.</p>
-		</section>
-
-		<section>
-			<h3>Security Through Obscurity</h3>
-			<p>One layer of confidentiality is obscurity. Fortunately, less well-known and less prominent systems are less likely targets. This can be useful, but it is usually not a sufficient excuse to have weak controls.</p>
+			<h3>Cost-<i>Benefit</i> Analysis</h3>
+			<p>The benefit of a control implementation is the reduction in either the <u><i>likelihood</i></u> of or <u><i>exposure</i></u> to unauthorized access, data loss, or data corruption. Likelihood is the probability of a problem, and exposure is the dollar loss from litigation, fines, lost business, cost of restoring a system and its data, etc., should a problem occur. The size of the loss can make a problem with a small likelihood a big problem, especially when regulatory compliance is very strict. Preventive controls can lower the likelihood of a problem, and detective and corrective controls can reduce the exposure (i.e., make a problem less bad or fix a problem more quickly). </p>
 		</section>
 
 		<section>
 			<h3>Control Framework</h3>
-			<p>Many control system frameworks exist that address the various types of risk that face a company. Three well-known examples are Internal Control&ndash;Integrated Framework and Enterprise Risk Management&ndash;Integrated Framework by the Committee of Sponsoring Organizations of the Treadway Commission (COSO) and Control Objectives for Information and Related Technology (COBIT) by the Information Systems and Audit Control Association (ISACA). These are dense and comprehensive, though not comprehensible, so I have opted for the simpler AICPA Trust Services Framework.</p>
+			<p>Many control system frameworks exist that address the various types of risk that external and internal stakeholders face. Three well-known examples are (1) Internal Control&ndash;Integrated Framework and (2) Enterprise Risk Management&ndash;Integrated Framework by the Committee of Sponsoring Organizations of the Treadway Commission (COSO) and (3) Control Objectives for Information and Related Technology (COBIT) by the Information Systems and Audit Control Association (ISACA). These are dense and comprehensive, though not necessarily comprehensible, so I have opted for the simpler AICPA Trust Services Framework.</p>
 		</section>
 		
 		<section>
-			<h3>Another Architecture</h3>
-			<div class="override"><img src="../../images/trust-services.png" alt="Trust Services Framework" style="max-height: 500px"/>
-		</section>
-
-		<section>
-			<h3>Trust Services</h3>
-			<p>System reliability relies on five principles:</p>
-			<ol>
-				<li><u><i>Security</i></u> is the base of the framework. All other principles rely on this foundation.</li>
-				<li><u><i>Availability</i></u> ensures that a system is up and running.</li>
-				<li><u><i>Processing integrity</i></u> preserves the quality of data through the information life cycle.</li>
-				<li><u><i>Confidentiality</i></u> and <u><i>privacy</i></u> govern the use of sensitive information.</li>
-			</ol>
-			<p>It is worth noting that no perfectly divisible framework exists. Tools that support one principle may also support another. For example, any measure that promotes privacy also increases system security.</p>
+			<h3>Trust Services Framework</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 70%">
+					<p>The objectives of the Control leg of the Architecture mirror those of the AICPA Trust Services Framework:</p>
+					<ul>
+						<li><u><i>Security</i></u> protects against unauthorized access.</li>
+						<li><u><i>Availability</i></u> prevents data loss and system downtime.</li>
+						<li><u><i>Processing integrity</i></u> preserves data integrity.</li>
+						<li><u><i>Confidentiality</i></u> and <u><i>privacy</i></u> maintain secrets. Because of their similarity, these two occupy the same block in the Architecture.</li>
+					</ul>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -113,22 +102,22 @@
 
 		<section>
 			<h3>Database Permissions</h3>
-			<p>Permissions determine which users can initiate the four primary storage functions: create, read, update, delete (CRUD). However, these four functions are more relevant to a database system than a file system. Using SQL syntax as an example, the four basic commands are SELECT, INSERT INTO, UPDATE and DELETE. Each maps directly into one of the four storage functions.</p>
+			<p>Permissions determine which users can initiate the four primary storage functions: create, read, update, and delete (CRUD). However, these four functions are more relevant to a database system than a file system. Using SQL syntax as an example, the four basic commands are CREATE (or INSERT INTO), SELECT, UPDATE and DELETE. Each maps directly into one of the four storage functions.</p>
 		</section>
 
 		<section>
 			<h3>File Permissions</h3>
-			<p>Permissions in common file systems are less granular. Instead of identifying permissions for four storage functions, file systems focus on three functions: read, write and execute. The overlap between file read and database read is apparent, but the other two file system functions are less similar to database functions. Create, update and delete are all write functions because write permissions award the ability to edit. Execute governs launching applications. This permission has no useful meaning in a database setting.</p>
+			<p>Permissions in common file systems are less granular. Instead of identifying permissions for four storage functions, file systems focus on three functions: read, write, and execute. The overlap between file read and database read is apparent, but the other two file system functions are less similar to database functions. Create, update, and delete are all write functions because write permissions award the ability to edit. Execute governs launching applications. This permission has no useful meaning in a database setting.</p>
 		</section>
 
 		<section>
 			<h3>Folder Permissions</h3>
-			<p>File systems comprise both files and folders, and although the same three permissions (read, write and execute) govern both sets of objects, the interpretation differs between files and folders. Read allows the user to see the contents of a folder. Write allows a user to modify the contents of a folder. Execute allows the user to open a folder and interact with its contents.</p>
+			<p>File systems comprise both files and folders, and although the same three permissions (read, write, and execute) govern both files and folders, the interpretation differs between files and folders. Read allows the user to see the contents of a folder. Write allows a user to modify the contents of a folder. Execute allows the user to open a folder and interact with its contents. The distinction between read and execute is, perhaps, a bit technical and difficult to perceive; for Windows and OS X users (and any users of graphical file browsers), execute is the relevant permission for viewing folder contents.</p>
 		</section>
 
 		<section>
 			<h3>Me Against the World</h3>
-			<p>In addition to three functions (read, write, execute), file permissions have three different levels: user (or owner), group, world (or others). User and world are easy to understand. User is the usually the creator of a file or folder; world is everyone who has no level of ownership. Group is a collection of users that need similar access but frequently less access than the owner. The owner may or may not belong to the group.</p>
+			<p>In addition to three functions (read, write, and execute), file permissions apply separately to three different types of users: owner, group, and world (or others). Owner and world are easy to understand: owner is the (usually) the creator of a file or folder; world is everyone who has no ownership. Group is a collection of users that need similar access but frequently less access than the owner. The owner may or may not belong to the group.</p>
 		</section>
 
 		<section>
@@ -469,6 +458,11 @@
 			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. Also, rights management is inherently a required compliance activity when using licensed content.</p>
 		</section>
 		
+		<section>
+			<h3>Accounting Tie-in</h3>
+			<p>Accounting architects have two perspectives on internal controls. The first comes from their role as architects. From this perspective controls are necessary to avoid the &ldquo;garbage in, garbage out&rdquo; problem. Information is only useful if it is derived from accurate data, and controls protect data integrity. Additionally, architects wish to preserve trade secrets. The second perspective is as accountants. Regulatory compliance dictates proper controls over the financial reporting process to ensure accurate financial statements. This is similar to the &ldquo;garbage in, garbage out&rdquo; principle, but in this case, the beneficiaries of the controls are external stakeholders.</p>
+		</section>
+
 	</div>
 	</div>
 
