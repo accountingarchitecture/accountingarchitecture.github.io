@@ -235,8 +235,7 @@
 
 		<section>
 			<h3>Role-Based Access Control (RBAC)</h3>
-			<p>By default Unix-like systems cannot set role-based permissions, and it is not possible to create a group for the role and another group for the department and assign both groups to the data object because Unix-like systems only allow one group per data object.</p>
-			<p>Because role-based permissions are more useful in centralized storage solutions, it is useful to have the access controls in a central location. Directories can store user information, user roles and role-based permissions. Lightweight Directory Access Protocol (LDAP) is the open standard for these directories, although some operating systems rely on closed solutions (e.g., Active Directory for Windows Server). In this scenario, it is possible again to control four (CRUD), instead of three (RWX) storage functions.</p>
+			<p>By default Unix-like systems cannot set role-based permissions, and it is not possible to create a group for the role and another group for the department and assign both groups to the data object because Unix-like systems only allow one group per data object. Fortunately, tools exist that allow for assigning users in a POSIX system to roles. Two popular examples are <i><u>Security-Enhanced Linux</u></i> (SELinux) and <i><u>Lightweight Directory Access Protocol</u></i> (LDAP). Generally, SELinux controls a single system, whereas LDAP controls permissions for an entire LAN. LDAP is an open standard for these directories, although some operating systems rely on closed solutions (e.g., Active Directory for Windows Server). In this scenario, it is possible again to control four (CRUD), instead of three (RWX) storage functions.</p>
 		</section>
 
 		<section>
