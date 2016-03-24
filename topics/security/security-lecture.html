@@ -92,12 +92,13 @@
 
 		<section>
 			<h3>Security</h3>
-			<blockquote>The system is protected against unauthorized access, use or modification.</blockquote>
+			<blockquote>The system is protected against unauthorized access, use, or modification.<br>&ndash; AICPA Trust Services Framework</blockquote>
 			<p>Access controls are the primary security tool. They promote system security in one of three ways:</p>
-			<ul>
-				<li><u><i>Permissions</i></u> determine authorization.</li>
+			<ol>
+				<li><u><i>Permissions</i></u> determine what users are authorized to do.</li>
 				<li><u><i>Authentication</i></u> allows authorized users to identify themselves.</li>
-				<li><u><i>Hardening</i></u> prevents unauthorized access.</li>
+				<li><u><i>Hardening</i></u> and <u><i>isolation</i></u> prevent unauthorized access.</li>
+			</ol>
 		</section>
 
 		<section>
@@ -107,7 +108,7 @@
 
 		<section>
 			<h3>File Permissions</h3>
-			<p>Permissions in common file systems are less granular. Instead of identifying permissions for four storage functions, file systems focus on three functions: read, write, and execute. The overlap between file read and database read is apparent, but the other two file system functions are less similar to database functions. Create, update, and delete are all write functions because write permissions award the ability to edit. Execute governs launching applications. This permission has no useful meaning in a database setting.</p>
+			<p>Permissions in common file systems are less granular. Instead of identifying permissions for four storage functions, file systems focus on three functions: read, write, and execute. The overlap between file read and database read is apparent, but the other two file system functions are less similar to database functions. Create, update, and delete are all write functions because write permissions award the ability to edit. Execute governs launching applications. This permission has no useful meaning in a database setting. These three levels ostensibly match with the three protections in the AICPA definition of security: <i>access</i> (read), <i>use</i> (execute), <i>modification</i> (write).</p>
 		</section>
 
 		<section>
@@ -122,7 +123,7 @@
 
 		<section>
 			<h3>Symbolic Notation</h3>
-			<p>Unix-like operating systems display file permissions in two different but equivalent ways. One is more readable and one is more concise. Symbolic notation, the more readable format, uses ten characters to explain whether the user, group or world can read (r), write (w) or execute (e). Missing permissions are replaced with a hyphen.</p>
+			<p>Unix-like (i.e., POSIX) operating systems display file permissions in two different but equivalent ways. One is more readable and one is more concise. Symbolic notation, the more readable format, uses ten characters to explain whether the owner, group, or world can read (r), write (w), or execute (e). Missing permissions are replaced with hyphens.</p>
 			<div class="table" style="font-size: 20px; border: 3px solid black">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">Permissions</div>
@@ -157,12 +158,15 @@
 
 		<section>
 			<h3>First Character</h3>
-			<p>Symbolic notation uses nine characters (i.e., three triads), but the string contains ten spaces. The first identifies the file type: regular file (-), directory (d), link (l), etc.</p>
+			<p>Symbolic notation uses nine characters (i.e., three triads), but the string contains ten spaces. The first identifies the file type: regular file (-), directory (d), or link (l). Several other file types exist, but these three are the most common, and they suffice to understand symbolic notation.</p>
+			<img src="../../images/symbolic-notation.png" alt="Permissions in Symbolic Notation"/>
+			<p>This screenshot of the output of the &lsquo;ls -l&rsquo; command&mdash;these are lowercase L's&mdash;also displays ownership. In this case, ubuntu is the name of the owner, and the name of the group is also ubuntu.</p>
 		</section>
 
 		<section>
 			<h3>Octal Permissions</h3>
-			<p>Numeric notation, frequently referred to as octal or octet permissions, uses base-8 notation to report permissions. In this notation, read receives a value of 4, write a value of 2 and execute a value of 1. These are added together to obtain one value per significant digit. Although frequently reported using only three significant digits&mdash;first, user; second, group; third, world&mdash;these permissions actually have a four digit, which we will ignore and always set to 0. Symbolic notation has a corollary to this fourth digit, but because we set it to zero, it will not manifest in symbolic notation.</p>
+			<p>Numeric notation, frequently referred to as octal or octet permissions, uses base-8 notation to report permissions. In this notation, &lsquo;read&rsquo; receives a value of 4, &lsquo;write&rsquo; a value of 2, and &lsquo;execute&rsquo; a value of 1. These are added together to obtain one value for each of three significant digit. The first digit reports owner permissions, the second reports group permissions, and the third reports world permissions.</p>
+			<img src="../../images/numeric-notation.png" alt="Permissions in Numeric Notation"/>
 		</section>
 
 		<section>
@@ -201,21 +205,37 @@
 					<div class="table-cell" style="text-align: center">0644</div>
 				</div>
 			</div>
+			<p>The three commonly reported digits are actually the second, third, and fourth digits of octal permissions. The first digit, which is frequently ignored, reports special settings which override the functionality of the default permissions. If no special override applies, this value is set to 0.</p> 
 		</section>
 
 		<section>
-			<h3>Groups vs. Roles</h3>
-			<p>Unix groups are faceted, and in many Unix-like operating systems, the user is automatically assigned to multiple groups. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware (e.g., storage, lp, optical, power). It is possible to create additional groups for business purposes.</p>
-			<p>In a business sense, groups may have multiple interpretations. Two examples would be roles and departments. Because individuals in the same role should have the same access and because individuals' access should change if they switch roles, it is most appropriate to assign permissions by role and not user.</p>
+			<h3>One User to Rule Them All</h3>
+			<p>In any system, whether file or database, every data object must have an owner. In Windows it may seem that any user has read, write, and execute privileges to any file and folder; in Unix-like operating systems, including OS X because of its BSD foundation, most users only own content that they create in order to restrict write and, sometimes even read, access to system files. These files belong to <i>root</i>, also called the superuser or system user. In addition to owning the system files, the root user has full access (i.e., 777) to all files owned by any other user. Popular database systems also employ a root user who has all privileges and can grant those privileges to other users.</p>
 		</section>
 
 		<section>
-			<h3>Groups vs. Departments</h3>
-			<p>A group may also be thought of as a department (i.e., a collection of roles). These individuals would not need the same access, but they may all need some access to everything created within the department. This definition of group is more in line with the meaning in a Unix system. In fact, the default Unix permissions are not well-equipped for role-based access, especially since the owner of a file is likely the creator, not a role.</p>
+			<h3><a href="http://xkcd.com/149/">Sudo Make Me a Sandwich</a></h3>
+			<p>Because the root user owns system files, a normal user must obtain elevated permissions to alter the system (i.e., edit and delete system files or install applications). In Unix-like systems, this is done by either changing to the root user using the &lsquo;su&rsquo; command or, more likely, by prepending &lsquo;sudo&rsquo; to any command that requires elevated privileges. This second method is sometimes called fakeroot. (For an amusing commentary on sudo, click the title of this slide.)</p>
 		</section>
 
 		<section>
-			<h3>Global Directories</h3>
+			<h3>Unix Groups</h3>
+			<p>POSIX groups are faceted, not hierarchical, so in Unix-like operating systems, users can belong to multiple groups. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware. For example, the &lsquo;storage&rsquo; group allows its members to access storage volumes, such as the internal hard drive or external USB drives; the &lsquo;lp&rsquo; group allows its members to use printers and scanners; the &lsquo;admin&rsquo; group&mdash;sometimes called the &lsquo;sudo&rsquo; or &lsquo;wheel&rsquo; group&mdash;allows its members to use the sudo command to receive elevated privileges.</p>
+		</section>
+
+		<section>
+			<h3>Business Groups</h3>
+			<p>In addition to the default groups in a Unix-like system, administrators can create additional groups at will to serve business purposes. The idea of groups in a Unix-like system is to award multiple users similar privileges to data objects, and this concept of groups matches the definition of groups in the traditional business sense (i.e., teams or departments). Using groups in this setting allows for owners to have primary access to data objects and for members of the same group as the owner to have lesser access (e.g., the owner has read-write access, and the other group members have read-only access.)</p>
+		</section>
+
+		<section>
+			<h3>Roles</h3>
+			<p>The emphasis of owner permissions over group permissions is incompatible with an important tenet of access controls: permissions should be role- and not user-based. The premise is that users only need access consistent with their job descriptions; all users in the same job role should have the same access; once a user changes roles, the user's access to data should change; and collections of roles (i.e., business groups) should have some, but likely lesser, access to the data of each role in the group.</p>
+		</section>
+
+		<section>
+			<h3>Role-Based Access Control (RBAC)</h3>
+			<p>By default Unix-like systems cannot set role-based permissions, and it is not possible to create a group for the role and another group for the department and assign both groups to the data object because Unix-like systems only allow one group per data object.</p>
 			<p>Because role-based permissions are more useful in centralized storage solutions, it is useful to have the access controls in a central location. Directories can store user information, user roles and role-based permissions. Lightweight Directory Access Protocol (LDAP) is the open standard for these directories, although some operating systems rely on closed solutions (e.g., Active Directory for Windows Server). In this scenario, it is possible again to control four (CRUD), instead of three (RWX) storage functions.</p>
 		</section>
 
@@ -277,18 +297,9 @@
 		</section>
 
 		<section>
-			<h3>One User to Rule Them All</h3>
-			<p>In any system, everything must be owned by some user. Most users only own some content in order to avoid unintended, unauthorized access. However, one user (i.e., root or superuser) owns the entire system. The root user is the owner of system files, and the root user has full access to all files from any other user. Popular database systems also employ a root user who has all privileges and can grant those privileges to other users.</p>
-		</section>
-
-		<section>
-			<h3>Elevated Permissions</h3>
-			<p>Because the root user owns system files, a normal user must obtain elevated permissions to alter the system. In Unix systems this is done by changing to the superuser (su) or by becoming fakeroot (sudo). This becomes even more complicated if one user should access an application that should access other resources because the number of relevant permissions can become overwhelming.</p>
-		</section>
-
-		<section>
 			<h3>Just Say No</h3>
 			<p>Because it is easier to avoid incompatibilities with permissions, some users succumb to the temptation to use the root user for everything. This is a worst-case scenario for security and should never be done. Instead, learn to navigate permissions.</p>
+This prevents unauthorized and unintended changes to the system. 
 		</section>
 
 		<section>
