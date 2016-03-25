@@ -102,8 +102,43 @@
 		</section>
 
 		<section>
+			<h3>Why Permissions?</h3>
+			<div class="flex-row">
+				<!--License: CC-BY-SA 4.0 Attribution: DavidBailey-->
+				<div class="flex-item override"><img src="../../images/fraudtriangle.png" alt="Fraud Triangle" style="max-height: 400px"/></div>
+				<div class="flex-item" style="max-width: 60%">
+					<p>The purpose of permissions is two-fold. First, permissions prevent outsiders (e.g., non-employees) from gaining access to confidential materials. Second, correctly assigned permissions prevent insiders from gaining access to content that would increase the <em>opportunity</em> to commit fraud by segregating incompatible duties.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Segregation of Duties</h3>
+			<p>Segregation of duties discourages the assignment of multiple incompatible duties to the same individual. General guidelines for identifying incompatible duties include:</p>
+			<ol>
+				<li>Authorization for a transaction should be separate from the processing of a transaction. For example, a sales person should not be able to authorize sale of inventory on credit and process the sales transaction. This prevents that creation of fraudulent transactions.</li>
+				<li>Custody of assets should be separate from record-keeping. For example, the raw materials store should not be responsible for maintaining records of the levels of raw materials. This prevents asset theft.</li>
+			</ol>
+		</section>
+
+		<section>
+			<h3>Supervision</h3>
+			<p>Segregation of duties is an excellent tool for discouraging fraud by requiring individuals to collude in order to succeed in performing and concealing the act. However, sometimes this tool is not available either because the number of available employees is too small and employees need to assume incompatible duties or because a single duty is risky (e.g., unloading inventory from a truck before it is counted or opening envelopes of cash in the mail room). In these situations, supervision is a second-best alternative.</p>
+		</section>
+
+		<section>
+			<h3>Physical Access</h3>
+			<p>Permissions can apply to physical and digital resources. Using a file server as an example, digital permissions determine which users have access to which files, and physical permissions dictate who may enter the server room where that file server is stored. No amount of digital permissions replaces the need for physical permissions. If an attacker can gain access to the physical file server, then that user can gain access to any of the files on that server. <em>Physical access is total access</em>.</p>
+		</section>
+
+		<section>
+			<h3>Digital Access</h3>
+			<p>In our current cloud computing environment, most access is from remote locations (i.e., users on thin clients or workstations access a centralized web/database/file/email server or a shared printer). In these situations, permissions determine which users can use which physical devices (e.g., servers, printers) and which data objects (e.g., files, folders, database records, emails).</p>
+		</section>
+
+		<section>
 			<h3>Database Permissions</h3>
-			<p>Permissions determine which users can initiate the four primary storage functions: create, read, update, and delete (CRUD). However, these four functions are more relevant to a database system than a file system. Using SQL syntax as an example, the four basic commands are CREATE (or INSERT INTO), SELECT, UPDATE and DELETE. Each maps directly into one of the four storage functions.</p>
+			<p>Database permissions identify which users can (1) access the database and (2) initiate the four primary storage functions: <u><i>create</i></u>, <u><i>read</i></u>, <u><i>update</i></u>, and <u><i>delete</i></u> (CRUD). Create allows users to add new database records, read allows users to view existing records, update allows users to modify existing records, and delete allows users to remove records. Using SQL syntax as an example, the four basic commands are CREATE (or INSERT INTO), SELECT, UPDATE and DELETE. Each maps directly into one of the four storage functions.</p>
 		</section>
 
 		<section>
@@ -219,7 +254,7 @@
 		</section>
 
 		<section>
-			<h3>Unix Groups</h3>
+			<h3>*nix Groups</h3>
 			<p>POSIX groups are faceted, not hierarchical, so in Unix-like operating systems, users can belong to multiple groups. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware. For example, the &lsquo;storage&rsquo; group allows its members to access storage volumes, such as the internal hard drive or external USB drives; the &lsquo;lp&rsquo; group allows its members to use printers and scanners; the &lsquo;admin&rsquo; group&mdash;sometimes called the &lsquo;sudo&rsquo; or &lsquo;wheel&rsquo; group&mdash;allows its members to use the sudo command to receive elevated privileges.</p>
 		</section>
 
@@ -235,12 +270,7 @@
 
 		<section>
 			<h3>Role-Based Access Control (RBAC)</h3>
-			<p>By default Unix-like systems cannot set role-based permissions, and it is not possible to create a group for the role and another group for the department and assign both groups to the data object because Unix-like systems only allow one group per data object. Fortunately, tools exist that allow for assigning users in a POSIX system to roles. Two popular examples are <i><u>Security-Enhanced Linux</u></i> (SELinux) and <i><u>Lightweight Directory Access Protocol</u></i> (LDAP). Generally, SELinux controls a single system, whereas LDAP controls permissions for an entire LAN. LDAP is an open standard for these directories, although some operating systems rely on closed solutions (e.g., Active Directory for Windows Server). In this scenario, it is possible again to control four (CRUD), instead of three (RWX) storage functions.</p>
-		</section>
-
-		<section>
-			<h3>Segregation of Duties</h3>
-			<p>One important consideration for accountants is segregations of duties, which dictates that stewardship of assets should not accompany record-keeping. For examaple, any role responsible for counting cash, storing inventory or paying bills should not be able to change the accounting records for cash, receivables, payables or inventory. The implication is clear. If hold an asset and can change the records, I can steal and cover it up.</p>
+			<p>By default Unix-like systems cannot set role-based permissions, and it is not possible to create a group for a role and another group for a department and assign both groups to a data object because Unix-like systems only allow one group per data object. Fortunately, tools exist that allow for assigning users in a Unix-like system to roles. Two popular examples are <i><u>Security-Enhanced Linux</u></i> (SELinux) and <i><u>Lightweight Directory Access Protocol</u></i> (LDAP). SELinux controls permissions a single Linux system, whereas LDAP controls permissions for an entire LAN across multiple different operating systems.</p>
 		</section>
 
 		<section>
@@ -471,6 +501,7 @@ This prevents unauthorized and unintended changes to the system.
 		<section>
 			<h3>Accounting Tie-in</h3>
 			<p>Accounting architects have two perspectives on internal controls. The first comes from their role as architects. From this perspective controls are necessary to avoid the &ldquo;garbage in, garbage out&rdquo; problem. Information is only useful if it is derived from accurate data, and controls protect data integrity. Additionally, architects wish to preserve trade secrets. The second perspective is as accountants. Regulatory compliance dictates proper controls over the financial reporting process to ensure accurate financial statements. This is similar to the &ldquo;garbage in, garbage out&rdquo; principle, but in this case, the beneficiaries of the controls are external stakeholders.</p>
+			<p>Employers want accountants to understand segregation of duties.</p>
 		</section>
 
 	</div>
