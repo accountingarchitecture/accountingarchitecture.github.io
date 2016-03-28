@@ -56,7 +56,7 @@
 
 		<section>
 			<h3>Internal Stakeholders</h3>
-			<p>Regulations and contracts generally would not cover internal stakeholders, but just as external stakeholders, they wish to avoid misinformation, which would result in misled strategic decisions, and to protect their privacy (although <i>confidentiality</i> would be a more appropriate term in this context). Because internal stakeholders are the biggest &ldquo;customer&rdquo; of the information system, protect them from risks becomes are primary goal of information system controls.</p>
+			<p>Regulations and contracts generally would not cover internal stakeholders, but just as external stakeholders, they wish to avoid misinformation, which would result in misled strategic decisions, and to protect their privacy (although <i>confidentiality</i> would be a more appropriate term in this context). Because internal stakeholders are the biggest &ldquo;customer&rdquo; of the information system, protecting them from risks becomes a primary goal of information system controls.</p>
 		</section>
 
 		<section>
@@ -348,22 +348,22 @@
 
 		<section>
 			<h3>Disagree to Disagree</h3>
-			<p>Different groups have differing beliefs on the best type of secure password. Some like the <u><i>passphrase</i></u> which essentially converts a, potentially nonsensical, sentence into a password (e.g., iamamericaandyoucantoo). Even within this </p>
-		</section>
-
-		<section>
-			<h3>Social Engineering</h3>
-			<p></p>
+			<p>Different groups have differing beliefs on the best type of secure password. Some like the <u><i>passphrase</i></u> which essentially converts a, potentially nonsensical, sentence into a password (e.g., iamamericaandyoucantoo). The benefits of a passphrase are length and ease of remembering (i.e., the user is less likely to write it down). It is possible to add uppercase letters, numbers, special characters, and even spaces to make the passphrase more secure. Others prefer the <u><i>randomly-generated password</i></u> (e.g., qt^&P07*_!gh$). Because this is virtually impossible to remember, these users also prefer password managers (e.g., LastPass or 1Password) to store usernames and passwords (i.e., login credentials).</p>
 		</section>
 
 		<section>
 			<h3>Time-based Codes</h3>
-			<p></p>
+			<p>Although users can change passwords, over short periods of time (e.g., days or weeks), a password remains static. Time-based codes address the weakness of static passwords by creating a code that changes frequently, usually every minute. Historically, users would need to keep a small device with them that displayed the current code, but in the era of smartphones, these codes are often transmitted by SMS or mobile app. In order to guess the code, an attacker would need to have stolen a device or have guessed the algorithm that determines the sequence of codes. The latter is unlikely, and the former depends on the care the user places on protecting the device.</p>
+		</section>
+
+		<section>
+			<h3>Social Engineering</h3>
+			<p>Another method that attackers use to acquire passwords is <u><i>social engineering</i></u>. This involves creating a seemingly legitimate situation that convinces the user to disclose login credentials. This frequently involves <u><i>phishing</i></u> calls or emails in which the attacker poses as an authorized individual (e.g., a customer service representative, supervisor, or IT employee) and asks for the user's credentials. One of the benefits of randomly-generated passwords coupled with password managers is that the user is less likely to know and be able to communicate the password.</p>
 		</section>
 
 		<section>
 			<h3>Multifactor Authentication</h3>
-			<p>Security and convenience are always trade-offs. Anything that is more difficult for unauthorized users to access is also more difficult for authorized users to access. However, in many situations, the cost of added inconvenience is well worth avoiding exposure. In the current climate, one form of authentication is rarely enough to avoid problems. Passwords can be comprised through guessing, brute force or social engineering; key cards go missing; face or voice recognition can be faked. A combination of these is better (e.g., a password and a time-based code or a key card and a hand print).</p>
+			<p>Security and convenience are always trade-offs. Anything that is more difficult for unauthorized users to access is also more difficult for authorized users to access. However, in many situations, the cost of added inconvenience is well worth avoiding exposure. In the current climate, one form of authentication is rarely enough to avoid problems. Passwords can be compromised through brute force or social engineering, key cards go missing, face or voice recognition can be faked. A combination of these is better (e.g., a password and a time-based code or a key card and a hand print).</p>
 		</section>
 
 		<section>
@@ -381,143 +381,6 @@
 			<p>Because it is possible to use authentication protocols to access a LAN from the WAN, it can also be possible to gain unauthorized access from the WAN. Firewalls, or more generally packet filters, restrict network traffic to and from certain network ports on certain devices. Firewalls are like Dementors in that they cannot distinguish between authorized and unauthorized traffic.</p>
 		</section>
 
-		<section>
-			<h3>What Day is It?</h3>
-			<p>In the context of software development, hardening involves apply patches to exploits. Although it is best to write the software correctly the first time, exploits arise because developers cut corners or make mistakes. They also arise because people invent new ways to exploit software. A zero-day exploit is a software exploit that is found before the developers know about, and this is an increasingly frequent occurrence.</p>
-		</section>
-
-		<section>
-			<h3>What Can Exploits Do?</h3>
-			<p>One problem with software exploits is that frequently result in the user gaining elevated privileges or accessing unauthorized content. This is how iOS devices are jailbroken or Android devices rooted.</p>
-		</section>
-
-		<section>
-			<h3>Availability</h3>
-			<blockquote>The system is available for operation and use as committed or agreed.</blockquote>
-			<p>Two threats of availability are data loss and downtime. Three tools combat these threats:</p>
-			<ul>
-				<li><u><i>Interpretation</i></u> preserves accessibility of legacy data.</li>
-				<li><u><i>Redundancy</i></u> avoids data loss and unplanned downtime.</li>
-				<li><u><i>Change management</i></u> limits planned downtime.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Interpretation</h3>
-			<p>I cannot say what the original reason was for the Unix philosophy that the basis of all data is plan text, but a significant benefit of that mindset is a maximization of data accessibility. Binary files require specific hardware and software to access, so users have two choices (1) retain in perpetuity the hardware and software necessary to access the data or (2) emulate the hardware and software.</p>
-		</section>
-
-		<section>
-			<h3>Emulation</h3>
-			<p>Similar to virtualization, emulation uses software to mimic hardware. However, in the case of emulation, the hardware is non-existent, and software translates hardware requests into the proper architecture and communicates with the actual hardware. (Incidentally, this is a popular practice for playing old console and arcade games on personal computers.)</p>
-		</section>
-
-		<section>
-			<h3>Redundancy</h3>
-			<p>System components can fail. A single point of failure is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site creates redundancy for an entire cloud. A server cluster, in addition to increasing availability by adding computing power to support multiple simultaneous client requests, allows alternative servers to take over when one server fails. Storage backups create duplicates of data in case storage devices become corrupted.</p>
-		</section>
-
-		<section>
-			<h3>Full Backups</h3>
-			<p>Full backups create a copy of all current data. The benefit of full backups are that only one restoration is necessary to bring the system back to the most recent backup. The drawback is that full backups are large. They store everything, which means that each object that existed prior to a backup is stored in every subsequent backup, as well.</p>
-		</section>
-
-		<section>
-			<h3>Incremental Backups</h3>
-			<p>Incremental backups only store the changes (deltas) since the previous backup. This is the backup method used by Git and other version control systems. In order to restore an entire backup, it is necessary to restore every delta. This process can become impossibly long. As a result, many backup solutions combine these two methods by having frequent incremental backups and infrequent full backups.</p>
-		</section>
-
-		<section>
-			<h3>Denied!</h3>
-			<p>One major threat to system availability is denial of service (DoS). This involves sending a small network package (i.e., ping) to a server and asking for a response. If the number of pings becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Frequently, the attack is distributed across multiple clients in a distributed denial of service (DDoS) attack.</p>
-		</section>
-
-		<section>
-			<h3>Processing Integrity</h3>
-			<blockquote>System processing is complete, valid, accurate, timely and authorized.</blockquote>
-			<p>The goal of every information system is to convert raw data into useful information by avoiding errors and corruption:</p>
-			<ul>
-				<li><u><i>Data validation</i></u> minimizes data entry and processing errors.</li>
-				<li><u><i>Transaction processing</i></u> maintains integrity of database records.</li>
-				<li><u><i>Refreshing</i></u> ensures that analyzed data is up-to-date.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Data Entry</h3>
-			<p>Human intervention can always result in errors. Data validation minimizes the possibility of data entry errors in multiple forms:</p>
-			<ul>
-				<li><u><i>Data type</i></u> verifies that content has the correct data type.</li>
-				<li><u><i>Check digits</i></u> determine that a string of digits follows allowable algorithms (e.g., credit cards, ISBN).</li>
-				<li><u><i>Presence check</i></u> looks for missing values in a record.</li>
-				<li><u><i>Range check</i></u> confirms that a value is between a predetermined minimum and maximum.</li>
-				<li><u><i>Uniqueness check</i></u> ensures that unique values are not duplicated (e.g., usernames).</li>
-				<li><u><i>Look-up check</i></u> limits selection to pre-existing values (e.g., approved vendors).</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Data Processing</h3>
-			<p>Data validation also minimizes errors in data processing. A common example is the batch or hash total, which looks for missing records when processing a group (or batch) of records by comparing a value for the group to the aggregation of individual values (e.g., total hours worked compared with the sum of hours worked in each record).</p>
-		</section>
-
-		<section>
-			<h3>ACID</h3>
-			<p>One of the biggest benefits of RDBMS and drawbacks of NoSQL is transaction processing, which prevents a transaction from only being partially completed. In order for a database to be transactional, it must satisfy ACID:</p>
-			<ul>
-				<li><u><i>Atomicity</i></u>: all changes happen or none happen.</li>
-				<li><u><i>Consistency</i></u>: all actions as a group violate no constraints.</li>
-				<li><u><i>Isolation</i></u>: each transaction is treated as occurring before or after, not during, any others.</li>
-				<li><u><i>Durability</i></u>: each committed transaction's changes are permanent.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Refreshing</h3>
-			<p>In a data warehousing environment, the transaction systems contain one version of the data, and the data warehouse and data marts contain another version. Accurate data analytics relies on current data in the warehouse, which requires periodic refreshing to bring the warehouse copy up to date.</p>
-		</section>
-
-		<section>
-			<h3>Confidentiality</h3>
-			<blockquote>Information designated as confidential is protected as committed or agreed.</blockquote>
-			<p>Security and confidentiality both address the need to prevent unauthorized access, so many tools can serve both purposes. However, three tools commonly serve to keep information secret:</p>
-			<ul>
-				<li><u><i>Encryption</i></u> prevents reading sensitive content, especially in transit.</li>
-				<li><u><i>Intermediation</i></u> anonymizes communication.</li>
-				<li><u><i>Rights management</i></u> avoids unlicensed use of intellectual property.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Privacy</h3>
-			<blockquote>Confidentiality is distinguished from privacy in that privacy deals with personal information whereas, confidentiality refers to a broader range of information that is not restricted to personal information.</blockquote>
-			<p>Because of the inherent similarity between confidentiality and privacy, we will assume that similar tools preserve both.</p>
-		</section>
-
-		<section>
-			<h3>Encryption</h3>
-		</section>
-
-		<section>
-			<h3>Secure Shell</h3>
-			<p>Some popular forms on communication rely on encryption. <u><i>Secure Shell</i></u> (SSH) allows remote access of a single computer using an encrypted connection. This is the current standard for accessing the command line of another computer, although it is also possible to tunnel graphical content through SSH. SSH is commonly considered a secure alternative to telnet, which historically was the standard for communication between two computers.</p>
-		</section>
-
-		<section>
-			<h3>Virtual Private Network</h3>
-			<p>SSH is useful for remotely accessing a single computer with an encrypted connection, but this is not always the desired goal. If an individual wants to access an entire LAN remotely, a <u><i>Virtual Private Network</i></u> (VPN) is necessary. A VPN uses RADIUS authentication to allow a WAN device to join a LAN. Because communication on a LAN should remain private, the connection between the WAN device and the LAN is encrypted. This is not only useful for telework, but also for preserving privacy when using a public WiFi network to access the Internet. As a result, many vendors sell subscription access to VPN servers.</p>
-		</section>
-
-		<section>
-			<h3>Proxy Servers</h3>
-			<p>Sometimes encrypted communication is not sufficient to maintain privacy because it is feasible to identify the source of the communication. Proxy servers redirect traffic and mask the source IP address to add anonymity. This is similar to the functionality of a private VPN, and given the choice, the encryption involved with a VPN makes it superior to a proxy server.</p>
-		</section>
-
-		<section>
-			<h3>Rights Management</h3>
-			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. Also, rights management is inherently a required compliance activity when using licensed content.</p>
-		</section>
-		
 		<section>
 			<h3>Accounting Tie-in</h3>
 			<p>Accounting architects have two perspectives on internal controls. The first comes from their role as architects. From this perspective controls are necessary to avoid the &ldquo;garbage in, garbage out&rdquo; problem. Information is only useful if it is derived from accurate data, and controls protect data integrity. Additionally, architects wish to preserve trade secrets. The second perspective is as accountants. Regulatory compliance dictates proper controls over the financial reporting process to ensure accurate financial statements. This is similar to the &ldquo;garbage in, garbage out&rdquo; principle, but in this case, the beneficiaries of the controls are external stakeholders.</p>
