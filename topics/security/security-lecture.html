@@ -254,6 +254,11 @@
 		</section>
 
 		<section>
+			<h3>Just Say No</h3>
+			<p>Because it is easier to avoid issues with permissions, some succumb to the temptation to use the root user for everything. This is especially tempting when a user must launch an application that, in turn, launches another application. Because the two applications may be subject to different access controls, non-privileged users may have difficulty navigating a multi-application process. However, the decision to log in as and use the root user for everything is a <em>worst-case scenario</em> for security and should never be done; it increases the likelihood of unauthorized or unintended changes to the system. Consistent use of the root user is a red flag that proper IT controls are either not in place or have been ignored.</p>
+		</section>
+
+		<section>
 			<h3>*nix Groups</h3>
 			<p>POSIX groups are faceted, not hierarchical, so in Unix-like operating systems, users can belong to multiple groups. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware. For example, the &lsquo;storage&rsquo; group allows its members to access storage volumes, such as the internal hard drive or external USB drives; the &lsquo;lp&rsquo; group allows its members to use printers and scanners; the &lsquo;admin&rsquo; group&mdash;sometimes called the &lsquo;sudo&rsquo; or &lsquo;wheel&rsquo; group&mdash;allows its members to use the sudo command to receive elevated privileges.</p>
 		</section>
@@ -275,19 +280,20 @@
 
 		<section>
 			<h3>Examples of Role-based Permissions</h3>
+			<p>Because many role-based permissions apply to database access, database permissions are useful for providing examples of RBAC.</p>
 			<div class="table" style="font-size: 20px; border: 3px solid black">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">Role</div>
-					<div class="table-cell" style="font-weight: bold">Permission</div>
+					<div class="table-cell" style="font-weight: bold">Database Permission</div>
 				</div>
 				<div class="table-row" style="background-color: white">
 					<div class="table-cell">
 						<div>Sales Rep</div>
 					</div>
 					<div class="table-cell">
+						<div>Read customer list</div>
 						<div>Create customer</div>
 						<div>Create credit request</div>
-						<div>Read customer list</div>
 						<div>Update customer info</div>
 					</div>
 				</div>
@@ -326,19 +332,33 @@
 		</section>
 
 		<section>
-			<h3>Just Say No</h3>
-			<p>Because it is easier to avoid incompatibilities with permissions, some users succumb to the temptation to use the root user for everything. This is a worst-case scenario for security and should never be done. Instead, learn to navigate permissions.</p>
-This prevents unauthorized and unintended changes to the system. 
-		</section>
-
-		<section>
 			<h3>Authentication</h3>
 			<p>Permissions determine what an authorized user may do; authentication allows authorized users to identify themselves. Authentication has three forms:</p>
 			<ul>
-				<li>Something the user knows: password or passphrase.</li>
-				<li>Something the user has: badge, key card or code generator.</li>
-				<li>Something about the user: biometrics.</li>
+				<li><u><i>Something the user knows</i></u>: a password or passphrase.</li>
+				<li><u><i>Something the user has</i></u>: a badge, key card, or code generator.</li>
+				<li><u><i>Something about the user</i></u>: biometrics, such as face, voice, or thumb print.</li>
 			</ul>
+		</section>
+
+		<section>
+			<h3>Secure Passwords</h3>
+			<p>The protection that passwords provide is only effective if an unauthorized user cannot guess the password. Brute-force attacks involve a computer randomly guessing what a password might be and attempting to log in with that password. Simple passwords, such as words commonly found in the dictionary or simple strings of numbers, are easy targets. Requiring long (e.g. &gt;12 characters), frequently changed (e.g., every 90 days), complex (e.g., upper- and lowercase letters, numbers, and special characters) passwords reduces the success of brute-force attacks. Of course, none of this matters if the user adopts the bad habit of writing down passwords and storing them in an accessible location (e.g., next to that user's workstation).</p>
+		</section>
+
+		<section>
+			<h3>Disagree to Disagree</h3>
+			<p>Different groups have differing beliefs on the best type of secure password. Some like the <u><i>passphrase</i></u> which essentially converts a, potentially nonsensical, sentence into a password (e.g., iamamericaandyoucantoo). Even within this </p>
+		</section>
+
+		<section>
+			<h3>Social Engineering</h3>
+			<p></p>
+		</section>
+
+		<section>
+			<h3>Time-based Codes</h3>
+			<p></p>
 		</section>
 
 		<section>
@@ -348,7 +368,7 @@ This prevents unauthorized and unintended changes to the system.
 
 		<section>
 			<h3>Remote Authentication</h3>
-			<p>Just as an LDAP server can store permissions, it can also store credentials. This is handy for allowing users to identify themselves on multiple machines on the same network, but in order for it to work, the user must already be in the network (LAN). Remote Authentication Dial-in User Service (RADIUS) allows users outside of the network (WAN) to authenticate themselves to access LAN resources. RADIUS is often used in virtual private network (VPN) and wireless local area network (WLAN) access.</p>
+			<p>Just as an LDAP server can store permissions, it can also store credentials. This is handy for allowing users to identify themselves on multiple machines on the same network, but in order for it to work, the user must already be in the network (LAN). Remote Authentication Dial-in User Service (RADIUS) allows users outside of the network (WAN) to authenticate themselves to access LAN resources. RADIUS is often used in virtual private network (VPN) and wireless local area network (WLAN) (i.e., WiFi) access.</p>
 		</section>
 
 		<section>
