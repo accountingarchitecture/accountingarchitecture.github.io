@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>ACCT 4020</title>
+
+	<meta name="author" content="Joshua G. Coyne, PhD">
+	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+	<!-- Personalized CSS -->
+	<link rel="stylesheet" href="../../css/slides.css">
+
+	<!--[if lt IE 9]>
+	<script src="../../reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+	<div class="slides">
+		<section>
+			<h3>SQL Queries</h3>
+			<p>For the answers to these questions, run the following queries:</p>
+			<ol>
+				<li>How many employees are listed in the EMPLOYEE table?</li>
+				<p style="margin-left: 50px; font-style: italic">SELECT COUNT(Ssn) FROM EMPLOYEE;</p>
+				<li>Which employee's last name is first in alphabetical order?</li>
+				<p style="margin-left: 50px; font-style: italic">SELECT Lname FROM EMPLOYEE ORDER BY Lname LIMIT 1; (The LIMIT 1 is optional.)</p>
+				<li>What is the total number of hours logged in the WORKS_ON table?</li>
+				<p style="margin-left: 50px; font-style: italic">SELECT SUM(Hours) FROM WORKS_ON;</p>
+			</ol>
+		</section>
+
+		<section>
+			<h3>SQL Queries</h3>
+			<ol start="4">
+				<li>How many employees work in the Research department?</li>
+				<p style="margin-left: 50px; font-style: italic">SELECT COUNT(A.Ssn) FROM EMPLOYEE AS A JOIN DEPARTMENT AS B ON A.Dno = B.Dnumber WHERE B.Dname = 'Research';</p>
+				<li>What is the total number of hours worked on each project by project name?</li>
+				<p style="margin-left: 50px; font-style: italic">SELECT A.Pname, SUM(B.Hours) FROM PROJECT AS A JOIN WORKS_ON AS B ON A.Pnumber = B.Pno GROUP BY A.Pname;</p>
+			</ol>
+		</section>
+
+	</div>
+	</div>
+
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script src="../../js/slides.js"></script>
+	<script src="../../js/printing.js"></script>
+
+</body>
+</html>
