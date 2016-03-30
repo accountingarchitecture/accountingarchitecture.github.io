@@ -373,12 +373,37 @@
 
 		<section>
 			<h3>Hardening</h3>
-			<p>Hardening reduces a system's surface of vulnerability. Firewalls and network traffic monitors are popular hardening tools because these restrict access to network devices. Additionally, hardening involves removing old authentication credentials and disabling unnecessary services (i.e., daemons) and closing their respective ports.</p>
+			<p>Hardening prevents unauthorized users from circumventing permissions and authentication in order to gain access to a system by reducing the system's <u><i>surface of attack</i></u> (i.e., the number of potential targets for a remote hacking attempt):</p>
+			<ul>
+				<li><u><i>Enabling packet filters</i></u> restricts access to active network devices.</li>
+				<li><u><i>Disabling services</i></u> reduces the number of active network ports.</li>
+				<li><u><i>Deleting old permissions and credentials</i></u> prevents formerly authorized users from using resources fraudulently.</li>
+			</ul>
 		</section>
 
 		<section>
 			<h3>Firewalls</h3>
 			<p>Because it is possible to use authentication protocols to access a LAN from the WAN, it can also be possible to gain unauthorized access from the WAN. Firewalls, or more generally packet filters, restrict network traffic to and from certain network ports on certain devices. Firewalls are like Dementors in that they cannot distinguish between authorized and unauthorized traffic.</p>
+		</section>
+
+		<section>
+			<h3>Turn Off the Lights</h3>
+			<p>Remote attackers gain access to a network-connected computer via open ports. Open ports are TCP or UDP ports that are involved in </p>
+		</section>
+
+		<section>
+			<h3>Security Through Obscurity</h3>
+			<p>One popular rationalization for failing to harden servers and network devices is the belief that unimportant networks (i.e., the networks of small businesses or residences) are too insignificant to become attack targets. Unfortunately, these individuals fail to realize the ease of finding and compromising weak networks. IPv4 has only 4 billion addresses, and with current computing power, it is possible to scan all of these in a matter of hours, or even minutes. That makes it easy to find all unimportant networks. IPv6, on the other hand, has enough potential addresses that it can help to shroud every network device in at least a partially secure cloud of obscurity, but that is not an excuse for failing to harden these devices.</p>
+		</section>
+
+		<section>
+			<h3>Deauthorization</h3>
+			<p>Permissions and authentication allow authorized users to perform intended functions. As users change roles or leave an organization, those same permissions and authentication credentials permit unintended and unauthorized access. This is a especially a concern when an employee leaves a company on negative terms and would use their prior credentials for nefarious purposes. All organizations should have a policy for the deletion of permissions and credentials as soon as any user's authorization level changes.</p>
+		</section>
+
+		<section>
+			<h3>Prevention and Detection</h3>
+			<p>Most access control tools <i>prevent</i> unauthorized access to digital resources. However, 100% prevention is not possible, even if it were not prohibitively expensive, because hackers continually identify new attack methods. Many of these come through vulnerabilities, or <u><i>exploits</i></u> in existing software that attackers can use to gain access, sometimes root access, to the physical server. Because of this risk, additional detective controls are necessary to monitor system and look for attempts to access network devices, guess login credentials, or view unauthorized content.</p>
 		</section>
 
 		<section>
