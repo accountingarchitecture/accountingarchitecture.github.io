@@ -84,8 +84,45 @@
 		</section>
 
 		<section>
-			<h3>Examples of Role-based Permissions</h3>
-			<p>Because many role-based permissions apply to database access, database permissions are useful for providing examples of RBAC.</p>
+			<h3>Role-based Permissions</h3>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Role</div>
+					<div class="table-cell" style="font-weight: bold">Database Permission</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">
+						<div>Sales Rep</div>
+					</div>
+					<div class="table-cell">
+					</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">
+						<div>Accounts Receivable</div>
+					</div>
+					<div class="table-cell">
+					</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">
+						<div>Server</div>
+					</div>
+					<div class="table-cell">
+					</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">
+						<div>IT Staff</div>
+					</div>
+					<div class="table-cell">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Role-based Permissions</h3>
 			<div class="table" style="font-size: 20px; border: 3px solid black">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">Role</div>
@@ -98,39 +135,43 @@
 					<div class="table-cell">
 						<div>Read customer list</div>
 						<div>Create customer</div>
+						<div>Create sales order</div>
 						<div>Create credit request</div>
 						<div>Update customer info</div>
+						<div>Update sales order</div>
 					</div>
 				</div>
 				<div class="table-row" style="background-color: lightgray">
 					<div class="table-cell">
-						<div>Accounts Payable</div>
+						<div>Accounts Receivable</div>
 					</div>
 					<div class="table-cell">
-						<div>Create payment request</div>
-						<div>Read invoice list</div>
-						<div>Update payment request</div>
-						<div>Delete payment request</div>
+						<div>Read A/R subledger</div>
+						<div>Read payment receipt</div>
+						<div>Read write-off order</div>
+						<div>Update A/R subledger</div>
 					</div>
 				</div>
 				<div class="table-row" style="background-color: white">
 					<div class="table-cell">
-						<div>Credit Department</div>
+						<div>Server</div>
 					</div>
 					<div class="table-cell">
-						<div>Read credit request</div>
-						<div>Read accounts receivable</div>
-						<div>Update credit request</div>
+						<div>Create order</div>
+						<div>Create payment</div>
+						<div>Read order</div>
+						<div>Update order</div>
 					</div>
 				</div>
 				<div class="table-row" style="background-color: lightgray">
 					<div class="table-cell">
-						<div>Cashier</div>
+						<div>IT Staff</div>
 					</div>
 					<div class="table-cell">
-						<div>Create payment</div>
-						<div>Read payment request</div>
-						<div>Update payment request</div>
+						<div>Create user</div>
+						<div>Read user list</div>
+						<div>Update user permissions</div>
+						<div>Delete user</div>
 					</div>
 				</div>
 			</div>
@@ -163,13 +204,13 @@
 		</section>
 
 		<section>
-			<h3>On Again, Off Again</h3>
-			<p>Because it is possible to use authentication protocols to access a LAN from the WAN, or even an arbitrary networked device while in a LAN, it can also be possible to gain unauthorized access. Firewalls, or more generally <u><i>packet filters</i></u>, restrict network traffic to and from certain network ports on certain devices. Firewalls are only necessary to protect open ports. Open ports are TCP and UDP ports that actively listen for (i.e., receive network traffic). Servers, that is software daemons, need open ports in order to function (e.g., web and email servers and multiplayer online games), but each open port is vulnerable. The best method for protecting a network device is to disable all unnecessary services to close as many ports as possible.</p>
+			<h2>Show and Tell</h2>
+			<p style="text-align: center; font-variant: small-caps">Firewalls</p>
 		</section>
 
 		<section>
-			<h3>Accounting Tie-in</h3>
-			<p>Internal controls and IT controls are important parts of an auditor's focus. This is especially true since SOX, which has required a declaration regarding the quality of internal controls over financial reporting. Obviously, employers consistently stress the importance of fraud prevention by reducing perceived opportunity, and the best method to reduce opportunity is to segregate incompatible duties. By understanding the implementation of permissions and authentication, accountants can understand how to operationalize segregation of duties in a digital setting. Additionally, continual high-profile attacks on corporate systems reinforce the importance of strong preventive and detective controls to avoid costly unauthorized access.</p>
+			<h2>Discussion</h2>
+			<p style="text-align: center; font-variant: small-caps">Accounting Tie-in</p>
 		</section>
 
 	</div>
