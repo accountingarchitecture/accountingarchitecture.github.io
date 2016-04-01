@@ -31,7 +31,7 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Encryption</h2>
+			<h2>Confidentiality</h2>
 		</section>
 		
 		<section>
@@ -79,14 +79,19 @@
 			<blockquote>Information designated as confidential is protected as committed or agreed.</blockquote>
 			<p>Three tools commonly serve to keep information secret:</p>
 			<ul>
-				<li><u><i>Intermediation</i></u> anonymizes communication.</li>
 				<li><u><i>Rights management</i></u> avoids unlicensed use of intellectual property.</li>
+				<li><u><i>Intermediation</i></u> anonymizes communication.</li>
 				<li><u><i>Encryption</i></u> prevents reading sensitive content, especially in transit.</li>
 			</ul>
 		</section>
 
 		<section>
-			<h3>Middlemen</h3>
+			<h3>Rights Management</h3>
+			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. Also, rights management is inherently a required compliance activity when using licensed content.</p>
+		</section>
+
+		<section>
+			<h3>Intermediation</h3>
 			<p>The concept of intermediation is not unique to digital communication. Any time that one party interacts with another via a middleman, intermediation has occurred. This is not a perfect analogy because the purpose of these middlemen is not always to anonymize interactions. For example, information intermediaries, such as analysts, communicate information regarding firm performance to investors; financial intermediaries funnel funds from one group to another. In the case of analysts, anonymity is not an issue, and for financial intermediation, only sometimes is the intent to preserve anonymity, frequently it is simply for convenience.</p>
 		</section>
 		
@@ -102,22 +107,29 @@
 
 		<section>
 			<h3>Why Hide?</h3>
-			<p>Hiding the client's public IP address has a number of advantages. On the less nefarious side of things, the user can access resources that are restricted to a particular country. For example, a US IP address is necessary in order to stream the Netflix content that Americans expect to find. Using a US-based proxy server will provide a client outside the US with a US IP address. On the more nefarious side of things, proxy servers can allow perpetrators of illicit activities (e.g., hacking, sale or purchase contraband) to evade detection. [Corporate use case]</p>
+			<p>Hiding the client's public IP address has a number of advantages. On the less nefarious side of things, the user can access resources that are restricted to a particular country. For example, a US IP address is necessary in order to stream the Netflix content that Americans expect to find. Using a US-based proxy server will provide a client outside the US with a US IP address. On the more nefarious side of things, proxy servers can allow perpetrators of illicit activities (e.g., hacking, sale or purchase contraband) to evade detection. Corporations often use them to anonymize traffic from the devices inside their LANs.</p>
 		</section>
 
 		<section>
 			<h3>Bring to Light</h3>
-			<p>[Other uses of proxy servers: direct and monitor traffic]</p>
+			<p>Corporations also use proxy servers for two other reasons. First, if users inside a corporate LAN need to access the same WAN resources (e.g., a Web site) frequently, the proxy server can create a cache (i.e., a temporary copy) of that resource so that the clients can access it more quickly. Second, although a proxy server can hide the IP address of the client from the Internet server, the proxy server itself records the IP address of the client, as well as the traffic to and from the client. This provides the corporation an easy method to track which Web sites their employees have accessed.</p>
 		</section>
 
 		<section>
 			<h3>Proxy Servers and Firewalls</h3>
-			<p></p>
+			<p>A firm can use a firewall to keep remote users away from a server, but they can also use a firewall to keep LAN users from accessing remote servers. For example, if a university wanted to prevent its employees from accessing social media sites, a firewall could block access to these sites from university computers. Proxy servers can circumvent these restrictions because to the university's firewall the client only accessed a proxy server, not a social media site.</p>
+			<!--License: CC-BY-SA 4.0 Attribution: Milesjpool,-->
+			<div class="override"><img src="../../images/proxy-server.png" alt="Proxy Server" style="max-height: 175px"/></div>
+		</section>
+
+		<section>
+			<h3>VPN</h3>
+			<p><u><i>Virtual private networks</i></u> are similar to proxy servers in that they serve as an intermediary between a client and Internet servers. However, VPN servers have a particular advantage over proxy servers, and that is that VPN servers encrypt the communication with the client. This prevents eavesdropping by unauthorized third parties. VPN is a popular tool for teleworking. If the VPN server is part of an organization's LAN, then a client connecting to the VPN from the WAN can access LAN resources, such as private clouds, as if that client were inside the LAN, hence the name &ldquo;virtual private network&rdquo; because it simulates being connected to a private network. VPN servers are also popular for secure use of public WiFi networks (e.g., coffee shops).</p>
 		</section>
 
 		<section>
 			<h3>Encryption</h3>
-			<p>Sometimes encrypted communication is not sufficient to maintain privacy because it is feasible to identify the source of the communication. Proxy servers redirect traffic and mask the source IP address to add anonymity. This is similar to the functionality of a private VPN, and given the choice, the encryption involved with a VPN makes it superior to a proxy server.</p>
+			<p>Unauthorized eavesdropping on network communication is a problem because the standard for network communication is plain text. </p>
 		</section>
 
 		<section>
@@ -125,15 +137,6 @@
 			<p>Some popular forms on communication rely on encryption. <u><i>Secure Shell</i></u> (SSH) allows remote access of a single computer using an encrypted connection. This is the current standard for accessing the command line of another computer, although it is also possible to tunnel graphical content through SSH. SSH is commonly considered a secure alternative to telnet, which historically was the standard for communication between two computers.</p>
 		</section>
 
-		<section>
-			<h3>Virtual Private Network</h3>
-			<p>SSH is useful for remotely accessing a single computer with an encrypted connection, but this is not always the desired goal. If an individual wants to access an entire LAN remotely, a <u><i>Virtual Private Network</i></u> (VPN) is necessary. A VPN uses RADIUS authentication to allow a WAN device to join a LAN. Because communication on a LAN should remain private, the connection between the WAN device and the LAN is encrypted. This is not only useful for telework, but also for preserving privacy when using a public WiFi network to access the Internet. As a result, many vendors sell subscription access to VPN servers.</p>
-		</section>
-
-		<section>
-			<h3>Rights Management</h3>
-			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. Also, rights management is inherently a required compliance activity when using licensed content.</p>
-		</section>
 		<section>
 			<h3>Encryption</h3>
 			<p>Permissions, authentication and hardening serve to prevent unauthorized access to sensitive content. However, in at least two situations, these are not sufficient. The first is if an unauthorized user gains physical access to a digital asset. The second is in the case of digital communication because these tools cannot protect a message in transit. In these two settings, encryption is necessary to prevent unauthorized users from reading data by using an encryption algorithm (i.e., key) to turn plain text into unreadable cypher text. In order to render the data useful, a recipient must either have, or guess, the decryption key.</p>
