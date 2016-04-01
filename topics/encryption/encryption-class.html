@@ -31,9 +31,49 @@
 	<div class="reveal">
 	<div class="slides">
 		<section data-background="../../images/bitcoin.png">
-			<h2>Cryptocurrency</h2>
+			<h2>Encryption</h2>
 		</section>
 		
+		<section>
+			<h3>Confidentiality</h3>
+			<blockquote>Information designated as confidential is protected as committed or agreed.</blockquote>
+			<p>Security and confidentiality both address the need to prevent unauthorized access, so many tools can serve both purposes. However, three tools commonly serve to keep information secret:</p>
+			<ul>
+				<li><u><i>Encryption</i></u> prevents reading sensitive content, especially in transit.</li>
+				<li><u><i>Intermediation</i></u> anonymizes communication.</li>
+				<li><u><i>Rights management</i></u> avoids unlicensed use of intellectual property.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Privacy</h3>
+			<blockquote>Confidentiality is distinguished from privacy in that privacy deals with personal information whereas, confidentiality refers to a broader range of information that is not restricted to personal information.</blockquote>
+			<p>Because of the inherent similarity between confidentiality and privacy, we will assume that similar tools preserve both.</p>
+		</section>
+
+		<section>
+			<h3>Encryption</h3>
+		</section>
+
+		<section>
+			<h3>Secure Shell</h3>
+			<p>Some popular forms on communication rely on encryption. <u><i>Secure Shell</i></u> (SSH) allows remote access of a single computer using an encrypted connection. This is the current standard for accessing the command line of another computer, although it is also possible to tunnel graphical content through SSH. SSH is commonly considered a secure alternative to telnet, which historically was the standard for communication between two computers.</p>
+		</section>
+
+		<section>
+			<h3>Virtual Private Network</h3>
+			<p>SSH is useful for remotely accessing a single computer with an encrypted connection, but this is not always the desired goal. If an individual wants to access an entire LAN remotely, a <u><i>Virtual Private Network</i></u> (VPN) is necessary. A VPN uses RADIUS authentication to allow a WAN device to join a LAN. Because communication on a LAN should remain private, the connection between the WAN device and the LAN is encrypted. This is not only useful for telework, but also for preserving privacy when using a public WiFi network to access the Internet. As a result, many vendors sell subscription access to VPN servers.</p>
+		</section>
+
+		<section>
+			<h3>Proxy Servers</h3>
+			<p>Sometimes encrypted communication is not sufficient to maintain privacy because it is feasible to identify the source of the communication. Proxy servers redirect traffic and mask the source IP address to add anonymity. This is similar to the functionality of a private VPN, and given the choice, the encryption involved with a VPN makes it superior to a proxy server.</p>
+		</section>
+
+		<section>
+			<h3>Rights Management</h3>
+			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. Also, rights management is inherently a required compliance activity when using licensed content.</p>
+		</section>
 		<section>
 			<h3>Encryption</h3>
 			<p>Permissions, authentication and hardening serve to prevent unauthorized access to sensitive content. However, in at least two situations, these are not sufficient. The first is if an unauthorized user gains physical access to a digital asset. The second is in the case of digital communication because these tools cannot protect a message in transit. In these two settings, encryption is necessary to prevent unauthorized users from reading data by using an encryption algorithm (i.e., key) to turn plain text into unreadable cypher text. In order to render the data useful, a recipient must either have, or guess, the decryption key.</p>
