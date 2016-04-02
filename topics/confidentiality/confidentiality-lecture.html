@@ -128,8 +128,28 @@
 		</section>
 
 		<section>
+			<h3>Eavesdropping</h3>
+			<p>Unauthorized eavesdropping on network communication is a problem because the standard for network communication is plain text. A fitting analogy would be tapping a phone line. It is possible to eavesdrop on a phone call because transmits human-interpretable speech. The same applies to intercepting written communication. Plain text is the human-readable form of digital data. Just as with phone calls and letters, it is usually infeasible to protect network messages while in transit from being intercepted. Access controls are not useful to prevent unauthorized access to communication.</p>
+		</section>
+
+		<section>
 			<h3>Encryption</h3>
-			<p>Unauthorized eavesdropping on network communication is a problem because the standard for network communication is plain text. </p>
+			<p>Since restricting access to data messages in transit is not feasible, the only option is to render a message unreadable if intercepted. <u><i>Encryption</i></u> uses a key to convert plain text into cipher text, which is unreadable by humans and computers. The key, sometimes referred to as a cipher, is a string of characters and an algorithm that determines a transformation of plain text to obtain cipher text. Although enterprise-grade data encryption keys rely on complicated mathematics, the principles are no different from those used to create a cipher text by shifting the letters in a message by one (i.e., a becomes b, b becomes c, etc.).</p>
+		</section>
+
+		<section>
+			<h3>Decryption</h3>
+			<p><u><i>Decryption</i></u> involves the opposite process of encryption. A decryption key uses a string of characters and an algorithm to convert cipher text back into plain text. In order to decrypt a message that the sender has encrypted, the recipient must have the decryption key. Although it may be possible to guess the decryption algorithm for simpler methods, such as shifting letters by one, the mathematics involved in popular encryption models (e.g., AES) are complex enough that calculating (i.e., guessing) a decryption key would take a computer billions of years.</p>
+		</section>
+
+		<section>
+			<h3>Two Forms of Encryption</h3>
+			<p>Encryption keys can either be symmetric or asymmetric. In symmetric, or private, key encryption, the encryption and decryption keys are the same, and both the sender and the recipient must have the same key. In asymmetric, or public, key encryption, the key to encrypt the data is publicly distributed and a paired private key is used for decryption. Public key encryption is secure so long as users keep their own private keys secret because, although users share their encryption keys, it is not feasible to infer the private decryption key from the public encryption key.</p>
+		</section>
+
+		<section>
+			<h3>Cryptographic Hash</h3>
+			<p>Even though cipher text is not human- or computer-readable, it can still provide useful information even when decryption is not possible. In fact, some encryption keys (e.g., MD5) are designed to create a cipher text that cannot be decrypted. The purpose in this case is not to protect a message in transit but rather to verify the integrity of the data. Verification of integrity has two components. The first involves confirming the identify of the sender, and the second involves confirming that the data has not been modified in transit.</p>
 		</section>
 
 		<section>
@@ -140,17 +160,6 @@
 		<section>
 			<h3>Encryption</h3>
 			<p>Permissions, authentication and hardening serve to prevent unauthorized access to sensitive content. However, in at least two situations, these are not sufficient. The first is if an unauthorized user gains physical access to a digital asset. The second is in the case of digital communication because these tools cannot protect a message in transit. In these two settings, encryption is necessary to prevent unauthorized users from reading data by using an encryption algorithm (i.e., key) to turn plain text into unreadable cypher text. In order to render the data useful, a recipient must either have, or guess, the decryption key.</p>
-		</section>
-
-		<section>
-			<h3>What is a Key?</h3>
-			<p>An encryption or decryption key is nothing other than a sequence of characters that determines a transformation of plain text to obtain cypher text. For example, drafting cypher text that relies on shifting the letters in the alphabet by one is an example of encryption using a key. The only difference is that guessing enterprise-grade encryption keys can take years, or even lifetimes.</p>
-			<blockquote>Zydeco's unbreakable. It's a four kilobyte code. No, an algorithmic code that takes up four kilobytes of space is beyond secure. No, it would take longer than the whole life of the universe to crack it. That's impossible.</blockquote>
-		</section>
-
-		<section>
-			<h3>Two Forms of Encryption</h3>
-			<p>Encryption keys can either be symmetric or asymmetric. In symmetric, or private, key encryption, the encryption and decryption keys are the same, and both the sender and the recipient must have the same key. In asymmetric, or public, key encryption, the key to encrypt the data is publicly distributed and a paired private key is used for decryption. Public key encryption is secure so long as users keep their own private keys secret because, although users share their encryption keys, it is not feasible to infer the private decryption key from the public encryption key.</p>
 		</section>
 
 		<section>
