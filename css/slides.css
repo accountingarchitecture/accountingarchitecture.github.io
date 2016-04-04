@@ -23,6 +23,7 @@
 	border: 0;
 	box-shadow: none;
 	margin-top: 20px;
+	background: initial;
 }
 .reveal blockquote {
 	margin: 10px auto;
