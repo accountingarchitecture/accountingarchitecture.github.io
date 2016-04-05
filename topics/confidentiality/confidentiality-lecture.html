@@ -156,6 +156,11 @@
 		</section>
 
 		<section>
+			<h3>Oversharing</h3>
+			<p>Although the concept of public and private keys can be confusing, email addresses provide a suitable analogy that explains the concept in an accessible manner. A public key is like an email address. In order to receive email, the recipient must distribute the address. This is a secure behavior because the email address in not sufficient to read received emails. Viewing emails requires an additional input: a password which the owner of the account keeps secret and which is not inferable from the email address. Similarly, a public key allows a sender to specify a recipient, so the public key must be publicly available. A private key, like a password, remains secret in order to restrict access to decrypted messages.</p>
+		</section>
+
+		<section>
 			<h3>Cryptographic Hash</h3>
 			<p>Even though cipher text is not human- or computer-readable, it can still provide useful information even when decryption is not possible. In fact, some encryption protocols (e.g., MD5) are designed to convert data into a short cipher text that cannot be decrypted. This short cipher text is called a <u><i>cryptographic hash</i></u> or a checksum. The purpose of a hash is not to protect a message in transit but rather to verify the integrity of the data. Because hash encryption protocols use a single key that is common to all users of the protocol, any attempt to create a hash of the same content will result in the same hash. However, even a slight modification to the data will result in a different hash.</p>
 		</section>
@@ -202,7 +207,7 @@
 
 		<section>
 			<h3>Cryptocurrency</h3>
-			<p></p>
+			<p>Interestingly, one use of public key cryptography is cryptocurrency, of which Bitcoin is the most well-known variant. Each Bitcoin transaction (i.e., payment) is digitally signed by the private key of the payer to prove ownership of the coins, and each payment identifies its payee by the payee's public key. This use of keys creates a system that allows for complete anonymity because no method currently exists to identify the real-world identity of a payee by public key.</p>
 		</section>
 
 		<section>
