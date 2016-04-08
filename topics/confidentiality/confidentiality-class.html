@@ -118,7 +118,18 @@
 
 		<section>
 			<h2>Think about It</h2>
-			<p style="text-align: center; font-variant: small-caps">How can I send an encrypted message without making the key public?</p>
+			<p style="text-align: center; font-variant: small-caps">How can I send an encrypted message without making the decryption key public?</p>
+		</section>
+
+		<section>
+			<h2>Show and Tell</h2>
+			<p style="text-align: center; font-variant: small-caps">Public Keys</p>
+		</section>
+
+		<section>
+			<h2>Challenge</h2>
+			<p style="text-align: center; font-variant: small-caps">Two challengers: Send a digitally encrypted message that no authorized user can decrypt.</p>
+			<p style="text-align: center; font-variant: small-caps">Restriction: You may not use a public key to encrypt the message.</p>
 		</section>
 
 		<section>
@@ -133,6 +144,7 @@
 		</section>
 
 		<section data-background="../../images/bitcoin.png">
+			<h3>Crypto-currency</h3>
 		</section>
 
 		<section>
@@ -148,85 +160,6 @@
 		<section>
 			<h2>Presentations</h2>
 			<p style="text-align: center">No extra credit topics.</p>
-		</section>
-
-		<section>
-			<h3>Confidentiality</h3>
-			<blockquote>Information designated as confidential is protected as committed or agreed.</blockquote>
-			<p>Security and confidentiality both address the need to prevent unauthorized access, so many tools can serve both purposes. However, three tools commonly serve to keep information secret:</p>
-			<ul>
-				<li><u><i>Encryption</i></u> prevents reading sensitive content, especially in transit.</li>
-				<li><u><i>Intermediation</i></u> anonymizes communication.</li>
-				<li><u><i>Rights management</i></u> avoids unlicensed use of intellectual property.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Privacy</h3>
-			<blockquote>Confidentiality is distinguished from privacy in that privacy deals with personal information whereas, confidentiality refers to a broader range of information that is not restricted to personal information.</blockquote>
-			<p>Because of the inherent similarity between confidentiality and privacy, we will assume that similar tools preserve both.</p>
-		</section>
-
-		<section>
-			<h3>Encryption</h3>
-		</section>
-
-		<section>
-			<h3>Secure Shell</h3>
-			<p>Some popular forms on communication rely on encryption. <u><i>Secure Shell</i></u> (SSH) allows remote access of a single computer using an encrypted connection. This is the current standard for accessing the command line of another computer, although it is also possible to tunnel graphical content through SSH. SSH is commonly considered a secure alternative to telnet, which historically was the standard for communication between two computers.</p>
-		</section>
-
-		<section>
-			<h3>Virtual Private Network</h3>
-			<p>SSH is useful for remotely accessing a single computer with an encrypted connection, but this is not always the desired goal. If an individual wants to access an entire LAN remotely, a <u><i>Virtual Private Network</i></u> (VPN) is necessary. A VPN uses RADIUS authentication to allow a WAN device to join a LAN. Because communication on a LAN should remain private, the connection between the WAN device and the LAN is encrypted. This is not only useful for telework, but also for preserving privacy when using a public WiFi network to access the Internet. As a result, many vendors sell subscription access to VPN servers.</p>
-		</section>
-
-		<section>
-			<h3>Proxy Servers</h3>
-			<p>Sometimes encrypted communication is not sufficient to maintain privacy because it is feasible to identify the source of the communication. Proxy servers redirect traffic and mask the source IP address to add anonymity. This is similar to the functionality of a private VPN, and given the choice, the encryption involved with a VPN makes it superior to a proxy server.</p>
-		</section>
-
-		<section>
-			<h3>Rights Management</h3>
-			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. Also, rights management is inherently a required compliance activity when using licensed content.</p>
-		</section>
-		<section>
-			<h3>Encryption</h3>
-			<p>Permissions, authentication and hardening serve to prevent unauthorized access to sensitive content. However, in at least two situations, these are not sufficient. The first is if an unauthorized user gains physical access to a digital asset. The second is in the case of digital communication because these tools cannot protect a message in transit. In these two settings, encryption is necessary to prevent unauthorized users from reading data by using an encryption algorithm (i.e., key) to turn plain text into unreadable cypher text. In order to render the data useful, a recipient must either have, or guess, the decryption key.</p>
-		</section>
-
-		<section>
-			<h3>What is a Key?</h3>
-			<p>An encryption or decryption key is nothing other than a sequence of characters that determines a transformation of plain text to obtain cypher text. For example, drafting cypher text that relies on shifting the letters in the alphabet by one is an example of encryption using a key. The only difference is that guessing enterprise-grade encryption keys can take years, or even lifetimes.</p>
-			<blockquote>Zydeco's unbreakable. It's a four kilobyte code. No, an algorithmic code that takes up four kilobytes of space is beyond secure. No, it would take longer than the whole life of the universe to crack it. That's impossible.</blockquote>
-		</section>
-
-		<section>
-			<h3>Two Forms of Encryption</h3>
-			<p>Encryption keys can either be symmetric or asymmetric. In symmetric, or private, key encryption, the encryption and decryption keys are the same, and both the sender and the recipient must have the same key. In asymmetric, or public, key encryption, the key to encrypt the data is publicly distributed and a paired private key is used for decryption. Public key encryption is secure so long as users keep their own private keys secret because, although users share their encryption keys, it is not feasible to infer the private decryption key from the public encryption key.</p>
-		</section>
-
-		<section>
-			<h3>Public Keys in Action</h3>
-			<div class="flex-row">
-				<div class="flex-item"><img src="../../images/keygen.png" alt="Key Generation"/></div>
-				<div class="flex-item"><img src="../../images/public-key.png" alt="Public Key Cryptography"/></div>
-			</div>
-		</section>
-
-		<section>
-			<h3>Cryptographic Hash</h3>
-			<p>In both symmetric and asymmetric encryption, the encryption algorithm is reversible in order to render the cypher text readable. Cryptography also serves to create hashes, which are not reversible. Although it may seem useless to have un-decrpytable cypher text, these hashes actually serve important roles. One role is the verification of data integrity. Because the hash of any digital content will change if the underlying data is modified in any way, a hash can confirm that a message was not modified in transit. This is frequently used to verify that the integrity of a downloaded file.</p>
-		</section>
-
-		<section>
-			<h3>Digital Signature</h3>
-			<p>Another important role of hashes is to verify the identity of the sender of a message. Unlike verifying data integrity which uses a universal encryption key (e.g., MD5 or SHA) so that every user would obtain the same hash from the same data, digital signatures rely on unique private keys from asymmetric key encryption. The signature is a hash of the message using the sender's private key. If the sender's public key creates a hash that is the same as the hash of the message, then the identity of the sender is verified.</p>
-		</section>
-
-		<section>
-			<h3>Again, With Pictures</h3>
-			<img src="../../images/signature.png" height="550" alt="Digital Signature">
 		</section>
 
 		<section>
