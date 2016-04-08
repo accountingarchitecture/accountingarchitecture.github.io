@@ -31,7 +31,7 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Control</h2>
+			<h2>Systems Integrity</h2>
 		</section>
 
 		<section>
@@ -39,296 +39,9 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Information is the keystone of any information system, and Technology is the set of tools necessary to implement that system. Control, however, is a choice. A system can function without proper controls. However, a system without proper controls exposes internal and external stakeholders to risks. The different blocks in the Control section represent different control objectives.</p>
+					<p>The final two blocks of the Control section are Availability and Processing Integrity. These terms correspond to matching concepts in the Trust Services Framework. Combined, these blocks prevent data loss and data errors.</p>
 				</div>
 			</div>
-		</section>
-
-		<section>
-			<h3>External Stakeholders</h3>
-			<p>Accountants care about external stakeholders. Financial accounting regulations exist to protect external stakeholders from misinformation. Generally Accepted Accounting Principles dictate the creation of financial statements to maximize comparability between firms. The Sarbanes-Oxley Act requires firms to implement internal controls over financial reporting to prevent misstatements in the financial statements. [more about SOX]</p>
-		</section>
-
-		<section>
-			<h3>Risk Aversion</h3>
-			<p>The foundation of the architecture implies the need for controls to satisfy regulatory compliance. However, that is not enough to satisfy external stakeholders. Although these are not always protected by regulation, external stakeholders are generally unwilling to tolerate breaches of privacy, loss of data relevant to them, and system unavailability. (Just think of how you would feel if your email, or heaven forbid your SMS service, stopped working.) Frequently, external parties draft contracts to protect themselves from these risks, so again the Compliance block becomes relevant for satisfying the demands of these external stakeholders.</p>
-		</section>
-
-		<section>
-			<h3>Internal Stakeholders</h3>
-			<p>Regulations and contracts generally would not cover internal stakeholders, but just as external stakeholders, they wish to avoid misinformation, which would result in misled strategic decisions, and to protect their privacy (although <i>confidentiality</i> would be a more appropriate term in this context). Because internal stakeholders are the biggest &ldquo;customer&rdquo; of the information system, protect them from risks becomes are primary goal of information system controls.</p>
-		</section>
-
-		<section>
-			<h3><i>Cost</i>-Benefit Analysis</h3>
-			<p>Three different types of controls exist: preventive, detective, and corrective. Any implementation of controls is costly, although 100% prevention would clearly be the best, the cost is prohibitive. As a result, the only cost effective solution involves a combination of all three types: preventing what can be prevented and detecting and correcting what cannot be prevented.</p>
-		</section>
-
-		<section>
-			<h3>Cost-<i>Benefit</i> Analysis</h3>
-			<p>The benefit of a control implementation is the reduction in either the <u><i>likelihood</i></u> of or <u><i>exposure</i></u> to unauthorized access, data loss, or data corruption. Likelihood is the probability of a problem, and exposure is the dollar loss from litigation, fines, lost business, cost of restoring a system and its data, etc., should a problem occur. The size of the loss can make a problem with a small likelihood a big problem, especially when regulatory compliance is very strict. Preventive controls can lower the likelihood of a problem, and detective and corrective controls can reduce the exposure (i.e., make a problem less bad or fix a problem more quickly). </p>
-		</section>
-
-		<section>
-			<h3>Control Framework</h3>
-			<p>Many control system frameworks exist that address the various types of risk that external and internal stakeholders face. Three well-known examples are (1) Internal Control&ndash;Integrated Framework and (2) Enterprise Risk Management&ndash;Integrated Framework by the Committee of Sponsoring Organizations of the Treadway Commission (COSO) and (3) Control Objectives for Information and Related Technology (COBIT) by the Information Systems and Audit Control Association (ISACA). These are dense and comprehensive, though not necessarily comprehensible, so I have opted for the simpler AICPA Trust Services Framework.</p>
-		</section>
-		
-		<section>
-			<h3>Trust Services Framework</h3>
-			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
-				<div class="flex-item" style="max-width: 70%">
-					<p>The objectives of the Control leg of the Architecture mirror those of the AICPA Trust Services Framework:</p>
-					<ul>
-						<li><u><i>Security</i></u> protects against unauthorized access.</li>
-						<li><u><i>Availability</i></u> prevents data loss and system downtime.</li>
-						<li><u><i>Processing integrity</i></u> preserves data integrity.</li>
-						<li><u><i>Confidentiality</i></u> and <u><i>privacy</i></u> maintain secrets. Because of their similarity, these two occupy the same block in the Architecture.</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h3>Security</h3>
-			<blockquote>The system is protected against unauthorized access, use or modification.</blockquote>
-			<p>Access controls are the primary security tool. They promote system security in one of three ways:</p>
-			<ul>
-				<li><u><i>Permissions</i></u> determine authorization.</li>
-				<li><u><i>Authentication</i></u> allows authorized users to identify themselves.</li>
-				<li><u><i>Hardening</i></u> prevents unauthorized access.</li>
-		</section>
-
-		<section>
-			<h3>Database Permissions</h3>
-			<p>Permissions determine which users can initiate the four primary storage functions: create, read, update, delete (CRUD). However, these four functions are more relevant to a database system than a file system. Using SQL syntax as an example, the four basic commands are SELECT, INSERT INTO, UPDATE and DELETE. Each maps directly into one of the four storage functions.</p>
-		</section>
-
-		<section>
-			<h3>File Permissions</h3>
-			<p>Permissions in common file systems are less granular. Instead of identifying permissions for four storage functions, file systems focus on three functions: read, write and execute. The overlap between file read and database read is apparent, but the other two file system functions are less similar to database functions. Create, update and delete are all write functions because write permissions award the ability to edit. Execute governs launching applications. This permission has no useful meaning in a database setting.</p>
-		</section>
-
-		<section>
-			<h3>Folder Permissions</h3>
-			<p>File systems comprise both files and folders, and although the same three permissions (read, write and execute) govern both sets of objects, the interpretation differs between files and folders. Read allows the user to see the contents of a folder. Write allows a user to modify the contents of a folder. Execute allows the user to open a folder and interact with its contents.</p>
-		</section>
-
-		<section>
-			<h3>Me Against the World</h3>
-			<p>In addition to three functions (read, write, execute), file permissions have three different levels: user (or owner), group, world (or others). User and world are easy to understand. User is the usually the creator of a file or folder; world is everyone who has no level of ownership. Group is a collection of users that need similar access but frequently less access than the owner. The owner may or may not belong to the group.</p>
-		</section>
-
-		<section>
-			<h3>Symbolic Notation</h3>
-			<p>Unix-like operating systems display file permissions in two different but equivalent ways. One is more readable and one is more concise. Symbolic notation, the more readable format, uses ten characters to explain whether the user, group or world can read (r), write (w) or execute (e). Missing permissions are replaced with a hyphen.</p>
-			<div class="table" style="font-size: 20px; border: 3px solid black">
-				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-					<div class="table-cell" style="font-weight: bold">Permissions</div>
-					<div class="table-cell" style="font-weight: bold">Symbolic Notation</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">
-						<div>User: read, write, execute</div>
-						<div>Group: read, execute</div>
-						<div>World: read, execute</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rwxr-xr-x</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">
-						<div>User: read, write, execute</div>
-						<div>Group: no access</div>
-						<div>World: no access</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rwx------</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">
-						<div>User: read, write</div>
-						<div>Group: read</div>
-						<div>World: read</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rw-r--r--</div>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h3>First Character</h3>
-			<p>Symbolic notation uses nine characters (i.e., three triads), but the string contains ten spaces. The first identifies the file type: regular file (-), directory (d), link (l), etc.</p>
-		</section>
-
-		<section>
-			<h3>Octal Permissions</h3>
-			<p>Numeric notation, frequently referred to as octal or octet permissions, uses base-8 notation to report permissions. In this notation, read receives a value of 4, write a value of 2 and execute a value of 1. These are added together to obtain one value per significant digit. Although frequently reported using only three significant digits&mdash;first, user; second, group; third, world&mdash;these permissions actually have a four digit, which we will ignore and always set to 0. Symbolic notation has a corollary to this fourth digit, but because we set it to zero, it will not manifest in symbolic notation.</p>
-		</section>
-
-		<section>
-			<h3>Side-by-side Comparison</h3>
-			<div class="table" style="font-size: 20px; border: 3px solid black">
-				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-					<div class="table-cell" style="font-weight: bold">Permissions</div>
-					<div class="table-cell" style="font-weight: bold">Symbolic Notation</div>
-					<div class="table-cell" style="font-weight: bold">Octal Notation</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">
-						<div>User: read, write, execute</div>
-						<div>Group: read, execute</div>
-						<div>World: read, execute</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rwxr-xr-x</div>
-					<div class="table-cell" style="text-align: center">0755</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">
-						<div>User: read, write, execute</div>
-						<div>Group: no access</div>
-						<div>World: no access</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rwx------</div>
-					<div class="table-cell" style="text-align: center">0700</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">
-						<div>User: read, write</div>
-						<div>Group: read</div>
-						<div>World: read</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rw-r--r--</div>
-					<div class="table-cell" style="text-align: center">0644</div>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h3>Groups vs. Roles</h3>
-			<p>Unix groups are faceted, and in many Unix-like operating systems, the user is automatically assigned to multiple groups. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware (e.g., storage, lp, optical, power). It is possible to create additional groups for business purposes.</p>
-			<p>In a business sense, groups may have multiple interpretations. Two examples would be roles and departments. Because individuals in the same role should have the same access and because individuals' access should change if they switch roles, it is most appropriate to assign permissions by role and not user.</p>
-		</section>
-
-		<section>
-			<h3>Groups vs. Departments</h3>
-			<p>A group may also be thought of as a department (i.e., a collection of roles). These individuals would not need the same access, but they may all need some access to everything created within the department. This definition of group is more in line with the meaning in a Unix system. In fact, the default Unix permissions are not well-equipped for role-based access, especially since the owner of a file is likely the creator, not a role.</p>
-		</section>
-
-		<section>
-			<h3>Global Directories</h3>
-			<p>Because role-based permissions are more useful in centralized storage solutions, it is useful to have the access controls in a central location. Directories can store user information, user roles and role-based permissions. Lightweight Directory Access Protocol (LDAP) is the open standard for these directories, although some operating systems rely on closed solutions (e.g., Active Directory for Windows Server). In this scenario, it is possible again to control four (CRUD), instead of three (RWX) storage functions.</p>
-		</section>
-
-		<section>
-			<h3>Segregation of Duties</h3>
-			<p>One important consideration for accountants is segregations of duties, which dictates that stewardship of assets should not accompany record-keeping. For examaple, any role responsible for counting cash, storing inventory or paying bills should not be able to change the accounting records for cash, receivables, payables or inventory. The implication is clear. If hold an asset and can change the records, I can steal and cover it up.</p>
-		</section>
-
-		<section>
-			<h3>Examples of Role-based Permissions</h3>
-			<div class="table" style="font-size: 20px; border: 3px solid black">
-				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-					<div class="table-cell" style="font-weight: bold">Role</div>
-					<div class="table-cell" style="font-weight: bold">Permission</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">
-						<div>Sales Rep</div>
-					</div>
-					<div class="table-cell">
-						<div>Create customer</div>
-						<div>Create credit request</div>
-						<div>Read customer list</div>
-						<div>Update customer info</div>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">
-						<div>Accounts Payable</div>
-					</div>
-					<div class="table-cell">
-						<div>Create payment request</div>
-						<div>Read invoice list</div>
-						<div>Update payment request</div>
-						<div>Delete payment request</div>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">
-						<div>Credit Department</div>
-					</div>
-					<div class="table-cell">
-						<div>Read credit request</div>
-						<div>Read accounts receivable</div>
-						<div>Update credit request</div>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">
-						<div>Cashier</div>
-					</div>
-					<div class="table-cell">
-						<div>Create payment</div>
-						<div>Read payment request</div>
-						<div>Update payment request</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h3>One User to Rule Them All</h3>
-			<p>In any system, everything must be owned by some user. Most users only own some content in order to avoid unintended, unauthorized access. However, one user (i.e., root or superuser) owns the entire system. The root user is the owner of system files, and the root user has full access to all files from any other user. Popular database systems also employ a root user who has all privileges and can grant those privileges to other users.</p>
-		</section>
-
-		<section>
-			<h3>Elevated Permissions</h3>
-			<p>Because the root user owns system files, a normal user must obtain elevated permissions to alter the system. In Unix systems this is done by changing to the superuser (su) or by becoming fakeroot (sudo). This becomes even more complicated if one user should access an application that should access other resources because the number of relevant permissions can become overwhelming.</p>
-		</section>
-
-		<section>
-			<h3>Just Say No</h3>
-			<p>Because it is easier to avoid incompatibilities with permissions, some users succumb to the temptation to use the root user for everything. This is a worst-case scenario for security and should never be done. Instead, learn to navigate permissions.</p>
-		</section>
-
-		<section>
-			<h3>Authentication</h3>
-			<p>Permissions determine what an authorized user may do; authentication allows authorized users to identify themselves. Authentication has three forms:</p>
-			<ul>
-				<li>Something the user knows: password or passphrase.</li>
-				<li>Something the user has: badge, key card or code generator.</li>
-				<li>Something about the user: biometrics.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Multifactor Authentication</h3>
-			<p>Security and convenience are always trade-offs. Anything that is more difficult for unauthorized users to access is also more difficult for authorized users to access. However, in many situations, the cost of added inconvenience is well worth avoiding exposure. In the current climate, one form of authentication is rarely enough to avoid problems. Passwords can be comprised through guessing, brute force or social engineering; key cards go missing; face or voice recognition can be faked. A combination of these is better (e.g., a password and a time-based code or a key card and a hand print).</p>
-		</section>
-
-		<section>
-			<h3>Remote Authentication</h3>
-			<p>Just as an LDAP server can store permissions, it can also store credentials. This is handy for allowing users to identify themselves on multiple machines on the same network, but in order for it to work, the user must already be in the network (LAN). Remote Authentication Dial-in User Service (RADIUS) allows users outside of the network (WAN) to authenticate themselves to access LAN resources. RADIUS is often used in virtual private network (VPN) and wireless local area network (WLAN) access.</p>
-		</section>
-
-		<section>
-			<h3>Hardening</h3>
-			<p>Hardening reduces a system's surface of vulnerability. Firewalls and network traffic monitors are popular hardening tools because these restrict access to network devices. Additionally, hardening involves removing old authentication credentials and disabling unnecessary services (i.e., daemons) and closing their respective ports.</p>
-		</section>
-
-		<section>
-			<h3>Firewalls</h3>
-			<p>Because it is possible to use authentication protocols to access a LAN from the WAN, it can also be possible to gain unauthorized access from the WAN. Firewalls, or more generally packet filters, restrict network traffic to and from certain network ports on certain devices. Firewalls are like Dementors in that they cannot distinguish between authorized and unauthorized traffic.</p>
-		</section>
-
-		<section>
-			<h3>What Day is It?</h3>
-			<p>In the context of software development, hardening involves apply patches to exploits. Although it is best to write the software correctly the first time, exploits arise because developers cut corners or make mistakes. They also arise because people invent new ways to exploit software. A zero-day exploit is a software exploit that is found before the developers know about, and this is an increasingly frequent occurrence.</p>
-		</section>
-
-		<section>
-			<h3>What Can Exploits Do?</h3>
-			<p>One problem with software exploits is that frequently result in the user gaining elevated privileges or accessing unauthorized content. This is how iOS devices are jailbroken or Android devices rooted.</p>
 		</section>
 
 		<section>
@@ -355,6 +68,11 @@
 		<section>
 			<h3>Redundancy</h3>
 			<p>System components can fail. A single point of failure is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site creates redundancy for an entire cloud. A server cluster, in addition to increasing availability by adding computing power to support multiple simultaneous client requests, allows alternative servers to take over when one server fails. Storage backups create duplicates of data in case storage devices become corrupted.</p>
+		</section>
+
+		<section>
+			<h3>RAID</h3>
+			<p>The lowest level of logical volume that we will consider is the Redundant Array of Independent Disks (RAID). A RAID combines multiple physical disks or volumes into a group of logical volumes. RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined.</li>
 		</section>
 
 		<section>
@@ -423,49 +141,282 @@
 		</section>
 
 		<section>
-			<h3>Confidentiality</h3>
-			<blockquote>Information designated as confidential is protected as committed or agreed.</blockquote>
-			<p>Security and confidentiality both address the need to prevent unauthorized access, so many tools can serve both purposes. However, three tools commonly serve to keep information secret:</p>
-			<ul>
-				<li><u><i>Encryption</i></u> prevents reading sensitive content, especially in transit.</li>
-				<li><u><i>Intermediation</i></u> anonymizes communication.</li>
-				<li><u><i>Rights management</i></u> avoids unlicensed use of intellectual property.</li>
-			</ul>
+			<h3>Redundancies</h3>
+			<p>The benefits of a database system rely on the avoidance of redundancy. In fact, one of the reasons to transition from a file system to a database system is to avoid redundancies from separate individuals tracking information in separate flat files. However, redundancies can also arise in database systems through the creation of <u><i>functional dependencies</i></u>. These dependencies create problematic <u><i>create</i></u>, <u><i>update</i></u>, and <u><i>delete anomalies</i></u>.</p>
 		</section>
 
 		<section>
-			<h3>Privacy</h3>
-			<blockquote>Confidentiality is distinguished from privacy in that privacy deals with personal information whereas, confidentiality refers to a broader range of information that is not restricted to personal information.</blockquote>
-			<p>Because of the inherent similarity between confidentiality and privacy, we will assume that similar tools preserve both.</p>
+			<h3>Partial Dependencies</h3>
+			<p>A <u><i>partial dependency</i></u> arises if a non-key attribute (i.e., an attribute that is not a primary key) depends on only part of a composite key. Again using the example of the course list, the composite key Semester, Year, Course, and Section identifies a unique record. However, the attribute Course Name exclusively depends on Course, which is only part of the composite key.</p>
 		</section>
 
 		<section>
-			<h3>Encryption</h3>
+			<h3>Transitive Dependencies</h3>
+			<p>A <u><i>transitive dependency</i></u> arises when a non-key attribute is dependent on another non-key attribute. For example, the entity Employee might include Employee ID, Employee Name, Department ID and Department Name. Employee ID is the primary key, and the employee's department (Department ID) depends on Employee ID. However, Department Name depends on Department ID, which is not a primary key. This is a transitive dependency because Employee ID &rarr; Department ID &rarr; Department Name, which creates a transitive link between Employee ID and Department Name.</p>
 		</section>
 
 		<section>
-			<h3>Secure Shell</h3>
-			<p>Some popular forms on communication rely on encryption. <u><i>Secure Shell</i></u> (SSH) allows remote access of a single computer using an encrypted connection. This is the current standard for accessing the command line of another computer, although it is also possible to tunnel graphical content through SSH. SSH is commonly considered a secure alternative to telnet, which historically was the standard for communication between two computers.</p>
+			<h3>Dependencies Depicted</h3>
+			<div>Partial Dependency</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black; margin-bottom: 50px">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Semester</div>
+					<div class="table-cell" style="font-weight: bold">Year</div>
+					<div class="table-cell" style="font-weight: bold">Course</div>
+					<div class="table-cell" style="font-weight: bold">Section</div>
+					<div class="table-cell" style="font-weight: bold">Course Name</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">Spring</div>
+					<div class="table-cell">2016</div>
+					<div class="table-cell">ACCT 4020</div>
+					<div class="table-cell">001</div>
+					<div class="table-cell">Accounting Architecture</div>
+				</div>
+			</div>
+			<div>Transitive Dependency</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black;">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Employee ID</div>
+					<div class="table-cell" style="font-weight: bold">Employee Name</div>
+					<div class="table-cell" style="font-weight: bold">Department ID</div>
+					<div class="table-cell" style="font-weight: bold">Department Name</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">1</div>
+					<div class="table-cell">John Smith</div>
+					<div class="table-cell">A7</div>
+					<div class="table-cell">Administration</div>
+				</div>
+			</div>
 		</section>
 
 		<section>
-			<h3>Virtual Private Network</h3>
-			<p>SSH is useful for remotely accessing a single computer with an encrypted connection, but this is not always the desired goal. If an individual wants to access an entire LAN remotely, a <u><i>Virtual Private Network</i></u> (VPN) is necessary. A VPN uses RADIUS authentication to allow a WAN device to join a LAN. Because communication on a LAN should remain private, the connection between the WAN device and the LAN is encrypted. This is not only useful for telework, but also for preserving privacy when using a public WiFi network to access the Internet. As a result, many vendors sell subscription access to VPN servers.</p>
+			<h3>Create Anomaly</h3>
+			<p>The <u><i>create anomaly</i></u> arises when it is not possible to add a record to a table because the new record has no value for the primary key. For example, suppose the Inventory table with SKU as primary key includes the name, address, and contact info for the vendor. The company wishes to add an approved vendor to the vendor list, but the company has not yet identified with items to order from that vendor. It is not possible to add that vendor to the database because no value for the primary key SKU exists.</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">0001</div>
+					<div class="table-cell">Spark Plug</div>
+					<div class="table-cell">Bosch</div>
+					<div class="table-cell">123 Sparky Way</div>
+					<div class="table-cell">800-555-1234</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell" style="color: red; font-weight: bold">X</div>
+					<div class="table-cell"></div>
+					<div class="table-cell">Remington</div>
+					<div class="table-cell">123 Tool Drive</div>
+					<div class="table-cell">888-555-1234</div>
+				</div>
+			</div>
 		</section>
 
 		<section>
-			<h3>Proxy Servers</h3>
-			<p>Sometimes encrypted communication is not sufficient to maintain privacy because it is feasible to identify the source of the communication. Proxy servers redirect traffic and mask the source IP address to add anonymity. This is similar to the functionality of a private VPN, and given the choice, the encryption involved with a VPN makes it superior to a proxy server.</p>
+			<h3>Update Anomaly</h3>
+			<p>Repeating groups cause the <u><i>update anomaly</i></u>, which involves needing to change the same value more than once. If the Inventory table includes vendor contact info, and the vendor carries more than one inventory item, and the contact information for the vendor changes, it is necessary to find all references to that vendor in the table and update each separately.</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">0001</div>
+					<div class="table-cell">Spark Plug</div>
+					<div class="table-cell">Bosch</div>
+					<div class="table-cell">123 Sparky Way</div>
+					<div class="table-cell" style="color: red; font-weight: bold">800-555-1234</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">00X4</div>
+					<div class="table-cell">Distributor Cap</div>
+					<div class="table-cell">Bosch</div>
+					<div class="table-cell">123 Sparky Way</div>
+					<div class="table-cell" style="color: red; font-weight: bold">800-555-1234</div>
+				</div>
+			</div>
 		</section>
 
 		<section>
-			<h3>Rights Management</h3>
-			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. Also, rights management is inherently a required compliance activity when using licensed content.</p>
+			<h3>Delete Anomaly</h3>
+			<p>The <u><i>delete anomaly</i></u> is the loss of unintended information when a record is removed. If the Inventory table includes vendor contact info, and the company decides to discontinue the only item carried by that vendor, deleting the inventory record will also delete the vendor contact info even if the company intended to business with that vendor in the future.</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">0001</div>
+					<div class="table-cell">Spark Plug</div>
+					<div class="table-cell">Bosch</div>
+					<div class="table-cell">123 Sparky Way</div>
+					<div class="table-cell">800-555-1234</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell" style="text-decoration: line-through">0275</div>
+					<div class="table-cell" style="text-decoration: line-through">Drill Bits</div>
+					<div class="table-cell" style="text-decoration: line-through; color: red; font-weight: bold">Remington</div>
+					<div class="table-cell" style="text-decoration: line-through; color: red; font-weight: bold">123 Tool Drive</div>
+					<div class="table-cell" style="text-decoration: line-through; color: red; font-weight: bold">888-555-1234</div>
+				</div>
+			</div>
 		</section>
-		
+
+		<section>
+			<h3>Normalization</h3>
+			<p><u><i>Normalization</i></u> removes functional dependencies and their resulting anomalies by dividing tables with dependencies into multiple tables connected by foreign keys. Second normal form (2NF) removes partial dependencies, and third normal form (3NF) removes transitive dependencies. First normal form (1NF) also resolves anomalies, but it is too simplistic for our purposes. Third normal form is the minimum standard for a well-defined database.</p>
+		</section>
+
+		<section>
+			<h3>Example</h3>
+			<p>Using the example listed previously when introducing anomalies, normalize the Inventory table:</p>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Solution</h3>
+			<p>The anomalies occur because of the decision to store inventory and vendor information together. Normalization splits the original table into two which Vendor Name as the primary key of the newly created Vendor table and the foreign key in the Inventory table:</p>
+			<div style="font-size: 24px">Inventory Table</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black; margin-bottom: 50px">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">SKU</div>
+					<div class="table-cell" style="font-weight: bold">Description</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+				</div>
+			</div>
+			<div style="font-size: 24px">Vendor Table</div>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Vendor Name</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Address</div>
+					<div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+				</div>
+			</div>
+			<p>(Using this technique, can you successfully normalize the other tables used to depict transitory and partial dependencies?)</p>
+		</section>
+
+		<section>
+			<h3>Many-to-Many</h3>
+			<p>One indication that a dependency exists is a relationship between two tables with maximum cardinalities of &ldquo;many&rdquo; in both directions. The resolution of this issue is a <u><i>linking table</i></u> that includes the primary keys of both original entities as a composite primary key. Because these are also the primary keys of another entity, they are simultaneously primary and foreign keys.</p>
+		</section>
+
+		<section>
+			<h3>Normalizing an E-R diagram</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/unnormalized.png" alt="Unnormalized Table" style="max-width: 200px"/></div>
+				<div class="flex-item" style="max-width: 75%">
+					<p>This E-R diagram entity lists common attributes for a sales order. (By the way, extension is unit price multiplied by quantity.) However, it is not 3NF. Construct an E-R diagram that includes each of these attributes&mdash;except those that meet the criteria in the &ldquo;Exceptions to Entities and Attributes&rdquo; slide&mdash;in a set of 3NF entities.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Customer</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step1.png" alt="Step 1" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>First, we create a Customer entity. By storing this data in a separate table, we avoid duplicating it each time that the customer places a new order. We select the customer's email address as a primary key [PK] because customer accounts are frequently identified by the email address.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Carrier</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step2.png" alt="Step 2" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Second, we create a Carrier entity to avoid duplicating carrier information for each order. The Carrier ID primary key could simply enumerate the carriers (i.e., 001, 002, 003, etc.). Not all primary keys have any interpretation. Sometimes they are nonsensical and only serve to uniquely identify records.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Inventory</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step3.png" alt="Step 3" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Third, we create an Inventory entity. Although quantity on hand is not normally on a sales order, it is an important Inventory attribute, so we add it to the Inventory table. SKU is an inventory identifier that is common to vendor and customer, so we can use it as an informative primary key.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Sales Tax</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step4.png" alt="Step 4" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Fourth, we create a Sales Tax entity to store the sales tax rates for each jurisdiction. Because jurisdictions are frequently identified by ZIP code, we can use that as the primary key.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step5.png" alt="Step 5" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Next, we assign relationships to the entities and cardinalities to the relationships. This involves some assumptions based on hypothetical business rules. Each customer is associated with at least zero and at most many sales orders. Each carrier is associated with at least zero and at most many sales orders. Each sales order is associated with exactly one customer and one carrier.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step6.png" alt="Step 6" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Although sales tax applies to a sales order, the customer's ZIP code resides in the Customer table. As a result, we will link the Sales Tax entity with the Customer entity with the assumption that each customer (by virtue of the customer's address) is associated with one sales tax rate, while each ZIP is associated with at least zero and at most many customers.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step7.png" alt="Step 7" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Finally, each sales order is associated with at least one and at most many inventory items, and each inventory item can be associated with at least zero and at most many sales orders. This many-to-many relationship is a problem, which a linking table will fix.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Foreign Keys</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step8.png" alt="Step 8" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Before creating a linking table, we add foreign keys to operationalize relationships. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity becomes a foreign key. This links customer ZIP to sales tax rate, and it restricts customers to ZIP codes already in the Sales Tax table.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>UML Class Diagrams</h3>
+		</section>
+
 		<section>
 			<h3>Accounting Tie-in</h3>
-			<p>Accounting architects have two perspectives on internal controls. The first comes from their role as architects. From this perspective controls are necessary to avoid the &ldquo;garbage in, garbage out&rdquo; problem. Information is only useful if it is derived from accurate data, and controls protect data integrity. Additionally, architects wish to preserve trade secrets. The second perspective is as accountants. Regulatory compliance dictates proper controls over the financial reporting process to ensure accurate financial statements. This is similar to the &ldquo;garbage in, garbage out&rdquo; principle, but in this case, the beneficiaries of the controls are external stakeholders.</p>
 		</section>
 
 	</div>
