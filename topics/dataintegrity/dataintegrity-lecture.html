@@ -50,44 +50,59 @@
 			<p>Two threats of availability are data loss and downtime. Three tools combat these threats:</p>
 			<ul>
 				<li><u><i>Interpretation</i></u> preserves accessibility of legacy data.</li>
-				<li><u><i>Redundancy</i></u> avoids data loss and unplanned downtime.</li>
 				<li><u><i>Change management</i></u> limits planned downtime.</li>
+				<li><u><i>Redundancy</i></u> avoids data loss and unplanned downtime.</li>
 			</ul>
 		</section>
 
 		<section>
 			<h3>Interpretation</h3>
-			<p>I cannot say what the original reason was for the Unix philosophy that the basis of all data is plan text, but a significant benefit of that mindset is a maximization of data accessibility. Binary files require specific hardware and software to access, so users have two choices (1) retain in perpetuity the hardware and software necessary to access the data or (2) emulate the hardware and software.</p>
+			<p>One of the Unix philosophies was that the basis of all data is plain text&mdash;as opposed to complied binary files, not as opposed to encrypted files. Although the advent of graphical interfaces has made this infeasible, one of the benefits of this philosophy is a maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. In order to preserve interpretability of binary files, users have two choices (1) retain in perpetuity the hardware and software necessary to access the data or (2) emulate the hardware and software.</p>
 		</section>
 
 		<section>
 			<h3>Emulation</h3>
-			<p>Similar to virtualization, emulation uses software to mimic hardware. However, in the case of emulation, the hardware is non-existent, and software translates hardware requests into the proper architecture and communicates with the actual hardware. (Incidentally, this is a popular practice for playing old console and arcade games on personal computers.)</p>
+			<p>In virtualization, the hypervisor virtualizes computer hardware. In containerization, the container virtualizes the operating system kernel. Emulation is similar to virtualization in that the emulator virtualizes computer hardware. However, in the case of emulation, the hardware is non-existent, and the emulator must translate hardware requests intended for the emulated hardware before communicating with the computer's actual hardware. (Incidentally, this is a popular practice for playing old console and arcade games on personal computers.)</p>
+		</section>
+
+		<section>
+			<h3>Patching</h3>
+			<p>Every information system needs hardware and software updates (i.e., patches) sooner or later. Although Linux developers, specifically Red Hat and SUSE, have provided methods for updating the Linux kernel without needing to reboot, hardware and software patches sometimes require shutting down or restarting a system. During these periods, any data is unavailable, and any externally facing systems are inaccessible to customers. This can result in a loss of business, data collection and analysis, and customer satisfaction.</p>
+		</section>
+
+		<section>
+			<h3>Change Management</h3>
+			<p>Proper change management (i.e., processes that govern system changes and updates) can minimize the negative effects of downtime by (1) scheduling downtime when it would inconvenience the fewest users and (2) structuring patches to reduce the likelihood of breakage following an update. Because all systems need patching, internal and external users understand the need for system maintenance and can schedule necessary activities around planned, announced maintenance windows. During these maintenance windows, it is important to make quick updates that will not break existing functionality.</p>
+		</section>
+
+		<section>
+			<h3>DevOps</h3>
+			<p>In order to ensure that system patches will work and not break functionality, developers, especially in-house developers, who wrote the code, and IT staff, who maintain the hardware and software, must work together in order to ensure that the system will run smoothly after the update. This is the premise of <u><i>DevOps</i></u>, which is, intuitively, a combination of &ldquo;Development&rdquo; and &ldquo;Operations.&rdquo; Business-led IT is an outcropping of this, in which the DevOps team expands to include business experts. Accounting Architecture is essentially business-led IT applied to the financial and management accounting, auditing, and tax functions.</p>
 		</section>
 
 		<section>
 			<h3>Redundancy</h3>
-			<p>System components can fail. A single point of failure is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site creates redundancy for an entire cloud. A server cluster, in addition to increasing availability by adding computing power to support multiple simultaneous client requests, allows alternative servers to take over when one server fails. Storage backups create duplicates of data in case storage devices become corrupted.</p>
+			<p>System components can fail. A <u><i>single point of failure</i></u> is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site (i.e., server room) creates redundancy for an entire cloud. A server cluster, in addition to increasing availability by adding processing power, allows alternative servers to take over when one server fails. Storage backups create duplicates of data in case storage volumes become corrupted.</p>
 		</section>
 
 		<section>
-			<h3>RAID</h3>
-			<p>The lowest level of logical volume that we will consider is the Redundant Array of Independent Disks (RAID). A RAID combines multiple physical disks or volumes into a group of logical volumes. RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined.</li>
+			<h3>Denied!</h3>
+			<p>One major threat to the availability of a cloud system is denial of service (DoS). This involves sending a small network package (i.e., ping) to a server and asking for a response. If the number of pings becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Frequently, the attack is distributed across multiple clients in a distributed denial of service (DDoS) attack. Firewalls can prevent servers from responding to pings and protect them from DoS attacks. This is just one example of the interplay between Security and Availability.</p>
 		</section>
 
 		<section>
-			<h3>Full Backups</h3>
-			<p>Full backups create a copy of all current data. The benefit of full backups are that only one restoration is necessary to bring the system back to the most recent backup. The drawback is that full backups are large. They store everything, which means that each object that existed prior to a backup is stored in every subsequent backup, as well.</p>
+			<h3>RAID 1</h3>
+			<p>RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. The purpose of RAID 0 is maximize the size of a logical volume. Interestingly, one of the problems with RAID 0 is its vulnerability to failure because the stripe becomes corrupted if either physical volume fails. RAID 1, on the other hand, uses the same to physical volumes as mirrors. The user only sees one of the two drives, and the other is a backup. Because data integrity is more important that storage capacity, RAID 1 is generally more popular than RAID 0.</li>
+		</section>
+
+		<section>
+			<h3>Pros and Cons</h3>
+			<p>RAID 1 is one backup method, and this method has some advantages and disadvantages over periodic, full backups. The primary advantage is that the RAID make continuous, real-time backups, so no data is ever not duplicated. Additionally, the RAID system is designed to repair volumes while the system is live, so if one drive becomes corrupted, it is possible to swap out that drive, replace it with a blank one, and have the RAID rebuild the data without ever shutting down the system. The primary Full backups create a copy of all current data. The benefit of full backups are that only one restoration is necessary to bring the system back to the most recent backup. The drawback is that full backups are large. They store everything, which means that each object that existed prior to a backup is stored in every subsequent backup, as well.</p>
 		</section>
 
 		<section>
 			<h3>Incremental Backups</h3>
 			<p>Incremental backups only store the changes (deltas) since the previous backup. This is the backup method used by Git and other version control systems. In order to restore an entire backup, it is necessary to restore every delta. This process can become impossibly long. As a result, many backup solutions combine these two methods by having frequent incremental backups and infrequent full backups.</p>
-		</section>
-
-		<section>
-			<h3>Denied!</h3>
-			<p>One major threat to system availability is denial of service (DoS). This involves sending a small network package (i.e., ping) to a server and asking for a response. If the number of pings becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Frequently, the attack is distributed across multiple clients in a distributed denial of service (DDoS) attack.</p>
 		</section>
 
 		<section>
