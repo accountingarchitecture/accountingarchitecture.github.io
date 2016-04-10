@@ -56,6 +56,11 @@
 		</section>
 
 		<section>
+			<h3>Denied!</h3>
+			<p>One major threat to the availability of a cloud system is denial of service (DoS). This involves sending a small network package (i.e., ping) to a server and asking for a response. If the number of pings becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Frequently, the attack is distributed across multiple clients in a distributed denial of service (DDoS) attack. Firewalls can prevent servers from responding to pings and protect them from DoS attacks. This is just one example of the interplay between Security and Availability.</p>
+		</section>
+
+		<section>
 			<h3>Interpretation</h3>
 			<p>One of the Unix philosophies was that the basis of all data is plain text&mdash;as opposed to complied binary files, not as opposed to encrypted files. Although the advent of graphical interfaces has made this infeasible, one of the benefits of this philosophy is a maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. In order to preserve interpretability of binary files, users have two choices (1) retain in perpetuity the hardware and software necessary to access the data or (2) emulate the hardware and software.</p>
 		</section>
@@ -86,23 +91,33 @@
 		</section>
 
 		<section>
-			<h3>Denied!</h3>
-			<p>One major threat to the availability of a cloud system is denial of service (DoS). This involves sending a small network package (i.e., ping) to a server and asking for a response. If the number of pings becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Frequently, the attack is distributed across multiple clients in a distributed denial of service (DDoS) attack. Firewalls can prevent servers from responding to pings and protect them from DoS attacks. This is just one example of the interplay between Security and Availability.</p>
-		</section>
-
-		<section>
 			<h3>RAID 1</h3>
 			<p>RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. The purpose of RAID 0 is maximize the size of a logical volume. Interestingly, one of the problems with RAID 0 is its vulnerability to failure because the stripe becomes corrupted if either physical volume fails. RAID 1, on the other hand, uses the same to physical volumes as mirrors. The user only sees one of the two drives, and the other is a backup. Because data integrity is more important that storage capacity, RAID 1 is generally more popular than RAID 0.</li>
 		</section>
 
 		<section>
 			<h3>Pros and Cons</h3>
-			<p>RAID 1 is one backup method, and this method has some advantages and disadvantages over periodic, full backups. The primary advantage is that the RAID make continuous, real-time backups, so no data is ever not duplicated. Additionally, the RAID system is designed to repair volumes while the system is live, so if one drive becomes corrupted, it is possible to swap out that drive, replace it with a blank one, and have the RAID rebuild the data without ever shutting down the system. The primary Full backups create a copy of all current data. The benefit of full backups are that only one restoration is necessary to bring the system back to the most recent backup. The drawback is that full backups are large. They store everything, which means that each object that existed prior to a backup is stored in every subsequent backup, as well.</p>
+			<p>RAID 1 is one backup method, and this method has some advantages and disadvantages over periodic, full backups. The primary advantage is that the RAID make continuous, real-time backups, so no data is ever not duplicated. Additionally, the RAID system is designed to repair volumes while the system is live, so if one drive becomes corrupted, it is possible to swap out that drive, replace it with a blank one, and have the RAID rebuild the data without ever shutting down the system. The primary advantage of periodic, full backups is the ability to store the backup off-site (e.g., in another office building, with a security company, or in a safety deposit box) to avoid data loss should the computer hosting the RAID become damaged or stolen.</p>
 		</section>
 
 		<section>
-			<h3>Incremental Backups</h3>
-			<p>Incremental backups only store the changes (deltas) since the previous backup. This is the backup method used by Git and other version control systems. In order to restore an entire backup, it is necessary to restore every delta. This process can become impossibly long. As a result, many backup solutions combine these two methods by having frequent incremental backups and infrequent full backups.</p>
+			<h3>Full vs. Incremental</h3>
+			<p>Full backups create a complete copy of all data during each backup. As a result, each subsequent backup contains the data stored in all earlier backups. Because it is generally good practice to keep more than one backup (e.g., three weeks of daily backups) full backups can quickly become infeasibly large. Fortunately, incremental backups provide another option for storing backups off-site. Incremental backups only store the changes (deltas) since the previous backup. In order to restore an entire incremental backup, it is necessary to restore every delta. This process can become infeasibly long.</p>
+		</section>
+		
+		<section>
+			<h3>Easier is not Better</h3>
+			<p>One option for reducing the size of full backups or the restoration time of incremental backups is to decrease the frequency of backups (e.g., once a week, instead of once a day). The problem with this option is that the expected loss of additional data may be unacceptable. For example, if the current policy is daily backups and a storage volume fails immediately before that day's backup, at most 24 hours worth of data is irreplaceable. If that policy changes to weekly backups and a storage volumes fails immediately before that week's backup, as much as 168 hours of data is lost! For a large company, that may be tens of millions of database records.</p>
+		</section>
+
+		<section>
+			<h3>Best of Both Worlds</h3>
+			<p>A safer option of reducing the size of full backups or the restoration time of incremental backups is to combine the concepts of full and incremental backups by having frequent incremental backups and infrequent full backups. For example, a policy might dictate weekly full backups and daily incremental backups. This reduces the combined size of all full backups and the restoration time of all incremental backups because restoration would only require the previous full backup and one incremental backup for each day between the last full backup and the failure.</p>
+		</section>
+
+		<section>
+			<h3>Version Control System</h3>
+			<p></p>
 		</section>
 
 		<section>
