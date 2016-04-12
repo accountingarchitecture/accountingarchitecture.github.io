@@ -117,7 +117,7 @@
 
 		<section>
 			<h3>Version Control System</h3>
-			<p></p>
+			<p>One common incremental backup tool, especially among developers, is the <u><i>version control system</i></u>, such as Git. These storage solutions offer unique advantages over other backup tools. First, they simultaneously promote backup and real-time collaboration. In fact, because of the decentralized nature of these systems, additional collaboration always promotes additional backups because each collaborator has a full copy of the data store. Second, the system manages incremental backups smartly, provides a convenient timeline of changes, and allows for straightforward file restoration on an individual user basis. Finally, with minimal additional work, these systems can create both local and cloud backups (e.g., GitHub).</p>
 		</section>
 
 		<section>
@@ -125,15 +125,10 @@
 			<blockquote>System processing is complete, valid, accurate, timely and authorized.</blockquote>
 			<p>The goal of every information system is to convert raw data into useful information by avoiding errors and corruption:</p>
 			<ul>
-				<li><u><i>Data validation</i></u> minimizes data entry and processing errors.</li>
-				<li><u><i>Transaction processing</i></u> maintains integrity of database records.</li>
+				<li><u><i>Data validation</i></u> and <u><i>transaction processing</i></u> minimize data entry and processing errors.</li>
 				<li><u><i>Refreshing</i></u> ensures that analyzed data is up-to-date.</li>
+				<li><u><i>Normalization</i></u> maintains the integrity of database records.</li>
 			</ul>
-		</section>
-
-		<section>
-			<h3>Cryptographic Hash</h3>
-			<p>Even though cipher text is not human- or computer-readable, it can still provide useful information even when decryption is not possible. In fact, some encryption keys (e.g., MD5) are designed to create a cipher text that cannot be decrypted. The purpose in this case is not to protect a message in transit but rather to verify the integrity of the data. Verification has two components. The first involves confirming that the data has not been modified, and the second involves confirming the identify of the sender.</p>
 		</section>
 
 		<section>
@@ -145,13 +140,13 @@
 				<li><u><i>Presence check</i></u> looks for missing values in a record.</li>
 				<li><u><i>Range check</i></u> confirms that a value is between a predetermined minimum and maximum.</li>
 				<li><u><i>Uniqueness check</i></u> ensures that unique values are not duplicated (e.g., usernames).</li>
-				<li><u><i>Look-up check</i></u> limits selection to pre-existing values (e.g., approved vendors).</li>
+				<li><u><i>Look-up check</i></u> limits selection to pre-existing values (e.g., states in the US).</li>
 			</ul>
 		</section>
 
 		<section>
-			<h3>Data Processing</h3>
-			<p>Data validation also minimizes errors in data processing. A common example is the batch or hash total, which looks for missing records when processing a group (or batch) of records by comparing a value for the group to the aggregation of individual values (e.g., total hours worked compared with the sum of hours worked in each record).</p>
+			<h3>Hashes</h3>
+			<p>Encryption is not only for preserving confidentiality. Because a cryptographic hash of a data object changes if the data changes, encryption is also useful for determining data validity. However, not all hashes are cryptographic, and in situations where confidentiality is not a concern, plain text hashes can be useful. A plain text hash is essentially the nonsensical result of a mathematical equation involving numbers that have no numerical interpretation. For example, a hash might be the sum of all invoice numbers or all employee SSNs. The purpose of these hashes is also to confirm data validity, frequently during batch processing to verify that the batch is complete and has no missing records.</p>
 		</section>
 
 		<section>
@@ -356,7 +351,7 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/unnormalized.png" alt="Unnormalized Table" style="max-width: 200px"/></div>
 				<div class="flex-item" style="max-width: 75%">
-					<p>This E-R diagram entity lists common attributes for a sales order. (By the way, extension is unit price multiplied by quantity.) However, it is not 3NF. Construct an E-R diagram that includes each of these attributes&mdash;except those that meet the criteria in the &ldquo;Exceptions to Entities and Attributes&rdquo; slide&mdash;in a set of 3NF entities.</p>
+					<p>This E-R diagram entity lists common attributes for a sales order. (By the way, extension is unit price multiplied by quantity.) However, it is not 3NF. Construct an E-R diagram that includes each of these attributes&mdash;except those constitute exceptions to attributes because they are functions of other attributes&mdash;in a set of 3NF entities.</p>
 				</div>
 			</div>
 		</section>
@@ -439,10 +434,6 @@
 					<p>Before creating a linking table, we add foreign keys to operationalize relationships. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity becomes a foreign key. This links customer ZIP to sales tax rate, and it restricts customers to ZIP codes already in the Sales Tax table.</p>
 				</div>
 			</div>
-		</section>
-
-		<section>
-			<h3>UML Class Diagrams</h3>
 		</section>
 
 		<section>
