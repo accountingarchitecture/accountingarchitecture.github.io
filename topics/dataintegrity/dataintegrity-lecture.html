@@ -150,8 +150,13 @@
 		</section>
 
 		<section>
+			<h3>Transactions</h3>
+			<p>Although the term <u><i>transaction processing</i></u> is frequently used to mean the processing of financial transactions, it has a specific meaning in IT. A transaction is a set of changes to make to a database (e.g., creating a new sales order and updating inventory levels and cash receipts), and transaction processing is a control that ensures that either all changes in a transaction occur successful or none of the changes occur. One of the biggest benefits of RDBMS and drawbacks of NoSQL is that RBDMS satisfy the requirements of transaction processing, whereas NoSQL database are generally not transactional.</p>
+		</section>
+
+		<section>
 			<h3>ACID</h3>
-			<p>One of the biggest benefits of RDBMS and drawbacks of NoSQL is transaction processing, which prevents a transaction from only being partially completed. In order for a database to be transactional, it must satisfy ACID:</p>
+			<p>In order for a database to be transactional, it must satisfy ACID:</p>
 			<ul>
 				<li><u><i>Atomicity</i></u>: all changes happen or none happen.</li>
 				<li><u><i>Consistency</i></u>: all actions as a group violate no constraints.</li>
@@ -162,27 +167,17 @@
 
 		<section>
 			<h3>Refreshing</h3>
-			<p>In a data warehousing environment, the transaction systems contain one version of the data, and the data warehouse and data marts contain another version. Accurate data analytics relies on current data in the warehouse, which requires periodic refreshing to bring the warehouse copy up to date.</p>
+			<p>Customer-facing databases, such as those that collect online orders, generally fall under the umbrella of <u><i>online transaction processing systems</i></u> (OLTP). Interestingly, with an increase in the need for speed and scalability, these systems are often NoSQL, which are not actually transactional. Regardless, the purpose of OLTP systems is to collect data. In order to reserve computing power on these systems for data collection, it is inadvisable to use these data stores for subsequent analysis. Instead, a copy is stored in a data warehouse and made available for analytics. Because this is a copy, it is necessary to refresh the data periodically to verify that analytics reflect to most up-to-date data available.</p>
 		</section>
 
 		<section>
 			<h3>Redundancies</h3>
-			<p>The benefits of a database system rely on the avoidance of redundancy. In fact, one of the reasons to transition from a file system to a database system is to avoid redundancies from separate individuals tracking information in separate flat files. However, redundancies can also arise in database systems through the creation of <u><i>functional dependencies</i></u>. These dependencies create problematic <u><i>create</i></u>, <u><i>update</i></u>, and <u><i>delete anomalies</i></u>.</p>
+			<p>Although redundancies promote availability by removing single points of failure, not all redundancies are good. The benefits of a database system rely on the avoidance of redundancy. In fact, one of the reasons to transition from a file system to a database system is to avoid redundancies from separate individuals tracking information in separate flat files. However, redundancies can also arise in database systems through the creation of <u><i>functional dependencies</i></u>: partial or transitive. These dependencies create problematic <u><i>create</i></u>, <u><i>update</i></u>, and <u><i>delete anomalies</i></u>.</p>
 		</section>
 
 		<section>
 			<h3>Partial Dependencies</h3>
-			<p>A <u><i>partial dependency</i></u> arises if a non-key attribute (i.e., an attribute that is not a primary key) depends on only part of a composite key. Again using the example of the course list, the composite key Semester, Year, Course, and Section identifies a unique record. However, the attribute Course Name exclusively depends on Course, which is only part of the composite key.</p>
-		</section>
-
-		<section>
-			<h3>Transitive Dependencies</h3>
-			<p>A <u><i>transitive dependency</i></u> arises when a non-key attribute is dependent on another non-key attribute. For example, the entity Employee might include Employee ID, Employee Name, Department ID and Department Name. Employee ID is the primary key, and the employee's department (Department ID) depends on Employee ID. However, Department Name depends on Department ID, which is not a primary key. This is a transitive dependency because Employee ID &rarr; Department ID &rarr; Department Name, which creates a transitive link between Employee ID and Department Name.</p>
-		</section>
-
-		<section>
-			<h3>Dependencies Depicted</h3>
-			<div>Partial Dependency</div>
+			<p>A <u><i>partial dependency</i></u> arises if a non-key attribute (i.e., an attribute that is not a primary key) depends on only part of a composite key (i.e., a primary key that comprises multiple attributes). For example, in a course schedule, the composite key Semester, Year, Course, and Section identifies a unique record. Frequently, a course schedule would also include the attribute Course Name, but because the name rarely changes from one semester to the next, Course Name depends exclusively on Course, which is only part of the composite key.</p>
 			<div class="table" style="font-size: 20px; border: 3px solid black; margin-bottom: 50px">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">Semester</div>
@@ -199,7 +194,11 @@
 					<div class="table-cell">Accounting Architecture</div>
 				</div>
 			</div>
-			<div>Transitive Dependency</div>
+		</section>
+
+		<section>
+			<h3>Transitive Dependencies</h3>
+			<p>A <u><i>transitive dependency</i></u> arises when a non-key attribute is dependent on another non-key attribute. For example, the entity Employee might include Employee ID, Employee Name, Department ID, and Department Name. Employee ID is the primary key, and the employee's department (Department ID) depends on Employee ID. However, Department Name depends on Department ID, which is not a primary key. This is a transitive dependency because Employee ID &rarr; Department ID &rarr; Department Name, which creates a transitive link between Employee ID and Department Name.</p>
 			<div class="table" style="font-size: 20px; border: 3px solid black;">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">Employee ID</div>
@@ -218,7 +217,7 @@
 
 		<section>
 			<h3>Create Anomaly</h3>
-			<p>The <u><i>create anomaly</i></u> arises when it is not possible to add a record to a table because the new record has no value for the primary key. For example, suppose the Inventory table with SKU as primary key includes the name, address, and contact info for the vendor. The company wishes to add an approved vendor to the vendor list, but the company has not yet identified with items to order from that vendor. It is not possible to add that vendor to the database because no value for the primary key SKU exists.</p>
+			<p>The <u><i>create anomaly</i></u> arises when it is not possible to add a record to a table because the new record has no value for the primary key. For example, suppose the Inventory table with SKU as primary key includes the name, address, and contact info for the vendor. The company wishes to add an approved vendor to the vendor list, but the company has not yet identified which items to order from that vendor. It is not possible to add that vendor to the database because no value for the primary key SKU exists.</p>
 			<div class="table" style="font-size: 20px; border: 3px solid black">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">SKU</div>
@@ -274,7 +273,7 @@
 
 		<section>
 			<h3>Delete Anomaly</h3>
-			<p>The <u><i>delete anomaly</i></u> is the loss of unintended information when a record is removed. If the Inventory table includes vendor contact info, and the company decides to discontinue the only item carried by that vendor, deleting the inventory record will also delete the vendor contact info even if the company intended to business with that vendor in the future.</p>
+			<p>The <u><i>delete anomaly</i></u> is the loss of unintended information when a record is removed. If the Inventory table includes vendor contact info, and the company decides to discontinue the only item carried by that vendor, deleting the inventory record will also delete the vendor contact info even if the company intended to do business with that vendor in the future.</p>
 			<div class="table" style="font-size: 20px; border: 3px solid black">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">SKU</div>
@@ -302,7 +301,7 @@
 
 		<section>
 			<h3>Normalization</h3>
-			<p><u><i>Normalization</i></u> removes functional dependencies and their resulting anomalies by dividing tables with dependencies into multiple tables connected by foreign keys. Second normal form (2NF) removes partial dependencies, and third normal form (3NF) removes transitive dependencies. First normal form (1NF) also resolves anomalies, but it is too simplistic for our purposes. Third normal form is the minimum standard for a well-defined database.</p>
+			<p><u><i>Normalization</i></u> removes functional dependencies and their resulting anomalies by dividing tables with dependencies into multiple tables connected by foreign keys. Second normal form (2NF) removes partial dependencies, and third normal form (3NF) removes transitive dependencies. Third normal form is the minimum standard for a well-defined database.</p>
 		</section>
 
 		<section>
@@ -430,6 +429,16 @@
 			<h3>Foreign Keys</h3>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../../images/normal-step8.png" alt="Step 8" style="max-width: 475px"/></div>
+				<div class="flex-item" style="max-width: 50%">
+					<p>Before creating a linking table, we add foreign keys to operationalize relationships. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity becomes a foreign key. This links customer ZIP to sales tax rate, and it restricts customers to ZIP codes already in the Sales Tax table.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Linking Table</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/normal-step9.png" alt="Step 9" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Before creating a linking table, we add foreign keys to operationalize relationships. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity becomes a foreign key. This links customer ZIP to sales tax rate, and it restricts customers to ZIP codes already in the Sales Tax table.</p>
 				</div>
