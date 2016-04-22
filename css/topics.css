@@ -52,10 +52,6 @@
 		-webkit-flex-flow: row wrap;
 		flex-flow: row wrap;
 	}
-	.content {
-		-webkit-flex: 1 1 50%;
-		flex: 1 1 50%;
-	}
 	.nav {
 		-webkit-flex-flow: row wrap;
 		flex-flow: row wrap;
