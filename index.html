@@ -19,10 +19,22 @@
 				</div>
 				<div id="menu-links">
 					<a class="menu-item current">Home</a>
-					<a class="menu-item" href="archive.html">Archive</a>
+					<a class="menu-item">Archive</a>
 				</div>
 			</div>
 		</div>
+		<script>
+			document.getElementById('menu-links').addEventListener('click', function(e) {
+  			menuItem = document.getElementById('menu-links').getElementsByTagName('a');
+  			for(i = 0; i < menuItem.length; i++) { 
+    			if(e.target == menuItem[i]) {
+      			menuItem[i].className='menu-item current';
+    			} else {
+    				menuItem[i].className='menu-item';
+    			}
+  			}
+			});
+		</script>
 
 		<div id="page">
 			<div class="topic hidden">
@@ -250,9 +262,9 @@
 				</div>
 			</div>
 
-			<div class="topic">
+			<div class="topic hidden">
 				<div class="header">
-					<div class="date">April 26, 2016</div>
+					<div class="date">May 5, 2016</div>
 					<h1>Final Exam</h1>
 					<p class="summary">You have until May 5 @ 12.30 (not 23.59) to complete the final exam and upload it to Dropbox. You may work alone or in groups of no more than three. Please answer the questions concisely; you will not receive extra points for a long answer when a short answer would have been sufficient.</p>
 					<p class="summary"><b>Good luck!</b></p>
@@ -261,15 +273,40 @@
 					<a class="button" href="topics/finalexam.html" target="_blank">Final Exam</a>
 				</div>
 			</div>
-
-			<div class="topic hidden">
-				<div class="header">
-					<div class="date">November 30, 2015</div>
-					<h1>SETE</h1>
-					<p class="summary">After some consideration, I have decided to award anyone who completes a student rating (SETE) an additional five participation points. I have created a Dropbox folder named SETE. Please take a screenshot of the receipt screen (the screen after submitting the SETE) as evidence of completion and upload it to this Dropbox folder. Naturally, I would particularly like positive ratings, but honesty is the best policy, so perhaps we can compromise, and you can honestly only say nice things about me!</p>
-				</div>
-			</div>
 		</div>
+		<script>
+			window.addEventListener('load', function(e) {
+  			topics = document.getElementsByClassName('topic');
+  			topicDates = document.getElementsByClassName('date');
+  			currentDate = new Date();
+  			for(i = 0; i < topicDates.length; i++) { 
+    			if(Date.parse(topicDates[i].textContent) > currentDate) {
+      			topics[i].className='topic';
+					}
+				}
+			});
+			document.addEventListener('click', function(e) {
+  			topics = document.getElementsByClassName('topic');
+  			topicDates = document.getElementsByClassName('date');
+  			currentDate = new Date();
+  			for(i = 0; i < topicDates.length; i++) { 
+    			if(e.target.textContent.localeCompare('Home') == 0) {
+    				if(Date.parse(topicDates[i].textContent) > currentDate) {
+      				topics[i].className='topic';
+    				} else {
+      				topics[i].className='topic hidden';
+    				}
+    			} else {
+    				if(Date.parse(topicDates[i].textContent) < currentDate) {
+      				topics[i].className='topic';
+    				} else {
+      				topics[i].className='topic hidden';
+    				}
+  				}
+				}
+			});
+		</script>
 	</div>
+
 </body>
 </html>
