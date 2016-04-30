@@ -23,18 +23,6 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			document.getElementById('menu-links').addEventListener('click', function(e) {
-  			menuItem = document.getElementById('menu-links').getElementsByTagName('a');
-  			for(i = 0; i < menuItem.length; i++) { 
-    			if(e.target == menuItem[i]) {
-      			menuItem[i].className='menu-item current';
-    			} else {
-    				menuItem[i].className='menu-item';
-    			}
-  			}
-			});
-		</script>
 
 		<div id="page">
 			<div class="topic hidden">
@@ -274,38 +262,7 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			window.addEventListener('load', function(e) {
-  			topics = document.getElementsByClassName('topic');
-  			topicDates = document.getElementsByClassName('date');
-  			currentDate = new Date();
-  			for(i = 0; i < topicDates.length; i++) { 
-    			if(Date.parse(topicDates[i].textContent) > currentDate) {
-      			topics[i].className='topic';
-					}
-				}
-			});
-			document.getElementById('menu-links').addEventListener('click', function(e) {
-  			topics = document.getElementsByClassName('topic');
-  			topicDates = document.getElementsByClassName('date');
-  			currentDate = new Date();
-  			for(i = 0; i < topicDates.length; i++) { 
-    			if(e.target.textContent.localeCompare('Home') == 0) {
-    				if(Date.parse(topicDates[i].textContent) > currentDate) {
-      				topics[i].className='topic';
-    				} else {
-      				topics[i].className='topic hidden';
-    				}
-    			} else {
-    				if(Date.parse(topicDates[i].textContent) < currentDate) {
-      				topics[i].className='topic';
-    				} else {
-      				topics[i].className='topic hidden';
-    				}
-  				}
-				}
-			});
-		</script>
+		<script src="js/portal.js"></script>
 	</div>
 
 </body>
