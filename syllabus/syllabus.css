@@ -59,10 +59,11 @@ header {
   padding-bottom: 20px;
 }
 :target {
-  background-color: rgba(255,255,0,.08);
+  background-color: rgba(0,255,0,.15);
   padding: 10px;
   margin-left: -10px;
   margin-right: -10px;
+	box-shadow: 0 0 7px rgba(0,0,0,0.1);
 }
 section {
 	border-bottom: 1px solid dimgray;
