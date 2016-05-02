@@ -51,7 +51,7 @@ body {
 article {
   width: 92%;
   max-width: 850px;
-  margin: 50px auto;
+	margin: 20px auto;
 }
 header {
   text-align: center;
@@ -141,6 +141,17 @@ li {
 @media screen {
 	#syllabus {
 		overflow: auto;
+	}
+}
+@media screen and (min-width: 1050px) {
+	#syllabus {
+		background-color: ghostwhite;
+	}
+	article {
+  	background-color: white;
+  	padding: 50px 90px;
+  	box-shadow: 0 0 7px rgba(0,0,0,0.1);
+		margin: 10px auto;
 	}
 }
 @media screen and (max-width: 400px) {
