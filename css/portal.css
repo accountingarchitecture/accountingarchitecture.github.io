@@ -197,8 +197,7 @@ h3 {
 	justify-content: center;
 	-webkit-align-items: stretch;
 	align-items: stretch;
-	margin-right: 10px;
-	margin-left: 10px;
+	margin: 10px;
 }
 .button {
 	-webkit-flex: 0 0 auto;
