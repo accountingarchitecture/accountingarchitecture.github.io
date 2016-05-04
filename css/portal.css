@@ -177,6 +177,8 @@ h3 {
 }
 h1.title {
 	cursor: pointer;
+	-ms-user-select: none;
+	-moz-user-select: none;
 	-webkit-user-select: none;
 }
 h1.title::after {
