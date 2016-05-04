@@ -170,13 +170,20 @@ h3 {
 	width: 92%;
 	max-width: 850px;
 }
-.hidden {
-	display: none;
-}
 .header {
 	-webkit-flex: 1 1 auto;
 	flex: 1 1 auto;
 	margin-left: 20px;
+}
+h1.title {
+	cursor: pointer;
+	-webkit-user-select: none;
+}
+h1.title::after {
+	content: '\25BA';
+}
+h1.expand::after {
+	content: '\25BC';
 }
 .date {
 	color: darkgray;
@@ -225,6 +232,9 @@ a.button:link, a.button:visited {
 }
 a.button:hover, a.menu-item:hover, a.button:active {
 	color: white;
+}
+.hidden {
+	display: none;
 }
 
 /********** Media Queries **********/
