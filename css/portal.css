@@ -184,7 +184,10 @@ h3 {
 }
 .summary {
 	padding-right: 20px;
-	padding-bottom: 30px;
+	padding-bottom: 5px;
+}
+.summary > p, .summary > ol, .summary > ul {
+	padding-bottom: 15px;
 }
 .nav {
 	-webkit-flex: 0 0 auto;
@@ -278,7 +281,7 @@ a.button:hover, a.menu-item:hover, a.button:active {
 		justify-content: center;
 		-webkit-align-items: center;
 		align-items: center;
-		margin: 0px 0px 10px 0px;
+		margin: 0px 0px 15px 0px;
 		width: 100%;
 	}
 	.summary {
