@@ -22,6 +22,10 @@ window.addEventListener('load', function(e) {
 	for(i = 0; i < topicDates.length; i++) {
 		if(startDate < Date.parse(topicDates[i].textContent) && Date.parse(topicDates[i].textContent) <= endDate) {
 			topics[i].className='topic';
+			summary = topics[i].getElementsByClassName('summary');
+			for(j = 0; j < summary.length; j++) {
+				summary[j].className='summary';
+			}
 		}
 	}
 });
