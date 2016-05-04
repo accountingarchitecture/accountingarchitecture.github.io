@@ -10,47 +10,79 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 	}
 });
 
-// Load topics for current page
+// Load topics for home page on load
 window.addEventListener('load', function(e) {
 	topics = document.getElementsByClassName('topic');
-	topicDates = document.getElementsByClassName('date');
+	var topicDates = new Array();
 	currentDate = new Date();
 	startDate = new Date();
 	endDate = new Date();
 	startDate.setDate(currentDate.getDate() - 7);
 	endDate.setDate(currentDate.getDate() + 7);
-	for(i = 0; i < topicDates.length; i++) {
-		if(startDate < Date.parse(topicDates[i].textContent) && Date.parse(topicDates[i].textContent) <= endDate) {
+	for(i = 0; i < topics.length; i++) {
+		topicDates[i] = topics[i].getElementsByClassName('date');
+		if(startDate < Date.parse(topicDates[i][0].textContent) && Date.parse(topicDates[i][0].textContent) <= endDate) {
 			topics[i].className='topic';
-			summary = topics[i].getElementsByClassName('summary');
-			for(j = 0; j < summary.length; j++) {
-				summary[j].className='summary';
+			topics[i].getElementsByClassName('title')[0].className='title expand';
+			topics[i].getElementsByClassName('summary')[0].className='summary';
+		}
+	}
+});
+
+// Load topics for current page on click
+document.getElementById('menu-links').addEventListener('click', function(e) {
+	topics = document.getElementsByClassName('topic');
+	var topicDates = new Array();
+	currentDate = new Date();
+	startDate = new Date();
+	endDate = new Date();
+	startDate.setDate(currentDate.getDate() - 7);
+	endDate.setDate(currentDate.getDate() + 7);
+	for(i = 0; i < topics.length; i++) {
+		topicDates[i] = topics[i].getElementsByClassName('date');
+		if(e.target.textContent == 'Home') {
+			if(startDate < Date.parse(topicDates[i][0].textContent) && Date.parse(topicDates[i][0].textContent) <= endDate) {
+				topics[i].className='topic';
+				topics[i].getElementsByClassName('title')[0].className='title expand';
+				topics[i].getElementsByClassName('summary')[0].className='summary';
+			} else {
+				topics[i].className='topic hidden';
+				topics[i].getElementsByClassName('title')[0].className='title';
+				topics[i].getElementsByClassName('summary')[0].className='summary hidden';
+			}
+		}
+		if(e.target.textContent == 'Archive') {
+			if(Date.parse(topicDates[i][0].textContent) < startDate) {
+				topics[i].className='topic';
+			} else {
+				topics[i].className='topic hidden';
+				topics[i].getElementsByClassName('title')[0].className='title';
+				topics[i].getElementsByClassName('summary')[0].className='summary hidden';
 			}
 		}
 	}
 });
-document.getElementById('menu-links').addEventListener('click', function(e) {
+
+// Show topic summary on click
+document.getElementById('page').addEventListener('click', function(e) {
 	topics = document.getElementsByClassName('topic');
-	topicDates = document.getElementsByClassName('date');
-	currentDate = new Date();
-	startDate = new Date();
-	endDate = new Date();
-	startDate.setDate(currentDate.getDate() - 7);
-	endDate.setDate(currentDate.getDate() + 7);
-	for(i = 0; i < topicDates.length; i++) {
-		if(e.target.textContent.localeCompare('Home') == 0) {
-			if(startDate < Date.parse(topicDates[i].textContent) && Date.parse(topicDates[i].textContent) <= endDate) {
-				topics[i].className='topic';
-			} else {
-				topics[i].className='topic hidden';
+	var title = new Array();
+	for(i = 0; i < topics.length; i++) {
+		title[i] = topics[i].getElementsByClassName('title');
+	}
+	for(i = 0; i < topics.length; i++) {
+		if(e.target.textContent == title[i][0].textContent && title[i][0].className != 'title expand') {
+			title[i][0].className='title expand';
+			topics[i].getElementsByClassName('summary')[0].className='summary';
+			for(j = 0; j < topics.length; j++) {
+				if(i != j) {
+					title[j][0].className='title';
+					topics[j].getElementsByClassName('summary')[0].className='summary hidden';
+				}
 			}
-		}
-		if(e.target.textContent.localeCompare('Archive') == 0) {
-			if(Date.parse(topicDates[i].textContent) < startDate) {
-				topics[i].className='topic';
-			} else {
-				topics[i].className='topic hidden';
-			}
+		} else if(e.target.textContent == title[i][0].textContent && title[i][0].className == 'title expand') {
+			title[i][0].className='title';
+			topics[i].getElementsByClassName('summary')[0].className='summary hidden';
 		}
 	}
 });
