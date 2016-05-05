@@ -25,6 +25,7 @@ window.addEventListener('load', function(e) {
 			topics[i].className='topic';
 			topics[i].getElementsByClassName('title')[0].className='title expand';
 			topics[i].getElementsByClassName('summary')[0].className='summary';
+			topics[i].getElementsByClassName('nav')[0].className='nav';
 		}
 	}
 });
@@ -45,10 +46,12 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 				topics[i].className='topic';
 				topics[i].getElementsByClassName('title')[0].className='title expand';
 				topics[i].getElementsByClassName('summary')[0].className='summary';
+				topics[i].getElementsByClassName('nav')[0].className='nav';
 			} else {
 				topics[i].className='topic hidden';
 				topics[i].getElementsByClassName('title')[0].className='title';
 				topics[i].getElementsByClassName('summary')[0].className='summary hidden';
+				topics[i].getElementsByClassName('nav')[0].className='nav hidden';
 			}
 		}
 		if(e.target.textContent == 'Archive') {
@@ -58,6 +61,7 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 				topics[i].className='topic hidden';
 				topics[i].getElementsByClassName('title')[0].className='title';
 				topics[i].getElementsByClassName('summary')[0].className='summary hidden';
+				topics[i].getElementsByClassName('nav')[0].className='nav hidden';
 			}
 		}
 	}
@@ -74,15 +78,18 @@ document.getElementById('page').addEventListener('click', function(e) {
 		if(e.target.textContent == title[i][0].textContent && title[i][0].className != 'title expand') {
 			title[i][0].className='title expand';
 			topics[i].getElementsByClassName('summary')[0].className='summary';
+			topics[i].getElementsByClassName('nav')[0].className='nav';
 			for(j = 0; j < topics.length; j++) {
 				if(i != j) {
 					title[j][0].className='title';
 					topics[j].getElementsByClassName('summary')[0].className='summary hidden';
+					topics[j].getElementsByClassName('nav')[0].className='nav hidden';
 				}
 			}
 		} else if(e.target.textContent == title[i][0].textContent && title[i][0].className == 'title expand') {
 			title[i][0].className='title';
 			topics[i].getElementsByClassName('summary')[0].className='summary hidden';
+			topics[i].getElementsByClassName('nav')[0].className='nav hidden';
 		}
 	}
 });
