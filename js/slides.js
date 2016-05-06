@@ -4,13 +4,13 @@ Reveal.initialize({
 	// Display a presentation progress bar
 	progress: false,
 	// Display the page number of the current slide
-	slideNumber: false,
+	slideNumber: true,
 	// Push each slide change to the browser history
-	history: true,
+	history: false,
 	// Enable keyboard shortcuts for navigation
 	keyboard: true,
 	// Enable the slide overview mode
-	overview: true,
+	overview: false,
 	// Vertical centering of slides
 	center: true,
 	// Enables touch navigation on devices with touch input
@@ -38,7 +38,7 @@ Reveal.initialize({
 	// Hides the address bar on mobile devices
 	hideAddressBar: true,
 	// Opens links in an iframe preview overlay
-	previewLinks: true,
+	previewLinks: false,
 	// Transition style
 	transition: 'slide', // none/fade/slide/convex/concave/zoom
 	// Transition speed
