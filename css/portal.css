@@ -163,8 +163,8 @@ h3 {
 	box-shadow: 0 0 7px rgba(0,0,0,0.1);
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-flow: row nowrap;
-	flex-flow: row nowrap;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
 	-webkit-align-items: center;
@@ -207,13 +207,14 @@ h1.expand::after {
 	flex: 0 0 auto;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-flow: column nowrap;
-	flex-flow: column nowrap;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
 	-webkit-justify-content: center;
 	justify-content: center;
-	-webkit-align-items: stretch;
-	align-items: stretch;
-	margin: 10px;
+	-webkit-align-items: center;
+	align-items: center;
+	margin: 0px 0px 15px 0px;
+	width: 100%;
 }
 .button {
 	-webkit-flex: 0 0 auto;
@@ -249,6 +250,44 @@ a.button:hover, a.menu-item:hover, a.button:active {
 }
 .hidden {
 	display: none;
+}
+
+/********** Readings **********/
+.readings .row {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	text-align: center;
+	margin: 5px 0px;
+}
+.readings .set {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-items: center;
+	align-items: center;
+	min-width: 50%;
+}
+.readings .column {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-items: stretch;
+	align-items: stretch;
+	margin: 5px 0px 20px 0px;
+	width: 200px;
 }
 
 /********** Media Queries **********/
@@ -293,20 +332,6 @@ a.button:hover, a.menu-item:hover, a.button:active {
 		flex: 0 1 50%;
 		text-align: center;
 		padding: 5px 0;
-	}
-	.topic {
-		-webkit-flex-flow: row wrap;
-		flex-flow: row wrap;
-	}
-	.nav {
-		-webkit-flex-flow: row wrap;
-		flex-flow: row wrap;
-		-webkit-justify-content: center;
-		justify-content: center;
-		-webkit-align-items: center;
-		align-items: center;
-		margin: 0px 0px 15px 0px;
-		width: 100%;
 	}
 	.summary {
 		padding-bottom: 10px;
