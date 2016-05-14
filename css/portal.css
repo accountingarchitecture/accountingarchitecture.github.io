@@ -229,6 +229,14 @@ h1.expand::after {
 	color: white;
 	text-decoration: none;
 }
+.button.collapse::after {
+	font-size: 16px;
+	content: '\25BA';
+}
+.button.expand::after {
+	font-size: 16px;
+	content: '\25BC';
+}
 a.button:link, a.button:visited, a.button:hover, a.button:active {
 	text-decoration: none;
 	font-weight: bold;
