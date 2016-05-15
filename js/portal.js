@@ -75,21 +75,61 @@ document.getElementById('page').addEventListener('click', function(e) {
 		title[i] = topics[i].getElementsByClassName('title');
 	}
 	for(i = 0; i < topics.length; i++) {
-		if(e.target.textContent == title[i][0].textContent && title[i][0].className != 'title expand') {
+		if(e.target == title[i][0] && title[i][0].className != 'title expand') {
 			title[i][0].className='title expand';
 			topics[i].getElementsByClassName('summary')[0].className='summary';
 			topics[i].getElementsByClassName('nav')[0].className='nav';
 			for(j = 0; j < topics.length; j++) {
 				if(i != j) {
-					title[j][0].className='title';
-					topics[j].getElementsByClassName('summary')[0].className='summary hidden';
-					topics[j].getElementsByClassName('nav')[0].className='nav hidden';
+					try {
+						title[j][0].className='title';
+						topics[j].getElementsByClassName('summary')[0].className='summary hidden';
+						topics[j].getElementsByClassName('nav')[0].className='nav hidden';
+						topics[j].getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
+						topics[j].getElementsByClassName('readings')[0].className='readings hidden';
+					} catch(err) {
+					}
 				}
 			}
-		} else if(e.target.textContent == title[i][0].textContent && title[i][0].className == 'title expand') {
-			title[i][0].className='title';
-			topics[i].getElementsByClassName('summary')[0].className='summary hidden';
-			topics[i].getElementsByClassName('nav')[0].className='nav hidden';
+		} else if(e.target == title[i][0] && title[i][0].className == 'title expand') {
+			try {
+				title[i][0].className='title';
+				topics[i].getElementsByClassName('summary')[0].className='summary hidden';
+				topics[i].getElementsByClassName('nav')[0].className='nav hidden';
+				topics[i].getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
+				topics[i].getElementsByClassName('readings')[0].className='readings hidden';
+			} catch(err) {
+			}
+		}
+	}
+});
+
+// Show readings list on click
+document.getElementById('page').addEventListener('click', function(e) {
+	topics = document.getElementsByClassName('topic');
+	var readingsButton = new Array();
+	for(i = 0; i < topics.length; i++) {
+		readingsButton[i] = topics[i].getElementsByClassName('readingsbutton');
+	}
+	for(i = 0; i < topics.length; i++) {
+		if(e.target == readingsButton[i][0] && readingsButton[i][0].className != 'button readingsbutton expand') {
+			readingsButton[i][0].className='button readingsbutton expand';
+			topics[i].getElementsByClassName('readings')[0].className='readings';
+			for(j = 0; j < topics.length; j++) {
+				if(i != j) {
+					try {
+						readingsButton[j][0].className='button readingsbutton';
+						topics[j].getElementsByClassName('readings')[0].className='readings hidden';
+					} catch(err) {
+					}
+				}
+			}
+		} else if(e.target == readingsButton[i][0] && readingsButton[i][0].className == 'button readingsbutton expand') {
+			try {
+				readingsButton[i][0].className='button readingsbutton';
+				topics[i].getElementsByClassName('readings')[0].className='readings hidden';
+			} catch(err) {
+			}
 		}
 	}
 });
