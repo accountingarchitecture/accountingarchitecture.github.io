@@ -115,21 +115,9 @@ document.getElementById('page').addEventListener('click', function(e) {
 		if(e.target == readingsButton[i][0] && readingsButton[i][0].className != 'button readingsbutton expand') {
 			readingsButton[i][0].className='button readingsbutton expand';
 			topics[i].getElementsByClassName('readings')[0].className='readings';
-			for(j = 0; j < topics.length; j++) {
-				if(i != j) {
-					try {
-						readingsButton[j][0].className='button readingsbutton';
-						topics[j].getElementsByClassName('readings')[0].className='readings hidden';
-					} catch(err) {
-					}
-				}
-			}
 		} else if(e.target == readingsButton[i][0] && readingsButton[i][0].className == 'button readingsbutton expand') {
-			try {
 				readingsButton[i][0].className='button readingsbutton';
 				topics[i].getElementsByClassName('readings')[0].className='readings hidden';
-			} catch(err) {
-			}
 		}
 	}
 });
