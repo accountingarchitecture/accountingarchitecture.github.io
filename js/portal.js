@@ -1,3 +1,12 @@
+// Test for current page
+function isHomeOrArchive() {
+	menuItem = document.getElementById('menu-links').getElementsByTagName('a');
+	for(z = 0; z < menuItem.length; z++) {
+		if(menuItem[z].className == 'menu-item current') {
+			return menuItem[z].textContent;
+		}
+	}
+}	
 // Test for topic currency
 function isCurrentOrArchived(topic) {
 	currentDate = new Date();
@@ -59,21 +68,14 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 	// Load topics for current page
 	topics = document.getElementsByClassName('topic');
 	for(i = 0; i < topics.length; i++) {
-		if(e.target.textContent == 'Home') {
-			if(isCurrentOrArchived(topics[i]) == 'current') {
-				topics[i].className='topic';
-				openTopic(topics[i]);
-			} else {
-				topics[i].className='topic hidden';
-				closeTopic(topics[i]);
-			}
-		} else if(e.target.textContent == 'Archive') {
-			if(isCurrentOrArchived(topics[i]) == 'archived') {
-				topics[i].className='topic';
-			} else {
-				topics[i].className='topic hidden';
-				closeTopic(topics[i]);
-			}
+		if(isHomeOrArchive() == 'Home' && isCurrentOrArchived(topics[i]) == 'current') {
+			topics[i].className='topic';
+			openTopic(topics[i]);
+		} else if(isHomeOrArchive() == 'Archive' && isCurrentOrArchived(topics[i]) == 'archived') {
+			topics[i].className='topic';
+		} else {
+			topics[i].className='topic hidden';
+			closeTopic(topics[i]);
 		}
 	}
 });
@@ -85,9 +87,11 @@ document.getElementById('page').addEventListener('click', function(e) {
 	for(i = 0; i < topics.length; i++) {
 		if(e.target == topics[i].getElementsByClassName('title')[0] && topics[i].getElementsByClassName('title')[0].className != 'title expand') {
 			openTopic(topics[i]);
-			for(j = 0; j < topics.length; j++) {
-				if(i != j) {
-					closeTopic(topics[j]);
+			if(isHomeOrArchive() == 'Archive') {
+				for(j = 0; j < topics.length; j++) {
+					if(i != j) {
+						closeTopic(topics[j]);
+					}
 				}
 			}
 		} else if(e.target == topics[i].getElementsByClassName('title')[0] && topics[i].getElementsByClassName('title')[0].className == 'title expand') {
