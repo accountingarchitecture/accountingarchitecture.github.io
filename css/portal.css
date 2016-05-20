@@ -197,6 +197,9 @@
 	.date {
 		color: darkgray;
 		margin-top: 20px;
+		-ms-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
 	}
 	.summary {
 		padding-right: 20px;
