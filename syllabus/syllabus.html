@@ -1,11 +1,212 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ACCT 4020</title>
+	<title>Syllabus</title>
 	<meta name="Author" content="Joshua G. Coyne, PhD">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
-	<link rel="stylesheet" href="syllabus.css">
+	<style>
+		/********** Eric Meyer's Reset CSS v2.0 **********/
+		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after, q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		/********** Set Default HTML Tags ***********/
+		b, strong {
+			font-weight: bold;
+		}
+		i, em {
+			font-style: italic;
+		}
+		ol {
+			list-style-type: decimal;
+		}
+		ul {
+			list-style-type: disc;
+		}
+
+		/********** Set Custom HTML Tags **********/
+		body {
+			font: 16px/18px "Times New Roman", Times, serif;
+			color: #333;
+		}
+		article {
+			width: 92%;
+			margin: 20px auto;
+		}
+		header {
+			text-align: center;
+			font-weight: bold;
+			padding-bottom: 20px;
+		}
+		:target {
+			background-color: rgba(0,255,0,.15);
+			padding: 10px;
+			margin-left: -10px;
+			margin-right: -10px;
+			box-shadow: 0 0 7px rgba(0,0,0,0.1);
+		}
+		section {
+			border-bottom: 1px solid dimgray;
+			margin-top: 10px;
+			padding-bottom: 20px;
+		}
+		h1 {
+			font-weight: bold;
+		}
+		h2 {
+			font-size: 19px;
+			line-height: 27px;
+			font-weight: bold;
+			padding-bottom: 15px;
+		}
+		h3 {
+			font-size: 17px;
+			line-height: 27px;
+			font-weight: bold;
+			padding-bottom: 5px;
+		}
+		h4 {
+			font-style: italic;
+			text-decoration: underline;
+		}
+		p {
+			padding-bottom: 10px;
+		}
+		ol, ul {
+			margin-left: 50px;
+			padding-bottom: 10px;
+			text-indent: -30px;
+		}
+		li {
+			list-style-position: inside;
+			padding-bottom: 2px;
+		}
+
+		/********** Create Style Classes **********/
+		#syllabus {
+			width: 100%;
+		}
+		.letterhead {
+			padding-bottom: 30px;
+		}
+		.table {
+			display: table;
+			table-layout: fixed;
+			padding-bottom: 5px;
+		}
+		.table.bordered {
+			padding-bottom: 15px;
+		}
+		.table.bordered > .row > .cell {
+			border: 2px ridge #eee;
+			padding: 4px 2px;
+		}
+		.row {
+			display: table-row;
+		}
+		.row.header, .row.footer {
+			font-weight: bold;
+		}
+		.cell {
+			display: table-cell;
+		}
+		.cell:first-child {
+			padding-right: 30px;
+		}
+		.cell.centered, .row.centered > .cell {
+			text-align: center;
+			padding-right: initial;
+		}
+
+		/********** Media Queries **********/
+		@media screen {
+			#syllabus {
+				overflow: auto;
+			}
+		}
+		@media screen and (min-width: 950px) {
+			#syllabus {
+				background-color: ghostwhite;
+			}
+			article {
+				background-color: white;
+				padding: 50px 90px;
+				box-shadow: 0 0 7px rgba(0,0,0,0.1);
+				margin: 10px auto;
+				max-width: 750px;
+			}
+		}
+		@media screen and (max-width: 400px) {
+			.letterhead.uofm {
+				display: none;
+			}
+		}
+		@media print {
+			body {
+				font-size: 12px;
+				line-height: 16px;
+			}
+			article {
+				margin: 0px auto;
+			}
+			header {
+				padding-bottom: 10px;
+			}
+			footer {
+				page-break-after: always !important;
+			}
+			section {
+				margin-top: 5px;
+				padding-bottom: 10px;
+			}
+			h2 {
+				font-size: 14px;
+				line-height: 18px;
+				padding-bottom: 5px;
+			}
+			h3 {
+				font-size: 13px;
+				line-height: 17px;
+				padding-bottom: 2px;
+			}
+			img {
+				padding-bottom: 15px;
+			}
+			p {
+				padding-bottom: 5px;
+			}
+			ol, ul {
+				padding-bottom: 5px;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -186,6 +387,7 @@
 					<div id="presentations">
 					<p><i>Presentations</i> are opportunities for students to gain experience in professional speaking. Students may choose any current technology issue for their presentations. Presentations should not discuss an issue already raised in class, but rather select a current issue that we have not already discussed. Each presentation day we will have between four and five individual presentations. Each lecture day I will first ask for volunteers to present the following class period, and if any time slots remain, I will assign presenters at random. Students may choose the form of their presentations (e.g., slide deck, hands-on tutorial, video, in-class exercise, etc). Presentations will be graded according to <a href="../supplement/presentation-rubric.html" target="_blank">this rubric</a>.</p>
 					</div>
+					<p><i>Report memos</i> are one-page memos (with proper headers) that briefly present on a topic relevant to the course. I will select the memo topic opportunities for students to gain experience in professional speaking. Students may choose any current technology issue for their presentations. Presentations should not discuss an issue already raised in class, but rather select a current issue that we have not already discussed. Each presentation day we will have between four and five individual presentations. Each lecture day I will first ask for volunteers to present the following class period, and if any time slots remain, I will assign presenters at random. Students may choose the form of their presentations (e.g., slide deck, hands-on tutorial, video, in-class exercise, etc). Presentations will be graded according to <a href="../supplement/presentation-rubric.html" target="_blank">this rubric</a>.</p>
 					<div id="techreport">
 					<p><i>Technology reports</i> are mock reports that present research on a specific technology and explain why a firm should or should not adopt it. Reports should be at least 1,000 words in length and draw on materials beyond lecture slides and readings that I provide. Although I will not require it, the best reports will include cost-benefit analysis, as well as evidence of successful implementation by another firm (i.e., case study). I will grade reports on the relevance of the topic, content, exposition, and presentation. For this assignment, you may work alone or in groups of no more than 3.</p>
 					</div>
