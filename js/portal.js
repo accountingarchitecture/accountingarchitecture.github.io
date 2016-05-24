@@ -7,16 +7,20 @@ function isHomeOrArchive() {
 		}
 	}
 }	
+
 // Test for topic currency
 function isCurrentOrArchived(topic) {
+	topicDate = new Date(Date.parse(topic.getElementsByClassName('date')[0].textContent));
 	currentDate = new Date();
-	startDate = new Date();
-	endDate = new Date();
-	startDate.setDate(currentDate.getDate() - 7);
-	endDate.setDate(currentDate.getDate() + 7);
-	if(startDate < Date.parse(topic.getElementsByClassName('date')[0].textContent) && Date.parse(topic.getElementsByClassName('date')[0].textContent) <= endDate) {
+	if(topicDate.getDay() == 1 || topicDate.getDay() == 2) {
+		startDate = new Date(topicDate.valueOf() - 432000000);
+	} else if(topicDate.getDay() == 3 || topicDate.getDay() == 4) {
+		startDate = new Date(topicDate.valueOf() - 604800000);
+	}
+	endDate = new Date(topicDate.valueOf() + (5 - topicDate.getDay()) * 86400000);
+	if(startDate < currentDate && currentDate <= endDate) {
 		return 'current';
-	} else if(Date.parse(topic.getElementsByClassName('date')[0].textContent) < startDate) {
+	} else if(currentDate > endDate) {
 		return 'archived';
 	}
 }
@@ -48,7 +52,7 @@ window.addEventListener('load', function(e) {
 	topics = document.getElementsByClassName('topic');
 	for(i = 0; i < topics.length; i++) {
 		if(isCurrentOrArchived(topics[i]) == 'current') {
-			topics[i].getElementsByClassName('date')[0].className='topic';
+			topics[i].className='topic';
 			openTopic(topics[i]);
 		}
 	}
