@@ -49,6 +49,13 @@ function closeTopic(topic) {
 
 // Display topics for home page on load
 window.addEventListener('load', function(e) {
+	modules = document.getElementsByClassName('module');
+	console.log(modules);
+	moduleTopics = new Array();
+	for(j = 0; j < modules.length; j++) {
+		moduleTopics[j] = modules[j].getElementsByClassName('topic');
+		console.log(moduleTopics[j]);
+	}
 	topics = document.getElementsByClassName('topic');
 	for(i = 0; i < topics.length; i++) {
 		if(isCurrentOrArchived(topics[i]) == 'current') {
