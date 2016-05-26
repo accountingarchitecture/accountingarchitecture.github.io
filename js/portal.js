@@ -50,17 +50,14 @@ function closeTopic(topic) {
 // Display topics for home page on load
 window.addEventListener('load', function(e) {
 	modules = document.getElementsByClassName('module');
-	console.log(modules);
 	moduleTopics = new Array();
-	for(j = 0; j < modules.length; j++) {
-		moduleTopics[j] = modules[j].getElementsByClassName('topic');
-		console.log(moduleTopics[j]);
-	}
-	topics = document.getElementsByClassName('topic');
-	for(i = 0; i < topics.length; i++) {
-		if(isCurrentOrArchived(topics[i]) == 'current') {
-			topics[i].className='topic';
-			openTopic(topics[i]);
+	for(i = 0; i < modules.length; i++) {
+		moduleTopics[i] = modules[i].getElementsByClassName('topic');
+		for(j = 0; j < moduleTopics[i].length; j++) {
+			if(isCurrentOrArchived(moduleTopics[i][j]) == 'current') {
+				modules[i].className='module';
+				openTopic(moduleTopics[i][j]);
+			}
 		}
 	}
 });
@@ -77,16 +74,20 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 		}
 	}
 	// Load topics for current page
-	topics = document.getElementsByClassName('topic');
-	for(i = 0; i < topics.length; i++) {
-		if(isHomeOrArchive() == 'Home' && isCurrentOrArchived(topics[i]) == 'current') {
-			topics[i].className='topic';
-			openTopic(topics[i]);
-		} else if(isHomeOrArchive() == 'Archive' && isCurrentOrArchived(topics[i]) == 'archived') {
-			topics[i].className='topic';
-		} else {
-			topics[i].className='topic hidden';
-			closeTopic(topics[i]);
+	modules = document.getElementsByClassName('module');
+	moduleTopics = new Array();
+	for(i = 0; i < modules.length; i++) {
+		moduleTopics[i] = modules[i].getElementsByClassName('topic');
+		for(j = 0; j < moduleTopics[i].length; j++) {
+			if(isHomeOrArchive() == 'Home' && isCurrentOrArchived(moduleTopics[i][j]) == 'current') {
+				modules[i].className='module';
+				openTopic(moduleTopics[i][j]);
+			} else if(isHomeOrArchive() == 'Archive' && isCurrentOrArchived(moduleTopics[i][j]) == 'archived') {
+				modules[i].className='module';
+			} else {
+				modules[i].className='module hidden';
+				closeTopic(moduleTopics[i][j]);
+			}
 		}
 	}
 });
