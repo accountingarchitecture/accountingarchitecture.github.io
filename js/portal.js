@@ -6,7 +6,7 @@ function isHomeOrArchive() {
 			return menuItem[z].textContent;
 		}
 	}
-}	
+}
 
 // Test for topic currency
 function isCurrentOrArchived(topic) {
@@ -41,9 +41,7 @@ function closeTopic(topic) {
 		topic.getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
 		topic.getElementsByClassName('readings')[0].className='readings hidden';
 	} catch(err) {
-		// Catch TypeError when
-		// (1) topics has no readings button and
-		// (2) looping to close topic (confusing...).
+		// Catch TypeError when topic has no readings button
 	}
 }
 
