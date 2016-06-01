@@ -96,6 +96,9 @@
 		z-index: 99;
 		min-height: 60px;
 		box-shadow: 1px 0px 10px #004891;
+		-ms-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
 	}
 	#menu {
 		display: -webkit-flex;
@@ -106,7 +109,8 @@
 		justify-content: space-between;
 		-webkit-align-items: center;
 		align-items: center;
-		font: 21px/28px Arial, sans-serif;
+		font: 16px/23px Arial, sans-serif;
+		font-weight: bold;
 		color: white;
 		margin-left: auto;
 		margin-right: auto;
@@ -138,9 +142,6 @@
 		justify-content: flex-end;
 		-webkit-align-items: center;
 		align-items: center;
-		-ms-user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
 	}
 	.menu-item {
@@ -148,7 +149,6 @@
 		flex: 0 1 auto;
 		font-size: 15px;
 		line-height: 25px;
-		font-weight: bold;
 		cursor: pointer;
 		padding: 5px 30px;
 		color: lightgray;
@@ -245,9 +245,13 @@
 	}
 	.summary {
 		padding-right: 20px;
+		margin-top: -15px;
 	}
 	.summary > p, .summary > ol, .summary > ul {
 		padding-bottom: 15px;
+	}
+	.summary > ol, .summary > ul {
+		padding-left: 20px;
 	}
 	.nav {
 		-webkit-flex: 0 0 auto;
@@ -338,6 +342,8 @@
 		margin: 5px 0px 10px 0px;
 		width: 200px;
 	}
+
+/********** Override Display **********/
 	.hidden {
 		display: none;
 	}
@@ -372,6 +378,9 @@
 		#branding {
 			-webkit-flex: 1 1 100%;
 			flex: 1 1 100%;
+		}
+		#coursename {
+			font-size: 15px;
 		}
 		#menu-links {
 			-webkit-flex: 1 1 50%;
