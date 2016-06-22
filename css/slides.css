@@ -28,6 +28,7 @@
 .reveal blockquote {
 	margin: 10px auto;
 	text-align: center;
+	width: 90%;
 }
 .reveal .nobullet {
 	list-style-type: none;
