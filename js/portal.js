@@ -30,18 +30,41 @@ function openTopic(topic) {
 	topic.getElementsByClassName('title')[0].className='title expand';
 	topic.getElementsByClassName('summary')[0].className='summary';
 	topic.getElementsByClassName('nav')[0].className='nav';
+	try {
+		if(isHomeOrArchive() == 'Home') {
+			assignments = topic.getElementsByClassName('assignmentbutton');
+			for(y = 0; y < assignments.length; y++) {
+				assignments[y].className='button assignmentbutton';
+			}
+		} else if(isHomeOrArchive() == 'Archive') {
+			solutions = topic.getElementsByClassName('solutionbutton');
+			for(y = 0; y < solutions.length; y++) {
+				solutions[y].className='button solutionbutton';
+			}
+		}
+	} catch(err) {
+		// Catch TypeError when topic has no puzzle
+	}
 }
 
 // How to hide topic content (including readings)
 function closeTopic(topic) {
+	topic.getElementsByClassName('title')[0].className='title';
+	topic.getElementsByClassName('summary')[0].className='summary hidden';
+	topic.getElementsByClassName('nav')[0].className='nav hidden';
 	try {
-		topic.getElementsByClassName('title')[0].className='title';
-		topic.getElementsByClassName('summary')[0].className='summary hidden';
-		topic.getElementsByClassName('nav')[0].className='nav hidden';
 		topic.getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
 		topic.getElementsByClassName('readings')[0].className='readings hidden';
+		assignments = topic.getElementsByClassName('assignmentbutton');
+		for(y = 0; y < assignments.length; y++) {
+			assignments[y].className='button assignmentbutton hidden';
+		}
+		solutions = topic.getElementsByClassName('solutionbutton');
+		for(y = 0; y < solutions.length; y++) {
+			solutions[y].className='button solutionbutton hidden';
+		}
 	} catch(err) {
-		// Catch TypeError when topic has no readings button
+		// Catch TypeError when topic has no readings and/or puzzle
 	}
 }
 
