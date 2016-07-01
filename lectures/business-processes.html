@@ -6,18 +6,18 @@
 	<title>Business Processes</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../../css/slides.css">
+	<link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
@@ -30,9 +30,9 @@
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Business processes are the activities that the information system should support and measure. The Business Model block in the foundation encompasses these processes. As a result, an understanding of these processes is necessary in order to design an effective information system.</p>
+					<p>Business processes are the activities that the information system should support and measure. The Business Model&mdash;a block in the foundation of the arch&mdash;encompasses these processes. As a result, an understanding of these processes is necessary in order to design an effective information system.</p>
 				</div>
 			</div>
 		</section>
@@ -43,12 +43,43 @@
 		</section>
 
 		<section>
+			<h3>Processes</h3>
+			<p>A business process is a series of tasks or activities that serve to transfer resources, goods, services, or money, or information between two parties. For example, the sales order process includes the tasks for receiving a order from a customer and providing goods or services to the customer; the cash receipts process might involve receiving payments from customers; the purchase and cash payments process could be the exact opposite: purchase goods and services from vendors and paying on vendor invoices.</p>
+			<p>(Unfortunately, many also refer to the individual tasks within a process as processes, as well, which can cause confusion.)</p>
+		</section>
+
+		<section>
+			<h3>Cycles</h3>
+			<p>The business model is the sum of all business processes, but accountants frequently identify <u><i>cycles</i></u> as subgroupings of the business model. Two popular examples of business cycles are the revenue cycle and the expenditure cycle, although many accounting materials also reference a production or conversion cycle, a payroll cycle, and a general ledger cycle. The revenue cycle might include the sales order process, the cash receipts process, and the returns process for handling customer returns; the expenditure cycle could include the purchase process and the cash payments process.</p>
+		</section>
+		
+		<section>
+			<h3>Need for Flexibility</h3>
+			<p>Just as financial accounting, tax, and auditing standards reflect differences in business models between companies and industries, the identification of relevant business cycles is also unique. For example, the production of inventory or fixed assets is no longer a relevant component of many business models, whereas given the importance of corporate taxes, a tax cycle might manifest. In a services firm, such as is common to public accounting, the distinction between the expenditure and payroll cycles may be negligent because employees are the primary assets of the firm. A company that deals primarily in the creation of open source software might not even have a revenue cycle.</p>
+		</section>
+
+		<section>
+			<h3>A Word on Ledgers</h3>
+			<p>Regulation&mdash;part of the Compliance block of the architecture&mdash;dictates the reporting of financial items in a specific fashion without much room for flexibility. As a result, a financial reporting cycle is vital, at least for public companies. (Because lenders may also require financial disclosures&mdash;another component of the Compliance block&mdash;the need for a financial reporting cycle is not unique to public companies.) However, that is not a prescription to have a general ledger or general ledger cycle. Journals and ledgers are merely an example of an information system. The information system is not restricted to one form, and informational needs, technological feasibility&mdash;the third foundational block&mdash;best practices, and preferences will dictate how to track accounting, tax, payroll, HR, etc., information.</p>
+		</section>
+
+		<section>
+			<h3>What's the Point?</h3>
+			<p>If information systems and business processes are unique to each organization, what is the point of teaching anything? It may not be possible to answer this question satisfactorily, but the truth is that an understanding of principles and examples makes it easier to adapt to unique situations in the future, so the goal becomes to provide exposure to new ideas, and open the door towards being able to acquire additional information about specific implementations.</p>
+		</section>
+
+		<section>
+			<h3>Learning Tool</h3>
+			<p>The tool to enable future learning about information systems is knowledge of the individual building blocks, and this is the focus of the Accounting Architecture. The tool to enable future learning about business models is the ability to read diagrams.</p>
+		</section>
+
+		<section>
 			<h3>Diagram</h3>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width:50%">
-					<p>A visual representation of logic useful for efficient communication.</p>
+					<p>A visual representation of logic useful for efficient communication. Diagrams are not the only tool for communicating a series of processes, but drawings are more efficient than narrations. They are frequently easier to understand and interpret. Because they can portray multiple parts of the whole at once, they can identify links between objects.</p>
 				</div>
-				<div class="flex-item"><img src="../../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/>
+				<div class="flex-item"><img src="../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/>
 				</div>
 			</div>
 		</section>
@@ -64,35 +95,33 @@
 		</section>
 
 		<section>
-			<h3>Worth a Thousand Words</h3>
-			<p>Diagrams are not the only tool for communicating a series of processes, but drawings are more efficient than narrations. They are frequently easier to understand and interpret. Because they can portray multiple parts of the whole at once, they can identify links between objects.</p>
-		</section>
-
-		<section>
 			<h3>Two Types of Models</h3>
 			<ul>
-				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
-				<li><u><i>Structure models</i></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
+				<li><u><i>Activity models</i></u> describe a series of tasks that comprise a system. This system may be a computer program or a business process or cycle involving many programs and people, called agents. Activity models track flow of resources, data, and control. Information systems focus on data flow, but control flow is also important.</li>
+				<li><u><i>Structure models</i></u> describe the characteristics of people, assets, and data and their relationships with one another. Structure models are useful for creating conceptual models of data stores.</li>
 			</ul>
-			<p>Business process modeling relies on activity models. Later in the course, when we discuss data storage, we will investigate structure models as a tool for modeling data and databases.</p>
+			<p></p>
 		</section>
 
 		<section>
-			<h3>What is a Process?</h3>
-			<p>Processes are individual activities in a system, such as prepare sales order, issue payment, or update general ledger. Processes are also the entire sequence of events, such as the payroll process. In essence, any activity is a process; some activities are divisible; therefore, some processes comprise other smaller processes. If this lack of specificity is confusing, simply remember that all activities are processes.</p>
+			<h3>Activity Model</h3>
+			<div class="flex-row">
+				<div class="flex-item"><img src="../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/></div>
+				<div class="flex-item" style="max-width:50%">
+					<p>A curriculum plan is a simple example of an activity model. Passing a course represents one task, and the model demonstrates how to navigate the entire degree process. This model contains no data objects, so the purpose of the arrows is demonstrate which tasks must precede others. This is an example of control flow.</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
-			<h3>Flows</h3>
-			<p>Activity models track flow of resources, data, and control. We are particularly interested in the flow of data, but control flow is also important.</p>
+			<h3>Control Flow</h3>
+			<p><u><i>Control flow</i></u> determines which tasks in a process may execute in which order. A traditional card game illustrates this principle. If one turn involves (1) requesting cards and (2) placing a bet, then the requesting cards activity must complete before placing a bet, and both activities must complete before the next player can have a turn. The current task has control, and when it completes, control is passed to the next task.</p>
+			<p>(The Accounting Architecture has a Control section, but this is a different use of the word.)</p>
 		</section>
 
 		<section>
-			<h3>Control vs. Control Flow</h3>
-			<ul>
-				<li><u><i>Controls</i></u> are checks that ensure accuracy and integrity. At the program level, these may involve verifying completeness of a file before and after processing. At the system level, these may include checking for credit worthiness before authorizing a sale on credit or requiring two signatures on all checks.</li>
-				<li><u><i>Control flow</i></u> tracks the execution of a process as if it were a turn-based activity. Control is had by the current step in the process. Data may flow in and out of other steps, but no steps in the process should execute until control has passed on to them. For example, accounts payable may receive a purchase order but may not pay until control has passed to the proper step after receiving the goods and an invoice.</li>
-			</ul>
+			<h3>Data Flow</h3>
+			<p>Data flow is simpler to understand than control flow. The purpose of many process tasks, especially the measurement and reporting tasks familiar to accountants, is to create data. Data flow tracks data creation, use, and storage by identifying which task creates the data, which tasks use the data, and where the data is stored. A straightforward example would be a sample sales order process. The customer contacts the sales rep to place an order; the sales rep creates a sales order that the inventory warehouse uses to fill the order; the warehouse passes the sales order to billing department, so that the billing department can create an invoice to send to the customer.</p>
 		</section>
 
 		<section>
@@ -124,7 +153,7 @@
 
 		<section>
 			<h3>IBM Template</h3>
-			<img src="../../images/flowchart-template.jpg" style="max-height: 600px;" alt="IBM Template"/>
+			<img src="../images/flowchart-template.jpg" style="max-height: 600px;" alt="IBM Template"/>
 		</section>
 
 		<section>
@@ -144,7 +173,7 @@
 
 		<section>
 			<h3>Flowchart Shapes</h3>
-			<div class="override"><img src="../../images/Flowchart.png" alt="Flowchart Shapes"/></div>
+			<div class="override"><img src="../images/Flowchart.png" alt="Flowchart Shapes"/></div>
 		</section>
 
 		<section>
@@ -160,7 +189,7 @@
 		
 		<section>
 			<h3>Sample Flowchart</h3>
-			<div class="override"><img src="../../images/sample-flowchart.png" alt="Sample Flowchart" style="max-height: 550px"/></div>
+			<div class="override"><img src="../images/sample-flowchart.png" alt="Sample Flowchart" style="max-height: 550px"/></div>
 		</section>
 
 		<section>
@@ -170,7 +199,7 @@
 
 		<section>
 			<h3>A Funny One</h3>
-			<div class="override"><img src="../../images/funny.png" alt="Deal Flowchart" style="max-height: 550px"/></div>
+			<div class="override"><img src="../images/funny.png" alt="Deal Flowchart" style="max-height: 550px"/></div>
 		</section>
 
 		<section>
@@ -199,7 +228,7 @@
 
 		<section>
 			<h3>Two <i>Simple</i> Sets of Shapes</h3>
-			<div class="override"><img src="../../images/DFD.png" alt="DFD Shapes"/>
+			<div class="override"><img src="../images/DFD.png" alt="DFD Shapes"/>
 		</section>
 
 		<section>
@@ -225,7 +254,7 @@
 		
 		<section>
 			<h3>Sample DFD</h3>
-			<div class="override"><img src="../../images/sample-dfd.png" alt="Sample DFD" style="max-height: 450px"/>
+			<div class="override"><img src="../images/sample-dfd.png" alt="Sample DFD" style="max-height: 450px"/>
 		</section>
 
 		<section>
@@ -267,12 +296,12 @@
 		<section>
 			<h3>UML Shapes</h3>
 			<p>UML has may different types of diagrams: class, object, package, activty, etc., and each serves to model a different scenario. The shapes for activity diagrams have changed considerably from UML 1.X to UML 2.0. These are the main UML 2.0 shapes:</p>
-			<div class="override"><img src="../../images/UML.png" alt="UML Shapes"/></div>
+			<div class="override"><img src="../images/UML.png" alt="UML Shapes"/></div>
 		</section>
 
 		<section>
 			<h3>Sample UML</h3>
-			<div class="override"><img src="../../images/sample-uml.png" alt="Sample UML" style="max-height: 450px"/>
+			<div class="override"><img src="../images/sample-uml.png" alt="Sample UML" style="max-height: 450px"/>
 		</section>
 
 		<section>
@@ -314,13 +343,13 @@
 
 		<section>
 			<h3>BPMN 2.0 Basic Shapes</h3>
-			<div class="override"><img src="../../images/BPMN.png" alt="Basic BPMN Shapes"/></div>
+			<div class="override"><img src="../images/BPMN.png" alt="Basic BPMN Shapes"/></div>
 		</section>
 
 		<section>
 			<h3>Advanced Shapes</h3>
 			<p>BPMN is different from other models in one interesting way. Although it wants to allow for many different situations, instead of adopting many different shapes or only a few shapes which ignore the specifics of the object, BPMN uses a few shapes and adds icons to the shapes to incorporate specificity.</p>
-			<div class="override"><img src="../../images/BPMNAdvanced.png" alt="Advanced BPMN Shapes"/></div>
+			<div class="override"><img src="../images/BPMNAdvanced.png" alt="Advanced BPMN Shapes"/></div>
 		</section>
 
 		<section>
@@ -345,7 +374,7 @@
 
 		<section>
 			<h3>Sample Collaboration</h3>
-			<div class="override"><img src="../../images/sample-collaboration.png" alt="Sample BPMN Collaboration" style="max-height: 650px"/>
+			<div class="override"><img src="../images/sample-collaboration.png" alt="Sample BPMN Collaboration" style="max-height: 650px"/>
 		</section>
 
 		<section>
@@ -355,7 +384,7 @@
 
 		<section>
 			<h3>Sample Choreography</h3>
-			<div class="override"><img src="../../images/sample-choreography.png" alt="Sample BPMN Choreography" style="max-height: 650px"/>
+			<div class="override"><img src="../images/sample-choreography.png" alt="Sample BPMN Choreography" style="max-height: 650px"/>
 		</section>
 
 		<section>
@@ -395,8 +424,8 @@
 	</div>
 	</div>
 
-	<script src="../../reveal.js/lib/js/head.min.js"></script>
-	<script src="../../reveal.js/js/reveal.js"></script>
-	<script src="../../js/slides.js"></script>
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../js/slides.js"></script>
 </body>
 </html>
