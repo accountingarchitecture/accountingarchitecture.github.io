@@ -125,8 +125,14 @@
 		</section>
 
 		<section>
-			<h3>Flowcharts</h3>
-			<p>In order to understand the principles of data and control flow, it is best to view actual diagrams. The curriculum diagram is a rudimentary example, but many diagrams adhere to specific conventions that include predefined shapes and conventions. Learning to read diagrams that follow these conventions will not only reinforce the principles of data and control flow, but also </p>
+			<h3>Modeling Standards</h3>
+			<p>In order to understand the principles of data and control flow, it is best to view actual diagrams. The curriculum diagram is a rudimentary example, but many diagrams adhere to specific frameworks that include predefined shapes, and it is necessary to recognize these shapes in order to be able to read and write proper diagrams. Four well-known examples are of diagramming frameworks are:</p>
+			<ul>
+				<li>Flowcharts</li>
+				<li>Data flow diagrams (DFD)</li>
+				<li>Unified Modeling Language (UML) Activity Diagrams</li>
+				<li>Business Process Model and Notation (BPMN)</li>
+			</ul>
 		</section>
 
 		<section>
@@ -141,62 +147,24 @@
 
 		<section>
 			<h3>Narrative</h3>
-			<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory that has fallen below its reorder point. Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy to Inventory Control to file with Inventory Control&rdquo;s copy of the purchase requisition, and sends a copy to the Vendor.</p>
+			<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory. (This might occur if inventory has fallen below its reorder point.) Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy of the purchase order to Inventory Control to file with Inventory Control&rdquo;s copy of the purchase requisition, and sends a copy of the purchase order to the Vendor.</p>
+			<p>(This terse narrative demonstrates that the communication of even a simple process with few steps benefits from a diagram.)
 		</section>
 
 		<section>
 			<h3>Flowchart Conventions</h3>
+			<p>In addition to a set of prescribed shapes, diagramming frameworks also stipulate drawing conventions</p>
 			<ul>
 				<li>Flowcharts are read from top to bottom and left to right.</li>
 				<li>Flow of data and control is signified by arrows with arrowheads.</li>
-				<li>Arrows should generally only point vertically or horizontally with 90&deg; angles.</li>
-				<li>Although arrows should cross as infrequently as possible, when arrows cross, flow should continue in a straight line.</li>
+				<li>Arrows should only point vertically or horizontally with 90&deg; angles.</li>
 				<li>For system flowcharts with multiple agents, flowcharts are subdivided into swimlanes, which are columns that signify which activities belong to which agent.</li>
 			</ul>
 		</section>
 		
 		<section>
-			<h3>Data Flow &amp; Control Flow</h3>
-			<p>Control flow determines the order of tasks, and data flow determines the use of data. Although the information system is The flow of data and the flow of control in a process are not always aligned. Sometimes data is sent from one process to another while the first process has control, even though the second process will not have control until several intermediate processes have completed. For example, students submit an application for graduation before courses have ended, but the receipt of an application is not evidence that graduation can occur until control has passed from all outstanding courses.</p>
-		</section>
-
-		<section>
-			<h3>Modeling Standards</h3>
-			<p>Although many diagramming frameworks exist, we will focus on four well-known options:</p>
-			<ul>
-				<li>Flowchart</li>
-				<li>Data flow diagram (DFD)</li>
-				<li>Unified Modeling Language (UML) Activity Diagram</li>
-				<li>Business Process Model and Notation (BPMN)</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Flowchart Strengths and Weaknesses</h3>
-			<ul>
-				<li>Strengths</li>
-				<ul>
-					<li>Swimlanes highlight accountability.</li>
-					<li>Plethora of shapes identifies the form of data, nature of the activity, and the number of copies of physical documents.</li>
-				</ul>
-				<li>Weaknesses</li>
-				<ul>
-					<li>High number of shapes can decrease readability.</li>
-				</ul>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Data Flow Diagrams</h3>
-			<ul>
-				<li>1975: Edward Yourdon and Larry Constantine develop data flow diagrams to model computer logic.</li>
-				<li>1979: Chris Gane and Trish Sarson propose an alternative set of data flow diagram symbols and apply these diagrams to business processes.</li>
-			</ul>
-			<p>Although these two groups receive credit for DFD conventions, they seem suspiciously similar to earlier functional flow block diagrams developed by TRW Incorporated in the 1950s.</p>
-		</section>
-
-		<section>
 			<h3>Two <i>Simple</i> Sets of Shapes</h3>
+			<p>Unlike flowcharts which have 
 			<div class="override"><img src="../images/DFD.png" alt="DFD Shapes"/>
 		</section>
 
