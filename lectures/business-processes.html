@@ -126,7 +126,7 @@
 
 		<section>
 			<h3>Modeling Standards</h3>
-			<p>In order to understand the principles of data and control flow, it is best to view actual diagrams. The curriculum diagram is a rudimentary example, but many diagrams adhere to specific frameworks that include predefined shapes, and it is necessary to recognize these shapes in order to be able to read and write proper diagrams. Four well-known examples are of diagramming frameworks are:</p>
+			<p>In order to understand the principles of data and control flow, it is best to view actual diagrams. The curriculum diagram is a rudimentary example, but many diagrams adhere to specific frameworks that include templates (i.e., predefined sets of shapes), and it is necessary to recognize these shapes in order to be able to read and write proper diagrams. Four well-known examples are of diagramming frameworks are:</p>
 			<ul>
 				<li>Flowcharts</li>
 				<li>Data flow diagrams (DFD)</li>
@@ -153,7 +153,7 @@
 
 		<section>
 			<h3>Flowchart Conventions</h3>
-			<p>In addition to a set of prescribed shapes, diagramming frameworks also stipulate drawing conventions</p>
+			<p>In addition to a set of prescribed shapes, diagramming frameworks also stipulate drawing conventions to increase readability. For example:</p>
 			<ul>
 				<li>Flowcharts are read from top to bottom and left to right.</li>
 				<li>Flow of data and control is signified by arrows with arrowheads.</li>
@@ -163,32 +163,11 @@
 		</section>
 		
 		<section>
-			<h3>Two <i>Simple</i> Sets of Shapes</h3>
-			<p>Unlike flowcharts which have 
+			<h3>Data Flow Diagrams</h3>
+			<p>Two different groups introduced nearly identical templates for DFDs:</p>
 			<div class="override"><img src="../images/DFD.png" alt="DFD Shapes"/>
 		</section>
 
-		<section>
-			<h3>Black Boxes</h3>
-			<p>The Entity shape of the Gane-Sarson DFD approximates a black box. In any business process, some activities are opaque, especially those that involve counter-parties outside of the firm. Even some internal parties can engage in opaque activities when the information is confidential or when the agent is siloed (i.e., no one else participates in or understands certain tasks).</p>
-		</section>
-
-		<section>
-			<h3>DFD Conventions</h3>
-			<ul>
-				<li>DFDs have no predetermined direction or swimlanes.</li>
-				<li>Flow of data and control is signified by arrows with arrowheads just as with flowcharts.</li>
-				<li>Because DFDs have no data shapes other than data stores, the data transfered from step to step is displayed as a label for the arrow between the two steps.</li>
-				<li>Gane-Sarson arrows only point vertically or horizontally with 90&deg; angles, but Yourdon arrows can point in any direction and even curve.</li>
-				<li>Although arrows should cross as infrequently as possible, when arrows cross, flow should continue in a straight line.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>DFD Levels</h3>
-			<p>Program steps that contain multiple substeps can necessitate the creation of multiple levels of DFDs which are linked together by numbers. This allows DFDs to address the fact that processes can be divisible into sub-processes. The highest level DFD (Level 0) numbers processes with whole numbers (1, 2, 3, etc). The second level (Level 1) adds a decimal after the number of the decomposed process (Process 1 becomes 1.1, 1.2, 1.3, etc.). The third level (Level 2) adds an additional decimal number (Process 1.3 becomes 1.3.1, 1.3.2, etc.)</p>
-		</section>
-		
 		<section>
 			<h3>Sample DFD</h3>
 			<div class="override"><img src="../images/sample-dfd.png" alt="Sample DFD" style="max-height: 450px"/>
@@ -200,39 +179,28 @@
 		</section>
 
 		<section>
-			<h3>DFD Strengths and Weaknesses</h3>
+			<h3>DFD Conventions</h3>
 			<ul>
-				<li>Strengths</li>
-				<ul>
-					<li>Reduced number of shapes keeps the diagrams simple by focusing on data flows and processes and not the form of the data.</li>
-				</ul>
-				<li>Weaknesses</li>
-				<ul>
-					<li>Lack of predetermined direction reduces readability.</li>
-					<li>Lack of swimlanes hides accountability.</li>
-				</ul>
+				<li>Flow of data and control is signified by arrows with arrowheads just as with flowcharts.</li>
+				<li>Because DFDs have no data shapes other than data stores, the data transfered from step to step is displayed as a label next to the arrow between the two steps.</li>
+				<li>Gane-Sarson arrows only point vertically or horizontally with 90&deg; angles, but Yourdon arrows can point in any direction and even curve.</li>
+				<li>DFDs have no predetermined direction or swimlanes.</li>
 			</ul>
 		</section>
 
+		<section>
+			<h3>Simplicity &ne; Readability</h3>
+			<p>Unlike flowcharts which have a large set of shapes to increase specificity, data flow diagrams promote simplicity by restricting themselves to three simple shapes. The large flowchart template can also result in a large number of shapes and a cluttered diagram, which reduces readability. However, simplicity will not always increase readability. For example, the lack of specific arrow conventions for Yourdon DFDs, and the lack of predetermined direction for DFDs reduces the number of requirements for DFDs but they conflict with a preference to read from top to bottom and left to right. Additionally, the lack of swimlanes obscures accountability (i.e., how performs a task), which is important information for accountants and auditors.</p>
+		</section>
+			
+		<section>
+			<h3>DFD Levels</h3>
+			<p>Some process tasks might have multiple steps. DFDs levels allow for a convenient presentation of tasks decomposed into subtasks. The highest level DFD (Level 0) numbers processes with whole numbers (1, 2, 3, etc). The second level (Level 1) adds a decimal after the number of the decomposed process (Process 1 becomes 1.1, 1.2, 1.3, etc.). The third level (Level 2) adds an additional decimal number (Process 1.3 becomes 1.3.1, 1.3.2, etc.)</p>
+		</section>
+		
 		<section>
 			<h3>Unified Modeling Language</h3>
-			<p>As the name suggests, UML is a general-purpose modeling language designed to standardize system visualization.</p>
-			<ul>
-				<li>1994: Grady Booch, Ivar Jacobson and James Rumbaugh begin developing UML to support object-oriented software engineering.</li>
-				<li>1997: Object Management Group adopts UML.</li>
-				<li>2005: International Organization for Standardization approves UML 2.0 as an ISO standard.</li>
-			</ul>
-			<p>UML is new, but many consider it to be an extension of traditional flowcharts.</p>
-		</section>
-
-		<section>
-			<h3>UML Adoption</h3>
-			<p>UML has seen relatively little adoption in practice. My assumption is that this has one primary cause. In practice, diagramming is not standardized. People generally create diagrams <i>ad-hoc</i> to solve an immediate problem and use whatever conventions necessary to record and communicate their thoughts. As a result, newer, improved methods may not satisfy a need if the existing tools are sufficient.</p>
-		</section>
-
-		<section>
-			<h3>UML Shapes</h3>
-			<p>UML has may different types of diagrams: class, object, package, activty, etc., and each serves to model a different scenario. The shapes for activity diagrams have changed considerably from UML 1.X to UML 2.0. These are the main UML 2.0 shapes:</p>
+			<p>UML has may different types of diagrams: class, object, package, activty, etc., and each serves a different purpose. UML activity diagrams portray processes. The shapes for activity diagrams have changed considerably from UML 1 to UML 2. These are the main UML 2 shapes:</p>
 			<div class="override"><img src="../images/UML.png" alt="UML Shapes"/></div>
 		</section>
 
@@ -244,21 +212,6 @@
 		<section>
 			<h3>(Technical) Narrative</h3>
 			<p>When the ORDER ACTIVITY is invoked, a control token is placed at the initial node, and a data token with ordering information is placed at the input parameter object node. The control token flows from the initial node to the CREATE ORDER action, which begins executing. The data token flows from the parameter to the invocation action for FILL ORDER, which must wait for CREATE ORDER to provide its other input before starting. When FILL ORDER is done, a control token is passed to the final node and the activity terminates, returning control to execution that started it.</p>
-		</section>
-
-		<section>
-			<h3>UML Strengths and Weaknesses</h3>
-			<ul>
-				<li>Strengths</li>
-				<ul>
-					<li>Small number of shapes in activity diagrams keeps the diagrams readable.</li>
-					<li>UML focuses on diagramming conventions that a computer can interpret. Most other frameworks require some human intervention to interpret the diagram.</li>
-				</ul>
-				<li>Weaknesses</li>
-				<ul>
-					<li>Lack of swimlanes hides accountability.</li>
-				</ul>
-			</ul>
 		</section>
 
 		<section>
