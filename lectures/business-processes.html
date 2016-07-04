@@ -44,7 +44,7 @@
 
 		<section>
 			<h3>Processes</h3>
-			<p>A business process is a series of tasks or activities that serve to transfer resources, goods, services, or money, or information between two parties. For example, the sales order process includes the tasks for receiving a order from a customer and providing goods or services to the customer; the cash receipts process might involve receiving payments from customers; the purchase and cash payments process could be the exact opposite: purchase goods and services from vendors and paying on vendor invoices.</p>
+			<p>A <u><i>business process</i></u> is a series of tasks or activities that serve to transfer resources, goods, services, money, and/or information between two parties. For example, the sales order process includes the tasks for receiving an order from a customer and providing goods or services to the customer; the cash receipts process might involve receiving payments from customers; the purchase and cash payments process could be the exact opposite: purchasing goods and services from vendors and paying on vendor invoices.</p>
 			<p>(Unfortunately, many also refer to the individual tasks within a process as processes, as well, which can cause confusion.)</p>
 		</section>
 
@@ -77,7 +77,7 @@
 			<h3>Diagram</h3>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width:50%">
-					<p>A visual representation of logic useful for efficient communication. Diagrams are not the only tool for communicating a series of processes, but drawings are more efficient than narrations. They are frequently easier to understand and interpret. Because they can portray multiple parts of the whole at once, they can identify links between objects.</p>
+					<p>A diagram is a visual representation of logic useful for efficient communication. Diagrams are not the only tool for communicating a series of processes, but drawings are more efficient than narrations. They are frequently easier to understand and interpret. Because they can portray multiple parts of the whole at once, they can identify links between objects.</p>
 				</div>
 				<div class="flex-item"><img src="../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/>
 				</div>
@@ -108,7 +108,7 @@
 			<div class="flex-row">
 				<div class="flex-item"><img src="../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/></div>
 				<div class="flex-item" style="max-width:50%">
-					<p>A curriculum plan is a simple example of an activity model. Passing a course represents one task, and the model demonstrates how to navigate the entire degree process. This model contains no data objects, so the purpose of the arrows is demonstrate which tasks must precede others. This is an example of control flow.</p>
+					<p>A curriculum plan is a simple example of an activity model. Passing a course represents one task, and the model demonstrates how to navigate the entire degree process. This model contains no data objects, so the purpose of the arrows is to demonstrate which tasks must precede others. This is an example of control flow.</p>
 				</div>
 			</div>
 		</section>
@@ -126,11 +126,10 @@
 
 		<section>
 			<h3>Modeling Standards</h3>
-			<p>In order to understand the principles of data and control flow, it is best to view actual diagrams. The curriculum diagram is a rudimentary example, but many diagrams adhere to specific frameworks that include templates (i.e., predefined sets of shapes), and it is necessary to recognize these shapes in order to be able to read and write proper diagrams. Four well-known examples are of diagramming frameworks are:</p>
+			<p>In order to understand the principles of data and control flow, it is best to view actual diagrams. The curriculum diagram is a rudimentary example, but many diagrams adhere to specific frameworks that include templates (i.e., predefined sets of shapes), and it is necessary to recognize these shapes in order to be able to read and write proper diagrams. Three well-known examples are of diagramming frameworks are:</p>
 			<ul>
 				<li>Flowcharts</li>
 				<li>Data flow diagrams (DFD)</li>
-				<li>Unified Modeling Language (UML) Activity Diagrams</li>
 				<li>Business Process Model and Notation (BPMN)</li>
 			</ul>
 		</section>
@@ -147,7 +146,7 @@
 
 		<section>
 			<h3>Narrative</h3>
-			<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory. (This might occur if inventory has fallen below its reorder point.) Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy of the purchase order to Inventory Control to file with Inventory Control&rdquo;s copy of the purchase requisition, and sends a copy of the purchase order to the Vendor.</p>
+			<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory. (This might occur if inventory has fallen below its reorder point.) Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy of the purchase order to Inventory Control to file with Inventory Control's copy of the purchase requisition, and sends a copy of the purchase order to the Vendor.</p>
 			<p>(This terse narrative demonstrates that the communication of even a simple process with few steps benefits from a diagram.)
 		</section>
 
@@ -190,76 +189,26 @@
 
 		<section>
 			<h3>Simplicity &ne; Readability</h3>
-			<p>Unlike flowcharts which have a large set of shapes to increase specificity, data flow diagrams promote simplicity by restricting themselves to three simple shapes. The large flowchart template can also result in a large number of shapes and a cluttered diagram, which reduces readability. However, simplicity will not always increase readability. For example, the lack of specific arrow conventions for Yourdon DFDs, and the lack of predetermined direction for DFDs reduces the number of requirements for DFDs but they conflict with a preference to read from top to bottom and left to right. Additionally, the lack of swimlanes obscures accountability (i.e., how performs a task), which is important information for accountants and auditors.</p>
+			<p>Unlike flowcharts which have a large set of shapes to increase specificity, data flow diagrams promote simplicity by restricting themselves to three simple shapes. The large flowchart template can also result in a large number of shapes and a cluttered diagram, which reduces readability. However, simplicity will not always increase readability. For example, the lack of specific arrow conventions for Yourdon DFDs, and the lack of predetermined direction for DFDs reduces the number of requirements for DFDs but they conflict with a preference to read from top to bottom and left to right. Additionally, the lack of swimlanes obscures accountability (i.e., who performs a task), which is important information for accountants and auditors.</p>
 		</section>
 			
 		<section>
 			<h3>DFD Levels</h3>
-			<p>Some process tasks might have multiple steps. DFDs levels allow for a convenient presentation of tasks decomposed into subtasks. The highest level DFD (Level 0) numbers processes with whole numbers (1, 2, 3, etc). The second level (Level 1) adds a decimal after the number of the decomposed process (Process 1 becomes 1.1, 1.2, 1.3, etc.). The third level (Level 2) adds an additional decimal number (Process 1.3 becomes 1.3.1, 1.3.2, etc.)</p>
+			<p>Some process tasks might have multiple steps. DFD levels allow for a convenient presentation of tasks decomposed into subtasks. The highest level DFD (Level 0) numbers processes with whole numbers (1, 2, 3, etc). The second level (Level 1) adds a decimal after the number of the decomposed process (Process 1 becomes 1.1, 1.2, 1.3, etc.). The third level (Level 2) adds an additional decimal number (Process 1.3 becomes 1.3.1, 1.3.2, etc.)</p>
 		</section>
 		
 		<section>
-			<h3>Unified Modeling Language</h3>
-			<p>UML has may different types of diagrams: class, object, package, activty, etc., and each serves a different purpose. UML activity diagrams portray processes. The shapes for activity diagrams have changed considerably from UML 1 to UML 2. These are the main UML 2 shapes:</p>
-			<div class="override"><img src="../images/UML.png" alt="UML Shapes"/></div>
-		</section>
-
-		<section>
-			<h3>Sample UML</h3>
-			<div class="override"><img src="../images/sample-uml.png" alt="Sample UML" style="max-height: 450px"/>
-		</section>
-
-		<section>
-			<h3>(Technical) Narrative</h3>
-			<p>When the ORDER ACTIVITY is invoked, a control token is placed at the initial node, and a data token with ordering information is placed at the input parameter object node. The control token flows from the initial node to the CREATE ORDER action, which begins executing. The data token flows from the parameter to the invocation action for FILL ORDER, which must wait for CREATE ORDER to provide its other input before starting. When FILL ORDER is done, a control token is passed to the final node and the activity terminates, returning control to execution that started it.</p>
-		</section>
-
-		<section>
 			<h3>Business Process Model and Notation</h3>
-			<ul>
-				<li>2000: Business Process Management Initiative (BPMI) is formed to promote the development of business process management tools.</li>
-				<li>2004: BPMN 1.0 is released.</li>
-				<li>2005: BPMI merges with the Object Management Group.</li>
-				<li>2010: BPMN 2.0 is released.</li>
-				<li>2013: International Organization for Standardization accepts BPMN 2.0 as an ISO standard.</li>
-			</ul>
-			<p>BPMN is an attempt to create a modeling notation specifically for business processes that promotes collaboration between operations specialists who design the process, managers who use the process, and technologists who support the process.</p>
+			<p>Business Process Model and Notation (BPMN) is an attempt to create a modeling notation specifically for business processes that promotes collaboration between operations specialists who design the process, managers who use the process, and technologists who support the process. BPMN comprises multiple diagram types, and these different types follow different conventions and rely on different templates. Two examples are <u><i>collaborations</i></u>, which are similar to sideways flowcharts and <u><i>choreographies</i></u>, which are similar to DFDs, except that they list the agents involved in a task.</p>
 		</section>
 
 		<section>
-			<h3>BPMN Adoption</h3>
-			<p>Although BPMN finds its roots in UML activity diagrams, BPMN seems to have surpassed UML in popularity as the <i>de facto</i> process diagramming solution. This may be the result of its focus on business processes instead of the more agnostic perspective of activity diagrams and flowcharts with respect to computer logic and business processes.</p>
-		</section>
-
-		<section>
-			<h3>BPMN 2.0 Basic Shapes</h3>
-			<div class="override"><img src="../images/BPMN.png" alt="Basic BPMN Shapes"/></div>
-		</section>
-
-		<section>
-			<h3>Advanced Shapes</h3>
-			<p>BPMN is different from other models in one interesting way. Although it wants to allow for many different situations, instead of adopting many different shapes or only a few shapes which ignore the specifics of the object, BPMN uses a few shapes and adds icons to the shapes to incorporate specificity.</p>
-			<div class="override"><img src="../images/BPMNAdvanced.png" alt="Advanced BPMN Shapes"/></div>
-		</section>
-
-		<section>
-			<h3>BPMN Conventions</h3>
-			<ul>
-				<li>Unlike flowcharts, swimlanes in BPMN are generally horizontal rows, not vertical columns.</li>
-				<li>Diagrams are read left-to-right and top-to-bottom.</li>
-				<li>Control and data flow lines are horizontal or vertical with 90&deg; angles, but unlike flowcharts and DFD, the angles have rounded corners.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Four Types of Diagrams</h3>
-			<ul>
-				<li><u><i>Orchestrations</i></u> place all agents lanes into a single pool and hide communications between them.</li>
-				<li><u><i>Collaborations</i></u> place agents into discrete pools and show communications between them.</li>
-				<li><u><i>Conversations</i></u> discard pools and swimlanes and depict agents as individual objects and the communications between them as black boxes.</li>
-				<li><u><i>Choreographies</i></u> discard pools and swimlanes and portray individual interactions between agents as single objects.</li>
-			</ul>
-			<p>For our purposes, diagrams that explicitly portray communication are superior because communication is data flow.</p>
+			<h3>Collaboration Shapes</h3>
+			<p>BPMN is different from other diagramming frameworks in an interesting way. Instead of adopting many different shapes to allow for a high level of specificity, such as flowcharts, or adopting only a few shapes which obscure certain specifics, such as DFDs, the BPMN template has a few shapes which pair with icons to add specificity.</p>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../images/BPMN.png" alt="Basic BPMN Shapes"/></div>
+				<div class="flex-item override"><img src="../images/BPMNAdvanced.png" alt="Advanced BPMN Shapes"/></div>
+			</div>
 		</section>
 
 		<section>
@@ -270,46 +219,17 @@
 		<section>
 			<h3>Narrative</h3>
 			<p>The Help Desk receives a ticket from the customer and searches the help-desk database for a solution. If the Help Desk finds a solution, it sends the solution to the customer. Otherwise, it sends a message to the expert. When the Help Desk receives a response from the expert, it sends the solution to the customer.</p>
+			<p>(Because the customer and the expert are external agents, the collaboration will not include their activities. Collaborations only portray the activities of internal agents.)
 		</section>
 
 		<section>
-			<h3>Sample Choreography</h3>
+			<h3>Now As a Choreography</h3>
 			<div class="override"><img src="../images/sample-choreography.png" alt="Sample BPMN Choreography" style="max-height: 650px"/>
 		</section>
 
 		<section>
-			<h3>BPMN Strengths and Weaknesses</h3>
-			<ul>
-				<li>Strengths</li>
-				<ul>
-					<li>Use of flowchart-style swimlanes highlights accountability. Choreographies uniquely capture accountability without swimlanes.</li>
-					<li>BPMN can combine all four types of diagrams into any single drawing.</li>
-					<li>BPMN allows for sub-processes in the top level diagram, instead of requiring subsequent diagrams as in DFDs.</li>
-				</ul>
-				<li>Weaknesses</li>
-				<ul>
-					<li>Large number of different shapes, sub-shapes, and lines can prevent uniform application of BPMN.</li>
-					<li>Not designed to model the flow of data.</li>
-				</ul>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Communication But Not Data Flow</h3>
-			<p>The two previous slides may seem contradictory. Some BPMN diagrams explicitly portray communication, and communication is data flow, but BPMN is not designed to model the flow of data. Oddly enough, all of these statements are true. BPMN can model the flow of data, but the developers of BPMN definitively state that the purpose of BPMN is not to model data flow. This renders BPMN less useful for our purposes.</p>
-		</section>
-
-		<section>
 			<h3>Accounting Tie-in</h3>
-			<p>Accountants benefit from diagrams in multiple ways. For example, auditors receive flowcharts from firms in order to understand the firm's processes. This understanding helps auditors to know where misstatements are most likely. Accountants also use flowcharts to understand what processes to measure for financial, managerial, and tax accounting purposes. Accounting architects use flowcharts to understand informational needs of the processes in order to facilitate data flow.</p>
-		</section>
-
-		<section>
-			<h3>Homework</h3>
-			<p><u>Part 1</u></p>
-			<p>On the course portal, you will find a process diagram. Your assignment is to read the diagram and type a narrative explaining the process in your own words. The goal is to demonstrate that you have learned how to read and understand diagrams.</p>
-			<p><u>Part 2</u></p>
-			<p>Now, using the same process diagram, you should create a replica. You may use any diagramming software that you choose, but I recommend that you use <a href="https://www.draw.io/">Draw.io</a> because it is the tool that I demonstrate in class. Be sure to include your name on your submission as evidence that it is your own work.</p>
+			<p>Accountants benefit from diagrams in multiple ways. Auditors receive diagrams from clients in order to understand the clients' processes. This understanding helps auditors to know where misstatements are most likely to arise. Accountants also use diagrams to understand the business model so that they can know what to measure and report on for financial, management, and tax accounting purposes. This understanding of the business model is a necessary first step in implementing an information system. Because accountants have business expertise, they are better equipped than IT staff to understand business processes. This makes accountants valuable players in the design of information systems.</p>
 		</section>
 	</div>
 	</div>
