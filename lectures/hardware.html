@@ -6,18 +6,18 @@
 	<title>Hardware</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../../css/slides.css">
+	<link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
@@ -30,9 +30,9 @@
 		<section>
 			<h3>Accounting Architecture - Information and Technology</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Now that we know the steps in the information life cycle and understand what a system should <em>do</em>, we can begin to investigate what a system should <em>be</em>, or in other words, what a system should comprise. The information life cycle applies to both digital and non-digital systems, but because of the prevalence of information technology, we will focus exclusively on the creation of digital information systems.</p>
+					<p>Now that we know the steps in the information and Big Data life cycles and understand what a system should <em>do</em>, we can begin to investigate what a system should <em>be</em>, or in other words, what a system should comprise. The information life cycle applies to both digital and non-digital systems, but because of the prevalence of information technology, we will focus exclusively on the creation of digital information systems.</p>
 				</div>
 			</div>
 		</section>
@@ -50,49 +50,48 @@
 		</section>
 
 		<section>
-			<h3><a href="http://www.newegg.com/">Let Us Build a Computer!</a></h3>
+			<h3>Let Us Build a Computer!</h3>
 			<p>I cannot state with complete confidence what the best method is to teach the hardware components of an information system, but it seems to me that a great solution would be to build a hypothetical computer step-by-step and explain what purpose each additional component serves.</p>
 		</section>
 
 		<section>
 			<h3>What Shall We Build?</h3>
-			<p>An information system can have workstations, servers, mobile devices, laptops, wearable technology, etc. Although each of these has similar internal components, both the visibility and modularity of the individual pieces are greater with workstations and servers, so we will focus on these. Although the roles of workstations&mdash;for personal computing&mdash;and servers&mdash;for cloud computing&mdash; are different, their hardware makeup is not. These steps can apply to either.</p>
+			<p>An information system can have workstations, servers, mobile devices, laptops, wearable technology, etc. Although each of these has similar internal components, both the visibility and modularity of the individual pieces are greater with workstations and servers, so we will focus on these. Although the roles of workstations&mdash;for personal computing&mdash;and servers&mdash;for cloud computing&mdash; are different, their hardware makeup is largely the same. These steps can apply to either.</p>
 		</section>
 
 		<section>
 			<h3>Where Shall We Begin?</h3>
-			<p>Each computer part influences the possible specifications of the other parts, so it is difficult to determine where to start. We will assume that the first consideration is available space, and the component that determines the size of the computer is the <u><i>case</i></u>. Several sizes exist, and beyond aesthetics, the size determines the type of <u><i>motherboard</i></u>, access to <u><i>expansion slots</i></u>, and <u><i>rackability</i></u> (i.e., the ability to store the computer in a server rack).</p>
+			<p>Each computer part influences the possible specifications of the other parts, so it is difficult to determine where to start. We will assume that the first consideration is available space. The component that determines the size of the computer is the <u><i>case</i></u>. Several sizes exist, and beyond aesthetics, the size determines the type of <u><i>motherboard</i></u>, access to <u><i>expansion slots</i></u>, and <u><i>rackability</i></u> (i.e., the ability to store the computer in a server rack).</p>
 		</section>
 
 		<section>
 			<h3>Server Racks</h3>
-			<p>Despite their fancy moniker and appearance, nothing is special about server racks. They are simply special closets for computers that use a certain type of case. Racks are convenient for organizing these computers and may include lockable doors to allow for added physical security.</p>
-			<img src="../../images/racks.jpg" alt="Server Rack" style="max-height: 300px"/>
+			<p>Despite their fancy moniker and appearance, nothing is special about server racks. They are simply special closets for computers that use a certain type of case. Racks are convenient for organizing these computers and may include lockable doors for added physical security. (We will discuss the role of physical security with the Control section of the course.)</p>
+			<img src="../images/racks.jpg" alt="Server Rack" style="max-height: 300px"/>
 		</section>
 
 		<section>
 			<h3>Rackable U</h3>
 			<p>Rackable computers are shorter, wider, and deeper than desktop computers. They have uniform width (ca. 430 mm), and their height is in multiples of U (e.g., 1U, 2U, 3U, etc.), where 1U = 44 mm, so that they can screw into brackets on standardized racks.</p>
 			<!--License: CC-BY-SA 3.0 Attribution: Virtorgrigas-->
-			<img src="../../images/usizes.png" alt="U Sizes" style="max-height: 300px"/>
+			<img src="../images/usizes.png" alt="U Sizes" style="max-height: 300px"/>
 		</section>
 
 		<section>
 			<h3>Second Step</h3>
-			<p>Most every other hardware selection is the result of the choice of <i><u>central processing unit</u></i> (CPU). In importance, it exceeds that of the case, so we could have started with the selection of a CPU, but since we pretended that space was the first consideration, we will focus on the processor second.</p>
+			<p>Most every other hardware selection is the result of the choice of <i><u>central processing unit</u></i> (CPU). In importance, it exceeds that of the case, so we could have started with the selection of a CPU, but since we hypothesized that space was the first consideration, we will focus on the processor second.</p>
 		</section>
 
 		<section>
 			<h3>Central Processing Unit</h3>
 			<p>The central processing unit (CPU) carries out the computer instructions by fetching data from memory, performing an operation on the data and returning the result of the operation to memory. Important considerations when choosing a CPU are <u><i>architecture</i></u> and <u><i>speed</i></u>. Additionally, because the CPU generates heat, it is necessary to cool it with either a fan or a heatsink. The latter allows for silent cooling.</p>
 			<!--License: CC-BY-SA 2.0 Attribution: Andrew Dunn-->
-			<img src="../../images/cpu.jpg" alt="CPU" style="max-height: 250px"/>
+			<img src="../images/cpu.jpg" alt="CPU" style="max-height: 250px"/>
 		</section>
 
 		<section>
 			<h3>Arch</h3>
 			<p>The manner in which the CPU interprets computer instructions depends on the <u><i>instruction set architecture</i></u> (ISA). Since the inception of the CPU, manufacturers have offered many different architectures, but currently, two are the most prominent. Software that runs on one architecture is inherently incompatible with any other.</p> 
-		<p>Computer processing also depends on <u><i>word length</i></u> or the number of bits the CPU can process at once.</p>
 		</section>
 
 		<section>
@@ -102,19 +101,23 @@
 		
 		<section>
 			<h3>ARM</h3>
-			<p>Another popular line of processors have the ARM architecture which implement <u><i>reduced instruction set computing</i></u> (RISC), which as its name indicates, contains fewer potential instructions than CISC. Unlike Intel, ARM Holdings is not a manufacturer of processors. Instead, it licenses its intellectual property to several other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. (Think about how this compares to the potential for an open standard.) Because of the smaller instruction set, these processors require less power, which makes them a superior choice for mobile devices.</p>
+			<p>Another popular line of processors have the ARM architecture which implement <u><i>reduced instruction set computing</i></u> (RISC), which as its name indicates, contains fewer potential instructions than CISC. Unlike Intel, ARM Holdings is not a manufacturer of processors. Instead, it licenses its intellectual property to several other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. (As of this writing, SoftBank Group has initiated a purchase ARM Holdings.) Because of the smaller instruction set, these processors require less power, which makes them a popular choice for mobile devices.</p>
 		</section>
 		
 		<section>
 			<h3>Word Length</h3>
-			<p>Currently, the two most common word lengths are 32 and 64 bits. One of the limitations of 32-bit processors is that they only support 4 gigabytes of <u><i>random-access memory</i></u> (RAM). Prior to the introduction of 64-bit processors, manufacturers would add <u><i>physical address extension</i></u> to 32-bit processors that would remove the 4 GB cap.</p>
-			<p>In addition to increasing processing speed, 64-bit processors can accommodate up to 16 exabytes of memory. The 64-bit architecture is frequently labeled by the abbreviation x64 or x86_64 to signify the connection to the x86 instruction set. The majority of new processors are 64-bit.</p>
+			<p>Computer processing also depends on <u><i>word length</i></u> or the number of bits the CPU can process at once. Currently, the two most common word lengths are 32 and 64 bits. One of the limitations of 32-bit processors is that they only support 4 gigabytes of <u><i>random-access memory</i></u> (RAM). Prior to the introduction of 64-bit processors, manufacturers would add <u><i>physical address extension</i></u> to 32-bit processors that would remove the 4 GB cap. In addition to increasing speed by allowing for the processing of more bits at one time, 64-bit processors can accommodate up to 16 exabytes of memory. The 64-bit architecture is frequently labeled by the abbreviation x64 or x86_64 to signify the connection to the x86 instruction set or ARM64 to signify connection to ARM.</p>
+		</section>
+
+		<section>
+			<h3>Compatibility</h3>
+			<p>CPU architecture affects software compatibility, in that software written for x86 will not run on ARM CPUs and vice versa. A similar restriction applies to word length. Software written for x86_64 or ARM64 will not run on their 32-bit counterparts. Because the overwhelming majority of new processors are 64-bit, </p>
 		</section>
 
 		<section>
 			<h3>Real-world Problem</h3>
 			<p>Unfortunately, the limitations of 32-bit word length extends beyond processing speed and memory caps. Similar to the Y2K bug in which, in order to save storage space, programmers dropped the first two digits of the year leading to uncertainty how computers would interpret 00, the Y2K38 bug represents the inability of 32-bit processors to count forward in time past 03:14:08 on 19 January 2038.</p>
-			<img src="../../images/Year_2038_problem.gif" alt="Y2K38" style="margin: 0"/>
+			<img src="../images/Year_2038_problem.gif" alt="Y2K38" style="margin: 0"/>
 			<p>(Incidentally, in multiple cases the Y2K bug resulted in clocks reporting 1 January 19100, which is neither 2000 nor 1900...)</p>
 		</section>
 
@@ -220,9 +223,8 @@
 	</div>
 	</div>
 
-	<script src="../../reveal.js/lib/js/head.min.js"></script>
-	<script src="../../reveal.js/js/reveal.js"></script>
-	<script src="../../js/slides.js"></script>
-	<script src="../../js/printing.js"></script>
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../js/slides.js"></script>
 </body>
 </html>
