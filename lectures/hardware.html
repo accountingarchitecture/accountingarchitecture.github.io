@@ -139,7 +139,7 @@
 			<h3>Mother Lode</h3>
 			<div class="flex-row">
 				<!--License: CC-BY-SA Attribution: Moxfyre at en.wikipedia-->
-				<div class="flex-item override"><img src="../../images/motherboard.png" alt="Motherboard" style="margin: 0; max-height: 350px"/></div>
+				<div class="flex-item override"><img src="../images/motherboard.png" alt="Motherboard" style="margin: 0; max-height: 350px"/></div>
 				<div class="flex-item" style="max-width: 55%">
 					<p>The third component to select is the <u><i>motherboard</i></u>. The motherboard is a circuit board that holds the system components and allows communication between them. Some motherboards also include integrated audio, video, and network capabilities. The size and shape of the computer case and the type of <u><i>CPU socket</i></u> restrict the type of motherboard. Different CPUs fit into different sockets.</p>
 				</div>
@@ -150,24 +150,19 @@
 			<h3>Never Forget</h3>
 			<p>In addition to a CPU, each computer requires <u><i>random-access memory</i></u> (RAM). RAM, frequently simply referred to as memory, is a type of volatile computer storage&mdash;volatile means that it requires electricity to store data&mdash;that allows for fast retrieval of data. The greater the amount of memory, the faster the computer can operate because it can store more data in this fast-retrieval repository. Currently, RAM takes on the form of double data rate synchronous dynamic random-access memory (DDR SDRAM). The motherboard constrains RAM <u><i>size</i></u>, <u><i>speed</i></u>, and <u><i>capacity</i></u>.</p>
 			<!--License: CC-BY 2.5 Attribution: Royan-->
-			<img src="../../images/ram.jpg" alt="RAM" style="max-height: 150px"/>
+			<img src="../images/ram.jpg" alt="RAM" style="max-height: 150px"/>
 		</section>
 
 		<section>
 			<h3>Keeping Up with the Jones</h3>
-			<p>Speed is important for RAM, just as it is for a CPU, but RAM has an additional reason for focusing on speed, as well. CPUs with gigahertz clock rates can process data faster than RAM with only megahertz clock rates can supply it. This is a list of common transfer speeds of the third generation of DDR SDRAM.</p>
-			<img src="../../images/ddr3.png" alt="DDR3" style="max-height: 350px"/>
-	</section>
-
-		<section>
-			<h3>Multiplicity</h3>
-			<p>An individual stick of memory comes in two sizes: dual in-line memory module (DIMM) or small outline dual in-line memory module (SO-DIMM). The former is generally for workstations and servers, and the latter is for notebooks, smaller form-factor personal computers, and network hardware.</p>
-			<p>The motherboard's memory slots determine maximum memory capacity and speed. DIMMs currently have common capacities of 2GB, 4GB, 8GB and 16GB, and motherboards generally have two or four slots. It is not necessary to fill all slots, nor is it necessary for all DIMMs to have the same capacity or speed. However, the computer will function at the speed of the slowest DIMM.</p>
+			<p>Speed is important for RAM, just as it is for a CPU. This is a list of common transfer speeds of the third generation of DDR SDRAM.</p>
+			<img src="../images/ddr3.png" alt="DDR3" style="max-height: 300px; margin: 0 auto"/>
+			<p>Although RAM allows for fast data retrieval, it cannot supply data to the CPU as fast as the CPU can process it, so RAM always creates a bottleneck for computer processing.</p>
 		</section>
 
 		<section>
-			<h3>Swapping</h3>
-			<p>Historically, a computer could not handle consumption of all available memory because the CPU would not be able to find the next instruction. Virtual memory overcame this problem by reserving a portion of the hard drive as secondary memory, called <u><i>swap space</i></u>. If most of the physical memory was reserved, the operating system would move some of the data stored in physical memory to the swap space to free up physical memory. The process of moving data from main memory to secondary memory is called <u><i>paging</i></u>. Although it allows a computer to continue functioning, paging is very slow, and the computer can become unresponsive as a result.</p>
+			<h3>Multiplicity</h3>
+			<p>An individual stick of memory comes in two sizes: dual in-line memory module (DIMM) or small outline dual in-line memory module (SO-DIMM). The former is generally for workstations and servers, and the latter is for notebooks, smaller form-factor personal computers, and network hardware. The motherboard's memory slots determine maximum memory capacity and speed. DIMMs currently have common capacities of 2GB, 4GB, 8GB and 16GB, and motherboards generally have two or four slots. It is not necessary to fill all slots, nor is it necessary for all DIMMs to have the same capacity or speed. However, the computer will function at the speed of the slowest DIMM.</p>
 		</section>
 
 		<section>
@@ -175,10 +170,15 @@
 			<p>In addition to volatile storage, a computer needs non-volatile storage. Customarily, this takes the form or either <u><i>hard disk drives</i></u> (HDD) or <u><i>solid-state drives</i></u> (SSD). Hard drives are mechanical and rely on multiple magnetized spinning disks to read and write data. Solid-state drives generally use NAND flash memory to read and write data more quickly. The speed with which the motherboard can access data from the drive is determined by the speed of the <u><i>Serial AT Attachment</i></u> (SATA) connection to the drive calculated in gigabits per second.</p>
 			<div class="flex-row">
 				<!--License: CC-BY-SA 3.0 Attribution: Evan-Amos-->
-				<div class="flex-item"><img src="../../images/hdd.jpg" alt="HDD" style="max-width: 50%; max-height: 350px; margin-top: 0"/></div>
+				<div class="flex-item"><img src="../images/hdd.jpg" alt="HDD" style="max-width: 50%; max-height: 350px; margin-top: 0"/></div>
 				<!--License: CC-BY-SA 3.0 Attribution: D-Kuru-->
-				<div class="flex-item"><img src="../../images/ssd.jpg" alt="SSD" style="max-width: 50%; max-height: 350px; margin-top: 0"/></div>
+				<div class="flex-item"><img src="../images/ssd.jpg" alt="SSD" style="max-width: 50%; max-height: 350px; margin-top: 0"/></div>
 			</div>
+		</section>
+
+		<section>
+			<h3>Swapping</h3>
+			<p>Historically, a computer could not handle consumption of all available memory because the CPU would not be able to find the next instruction. Virtual memory overcame this problem by reserving a portion of the hard drive as secondary memory, called <u><i>swap space</i></u>. If most of the physical memory was reserved, the operating system would move some of the data stored in physical memory to the swap space to free up physical memory. The process of moving data from main memory to secondary memory is called <u><i>paging</i></u>. Although it allows a computer to continue functioning, paging is very slow because accessing data from drives is slower than access data from RAM, and the computer can become unresponsive as a result.</p>
 		</section>
 
 		<section>
@@ -188,9 +188,13 @@
 
 		<section>
 			<h3>Powering It All</h3>
-			<p>The final requisite component is the <u><i>power supply unit</i></u> (PSU), which gives power directly to storage drives and indirectly to the CPU, RAM, and other components through the motherboard. The computer case determines the maximum supported PSU size, but the more important consideration is power needed. If the PSU provides insufficient power, not only can the components malfunction, but they can also degrade at an accelerated rate. It is difficult to determine exactly how much power will be necessary for a specific setup, but for a standard workstation or server 600 watts can suffice.</p>
-			<!--License: CC-BY-SA 3.0 Attribution: Danrok-->
-			<img src="../../images/psu.jpg" alt="PSU" style="max-height: 100px"/>
+			<div class="flex-row">
+				<!--License: CC-BY-SA 3.0 Attribution: Danrok-->
+				<div class="flex-item"><img src="../images/psu.jpg" alt="Power Supply" style="max-height: 150px"/></div>
+				<div class="flex-item" style="max-width: 75%">
+					<p>The final requisite component is the <u><i>power supply unit</i></u> (PSU), which gives power directly to storage drives and indirectly to the CPU, RAM, and other components through the motherboard. The computer case determines the maximum supported PSU size, but the more important consideration is power needed. It is difficult to determine exactly how much power will be necessary for a specific setup, but for a standard workstation or server 600 watts can suffice.</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
