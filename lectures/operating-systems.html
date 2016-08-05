@@ -3,28 +3,21 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>ACCT 4020</title>
+	<title>Operating Systems</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
-
-	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../../css/slides.css">
-
-	<!--[if lt IE 9]>
-	<script src="../../reveal.js/lib/js/html5shiv.js"></script>
-	<![endif]-->
+	<link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
@@ -37,11 +30,45 @@
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
-				<div class="flex-item" style="max-width: 65%">
-					<p>Although every part of the Technology section has relevance towards implementing the principles in the information life cycle, software is the most important part. Software performs all of the automated tasks and facilitates all of the manual tasks in the information system. Software stores and retrieves data; software analyses and generates reports. Without software, hardware is useless.</p>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 60%">
+					<p>Software is the most important block in the Technology section. Software performs all of the automated tasks and facilitates all of the manual tasks in the information system. Software stores and retrieves data; software analyses and generates reports. Without software, none of the other technology components could serve their intended purpose.</p>
 				</div>
 			</div>
+		</section>
+
+		<section>
+			<h3>Operating System</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 65%">
+					<p>The most fundamental piece of software is the <u><i>operating system</i></u> (OS), which provides the user and user applications access to the computer hardware. Usually, operating systems comprise a <u><i>kernel</i></u> and <u><i>userland</i></u>. Additionally, operating systems generally require two supporting tools: a <u><i>firmware interface</i></u> and a <u><i>bootloader</i></u>.</p>
+				</div>
+				<!--License: CC-BY-SA 3.0 Attribution: Golftheman-->
+				<div class="flex-item override"><img src="../images/operating_system.png" alt="Operating System" style="max-height: 450px"/></div>
+			</div>
+		</section>
+
+		<section>
+			<h3>At the Heart of the Matter</h3>
+			<p>The kernel is the part of the operating system that interacts with the computer hardware. This is the lowest level of the operating system. The kernel receives requests from user applications to access computer hardware, such as the CPU, RAM, storage, audio, or video, and forwards these requests to the hardware components. Once the request is fulfilled, the kernel returns the results of the request to the application. For example, if the user wishes to retrieve a spreadsheet from storage, the spreadsheet application requests the file from the kernel. The kernel retrieves the file from storage and returns the file to the application. (This process has additional steps, such as transferring the file to main memory (i.e., RAM), but this simplified description is sufficient to explain the role of a kernel.)</p>
+		</section>
+			
+		<section>
+			<h3>Types of Kernels</h3>
+			<p>Depending on the type of kernel, the kernel itself may communicate directly with user applications (monolithic kernel) or the kernel may communicate with a series of <u><i>servers</i></u> that serve as intermediaries between the kernel and user applications (microkernel). Either way, the kernel interacts with the hardware. Some praise microkernels for their simplicity, and others prefer monolithic kernels because they handle requests more quickly.</p>
+			<div class="flex-row">
+				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
+				<!--<div class="flex-item"><img src="../images/monolithic.png" alt="Monolithic Kernel" style="max-width: 50%"/></div>-->
+				<!--License: CC-BY-SA 3.0 Attribution: Bobbo-->
+				<div class="flex-item override"><img src="../images/kernel.png" alt="Kernel" style="max-height: 250px"/></div>
+				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
+				<div class="flex-item override"><img src="../images/microkernel.png" alt="Microkernel" style="max-height: 250px"/></div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Daemons</h3>
+			<p>Frequently, the word &ldquo;server&rdquo; is used to identify a specific type of computer hardware, but a more appropriate definition would be <u><i>software that provides a service</i></u>, also known as <u><i>daemons</i></u>. Unlike more visible interactive applications, daemons run in the background without user input, and many start when the operating system boots. Network and graphics hardware and web and database servers rely on daemons to continually provide content. One useful example of a daemon is the audio server. Users can hear audio without using an interactive application to forward sound to the hardware. A daemon listens for audio sent from various applications and forwards it to the audio hardware without any user interaction.</p>
 		</section>
 
 		<section>
@@ -51,6 +78,12 @@
 
 		<section>
 			<h3>Firmware Interface</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>Although every part of the Technology section has relevance towards implementing the principles in the information life cycle, software is the most important part. Software performs all of the automated tasks and facilitates all of the manual tasks in the information system. Software stores and retrieves data; software analyses and generates reports. Without software, hardware is useless.</p>
+				</div>
+			</div>
 			<p>Because devices are idiosyncratic, firmware manifests in very different ways. However, for workstations and servers, the firmware interface is usually <u><i>Basic Input/Output System</i></u> (BIOS) or, more recently <u><i>Unified Extensible Firmware Interface</i></u> (UEFI). The difference between these two is not important for our purposes, except that UEFI adds support for newer components of the information system, such as larger storage disks and access to network devices before booting the operating system.</p>
 			<div class="override"><img src="../../images/efi.png" alt="EFI" style="max-height: 200px"/></div>
 		</section>
@@ -58,13 +91,6 @@
 		<section>
 			<h3>Bootloader</h3>
 			<p>Although this is frequently transparent (perhaps overly so) to Windows and OS X users, the next step after the hardware initialization by the BIOS or UEFI is not to load the operating system directly. Operating systems require a boot loader in order to initialize. The boot loader loads the operating system, and then the operating system takes control. It is also possible for a boot loader to initialize another boot loader that, in turn, loads the operating system. This process is called <q>chainloading</q>.</p>
-		</section>
-
-		<section>
-			<h3>Operating System</h3>
-			<p>The operating system provides user applications access to the computer hardware.</p>
-			<!--License: CC-BY-SA 3.0 Attribution: Golftheman-->
-			<img src="../../images/operating_system.png" alt="Operating System" style="max-height: 450px"/>
 		</section>
 
 		<section>
@@ -194,30 +220,6 @@
 		</section>
 
 		<section>
-			<h3>What is a Kernel, You Might Ask</h3>
-			<p>The <u><i>kernel</i></u> is the part of the operating system that interacts with the computer hardware. This is the lowest level of the operating system. The remaining components live in <u><i>userland</i></u> because they interact with the user. Depending on the type of kernel, the kernel itself may handle operating system services (monolithic kernel) or these services may be handled by a series of servers (microkernel).</p>
-			<div class="flex-row">
-				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
-				<!--<div class="flex-item"><img src="../../images/monolithic.png" alt="Monolithic Kernel" style="max-width: 50%"/></div>-->
-				<!--License: CC-BY-SA 3.0 Attribution: Bobbo-->
-				<div class="flex-item"><img src="../../images/kernel.png" alt="Kernel" style="max-height: 250px"/></div>
-				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
-				<div class="flex-item"><img src="../../images/microkernel.png" alt="Microkernel" style="max-height: 250px"/></div>
-			</div>
-		</section>
-
-		<section>
-			<h3>What is a Server, Anyway?</h3>
-			<p>Frequently, the word server is used to identify 1U computers stored in a rack, and it is true that workstations and servers frequently have slight differences in hardware setup (e.g., graphics). However, a more appropriate use of the word <q>server</q> would be <u><i>software that provides a service</i></u>.</p>
-		</section>
-
-		<section>
-			<h3>Daemon</h3>
-			<p style="text-align: center">(Yes, that is not a misspelling...)</p>
-			<p>Daemons are a particularly useful example of software that provides a service. Unlike more visible interactive applications, daemons run in the background without user input, and many start when the operating system boots. Network and graphics hardware and web and database servers rely on daemons to continually provide content. One useful example of a daemon is the audio server. Users can hear audio without using an interactive application to forward sound to the hardware. A daemon listens for audio sent from various applications and forwards it to the audio hardware without any user interaction.</p>
-		</section>
-
-		<section>
 			<h3>Text...</h3>
 			<p>The kernel is the part of the operating system that interacts with the hardware; the <u><i>shell</i></u> is the part that interacts with the user. Shells can either be graphical or textual. Textual or text-based user interfaces (TUIs) present the user with an interactive command line, often called a <u><i>terminal</i></u>. All Unix and Unix-like operating system have at least one TUI shell. Popular examples are the Bourne shell (sh) or the Bourne Again shell (bash).</p>
 			<div class="override"><img src="../../images/bash.png" alt="Bash Shell" style="max-height: 250px"/></div>
@@ -289,14 +291,11 @@
 			<p><u>Part 1</u></p>
 			<p>Investigate various Linux distributions or BSD flavors and identify one that you would use. <a href="http://distrowatch.com/">Distrowatch</a> is an excellent resource, but you will need to exercise your Web <i>search</i>&mdash;part of the Use section of the information life cycle&mdash;skills. Explain your reasons for the distribution that you selected. This assignment is similar to the Technology memo only much smaller, so your memo should attempt to convince a hypothetical supervisor why to adopt your Linux distribution. (So that no confusion exists, your Technology report should <em>not</em> be based on this memo.) I will award extra credit if you also include in your memo a well-motivated recommendation for desktop environment.</p>
 		</section>
-
 	</div>
 	</div>
 
-	<script src="../../reveal.js/lib/js/head.min.js"></script>
-	<script src="../../reveal.js/js/reveal.js"></script>
-	<script src="../../js/slides.js"></script>
-	<script src="../../js/printing.js"></script>
-
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../js/slides.js"></script>
 </body>
 </html>
