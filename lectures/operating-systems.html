@@ -68,9 +68,24 @@
 
 		<section>
 			<h3>Daemons</h3>
-			<p>Frequently, the word &ldquo;server&rdquo; is used to identify a specific type of computer hardware, but a more appropriate definition would be <u><i>software that provides a service</i></u>, also known as <u><i>daemons</i></u>. Unlike more visible interactive applications, daemons run in the background without user input, and many start when the operating system boots. Network and graphics hardware and web and database servers rely on daemons to continually provide content. One useful example of a daemon is the audio server. Users can hear audio without using an interactive application to forward sound to the hardware. A daemon listens for audio sent from various applications and forwards it to the audio hardware without any user interaction.</p>
+			<p>Frequently, the word &ldquo;server&rdquo; is used to identify a specific type of computer hardware, but a more appropriate definition would be <u><i>software that provides a service</i></u>, also known as a <u><i>daemon</i></u>. Unlike more visible interactive applications, daemons run in the background without user input, and many start when the operating system boots. Micro kernels use daemons to communicate with user applications, but operating systems with monolithic kernels also use daemons to handle several functions, such as network communication, user input, and output to computer peripherals, such as monitors and speakers. Some of these daemons are labeled &ldquo;middleware&rdquo; because they sit between the kernel and user applications.</p>
 		</section>
 
+		<section>
+			<h3>Userland</h3>
+			<p>Userland is the part of the operating system that interacts with the user. The primary layer in userland is the <u><i>shell</i></u>, which provide the user either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computing devices have graphical shells, but the vast majority of server computers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../images/bash.png" alt="Bash Shell" style="max-height: 250px; margin-top: 0"/></div>
+				<div class="flex-item override"><img src="../images/gnome.png" alt="GNOME Shell" style="max-height: 250px; margin-top: 0"/></div>
+			</div>
+		</section>
+			
+		<section>
+			<h3>Putting It All Together</h3>
+			<!--License: CC-BY-SA 3.0 Attribution: Shmuel Csaba Otto Traian-->
+			<div class="override"><img src="../../images/input-output-loop.png" alt="I/O Loop" style="max-height: 600px"/></div>
+		</section>
+			
 		<section>
 			<h3>Firmware</h3>
 			<p>One important subset of software is firmware. Firmware provides hardware control for electronic devices, including computers and peripherals, consumer electronics and automobiles and aircraft. Although firmware was traditionally stored on non-volatile <u><i>read-only memory</i></u> (ROM), currently firmware is more commonly stored on flash memory. Hence the term &ldquo;flashing&rdquo; for updating firmware. The practice of updating firmware is much more common in the Internet era because the distribution of updates is easier and the threat of exploits is greater.</p>
@@ -219,29 +234,6 @@
 			</div>
 		</section>
 
-		<section>
-			<h3>Text...</h3>
-			<p>The kernel is the part of the operating system that interacts with the hardware; the <u><i>shell</i></u> is the part that interacts with the user. Shells can either be graphical or textual. Textual or text-based user interfaces (TUIs) present the user with an interactive command line, often called a <u><i>terminal</i></u>. All Unix and Unix-like operating system have at least one TUI shell. Popular examples are the Bourne shell (sh) or the Bourne Again shell (bash).</p>
-			<div class="override"><img src="../../images/bash.png" alt="Bash Shell" style="max-height: 250px"/></div>
-		</section>
-			
-		<section>
-			<h3>...and Graphics</h3>
-			<p>Graphical user interfaces (GUIs) present the user with windows, menus, mouse pointers, etc. These are frequently part of the desktop environment, which is a shell plus a collection of related applications. GNOME and KDE are two popular desktop environments. GNOME uses GNOME Shell and KDE uses the Plasma shell.</p>
-			<div class="override"><img src="../../images/gnome.png" alt="GNOME Shell" style="max-height: 300px"/></div>
-		</section>
-			
-		<section>
-			<h3>Modularity</h3>
-			<p>Shells are an excellent example of the Unix Principle of Modularity. Unlike Microsoft Windows and OS X that each ship with one graphical and one text shell, Unix and Unix-like operating systems allow for multiple text and graphical shells that are each developed separately. The user can switch between shells at will. (Thanks to community support for the BSD components in OS X, it can be possible to install alternative shells there, as well.)</p>
-		</section>
-
-		<section>
-			<h3>Putting It All Together</h3>
-			<!--License: CC-BY-SA 3.0 Attribution: Shmuel Csaba Otto Traian-->
-			<div class="override"><img src="../../images/input-output-loop.png" alt="I/O Loop" style="max-height: 600px"/></div>
-		</section>
-			
 		<section>
 			<h3>Linux Today</h3>
 			<p>Linux is perhaps the most widely adopted operating system. 70% of internet servers, 55% of mobile devices and 97% of supercomputers run Linux. It is also the operating system of choice for single-board computers, such as Raspberry Pi. Although the Linux kernel is one project, the resulting operating system has over 600 different versions (called distributions or distros, for short). Some of the more prominent distributions are Debian Linux, Ubuntu Linux, Red Hat Enterprise Linux, and Android. Each of these uses a different combination of kernel and userland tools to provide a customized user experience.</p>
