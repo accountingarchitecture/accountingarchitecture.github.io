@@ -195,6 +195,19 @@
 		</section>
 
 		<section>
+			<h3>Virtualization</h3>
+			<p><u><i>Virtualization</i></u> provides another method for using hardware more efficiently. Instead of the kernel communicating directly with the hardware, the kernel sits in a <u><i>virtual machine</i></u> and communicates with a <u><i>hypervisor</i></u> that imitates the computer hardware. The underlying system is the <u><i>host</i></u>, and the virtualized system is the <u><i>guest</i></u>.</p>
+			<div class="override"><img src="../../images/hypervisor.png" alt="Hypervisor"/></div>
+		</section>
+
+		<section>
+			<h3>Containerization</h3>
+			<p><u><i>Containerization</i></u> is a newer and slightly more complicated alternative to virtualization that again increases efficient use of hardware resources. Because a full operating system resides in the virtual machine, any guest operating system functionality that is not needed wastes resources. A container strips out all of the unnecessary components of the guest operating system and leaves just enough tools to perform one predetermined task in the spirit of the Unix philosophy. Additionally, instead of the guest having its own kernel, it shares a kernel with the host.</p>
+			<!--Copyright 1999-2016 QuinStreet, Inc. All rights reserved.-->
+			<img src="../../images/containerization.jpg" alt="Containerization" style="max-height: 175px"/>
+		</section>
+
+		<section>
 			<h3>Containers</h3>
 			<p>Containers are more efficient that IaaS virtual machines. Virtual machines are entire operating systems, whereas containers are isolated but share one operating system. Containers generally contain only a single application and perhaps a data store, and they are particularly useful in a cloud environment as an alternative to IaaS. Because of this efficiency benefit, Containers as a Service have become increasingly popular for developing and hosting cloud apps. As a result, CaaS has already reduced the frequency of IaaS, and it will likely completely replace PaaS.</p>
 		</section>
