@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Storage</title>
+
+	<meta name="author" content="Joshua G. Coyne, PhD">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+
+	<!-- Personalized CSS -->
+	<link rel="stylesheet" href="../css/slides.css">
+</head>
+
+<body>
+	<div class="reveal">
+	<div class="slides">
+		<section>
+			<h2>Digital Storage</h2>
+		</section>
+
+		<section>
+			<h3>Accounting Architecture</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>Storage is a unique block in the Technology leg of the Architecture. It is not independent of the Hardware and Software blocks because digital storage comprises a combination of hardware and software components. Also, unlike the other blocks of the Architecture, the Storage block maps directly into a step of the Information Life Cycle: Storage.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Types of Storage</h3>
+			<ul>
+				<li><u><i>File systems</i></u> contain data in separate files and folders. This is the traditional storage format we use in our individual computers.</li>
+				<li><u><i>Database systems</i></u> store all data in a single location.</li>
+			</ul>
+			<p>These two systems can accommodate physical and digital resources. However, for our purposes, we will exclusively focus on digital storage systems.</p>
+		</section>
+		
+		<section>
+			<h3>File System</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 75%">
+					<p>The file system provides the familiar logical hierarchical folder structure. Different operating systems support different file systems (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD. The differences between these is not important, but many consider ZFS to be the <em>most awesome</em>.) The operating system and other application software reside on the file system. Because the file system sits below the operating system, users can remove a storage device, such as a USB drive, from one computer and access files on the file system from another computer.</p>
+				</div>
+				<div class="flex-item"><img src="../images/das.png" alt="Direct Access Storage" style="max-width: 200px"/></div>
+			</div>
+		</section>
+			
+		<section>
+			<h3>File System Layers</h3>
+			<p>However, the file system structure of files and folders is merely how the user sees the storage. One or more <u><i>physical</i></u> or <u><i>logical</i></u> <u><i>volumes</i></u> underlie that file system, and as a result, the user's file system view is not consistent with the physical view (i.e., where the data sits on the physical storage device). The physical volume is the physical storage device (e.g., HDD, SSD, etc), whereas logical volumes combine physical volumes into <i>ad-hoc</i> storage devices that can change size, as needed. Several different forms of logical volumes exist, but one common example is <u><i>RAID</i></u>.</p>
+		</section>
+
+		<section>
+			<h3>Physical Volumes</h3>
+			<p>The lowest level of storage is the physical volume. A physical volume is either an entire storage device or a <u><i>partition</i></u>, which is a portion of a physical disk. Whether the volume spans the entire storage drive or only a partition, the size of the volume once it is created is static. This makes physical volumes difficult to manage because storage needs can change over time.</p>
+			<div class="override"><img src="../images/partition.png" alt="Partition" style="height: 175px"/></div>
+		</section>
+
+		<section>
+		  <h3>Logical Volumes</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 68%">
+					<p>Logical volumes help to overcome the lack of flexibility of physical volumes. Logical volumes begin by combining multiple physical volumes into a volume group. Each logical volume draws space from the volume group. As long as the volume group has free space, logical volumes can be resized after creation to include more storage from the volume group. It is also possible to add additional physical partitions to the volume group to increase the free space that can be allocated to logical volumes.</p>
+				</div>
+				<div class="flex-item"><img src="../images/lvm.png" alt="LVM" style="max-height: 200px"/></div>
+			</div>
+		</section>
+		
+		<section>
+			<h3>RAID</h3>
+			<p>Perhaps the most common type of logical volume is the Redundant Array of Independent Disks (RAID). RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. Unlike with some other forms of logical volume, with RAID, the user never interacts with a volume group and never creates logical volumes. Instead, the number of the RAID determines the exact number of physical volumes and logical volumes. In order to gain additional flexibility, some users place the RAID volume in a volume group and allocate the storage to logical volumes.</li>
+		</section>
+
+		<section>
+			<h3>Hardware-level RAID Controllers</h3>
+			<p>Three different types of controllers can manage a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive, and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
+		</section>
+		
+		<section>
+		  <h3>Software-level RAID Controllers</h3>
+		  <p>In the two prior cases, the operating system stored on the storage device will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID.</p>
+		</section>
+		
+		<section>
+			<h3>Database System</h3>
+			<p>The logical view of a database system is a centralized data store, but the data in the database actually resides on a file system. The database server collates the data in the file system and presents it in a centralized manner. The most widely implemented database systems are either <u><i>relational database management systems</i></u> (RDBMS) or <u><i>non-relational databases</i></u> (NoSQL).</p>
+		</section>
+
+		<section>
+			<h3>Components of a Relational Database</h3>
+			<div class="table" style="font-size: 20px; border: 3px solid black">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">ID</div>
+					<div class="table-cell" style="font-weight: bold">First Name</div>
+					<div class="table-cell" style="font-weight: bold">Last Name</div>
+					<div class="table-cell" style="font-weight: bold">Job Title</div>
+					<div class="table-cell" style="font-weight: bold">Email</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">1</div>
+					<div class="table-cell">John</div>
+					<div class="table-cell">Smith</div>
+					<div class="table-cell">Manager</div>
+					<div class="table-cell">john.smith@abc.xyz</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">2</div>
+					<div class="table-cell">Mary</div>
+					<div class="table-cell">Higgins</div>
+					<div class="table-cell">CEO</div>
+					<div class="table-cell">mary.higgins@abc.xyz</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">3</div>
+					<div class="table-cell">Jack</div>
+					<div class="table-cell">Tuttle</div>
+					<div class="table-cell">Janitor</div>
+					<div class="table-cell"></div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">4</div>
+					<div class="table-cell">Janine</div>
+					<div class="table-cell">Cray</div>
+					<div class="table-cell"></div>
+					<div class="table-cell">janine.cray@abc.xyz</div>
+				</div>
+			</div>
+			<p>Each relational database contains one of more two-dimensional <i><u>tables</u></i>. The technical name for a table is a <u><i>relation</i></u>, hence <i>relational database</i>. These tables are similar to spreadsheets found in office software. The individual rows in the relations are called <u><i>records</i></u> or <u><i>tuples</i></u>. The individual columns are called <u><i>attributes</i></u> or <i><u>fields</u></i>. The intersection of a row and a column is a <i><u>cell</u></i>. Cells hold a single value.</p>
+		</section>
+
+		<section>
+			<h3>Data Types</h3>
+			<p>All cells for a single attribute must have the same <u><i>data type</i></u>. This type determines the characteristics of the data, as well as any available operations. The most basic data types are called <u><i>primitives</i></u>:</p>
+			<div class="table" style="border: 3px solid black; font-size: 24px">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Type name</div>
+					<div class="table-cell" style="font-weight: bold">Usage</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">Boolean</div>
+					<div class="table-cell">True/False</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">Char</div>
+					<div class="table-cell">Single alphanumeric character</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">String</div>
+					<div class="table-cell">Series of chars (not a primitive)</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">Integer, Long</div>
+					<div class="table-cell">Whole number</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">Float, Double</div>
+					<div class="table-cell">Decimal number</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Non-relational Databases</h3>
+			<p>Generically speaking, any database that is not relational could be considered non-relational, but in practice, non-relational (Not Only SQL; NoSQL) databases are a specific class of databases that abandoned the principles of relational databases in favor of alternative models. Although this class comprises several distinct models, we will focus on three popular examples: <u><i>key-value stores</i></u>, <u><i>document stores</i></u>, and <u><i>column stores</i></u>.
+		</section>
+
+		<section>
+			<h3>Key-value Store</h3>
+			<p>Key-value is the model that governs all metadata. A <u><i>key-value store</i></u> is a database that pairs unique keys or attributes (i.e., unique identifiers) with data objects. The data object can be anything from a primitive to an entire file (e.g., document, audio file, etc.). The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys.</p>
+		</section>
+
+		<section>
+			<h3>Document Store</h3>
+			<p>A <i><u>document store</u></i> is a special case of a key-value store in which the value is a text file with multiple metadata attributes and values, frequently in XML or Javascript Object Notation (JSON) format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (i.e., the entire document).</p>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+				<div style="font-size: 24px">Relational Table</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Job Title</div>
+						<div class="table-cell" style="font-weight: bold">Email</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">1</div>
+						<div class="table-cell">John</div>
+						<div class="table-cell">Smith</div>
+						<div class="table-cell">Manager</div>
+						<div class="table-cell">john.smith@abc.xyz</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+				<div style="font-size: 24px">Document Store</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+						<div class="table-cell" style="font-weight: bold">Key</div>
+						<div class="table-cell" style="font-weight: bold">Value</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">1</div>
+						<div class="table-cell">
+							<div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
+							<div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
+							<div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
+							<div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Column Store</h3>
+			<p>A <u><i>column store</i></u> is a key-value store that groups key and values into columns and multiple key-value pairs into families, similar to rows in relational tables. Unlike relational tables, these "rows" can have different numbers of attributes (i.e., keys), and attributes that appear in multiple rows can have different data types.</p>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+				<div style="font-size: 24px">Relational Table</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Job Title</div>
+						<div class="table-cell" style="font-weight: bold">Email</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">3</div>
+						<div class="table-cell">Jack</div>
+						<div class="table-cell">Tuttle</div>
+						<div class="table-cell">Janitor</div>
+						<div class="table-cell"></div>
+					</div>
+					<div class="table-row" style="background-color: lightgray">
+						<div class="table-cell">4</div>
+						<div class="table-cell">Janine</div>
+						<div class="table-cell">Cray</div>
+						<div class="table-cell"></div>
+						<div class="table-cell">janine.cray@abc.xyz</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+				<div style="font-size: 24px">Column Store</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+					<div class="table-row" style="background-color: white; border-bottom: 1px solid black">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Job Title</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">3</div>
+						<div class="table-cell">Jack</div>
+						<div class="table-cell">Tuttle</div>
+						<div class="table-cell">Janitor</div>
+					</div>
+					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Email</div>
+					</div>
+					<div class="table-row" style="background-color: lightgray">
+						<div class="table-cell">4</div>
+						<div class="table-cell">Janine</div>
+						<div class="table-cell">Cray</div>
+						<div class="table-cell">janine.cray@abc.xyz</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Benefits of NoSQL Databases</h3>
+			<ul>
+				<li><u><i>Volume</i></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
+				<li><u><i>Velocity</i></u>: Relational databases must find each field for a write request. NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number, and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a family. A document store could take the order and place all attributes and values into a single document.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Benefits of NoSQL Databases</h3>
+			<ul>
+				<li><u><i>Variety</i></u>: Unlike relational databases which primarily store primitives, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
+			</ul>
+			<p>These V's are the same V's that characterize Big Data. Unsurprisingly, NoSQL databases frequently serve as the stores for firms' Big Data.</p>
+		</section>
+
+		<section>
+			<h3>Database Solutions</h3>
+			<p>Several popular relational database management systems (RDBMS), as well as non-relational databases exist. Although the older systems are proprietary, almost all new database systems are open source.</p>
+			<div class="flex-row" style="-webkit-align-items: flex-start; align-items: flex-start">
+				<div class="flex-item">
+  			  <p>Relational</p>
+  			  <ul>
+  			    <li>IBM DB2</li>
+  			    <li>Oracle DB</li>
+  			    <li>Microsoft SQL Server</li>
+  			    <li>MySQL</li>
+  			    <li>PostgreSQL</li>
+  			  </ul>
+				</div>
+				<div class="flex-item">
+  			  <p>Nonrelational</p>
+  			  <ul>
+  			    <li>MongoDB (Document store)</li>
+  			    <li>Cassandra (Wide column store)</li>
+  			    <li>CouchDB (Document store)</li>
+  			    <li>HBase (Wide column store)</li>
+  			  </ul>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>SQL</h3>
+			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases to create, modify, and retrieve data. Although the name NoSQL literally stands for "Not Only SQL," NoSQL databases have little to no support for SQL, and instead rely on other languages, such as Java, JavaScript, and Python for data manipulation. One exception is Apache Cassandra, which can use either Java or CQL (Cassandra Query Language), which is a derivative of SQL. Because of the prevalence of relational databases and its ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
+		</section>
+
+		<section>
+			<h3>Indexing</h3>
+			<p>One of the steps in the Maintenance section is <u><i>indexing</i></u>. The purpose of an index is to increase data retrieval speed. One simple example of this is the index in the back of a textbook. An index contains keys and values, similar to metadata, with keywords as keys and the location (e.g., page numbers) as the values. One difference between an index and metadata is that each key in an index can have multiple values if the keyword occurs multiple times in the data store. Relational databases use indices. A single relation may have many records, and the DBMS may need a large number of processing cycles to find the records that a user wants. An index tells the DBMS exactly where to find certain values. This increases the speed of record retrieval.</p>
+		</section>
+
+		<section>
+			<h3>Structure Models for Relational Databases</h3>
+			<ul>
+				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
+				<li><u><i>Structure models</i></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
+			</ul>
+			<p>Relational databases are a popular context for discussing structure models because the models provide a conceptual view of data storage and identify what attributes are necessary prior to the implementation of the storage solution.</p>
+		</section>
+
+		<section>
+			<h3>Why More Diagrams?</h3>
+			<p>Once we know how to diagram business activities, why is it necessary to create <i>another</i> diagram about the objects in those activities?</p>
+			<p>A process diagram identifies players (agents, processes, and data objects) in a system, but an information system needs more dimensionality. It needs the metadata about each item in the activity diagram. For example, an activity diagram may include the object Invoice, but the information system needs to know the particulars of each instance (i.e., occurrence) of Invoice (e.g., vendor, amount due, due date, etc.).</p>
+		</section>
+
+		<section>
+			<h3>Multiple Choices</h3>
+			<p>Three common structure models exist:</p>
+			<ul>
+				<li>Entity-Relationship (ER; E-R; ERD) diagrams</li>
+				<li>UML class diagrams</li>
+				<li>Resource-Entity-Agent (REA) diagrams</li>
+			</ul>
+			<p>We will focus primarily on E-R, but I will also introduce one aspect of UML class diagrams that I find particularly useful. We will not discuss REA diagrams because they are not a storage model, but rather an attempt&mdash;misguided, in my opinion&mdash;to convert business process activity models to static structure models. (Yes, it is as confusing as it sounds.)</p> 
+		</section>
+
+		<section>
+			<h3>Entity-Relationship Diagrams</h3>
+			<p>The entity-relationship model initially introduced by Peter Chen in 1976 is the <i>de facto</i> standard for modeling relational databases. As the name indicates, the components of an E-R diagram are <i><u>entities</u></i> and <i><u>relationships</u></i> between entities. Additionally, thorough diagrams also include a series of <i><u>attributes</u></i> for each entity and <i><u>cardinalities</u></i> of the relationships.</p>
+		</section>
+
+		<section>
+			<h3>Entities</h3>
+			<p>An <u><i>entity</i></u> is something of importance that needs to be represented in the database. Examples of an entity may be Employee, Invoice, Inventory, Time Stamp, etc. It is important to note that these entities are concepts and not instances. For example, Employee is an entity, but a particular employee, Joe Smith, is an instance of that entity. Entities correspond to tables in the database, whereas instances correspond to records in those tables.
+		</section>
+
+		<section>
+			<h3>Relationships</h3>
+			<p>A <u><i>relationship</i></u> is a link between entities. Because entities are nouns, relationships can be described as verbs of one entity acting on another. Examples of this would be the relationship of Employee and Purchase Requisition. These two entities have a relationship describable as: Employee Creates Purchase Requisition.</p>
+		</section>
+
+		<section>
+			<h3>E-R Shapes</h3>
+			<div class="flex-row">
+				<div class="flex-item override">
+					<div>E-R Diagram</div>
+					<img src="../../images/simple-er.png" alt="Simple E-R Diagram" style="max-height: 200px"/>
+				</div>
+				<div class="flex-item override">
+					<div>Chen Notation</div>
+					<img src="../../images/simple-chen-er.png" alt="Simple E-R Diagram with Chen Notation" style="max-height: 200px"/>
+				</div>
+			</div>
+			<p>The rounded rectangles represent the entities, and the connecting lines signify relationships. Chen notation adds a diamond to allow for explicit labeling of relationships. In other notations, these labels may sit near the relationship line, but I exclude them in the left diagram to avoid clutter.</p>
+		</section>
+
+		<section>
+			<h3>Attributes</h3>
+			<p>An <u><i>attribute</i></u> is any relevant characteristic of an entity. Unsurprisingly, E-R attributes correspond to attributes in a relational table.</p>
+		</section>
+
+		<section>
+			<h3>Cardinalities</h3>
+			<p>The magnitude of the potential relationships between an instance of one entity and the instances of another (i.e., between a record of one table and the records of another table) is <u><i>cardinality</i></u>. Cardinalities have three potential values: zero, one and many. Cardinalities also have two bounds: minimum and maximum. For example, if the two entities are Customer and Sale, then a customer is associated with at least (minimum) zero and at most (maximum) many sales, and each sale is associated with at least one customer and at most one customer. When the minimum and maximum cardinalities are equal, then it is only necessary to report one: each sale is associated with exactly one customer.</p>
+		</section>
+
+		<section>
+			<h3>Coyne Rule of Zero</h3>
+			<p>Although this is not a widely accepted rule of cardinalities, I believe that each relationship must have at least one minimum cardinality of zero. The reason for this is that the database can only create one record at a time. If a sale is associated with at least one customer, then the customer record must exist prior to the sale. If however, a customer is associated with at least one sale, as well, then the sale record must exist prior to the creation of the customer. However, they cannot both exist first. To avoid a Catch-22, one of the minimum cardinalities must be zero.</p>
+		</section>
+
+		<section>
+			<h3>Exceptions to Entities and Attributes</h3>
+			<p>Not everything that is important to represent is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are potential entities and attributes that are combinations of pre-existing attributes. One simple example of this relates to Inventory costs. Unit Cost and Quantity on Hand would be attributes of the entity Inventory, but Total Cost (= Unit Cost x Quantity on Hand) would not. Another example would be employee supervisors. Supervisor would not be an entity because it would simply be a subset of the Employee entity. These would-be entities and attributes become <i><u>user views</u></i> because they are not stored in the database but can be provided to the user, as needed.</p>
+		</section>
+
+		<section>
+			<h3>Keys</h3>
+			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><i>primary key</i></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><i>foreign key</i></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale. The foreign key belongs to the entity that has the instance that is created last. For example, an employee exists before a time card, so the primary key from the Employee entity becomes a foreign key with the Time Card entity.</p>
+		</section>
+
+		<section>
+			<h3>Composite Keys</h3>
+			<p>Sometimes no single attribute uniquely identifies an instance of an entity. For example, neither Semester nor Year nor Course nor Section could be a primary key in a course schedule, but the combination of Semester and Year and Course and Section can. Primary keys that comprise multiple attributes are <u><i>composite keys</i></u>.</p>
+		</section>
+
+		<section>
+			<h3>Sample Diagram</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 75%">
+					<p>Each course in the catalog has a unique number and each professor a unique ID as primary key [PK]. These primary keys also link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK/FK]. Each professor can teach zero or many scheduled courses, and each catalog entry can be scheduled zero or many times, but each scheduled course must have exactly one professor and one catalog reference.</p>
+				</div>
+				<div class="flex-item override">
+					<div>Crow's Foot Notation</div>
+					<img src="../../images/sample-er.png" alt="Sample E-R Diagram"/>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>UML Class Diagrams</h3>
+			<p>E-R diagrams, especially those written in Chen notation, use labels to explain the form of the relationship between entities. For example, the relationship between Customer and Invoice may be &ldquo;pays&rdquo; because the customer pays the invoice. One of the benefits of UML diagrams is that they provide more structure for the actions that each entity may perform. As a result, entities, called classes in UML, contain attributes and <u><i>functions</i></u>. These functions determine how an instance of an entity can interact with the instances of other entities. In the sales process, the Customer class needs the function &ldquo;Create Sales Order,&rdquo; and the Employee class could have the function &ldquo;Cancel Sales Order.&rdquo; Object-oriented programming dictates the format of the function labels, but that is beyond the scope of this course.</p>
+		</section>
+
+		<section>
+			<h3>UML Class Diagrams</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 55%">
+					<p>Functions can also allow classes to interact with themselves and the system administrator to interact with the classes. As a result, many classes have a &ldquo;Set&rdquo; function paired with an attribute (e.g., Set Customer Name) to allow classes to create new instances or modify existing instances, as well as a &ldquo;Get&rdquo; function paired with an attribute (e.g., Get Unit Price) to retrieve the current value of a field.</p>
+				</div>
+				<div class="flex-item override">
+					<img src="../../images/sample-umlclass.png" alt="Sample UML Class Diagram"/>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Accounting Tie-in</h3>
+			<p>Accountants have always had the responsibility to store economic data in journals and ledgers. As the world becomes more digital, databases have replaced paper journals and ledgers, but that is only the beginning. eCommerce and Big Data have created the need for faster, more scalable data stores so that firms can capture customer data as fast as the customers create it. Because of mobile devices, which soon will outnumber humans on earth, this data is created constantly. Proper storage solutions are a necessary first step towards creating reports for internal and external stakeholders to support making strategic decisions.</p>
+		</section>
+
+		<section>
+			<h3>Homework Assignment</h3>
+			<p>Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp">W3Schools</a>. A link to the tutorial can be found on the course portal. The tutorial chapters are listed on the left-hand side of the W3Schools page, and each chapter also has a link to the next. You should place considerable focus on the following topics: &lsquo;SQL Syntax&rsquo;&ndash;&lsquo;SQL Full Join&rsquo; under SQL Tutorial and &lsquo;SQL Avg()&rsquo;&ndash;&lsquo;SQL Having&rsquo; under SQL Functions.</p>
+			<p>On the SQL Quiz results screen, select &ldquo;Check your answers&rdquo; and print the feedback to PDF. (Although it is possible to print a web page to PDF from any browser, you may find this easiest if you use Google Chrome.)</p>
+		</section>
+	</div>
+	</div>
+
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script src="../../js/slides.js"></script>
+</body>
+</html>
