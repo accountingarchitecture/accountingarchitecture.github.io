@@ -41,12 +41,12 @@
 			<h3>Accounting Skills</h3>
 			<p>Accounting firms want accountants with data analytics skills because data analytics improves compliance and assurance. Historically, internal and external auditors have reviewed a sample of transactions to conclude whether financial statement numbers are fairly represented and to look for the potential for fraud. More powerful analytical tools paired with increased ability to store data on financial transactions has created the opportunity for analyzing the entire population of transactions and not only a sample. This leads to greater assurance and greater ability to find fraud. The tax function also benefits because it can have increased assurance of the accuracy of tax numbers.</p>
 		</section>
-		
+
 		<section>
 			<h3>Hot(test) Topic</h3>
 			<p>Industry firms also desire data analytics skills. The Information Era is a primary reason for this desire. Firms, such as Google and Facebook, have made billions of dollars without many physical assets to speak of because they have acquired data about consumer markets that they could sell. Firms have paid for this data because they believe that it contains information that will increase their profitability. Likewise, firms have begun to collect similar data for themselves with the same goal in mind. The Information Era has taught us that the firm with the best information wins.</p>
 		</section>
-		
+
 		<section>
 			<h3>Not Only Big Data</h3>
 			<p>Much of this data is Big Data in the sense that it has high volume, velocity, and variety, and the desire for data analytics skills is related to the difficulty in finding answers in Big Data. As a result, some prefer the moniker &lquo;Big Data analytics,&rdquo; but data analytics is not only for Big Data, especially in an accounting context. Traditional financial data is not necessarily in the realm of Big Data, but data analytics improves the analysis of this data for compliance and decision making purposes. Furthermore, much of Big Data is unrelated to accounting, audit, and tax compliance, so data analytics from the perspective of an accountant will not automatically imply Big Data.</p>
@@ -56,16 +56,31 @@
 			<h3>But Still Big Data</h3>
 			<p>That being said, the analysis of Big Data should matter to accountants. The premise of accounting architecture is that both traditional financial data and Big Data are useful for decision making and that accountants should be the stewards of all types of information. Accountants deal not only with regulatory compliance, but also with internal decision making. Any data that supports internal stakeholders is the purview of accountants.</p>
 		</section>
-		
+
 		<section>
 			<h3>Analytical Tools</h3>
 			<p>The ability to perform data analytics relies in part on familiarity with analytical tools. Some of these tools are proprietary graphical applications, but several are text-based tools that require knowledge of command syntax. Some tools focus specifically on data analysis, whereas others are general-purpose tools that have proven valuable for data analytics. Despite the existence of proprietary tools, open source dominants the field of data analytics.</p>
 		</section>
-		
+
 		<section>
 			<h3>SQL</h3>
 			<p><u><i>Structured Query Language</i></u> is the language for interacting with relational databases to create, modify, and retrieve data. (Although the name NoSQL literally stands for &ldquo;Not Only SQL,&rdquo; NoSQL databases have little to no support for SQL, and instead rely on other languages for data manipulation.) Because of the prevalence of relational databases and ease of use, SQL remains a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
 			<img src="../images/sql.png" alt="SQL" style="max-width: 300px"/>
+		</section>
+
+		<section>
+			<h3>Indexing</h3>
+			<p>In order to increase the speed of queries from a relational database, the RDBMS can create an index of the values in the tables. This index is similar to the index in the back of a textbook. When looking for records that match a particular value, such as a customer name, the RDBMS can find the value in the index, and the index will report which database records contain that value. This is quicker than looking through all records to find those with the desired value, just as it is quicker to use the index in a book to find pages that reference a certain topic than it is look through the entire book to find references to that topic.</p>
+		</section>
+
+		<section>
+			<h3>OLAP</h3>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 74%">
+					<p><u><i>Online analytical processing</i></u> (OLAP) is another method for increasing query speed. OLAP creates either a pre-calculated hypercube (MOLAP) or a series of interconnected relational tables (ROLAP) from a existing database. Users can then quickly perform multidimensional queries, such as sales by quarter by location, with the added ability of rolling up for an aggregated view (e.g., sales <i>by year</i> by location), drilling down for a granular view (e.g., sales <i>by month</i> by location), and slicing and dicing to filter results along a dimension (e.g., sales <i>for Q1</i> by location).</p>
+				</div>
+				<div class="flex-item"><img src="../images/olap.jpg" alt="OLAP Cube" style="max-width: 275px"/></div>
+			</div>
 		</section>
 
 		<section>
@@ -76,7 +91,7 @@
 					<img src="../images/js.png" alt="JavaScript" style="max-width: 250px"/>
 				</div>
 				<div class="flex-item" style="max-width: 45%">
-					<p>Although <u><i>JavaScript</i></u> is a general purpose programming language&mdash;it is especially useful for web development&mdash;it is valuable for data analytics because of its ability to interact with NoSQL databases, especially document stores using JavaScript Object Notation (JSON), which is a metadata framework similar to XML.</p>
+					<p><u><i>JavaScript</i></u> is a general purpose programming language&mdash;it is especially useful for web development&mdash; but it is also valuable for data analytics because of its ability to interact with NoSQL databases, especially document stores using JavaScript Object Notation (JSON), which is a metadata framework similar to XML.</p>
 				</div>
 				<div class="flex-item">
 					<div>JSON</div>
@@ -84,7 +99,7 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<section>
 			<h3>Python and PERL</h3>
 			<p><u><i>Python</i></u> and <u><i>PERL</i></u> are two other general purpose languages. However, because they rely heavily on <u><i>regular expressions</i></u> (Regex), which are sequences of characters that allow for convenient retrieval of strings in text files, they are useful for data, and specifically textual analysis. One use might be to look for specific words in the body of all Twitter posts.</p>
@@ -113,47 +128,51 @@
 			<h3>Regex Humor</h3>
 			<div class="override"><a href="http://xkcd.com/license.html"><img src="http://imgs.xkcd.com/comics/regular_expressions.png" alt="XKCD"/></a></div>
 		</section>
-		
+
 		<section>
 			<h3>R</h3>
-			<p></p>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 80%">
+					<p><u><i>R</i></u> is programming language specifically for data analysis. It is an open source alternative to SAS and Stata, which have been prominent analysis tools for more than a decade. Despite the popularity of these proprietary solutions, R is on its way to becoming the <i>de facto</i> choice for two reasons. First, SAS and Stata are prohibitively expensive, and second, because R is open source, the community has add functionality to it, increasing the power of this analysis tool. One popular use for R is linear regression, which is a statistical tool for measuring the extent to which certain inputs affect the level of an output.</p>
+				</div>
+				<div class="flex-item"><img src="../images/r.png" alt="R" style="max-width: 250px"/></div>
+			</div>
 		</section>
-		
-		<section>
-			<h3>OLAP</h3>
-			<p></p>
-		</section>
-		
+
 		<section>
 			<h3>Hadoop</h3>
-			<p></p>
+			<p><u<i>Apache Hadoop</i></u> was the first prominent tool for analyzing Big Data. It is large enough that it requires at least three connected computers (nodes) to run. Users give Hadoop commands written in Java&mdash;which is different from JavaScript&mdash;and Hadoop uses the <u><i>MapReduce</i></u> model to shrink the data sufficiently to find an answer. Unsurprisingly, MapReduce involves three steps. In the Map step, each processing node receives a portion of the data and maps each data item (i.e., key) to a value. In the Shuffle step, each node receives data grouped by key. In the Reduce step, the nodes calculate a summary statistic by key.</p>
 		</section>
-		
+
+		<section>
+			<h3>MapReduce Example</h3>
+			<p>For example, a Hadoop installation with three nodes wants to look for the occurrence of the words love, money, and art on Twitter. In the Map step, each node receives one third of all Twitter posts and gives occurrence of any of the three words (i.e., keys) a value of 1. In the Shuffle step, each node receives all occurrences of one of the three words. In the Reduce step, each node counts the number of occurrences of each word and returns the total number of occurrences.</p>
+		</section>
+
 		<section>
 			<h3>Spark</h3>
-			<p></p>
+			<p>Despite Hadoop's ability to manage large datasets, users dislike it for two reasons. First, it requires Java-based queries, which are much more complicated than SQL queries, and second, it cannot process queries in real time, so users must plan in advance for answers they may want in the future. <u><i>Apache Spark</i></u> attempts to overcome both of these weaknesses simultaneously by replacing the MapReduce engine with an ROLAP engine. This allows for real-time, SQL-based queries.</p>
 		</section>
-		
-		<section>
-			<h3>Not Excel</h3>
-			<p></p>
-		</section>
-		
+
 		<section>
 			<h3>Accounting-specific Tools</h3>
-			<p></p>
+			<p>These analytical tools are all examples of general-use tools, in the sense that they are not specifically geared toward financial data. However, because of the value of data analytics in accounting, especially audit, developers have created accounting-specific tools. Two prominent examples are ACL Analytics (previously, ACL Audit Analytics) and CaseWare IDEA. These are proprietary, graphical tools that accountants can use to analyze and report on financial data. Some audit textbooks include examples and exercises from these software products.</p>
 		</section>
-		
+
+		<section>
+			<h3>Not Excel</h3>
+			<p>Excel is a familiar business tool, and it is easy to stick with familiar tools to perform a variety of tasks. A wise person once said, &ldquo;If all you have is a hammer, every problem looks like a nail.&rdquo; Excel is a useful tool, but data analytics, especially Big Data analytics is not a nail. A needle in a haystack might be a more appropriate analogy. The willingness to apply the correct tool to the problem at hand will increase an analyst's ability to analyze data effectively and efficiently.</p>
+		</section>
+
 		<section>
 			<h3>More than Tools</h3>
-			<p></p>
+			<p>Because data analytics is a hot topic, it is easy to forget that the solution to finding answers traditional data and Big Data is not to find the coolest analytical tool. Just as with any profession, tools are valuable, even vital, but not sufficient. Accountants' ability to analyze data begins with <u><i>understanding</i></u> and <u><i>judgment</i></u>: an understanding of the data and the informational needs of stakeholders and sound judgment to consider the correct questions to ask, approach to take, and queries to run in order to find the answers in the data. Data analytics cannot begin with an analytical tool; it begins with an analyst.</p>
 		</section>
-		
+
 		<section>
 			<h3>Accounting Tie-in</h3>
 			<p>Even if it is difficult to believe that accounting architecture is the future of the accounting profession, data analytics is an important part of the current professional landscape. In fact, the desire for data analytics is one reason for the value of accounting architecture. Employers want accountants with data analytics skills, and those who understand the information system and the information life cycle the best are best able to find answers in the data. Additionally, the best information systems will be most capable of acquiring and storing the data for analysis, and accounting architects can help design such a system.</p>
 		</section>
-
 	</div>
 	</div>
 
