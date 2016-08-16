@@ -3,28 +3,21 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>ACCT 4020</title>
+	<title>Services</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
-
-	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
 	<!-- Personalized CSS -->
 	<link rel="stylesheet" href="../../css/slides.css">
-
-	<!--[if lt IE 9]>
-	<script src="../../reveal.js/lib/js/html5shiv.js"></script>
-	<![endif]-->
 </head>
 
 <body>
@@ -37,59 +30,37 @@
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>The Services block of the Architecture is the final block in the Technology leg. It comprises networking and cloud computing. In a nutshell, Services relies on the same technologies as the Hardware, Software, and Storage blocks, but Services uses these in a remote, and not a local, environment.</p>
+					<p>The Services block of the Architecture is the final block in the Technology leg. It comprises networking and cloud computing. In a nutshell, Services rely on the same technologies as the Hardware, Software, and Storage blocks, but in a networked environment. This is the environment in which our connected devices primarily function.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Familiarity</h3>
-			<p>Because of the prevalence of digital devices, most students already rely on many of the technologies previously discussed throughout this course. With our connected lifestyle, this is especially true of network technologies. As a result, much of this discussion is an explanation of technologies, with which we are all already familiar, even if the technical terms are not.</p>
-		</section>
-		
-		<section>
 			<h3>A Brief History</h3>
-			<p>Historically, individual computers were <u><i>thin clients</i></u>&mdash;dumb terminals&mdash;that allowed for use of <u><i>server-side</i></u> software on a centralized server. Server hardware was large and expensive, and in order to use that hardware efficiently, multiple dumb terminals shared the computing power. As processing power became less expensive, manufacturers created personal computers&mdash;<u><i>fat clients</i></u> or smart terminals&mdash;that could function independently using <u><i>client-side</i></u> software. To some extent, desktop and laptop computers continue to follow this model.</p>
+			<p>Historically, individual computers were <u><i>thin clients</i></u>&mdash;dumb terminals&mdash;that allowed for use of <u><i>server-side</i></u> software run on a centralized server. Server hardware was large and expensive, and in order to use that hardware efficiently, multiple dumb terminals shared the computing power. As processing power became less expensive, manufacturers created personal computers&mdash;<u><i>fat clients</i></u> or smart terminals&mdash;that could function independently using <u><i>client-side</i></u> software. Desktops and laptop computers continue to follow this model, but with the advent of the Internet and the sharp reduction in data transmission costs, we have also readopted the original model of servers and thin clients by using computing devices that derive their main functionality from Web servers.</p>
 		</section>
 
 		<section>
-			<h3>Going Online</h3>
-			<p>With the advent of the Internet and the sharp reduction in data transmission cost, we have now returned to the original model of servers and thin clients, but we have added an additional concept. Applying terminology of today to the original server-client relationship, these dumb terminals communicated with their server using a <i><u>local area network</u></i> (LAN), which connects devices in the same geographical location, such as a residence or office. A <u><i>wide area network</i></u> (WAN), such as the Internet, connects devices in different locations. This allows for access to the World Wide Web, which is fundamentally data that is stored on servers in various remote locations.</p>
-		</section>
-
-		<section>
-			<h3>LAN Hardware</h3>
-			<p>A local area network uses <u><i>routers</i></u> and <u><i>switches</i></u>. The differences between these are beyond our purview, but briefly, a switch allows network traffic to flow to multiple different devices, whereas a router creates a smaller network within a larger network and directs traffic between the smaller and larger networks. Category 5, 5E and 6 (Ethernet) cables and wireless fidelity (Wi-Fi) connect individual devices to the LAN.</p>
-			<!--License: CC-BY-SA 3.0 Attribution: PassportDude at the English Language Wikipedia-->
-			<img src="../../images/switch.jpg" alt="Switch" style="max-height: 90px; margin-top: 0"/>
-		</section>
-
-		<section>
-			<h3>WAN Hardware</h3>
-			<p>Modems, also referred to as radios, allow devices and LANs to access a WAN.  Internet Service Providers (ISPs) use coaxial cable, phone lines, satellite, cell towers, and fiber optics to allow individual residences and business access to a WAN, such as the Internet. Because the Internet encompasses multiple continents, undersea fiber optics are necessary to create the WAN interconnectivity that we take for granted.</p>
+			<h3>Networks</h3>
+			<p>Computing devices access these servers by virtue of networks. <i><u>Local area networks</u></i> (LANs) connect devices in the same geographical location, such as a residence or office, whereas <u><i>wide area networks</i></u> (WANs), such as the Internet, connect devices in different locations. WANs allow devices to access the World Wide Web, which is nothing other than data that is stored on servers in various remote locations.</p>
+			<p>LANs use <u><i>routers</i></u> and <u><i>switches</i></u> to connect devices to each other with Category 5E and 6 (Ethernet) cables and wireless fidelity (Wi-Fi). <u><i>Modems</i></u>, or radios, connected to Internet Service Providers (ISPs) by coaxial cable, phone lines, satellite, cell towers, and fiber optics, allow devices to connect to a WAN.</p>
 		</section>
 
 		<section>
 			<h3>TCP/IP</h3>
-			<p>The Internet protocol suite is the set of protocols currently used to allow network devices to communicate. The two most important protocols are the Transmission Control Protocol (TCP) and the Internet Protocol (IP), hence the common name for the protocol suite: TCP/IP. The Internet Protocol dictates the form of the network address (i.e., IP address) issued to a computer's network interface card (NIC). Each NIC also has a unique media access control (MAC) address, which is essentially the NIC's serial number.</p>
+			<p>The <u><i>Internet protocol suite</i></u> is the set of protocols currently used to allow network devices to communicate with each other. The two most important protocols are the Transmission Control Protocol (TCP) and the Internet Protocol (IP), hence the common name for the protocol suite: TCP/IP. The Internet Protocol dictates the form of the network address (i.e., IP address) issued to a computer's network interface card (NIC). Each NIC also has a unique media access control (MAC) address, which is essentially the NIC hardware's serial number, although it can be changed (i.e., masked) with the correct software.</p>
 		</section>
 
 		<section>
-			<h3>IPv4</h3>
-			<p>The Internet protocol has two common versions. IPv4 has been the standard since 1983 and is still in use today. IPv4 uses 4 three-digit numbers to identify a unique network address (e.g., 192.168.001.010). This allows for just over 4 billion addresses available to the Internet. Unfortunately, because of the drastic increase in network devices, almost all available IPv4 addresses are in use. In order to address this shortage of available addresses, LANs create sub-networks so that the network devices within the LAN can use the same addresses as devices on other LANs.</p>
+			<h3>IPv4 and IPv6</h3>
+			<p>The Internet protocol has two common versions. IPv4 has been the standard since 1983. It uses 4 three-digit numbers, each within the range from 0 to 255, to identify a unique network address (e.g., 192.168.001.010). This allows for just over 4 billion addresses. Because of the drastic increase in network devices, almost all available IPv4 addresses are in use. In order to address this shortage of available addresses, LANs create sub-networks so that the network devices within the LAN can use the same addresses as devices on other LANs. When communicating with the WAN, devices on a LAN all share the same WAN address. The Internet Engineering Task Force (IETF) has also addressed the shortage of IP addresses by introducing IPv6 with many more IP addresses. Unfortunately, many modems, ISPs, and Web sites have not yet begun to support IPv6.</p>
 		</section>
 		
 		<section>
-			<h3>IPv6</h3>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/-Uwjt32NvVA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-			<p>The Internet Engineering Task Force (IETF) has also addressed the shortage of IP addresses by introducing IPv6. Unfortunately, IPv6 is not yet widely adopted. Many modems and ISPs have not yet begun to support this protocol, and only some Web servers have IPv6 enabled.</p>
-		</section>
-
-		<section>
 			<h3>Ports</h3>
-			<p>In addition to an IP address, each NIC also has 131,072 ports or sockets: 65,536 TCP ports and 65,536 UDP ports. Both TCP and UDP are part of the TCP/IP suite, and their differences are too technical for our purposes. The ports direct network traffic. Each port allows for a single stream of network traffic to or from a NIC. The first 1,024 ports in both protocols are reserved for system processes that provide network services.</p>
+			<p>In addition to an IP address, each NIC also has 131,072 ports or sockets: 65,536 TCP ports and 65,536 UDP ports. These ports direct network traffic. Each port allows for a single stream of network traffic to or from a NIC, in the same sense that a physical port allows one ship to load or unload cargo at a time. Many services run on pre-determined ports. For example, Voice over Internet Protocol (VoIP), one protocol for making Internet phone calls, frequently uses TCP port 5060; Web servers (HTTP) often use TCP port 80; and the Simple Mail Transfer Protocol (SMTP) uses port 25 to send email.</p>
 		</section>
 		
 		<section>
@@ -285,14 +256,11 @@
 				<li>Explain the origin of ERP from MRP and MRP II and share the history of its development and adoption in corporate information systems.</li>
 			</ol>
 		</section>
-
 	</div>
 	</div>
 
 	<script src="../../reveal.js/lib/js/head.min.js"></script>
 	<script src="../../reveal.js/js/reveal.js"></script>
 	<script src="../../js/slides.js"></script>
-	<script src="../../js/printing.js"></script>
-
 </body>
 </html>
