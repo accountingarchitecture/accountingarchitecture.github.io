@@ -24,7 +24,7 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Cloud Computing</h2>
+			<h2>Services</h2>
 		</section>
 
 		<section>
@@ -43,6 +43,26 @@
 		</section>
 
 		<section>
+			<h3>What is a Cloud?</h3>
+			<p><u><i>Cloud computing</i></u> is the buzz word for the current server-client model, in which all computing devices are connected to the Internet virtually all of the time. Although the term may seem nebulous&mdash;no pun intended&mdash;it simply means that the applications, storage, and processing power used by a computing device are in a remote physical location on a server, instead of on the local device. The cloud computing model is consistent with the current line of thin client hardware, such as smartphones and tablets, but it is inconsistent with continued reliance on high-powered workstations. One explanation for this is that users seem unwilling to abandon client-side applications completely, perhaps out of the desire to have some independence from the Internet. Even mobile device users prefer to have a library of client-side software.</p>
+		</section>
+
+		<section>
+			<h3>Server Clusters</h3>
+			<p>Parallel computing involves including multiple CPUs or CPU cores on the same motherboard. This is the standard for most computing devices today. <u><i>Distributed computing</i></u>, on the other hand, involves combining multiple computers together in a cluster to share a processing task. Any computer, even a tiny SBC, can play the role of the server in a cloud, but the demands placed on a cloud (e.g., think about the number of users watching Netflix simultaneously) frequently exceeds the abilities of a single computer. Many clouds are supported by a server cluster, not a single server.</p>
+		</section>
+
+		<section>
+			<h3>Mainframes</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../images/mainframe.jpg" alt="Mainframe" style="max-height: 500px"/></div>
+				<div class="flex-item" style="max-width: 60%">
+					<p>In the old server-client model, the servers were called mainframes. Today, mainframes still exist as giant server-rack-sized computers. Mainframes have begun to replace lower-powered servers in larger clouds that utilize hundreds of clustered servers. One mainframe can have the processing power of as many as 200+ individual servers at a fraction of the hardware cost.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
 			<h3>Networks</h3>
 			<p>Computing devices access these servers by virtue of networks. <i><u>Local area networks</u></i> (LANs) connect devices in the same geographical location, such as a residence or office, whereas <u><i>wide area networks</i></u> (WANs), such as the Internet, connect devices in different locations. WANs allow devices to access the World Wide Web, which is nothing other than data that is stored on servers in various remote locations.</p>
 			<p>LANs use <u><i>routers</i></u> and <u><i>switches</i></u> to connect devices to each other with Category 5E and 6 (Ethernet) cables and wireless fidelity (Wi-Fi). <u><i>Modems</i></u>, or radios, connected to Internet Service Providers (ISPs) by coaxial cable, phone lines, satellite, cell towers, and fiber optics, allow devices to connect to a WAN.</p>
@@ -57,72 +77,37 @@
 			<h3>IPv4 and IPv6</h3>
 			<p>The Internet protocol has two common versions. IPv4 has been the standard since 1983. It uses 4 three-digit numbers, each within the range from 0 to 255, to identify a unique network address (e.g., 192.168.001.010). This allows for just over 4 billion addresses. Because of the drastic increase in network devices, almost all available IPv4 addresses are in use. In order to address this shortage of available addresses, LANs create sub-networks so that the network devices within the LAN can use the same addresses as devices on other LANs. When communicating with the WAN, devices on a LAN all share the same WAN address. The Internet Engineering Task Force (IETF) has also addressed the shortage of IP addresses by introducing IPv6 with many more IP addresses. Unfortunately, many modems, ISPs, and Web sites have not yet begun to support IPv6.</p>
 		</section>
-		
+
 		<section>
 			<h3>Ports</h3>
-			<p>In addition to an IP address, each NIC also has 131,072 ports or sockets: 65,536 TCP ports and 65,536 UDP ports. These ports direct network traffic. Each port allows for a single stream of network traffic to or from a NIC, in the same sense that a physical port allows one ship to load or unload cargo at a time. Many services run on pre-determined ports. For example, Voice over Internet Protocol (VoIP), one protocol for making Internet phone calls, frequently uses TCP port 5060; Web servers (HTTP) often use TCP port 80; and the Simple Mail Transfer Protocol (SMTP) uses port 25 to send email.</p>
+			<p>In addition to an IP address, each NIC also has 131,072 ports or sockets: 65,536 TCP ports and 65,536 UDP ports. These ports direct network traffic. Each port allows for a single stream of network traffic to or from a NIC, in the same sense that a physical port allows one ship to load or unload cargo at a time. Services listen (i.e., receive network communication) and transmit (i.e., send network communication) via their assigned ports. Many services run on pre-determined ports. For example, Voice over Internet Protocol (VoIP), one protocol for making Internet phone calls, frequently uses UDP port 5060; Web servers (HTTP) often use TCP port 80; and the Simple Mail Transfer Protocol (SMTP) uses TCP port 25 to send email.</p>
 		</section>
-		
+
 		<section>
 			<h3>DNS</h3>
-			<p>Closely related to the Internet Protocol address is the Domain Name System (DNS). Each file in the World Wide Web has a unique Uniform Resource Locator (URL). This URL combines the address of the host (i.e., the server where the content is stored) and the path to the specific file. However, it is not feasible to remember the IP addresses of Internet hosts, but it is easy to remember hostnames. DNS servers store an index that pairs hostnames with IP addresses (e.g., google.com with 216.058.218.110) so that Web content is findable by hostname:en.wikipedia.org and path:/wiki/Main_Page without needing to remember the IP address.</p>
+			<p>Closely related to the Internet Protocol address is the Domain Name System (DNS). Each file in the World Wide Web has a unique Uniform Resource Locator (URL). This URL combines the address of the host (i.e., the server where the content is stored) and the path to the specific file. It is not feasible to remember the IP addresses of Internet hosts, but it is easy to remember hostnames. DNS servers store an index that pairs hostnames with IP addresses (e.g., google.com with 216.058.218.110) so that Web content is findable by hostname:en.wikipedia.org and path:/wiki/Main_Page without needing to remember the IP address.</p>
 		</section>
 
 		<section>
 			<h3>Transfer Protocols</h3>
-			<p>One additional component of a URL is the scheme, which I will call the transfer protocol. The most popular transfer protocol is the Hypertext Transfer Protocol (HTTP), which is used to serve Hypertext Markup Language (HTML) documents. The File Transfer Protocol (FTP) is used to transfer arbitrary files. The Mailto scheme allows for creating hyperlinks that include email addresses. Other schema exist, but they are much less common.</p>
-		</section>
-
-		<section>
-			<h3>Always Online</h3>
-			<p>The current status quo is for all of our devices to be connected to the Internet at all times. This somewhat opposes the premise of the personal computer, but it is perfectly in line with the idea behind the current generation of thin clients, such as smartphones, tablets, and Chromebooks. Personal computers commonly have higher processing power than thin clients to accommodate continued reliance on client-side applications, such as games, statistical analysis software, games, video and audio editing software&mdash;have I mentioned games&mdash;etc.</p>
-		</section>
-
-		<section>
-			<h3>Not Without Offline</h3>
-			<p>Even thin clients have considerable processing power for two reasons. First, consumers are not yet willing to accept a computer that cannot function offline, so even thin clients now have client-side applications&mdash;think of mobile apps, such as, dare I say it, games&mdash;and second, the consumption of server-side content currently requires significant client-side processing power. For example, simply keeping 10 browser tabs open requires approximately 2 GB of RAM.</p>
-		</section>
-
-		<section>
-			<h3>Not Really Client Side</h3>
-			<p>It is also worth mentioning that even client-side applications today rarely constitute <i>client-side-only</i> applications. Because computers are effectively always online, these client-side applications can communicate with remote servers to provide additional content, periodic updates, multiplayer functionality&mdash;yes, I mean games, again&mdash;or syncing between devices.</p>
-		</section>
-
-		<section>
-			<h3>What is a Cloud?</h3>
-			<p>Cloud computing is currently a buzz word, but it is not a new, nor is it a complicated concept. It essentially means server-based, as opposed to client-based, computing, just as in the dumb terminal days of yore. The Internet as a WAN is a cloud because it relies on server-based computing, although <em>servers</em>-based might be a more appropriate term. Similarly, a LAN can also host a cloud if the LAN uses server-based computing. The original server-dumb terminal environment was a LAN-based cloud, except that no one called it that back then.</p>
-		</section>
-
-		<section>
-			<h3>Cluster Computing</h3>
-			<p>Parallel computing involves including multiple CPUs or CPU cores on the same motherboard. This is the standard for most computing devices today. Distributed computing, on the other hand, involves combining multiple computers together in a cluster to share a processing task. Any computer, even a tiny SBC, can play the role of the server in a cloud, but the demands placed on a cloud (e.g., think about the number of users watching Netflix simultaneously) frequently exceeds the abilities of a single computer. Many clouds are supported by a server cluster, not a single server.</p>
-		</section>
-
-		<section>
-			<h3>Mainframes</h3>
-			<div class="flex-row">
-  		  <div class="flex-item override"><img src="../../images/mainframe.jpg" alt="Mainframe" style="max-height: 500px"/></div>
-				<div class="flex-item" style="max-width: 60%">
-					<p>In the old server-client model, the servers were called mainframes. Today, mainframes still exist as giant server-rack-sized computers. Mainframes have begun to replace lower-powered servers in larger clouds that utilize hundreds of clustered servers. One mainframe can have the processing power of as many as 200+ individual servers at a fraction of the hardware cost.</p>
-				</div>
-			</div>
+			<p>One additional component of a URL is the scheme, or transfer protocol. The most popular transfer protocol is the Hypertext Transfer Protocol (HTTP), which is used to serve Hypertext Markup Language (HTML) documents. The File Transfer Protocol (FTP) is one protocol used to transfer files to and from a file server. Multiple other, less-common schema exist, but these two represent the vast majority of Web URLs.</p>
 		</section>
 
 		<section>
 			<h3>Public Clouds</h3>
-			<p>The concept of WAN clouds and LAN clouds creates an important dichotomy for cloud computing. <u><i>Public clouds</i></u> are servers that are hosted by third parties and made available through Internet (i.e., WAN) access. The two most well-known public clouds are Amazon AWS and Microsoft Azure, but other popular offerings exist, such as Google Cloud Computing and Rackspace. The benefit of public clouds is the outsourced responsibility for purchasing and maintaining server and network hardware. Public cloud providers then rent space on their servers to customers.</p>
+			<p>The concepts of cloud computing and WAN and LAN networks create an important dichotomy for cloud computing. <u><i>Public clouds</i></u> are servers that are hosted by third parties and made available through Internet (i.e., WAN) access. The two most well-known public clouds are Amazon AWS and Microsoft Azure, but other popular offerings exist, such as Google Cloud Computing and Rackspace. The benefit of public clouds is the outsourced responsibility for purchasing and maintaining server and network hardware. Public cloud providers then rent space on their servers to customers.</p>
 		</section>
 
 		<section>
 			<h3>Private Clouds</h3>
-			<p>However, not everyone is interested in outsourcing the IT function. As a result, <u><i>private clouds</i></u> have become increasingly popular. Private clouds are servers that are hosted on the company's own LAN. The company is responsible for purchasing and maintaining all hardware, but with that responsibility comes greater control and flexibility. Although any server-based computing can constitute cloud computing, some specific software offerings focus specifically on private cloud computing. The three most well-known solutions are OpenStack, CloudStack, and ownCloud. (ownCloud began as a residential-grade private cloud offering an email server, file server, and calendar server, but thanks to collaboration with CERN, it can now scale up to handle vast corporate clouds.)</p>
+			<p>However, not everyone is interested in outsourcing the IT function. As a result, <u><i>private clouds</i></u> have become increasingly popular. Private clouds are servers that are hosted on the company's own LAN. The company is responsible for purchasing and maintaining all hardware, but with that responsibility comes greater control and flexibility. Although any server-based computing can constitute cloud computing, some software offerings focus specifically on private cloud computing. The three most well-known solutions are OpenStack, CloudStack, and ownCloud. (ownCloud began as a residential-grade private cloud with an email server, file server, and calendar server, but thanks to collaboration with CERN, it can now scale up to handle vast corporate clouds.)</p>
 		</section>
 
 		<section>
-		  <h3>Enterprise Resource Planning</h3>
-		  <p><u><i>Enterprise Resource Planning</i></u> (ERP) is an early example of cloud computing. The goal of ERP systems was to have centralized data stores, as well as end-user applications and data entry systems with a uniform appearance, for tracking business and accounting data. Oracle and SAP are prominent vendors in this arena, and Peoplesoft had been prior to its acquisition by Oracle. Companies hastily adopted ERPs in the 1990s in the hope that they would increase profitability. Unfortunately, the difficulty of implementation paired with the rigidity of the software&mdash;ERPs expected uniform business process, which is not a realistic requirement&mdash;rendered several implementations costly (&gt;$100 million) and useless. Despite this fact, many ERP systems are still in use today.</p>
+			<h3>Enterprise Resource Planning</h3>
+			<p><u><i>Enterprise Resource Planning</i></u> (ERP) is an early example of cloud computing. The goal of ERP systems was to have centralized data stores, as well as end-user applications and data entry systems with a uniform appearance, for tracking business and accounting data. Oracle and SAP are prominent vendors in this arena, and Peoplesoft had been prior to its acquisition by Oracle. Companies hastily adopted ERPs in the 1990s in the hope that they would increase profitability. Unfortunately, the difficulty of implementation paired with the rigidity of the software&mdash;ERPs expected uniform business process, which is not a realistic requirement&mdash;rendered several implementations costly (&gt;$100 million) and useless. Despite this fact, many ERP systems are still in use today.</p>
 		</section>
-		
+
 		<section>
 			<h3>Open Source in the Cloud</h3>
 			<p>All prominent private cloud offerings are open source. In fact, open source software dominates cloud computing. Ubuntu Linux is the number one operating system for the cloud&mdash;not the number one Linux distribution, the number one operating system&mdash;even on Microsoft's Azure platform, and the most popular databases in the cloud are open source. The primary reason for the popularity of open source private clouds is customizability. Firms have unique processes with unique informational needs, and they want to be able to customize the information system to meet their unique needs. That is why private clouds thrive while ERP adoption diminishes.</p>
@@ -130,7 +115,7 @@
 
 		<section>
 			<h3>Aside: Monetizing Open Source</h3>
-			<p>Recent news provides a convenient opportunity to explain how to make money with open source software. Microsoft has recently announced that it will port SQL Server to Linux. (To port means to make a software originally designed for one operating system or CPU architecture available on another operating system or CPU.) Although Microsoft would prefer users run Windows Server, users prefer Linux servers. As a result, Microsoft supports Linux on its Azure cloud platform, and if their users prefer Linux, making SQL Server available for Linux can make SQL Server more attractive, as well. Microsoft uses open source Linux to make money from Azure and SQL Server, which, despite being available on Linux, remains closed source.</p>
+			<p>Recent news provides a convenient opportunity to explain how to make money with open source software. Microsoft has announced that it will port SQL Server to Linux. (To port means to make a software originally designed for one operating system or CPU architecture available on another operating system or CPU.) Although Microsoft would prefer users run Windows Server, users prefer Linux. As a result, Microsoft supports Linux on its Azure cloud platform, and if their users prefer Linux, making SQL Server available for Linux can make SQL Server more attractive, as well. Microsoft uses open source Linux to make money from Azure and SQL Server which, despite being available on Linux, remains closed source.</p>
 		</section>
 
 		<section>
@@ -141,8 +126,8 @@
 		<section>
 			<h3>Service Levels</h3>
 			<div class="flex-row">
-  		  <!--CC BY-SA 3.0 Attribution: Sam Johnston-->
-  		  <div class="flex-item override"><img src="../../images/cloud.png" alt="Cloud Computing"/></div>
+				<!--CC BY-SA 3.0 Attribution: Sam Johnston-->
+				<div class="flex-item override"><img src="../images/cloud.png" alt="Cloud Computing"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>In addition to different types of clouds (public, private, or hybrid, which is a combination of public and private), the <u><i>service level</i></u> can also differ. Traditionally, three service levels existed: <u><i>Infrastructure as a Service</i></u> (IaaS), <u><i>Platform as a Service</i></u> (PaaS), and <u><i>Software as a Service</i></u> (SaaS), but newer alternatives to these have emerged.</p>
 				</div>
@@ -151,110 +136,78 @@
 
 		<section>
 			<h3>IaaS and PaaS</h3>
-			<p>Many corporate-grade clouds provide Infrastructure as a Service. This service level usually involves providing one or more virtual machines. IaaS is essentially a replacement for a physical server or workstation. It also provides the user with the most flexibility of the three service levels.</p>
+			<p>Many corporate-grade clouds provide Infrastructure as a Service. This service level usually involves providing one or more <u><i>virtual machines</i></u>. IaaS is essentially a replacement for a physical server or workstation. It also provides the user with the most flexibility of the three service levels.</p>
 			<p>Platform as a Service is more difficult to understand. It usually includes a database, a development environment, and one or more engines, which is code necessary to execute software applications (e.g., a Java engine can execute Java code). The primary role of PaaS is for software development and testing.</p>
 		</section>
 
 		<section>
+			<h3>Virtualization</h3>
+			<p><u><i>Virtualization</i></u> allows software to assume the role of hardware. Instead of a kernel communicating directly with the computer hardware, a virtualized operating system sits in a virtual machine, and its kernel communicates with a <u><i>hypervisor</i></u> which communicates with the computer hardware. The underlying system is the <u><i>host</i></u>, and the virtualized system is the <u><i>guest</i></u>. Virtualization allows for sharing computer hardware with multiple operating systems.</p>
+			<div class="override"><img src="../images/hypervisor.png" alt="Hypervisor"/></div>
+		</section>
+
+		<section>
 			<h3>SaaS</h3>
-			<p>Software as a Service is the service level with which end users are most familiar, although they generally would not use that term. The World Wide Web is essentially a combination of SaaS offerings. Netflix, Google Docs, YouTube, Instagram, Facebook, Twitter, and other social media interfaces, and even online email inboxes and search engines are examples of Software as a Service. Interestingly, Netflix uses Amazon AWS as IaaS to host their video platform, which they provide as SaaS.</p>
+			<p>Software as a Service is the service level with which end users are most familiar, even if they are not familiar with the term. The World Wide Web is essentially a combination of SaaS offerings. Netflix, Google Docs, YouTube, Instagram, Facebook, Twitter, and other social media interfaces, and even online email inboxes and search engines are examples of Software as a Service. Interestingly, Netflix uses Amazon AWS as an IaaS to host their video platform, which they provide as a SaaS.</p>
 		</section>
 
 		<section>
 			<h3>Other-aaS</h3>
-			<p>Several newer service levels provide functionality that is beyond the scope of this course, but two (DBaaS and CaaS) are worth mentioning. Some companies wish to host their own online applications in-house but decide to outsource the database functionality because of the high demand frequent online transactions common to Big Data and eCommerce place on the database server. DBaaS is a convenient solution for these companies.</p>
-		</section>
-
-		<section>
-			<h3>Virtualization</h3>
-			<p><u><i>Virtualization</i></u> provides another method for using hardware more efficiently. Instead of the kernel communicating directly with the hardware, the kernel sits in a <u><i>virtual machine</i></u> and communicates with a <u><i>hypervisor</i></u> that imitates the computer hardware. The underlying system is the <u><i>host</i></u>, and the virtualized system is the <u><i>guest</i></u>.</p>
-			<div class="override"><img src="../../images/hypervisor.png" alt="Hypervisor"/></div>
+			<p>Several newer service levels provide functionality previously not available as a service. Two popular examples are <u><i>Database as a Service</i></u> and <u><i>Container as a Service</i></u>. Some companies wish to host their own online applications in-house but decide to outsource the database functionality because of the high demand frequent online transactions common to Big Data and eCommerce place on the database server. DBaaS is a convenient solution for these companies.</p>
 		</section>
 
 		<section>
 			<h3>Containerization</h3>
-			<p><u><i>Containerization</i></u> is a newer and slightly more complicated alternative to virtualization that again increases efficient use of hardware resources. Because a full operating system resides in the virtual machine, any guest operating system functionality that is not needed wastes resources. A container strips out all of the unnecessary components of the guest operating system and leaves just enough tools to perform one predetermined task in the spirit of the Unix philosophy. Additionally, instead of the guest having its own kernel, it shares a kernel with the host.</p>
-			<!--Copyright 1999-2016 QuinStreet, Inc. All rights reserved.-->
-			<img src="../../images/containerization.jpg" alt="Containerization" style="max-height: 175px"/>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 62%">
+					<p><u><i>Containerization</i></u> is a newer alternative to virtualization. Virtualization shares computer hardware across a number of virtual machines containing full operating systems. Containerization shares one operating system kernel across a number of containers containing just enough software to perform one function (e.g., run one application). The leaner containers avoid the unnecessary, redundant resource consumption of full guest operating systems.</p>
+				</div>
+				<!--Copyright 1999-2016 QuinStreet, Inc. All rights reserved.-->
+				<div class="flex-item"><img src="../images/containerization.jpg" alt="Containerization"/>
 		</section>
 
 		<section>
-			<h3>Containers</h3>
-			<p>Containers are more efficient that IaaS virtual machines. Virtual machines are entire operating systems, whereas containers are isolated but share one operating system. Containers generally contain only a single application and perhaps a data store, and they are particularly useful in a cloud environment as an alternative to IaaS. Because of this efficiency benefit, Containers as a Service have become increasingly popular for developing and hosting cloud apps. As a result, CaaS has already reduced the frequency of IaaS, and it will likely completely replace PaaS.</p>
+			<h3>Containers as a Service</h3>
+			<p>CaaS is more efficient than IaaS virtual machines. Virtual machines are entire operating systems, whereas containers share one operating system. Containers generally contain only a single application and perhaps a data store, and they are particularly useful in a cloud environment. Because of this efficiency benefit, Containers as a Service have become increasingly popular for developing and hosting cloud apps. As a result, CaaS has already reduced the frequency of IaaS, and it will likely completely replace PaaS.</p>
 		</section>
 
 		<section>
 			<h3>Big Picture</h3>
-			<div class="flex-row">
-				<div class="flex-item"><img src="../../images/data-warehouse.jpg" alt="Data Warehouse" style="max-width: 350px"/></div>
-				<div class="flex-item" style="max-width: 60%">
-					<p>By combining many of these services together, we can create a hypothetical cloud. In this image, we can see the information life cycle at work. First, externally facing and department-specific databases support specialized data entry. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis.</p>
-				</div>
-			</div>
+			<p>A cloud-based information system is a combination of one or more of these services. The components of the cloud-based system operationalize the information life cycle or Big Data life cycle. First, externally facing, department-specific databases support specialized data entry. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
 			<h3>OLTP</h3>
-			<div class="flex-row">
-				<div class="flex-item"><img src="../../images/data-warehouse.jpg" alt="Data Warehouse" style="max-width: 350px"/></div>
-				<div class="flex-item" style="max-width: 60%">
-					<p>The first set of systems, labeled Operational Systems, receives data from external sources. These are frequently <u><i>Online Transaction Processing</i></u> (OLTP) systems because they receive data (e.g., customer orders, market prices, and other forms of Big Data) in real-time. Amazon's sales order interface would be an example of an OLTP system. These systems require fast, scalable data stores, so NoSQL is a popular solution.</p>
-				</div>
-			</div>
+			<p>The first set of components receives data from external sources. These are frequently <u><i>Online Transaction Processing</i></u> (OLTP) systems because they receive data (e.g., customer orders, market prices, and other forms of Big Data) in real-time. Amazon's sales order interface would be an example of an OLTP system. These systems require fast, scalable data stores, so NoSQL is a popular solution.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
 			<h3>Integration Layer</h3>
-			<div class="flex-row">
-				<div class="flex-item"><img src="../../images/data-warehouse.jpg" alt="Data Warehouse" style="max-width: 350px"/></div>
-				<div class="flex-item" style="max-width: 60%">
-					<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The integration layer, or staging area, provides a intermediate store when data is cleaned and converted.</p>
-				</div>
-			</div>
+			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides a intermediate store where data is cleaned and converted.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
-			<h3>Not Fun, But Necessary</h3>
+			<h3>Clean Up</h3>
 			<p>Expertise in data analytics is currently a desirable skill, but one of the precursors to useful data analytics is good data. One of the purposes for teaching the information life cycle is to provide you with the awareness of the need to design systems that will ensure good data for analytics, but for pre-existing systems, sometimes the only solution is to take the data as given. As a result, data specialists confess that a large part of their job is cleaning data (e.g., looking for likely errors, finding duplicate data, matching records in one store with the records in another). It is not fun, but it is necessary.</p>
 		</section>
 
 		<section>
 			<h3>Data Warehouse and Marts</h3>
-			<div class="flex-row">
-				<div class="flex-item"><img src="../../images/data-warehouse.jpg" alt="Data Warehouse" style="max-width: 350px"/></div>
-				<div class="flex-item" style="max-width: 60%">
-					<p>The <u><i>data warehouse</i></u> receives clean data from staging and stores it. <u><i>Data marts</i></u> are small warehouses that store department-specific data for analysis. The warehouse and marts serve two special purposes. First, they allow OLTP systems to remain unencumbered when performing resource-intensive data analysis. Second, they can store the results of OLAP and MapReduce in addition to the original data.</p>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h3>Pre-Calculation</h3>
-			<p>Traditional OLAP (i.e., multidimensional online analytical processing) takes large amounts of data and creates an OLAP hypercube, which is essentially a multidimensional table, with statistics aggregated along number of parameters (e.g., year, market segment, department, country, etc.). Similarly, MapReduce combines data records according to pre-determined criteria and calculates statistics. Once these are complete, decision-makers can view the statistics, frequently using visualization tools, and draw conclusions. The pre-calculation can take a long time, so it is necessary to store the results of these procedures for subsequent use. The data warehouse is responsible for storing these statistics.</p>
+			<p>The <u><i>data warehouse</i></u> receives clean data from staging and stores it. <u><i>Data marts</i></u> are small warehouses that store department-specific data for analysis. The warehouse and marts serve two special purposes. First, they allow OLTP systems to remain unencumbered when performing resource-intensive data analysis. Second, they can store pre-calculated OLAP cubes and MapReduce statistics in addition to the original data.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
 			<h3>In Or Out?</h3>
-			<p>At a recent meeting of the American Taxation Association, representatives from E&amp;Y's tax practice talked about data analytics and tax planning and compliance. One individual stated that because of the increase in real-time analytical tools, data warehouses were no longer necessary. Given the roles that they play, I find this a bold statement. Later on in the presentation, it appeared that what the individual meant was that real-time analytics had replaced traditional pre-calculations, so it was no longer necessary to store OLAP cubes. I agree that real-time analytics have begun to replace traditional OLAP and MapReduce, but I would not agree that this removes the need for a data warehouse to archive data collected from transactional databases.</p>
+			<p>At a recent meeting of the American Taxation Association, representatives from E&amp;Y's tax practice talked about data analytics and tax planning and compliance. One individual stated that because of the increase in real-time analytical tools, data warehouses were no longer necessary. Given the roles that data warehouses play, this seems a bold statement. Later on in the presentation, it appeared that what the individual meant was that real-time analytics had replaced traditional pre-calculations, so it was no longer necessary to store OLAP cubes. Real-time analytics have begun to replace traditional OLAP and MapReduce protocols, but this is not sufficient to remove the need for a data warehouse to archive data collected from transactional databases.</p>
 		</section>
 
 		<section>
 			<h3>Accounting Tie-in</h3>
-			<p>Our discussion of networking was primarily to explain the technologies that you rely on each day. In many accounting roles, this information is not directly relevant, but it is useful for accounting architects and IT auditors, who need a deeper understanding of IT. However, the concepts of cloud computing&mdash;public vs. private, service levels, transaction processing systems, and data warehousing&mdash;have broader importance. Data is everything to accountants, and in our current connected world, systems must be available to receive external data, storage systems must be able to preserve vital data, and accountants must have the analytical skills necessary to interpret the data for internal and external decision-makers.</p>
-		</section>
-
-		<section>
-			<h3>Taxation Tie-in</h3>
-			<p>According to E&amp;Y, the tax function has become the largest consumer of data in the enterprise. Two reasons for this trend are (1) data analysis enables taxes to drive corporate strategy and (2) tax authorities have begun to demand increased granularity in tax disclosure (i.e., underlying transactional data instead of summary figures). A well-designed cloud captures transactional data, cleans it, and stores it for the tax function to analyze.</p>
-		</section>
-
-		<section>
-			<h3>Extra Credit Presentations</h3>
-			<ol>
-				<li>Introduce the Internet of Things (IoT) and its role in cloud computing and Big Data.</li>
-				<li>Give a historical perspective of mainframes.</li>
-				<li>Explain the origin of ERP from MRP and MRP II and share the history of its development and adoption in corporate information systems.</li>
-			</ol>
+			<p>Data is everything to accountants, and in our current connected world, systems must be available to receive external data, storage systems must be able to preserve vital data, and accountants must have the analytical skills necessary to interpret the data for internal and external decision-makers. According to E&amp;Y, the tax function has become the largest consumer of data in the enterprise. Two reasons for this trend are (1) data analysis enables taxes to drive corporate strategy and (2) tax authorities have begun to demand increased granularity in tax disclosure (i.e., underlying transactional data instead of summary figures). A well-designed cloud captures transactional data, cleans it, and stores it for the tax function to analyze.</p>
 		</section>
 	</div>
 	</div>
