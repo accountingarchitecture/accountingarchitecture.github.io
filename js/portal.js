@@ -18,7 +18,6 @@ function isCurrentOrArchived(topic) {
 		startDate = new Date(topicDate.valueOf() - 518400000);
 	}
 	endDate = new Date(topicDate.valueOf() + (7 - topicDate.getDay()) * 86400000);
-	console.log(endDate);
 	if(startDate < currentDate && currentDate <= endDate) {
 		return 'current';
 	} else if(currentDate > endDate) {
@@ -52,8 +51,8 @@ function openTopic(topic) {
 function closeTopic(topic) {
 	topic.getElementsByClassName('title')[0].className='title';
 	topic.getElementsByClassName('summary')[0].className='summary hidden';
-	topic.getElementsByClassName('nav')[0].className='nav hidden';
 	try {
+		topic.getElementsByClassName('nav')[0].className='nav hidden';
 		topic.getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
 		topic.getElementsByClassName('readings')[0].className='readings hidden';
 		assignments = topic.getElementsByClassName('assignmentbutton');
