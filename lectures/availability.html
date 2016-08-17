@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Availability</title>
+
+	<meta name="author" content="Joshua G. Coyne, PhD">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+
+	<!-- Personalized CSS -->
+	<link rel="stylesheet" href="../css/slides.css">
+</head>
+
+<body>
+	<div class="reveal">
+	<div class="slides">
+		<section>
+			<h2>Loss & Error Prevention</h2>
+		</section>
+
+		<section>
+			<h3>Accounting Architecture</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>The final two blocks of the Control section are Availability and Processing Integrity. These terms correspond to matching concepts in the Trust Services Framework. Combined, these blocks prevent data loss and data errors.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h3>Availability</h3>
+			<blockquote>The system is available for operation and use as committed or agreed.</blockquote>
+			<p>Two threats of availability are data loss and downtime. Three tools combat these threats:</p>
+			<ul>
+				<li><u><i>Interpretation</i></u> preserves accessibility of legacy data.</li>
+				<li><u><i>Change management</i></u> limits planned downtime.</li>
+				<li><u><i>Redundancy</i></u> avoids data loss and unplanned downtime.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Denied!</h3>
+			<p>One major threat to the availability of a cloud system is denial of service (DoS). This involves sending a small network package (i.e., ping) to a server and asking for a response. If the number of pings becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Frequently, the attack is distributed across multiple clients in a distributed denial of service (DDoS) attack. Firewalls can prevent servers from responding to pings and protect them from DoS attacks. This is just one example of the interplay between Security and Availability.</p>
+		</section>
+
+		<section>
+			<h3>Interpretation</h3>
+			<p>One of the Unix philosophies was that the basis of all data is plain text&mdash;as opposed to compiled binary files, not as opposed to encrypted files. Although the advent of graphical interfaces has made this infeasible, one of the benefits of this philosophy is a maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. In order to preserve interpretability of binary files, users have two choices (1) retain in perpetuity the hardware and software necessary to access the data or (2) emulate the hardware and software.</p>
+		</section>
+
+		<section>
+			<h3>Emulation</h3>
+			<p>In virtualization, the hypervisor virtualizes computer hardware. In containerization, the container virtualizes the operating system kernel. Emulation is similar to virtualization in that the emulator virtualizes computer hardware. However, in the case of emulation, the hardware is non-existent, and the emulator must translate hardware requests intended for the emulated hardware before communicating with the computer's actual hardware. (Incidentally, this is a popular practice for playing old console and arcade games on personal computers.)</p>
+		</section>
+
+		<section>
+			<h3>Patching</h3>
+			<p>Every information system needs hardware and software updates (i.e., patches) sooner or later. Although Linux developers, specifically Red Hat and SUSE, have provided methods for updating the Linux kernel without needing to reboot, hardware and software patches sometimes require shutting down or restarting a system. During these periods, any data is unavailable, and any externally facing systems are inaccessible to customers. This can result in a loss of business, data collection and analysis, and customer satisfaction.</p>
+		</section>
+
+		<section>
+			<h3>Change Management</h3>
+			<p>Proper change management (i.e., processes that govern system changes and updates) can minimize the negative effects of downtime by (1) scheduling downtime when it would inconvenience the fewest users and (2) structuring patches to reduce the likelihood of breakage following an update. Because all systems need patching, internal and external users understand the need for system maintenance and can schedule necessary activities around planned, announced maintenance windows. During these maintenance windows, it is important to make quick updates that will not break existing functionality.</p>
+		</section>
+
+		<section>
+			<h3>DevOps</h3>
+			<p>In order to ensure that system patches will work and not break functionality, developers, especially in-house developers, who wrote the code, and IT staff, who maintain the hardware and software, must work together in order to ensure that the system will run smoothly after the update. This is the premise of <u><i>DevOps</i></u>, which is, intuitively, a combination of &ldquo;Development&rdquo; and &ldquo;Operations.&rdquo; Business-led IT is an outcropping of this, in which the DevOps team expands to include business experts. Accounting Architecture is essentially business-led IT applied to the financial and management accounting, auditing, and tax functions.</p>
+		</section>
+
+		<section>
+			<h3>Redundancy</h3>
+			<p>System components can fail. A <u><i>single point of failure</i></u> is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site (i.e., server room) creates redundancy for an entire cloud. A server cluster, in addition to increasing availability by adding processing power, allows alternative servers to take over when one server fails. Storage backups create duplicates of data in case storage volumes become corrupted.</p>
+		</section>
+
+		<section>
+			<h3>RAID 1</h3>
+			<p>RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. The purpose of RAID 0 is maximize the size of a logical volume. Interestingly, one of the problems with RAID 0 is its vulnerability to failure because the stripe becomes corrupted if either physical volume fails. RAID 1, on the other hand, uses the same two physical volumes as mirrors. The user only sees one of the two drives, and the other is a backup. Because data integrity is more important that storage capacity, RAID 1 is generally more popular than RAID 0.</li>
+		</section>
+
+		<section>
+			<h3>Pros and Cons</h3>
+			<p>RAID 1 is one backup method, and this method has some advantages and disadvantages over periodic, full backups. The primary advantage is that the RAID make continuous, real-time backups, so no data is ever not duplicated. Additionally, the RAID system is designed to repair volumes while the system is live, so if one drive becomes corrupted, it is possible to swap out that drive, replace it with a blank one, and have the RAID rebuild the data without ever shutting down the system. The primary advantage of periodic, full backups is the ability to store the backup off-site (e.g., in another office building, with a security company, or in a safety deposit box) to avoid data loss should the computer hosting the RAID become damaged or stolen.</p>
+		</section>
+
+		<section>
+			<h3>Full vs. Incremental</h3>
+			<p>Full backups create a complete copy of all data during each backup. As a result, each subsequent backup contains the data stored in all earlier backups. Because it is generally good practice to keep more than one backup (e.g., three weeks of daily backups) full backups can quickly become infeasibly large. Fortunately, incremental backups provide another option for storing backups off-site. Incremental backups only store the changes (deltas) since the previous backup. In order to restore an entire incremental backup, it is necessary to restore every delta. This process can become infeasibly long.</p>
+		</section>
+		
+		<section>
+			<h3>Easier is not Better</h3>
+			<p>One option for reducing the size of full backups or the restoration time of incremental backups is to decrease the frequency of backups (e.g., once a week, instead of once a day). The problem with this option is that the expected loss of additional data may be unacceptable. For example, if the current policy is daily backups and a storage volume fails immediately before that day's backup, at most 24 hours worth of data is irreplaceable. If that policy changes to weekly backups and a storage volumes fails immediately before that week's backup, as much as 168 hours of data is lost! For a large company, that may be tens of millions of database records.</p>
+		</section>
+
+		<section>
+			<h3>Best of Both Worlds</h3>
+			<p>A safer option of reducing the size of full backups or the restoration time of incremental backups is to combine the concepts of full and incremental backups by having frequent incremental backups and infrequent full backups. For example, a policy might dictate weekly full backups and daily incremental backups. This reduces the combined size of all full backups and the restoration time of all incremental backups because restoration would only require the previous full backup and one incremental backup for each day between the last full backup and the failure.</p>
+		</section>
+
+		<section>
+			<h3>Version Control System</h3>
+			<p>One common incremental backup tool, especially among developers, is the <u><i>version control system</i></u>, such as Git. These storage solutions offer unique advantages over other backup tools. First, they simultaneously promote backup and real-time collaboration. In fact, because of the decentralized nature of these systems, additional collaboration always promotes additional backups because each collaborator has a full copy of the data store. Second, the system manages incremental backups smartly, provides a convenient timeline of changes, and allows for straightforward file restoration on an individual user basis. Finally, with minimal additional work, these systems can create both local and cloud backups (e.g., GitHub).</p>
+		</section>
+
+		<section>
+			<h3>Big Picture</h3>
+			<p>A cloud-based information system is a combination of one or more of these services. The components of the cloud-based system operationalize the information life cycle or Big Data life cycle. First, externally facing, department-specific databases support specialized data entry. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
+		</section>
+
+		<section>
+			<h3>OLTP</h3>
+			<p>The first set of components receives data from external sources. These are frequently <u><i>Online Transaction Processing</i></u> (OLTP) systems because they receive data (e.g., customer orders, market prices, and other forms of Big Data) in real-time. Amazon's sales order interface would be an example of an OLTP system. These systems require fast, scalable data stores, so NoSQL is a popular solution.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
+		</section>
+
+		<section>
+			<h3>Integration Layer</h3>
+			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides a intermediate store where data is cleaned and converted.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
+		</section>
+
+		<section>
+			<h3>Clean Up</h3>
+			<p>Expertise in data analytics is currently a desirable skill, but one of the precursors to useful data analytics is good data. One of the purposes for teaching the information life cycle is to provide you with the awareness of the need to design systems that will ensure good data for analytics, but for pre-existing systems, sometimes the only solution is to take the data as given. As a result, data specialists confess that a large part of their job is cleaning data (e.g., looking for likely errors, finding duplicate data, matching records in one store with the records in another). It is not fun, but it is necessary.</p>
+		</section>
+
+		<section>
+			<h3>Data Warehouse and Marts</h3>
+			<p>The <u><i>data warehouse</i></u> receives clean data from staging and stores it. <u><i>Data marts</i></u> are small warehouses that store department-specific data for analysis. The warehouse and marts serve two special purposes. First, they allow OLTP systems to remain unencumbered when performing resource-intensive data analysis. Second, they can store pre-calculated OLAP cubes and MapReduce statistics in addition to the original data.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
+		</section>
+
+		<section>
+			<h3>In Or Out?</h3>
+			<p>At a recent meeting of the American Taxation Association, representatives from E&amp;Y's tax practice talked about data analytics and tax planning and compliance. One individual stated that because of the increase in real-time analytical tools, data warehouses were no longer necessary. Given the roles that data warehouses play, this seems a bold statement. Later on in the presentation, it appeared that what the individual meant was that real-time analytics had replaced traditional pre-calculations, so it was no longer necessary to store OLAP cubes. Real-time analytics have begun to replace traditional OLAP and MapReduce protocols, but this is not sufficient to remove the need for a data warehouse to archive data collected from transactional databases.</p>
+		</section>
+	</div>
+	</div>
+
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../js/slides.js"></script>
+</body>
+</html>
