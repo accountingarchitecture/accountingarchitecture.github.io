@@ -172,42 +172,18 @@
 		</section>
 
 		<section>
-			<h3>Big Picture</h3>
-			<p>A cloud-based information system is a combination of one or more of these services. The components of the cloud-based system operationalize the information life cycle or Big Data life cycle. First, externally facing, department-specific databases support specialized data entry. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
-			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
+			<h3>Acquisition</h3>
+			<p>One of the primary roles of cloud computing for a firm's information system is the ability to collect data. In many cases, this may involve a customer-facing <u><i>online transaction processing</i></u> (OLTP) system. An OLTP system may be a Web server and database to receive customer orders (e.g., Amazon.com), or it might be a container running a Web app so that banking customers can interact with their accounts. Regardless of the specific configuration, the purpose of OLTP is to acquire data for subsequent analysis.</p>
 		</section>
 
 		<section>
-			<h3>OLTP</h3>
-			<p>The first set of components receives data from external sources. These are frequently <u><i>Online Transaction Processing</i></u> (OLTP) systems because they receive data (e.g., customer orders, market prices, and other forms of Big Data) in real-time. Amazon's sales order interface would be an example of an OLTP system. These systems require fast, scalable data stores, so NoSQL is a popular solution.</p>
-			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-		</section>
-
-		<section>
-			<h3>Integration Layer</h3>
-			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides a intermediate store where data is cleaned and converted.</p>
-			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-		</section>
-
-		<section>
-			<h3>Clean Up</h3>
-			<p>Expertise in data analytics is currently a desirable skill, but one of the precursors to useful data analytics is good data. One of the purposes for teaching the information life cycle is to provide you with the awareness of the need to design systems that will ensure good data for analytics, but for pre-existing systems, sometimes the only solution is to take the data as given. As a result, data specialists confess that a large part of their job is cleaning data (e.g., looking for likely errors, finding duplicate data, matching records in one store with the records in another). It is not fun, but it is necessary.</p>
-		</section>
-
-		<section>
-			<h3>Data Warehouse and Marts</h3>
-			<p>The <u><i>data warehouse</i></u> receives clean data from staging and stores it. <u><i>Data marts</i></u> are small warehouses that store department-specific data for analysis. The warehouse and marts serve two special purposes. First, they allow OLTP systems to remain unencumbered when performing resource-intensive data analysis. Second, they can store pre-calculated OLAP cubes and MapReduce statistics in addition to the original data.</p>
-			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-		</section>
-
-		<section>
-			<h3>In Or Out?</h3>
-			<p>At a recent meeting of the American Taxation Association, representatives from E&amp;Y's tax practice talked about data analytics and tax planning and compliance. One individual stated that because of the increase in real-time analytical tools, data warehouses were no longer necessary. Given the roles that data warehouses play, this seems a bold statement. Later on in the presentation, it appeared that what the individual meant was that real-time analytics had replaced traditional pre-calculations, so it was no longer necessary to store OLAP cubes. Real-time analytics have begun to replace traditional OLAP and MapReduce protocols, but this is not sufficient to remove the need for a data warehouse to archive data collected from transactional databases.</p>
+			<h3>Storage</h3>
+			<p>Another role of cloud computing that is strongly related to acquisition is the need to store the collected data. File servers (e.g., FTP servers), which are cloud-based shared file systems, and database servers, which are cloud-based shared RDBMSs or NoSQL databases, can store data acquired by an OLTP and make it available to multiple users and roles, as necessary.</p>
 		</section>
 
 		<section>
 			<h3>Accounting Tie-in</h3>
-			<p>Data is everything to accountants, and in our current connected world, systems must be available to receive external data, storage systems must be able to preserve vital data, and accountants must have the analytical skills necessary to interpret the data for internal and external decision-makers. According to E&amp;Y, the tax function has become the largest consumer of data in the enterprise. Two reasons for this trend are (1) data analysis enables taxes to drive corporate strategy and (2) tax authorities have begun to demand increased granularity in tax disclosure (i.e., underlying transactional data instead of summary figures). A well-designed cloud captures transactional data, cleans it, and stores it for the tax function to analyze.</p>
+			<p>Data is everything to accountants, and in our current connected world, systems must be available to receive external data, storage systems must be able to preserve vital data, and accountants must have the analytical skills necessary to interpret the data for internal and external decision-makers. According to E&amp;Y, the tax function has become the largest consumer of data in the enterprise. Two reasons for this trend are (1) data analysis enables taxes to drive corporate strategy and (2) tax authorities have begun to demand increased granularity in tax disclosure (i.e., underlying transactional data instead of summary figures). A well-designed cloud captures transactional data and makes in available for analysis and reporting.</p>
 		</section>
 	</div>
 	</div>
