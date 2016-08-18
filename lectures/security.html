@@ -3,41 +3,34 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>ACCT 4020</title>
+	<title>Security</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
-
-	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../../css/slides.css">
-
-	<!--[if lt IE 9]>
-	<script src="../../reveal.js/lib/js/html5shiv.js"></script>
-	<![endif]-->
+	<link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Access Controls</h2>
+			<h2>Security</h2>
 		</section>
 
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
 					<p>Information is the keystone of any information system, and Technology is the set of tools necessary to implement that system. Control, however, is a choice. A system can function without proper controls. However, a system without proper controls exposes internal and external stakeholders to risks. The different blocks in the Control section represent different control objectives.</p>
 				</div>
@@ -46,45 +39,35 @@
 
 		<section>
 			<h3>External Stakeholders</h3>
-			<p>Accountants care about external stakeholders. Financial accounting regulations exist to protect external stakeholders from misinformation. Generally Accepted Accounting Principles dictate the creation of financial statements to maximize comparability between firms. The Sarbanes-Oxley Act requires firms to implement internal controls over financial reporting to prevent misstatements in the financial statements.</p>
+			<p>Accounting regulations are often for the purpose of protecting external stakeholders. Generally Accepted Accounting Principles and Generally Accepted Auditing Standards exist to protect external stakeholders from misinformation. <u><i>Sarbanes-Oxley</i></u> (SOX) requires firms to implement internal controls over financial reporting to prevent material misstatements. Additionally, with respect to information systems, business contracts work to prevent breaches of privacy, data loss, and system unavailability. As a result, compliance (one of the blocks in the foundation of the arch) often requires the implementation of controls, regardless of whether the system could function without them.</p>
 		</section>
 
 		<section>
 			<h3>SOX</h3>
-			<p>In response to the wide-spread calamities associated with the more extensive accounting frauds of the late 90's and early 2000's, Congress passed the Sarbanes-Oxley act of 2002 to introduce additional compliance requirements for firms and auditors in order to protect shareholders from accounting errors and fraud. Accounting architects and auditors are particularly interested in sections 302 and 404 which create the requirement to have proper internal controls and to include an assessment of those internal controls in the annual audit.</p>
-		</section>
-
-		<section>
-			<h3>Risk Aversion</h3>
-			<p>The foundation of the architecture implies the need for controls to satisfy regulatory compliance. However, that is not enough to satisfy external stakeholders. Although these are not always protected by regulation, external stakeholders are generally unwilling to tolerate breaches of privacy, loss of data relevant to them, and system unavailability. (Just think of how you would feel if your email, or heaven forbid your SMS service, stopped working.) Frequently, external parties draft contracts to protect themselves from these risks, so again the Compliance block becomes relevant for satisfying the demands of these external stakeholders.</p>
+			<p>In response to the wide-spread calamities associated with the more extensive accounting frauds of the late 90's and early 2000's, Congress passed the Sarbanes-Oxley act of 2002 to introduce additional compliance requirements for firms and auditors in order to protect shareholders from accounting errors and fraud. SOX sections 302 and 404 require public firms to implement internal controls and to include an assessment of those internal controls in the annual audit.</p>
 		</section>
 
 		<section>
 			<h3>Internal Stakeholders</h3>
-			<p>Regulations and contracts generally would not cover internal stakeholders, but just as external stakeholders, they wish to avoid misinformation, which would result in misled strategic decisions, and to protect their privacy (although <i>confidentiality</i> would be a more appropriate term in this context). Because internal stakeholders are the biggest &ldquo;customer&rdquo; of the information system, protecting them from risks becomes a primary goal of information system controls.</p>
+			<p>Although regulations and contracts are less often designed to protect internal stakeholders, managers and other decision makers within the firm also benefit from controls. Controls reduce the likelihood of misinformation, which would lead to incorrect strategic decisions, and they protect the confidentiality of trade secrets. Because internal stakeholders are the biggest &ldquo;customer&rdquo; of the information system, protecting them from risks becomes a primary goal of information system controls. Additionally, because firms can face serious consequences from external stakeholders in the event of a breach or outage, internal stakeholders also benefit from controls that protect the firm from litigation.</p>
 		</section>
 
 		<section>
-			<h3><i>Cost</i>-Benefit Analysis</h3>
-			<p>Three different types of controls exist: preventive, detective, and corrective. Any implementation of controls is costly, although 100% prevention would clearly be the best, the cost is prohibitive. As a result, the only cost effective solution involves a combination of all three types: preventing what can be prevented and detecting and correcting what cannot be prevented.</p>
+			<h3>Cost-Benefit Analysis</h3>
+			<p>The benefit of a control implementation is the reduction in either the <u><i>likelihood</i></u> of or <u><i>exposure</i></u> to problems. Likelihood is the probability of a problem, and exposure is the dollar loss from litigation, fines, lost business, cost of restoring a system and its data, etc., should a problem occur. Preventive controls can lower the likelihood of a problem, and detective and corrective controls can reduce the exposure (i.e., make a problem less bad or fix a problem more quickly). Any implementation of controls is costly, and although 100% prevention would be the best, the cost is prohibitive. As a result, the only option is a combination of all three types: preventing what can be prevented and detecting and correcting what cannot be prevented.</p>
 		</section>
 
 		<section>
-			<h3>Cost-<i>Benefit</i> Analysis</h3>
-			<p>The benefit of a control implementation is the reduction in either the <u><i>likelihood</i></u> of or <u><i>exposure</i></u> to unauthorized access, data loss, or data corruption. Likelihood is the probability of a problem, and exposure is the dollar loss from litigation, fines, lost business, cost of restoring a system and its data, etc., should a problem occur. The size of the loss can make a problem with a small likelihood a big problem, especially when regulatory compliance is very strict. Preventive controls can lower the likelihood of a problem, and detective and corrective controls can reduce the exposure (i.e., make a problem less bad or fix a problem more quickly). </p>
-		</section>
-
-		<section>
-			<h3>Control Framework</h3>
-			<p>Many control system frameworks exist that address the various types of risk that external and internal stakeholders face. Three well-known examples are (1) Internal Control&ndash;Integrated Framework and (2) Enterprise Risk Management&ndash;Integrated Framework by the Committee of Sponsoring Organizations of the Treadway Commission (COSO) and (3) Control Objectives for Information and Related Technology (COBIT) by the Information Systems and Audit Control Association (ISACA). These are dense and comprehensive, though not necessarily comprehensible, so I have opted for the simpler AICPA Trust Services Framework.</p>
+			<h3>Control Frameworks</h3>
+			<p>Many frameworks exist that address the various types of risk that external and internal stakeholders face. Four well-known examples are (1) Internal Control&ndash;Integrated Framework and (2) Enterprise Risk Management&ndash;Integrated Framework by the Committee of Sponsoring Organizations of the Treadway Commission (COSO); (3) Control Objectives for Information and Related Technology (COBIT) by the Information Systems and Audit Control Association (ISACA); and (4) Trust Services by the American Institute of Certified Public Accountants (AICPA). The Control section of accounting architecture mirrors the principles of the Trust Services Framework. One reason for this choice is that Trust Services is an accountant's view of system controls.</p>
 		</section>
 		
 		<section>
-			<h3>Trust Services Framework</h3>
+			<h3>Trust Services</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 70%">
-					<p>The objectives of the Control leg of the Architecture mirror those of the AICPA Trust Services Framework:</p>
+					<p>Trust Services has a foundation and four pillars:</p>
 					<ul>
 						<li><u><i>Security</i></u> protects against unauthorized access.</li>
 						<li><u><i>Availability</i></u> prevents data loss and system downtime.</li>
@@ -102,7 +85,7 @@
 			<ol>
 				<li><u><i>Permissions</i></u> determine what users are authorized to do.</li>
 				<li><u><i>Authentication</i></u> allows authorized users to identify themselves.</li>
-				<li><u><i>Hardening</i></u> and <u><i>isolation</i></u> prevent unauthorized access.</li>
+				<li><u><i>Hardening</i></u> prevents unauthorized access.</li>
 			</ol>
 		</section>
 
@@ -110,9 +93,9 @@
 			<h3>Why Permissions?</h3>
 			<div class="flex-row">
 				<!--License: CC-BY-SA 4.0 Attribution: DavidBailey-->
-				<div class="flex-item override"><img src="../../images/fraudtriangle.png" alt="Fraud Triangle" style="max-height: 400px"/></div>
+				<div class="flex-item override"><img src="../images/fraudtriangle.png" alt="Fraud Triangle" style="max-height: 400px"/></div>
 				<div class="flex-item" style="max-width: 60%">
-					<p>The purpose of permissions is two-fold. First, permissions prevent outsiders (e.g., non-employees) from gaining access to confidential materials. Second, correctly assigned permissions prevent insiders from gaining access to content that would increase the <em>opportunity</em> to commit fraud by segregating incompatible duties.</p>
+					<p>The purpose of permissions is two-fold. First, permissions prevent outsiders (e.g., non-employees) from gaining access to confidential materials. Second, correctly assigned permissions prevent insiders from gaining access to content that would increase the <em>opportunity</em> to commit fraud.</p>
 				</div>
 			</div>
 		</section>
@@ -133,7 +116,7 @@
 
 		<section>
 			<h3>Physical Access</h3>
-			<p>Permissions can apply to physical and digital resources. Using a file server as an example, digital permissions determine which users have access to which files, and physical permissions dictate who may enter the server room where that file server is stored. No amount of digital permissions replaces the need for physical permissions. If an attacker can gain access to the physical file server, then that user can gain access to any of the files on that server. <em>Physical access is total access</em>.</p>
+			<p>Permissions can apply to physical and digital resources. Using a file server as an example, digital permissions determine which users have access to which files, and physical permissions dictate who may enter the server room where the file server hardware is stored. No amount of digital permissions replaces the need for physical permissions. If an attacker can gain access to the physical file server, then that user can gain access to any of the files on that server. <em>Physical access is total access</em>.</p>
 		</section>
 
 		<section>
@@ -148,17 +131,17 @@
 
 		<section>
 			<h3>File Permissions</h3>
-			<p>Permissions in common file systems are less granular. Instead of identifying permissions for four storage functions, file systems focus on three functions: read, write, and execute. The overlap between file read and database read is apparent, but the other two file system functions are less similar to database functions. Create, update, and delete are all write functions because write permissions award the ability to edit. Execute governs launching applications. This permission has no useful meaning in a database setting. These three levels ostensibly match with the three protections in the AICPA definition of security: <i>access</i> (read), <i>use</i> (execute), <i>modification</i> (write).</p>
+			<p>Permissions in common file systems are less granular. Instead of identifying permissions for four storage functions, file systems focus on three functions: read, write, and execute. The overlap between file read and database read is apparent, but the other two file system functions are less similar to database functions. Create, update, and delete are all write functions because write permissions award the ability to edit. Execute governs launching applications. This permission has no useful meaning in a database setting. These three levels ostensibly match the three protections in the AICPA definition of security: <i>access</i> (read), <i>use</i> (execute), <i>modification</i> (write).</p>
 		</section>
 
 		<section>
 			<h3>Folder Permissions</h3>
-			<p>File systems comprise both files and folders, and although the same three permissions (read, write, and execute) govern both files and folders, the interpretation differs between files and folders. Read allows the user to see the contents of a folder. Write allows a user to modify the contents of a folder. Execute allows the user to open a folder and interact with its contents. The distinction between read and execute is, perhaps, a bit technical and difficult to perceive; for Windows and OS X users (and any users of graphical file browsers), execute is the relevant permission for viewing folder contents.</p>
+			<p>File systems comprise both files and folders, and although the same three permissions (read, write, and execute) govern both files and folders, the interpretation differs between files and folders. Read allows the user to see the contents of a folder. Write allows a user to modify the contents of a folder. Execute allows the user to open a folder and interact with its contents. The distinction between read and execute is, perhaps, a bit ambiguous; for Windows and OS X users (and any users of graphical file browsers), execute is the relevant permission for viewing folder contents.</p>
 		</section>
 
 		<section>
 			<h3>Me Against the World</h3>
-			<p>In addition to three functions (read, write, and execute), file permissions apply separately to three different types of users: owner, group, and world (or others). Owner and world are easy to understand: owner is the (usually) the creator of a file or folder; world is everyone who has no ownership. Group is a collection of users that need similar access but frequently less access than the owner. The owner may or may not belong to the group.</p>
+			<p>In addition to three functions (read, write, and execute), file permissions apply separately to three different types of users: owner (or user), group, and world (or others). Owner and world are easy to understand: owner is the (usually) the creator of a file or folder; world is everyone who has no ownership. Group is a collection of users that need some access but less access than the owner. The owner may or may not belong to the group.</p>
 		</section>
 
 		<section>
@@ -198,69 +181,31 @@
 
 		<section>
 			<h3>First Character</h3>
-			<p>Symbolic notation uses nine characters (i.e., three triads), but the string contains ten spaces. The first identifies the file type: regular file (-), directory (d), or link (l). Several other file types exist, but these three are the most common, and they suffice to understand symbolic notation.</p>
-			<img src="../../images/symbolic-notation.png" alt="Permissions in Symbolic Notation"/>
-			<p>This screenshot of the output of the &lsquo;ls -l&rsquo; command&mdash;these are lowercase L's&mdash;also displays ownership. In this case, ubuntu is the name of the owner, and the name of the group is also ubuntu.</p>
+			<p>Symbolic notation uses nine characters (i.e., three triads), but the string contains ten spaces. The first character identifies the file type: regular file (-), directory (d), or link (l). Several other file types exist, but these three are the most useful examples of symbolic notation.</p>
+			<img src="../images/symbolic-notation.png" alt="Permissions in Symbolic Notation"/>
+			<p>(This screenshot is of the output of the &lsquo;ls -l&rsquo; command&mdash;these are lowercase L's. In this case, ubuntu is the name of the owner, and the name of the group is also ubuntu.)</p>
 		</section>
 
 		<section>
 			<h3>Octal Permissions</h3>
-			<p>Numeric notation, frequently referred to as octal or octet permissions, uses base-8 notation to report permissions. In this notation, &lsquo;read&rsquo; receives a value of 4, &lsquo;write&rsquo; a value of 2, and &lsquo;execute&rsquo; a value of 1. These are added together to obtain one value for each of three significant digit. The first digit reports owner permissions, the second reports group permissions, and the third reports world permissions.</p>
-			<img src="../../images/numeric-notation.png" alt="Permissions in Numeric Notation"/>
-		</section>
-
-		<section>
-			<h3>Side-by-side Comparison</h3>
-			<div class="table" style="font-size: 20px; border: 3px solid black">
-				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-					<div class="table-cell" style="font-weight: bold">Permissions</div>
-					<div class="table-cell" style="font-weight: bold">Symbolic Notation</div>
-					<div class="table-cell" style="font-weight: bold">Octal Notation</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">
-						<div>User: read, write, execute</div>
-						<div>Group: read, execute</div>
-						<div>World: read, execute</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rwxr-xr-x</div>
-					<div class="table-cell" style="text-align: center">0755</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">
-						<div>User: read, write, execute</div>
-						<div>Group: no access</div>
-						<div>World: no access</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rwx------</div>
-					<div class="table-cell" style="text-align: center">0700</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">
-						<div>User: read, write</div>
-						<div>Group: read</div>
-						<div>World: read</div>
-					</div>
-					<div class="table-cell" style="text-align: center">-rw-r--r--</div>
-					<div class="table-cell" style="text-align: center">0644</div>
-				</div>
-			</div>
-			<p>The three commonly reported digits are actually the second, third, and fourth digits of octal permissions. The first digit, which is frequently ignored, reports special settings which override the functionality of the default permissions. If no special override applies, this value is set to 0.</p> 
+			<p>Numeric notation, frequently referred to as octal or octet permissions, uses base-8 notation to report permissions. In this notation, &lsquo;read&rsquo; receives a value of 4, &lsquo;write&rsquo; a value of 2, and &lsquo;execute&rsquo; a value of 1. These are added together to obtain one value for each of three significant digits. The first digit reports owner permissions, the second reports group permissions, and the third reports world permissions.</p>
+			<img src="../images/numeric-notation.png" alt="Permissions in Numeric Notation"/>
+			<p>(This screenshot is of the same files as in the previous slide or purposes of comparing numeric and symbolic notation of the same data objects.)
 		</section>
 
 		<section>
 			<h3>One User to Rule Them All</h3>
-			<p>In any system, whether file or database, every data object must have an owner. In Windows it may seem that any user has read, write, and execute privileges to any file and folder; in Unix-like operating systems, including OS X because of its BSD foundation, most users only own content that they create in order to restrict write and, sometimes even read, access to system files. These files belong to <i>root</i>, also called the superuser or system user. In addition to owning the system files, the root user has full access (i.e., 777) to all files owned by any other user. Popular database systems also employ a root user who has all privileges and can grant those privileges to other users.</p>
+			<p>In any system, whether file or database, every data object must have an owner. In Unix-like operating systems, most users only own content that they create. This prevents unauthorized access to and manipulation of system files. These files belong to <i><u>root</u></i>, also called the superuser or system user. In addition to owning the system files, the root user has full access to all files owned by any other user. Popular database systems also employ a root user who has all privileges and can grant those privileges to other users.</p>
 		</section>
 
 		<section>
-			<h3><a href="http://xkcd.com/149/">Sudo Make Me a Sandwich</a></h3>
-			<p>Because the root user owns system files, a normal user must obtain elevated permissions to alter the system (i.e., edit and delete system files or install applications). In Unix-like systems, this is done by either changing to the root user using the &lsquo;su&rsquo; command or, more likely, by prepending &lsquo;sudo&rsquo; to any command that requires elevated privileges. This second method is sometimes called fakeroot. (For an amusing commentary on sudo, click the title of this slide.)</p>
+			<h3><a href="http://xkcd.com/149/" target="_blank">Sudo Make Me a Sandwich</a></h3>
+			<p>Because the root user owns system files, a normal user must obtain elevated permissions to alter the system (i.e., edit and delete system files or install applications). In Unix-like systems, this is often done by either changing to the root user using the &lsquo;su&rsquo; command or by prepending &lsquo;sudo&rsquo; to any command that requires elevated privileges. (For an amusing commentary on sudo, click the title of this slide.)</p>
 		</section>
 
 		<section>
 			<h3>Just Say No</h3>
-			<p>Because it is easier to avoid issues with permissions, some succumb to the temptation to use the root user for everything. This is especially tempting when a user must launch an application that, in turn, launches another application. Because the two applications may be subject to different access controls, non-privileged users may have difficulty navigating a multi-application process. However, the decision to log in as and use the root user for everything is a <em>worst-case scenario</em> for security and should never be done; it increases the likelihood of unauthorized or unintended changes to the system. Consistent use of the root user is a red flag that proper IT controls are either not in place or have been ignored.</p>
+			<p>Because permissions can be difficult to navigate, some succumb to the temptation to use the root user for everything. However, the decision to log in as and use the root user for everything is a <em>worst-case scenario</em> for security and should never be done; it increases the likelihood of unauthorized or unintended changes to the system. Consistent use of the root user is a red flag that proper IT controls are either not in place or have been ignored.</p>
 		</section>
 
 		<section>
@@ -274,13 +219,8 @@
 		</section>
 
 		<section>
-			<h3>Roles</h3>
-			<p>The emphasis of owner permissions over group permissions is incompatible with an important tenet of access controls: permissions should be role- and not user-based. The premise is that users only need access consistent with their job descriptions; all users in the same job role should have the same access; once a user changes roles, the user's access to data should change; and collections of roles (i.e., business groups) should have some, but likely lesser, access to the data of each role in the group.</p>
-		</section>
-
-		<section>
 			<h3>Role-Based Access Control (RBAC)</h3>
-			<p>By default Unix-like systems cannot set role-based permissions, and it is not possible to create a group for a role and another group for a department and assign both groups to a data object because Unix-like systems only allow one group per data object. Fortunately, tools exist that allow for assigning users in a Unix-like system to roles. Two popular examples are <i><u>Security-Enhanced Linux</u></i> (SELinux) and <i><u>Lightweight Directory Access Protocol</u></i> (LDAP). SELinux controls permissions a single Linux system, whereas LDAP controls permissions for an entire LAN across multiple different operating systems.</p>
+			<p>Unfortunately, the emphasis of owner permissions over group permissions is incompatible with an important tenet of access controls: <i>permissions should be role- and not user-based</i>. Individual employees should not have access based on who they are, but rather based on their job description. By default, Unix-like systems are not equipped to set this kind of role-based permission, but supplemental tools exist that allow for assigning users in a Unix-like system to roles. Two popular examples are Security-Enhanced Linux (SELinux) controls permissions on a single computer, and Lightweight Directory Access Protocol (LDAP) controls permissions on an entire LAN.</p>
 		</section>
 
 		<section>
@@ -357,12 +297,7 @@
 
 		<section>
 			<h3>Disagree to Disagree</h3>
-			<p>Different groups have differing beliefs on the best type of secure password. Some like the <u><i>passphrase</i></u> which essentially converts a, potentially nonsensical, sentence into a password (e.g., iamamericaandyoucantoo). The benefits of a passphrase are length and ease of remembering (i.e., the user is less likely to write it down). It is possible to add uppercase letters, numbers, special characters, and even spaces to make the passphrase more secure. Others prefer the <u><i>randomly generated password</i></u> (e.g., qt^&P07*_!gh$). Because this is virtually impossible to remember, these users also prefer password managers (e.g., LastPass or 1Password) to store usernames and passwords (i.e., login credentials).</p>
-		</section>
-
-		<section>
-			<h3>Time-based Codes</h3>
-			<p>Although users can change passwords, over short periods of time (e.g., days or weeks), a password remains static. Time-based codes address the weakness of static passwords by creating a code that changes frequently, usually every minute. Historically, users would need to keep a small device with them that displayed the current code, but in the era of smartphones, these codes are often transmitted by SMS or mobile app. In order to guess the code, an attacker would need to have stolen a device or have guessed the algorithm that determines the sequence of codes. The latter is unlikely, and the former depends on the care the user places on protecting the device.</p>
+			<p>Different groups have differing beliefs on the best type of secure password. Some like the <u><i>passphrase</i></u> which essentially converts a, potentially nonsensical, sentence into a password (e.g., iamamericaandyoucantoo). The benefits of a passphrase are length and ease of remembering (i.e., the user is less likely to write it down). It is possible to add uppercase letters, numbers, special characters, and even spaces to make the passphrase more secure. Others prefer the <u><i>randomly generated password</i></u> (e.g., qt^&P07*_!gh$). Because this is virtually impossible to remember, these users also prefer password managers (e.g., LastPass or 1Password) to store usernames and passwords.</p>
 		</section>
 
 		<section>
@@ -373,6 +308,11 @@
 		<section>
 			<h3>Multifactor Authentication</h3>
 			<p>Security and convenience are always trade-offs. Anything that is more difficult for unauthorized users to access is also more difficult for authorized users to access. However, in many situations, the cost of added inconvenience is well worth avoiding exposure. In the current climate, one form of authentication is rarely enough to avoid problems. Passwords can be compromised through brute force or social engineering, key cards go missing, face or voice recognition can be faked. A combination of these is better (e.g., a password and a time-based code or a key card and a hand print).</p>
+		</section>
+
+		<section>
+			<h3>Time-based Codes</h3>
+			<p>Although users can change passwords, over short periods of time (e.g., days or weeks), a password remains static. <u><i>Time-based codes</i></u> address the weakness of static passwords by creating a code that changes frequently, usually every minute. Historically, users would need to keep a small device with them that displayed the current code, but in the era of smartphones, these codes are often transmitted by SMS or mobile app. In order to guess the code, an attacker would need to have stolen a device or have guessed the algorithm that determines the sequence of codes. The latter is unlikely, and the former depends on the care the user places on protecting the device.</p>
 		</section>
 
 		<section>
@@ -392,7 +332,7 @@
 
 		<section>
 			<h3>On Again, Off Again</h3>
-			<p>Because it is possible to use authentication protocols to access a LAN from the WAN, or even an arbitrary networked device while in a LAN, it can also be possible to gain unauthorized access. Firewalls, or more generally <u><i>packet filters</i></u>, restrict network traffic to and from certain network ports on certain devices. Firewalls are only necessary to protect open ports. Open ports are TCP and UDP ports that actively listen for (i.e., receive network traffic). Servers, that is software daemons, need open ports in order to function (e.g., web and email servers and multiplayer online games), but each open port is vulnerable. The best method for protecting a network device is to disable all unnecessary services to close as many ports as possible.</p>
+			<p>Because it is possible to use authentication protocols to access a LAN from the WAN, or even an arbitrary networked device while in a LAN, it can also be possible to gain unauthorized access. <u><i>Firewalls</i></u>, or more generally packet filters, restrict network traffic to and from certain network ports on certain devices. Firewalls are only necessary to protect open ports. Open ports are TCP and UDP ports that actively listen for (i.e., receive network traffic). Servers, that is software daemons, need open ports in order to function (e.g., web and email servers and multiplayer online games), but each open port is vulnerable. As a result, the best method for protecting a network device is to disable all unnecessary services to close as many ports as possible.</p>
 		</section>
 
 		<section>
@@ -402,26 +342,28 @@
 
 		<section>
 			<h3>Deauthorization</h3>
-			<p>Permissions and authentication allow authorized users to perform intended functions. As users change roles or leave an organization, those same permissions and authentication credentials permit unintended and unauthorized access. This is a especially a concern when an employee leaves a company on negative terms and would use their prior credentials for nefarious purposes. All organizations should have a policy for the deletion of permissions and credentials as soon as any user's authorization level changes.</p>
+			<p>Permissions and authentication allow authorized users to perform intended functions. As users change roles or leave an organization, those same permissions and authentication credentials permit unintended and unauthorized access. This is a especially a concern when employees leave their jobs on negative terms and would use their prior credentials for nefarious purposes. All organizations should have a policy for the deletion of permissions and credentials as soon as any user's authorization level changes.</p>
 		</section>
 
 		<section>
 			<h3>Prevention and Detection</h3>
-			<p>Most access control tools <i>prevent</i> unauthorized access to digital resources. However, 100% prevention is not possible, even if it were not prohibitively expensive, because hackers continually identify new attack methods. Many of these come through vulnerabilities, or <u><i>exploits</i></u> in existing software that attackers can use to gain access, sometimes root access, to the physical server. Because of this risk, additional detective controls are necessary to monitor system and look for attempts to access network devices, guess login credentials, or view unauthorized content.</p>
+			<p>Most access control tools <i>prevent</i> unauthorized access to digital resources. However, 100% prevention is not possible because hackers continually identify new attack methods. Many of these come through vulnerabilities, or <u><i>exploits</i></u> in existing software that attackers can use to gain access, sometimes root access, to the physical server. Because of this risk, additional detective controls are necessary to monitor system and look for attempts to access network devices, guess login credentials, or view unauthorized content.</p>
+		</section>
+
+		<section>
+			<h3>Isolation</h3>
+			<p>Because attackers can gain unauthorized access to services and can use that access to infiltrate other systems, one method of hardening is to isolate services from one another.</p>
 		</section>
 
 		<section>
 			<h3>Accounting Tie-in</h3>
 			<p>Internal controls and IT controls are important parts of an auditor's focus. This is especially true since SOX, which has required a declaration regarding the quality of internal controls over financial reporting. Obviously, employers consistently stress the importance of fraud prevention by reducing perceived opportunity, and the best method to reduce opportunity is to segregate incompatible duties. By understanding the implementation of permissions and authentication, accountants can understand how to operationalize segregation of duties in a digital setting. Additionally, continual high-profile attacks on corporate systems reinforce the importance of strong preventive and detective controls to avoid costly unauthorized access.</p>
 		</section>
-
 	</div>
 	</div>
 
-	<script src="../../reveal.js/lib/js/head.min.js"></script>
-	<script src="../../reveal.js/js/reveal.js"></script>
-	<script src="../../js/slides.js"></script>
-	<script src="../../js/printing.js"></script>
-
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../js/slides.js"></script>
 </body>
 </html>
