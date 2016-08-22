@@ -32,7 +32,7 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p></p>
+					<p>Processing integrity is the second block in the Control section. This block addresses the &ldquo;Garbage In; Garbage Out&rdquo; principle, which states that bad data will result in bad information. It is not sufficient for a system to be up and running, it must be able to preserve the data through the entire life cycle.</p>
 				</div>
 			</div>
 		</section>
@@ -53,14 +53,14 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Just as Security protects Availability, it also protects Processing Integrity. Security is the foundation of Trust Services because although all five components are necessary for reliable system, security supports each of the remaining concepts. Restricting unauthorized access to information systems, especially network-enabled (i.e., cloud-based) systems, is the first step in promoting confidentiality/privacy, availability, and processing integrity.</p>
+					<p>Just as Security protects Availability, it also protects Processing Integrity. Unauthorized write access can have irreparable consequences if manipulated data causes incorrect inferences. Availability can mitigate this problem by creating historical backups of data, but this only helps if the manipulation is detected and corrected. This reinforces the interplay between the components of the Trust Services framework and the value of preventive, detective, and corrective controls.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
 			<h3>Data Entry</h3>
-			<p>Human intervention can always result in errors. Data validation minimizes the possibility of data entry errors in multiple forms:</p>
+			<p>Human intervention can always result in errors. <u><i>Data validation</i></u> minimizes the possibility of data entry errors in multiple forms:</p>
 			<ul>
 				<li><u><i>Data type</i></u> verifies that content has the correct data type.</li>
 				<li><u><i>Check digits</i></u> determine that a string of digits follows allowable algorithms (e.g., credit cards, ISBN).</li>
@@ -72,13 +72,13 @@
 		</section>
 
 		<section>
-			<h3>Hashes</h3>
-			<p>Encryption is not only for preserving confidentiality. Because a cryptographic hash of a data object changes if the data changes, encryption is also useful for determining data validity. However, not all hashes are cryptographic, and in situations where confidentiality is not a concern, plain text hashes can be useful. A plain text hash is essentially the nonsensical result of a mathematical equation involving numbers that have no numerical interpretation. For example, a hash might be the sum of all invoice numbers or all employee SSNs. The purpose of these hashes is also to confirm data validity, frequently during batch processing to verify that the batch is complete and has no missing records.</p>
+			<h3>Data Processing</h3>
+			<p>These validations are useful in preventing human error in data entry, but additional errors can arise during data processing. In batch processing, controls must ensure that each record in the batch is processed. One tool to confirm the completeness of the batch is a <u><i>hash total</i></u>. A hash total is a nonsensical number that represents all of the records in a batch. For example, in a batch of new employees, the hash total might be the sum of all SSN in the batch. By calculating the hash before processing the batch and comparing to the same hash afterwards, it is possible to conclude whether any records were not processed.</p>
 		</section>
 
 		<section>
 			<h3>Transactions</h3>
-			<p>Although the term <u><i>transaction processing</i></u> is frequently used to mean the processing of financial transactions, it has a specific meaning in IT. A transaction is a set of changes to make to a database (e.g., creating a new sales order and updating inventory levels and cash receipts), and transaction processing is a control that ensures that either all changes in a transaction occur successfully or none of the changes occur. One of the biggest benefits of RDBMS and drawbacks of NoSQL is that RDBMS satisfy the requirements of transaction processing, whereas NoSQL databases are generally not transactional.</p>
+			<p>An additional tool to confirm that data was processed correctly is <u><i>transaction processing</i></u>. Although this term is frequently used to mean the processing of financial transactions, it has a specific meaning in IT. A transaction is a set of changes to be made to a database (e.g., creating a new sales order <i>and</i> reducing inventory levels <i>and</i> increasing cash receipts), and transaction processing is a control that ensures that either all changes in a transaction occur successfully or none of the changes occur (i.e., the changes are rolled back). One of the biggest benefits of RDBMSs and drawbacks of NoSQL is that RDBMSs satisfy the requirements of transaction processing, whereas NoSQL databases are generally not transactional. Because of the importance of this control, more NoSQL databases have and will continue to adopt this feature.</p>
 		</section>
 
 		<section>
@@ -86,20 +86,22 @@
 			<p>In order for a database to be transactional, it must satisfy ACID:</p>
 			<ul>
 				<li><u><i>Atomicity</i></u>: all changes happen or none happen.</li>
-				<li><u><i>Consistency</i></u>: all actions as a group violate no constraints.</li>
+				<li><u><i>Consistency</i></u>: all actions as a group violate none of the database constraints.</li>
 				<li><u><i>Isolation</i></u>: each transaction is treated as occurring before or after, not during, any others.</li>
 				<li><u><i>Durability</i></u>: each committed transaction's changes are permanent.</li>
 			</ul>
+			<p>(It is okay if these terms and their definitions are confusing. The purpose of this slide is simply to expose you to term ACID and to explain how it relates to transaction processing.)</p>
 		</section>
 
 		<section>
 			<h3>Refreshing</h3>
-			<p>Customer-facing databases, such as those that collect online orders, generally fall under the umbrella of <u><i>online transaction processing systems</i></u> (OLTP). Interestingly, with an increase in the need for speed and scalability, these systems are often NoSQL, which are not actually transactional. Regardless, the purpose of OLTP systems is to collect data. In order to reserve computing power on these systems for data collection, it is inadvisable to use these data stores for subsequent analysis. Instead, a copy is stored in a data warehouse and made available for analytics. Because this is a copy, it is necessary to refresh the data periodically to verify that analytics reflect the most up-to-date data available.</p>
+			<p>Customer-facing databases, such as those that collect online orders, are often OLTP. (Interestingly, these systems are often NoSQL, which are not actually transactional.) The purpose of OLTP systems is to collect data. In order to reserve computing power on these systems for data collection, it is inadvisable to use these data stores for subsequent analysis. Instead, a copy is stored in a data warehouse and made available for analytics. Because this is a copy, it is necessary to refresh the data in the data warehouse and marts periodically to verify that analytics reflect the most up-to-date data available.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
-			<h3>Redundancies</h3>
-			<p>Although redundancies promote availability by removing single points of failure, not all redundancies are good. The benefits of a database system rely on the avoidance of redundancy. In fact, one of the reasons to transition from a file system to a database system is to avoid redundancies from separate individuals tracking information in separate flat files. However, redundancies can also arise in database systems through the creation of <u><i>functional dependencies</i></u>: partial or transitive. These dependencies create problematic <u><i>create</i></u>, <u><i>update</i></u>, and <u><i>delete anomalies</i></u>.</p>
+			<h3>Normalization</h3>
+			<p>Although redundancies promote availability by removing single points of failure, not all redundancies are good. The benefits of a database system actually rely on the <em>avoidance</em> of redundancy. In fact, one of the reasons to transition from a file system to a database system is to avoid redundancies from separate individuals tracking information in separate files. However, redundancies can also arise in database systems through the creation of <u><i>functional dependencies</i></u>: partial or transitive. These dependencies create problematic <u><i>create</i></u>, <u><i>update</i></u>, and <u><i>delete anomalies</i></u>.</p>
 		</section>
 
 		<section>
@@ -227,7 +229,7 @@
 		</section>
 
 		<section>
-			<h3>Normalization</h3>
+			<h3>Fixing Dependencies</h3>
 			<p><u><i>Normalization</i></u> removes functional dependencies and their resulting anomalies by dividing tables with dependencies into multiple tables connected by foreign keys. Second normal form (2NF) removes partial dependencies, and third normal form (3NF) removes transitive dependencies. Third normal form is the minimum standard for a well-defined database.</p>
 		</section>
 
@@ -271,7 +273,7 @@
 		<section>
 			<h3>Normalizing an E-R diagram</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/unnormalized.png" alt="Unnormalized Table" style="max-width: 200px"/></div>
+				<div class="flex-item override"><img src="../images/unnormalized.png" alt="Unnormalized Table" style="max-width: 200px"/></div>
 				<div class="flex-item" style="max-width: 75%">
 					<p>This E-R diagram entity lists common attributes for a sales order. However, it is not 3NF. This extended example will demonstrate how to create a collection of 3NF entities to accommodate the attributes listed.</p>
 				</div>
@@ -281,7 +283,7 @@
 		<section>
 			<h3>Customer</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step1.png" alt="Step 1" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step1.png" alt="Step 1" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>First, we create a Customer entity. By storing this data in a separate table, we avoid duplicating it each time that the customer places a new order. We select the customer's email address as a primary key [PK] because customer accounts are frequently identified by the email address.</p>
 				</div>
@@ -291,7 +293,7 @@
 		<section>
 			<h3>Carrier</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step2.png" alt="Step 2" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step2.png" alt="Step 2" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Second, we create a Carrier entity to avoid duplicating carrier information for each order. The Carrier ID primary key could simply enumerate the carriers (i.e., 001, 002, 003, etc.). Not all primary keys have any interpretation. Sometimes they are nonsensical and only serve to uniquely identify records.</p>
 				</div>
@@ -301,7 +303,7 @@
 		<section>
 			<h3>Inventory</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step3.png" alt="Step 3" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step3.png" alt="Step 3" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Third, we create an Inventory entity. Although quantity on hand is not normally on a sales order, it is an important Inventory attribute to add to the Inventory table. SKU is an inventory identifier that is common to vendor and customer, so it becomes an obvious candidate for a primary key.</p>
 				</div>
@@ -311,7 +313,7 @@
 		<section>
 			<h3>Sales Tax</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step4.png" alt="Step 4" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step4.png" alt="Step 4" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Fourth, we create a Sales Tax entity to store the sales tax rates for each jurisdiction. Because jurisdictions are frequently identified by ZIP code, ZIP would be an appropriate primary key.</p>
 				</div>
@@ -321,7 +323,7 @@
 		<section>
 			<h3>Relationships</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step5.png" alt="Step 5" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step5.png" alt="Step 5" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Next, we assign relationships to the entities and cardinalities to the relationships. This involves some hypothetical business rules. Each customer is associated with at least zero and at most many sales orders. Each carrier is associated with at least zero and at most many sales orders. Each sales order is associated with exactly one customer and one carrier.</p>
 				</div>
@@ -331,7 +333,7 @@
 		<section>
 			<h3>Relationships</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step6.png" alt="Step 6" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step6.png" alt="Step 6" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Although sales tax applies to a sales order, the customer's ZIP code resides in the Customer table. As a result, we will link the Sales Tax entity with the Customer entity with the assumption that each customer (by virtue of the customer's address) is associated with one sales tax rate, while each ZIP is associated with at least zero and at most many customers.</p>
 				</div>
@@ -341,7 +343,7 @@
 		<section>
 			<h3>Relationships</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step7.png" alt="Step 7" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step7.png" alt="Step 7" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Finally, each sales order is associated with at least one and at most many inventory items, and each inventory item can be associated with at least zero and at most many sales orders. This many-to-many relationship is a problem, which a linking table will fix.</p>
 				</div>
@@ -351,7 +353,7 @@
 		<section>
 			<h3>Foreign Keys</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step8.png" alt="Step 8" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step8.png" alt="Step 8" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Before creating a linking table, we add foreign keys to operationalize relationships. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity becomes a foreign key. This links customer ZIP to sales tax rate, and it restricts customers to ZIP codes already in the Sales Tax table.</p>
 				</div>
@@ -360,15 +362,15 @@
 
 		<section>
 			<h3>Why Linking Tables?</h3>
-			<p>The intuitive reason for a linking table between Sales Order and Inventory is that each sales order can have multiple different inventory items.If the Sales Order entity added a record for each sales order item, all header information (e.g., customer, date, etc.) would be duplicated for each line item. The other alternative would be to add attributes to the Sales Order table for each potential line item, but that would result in (1) records of inconsistent length because some orders would have more or fewer line items and (2) a cap on line items equal to the number of line item attributes in the entity. Neither of these constitute best practice.</p>
+			<p>The intuitive reason for a linking table between Sales Order and Inventory is that each sales order can have multiple different inventory items. If the Sales Order entity added a record for each sales order item, all header information (e.g., customer, date, etc.) would be duplicated for each line item. The other alternative would be to add attributes to the Sales Order table for each potential line item, but that would result in (1) records of inconsistent length because some orders would have more or fewer line items and (2) a cap on line items equal to the number of line item attributes in the entity. Neither of these constitute best practice.</p>
 		</section>
 
 		<section>
 			<h3>Linking Table</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step9.png" alt="Step 9" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step9.png" alt="Step 9" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
-					<p>In order to construct the linking table, we combine the primary keys from Sales Order and Inventory and make them primary and foreign keys in an Order Line Item entity. Each instance of this entity is a sales order-inventory item pair. If, for example, an order had five items, this link table would have five records for that order.</p>
+					<p>In order to construct the linking table, we combine the primary keys from Sales Order and Inventory and make them primary and foreign keys in an Order Line Item entity. Each instance of this entity is a sales order-inventory item pair. If, for example, an order had five items, this linking table would have five records for that order.</p>
 				</div>
 			</div>
 		</section>
@@ -376,7 +378,7 @@
 		<section>
 			<h3>Relationships</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step10.png" alt="Step 10" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step10.png" alt="Step 10" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>Each inventory item can be on at least zero&mdash;the inventory exists before it is first purchased&mdash;and at most many orders, but each order line item references exactly one inventory item. Similarly, each order can have at least zero&mdash;the order is created before items are added to it&mdash;and at most many line items, but each line item belongs to exactly one order.</p>
 				</div>
@@ -386,7 +388,7 @@
 		<section>
 			<h3>Final Step</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/normal-step11.png" alt="Step 11" style="max-width: 475px"/></div>
+				<div class="flex-item override"><img src="../images/normal-step11.png" alt="Step 11" style="max-width: 475px"/></div>
 				<div class="flex-item" style="max-width: 50%">
 					<p>This set of entities is 3NF, but in order to have a well-defined database, we must remove some extraneous attributes. Extension (quantity x price), subtotal (the sum of all extensions), sales tax (subtotal x tax rate), and total cost (subtotal + sales tax, are all functions of other attributes and should not be stored. These data points can be calculated when needed for a user view.</p>
 				</div>
@@ -395,7 +397,7 @@
 
 		<section>
 			<h3>Accounting Tie-in</h3>
-			<p>In a digital world, all professionals, accountants included, are dependent on the availability of information systems. Gone are the days of paper documents and client-based data and applications. As a result, if a server-based system is offline or cloud data is lost, then work stops. Additionally, because decision makers rely on the information extracted from data, they implicitly rely on the quality of the data, and the principle of &ldquo;garbage in, garbage out&rdquo; applies. A system may function without loss and error prevention, but uncontrolled data leads to uncontrolled inferences and uncontrolled business decisions.</p>
+			<p>Because decision makers rely on the information extracted from data, they implicitly rely on the quality of the data, and the principle of &ldquo;garbage in, garbage out&rdquo; applies. A system may function without error prevention, but uncontrolled data leads to uncontrolled inferences and uncontrolled business decisions. This is true of internal stakeholders, who are the primary consumers of information from the information system, but it also applies to external stakeholders, who rely on the accuracy of financial statements, audits, tax returns, and other accounting information.</p>
 		</section>
 	</div>
 	</div>
