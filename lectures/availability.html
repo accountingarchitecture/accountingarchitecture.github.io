@@ -24,15 +24,15 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Loss & Error Prevention</h2>
+			<h2>Availability</h2>
 		</section>
 
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>The final two blocks of the Control section are Availability and Processing Integrity. These terms correspond to matching concepts in the Trust Services Framework. Combined, these blocks prevent data loss and data errors.</p>
+					<p>Availability is the second block of the Control section. This principle applies to the ability to access a network device, such as a Web server, and it applies to the ability to access data on both local and network systems.</p>
 				</div>
 			</div>
 		</section>
@@ -42,91 +42,96 @@
 			<blockquote>The system is available for operation and use as committed or agreed.</blockquote>
 			<p>Two threats of availability are data loss and downtime. Three tools combat these threats:</p>
 			<ul>
-				<li><u><i>Interpretation</i></u> preserves accessibility of legacy data.</li>
-				<li><u><i>Change management</i></u> limits planned downtime.</li>
 				<li><u><i>Redundancy</i></u> avoids data loss and unplanned downtime.</li>
+				<li><u><i>Change management</i></u> limits planned downtime.</li>
+				<li><u><i>Interpretation</i></u> preserves accessibility of legacy data.</li>
 			</ul>
 		</section>
 
 		<section>
+			<h3>Trust Services</h3>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>Security is the foundation of Trust Services because although all five components are necessary for reliable system, security supports each of the remaining concepts. Restricting unauthorized access to information systems, especially network-enabled (i.e., cloud-based) systems, is the first step in promoting confidentiality/privacy, availability, and processing integrity.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
 			<h3>Denied!</h3>
-			<p>One major threat to the availability of a cloud system is denial of service (DoS). This involves sending a small network package (i.e., ping) to a server and asking for a response. If the number of pings becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Frequently, the attack is distributed across multiple clients in a distributed denial of service (DDoS) attack. Firewalls can prevent servers from responding to pings and protect them from DoS attacks. This is just one example of the interplay between Security and Availability.</p>
-		</section>
-
-		<section>
-			<h3>Interpretation</h3>
-			<p>One of the Unix philosophies was that the basis of all data is plain text&mdash;as opposed to compiled binary files, not as opposed to encrypted files. Although the advent of graphical interfaces has made this infeasible, one of the benefits of this philosophy is a maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. In order to preserve interpretability of binary files, users have two choices (1) retain in perpetuity the hardware and software necessary to access the data or (2) emulate the hardware and software.</p>
-		</section>
-
-		<section>
-			<h3>Emulation</h3>
-			<p>In virtualization, the hypervisor virtualizes computer hardware. In containerization, the container virtualizes the operating system kernel. Emulation is similar to virtualization in that the emulator virtualizes computer hardware. However, in the case of emulation, the hardware is non-existent, and the emulator must translate hardware requests intended for the emulated hardware before communicating with the computer's actual hardware. (Incidentally, this is a popular practice for playing old console and arcade games on personal computers.)</p>
-		</section>
-
-		<section>
-			<h3>Patching</h3>
-			<p>Every information system needs hardware and software updates (i.e., patches) sooner or later. Although Linux developers, specifically Red Hat and SUSE, have provided methods for updating the Linux kernel without needing to reboot, hardware and software patches sometimes require shutting down or restarting a system. During these periods, any data is unavailable, and any externally facing systems are inaccessible to customers. This can result in a loss of business, data collection and analysis, and customer satisfaction.</p>
-		</section>
-
-		<section>
-			<h3>Change Management</h3>
-			<p>Proper change management (i.e., processes that govern system changes and updates) can minimize the negative effects of downtime by (1) scheduling downtime when it would inconvenience the fewest users and (2) structuring patches to reduce the likelihood of breakage following an update. Because all systems need patching, internal and external users understand the need for system maintenance and can schedule necessary activities around planned, announced maintenance windows. During these maintenance windows, it is important to make quick updates that will not break existing functionality.</p>
-		</section>
-
-		<section>
-			<h3>DevOps</h3>
-			<p>In order to ensure that system patches will work and not break functionality, developers, especially in-house developers, who wrote the code, and IT staff, who maintain the hardware and software, must work together in order to ensure that the system will run smoothly after the update. This is the premise of <u><i>DevOps</i></u>, which is, intuitively, a combination of &ldquo;Development&rdquo; and &ldquo;Operations.&rdquo; Business-led IT is an outcropping of this, in which the DevOps team expands to include business experts. Accounting Architecture is essentially business-led IT applied to the financial and management accounting, auditing, and tax functions.</p>
+			<p>One major threat to the availability of a cloud system is denial of service (DoS). This involves sending a small network package (e.g., ping) to a server and asking for a response. If the number of packages becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Firewalls can prevent servers from responding to pings and protect them from DoS attacks. This is just one example of the interplay between security and availability.</p>
 		</section>
 
 		<section>
 			<h3>Redundancy</h3>
-			<p>System components can fail. A <u><i>single point of failure</i></u> is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site (i.e., server room) creates redundancy for an entire cloud. A server cluster, in addition to increasing availability by adding processing power, allows alternative servers to take over when one server fails. Storage backups create duplicates of data in case storage volumes become corrupted.</p>
+			<p>System components can fail. A <u><i>single point of failure</i></u> is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site (i.e., server room) creates redundancy for an entire cloud by duplicating all hardware and software in a remote location. A server cluster, in addition to increasing availability by adding processing power, allows alternative servers to take over when one server fails. <u><i>Backups</i></u> create duplicates of data in case storage volumes become corrupted.</p>
 		</section>
 
 		<section>
-			<h3>RAID 1</h3>
-			<p>RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. The purpose of RAID 0 is maximize the size of a logical volume. Interestingly, one of the problems with RAID 0 is its vulnerability to failure because the stripe becomes corrupted if either physical volume fails. RAID 1, on the other hand, uses the same two physical volumes as mirrors. The user only sees one of the two drives, and the other is a backup. Because data integrity is more important that storage capacity, RAID 1 is generally more popular than RAID 0.</li>
-		</section>
-
-		<section>
-			<h3>Pros and Cons</h3>
-			<p>RAID 1 is one backup method, and this method has some advantages and disadvantages over periodic, full backups. The primary advantage is that the RAID make continuous, real-time backups, so no data is ever not duplicated. Additionally, the RAID system is designed to repair volumes while the system is live, so if one drive becomes corrupted, it is possible to swap out that drive, replace it with a blank one, and have the RAID rebuild the data without ever shutting down the system. The primary advantage of periodic, full backups is the ability to store the backup off-site (e.g., in another office building, with a security company, or in a safety deposit box) to avoid data loss should the computer hosting the RAID become damaged or stolen.</p>
-		</section>
-
-		<section>
-			<h3>Full vs. Incremental</h3>
-			<p>Full backups create a complete copy of all data during each backup. As a result, each subsequent backup contains the data stored in all earlier backups. Because it is generally good practice to keep more than one backup (e.g., three weeks of daily backups) full backups can quickly become infeasibly large. Fortunately, incremental backups provide another option for storing backups off-site. Incremental backups only store the changes (deltas) since the previous backup. In order to restore an entire incremental backup, it is necessary to restore every delta. This process can become infeasibly long.</p>
+			<h3>Backups</h3>
+			<p>Two common backup methods are full and incremental. <u><i>Full backups</i></u> create a complete copy of all data during each backup. As a result, each subsequent backup contains the data stored in all earlier backups. Because it is generally good practice to keep more than one backup (e.g., three weeks of daily backups) full backups can quickly become infeasibly large, and backing up a large data volume can take a long time. <u><i>Incremental backups</i></u> only store the changes since the previous backup, also called deltas. Backing up deltas takes less time than backing up an entire volume, but in order to restore an entire incremental backup, it is necessary to restore every delta. The restoration process can become infeasibly time-consuming.</p>
 		</section>
 		
 		<section>
 			<h3>Easier is not Better</h3>
-			<p>One option for reducing the size of full backups or the restoration time of incremental backups is to decrease the frequency of backups (e.g., once a week, instead of once a day). The problem with this option is that the expected loss of additional data may be unacceptable. For example, if the current policy is daily backups and a storage volume fails immediately before that day's backup, at most 24 hours worth of data is irreplaceable. If that policy changes to weekly backups and a storage volumes fails immediately before that week's backup, as much as 168 hours of data is lost! For a large company, that may be tens of millions of database records.</p>
+			<p>One option for reducing the size of full backups or the restoration time of incremental backups is to decrease the frequency of backups (e.g., once a week, instead of once a day). The problem with this option is that the expected loss of additional data may be unacceptable. For example, if the current policy is daily backups and a storage volume fails immediately before that day's backup, at most 24 hours worth of data is irreplaceable. If that policy changes to weekly backups and a storage volumes fails immediately before that week's backup, as much as 168 hours of data is lost! For a large company, that may be hundreds of millions of database records.</p>
 		</section>
 
 		<section>
 			<h3>Best of Both Worlds</h3>
-			<p>A safer option of reducing the size of full backups or the restoration time of incremental backups is to combine the concepts of full and incremental backups by having frequent incremental backups and infrequent full backups. For example, a policy might dictate weekly full backups and daily incremental backups. This reduces the combined size of all full backups and the restoration time of all incremental backups because restoration would only require the previous full backup and one incremental backup for each day between the last full backup and the failure.</p>
+			<p>A safer option of reducing the size of full backups or the restoration time of incremental backups is to combine the concepts of full and incremental backups by having frequent incremental backups and infrequent full backups. For example, a policy might dictate weekly full backups and daily incremental backups. This reduces the combined size of all full backups and the restoration time of all incremental backups because restoration would only require one full backup plus one incremental backup for each day between the last full backup and the failure.</p>
+		</section>
+
+		<section>
+			<h3>Mirroring</h3>
+			<p>A third backup option is a <u><i>mirror</i></u>. As the name implies, a mirror is an exact duplicate of a storage volume. The benefits of a mirror are that the backup procedure usually only involves storing deltas, similar to an incremental backup, and the restoration procedure only involves copying over the current mirror version. This reduces the amount of storage needed for backups, and the amount of time to back up and to restore. The drawback of a mirror is that it is a copy of the current data. If the current data is corrupt, the mirror may also be corrupt. Additionally, if a file is accidentally modified or deleted, the mirror cannot restore an earlier version.</p>
+			<p>RAID provides the opportunity to mirror. This is the reason for the name: <i>Redundant</i> Array of Independent Disks.</p>
+		</section>
+
+		<section>
+			<h3>RAID 1</h3>
+			<p>RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. The purpose of RAID 0 is to maximize the size of a logical volume. Interestingly, one of the problems with RAID 0 is its vulnerability to failure because the stripe becomes corrupted if either physical volume fails. Each drive represents a single point of failure. RAID 1, on the other hand, uses the same two physical volumes as mirrors. The user sees a logical volume with the capacity of one physical volume, and the other physical volume is a duplicate copy (i.e., backup). When redundancy is more important than storage capacity, RAID 1 is more valuable than RAID 0.</li>
+		</section>
+
+		<section>
+			<h3>Remote Mirror</h3>
+			<p>RAID 1 has an additional advantage as a backup method, namely that the RAID system is designed to repair volumes while the system is live. If one drive becomes corrupted, it is possible to swap out that drive, replace it with a blank one, and have the RAID rebuild the data without ever shutting down the system. This promotes availability by preventing data loss and system downtime simultaneously. Unfortunately, RAID 1 requires that the devices be in the same physical location. If a disaster affects the entire computer, such as fire, electrical surge, or theft, the RAID will no longer provide a backup. Other tools, such as the popular Linux tool rsync, can create remote mirrors that can be accessible in these disaster situations. However, they continue to be subject to the general problems of mirrored backups.</p>
 		</section>
 
 		<section>
 			<h3>Version Control System</h3>
-			<p>One common incremental backup tool, especially among developers, is the <u><i>version control system</i></u>, such as Git. These storage solutions offer unique advantages over other backup tools. First, they simultaneously promote backup and real-time collaboration. In fact, because of the decentralized nature of these systems, additional collaboration always promotes additional backups because each collaborator has a full copy of the data store. Second, the system manages incremental backups smartly, provides a convenient timeline of changes, and allows for straightforward file restoration on an individual user basis. Finally, with minimal additional work, these systems can create both local and cloud backups (e.g., GitHub).</p>
+			<p>One backup tool that combines the best aspects of full, incremental, and mirrored backups is the <u><i>version control system</i></u> (VCS). A VCS backs up deltas, but it can restore all data at once. Additionally, it provides a convenient timelies of changes and can restore the data to any given point in the timeline in history. Version control systems, or versioning software, are especially prevalent among software developers because in addition to the backup features, it allows for collaboration between multiple contributors. In fact, additional collaboration creates additional backups because each collaborator has a complete copy of the data store.</p>
+		</section>
+
+		<section>
+			<h3>Change Management</h3>
+			<p>Every information system needs hardware and software updates (i.e., patches) at some point, and these patches sometimes require shutting down or restarting a system. During these periods, any data is unavailable, and any externally facing systems are inaccessible to external stakeholders, such as customers. This can result in a loss of business, missed opportunities for data collection and analysis, or lower customer satisfaction. <u><i>Change management</i></u> is the set of processes that govern system changes and patches. Proper implementation minimizes the negative effects of downtime by (1) scheduling downtime when it would inconvenience the fewest users and (2) structuring patches to reduce the likelihood of breakage following an update.</p>
+		</section>
+
+		<section>
+			<h3>DevOps</h3>
+			<p>In order to ensure that system patches will work and not break existing functionality, developers, especially in-house developers, who write the code, and IT staff, who maintain the hardware and software and implement the updates, must work together in order to ensure that the system will run smoothly after the update. This is the premise of <u><i>DevOps</i></u>, which is a combination of &ldquo;Development&rdquo; and &ldquo;Operations.&rdquo; Business-led IT is an outcropping of this, in which the DevOps team expands to include business experts. Accounting architecture, or accounting-led IT, is an extension of business-led IT that specifies that accountants play the role of business experts. </p>
+		</section>
+
+		<section>
+			<h3>Interpretation</h3>
+			<p>One of the original philosophies of the Unix developers was that the basis of all data is plain text. Many software applications, such as office suites, store data in compiled binaries (e.g., DOCX, PDF, PNG, etc.). While it is not reasonable to store everything as plain text (e.g., XML, HTML, TXT, CSV, etc.), one overwhelming benefit of is the maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. In order to preserve access to the data stored in binary files, users can either (1) retain in perpetuity the hardware and software necessary to access the data or (2) <u><i>emulate</i></u> the hardware and software when necessary.</p>
+		</section>
+
+		<section>
+			<h3>Emulation</h3>
+			<p>In virtualization, the hypervisor virtualizes computer hardware. In containerization, the container virtualizes the operating system kernel. Emulation is similar to virtualization in that the emulator virtualizes computer hardware. However, in the case of emulation, the hardware is non-existent, or rather the virtualized hardware is different from the system's actual hardware. The emulator translates hardware requests intended for the emulated hardware before communicating with the computer's actual hardware. (Incidentally, this is a popular practice for playing old console and arcade games on personal computers.) Emulated software is similar, in that the software is also non-existent, but the emulator acts like the software (e.g., DOSBox emulates MS-DOS).</p>
 		</section>
 
 		<section>
 			<h3>Big Picture</h3>
-			<p>A cloud-based information system is a combination of one or more of these services. The components of the cloud-based system operationalize the information life cycle or Big Data life cycle. First, externally facing, department-specific databases support specialized data entry. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
+			<p>A complete cloud-based information system includes multiple components that promote the availability needs of both internal and external stakeholders by operationalizing the information life cycle or Big Data life cycle. This graphic provides an example of such a system. First, externally facing, department-specific OLTP databases support specialized data collection. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
 			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
-			<h3>OLTP</h3>
-			<p>The first set of components receives data from external sources. These are frequently <u><i>Online Transaction Processing</i></u> (OLTP) systems because they receive data (e.g., customer orders, market prices, and other forms of Big Data) in real-time. Amazon's sales order interface would be an example of an OLTP system. These systems require fast, scalable data stores, so NoSQL is a popular solution.</p>
-			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-		</section>
-
-		<section>
-			<h3>Integration Layer</h3>
+			<h3>Integration</h3>
 			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides a intermediate store where data is cleaned and converted.</p>
 			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
@@ -145,6 +150,11 @@
 		<section>
 			<h3>In Or Out?</h3>
 			<p>At a recent meeting of the American Taxation Association, representatives from E&amp;Y's tax practice talked about data analytics and tax planning and compliance. One individual stated that because of the increase in real-time analytical tools, data warehouses were no longer necessary. Given the roles that data warehouses play, this seems a bold statement. Later on in the presentation, it appeared that what the individual meant was that real-time analytics had replaced traditional pre-calculations, so it was no longer necessary to store OLAP cubes. Real-time analytics have begun to replace traditional OLAP and MapReduce protocols, but this is not sufficient to remove the need for a data warehouse to archive data collected from transactional databases.</p>
+		</section>
+
+		<section>
+			<h3>Accounting Tie-in</h3>
+			<p>Availability addresses access to data and network systems. Accounting regulation has strict rules about the preservation of accounting data. For example, tax authorities can audit the past three years' returns; financial statements require presentation of prior years' numbers for comparability; restatements or the adoption of new standards may require retroactive adjustments. Old accounting data must be available. Furthermore, much of accounting work is cloud-based. For example, data may be stored on a shared file server. In addition to these, internal decision makers require constant access to data, and systems must be available to collect and analyze it. That is the requirement of the Information Era.</p>
 		</section>
 	</div>
 	</div>
