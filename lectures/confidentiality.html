@@ -3,28 +3,21 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>ACCT 4020</title>
+	<title>Confidentiality</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css" id="theme">
-
-	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../../css/slides.css">
-
-	<!--[if lt IE 9]>
-	<script src="../../reveal.js/lib/js/html5shiv.js"></script>
-	<![endif]-->
+	<link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
@@ -37,7 +30,7 @@
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
 					<p>Confidentiality is the next Control block in the Accounting Architecture. It comprises more than one pillar of the Trust Services Framework. Additionally, it is not fundamentally separate from the principles of Security. As a result, many tools that preserve confidentiality are commonly referred to as security tools.</p>
 				</div>
@@ -47,17 +40,17 @@
 		<section>
 			<h3>Trust Services Framework</h3>
 			<div class="flex-row">
+				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 70%">
 					<p>The two pillars in the Trust Services Framework that the Confidentiality block comprises are Confidentiality and Privacy. The AICPA explains the difference between these two terms. &ldquo;Confidentiality is distinguished from privacy in that privacy deals with personal information whereas, confidentiality refers to a broader range of information that is not restricted to personal information.&rdquo; From this explanation it is clear that the same tools protect privacy and confidentiality.</p>
 				</div>
-				<div class="flex-item override"><img src="../../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 			</div>
 		</section>
 
 		<section>
 			<h3>Security and Confidentiality</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 70%">
 					<p>As it does with the other pillars of the Trust Services Framework, security plays a role in promoting confidentiality. In fact, a primary focus of security (i.e., access controls) is to keep data confidential. Although permissions and authentication also prevent unauthorized changes to data, as evidenced by the publicity surrounding corporate data breaches and the leakage of, for example, customer data, companies focus permissions, authentication, and hardening on avoiding unauthorized viewing of data.</p>
 				</div>
@@ -70,7 +63,7 @@
 				<div class="flex-item" style="max-width: 65%">
 					<p>Especially as it pertains to the &ldquo;privacy&rdquo; side, Compliance is particularly applicable to the Confidentiality block of the Architecture. Much of the concept of compliance is familiar to accountants because so much of the profession revolves around regulatory compliance (e.g., GAAP, IFRS, IRC). However, compliance also includes the laws and private contracts that dictate the protection of trade secrets, customer data, intellectual property, etc.</p>
 				</div>
-				<div class="flex-item override"><img src="../../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 			</div>
 		</section>
 
@@ -87,7 +80,7 @@
 
 		<section>
 			<h3>Rights Management</h3>
-			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. Also, rights management is inherently a required compliance activity when using licensed content.</p>
+			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. As a result, rights management is a required compliance activity when using licensed content. This practice applies not only to proprietary content, but also to open source. Because open source licenses are licenses, rights management is necessary to comply with the license requirements. This frequently involves correct attribution (i.e., including the name of the original creator with the product) and reciprocation (i.e., using a license for an internal modifications that is compatible with the original license).</p>
 		</section>
 
 		<section>
@@ -102,12 +95,12 @@
 
 		<section>
 			<h3>Proxy Servers</h3>
-			<p>Unlike intermediaries that serve to make the transmission of information or money more efficient, <u><i>proxy servers</i></u> serve as intermediaries between a user's ISP and an Internet server to change the client's public IP address. The client selects and connects to a proxy server. While connected, the proxy server forwards all Internet requests to the server and content to the client. The server records the IP address of the proxy server, instead of the client. Because the server records the IP address of the proxy server, any attempt to identify the location of the client would prove fruitless, as the proxy server may be in a different part of the world as the actual client.</p>
+			<p><u><i>Proxy servers</i></u> serve as intermediaries between a user and an Web server to change the client's public IP address. The client selects and connects to a proxy server, and while connected, the proxy server forwards all Internet requests from the client to the Web server and content from the Web server to the client. The Web server records the IP address of the proxy server, instead of the client. Attempts to identify the location of the client would prove fruitless, as the proxy server may be in a different part of the world as the actual client.</p>
 		</section>
 
 		<section>
 			<h3>Why Hide?</h3>
-			<p>Hiding the client's public IP address has a number of advantages. On the less nefarious side of things, the user can access resources that are restricted to a particular country. For example, a US IP address is necessary in order to stream the Netflix content that Americans expect to find. Using a US-based proxy server will provide a client outside the US with a US IP address. On the more nefarious side of things, proxy servers can allow perpetrators of illicit activities (e.g., hacking, sale or purchase of contraband) to evade detection. Corporations often use them to anonymize traffic from the devices inside their LANs.</p>
+			<p>Hiding the client's public IP address has a number of advantages. On the less nefarious side of things, the user can access resources that are restricted to a particular country. For example, a US IP address is necessary in order to stream the Netflix content that Americans expect to find. Using a US-based proxy server will provide a client outside the US with a US IP address. On the more nefarious side of things, proxy servers can allow perpetrators of illicit activities (e.g., hacking or the sale or purchase of contraband) to evade detection. Corporations also often use them to anonymize traffic from the devices inside their LANs.</p>
 		</section>
 
 		<section>
@@ -119,7 +112,7 @@
 			<h3>Proxy Servers and Firewalls</h3>
 			<p>A firm can use a firewall to keep remote users away from a server, but they can also use a firewall to keep LAN users from accessing remote servers. For example, if a university wanted to prevent its employees from accessing social media sites, a firewall could block access to these sites from university computers. Proxy servers can circumvent these restrictions because to the university's firewall the client only accessed a proxy server, not a social media site.</p>
 			<!--License: CC-BY-SA 4.0 Attribution: Milesjpool,-->
-			<div class="override"><img src="../../images/proxy-server.png" alt="Proxy Server" style="max-height: 175px"/></div>
+			<div class="override"><img src="../images/proxy-server.png" alt="Proxy Server" style="max-height: 175px"/></div>
 		</section>
 
 		<section>
@@ -150,14 +143,14 @@
 		<section>
 			<h3>Public Key Cryptography</h3>
 			<div class="flex-row">
-				<div class="flex-item"><img src="../../images/keygen.png" alt="Key Generation"/></div>
-				<div class="flex-item"><img src="../../images/public-key.png" alt="Public Key Cryptography"/></div>
+				<div class="flex-item"><img src="../images/keygen.png" alt="Key Generation"/></div>
+				<div class="flex-item"><img src="../images/public-key.png" alt="Public Key Cryptography"/></div>
 			</div>
 		</section>
 
 		<section>
 			<h3>Oversharing</h3>
-			<p>Although the concept of public and private keys can be confusing, email addresses provide a suitable analogy that explains the concept in an accessible manner. A public key is like an email address. In order to receive email, the recipient must distribute the address. This is a secure behavior because the email address in not sufficient to read received emails. Viewing emails requires an additional input: a password which the owner of the account keeps secret and which is not inferable from the email address. Similarly, a public key allows a sender to specify a recipient, so the public key must be publicly available. A private key, like a password, remains secret in order to restrict access to decrypted messages.</p>
+			<p>Although the concept of public and private keys can be confusing, email addresses provide a suitable analogy that explains the concept in an accessible manner. A public key is like an email address. In order to receive email, the recipient must distribute the address. This is a secure behavior because the email address is not sufficient to read received emails. Viewing emails requires an additional input: a password which the owner of the account keeps secret and which is not inferable from the email address. Similarly, a public key allows a sender to specify a recipient, so the public key must be publicly available. A private key, like a password, remains secret in order to restrict access to decrypted messages.</p>
 		</section>
 
 		<section>
@@ -171,7 +164,7 @@
 				<div class="flex-item" style="max-width: 65%">
 					<p>Calculating a hash after receiving a file and comparing it to a hash that the sender provides will reveal whether the file has been modified. For example, if a hacker gains access to and adds a virus to an online file, then users who download and launch the file can become infected. If the creator of the file provided a hash of the original file and users calculated a hash of the downloaded file, they would learn that the file had become corrupted and delete it.</p>
 				</div>
-				<div class="flex-item override"><img src="../../images/checksum.png" alt="Checksum"/></div>
+				<div class="flex-item override"><img src="../images/checksum.png" alt="Checksum"/></div>
 			</div>
 		</section>
 
@@ -181,14 +174,14 @@
 				<div class="flex-item" style="max-width: 70%">
 					<p>Another benefit of encrypted cipher text is its ability to identify the sender. Because a public-private key pair is unique to a single user, it turns out that these keys can verify the senders identity by allowing the sender to attach a <u><i>digital signature</i></u> to the message. (This is different from the digital signature that cardholders create after swiping a credit card.) A sender creates a cryptographic digital signature by (1) creating a hash of the message and (2) encrypting the hash with the sender's private key.</p>
 				</div>
-				<div class="flex-item"><img src="../../images/signing.png" alt="Digital Signature" style="max-width: 300px"/></div>
+				<div class="flex-item"><img src="../images/signing.png" alt="Digital Signature" style="max-width: 300px"/></div>
 			</div>
 		</section>
 
 		<section>
 			<h3>Verify the Signature</h3>
 			<div class="flex-row">
-				<div class="flex-item"><img src="../../images/signature-verification.png" alt="Verify the Signature" style="max-width: 300px"/></div>
+				<div class="flex-item"><img src="../images/signature-verification.png" alt="Verify the Signature" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 70%">
 					<p>The sender then transmits the message and the signature to the recipient. The recipient (1) creates a hash of the message, (2) decrypts the signature using the sender's public key and (3) compares the hash with the decrypted signature. If they are equal, then the sender's identity is confirmed <em>and</em> the message has not been modified in transit. If they are different, then either the message has been modified or the sender is not who he claims to be.</p>
 				</div>
@@ -219,14 +212,11 @@
 			<h3>Accounting Tie-in</h3>
 			<p>Businesses always care about keeping data confidential, and regulations require that employee, patient, and customer data remain private. Even in the absence of these regulations, media coverage of past data breaches demonstrates the harrowing effects of the leakage of confidential data. Internal and external auditors care about the implementation of proper protocols to secure Web pages, customer profile and payment sites, and off-site telework (e.g., company-issued mobile devices). Tax accountants care about properly secured communication for receiving and filing tax documents. A clear understanding of the proper tools enables accountants to promote systems that satisfy regulatory compliance, client expectations, and business needs.</p>
 		</section>
-		
 	</div>
 	</div>
 
-	<script src="../../reveal.js/lib/js/head.min.js"></script>
-	<script src="../../reveal.js/js/reveal.js"></script>
-	<script src="../../js/slides.js"></script>
-	<script src="../../js/printing.js"></script>
-
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../js/slides.js"></script>
 </body>
 </html>
