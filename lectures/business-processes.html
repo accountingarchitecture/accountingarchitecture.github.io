@@ -11,7 +11,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
 
 	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
@@ -52,7 +52,7 @@
 			<h3>Cycles</h3>
 			<p>The business model is the sum of all business processes, but accountants frequently identify <u><i>cycles</i></u> as subgroupings of the business model. Two popular examples of business cycles are the revenue cycle and the expenditure cycle, although many accounting materials also reference a production or conversion cycle, a payroll cycle, and a general ledger cycle. The revenue cycle might include the sales order process, the cash receipts process, and the returns process for handling customer returns; the expenditure cycle could include the purchase process and the cash payments process.</p>
 		</section>
-		
+
 		<section>
 			<h3>Need for Flexibility</h3>
 			<p>Just as financial accounting, tax, and auditing standards reflect differences in business models between companies and industries, the identification of relevant business cycles is also unique. For example, the production of inventory or fixed assets is no longer a relevant component of many business models, whereas given the importance of corporate taxes, a tax cycle might manifest. In a services firm, such as is common to public accounting, the distinction between the expenditure and payroll cycles may be negligent because employees are the primary assets of the firm. A company that deals primarily in the creation of open source software might not even have a revenue cycle.</p>
@@ -66,11 +66,7 @@
 		<section>
 			<h3>What's the Point?</h3>
 			<p>If information systems and business processes are unique to each organization, what is the point of teaching anything? It may not be possible to answer this question satisfactorily, but the truth is that an understanding of principles and examples makes it easier to adapt to unique situations in the future, so the goal becomes to provide exposure to new ideas, and open the door towards being able to acquire additional information about specific implementations.</p>
-		</section>
-
-		<section>
-			<h3>Learning Tool</h3>
-			<p>The tool to enable future learning about information systems is knowledge of the individual building blocks, and this is the focus of the Accounting Architecture. The tool to enable future learning about business models is the ability to read diagrams.</p>
+			<p>The tool to enable future learning about information systems is knowledge of the individual building blocks, and this is the focus of the accounting architecture. The tool to enable future learning about business models is the ability to read diagrams.</p>
 		</section>
 
 		<section>
@@ -116,7 +112,7 @@
 		<section>
 			<h3>Control Flow</h3>
 			<p><u><i>Control flow</i></u> determines which tasks in a process may execute in which order. A traditional card game illustrates this principle. If one turn involves (1) requesting cards and (2) placing a bet, then the requesting cards activity must complete before placing a bet, and both activities must complete before the next player can have a turn. The current task has control, and when it completes, control is passed to the next task.</p>
-			<p>(The Accounting Architecture has a Control section, but this is a different use of the word.)</p>
+			<p>(The accounting architecture arch has a Control section, but this is a different use of the word.)</p>
 		</section>
 
 		<section>
@@ -141,13 +137,13 @@
 
 		<section>
 			<h3>Sample Flowchart</h3>
-			<div class="override"><img src="../images/sample-flowchart.png" alt="Sample Flowchart" style="max-height: 550px"/></div>
-		</section>
-
-		<section>
-			<h3>Narrative</h3>
-			<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory. (This might occur if inventory has fallen below its reorder point.) Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy of the purchase order to Inventory Control to file with Inventory Control's copy of the purchase requisition, and sends a copy of the purchase order to the Vendor.</p>
-			<p>(This terse narrative demonstrates that the communication of even a simple process with few steps benefits from a diagram.)
+			<div class="override"></div>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../images/sample-flowchart.png" alt="Sample Flowchart"/></div>
+				<div class="flex-item" style="max-width: 70%">
+					<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory. (This might occur if inventory has fallen below its reorder point.) Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy of the purchase order to Inventory Control to file with Inventory Control's copy of the purchase requisition, and sends a copy of the purchase order to the Vendor.</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -160,7 +156,7 @@
 				<li>For system flowcharts with multiple agents, flowcharts are subdivided into swimlanes, which are columns that signify which activities belong to which agent.</li>
 			</ul>
 		</section>
-		
+
 		<section>
 			<h3>Data Flow Diagrams</h3>
 			<p>Two different groups introduced nearly identical templates for DFDs:</p>
@@ -169,12 +165,12 @@
 
 		<section>
 			<h3>Sample DFD</h3>
-			<div class="override"><img src="../images/sample-dfd.png" alt="Sample DFD" style="max-height: 450px"/>
-		</section>
-
-		<section>
-			<h3>Narrative</h3>
-			<p>The Vendor sends an invoice. The invoice is compared to the purchase order for discrepancies. Once the invoice is approved, a check is signed and sent to the Vendor. A journal entry is added to the cash disbursements journal, and a journal voucher is used to update the accounts payable subledger.</p>
+			<div class="flex-row">
+				<div class="flex-item override"><img src="../images/sample-dfd.png" alt="Sample DFD"/></div>
+				<div class="flex-item" style="max-width: 41%">
+					<p>The Vendor sends an invoice. The invoice is compared to the purchase order for discrepancies. Once the invoice is approved, a check is signed and sent to the Vendor. A journal entry is added to the cash disbursements journal, and a journal voucher is used to update the accounts payable subledger.</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -189,42 +185,22 @@
 
 		<section>
 			<h3>Simplicity &ne; Readability</h3>
-			<p>Unlike flowcharts which have a large set of shapes to increase specificity, data flow diagrams promote simplicity by restricting themselves to three simple shapes. The large flowchart template can also result in a large number of shapes and a cluttered diagram, which reduces readability. However, simplicity will not always increase readability. For example, the lack of specific arrow conventions for Yourdon DFDs, and the lack of predetermined direction for DFDs reduces the number of requirements for DFDs but they conflict with a preference to read from top to bottom and left to right. Additionally, the lack of swimlanes obscures accountability (i.e., who performs a task), which is important information for accountants and auditors.</p>
+			<p>Unlike flowcharts which have a large set of shapes to increase specificity, data flow diagrams promote simplicity by restricting themselves to three simple shapes. The large flowchart template can also result in a large number of shapes and a cluttered diagram, which reduces readability. However, simplicity will not always increase readability. For example, the lack of specific arrow conventions for Yourdon DFDs, and the lack of predetermined direction for DFDs reduces the number of requirements for DFDs but they conflict with a preference to read from top to bottom and left to right. Additionally, the lack of swimlanes obscures accountability (i.e., who performs a task), which is important information for accountants and auditors. As a result, DFDs may be better for high-level and flowcharts better for low-level perspectives.</p>
 		</section>
-			
-		<section>
-			<h3>DFD Levels</h3>
-			<p>Some process tasks might have multiple steps. DFD levels allow for a convenient presentation of tasks decomposed into subtasks. The highest level DFD (Level 0) numbers processes with whole numbers (1, 2, 3, etc). The second level (Level 1) adds a decimal after the number of the decomposed process (Process 1 becomes 1.1, 1.2, 1.3, etc.). The third level (Level 2) adds an additional decimal number (Process 1.3 becomes 1.3.1, 1.3.2, etc.)</p>
-		</section>
-		
+
 		<section>
 			<h3>Business Process Model and Notation</h3>
-			<p>Business Process Model and Notation (BPMN) is an attempt to create a modeling notation specifically for business processes that promotes collaboration between operations specialists who design the process, managers who use the process, and technologists who support the process. BPMN comprises multiple diagram types, and these different types follow different conventions and rely on different templates. Two examples are <u><i>collaborations</i></u>, which are similar to sideways flowcharts and <u><i>choreographies</i></u>, which are similar to DFDs, except that they list the agents involved in a task.</p>
+			<p>Business Process Model and Notation (BPMN) is an attempt to create a modeling notation specifically for business processes that promotes collaboration between operations specialists who design the process, managers who use the process, and technologists who support the process. BPMN comprises multiple diagram types, and these different types follow different conventions and rely on different templates. Two examples are <u><i>collaborations</i></u>, which are similar to flowcharts and <u><i>choreographies</i></u>, which are similar to DFDs.</p>
 		</section>
 
 		<section>
-			<h3>Collaboration Shapes</h3>
-			<p>BPMN is different from other diagramming frameworks in an interesting way. Instead of adopting many different shapes to allow for a high level of specificity, such as flowcharts, or adopting only a few shapes which obscure certain specifics, such as DFDs, the BPMN template has a few shapes which pair with icons to add specificity.</p>
-			<div class="flex-row">
-				<div class="flex-item override"><img src="../images/BPMN.png" alt="Basic BPMN Shapes" style="margin-top: 0"/></div>
-				<div class="flex-item override"><img src="../images/BPMNAdvanced.png" alt="Advanced BPMN Shapes" style="margin-top: 0"/></div>
-			</div>
+			<h3>Ad-hoc</h3>
+			<p>The ability to read and write flowcharts and DFDs provides a valuable basis for understanding and communicating business processes, a basis which is not necessarily improved by exposure to yet another diagramming framework. Part of the reason for this is that when attempting to describe a process, individuals may create diagrams on the spot that follow no prescribed framework. The measure of a diagram is not is adherence to templates, but rather its ability to share information. The skill of reading and writing flowcharts and DFDs simply increases the likelihood of being able to create and read useful diagrams.</p>
 		</section>
 
 		<section>
-			<h3>Sample Collaboration</h3>
-			<div class="override"><img src="../images/sample-collaboration.png" alt="Sample BPMN Collaboration" style="max-height: 650px"/>
-		</section>
-
-		<section>
-			<h3>Narrative</h3>
-			<p>The Help Desk receives a ticket from the customer and searches the help-desk database for a solution. If the Help Desk finds a solution, it sends the solution to the customer. Otherwise, it sends a message to the expert. When the Help Desk receives a response from the expert, it sends the solution to the customer.</p>
-			<p>(Because the customer and the expert are external agents, the collaboration will not include their activities. Collaborations only portray the activities of internal agents.)
-		</section>
-
-		<section>
-			<h3>Now As a Choreography</h3>
-			<div class="override"><img src="../images/sample-choreography.png" alt="Sample BPMN Choreography" style="max-height: 650px"/>
+			<h3>Comprehensive Example</h3>
+			<div class="override"><img src="../images/dfd-cycles.png" alt="Cycles"/>
 		</section>
 
 		<section>
