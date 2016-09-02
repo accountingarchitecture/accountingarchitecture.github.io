@@ -60,7 +60,7 @@
 
 		<section>
 			<h3>Denied!</h3>
-			<p>One major threat to the availability of a cloud system is denial of service (DoS). This involves sending a small network package (e.g., ping) to a server and asking for a response. If the number of packages becomes too large, this otherwise innocuous communication can overwhelm resources and effectively shutdown a server. Firewalls can prevent servers from responding to pings and protect them from DoS attacks. This is just one example of the interplay between security and availability.</p>
+			<p>One major threat to the availability of a cloud system is denial of service (DoS). This involves flooding a server with data (e.g., ping, email) until the server slows down or crashes. In order to generate enough network traffic to overwhelm a server, frequently these attacks use a form of distributed computing by having multiple computers send traffic to the same server at once. These are distributed denial of service (DDoS) attacks. Sometimes the distributed clients are used without the owner's authorization or knowledge. As a result, these clients are called zombies. Proper use of security tools can protect servers from DoS attacks and clients from becoming unwitting zombies. This is just one example of the interplay between security and availability.</p>
 		</section>
 
 		<section>
@@ -72,7 +72,7 @@
 			<h3>Backups</h3>
 			<p>Two common backup methods are full and incremental. <u><i>Full backups</i></u> create a complete copy of all data during each backup. As a result, each subsequent backup contains the data stored in all earlier backups. Because it is generally good practice to keep more than one backup (e.g., three weeks of daily backups) full backups can quickly become infeasibly large, and backing up a large data volume can take a long time. <u><i>Incremental backups</i></u> only store the changes since the previous backup, also called deltas. Backing up deltas takes less time than backing up an entire volume, but in order to restore an entire incremental backup, it is necessary to restore every delta. The restoration process can become infeasibly time-consuming.</p>
 		</section>
-		
+
 		<section>
 			<h3>Easier is not Better</h3>
 			<p>One option for reducing the size of full backups or the restoration time of incremental backups is to decrease the frequency of backups (e.g., once a week, instead of once a day). The problem with this option is that the expected loss of additional data may be unacceptable. For example, if the current policy is daily backups and a storage volume fails immediately before that day's backup, at most 24 hours worth of data is irreplaceable. If that policy changes to weekly backups and a storage volumes fails immediately before that week's backup, as much as 168 hours of data is lost! For a large company, that may be hundreds of millions of database records.</p>
