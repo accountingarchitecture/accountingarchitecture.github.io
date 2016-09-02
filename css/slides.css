@@ -41,8 +41,6 @@
 
 .reveal .slides ul, .reveal .slides ol {
 	display: block;
-	list-style-position: inside;
-	text-indent: -1em;
 }
 
 /***** Flexbox Containers *****/
