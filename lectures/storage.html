@@ -45,7 +45,7 @@
 			</ul>
 			<p>These two systems can accommodate physical and digital resources. However, for our purposes, we will exclusively focus on digital storage systems.</p>
 		</section>
-		
+
 		<section>
 			<h3>File System</h3>
 			<div class="flex-row">
@@ -55,7 +55,7 @@
 				<div class="flex-item"><img src="../images/das.png" alt="Direct Access Storage" style="max-width: 200px"/></div>
 			</div>
 		</section>
-			
+
 		<section>
 			<h3>File System Layers</h3>
 			<p>However, the file system structure of files and folders is merely how the user sees the storage. One or more <u><i>physical</i></u> or <u><i>logical</i></u> <u><i>volumes</i></u> underlie that file system, and as a result, the user's file system view is not consistent with the physical view (i.e., where the data sits on the physical storage device). The physical volume is the physical storage device (e.g., HDD, SSD, etc), whereas logical volumes combine physical volumes into <i>ad-hoc</i> storage devices that can change size, as needed. Several different forms of logical volumes exist, but one common example is <u><i>RAID</i></u>.</p>
@@ -68,31 +68,31 @@
 		</section>
 
 		<section>
-		  <h3>Logical Volumes</h3>
+			<h3>Logical Volumes</h3>
 			<p>Logical volumes help to overcome the lack of flexibility of physical volumes. Logical volumes begin by combining multiple physical volumes into a volume group. Each logical volume draws space from the volume group. As long as the volume group has free space, logical volumes can be resized after creation to include more storage from the volume group. It is also possible to add additional physical partitions to the volume group to increase the free space that can be allocated to logical volumes.</p>
 		</section>
-		
+
 		<section>
-		  <h3>From Physical to Logical</h3>
+			<h3>From Physical to Logical</h3>
 			<!--License: CC-BY 2.0 Attribution: Sarmed Rahman-->
 			<img src="../images/lvm.png" alt="LVM" style="max-height: 550px"/>
 		</section>
-		
+
 		<section>
 			<h3>RAID</h3>
-			<p>Perhaps the most common type of logical volume is the Redundant Array of Independent Disks (RAID). RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. Unlike with some other forms of logical volume, with RAID, the user never interacts with a volume group and never creates logical volumes. Instead, the number of the RAID determines the exact number of physical volumes and logical volumes. In order to gain additional flexibility, some users place the RAID volume in a volume group and allocate the storage to logical volumes.</li>
+			<p>Perhaps the most common type of logical volume is the Redundant Array of Independent Disks (RAID). RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. Unlike with some other forms of logical volume, with RAID, the user never interacts with a volume group and never creates logical volumes. Instead, the number of the RAID determines the exact number of physical volumes and logical volumes. In order to gain additional flexibility, some users place the RAID volume in a volume group and allocate the storage to logical volumes.</p>
 		</section>
 
 		<section>
 			<h3>Hardware-level RAID Controllers</h3>
 			<p>Three different types of controllers can manage a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive, and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
 		</section>
-		
+
 		<section>
-		  <h3>Software-level RAID Controllers</h3>
-		  <p>In the two prior cases, the operating system stored on the storage device will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID.</p>
+			<h3>Software-level RAID Controllers</h3>
+			<p>In the two prior cases, the operating system stored on the storage device will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID.</p>
 		</section>
-		
+
 		<section>
 			<h3>Database System</h3>
 			<p>The role of a database system is to collate data, often data stored on a file system, and present it in a centralized manner. The most widely implemented database systems are either <u><i>relational database management systems</i></u> (RDBMS) or <u><i>non-relational databases</i></u> (NoSQL). However, many other applications implement these concepts of a database system. For example, many music players, such as iTunes or Google Play Music, present the user's music library in one centralized location with various attributes of each track, such as artist, title, etc. Because these tracks are generally stored in multiple files and folders in a file system, the music player creates a database that references these individual files.</p>
@@ -310,24 +310,24 @@
 			<p>Several popular relational database management systems (RDBMS), as well as non-relational databases exist. Although the older systems are proprietary, almost all new database systems are open source.</p>
 			<div class="flex-row" style="-webkit-align-items: flex-start; align-items: flex-start">
 				<div class="flex-item">
-  			  <p>Relational</p>
-  			  <ul>
-  			    <li>IBM DB2</li>
-  			    <li>Oracle DB</li>
-  			    <li>Microsoft SQL Server</li>
-  			    <li>MySQL</li>
-  			    <li>PostgreSQL</li>
-  			  </ul>
+					<p>Relational</p>
+					<ul>
+						<li>IBM DB2</li>
+						<li>Oracle DB</li>
+						<li>Microsoft SQL Server</li>
+						<li>MySQL</li>
+						<li>PostgreSQL</li>
+					</ul>
 				</div>
 				<div class="flex-item">
-  			  <p>Nonrelational</p>
-  			  <ul>
-  			    <li>MongoDB (Document store)</li>
-  			    <li>Cassandra (Wide column store)</li>
-  			    <li>CouchDB (Document store)</li>
-  			    <li>HBase (Wide column store)</li>
-  			    <li>Neo4j (Graph database)</li>
-  			  </ul>
+					<p>Nonrelational</p>
+					<ul>
+						<li>MongoDB (Document store)</li>
+						<li>Cassandra (Wide column store)</li>
+						<li>CouchDB (Document store)</li>
+						<li>HBase (Wide column store)</li>
+						<li>Neo4j (Graph database)</li>
+					</ul>
 				</div>
 			</div>
 		</section>
