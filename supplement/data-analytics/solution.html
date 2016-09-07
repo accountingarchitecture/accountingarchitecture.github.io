@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Assignment</title>
+	<title>Solution</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
 	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
@@ -11,7 +11,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
 
 	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css" id="theme">
@@ -24,7 +24,17 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h3>SQL Queries</h3>
+			<h3>SQL Assignment</h3>
+			<p>Using the Company database, answer the following questions. For each question specify for the SQL query necessary to find the answer. You should use MySQL to identify the queries through trial and error. Once you have all four queries, complete the online quiz.</p>
+			<ol>
+				<li>What is the total number of hours logged in the WORKS_ON table?</li>
+				<li>How many employees work in the Research department? (You may not hardcode the department number in your query.)</li>
+				<li>What is the total number of hours worked on each project by project name? (Your query should report one number for each project.)</li>
+				<li>Which employees are supervisors? (List first, middle initial, and last name. You may not hardcode the Ssn in your query, and the query must print each name only once.)</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Solution</h3>
 			<ol>
 				<li>What is the total number of hours logged in the WORKS_ON table?</li>
 				<p style="margin-top: 0; margin-left: 50px; margin-bottom: 10px; font-style: italic">SELECT SUM(HOURS) FROM WORKS_ON;</p>
@@ -36,18 +46,11 @@
 				<p style="margin-top: 0; margin-left: 50px; font-style: italic">SELECT DISTINCT A.FNAME, A.MINIT, A.LNAME FROM EMPLOYEE AS A INNER JOIN EMPLOYEE AS B ON A.SSN = B.SUPER_SSN;</p>
 			</ol>
 		</section>
-
-		<section>
-			<h3>SQL Queries</h3>
-			<ol start="4">
-			</ol>
-		</section>
 	</div>
 	</div>
 
 	<script src="../../reveal.js/lib/js/head.min.js"></script>
 	<script src="../../reveal.js/js/reveal.js"></script>
 	<script src="../../js/slides.js"></script>
-	<script src="../../js/printing.js"></script>
 </body>
 </html>
