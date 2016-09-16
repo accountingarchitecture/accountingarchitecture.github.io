@@ -1,3 +1,4 @@
+// Default slide settings
 Reveal.initialize({
 	// The "normal" size of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions
 		width: 1150,
@@ -65,3 +66,14 @@ Reveal.initialize({
 			{ src: '../../reveal.js/plugin/notes/notes.js', async: true }
 		]
 });
+
+// Add ability to click through slides
+window.addEventListener("mousedown", handleClick, false);
+window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
+
+function handleClick(e) {
+	e.preventDefault();
+	console.log(e.target.parentNode.tagName);
+	if(e.button === 0 && (e.target.tagName != "A" && e.target.parentNode.tagName != "A")) Reveal.next();
+	if(e.button === 2) Reveal.prev();
+}
