@@ -1,3 +1,4 @@
+// Default slide settings
 Reveal.initialize({
 	// The "normal" size of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions
 		width: 1150,
@@ -57,11 +58,22 @@ Reveal.initialize({
 		viewDistance: 3,
 	// Optional reveal.js plugins
 		dependencies: [
-			{ src: '../../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			{ src: '../../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '../../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '../../reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-			{ src: '../../reveal.js/plugin/zoom-js/zoom.js', async: true },
-			{ src: '../../reveal.js/plugin/notes/notes.js', async: true }
+			{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+			{ src: '../reveal.js/plugin/notes/notes.js', async: true }
 		]
 });
+
+// Add ability to click through slides
+window.addEventListener("mousedown", handleClick, false);
+window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
+
+function handleClick(e) {
+	e.preventDefault();
+	console.log(e.target.parentNode.tagName);
+	if(e.button === 0 && (e.target.tagName != "A" && e.target.parentNode.tagName != "A")) Reveal.next();
+	if(e.button === 2) Reveal.prev();
+}
