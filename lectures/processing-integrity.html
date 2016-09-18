@@ -95,7 +95,7 @@
 
 		<section>
 			<h3>Refreshing</h3>
-			<p>Customer-facing databases, such as those that collect online orders, are often OLTP. (Interestingly, these systems are often NoSQL, which are not actually transactional.) The purpose of OLTP systems is to collect data. In order to reserve computing power on these systems for data collection, it is inadvisable to use these data stores for subsequent analysis. Instead, a copy is stored in a data warehouse and made available for analytics. Because this is a copy, it is necessary to refresh the data in the data warehouse and marts periodically to verify that analytics reflect the most up-to-date data available.</p>
+			<p>When data analytics rely on data warehouses, data refreshing is vital. Because the data warehouse stores a copy of the data from OLTP systems or pre-calculated MOLAP cubes, the data in the warehouse immediately becomes outdated. Regularly scheduled refreshing processes to move backups of OLTP data through staging to the data warehouse, as well as regularly scheduled recalculation of OLAP or MapReduce statistics, are necessary to keep analyzed data up to date. </p>
 			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 

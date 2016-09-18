@@ -132,7 +132,7 @@
 
 		<section>
 			<h3>Integration</h3>
-			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides a intermediate store where data is cleaned and converted.</p>
+			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides a intermediate store where data is cleaned and converted. This process is called ETL (Extract, Transform, and Load).</p>
 			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
@@ -149,7 +149,7 @@
 
 		<section>
 			<h3>In Or Out?</h3>
-			<p>At a recent meeting of the American Taxation Association, representatives from E&amp;Y's tax practice talked about data analytics and tax planning and compliance. One individual stated that because of the increase in real-time analytical tools, data warehouses were no longer necessary. Given the roles that data warehouses play, this seems a bold statement. Later on in the presentation, it appeared that what the individual meant was that real-time analytics had replaced traditional pre-calculations, so it was no longer necessary to store OLAP cubes. Real-time analytics have begun to replace traditional OLAP and MapReduce protocols, but this is not sufficient to remove the need for a data warehouse to archive data collected from transactional databases.</p>
+			<p>With an increase in desire and capacity to perform real-time data analytics, this traditional four-step data warehouse model has fallen out of favor. Some (e.g., representatives from EY Tax) have even asserted that the data warehouse was a thing of the past, but this is an overstatement. Newer tools allow for real-time analysis of data on OLTP systems, and greater processing power has made this a possibility without overloading the OLTP system and making it unavailable for data acquisition. However, these tools have not completely replaced the need for data warehouses when analysis requires data from multiple OLTP systems; when the analysis requires resource-intensive pre-calculation, such as MOLAP or MapReduce; or when the answers sought are not needed in real time.</p>
 		</section>
 
 		<section>
