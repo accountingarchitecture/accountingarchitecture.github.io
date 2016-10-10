@@ -343,9 +343,10 @@
 		width: 200px;
 	}
 
-/********** Override Display **********/
-	.hidden {
-		display: none;
+/********** Accessibility **********/
+	#skip-navigation {
+		width: 0px;
+		height: 0px;
 	}
 
 /********** Media Queries **********/
