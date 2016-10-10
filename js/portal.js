@@ -28,18 +28,18 @@ function isCurrentOrArchived(topic) {
 // How to expand topic content
 function openTopic(topic) {
 	topic.getElementsByClassName('title')[0].className='title expand';
-	topic.getElementsByClassName('summary')[0].className='summary';
-	topic.getElementsByClassName('nav')[0].className='nav';
+	topic.getElementsByClassName('summary')[0].style.display='';
+	topic.getElementsByClassName('nav')[0].style.display='';
 	try {
 		if(isHomeOrArchive() == 'Home') {
 			assignments = topic.getElementsByClassName('assignmentbutton');
 			for(y = 0; y < assignments.length; y++) {
-				assignments[y].className='button assignmentbutton';
+				assignments[y].style.display='';
 			}
 		} else if(isHomeOrArchive() == 'Archive') {
 			solutions = topic.getElementsByClassName('solutionbutton');
 			for(y = 0; y < solutions.length; y++) {
-				solutions[y].className='button solutionbutton';
+				solutions[y].style.display='';
 			}
 		}
 	} catch(err) {
@@ -50,18 +50,18 @@ function openTopic(topic) {
 // How to hide topic content (including readings)
 function closeTopic(topic) {
 	topic.getElementsByClassName('title')[0].className='title';
-	topic.getElementsByClassName('summary')[0].className='summary hidden';
+	topic.getElementsByClassName('summary')[0].style.display='none';
 	try {
-		topic.getElementsByClassName('nav')[0].className='nav hidden';
+		topic.getElementsByClassName('nav')[0].style.display='none';
 		topic.getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
-		topic.getElementsByClassName('readings')[0].className='readings hidden';
+		topic.getElementsByClassName('readings')[0].style.display='none';
 		assignments = topic.getElementsByClassName('assignmentbutton');
 		for(y = 0; y < assignments.length; y++) {
-			assignments[y].className='button assignmentbutton hidden';
+			assignments[y].style.display='none';
 		}
 		solutions = topic.getElementsByClassName('solutionbutton');
 		for(y = 0; y < solutions.length; y++) {
-			solutions[y].className='button solutionbutton hidden';
+			solutions[y].style.display='none';
 		}
 	} catch(err) {
 		// Catch TypeError when topic has no readings and/or puzzle
@@ -76,7 +76,7 @@ window.addEventListener('load', function(e) {
 		moduleTopics[i] = modules[i].getElementsByClassName('topic');
 		for(j = 0; j < moduleTopics[i].length; j++) {
 			if(isCurrentOrArchived(moduleTopics[i][j]) == 'current') {
-				modules[i].className='module';
+				modules[i].style.display='';
 				openTopic(moduleTopics[i][j]);
 			}
 		}
@@ -99,16 +99,14 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 	moduleTopics = new Array();
 	for(i = 0; i < modules.length; i++) {
 		moduleTopics[i] = modules[i].getElementsByClassName('topic');
-		for(j = 0; j < moduleTopics[i].length; j++) {
-			if(isHomeOrArchive() == 'Home' && isCurrentOrArchived(moduleTopics[i][j]) == 'current') {
-				modules[i].className='module';
-				openTopic(moduleTopics[i][j]);
-			} else if(isHomeOrArchive() == 'Archive' && isCurrentOrArchived(moduleTopics[i][j]) == 'archived') {
-				modules[i].className='module';
-			} else {
-				modules[i].className='module hidden';
-				closeTopic(moduleTopics[i][j]);
-			}
+		if(isHomeOrArchive() == 'Home' && isCurrentOrArchived(moduleTopics[i][0]) == 'current') {
+			modules[i].style.display='';
+			for(j = 0; j < moduleTopics[i].length; j++) openTopic(moduleTopics[i][j]);
+		} else if(isHomeOrArchive() == 'Archive' && isCurrentOrArchived(moduleTopics[i][0]) == 'archived') {
+				modules[i].style.display='';
+		} else {
+			modules[i].style.display='none';
+			for(j = 0; j < moduleTopics[i].length; j++) closeTopic(moduleTopics[i][j]);
 		}
 	}
 });
@@ -135,10 +133,10 @@ document.getElementById('page').addEventListener('click', function(e) {
 	for(i = 0; i < topics.length; i++) {
 		if(e.target == topics[i].getElementsByClassName('readingsbutton')[0] && topics[i].getElementsByClassName('readingsbutton')[0].className != 'button readingsbutton expand') {
 			topics[i].getElementsByClassName('readingsbutton')[0].className='button readingsbutton expand';
-			topics[i].getElementsByClassName('readings')[0].className='readings';
+			topics[i].getElementsByClassName('readings')[0].style.display='';
 		} else if(e.target == topics[i].getElementsByClassName('readingsbutton')[0] && topics[i].getElementsByClassName('readingsbutton')[0].className == 'button readingsbutton expand') {
 			topics[i].getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
-			topics[i].getElementsByClassName('readings')[0].className='readings hidden';
+			topics[i].getElementsByClassName('readings')[0].style.display='none';
 		}
 	}
 });
