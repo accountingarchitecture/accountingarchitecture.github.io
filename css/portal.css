@@ -68,18 +68,18 @@
 		font: 15px/25px Arial, sans-serif;
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
 	}
-	h1 {
+	h2 {
 		font: 36px/43px Arial, sans-serif;
 		font-weight: bold;
 		color: #333;
 		padding-bottom: 20px;
 		max-width: 95%;
 	}
-	h2 {
+	h3 {
 		font: 24px/31px Arial, sans-serif;
 		padding-bottom: 10px;
 	}
-	h3 {
+	h4 {
 		font: 18px/25px Arial, sans-serif;
 		font-weight: bold;
 		padding: 5px 0px;
@@ -222,18 +222,18 @@
 		align-self: flex-start;
 		width: 97%;
 	}
-	h1.title {
+	h2.title {
 		cursor: pointer;
 		-ms-user-select: none;
 		-moz-user-select: none;
 		-webkit-user-select: none;
 	}
-	h1.title::after {
+	h2.title::after {
 		font-size: 16px;
 		vertical-align: middle;
 		content: '\00a0\25BA';
 	}
-	h1.expand::after {
+	h2.expand::after {
 		content: '\00a0\25BC';
 	}
 	.date {
@@ -365,11 +365,11 @@
 		}
 	}
 	@media screen and (max-width: 550px) {
-		h1 {
+		h2 {
 			font-size: 30px;
 			line-height: 37px;
 		}
-		h2 {
+		h3 {
 			font: 27px/34px Arial, sans-serif;
 		}
 		#logo > img {
@@ -380,7 +380,7 @@
 			-webkit-flex: 1 1 100%;
 			flex: 1 1 100%;
 		}
-		#coursename {
+		h1 {
 			font-size: 15px;
 		}
 		#menu-links {
