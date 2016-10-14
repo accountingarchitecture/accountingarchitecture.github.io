@@ -121,11 +121,6 @@ document.getElementById('page').addEventListener('click', function(e) {
 	}
 });
 
-// Build page on load
-window.addEventListener('load', function(e) {
-	builder(myModules);
-});
-
 // Content
 var myModules = [
 	{"week":"Week 1",
@@ -368,6 +363,108 @@ var myModules = [
 				]
 			}
 		]
+	},
+	{"week":"Week 11",
+		"topics":[
+			{"date":"October 31, 2016", "title":"Security",
+				"summary":"<p>Security is the first block of the Control section of the Architecture. This section of the course will especially appeal to the students who have had difficulty recognizing the link between accounting and the lectures up to this point. Unlike the prior content, which is based on my own model of accounting architecture, the Control section is based on the AICPA Trust Services Framework, so the AICPA agrees that this knowledge is relevant to accountants. Similarly, the homework assignment for this topic is particularly relevant to accountants, especially in their role as information custodians. All students should submit their homework to Dropbox and also complete the <i>Open Organization</i> Chapter 4 quiz by <b>Saturday, November 5 @ 23.59</b>.</p>",
+				"nav":[
+					{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
+					{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution.html"},
+					{"label":"Lecture", "type":"button", "href":"lectures/security.html"},
+					{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"},
+					{"label":"Readings", "type":"button readingsbutton"}
+				],
+				"readings":[
+					{"set":"Required", "list":[
+						{"label":"Everyone's Problem", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"}
+					]},
+					{"set":"Optional", "list":[
+						{"label":"Breaches", "type":"button", "href":"http://www.esecurityplanet.com/network-security/76-percent-of-organizations-breached-in-2014.html"},
+						{"label":"Passphrases", "type":"button", "href":"http://www.esecurityplanet.com/hackers/why-longer-passphrases-are-more-secure-than-passwords-video.html"}
+					]}
+				]
+			}
+		]
+	},
+	{"week":"Week 12",
+		"topics":[
+			{"date":"November 7, 2016", "title":"Availability",
+				"summary":"<p>Availability is the second Control block. This lecture ties significantly into the Services lecture because the principles of this lecture often deal with the availability of online (i.e., cloud) systems. After the live lecture, I will also provide a video tutorial explaining how to complete the homework assignment. Students should initiate pull requests&mdash;this signifies that the assignment is complete&mdash;by <b>Saturday, November 12 @ 23.59</b>. Students should also complete the <i>Open Organization</i> Chapter 5 quiz by <b>Saturday, November 12 @ 23.59</b>.</p>",
+				"nav":[
+					{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
+					{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution.html"},
+					{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
+					{"label":"Assignment", "type":"button", "href":"supplement/availability/assignment.html"},
+					{"label":"Readings", "type":"button readingsbutton"}
+				],
+				"readings":[
+					{"set":"Optional", "list":[
+						{"label":"Learn Git", "type":"button", "href":"https://www.codeschool.com/courses/try-git"}
+					]}
+				]
+			}
+		]
+	},
+	{"week":"Week 13",
+		"topics":[
+			{"date":"November 14, 2016", "title":"Processing Integrity",
+				"summary":"<p>Processing Integrity is the third Control block. This lecture relates to the Storage lecture because it addresses tools that verify error prevention in stored data, especially relational databases. Students should submit the homework assignment to Dropbox by <b>Saturday, November 19 @ 23.59</b>. After the live lecture, I will provide a video tutorial that demonstrates how to use the diagramming tool that I introduced earlier to complete the homework assignment, but you are not required to use this particular tool. Students should also complete the <i>Open Organization</i> Chapter 6 quiz by <b>Saturday, November 19 @ 23.59</b>. Finally, this week's puzzle will be the last because the remaining weeks of the semester are short weeks surrounding Thanksgiving.</p>",
+				"nav":[
+					{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/learning-curve.html"},
+					{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution.html"},
+					{"label":"Lecture", "type":"button", "href":"lectures/processing-integrity.html"},
+					{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/processing-integrity/assignment.html"},
+					{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution.html"}
+				]
+			}
+		]
+	},
+	{"week":"Week 14",
+		"topics":[
+			{"date":"November 21, 2016", "title":"Confidentiality",
+				"summary":"<p>Confidentiality, as well as the related topic of Privacy, is the final block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic. In order to keep the Thanksgiving Break free, students should submit the homework assignment to Dropbox by <b>Tuesday, November 22 @ 23.59</b>. No <i>Open Organization</i> reading will be due this week, but the online students should submit their Technology Reports to Dropbox by <b>Tuesday, November 22 @ 23.59</b>.</p>",
+				"nav":[
+					{"label":"Lecture", "type":"button", "href":"lectures/confidentiality.html"},
+					{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/confidentiality/assignment.html"},
+					{"label":"Readings", "type":"button readingsbutton"}
+				],
+				"readings":[
+					{"set":"Required", "list":[
+						{"label":"Auditing Big Data", "type":"button", "href":"supplement/confidentiality/acch-51070.pdf"}
+					]}
+				]
+			}
+		]
+	},
+	{"week":"Week 15",
+		"topics":[
+			{"date":"November 30, 2016", "title":"Information Governance",
+				"summary":"<p>The final topic for the semester is Information Governance. This is a return to the concepts from the beginning of the semester to recast the role of accountants in the context of the accounting architecture, now that you understand what it is. The <i>Open Organization</i> Chapter 7 and Epilogue quiz is due <b>Wednesday, November 30 @ 23.59</b>, and you will also have a small homework assignment due <b>Thursday, December 1 @ 23.59</b>.</p>",
+				"nav":[
+					{"label":"Lecture", "type":"button", "href":"lectures/information-governance.html"},
+					{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/information-governance/assignment.html"},
+					{"label":"Readings", "type":"button readingsbutton"}
+				],
+				"readings":[
+					{"set":"Optional", "list":[
+						{"label":"DevOps", "type":"button", "href":"https://www.youtube.com/watch?v=_I94-tJlovg"}
+					]}
+				]
+			}
+		]
+	},
+	{"week":"Final",
+		"topics":[
+			{"date":"December 7, 2016", "title":"Final Exam",
+				"summary":"<p>All students have until <b>Wednesday, December 7 @ 12.00</b> to complete the final exam. The exam is on eCourseware for the live and online students. You must complete the exam in one sitting, and you will have XX minutes once you have started to complete it.</p><p><b>Good luck!</b></p>"
+			}
+		]
 	}
 ]
+
+// Build page on load
+window.addEventListener('load', function(e) {
+	builder(myModules);
+});
 
