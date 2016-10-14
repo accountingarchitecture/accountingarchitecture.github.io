@@ -79,13 +79,6 @@
 		font: 24px/31px Arial, sans-serif;
 		padding-bottom: 10px;
 	}
-	h4 {
-		font: 18px/25px Arial, sans-serif;
-		font-weight: bold;
-		padding: 5px 0px;
-		margin: 10px 0px 0px 0px;
-		max-width: 100%;
-	}
 
 /********** Navbar **********/
 	#menu-bar {
@@ -328,7 +321,7 @@
 		justify-content: flex-start;
 		-webkit-align-items: center;
 		align-items: center;
-		min-width: 50%;
+		min-width: 45%;
 	}
 
 /********** Accessibility **********/
@@ -353,13 +346,6 @@
 		}
 	}
 	@media screen and (max-width: 550px) {
-		h2 {
-			font-size: 30px;
-			line-height: 37px;
-		}
-		h3 {
-			font: 27px/34px Arial, sans-serif;
-		}
 		#logo > img {
 			max-height: 35px;
 			margin-top: 5px;
@@ -391,17 +377,15 @@
 			transform: initial;
 			margin: 5px 0 -5px 0;
 		}
+		h2 {
+			font-size: 30px;
+			line-height: 37px;
+		}
 		.summary {
 			padding-bottom: 10px;
 			max-width: 95%;
 		}
-	}
-	@media print {
-		#menu {
-			display: none;
-		}
-		.topic {
-			display: none;
+		h3 {
+			font: 27px/34px Arial, sans-serif;
 		}
 	}
-
