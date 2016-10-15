@@ -27,10 +27,10 @@ function builder(modules) {
 						}
 					}
 				}
-				if(isHomeOrArchive() == 'Home') topic += '<div class="topic"><div class="header"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div></div><div class="nav">' + navbuttons + '</div><div class="readings" style="display: none">' + readsets + '</div></div>';
-				else topic += '<div class="topic"><div class="header"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="summary" style="display: none">' + modules[i].topics[j].summary + '</div></div><div class="nav" style="display: none">' + navbuttons + '</div><div class="readings" style="display: none">' + readsets + '</div></div>';
+				if(isHomeOrArchive() == 'Home') topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div><div class="nav">' + navbuttons + '</div><div class="readings" style="display: none">' + readsets + '</div></div>';
+				else topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="summary" style="display: none">' + modules[i].topics[j].summary + '</div><div class="nav" style="display: none">' + navbuttons + '</div><div class="readings" style="display: none">' + readsets + '</div></div>';
 			}
-			content += '<div class="module"><div class="week">' + modules[i].week + '</div><div class="list">' + topic + '</div></div>';
+			content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
 		}
 	}
 	document.getElementById('page').innerHTML = content;
