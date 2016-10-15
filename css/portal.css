@@ -157,7 +157,6 @@
 		background-color: slategray;
 	}
 	.week {
-		font: 16px/28px Arial, sans-serif;
 		color: white;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -166,6 +165,7 @@
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		margin-left: 15px;
+		padding-top: 2px;
 	}
 	.topic {
 		box-shadow: 0 0 3px rgba(0,0,0,0.1);
