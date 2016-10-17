@@ -165,7 +165,6 @@
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		margin-left: 15px;
-		padding-top: 2px;
 	}
 	.topic {
 		box-shadow: 0 0 3px rgba(0,0,0,0.1);
@@ -214,7 +213,11 @@
 	}
 	.button {
 		border-radius: 5px;
-		background-color: teal;
+		background: #3292aa;
+		background: -webkit-linear-gradient(top,#3292aa 0,#017795 100%);
+		background: linear-gradient(to bottom,#3292aa 0,#017795 100%);
+		border-color: #017795;
+		border-style: solid;
 		font-weight: bold;
 		padding: 5px 10px;
 		margin: 5px 10px;
@@ -248,6 +251,9 @@
 	}
 	a.button:hover, a.menu-item:hover, a.button:active {
 		color: white;
+		background:#33a3c0;
+		background:-webkit-linear-gradient(top,#33a3c0 0,#038eb2 100%);
+		background:linear-gradient(to bottom,#33a3c0 0,#038eb2 100%);
 	}
 	.readings .set {
 		display: -webkit-flex;
