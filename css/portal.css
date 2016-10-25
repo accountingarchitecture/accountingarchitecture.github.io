@@ -154,10 +154,10 @@
 		width: 97%;
 		max-width: 900px;
 		margin: 25px auto;
-		background-color: slategray;
+		background-color: white;
 	}
 	.week {
-		color: white;
+		color: #3292aa;
 		font-weight: bold;
 		text-transform: uppercase;
 		white-space: nowrap;
