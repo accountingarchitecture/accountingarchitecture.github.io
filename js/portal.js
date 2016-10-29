@@ -379,6 +379,7 @@ var myModules = [
 			],
 			"readings":[
 				{"set":"Required", "list":[
+					{"label":"Population Data", "type":"button", "href":"supplement/security/acch-51065.pdf"},
 					{"label":"Everyone's Problem", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"}
 				]},
 				{"set":"Optional", "list":[
