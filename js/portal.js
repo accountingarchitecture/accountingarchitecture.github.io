@@ -398,6 +398,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=fhYSE_5Dlzg"},
 				{"label":"Assignment", "type":"button", "href":"supplement/availability/assignment.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
