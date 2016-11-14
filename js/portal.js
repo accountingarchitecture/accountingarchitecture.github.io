@@ -263,13 +263,13 @@ var myModules = [
 			],
 			"readings":[
 				{"set":"Required", "list":[
-					{"label":"Open Source", "type":"button", "href":"http://opensource.org/faq"},
-					{"label":"Open Access", "type":"button", "href":"https://opensource.com/life/16/9/open-formats-academic-content"}
+					{"label":"Open Movement", "type":"button", "href":"https://opensource.com/open-organization/16/10/open-means-not-movement"},
+					{"label":"Open Maker", "type":"button", "href":"https://opensource.com/life/16/11/maker-open-source-communities"},
+					{"label":"Open Access", "type":"button", "href":"https://opensource.com/life/16/9/open-formats-academic-content"},
+					{"label":"Open Source", "type":"button", "href":"http://opensource.org/faq"}
 				]},
 				{"set":"Optional", "list":[
 					{"label":"Free Software", "type":"button", "href":"http://www.gnu.org/events/rms-nyu-2001-transcript.html"},
-					{"label":"Why Open Source?", "type":"button", "href":"https://opensource.com/open-organization/16/3/open-source-reveals-value-social-norms"},
-					{"label":"How to Contribute", "type":"button", "href":"https://opensource.com/life/16/1/how-contribute-open-source-without-writing-single-line-code"}
 				]}
 			]
 		}
