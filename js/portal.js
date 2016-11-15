@@ -403,6 +403,9 @@ var myModules = [
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
+				{"set":"Required", "list":[
+					{"label":"Cyber Warfare", "type":"button", "href":"https://fossbytes.com/dos-and-ddos-attacks-the-origin-of-a-species/"}
+				]},
 				{"set":"Optional", "list":[
 					{"label":"Learn Git", "type":"button", "href":"https://www.codeschool.com/courses/try-git"}
 				]}
