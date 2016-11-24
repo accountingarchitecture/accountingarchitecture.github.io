@@ -59,7 +59,7 @@
 		-webkit-align-items: center;
 		align-items: center;
 		margin: 0 auto;
-		background-color: whitesmoke;
+		background-color: #eee;
 	}
 	#page {
 		overflow: auto;
@@ -83,13 +83,14 @@
 	#menu-bar {
 		-webkit-flex: 0 0 auto;
 		flex: 0 0 auto;
-		background-color: #004891;
+		background-color: white;
 		width: 100%;
 		z-index: 99;
 		min-height: 60px;
 		-ms-user-select: none;
 		-moz-user-select: none;
 		-webkit-user-select: none;
+		box-shadow: 0 2px 4px rgba(0,0,0,.2);
 	}
 	#menu {
 		display: -webkit-flex;
@@ -102,7 +103,7 @@
 		align-items: center;
 		font: 16px/23px Arial, sans-serif;
 		font-weight: bold;
-		color: white;
+		color: #004891;
 		margin-left: auto;
 		margin-right: auto;
 	}
