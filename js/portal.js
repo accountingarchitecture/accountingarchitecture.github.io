@@ -1,6 +1,7 @@
 // Build HTML
 function builder(modules) {
 	document.getElementById("page").innerHTML = '';
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	var content = '';
 	for(i = modules.length - 1; i >= 0; i--) {
 		var topic = '';
@@ -259,6 +260,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.pdf"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
+				{"label":"Assignment", "type":"button", "href":"supplement/open-source/assignment.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
