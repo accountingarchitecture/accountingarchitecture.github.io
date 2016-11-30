@@ -260,6 +260,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.pdf"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
+				{"label":"Assignment", "type":"button", "href":"supplement/open-source/assignment.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
