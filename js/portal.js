@@ -467,7 +467,7 @@ var myModules = [
 	{"week":"Final",
 	"topics":[
 		{"date":"December 7, 2016", "title":"Final Exam",
-			"summary":"<p>All students have until <b>Wednesday, December 7 @ 12.00</b> to complete the final exam. The exam is on eCourseware for the live and online students. You must complete the exam in one sitting, and you will have XX minutes once you have started to complete it.</p><p><b>Good luck!</b></p>"
+			"summary":"<p>All students have until <b>Wednesday, December 7 @ 12.00</b> to complete the final exam. The exam is on eCourseware for the live and online students. You must complete the exam in one sitting. You will have 75 minutes to answer 40 questions.</p><p><b>Good luck!</b></p>"
 		}
 	]
 	}
