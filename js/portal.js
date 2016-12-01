@@ -1,6 +1,6 @@
-// Build HTML
+// Build Content HTML
 function builder(modules) {
-	document.getElementById("page").innerHTML = '';
+	document.getElementById('content').innerHTML = '';
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	var content = '';
 	for(i = modules.length - 1; i >= 0; i--) {
@@ -34,7 +34,36 @@ function builder(modules) {
 			content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
 		}
 	}
-	document.getElementById('page').innerHTML = content;
+	document.getElementById('content').innerHTML = content;
+}
+
+// Build Calendar HTML
+function schedule(modules) {
+	document.getElementById('calendar').innerHTML = '';
+	currentDate = new Date();
+	var calendar = '';
+	for(i = 0; i < modules.length; i++) {
+		var topics = '';
+		for(j = 0; j < modules[i].topics.length; j++) {
+			var deliverables = '';
+			var hasDeliverable = false;
+			if(modules[i].topics[j].hasOwnProperty('due')) {
+				for(k = 0; k < modules[i].topics[j].due.length; k++) {
+					if(Date.parse(modules[i].topics[j].due[k].deadline) + 86400000 > currentDate) {
+						deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + modules[i].topics[j].due[k].deadline.split(' ')[1] + ' ' + modules[i].topics[j].due[k].deadline.split(' ')[0] + '</dd>';
+						hasDeliverable = true;
+					}
+				}
+			}
+			if(Boolean(hasDeliverable)) {
+				topics += '<dt>' + modules[i].topics[j].title + '</dt>' + deliverables;
+			}
+		}
+		if(Boolean(hasDeliverable)) {
+			calendar += '<h3 class="calendar">' + modules[i].week + '</h3><dl>' + topics + '</dl>';
+		}
+	}
+	document.getElementById('calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div>';
 }
 
 // Test for current page
@@ -93,7 +122,7 @@ function closeTopic(topic) {
 }
 
 // Show topic summary or readings list on click
-document.getElementById('page').addEventListener('click', function(e) {
+document.getElementById('content').addEventListener('click', function(e) {
 	topics = document.getElementsByClassName('topic');
 	// Show topic summary
 	for(i = 0; i < topics.length; i++) {
@@ -110,7 +139,7 @@ document.getElementById('page').addEventListener('click', function(e) {
 			closeTopic(topics[i]);
 		}
 	}
-	// Show readings list on click
+	// Show readings list
 	for(i = 0; i < topics.length; i++) {
 		if(e.target == topics[i].getElementsByClassName('readingsbutton')[0] && topics[i].getElementsByClassName('readingsbutton')[0].className != 'button readingsbutton expand') {
 			topics[i].getElementsByClassName('readingsbutton')[0].className='button readingsbutton expand';
@@ -118,6 +147,21 @@ document.getElementById('page').addEventListener('click', function(e) {
 		} else if(e.target == topics[i].getElementsByClassName('readingsbutton')[0] && topics[i].getElementsByClassName('readingsbutton')[0].className == 'button readingsbutton expand') {
 			topics[i].getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
 			topics[i].getElementsByClassName('readings')[0].style.display='none';
+		}
+	}
+});
+
+// Toggle schedule on click
+document.getElementById('calendar').addEventListener('click', function(e) {
+	if(e.target == document.getElementById('calendar').getElementsByTagName('h2')[0]) {
+		if(document.getElementById('calendar').getElementsByTagName('h2')[0].className !='calendar show') {
+			document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar show';
+			document.getElementById('schedule').className='';
+			console.log(e.target);
+		} else {
+			document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
+			document.getElementById('schedule').className='hide';
+			console.log(e.target);
 		}
 	}
 });
@@ -134,6 +178,9 @@ var myModules = [
 				{"label":"Instructor", "type":"button", "href":"syllabus/#description"},
 				{"label":"Academic Integrity", "type":"button", "href":"syllabus/#integrity"},
 				{"label":"Accessibility Assistance", "type":"button", "href":"syllabus/#accessibility"}
+			],
+			"due":[
+				{"deliverable":"Syllabus Quiz", "deadline":"23 August 2016"}
 			]
 		},
 		{"date":"August 24, 2016", "title":"Practice Set",
@@ -467,7 +514,10 @@ var myModules = [
 	{"week":"Final",
 	"topics":[
 		{"date":"December 7, 2016", "title":"Final Exam",
-			"summary":"<p>All students have until <b>Wednesday, December 7 @ 12.00</b> to complete the final exam. The exam is on eCourseware for the live and online students. You must complete the exam in one sitting. You will have 75 minutes to answer 40 questions.</p><p><b>Good luck!</b></p>"
+			"summary":"<p>All students have until <b>Wednesday, December 7 @ 12.00</b> to complete the final exam. The exam is on eCourseware for the live and online students. You must complete the exam in one sitting. You will have 75 minutes to answer 40 questions.</p><p><b>Good luck!</b></p>",
+			"due":[
+				{"deliverable":"Final Exam", "deadline":"7 December 2016"}
+			]
 		}
 	]
 	}
@@ -476,5 +526,6 @@ var myModules = [
 // Build page on load
 window.addEventListener('load', function(e) {
 	builder(myModules);
+	schedule(myModules);
 });
 
