@@ -157,11 +157,9 @@ document.getElementById('calendar').addEventListener('click', function(e) {
 		if(document.getElementById('calendar').getElementsByTagName('h2')[0].className !='calendar show') {
 			document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar show';
 			document.getElementById('schedule').className='';
-			console.log(e.target);
 		} else {
 			document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
 			document.getElementById('schedule').className='hide';
-			console.log(e.target);
 		}
 	}
 });
