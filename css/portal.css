@@ -62,11 +62,27 @@
 		background-color: #eee;
 	}
 	#page {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
 		overflow: auto;
 		margin: 0px auto;
 		width: 100%;
 		font: 15px/25px Arial, sans-serif;
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+	#calendar {
+		-webkit-flex: 0 0 15%;
+		flex: 0 0 15%;
+	}
+	#content {
+		-webkit-flex: 1 1 auto;
+		flex: 1 1 auto;
 	}
 	h2 {
 		font: 36px/43px Arial, sans-serif;
@@ -153,7 +169,7 @@
 	.module {
 		box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 1px 4px 0 rgba(0,0,0,.08), 0 3px 1px -2px rgba(0,0,0,.2);
 		width: 97%;
-		max-width: 900px;
+		max-width: 1100px;
 		margin: 25px auto;
 		background-color: white;
 	}
@@ -268,6 +284,46 @@
 		min-width: 45%;
 	}
 
+/********** Calendar **********/
+	#calendar {
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 1px 4px 0 rgba(0,0,0,.08), 0 3px 1px -2px rgba(0,0,0,.2);
+		width: 97%;
+		background-color: white;
+		margin: 25px;
+		white-space: nowrap;
+		-ms-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+	}
+	h2.calendar {
+		text-align: center;
+		margin: 10px 20px;
+	}
+	h2.calendar::after {
+		content: '';
+	}
+	h2.calendar.show::after {
+		content: '';
+	}
+	h3.calendar {
+		color: #3292aa;
+		font: 15px/25px Arial, sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-left: 25px;
+	}
+	dl {
+		margin: 0px 50px;
+		padding-bottom: 20px;
+	}
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		list-style-type: decimal;
+		margin-left: 25px;
+	}
+
 /********** Accessibility **********/
 	#skip-navigation {
 		width: 0px;
@@ -287,6 +343,33 @@
 		}
 		#wrapper {
 			overflow-x: hidden;
+		}
+	}
+	@media screen and (max-width: 750px) {
+		#page {
+			flex-wrap: wrap;
+		}
+		#calendar {
+			margin-bottom: 0;
+		}
+		.hide {
+			display: none;
+		}
+		h2.calendar {
+			cursor: pointer;
+			-ms-user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+		}
+		h2.calendar::after {
+			font-size: 16px;
+			vertical-align: middle;
+			content: '\00a0\25BA';
+		}
+		h2.calendar.show::after {
+			font-size: 16px;
+			vertical-align: middle;
+			content: '\00a0\25BC';
 		}
 	}
 	@media screen and (max-width: 550px) {
