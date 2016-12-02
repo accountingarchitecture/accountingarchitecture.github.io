@@ -1,6 +1,6 @@
 // Build Content HTML
 function builder(modules) {
-	document.getElementById('content').innerHTML = '';
+	document.getElementById('content-pane').innerHTML = '';
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	var content = '';
 	for(i = modules.length - 1; i >= 0; i--) {
@@ -34,12 +34,12 @@ function builder(modules) {
 			content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
 		}
 	}
-	document.getElementById('content').innerHTML = content;
+	document.getElementById('content-pane').innerHTML = content;
 }
 
 // Build Calendar HTML
 function schedule(modules) {
-	document.getElementById('calendar').innerHTML = '';
+	document.getElementById('calendar-pane').innerHTML = '';
 	currentDate = new Date();
 	var calendar = '';
 	for(i = 0; i < modules.length; i++) {
@@ -65,7 +65,7 @@ function schedule(modules) {
 			calendar += '<h3 class="calendar">' + modules[i].week + '</h3><dl>' + topics + '</dl>';
 		}
 	}
-	document.getElementById('calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div>';
+	document.getElementById('calendar-pane').innerHTML = '<div id="calendar"><h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div></div>';
 }
 
 // Test for current page
@@ -124,7 +124,7 @@ function closeTopic(topic) {
 }
 
 // Show topic summary or readings list on click
-document.getElementById('content').addEventListener('click', function(e) {
+document.getElementById('content-pane').addEventListener('click', function(e) {
 	topics = document.getElementsByClassName('topic');
 	// Show topic summary
 	for(i = 0; i < topics.length; i++) {
@@ -154,7 +154,7 @@ document.getElementById('content').addEventListener('click', function(e) {
 });
 
 // Toggle schedule on click
-document.getElementById('calendar').addEventListener('click', function(e) {
+document.getElementById('calendar-pane').addEventListener('click', function(e) {
 	if(e.target == document.getElementById('calendar').getElementsByTagName('h2')[0]) {
 		if(document.getElementById('calendar').getElementsByTagName('h2')[0].className !='calendar show') {
 			document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar show';
