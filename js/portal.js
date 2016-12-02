@@ -44,6 +44,7 @@ function schedule(modules) {
 	var calendar = '';
 	for(i = 0; i < modules.length; i++) {
 		var topics = '';
+		var hasTopicWithDeliverable = false;
 		for(j = 0; j < modules[i].topics.length; j++) {
 			var deliverables = '';
 			var hasDeliverable = false;
@@ -52,6 +53,7 @@ function schedule(modules) {
 					if(Date.parse(modules[i].topics[j].due[k].deadline) + 86400000 > currentDate) {
 						deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + modules[i].topics[j].due[k].deadline.split(' ')[1] + ' ' + modules[i].topics[j].due[k].deadline.split(' ')[0] + '</dd>';
 						hasDeliverable = true;
+						hasTopicWithDeliverable = true;
 					}
 				}
 			}
@@ -59,7 +61,7 @@ function schedule(modules) {
 				topics += '<dt>' + modules[i].topics[j].title + '</dt>' + deliverables;
 			}
 		}
-		if(Boolean(hasDeliverable)) {
+		if(Boolean(hasTopicWithDeliverable)) {
 			calendar += '<h3 class="calendar">' + modules[i].week + '</h3><dl>' + topics + '</dl>';
 		}
 	}
