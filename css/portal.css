@@ -66,21 +66,21 @@
 		display: flex;
 		-webkit-flex-flow: row nowrap;
 		flex-flow: row nowrap;
-		-webkit-justify-content: center;
-		justify-content: center;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
 		-webkit-align-items: flex-start;
 		align-items: flex-start;
 		overflow: auto;
 		margin: 0px auto;
-		width: 100%;
+		width: 90%;
 		font: 15px/25px Arial, sans-serif;
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
 	}
-	#calendar {
+	#calendar-pane {
 		-webkit-flex: 0 0 15%;
 		flex: 0 0 15%;
 	}
-	#content {
+	#content-pane {
 		-webkit-flex: 1 1 auto;
 		flex: 1 1 auto;
 	}
@@ -89,6 +89,9 @@
 		font-weight: bold;
 		color: #333;
 		max-width: 95%;
+		-ms-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
 	}
 	h3 {
 		font: 24px/31px Arial, sans-serif;
@@ -190,9 +193,6 @@
 	}
 	h2.title {
 		cursor: pointer;
-		-ms-user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
 	}
 	h2.title::after {
 		font-size: 16px;
@@ -288,12 +288,9 @@
 	#calendar {
 		box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 1px 4px 0 rgba(0,0,0,.08), 0 3px 1px -2px rgba(0,0,0,.2);
 		width: 97%;
+		margin: 25px auto;
 		background-color: white;
-		margin: 25px;
 		white-space: nowrap;
-		-ms-user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
 	}
 	h2.calendar {
 		text-align: center;
@@ -345,6 +342,11 @@
 			overflow-x: hidden;
 		}
 	}
+	@media screen and (max-width: 1200px) {
+		#page {
+			width: 98%;
+		}
+	}
 	@media screen and (max-width: 750px) {
 		#page {
 			flex-wrap: wrap;
@@ -357,9 +359,6 @@
 		}
 		h2.calendar {
 			cursor: pointer;
-			-ms-user-select: none;
-			-moz-user-select: none;
-			-webkit-user-select: none;
 		}
 		h2.calendar::after {
 			font-size: 16px;
