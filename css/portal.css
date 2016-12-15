@@ -344,6 +344,7 @@
 	}
 	@media screen and (max-width: 750px) {
 		#page {
+			-webkit-flex-wrap: wrap;
 			flex-wrap: wrap;
 		}
 		#calendar {
