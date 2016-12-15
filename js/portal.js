@@ -516,7 +516,7 @@ var myModules = [
 		{"date":"December 7, 2016", "title":"Final Exam",
 			"summary":"<p>All students have until <b>Wednesday, December 7 @ 12.00</b> to complete the final exam. The exam is on eCourseware for the live and online students. You must complete the exam in one sitting. You will have 75 minutes to answer 40 questions. The exam is open-note and open-lecture. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p><b>Good luck!</b></p>",
 			"due":[
-				{"deliverable":"Final Exam", "deadline":"7 December 2016"}
+				{"deliverable":"Final Exam", "deadline":"7 May 2017"}
 			]
 		}
 	]
