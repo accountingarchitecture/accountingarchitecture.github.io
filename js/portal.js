@@ -553,7 +553,8 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"24 April 2017"},
-				{"deliverable":"Homework", "deadline":"26 April 2017"}
+				{"deliverable":"Homework", "deadline":"26 April 2017"},
+				{"deliverable":"Technology Report", "deadline":"26 April 2017"}
 			]
 		}
 	]
