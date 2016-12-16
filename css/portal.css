@@ -287,7 +287,7 @@
 /********** Calendar **********/
 	#calendar {
 		width: 97%;
-		margin: 25px;
+		margin: 10px 25px;
 		white-space: nowrap;
 		-ms-user-select: none;
 		-moz-user-select: none;
@@ -308,6 +308,7 @@
 		font-weight: bold;
 		text-transform: uppercase;
 		margin-left: 25px;
+		padding: 0;
 	}
 	dl {
 		margin: 0px 50px;
@@ -315,6 +316,7 @@
 	}
 	dt {
 		font-weight: bold;
+		padding-top: 10px;
 	}
 	dd {
 		list-style-type: decimal;
