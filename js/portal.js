@@ -97,6 +97,9 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 	}
 	// Load topics for current page
 	builder(myModules);
+	// Hide schedule if expanded on small screen
+	document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
+	document.getElementById('schedule').className='hide';
 });
 
 // How to expand topic content
@@ -153,7 +156,7 @@ document.getElementById('content').addEventListener('click', function(e) {
 	}
 });
 
-// Toggle schedule on click
+// Toggle schedule on click on small screen
 document.getElementById('calendar').addEventListener('click', function(e) {
 	if(e.target == document.getElementById('calendar').getElementsByTagName('h2')[0]) {
 		if(document.getElementById('calendar').getElementsByTagName('h2')[0].className !='calendar show') {
