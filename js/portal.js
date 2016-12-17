@@ -171,7 +171,7 @@ var myModules = [
 	{"week":"Week 1",
 	"topics":[
 		{"date":"January 17, 2017", "title":"Getting Started",
-			"summary":"<p>Welcome to ACCT 4020 &ndash; Accounting and Information Systems. To begin, carefully read the course syllabus. You will find a link to the syllabus in the navigation buttons below. The syllabus explains the course policies, objectives, and deliverables. The syllabus also explains what this course <em>is</em> and what it <em>is not</em>. The more carefully you read the syllabus, the better prepared you will be for the (unexpectedly) unique nature of the course. After reading, you will find a syllabus quiz on eCourseware. The syllabus quiz is due <b>Tuesday, August 23 @ 23.59</b>. The other buttons listed below link to individual components of the syllabus that are required by the Fogelman College.</p>" ,
+			"summary":"<p>Welcome to ACCT 4020 &ndash; Accounting and Information Systems. To begin, carefully read the course syllabus. You will find a link to the syllabus in the navigation buttons below. The syllabus explains the course policies, objectives, and deliverables. The syllabus also explains what this course <em>is</em> and what it <em>is not</em>. The more carefully you read the syllabus, the better prepared you will be for the unique nature of the course. The other buttons listed below link to individual components of the syllabus that are required by the Fogelman College. After reading, you will find a syllabus quiz on eCourseware.</p>" ,
 			"nav":[
 				{"label":"Syllabus", "type":"button", "href":"syllabus"},
 				{"label":"Course Description", "type":"button", "href":"syllabus/#description"},
@@ -184,11 +184,11 @@ var myModules = [
 			]
 		},
 		{"date":"January 19, 2017", "title":"Practice Set",
-			"summary":"<p>As the syllabus explains, it is customary for accounting students to complete a practice set. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for this is that it takes approximately 20 hours to complete, and I wanted the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>.</p><p>In addition to the final deadline, to help you stay on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set. The first week's transactions is due <b>Saturday, September 3 @ 23.59</b>. Each of the next five weeks will have a milestone. In order to fulfill these milestone requirements, all you need to do is complete and submit the required practice set work. The practice set system generates weekly reports so that I can monitor your performance.</p><p>A number of tools explain the practice set and the milestones I have listed above. The first group of tools are provided by Perdisco, the company that hosts the practice set. After purchasing the practice set, do the following:</p><ol><li>Read the Student Companion &amp; Helpful Hints</li><li>Complete the introduction</li><li>Read the accounting policies and procedures</li><li>Read pages 5 through 51 of the Accounting Cycle Supplement</li></ol><p>After completing these four items and before proceeding with the practice set, you must take the Practice Set quiz on eCourseware. This quiz will verify that you have read these documents and understood how to complete the assignment. The quiz is due <b>Saturday, August 27 @ 25.59</b>. You should not wait to purchase the practice set and complete these initial steps.</p><p>I also provide a tutorial to demonstrate the practice set. I will give the tutorial in the live class, and afterwards, I will make it available on the course portal in the navigation buttons below. You may watch as much or as little of the tutorial as you feel you need.</p>",
+			"summary":"<p>As the syllabus explains, it is customary for accounting students to complete a practice set. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for this is that it takes approximately 20 hours to complete, and I want the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>.</p><p>In addition to the final deadline, to help you stay on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set. The Milestones button links to an explanation of these milestones, and the course schedule reports the milestone due dates.</p><p>A number of tools explain the practice set. The first group of tools are provided by Perdisco, the company that hosts the practice set. After purchasing the practice set, do the following:</p><ol><li>Read the Student Companion &amp; Helpful Hints</li><li>Complete the introduction</li><li>Read the Accounting Policies and Procedures document</li><li>Read pages 5 through 51 of the Accounting Cycle Supplement</li></ol><p>After completing these four items and before proceeding with the practice set, you must take the Practice Set quiz on eCourseware. This quiz will verify that you have read these documents and understood how to complete the assignment. You should not wait to purchase the practice set and complete these initial steps.</p><p>I will also upload a tutorial to the course portal to demonstrate the practice set. You may watch as much or as little of the tutorial as you feel you need.</p><p>NB: Every semester students email me after attempting part of the practice set to complain that it is too hard or confusing. The reason for these emails is always, <strong>always</strong>, <strong>ALWAYS</strong> because the students have not read what I assigned. I urge you not to assume that you can succeed at this practice set without reading the supporting documents.",
 			"nav":[
 				{"label":"Instructions", "type":"button", "href":"syllabus/#practiceset"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=9mar5eMzabQ"},
-				{"label":"Practice Set", "type":"button", "href":"http://www.perdisco.com/"}
+				{"label":"Practice Set", "type":"button", "href":"http://www.perdisco.com/"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"21 January 2017"},
@@ -199,7 +199,7 @@ var myModules = [
 	{"week":"Week 2",
 	"topics":[
 		{"date":"January 23, 2017", "title":"Professionalism",
-			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. I ask that the live students wear business professional attire to this lecture.</p><p>The live students should read the lecture and required readings before class and come prepared for a quiz and a discussion. The online students should read the lecture by the date of this topic (i.e., <b>Monday, August 29 @ 23.59</b>) and complete the lecture quiz on eCourseware on the topic date. The quiz will only be available on the topic date. This format will be the norm for the remainder of the semester.</p><p>One reason for holding this lecture at the beginning of the semester is to prepare students for Beta Alpha Psi's Meet the Firms event. This event will be <b>Friday, September 9 from 17.30 to 19.00</b> on the first floor of the Fogelman Classroom Building. This is an opportunity to network with your future employers. Please dress professionally&mdash;the lecture explains what constitutes professional dress&mdash; and bring copies of your resume.</p><p>Additionally, professionalism will be important throughout this course. All live students should dress professionally when presenting. In fact, although I will not require it, I invite students to consider dressing professionally whenever coming to class or to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. All students should submit this assignment to Dropbox by <b>Wednesday, August 31 @ 23.59</b>.</p>",
+			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life.</p><p>Students should read the lecture and the required readings in preparation for a quiz. The schedule lists the quiz due date. This format will be the norm for the remainder of the semester.</p><p>One reason for holding this lecture at the beginning of the semester is to prepare students for Beta Alpha Psi's Meet the Firms event. This event will be <b>Friday, January 27 from 17.30 to 19.00</b> on the first floor of the Fogelman Classroom Building. This is an opportunity to network with your future employers. Please dress professionally&mdash;the lecture explains what constitutes professional dress&mdash; and bring copies of your resume.</p><p>Additionally, professionalism will be important throughout this course. Although I will not require it, I invite students to dress coming to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. Furthermore, as the syllabus indicates, I will grade you based on your professionalism during the semester.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/professionalism.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/professionalism/assignment.html"},
@@ -230,6 +230,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/accounting-architecture.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/accounting-architecture/assignment.html"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
@@ -261,7 +262,8 @@ var myModules = [
 				{"label":"Lecture", "type":"button", "href":"lectures/business-processes.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/business-processes/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-processes/solution.html"},
-				{"label":"Diagram", "type":"button", "href":"supplement/business-processes/payment-process.png"}
+				{"label":"Diagram", "type":"button", "href":"supplement/business-processes/payment-process.png"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"30 January 2017"},
@@ -281,6 +283,7 @@ var myModules = [
 				{"label":"Lecture", "type":"button", "href":"https://docs.google.com/presentation/d/13fG0U0H49izogaeotdDkZVxX9F4GT99FB3wK2kU9Big/pub?start=false&loop=false&delayms=0&slide=id.p"},
 				{"label":"Assignment", "type":"button", "href":"supplement/information-life-cycle/assignment.html"},
 				{"label":"Draw.io Flowchart", "type":"button", "href":"supplement/information-life-cycle/sales-order.png"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
@@ -310,6 +313,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.pdf"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/hardware.html"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
@@ -334,6 +338,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/open-source/assignment.html"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
