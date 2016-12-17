@@ -1,7 +1,7 @@
 // Build Content HTML
 function builder(modules) {
 	document.getElementById('content').innerHTML = '';
-	document.body.scrollTop = document.documentElement.scrollTop = 0;
+	document.getElementById('page').scrollTop = 0;
 	var content = '';
 	for(i = 0; i < modules.length; i++) {
 		var topic = '';
