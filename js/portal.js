@@ -176,11 +176,11 @@ var myModules = [
 		{"date":"January 17, 2017", "title":"Getting Started",
 			"summary":"<p>Welcome to ACCT 4020 &ndash; Accounting and Information Systems. To begin, carefully read the course syllabus. You will find a link to the syllabus in the navigation buttons below. The syllabus explains the course policies, objectives, and deliverables. The syllabus also explains what this course <em>is</em> and what it <em>is not</em>. The more carefully you read the syllabus, the better prepared you will be for the unique nature of the course. The other buttons listed below link to individual components of the syllabus that are required by the Fogelman College. After reading, you will find a syllabus quiz on eCourseware.</p>" ,
 			"nav":[
-				{"label":"Syllabus", "type":"button", "href":"syllabus"},
-				{"label":"Course Description", "type":"button", "href":"syllabus/#description"},
-				{"label":"Instructor", "type":"button", "href":"syllabus/#description"},
-				{"label":"Academic Integrity", "type":"button", "href":"syllabus/#integrity"},
-				{"label":"Accessibility Assistance", "type":"button", "href":"syllabus/#accessibility"}
+				{"label":"Syllabus", "type":"button", "href":"supplement/getting-started/syllabus.html"},
+				{"label":"Course Description", "type":"button", "href":"supplement/getting-started/syllabus.html#description"},
+				{"label":"Instructor", "type":"button", "href":"supplement/getting-started/syllabus.html#description"},
+				{"label":"Academic Integrity", "type":"button", "href":"supplement/getting-started/syllabus.html#integrity"},
+				{"label":"Accessibility Assistance", "type":"button", "href":"supplement/getting-started/syllabus.html#accessibility"}
 			],
 			"due":[
 				{"deliverable":"Syllabus Quiz", "deadline":"18 January 2017"}
@@ -189,7 +189,7 @@ var myModules = [
 		{"date":"January 19, 2017", "title":"Practice Set",
 			"summary":"<p>As the syllabus explains, it is customary for accounting students to complete a practice set. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for this is that it takes approximately 20 hours to complete, and I want the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>.</p><p>In addition to the final deadline, to help you stay on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set. The Milestones button links to an explanation of these milestones, and the course schedule reports the milestone due dates.</p><p>A number of tools explain the practice set. The first group of tools are provided by Perdisco, the company that hosts the practice set. After purchasing the practice set, do the following:</p><ol><li>Read the Student Companion &amp; Helpful Hints</li><li>Complete the introduction</li><li>Read the Accounting Policies and Procedures document</li><li>Read pages 5 through 51 of the Accounting Cycle Supplement</li></ol><p>After completing these four items and before proceeding with the practice set, you must take the Practice Set quiz on eCourseware. This quiz will verify that you have read these documents and understood how to complete the assignment. You should not wait to purchase the practice set and complete these initial steps.</p><p>I will also upload a tutorial to the course portal to demonstrate the practice set. You may watch as much or as little of the tutorial as you feel you need.</p><p>NB: Every semester students email me after attempting part of the practice set to complain that it is too hard or confusing. The reason for these emails is always, <strong>always</strong>, <strong>ALWAYS</strong> because the students have not read what I assigned. I urge you not to assume that you can succeed at this practice set without reading the supporting documents.",
 			"nav":[
-				{"label":"Instructions", "type":"button", "href":"syllabus/#practiceset"},
+				{"label":"Instructions", "type":"button", "href":"supplement/getting-started/syllabus.html#practiceset"},
 				{"label":"Practice Set", "type":"button", "href":"http://www.perdisco.com/"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
