@@ -249,6 +249,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"25 January 2017"},
+				{"deliverable":"Puzzle", "deadline":"28 January 2017"},
 				{"deliverable":"Homework", "deadline":"28 January 2017"},
 				{"deliverable":"Milestone 1", "deadline":"28 January 2017"}
 			]
@@ -270,6 +271,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"30 January 2017"},
+				{"deliverable":"Puzzle", "deadline":"4 February 2017"},
 				{"deliverable":"Homework", "deadline":"4 February 2017"},
 				{"deliverable":"Milestone 2", "deadline":"4 February 2017"}
 			]
@@ -302,6 +304,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"6 February 2017"},
+				{"deliverable":"Puzzle", "deadline":"11 February 2017"},
 				{"deliverable":"Homework", "deadline":"11 February 2017"},
 				{"deliverable":"Milestone 3", "deadline":"11 February 2017"}
 			]
@@ -327,6 +330,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"13 February 2017"},
+				{"deliverable":"Puzzle", "deadline":"18 February 2017"},
 				{"deliverable":"Milestone 4", "deadline":"18 February 2017"}
 			]
 		}
@@ -357,6 +361,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"20 February 2017"},
+				{"deliverable":"Puzzle", "deadline":"25 February 2017"},
 				{"deliverable":"Homework", "deadline":"25 February 2017"},
 				{"deliverable":"Milestone 5", "deadline":"25 February 2017"}
 			]
