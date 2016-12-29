@@ -377,7 +377,7 @@
 			margin-left: 0px;
 		}
 	}
-	@media screen and (min-width: 550px) {
+	@media screen and (min-width: 570px) {
 		body, html {
 			overflow: hidden;
 		}
@@ -385,7 +385,7 @@
 			overflow-x: hidden;
 		}
 	}
-	@media screen and (max-width: 550px) {
+	@media screen and (max-width: 570px) {
 		::-webkit-scrollbar {
 				width: 0px;
 		}
