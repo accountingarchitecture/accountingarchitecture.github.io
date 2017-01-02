@@ -227,7 +227,7 @@ var myModules = [
 			]
 		},
 		{"date":"January 25, 2017", "title":"Accounting Architecture",
-				"summary":"<p>This lecture marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some are foreign because I have invented the terms. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the foundation for this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Starting this week, I will include a puzzle with each lecture. These are designed to get your creative juices flowing. They are completely optional, but I will give extra credit for each correct solution. I will create a Dropbox folder for each puzzle, and you can submit your solution in any format you wish (e.g., screenshot, scanned image, photo of a sheet of paper, etc.). However, if I cannot open the file, I will not grade it, so I would advise that you only upload image or PDF files. Each week puzzle solutions are due the Saturday following the topic date. For example, this solution is due <b>Saturday, September 3 @ 23.59</b>. Once the topic is archived, I will post the solution to the puzzle.</p><p>Students should also upload the homework assignment to Dropbox by <b>Saturday, September 3 @ 23.59</b>. As the lecture explains, the role of accountants is to communicate and collaborate. In addition to IT knowledge, this requires communication skills. As a result, the majority of the deliverables in this course will be memos and other writing assignments. I encourage you to invest the necessary time to allow these assignments to improve your writing skills, whatever level they may currently be.</p><p>Finally, remember that practice set transactions for week 1 are due by <b>Saturday, September 3 @ 23.59</b>. You may work ahead on the practice set, if you choose, but you should have completed at least the first week by this Saturday.</p>",
+				"summary":"<p>This lecture marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some are foreign because I have invented the terms. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the foundation for this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Starting this week, I will include a puzzle with each lecture. These are designed to get your creative juices flowing. They are completely optional, but I will give extra credit for each correct solution. Each puzzle has a separate Dropbox folder on eCourseware. You can submit your solution in any format you wish (e.g., screenshot, scanned image, photo of a sheet of paper, etc.). However, if I cannot open the file, I will not grade it, so I would advise that you only upload image or PDF files. Once the topic is archived, I will post the solution to the puzzle.</p><p>As the lecture explains, the role of accountants is to communicate and collaborate. In addition to IT knowledge, this requires communication skills. As a result, multiple deliverables will be memos and other writing assignments. I encourage you to invest the necessary time to allow these assignments to improve your writing skills, whatever level they may currently be.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/sudoku.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution.html"},
@@ -259,7 +259,7 @@ var myModules = [
 	{"week":"Week 3",
 	"topics":[
 		{"date":"January 30, 2017", "title":"Business Processes",
-			"summary":"<p>Because of Labor Day the only lecture for this week will be on Wednesday, instead of Monday. The majority of the course will address the Information, Technology, and Control sections of the accounting architecture model. Regulations (i.e., Compliance) are important, but these are the topics of other accounting courses, and Environment is a very broad concept that touches on several disciplines beyond the scope of this course. (In the future, I may add a lecture to this course that explains the Environment block of the arch.) However, it is worthwhile to discuss the Business Model block of the foundation, especially in the context of the primary tool used for communicating business processes (i.e., diagramming). Understanding this block will prepare you to learn about the information life cycle. This topic has no additional readings, but I will provide a video tutorial following the live lecture demonstrating a diagramming tool.</p><p>All students should submit the homework assignment for this topic to Dropbox by <b>Saturday, September 10 @ 23.59</b>. The practice set transactions for week 2 are also due by <b>Saturday, September 10 @ 23.59</b>.</p><p><b>For the live students</b>: The first day of presentations will be <b>Wednesday, September 14</b>, and for the remainder of the semester, unless I announce otherwise, each Wednesday will be presentation day.</p>",
+			"summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture model. Regulations (i.e., Compliance) are important, but these are the topics of other accounting courses, and Environment is a very broad concept that touches on several disciplines beyond the scope of this course. (In the future, I may add a lecture to this course that explains the Environment block of the arch.) However, it is worthwhile to discuss the Business Model block of the foundation, especially in the context of the primary tool used for communicating business processes: diagramming. Understanding this block will prepare you to learn about the information life cycle. This topic has no additional readings, but I will provide a video tutorial demonstrating one diagramming tool.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/robbers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/robbers-solution.html"},
@@ -281,13 +281,12 @@ var myModules = [
 	{"week":"Week 4",
 	"topics":[
 		{"date":"February 6, 2017", "title":"Information Life Cycle &amp; Big Data",
-			"summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, I have asked my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science to write the lecture for this topic. She will also give the lecture in the live section on the topic date.</p><p>All students should submit the homework assignment for this topic to Dropbox by <b>Saturday, September 17 @ 23.59</b>. The practice set transactions for week 3 are also due by <b>Saturday, September 17 @ 23.59</b>.</p><p>Also, I have uploaded the completed flowchart I began during the Draw.io tutorial. I apologize that the tutorial was not more thorough, but I will showcase this tool again later on in the semester.</p>",
+			"summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, I have asked my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science to write the lecture for this topic. This lecture will explain the role that an information system should play (i.e., what the system <em>does</em>). Beginning next week, the Technology section will demonstrate the makeup of an information system (i.e., what the system <em>is</em>).</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/coins.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"https://docs.google.com/presentation/d/13fG0U0H49izogaeotdDkZVxX9F4GT99FB3wK2kU9Big/pub?start=false&loop=false&delayms=0&slide=id.p"},
 				{"label":"Assignment", "type":"button", "href":"supplement/information-life-cycle/assignment.html"},
-				{"label":"Draw.io Flowchart", "type":"button", "href":"supplement/information-life-cycle/sales-order.png"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
@@ -314,7 +313,7 @@ var myModules = [
 	{"week":"Week 5",
 	"topics":[
 		{"date":"February 13, 2017", "title":"Hardware",
-			"summary":"<p>This is the first lecture on the Technology section of the accounting architecture model. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course were the <em>most</em> interesting&mdash;it introduces concepts that are valuable towards understanding the deeper points of systems design. As you read the lecture, I encourage you to think about the hardware in your own computing device, and you may find that these topics are quite close to home.</p><p>You will not have a homework assignment from this topic, but the practice set transactions for week 4 and 5 are due by <b>Saturday, September 24 @ 23.59</b>.</p>",
+			"summary":"<p>This is the first lecture on the Technology section of the accounting architecture model. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course were the <em>most</em> interesting&mdash;it introduces concepts that are valuable towards understanding the deeper points of systems design. As you read the lecture, I encourage you to think about the hardware in your own computing device, and you may find that these topics are quite close to home. I have not assigned homework for this topic, so you should consider investing additional time with the practice set.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.pdf"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution.html"},
@@ -339,7 +338,7 @@ var myModules = [
 	{"week":"Week 6",
 	"topics":[
 		{"date":"February 20, 2017", "title":"Open Source",
-			"summary":"<p>This lecture begins our multi-week discussion of the Software block of the arch. This first lecture introduces the concepts behind open content as a precursor to subsequent introductions to various components of the Software block.</p><p>In addition to the lecture slides, this week we will also begin <i>The Open Organization</i> by reading the Foreword and Chapter 1. A quiz for these two sections is on eCourseware and is due <b>Saturday, October 1 @ 23.59</b>. I encourage you to read the lecture before you read <i>Open Organization</i> so that you will be better able to grasp the concepts.</p><p>Students should complete the homework quiz by <b>Saturday, October 1 @ 23.59</b>; the practice set end of month posting and bank reconciliation (Sections 7 and 8) are also due by <b>Saturday, October 1 @ 23.59</b>.</p>",
+			"summary":"<p>This lecture begins our multi-week discussion of the Software block of the arch. This first lecture introduces the concepts behind open content as a precursor to subsequent introductions of the various components of the Software block. Please pay special attention to the required readings because open source is the primary force behind the development of enterprise-grade information systems.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.pdf"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution.html"},
@@ -371,10 +370,9 @@ var myModules = [
 	{"week":"Week 7",
 	"topics":[
 		{"date":"February 27, 2017", "title":"Operating Systems",
-			"summary":"<p>This lecture will explain the fundamental parts of an operating system, as well as a brief historical overview of the operating systems most prominently used in enterprise-grade information systems. I will record a video tutorial during Monday's lecture demonstrating some basic commands for the operating system we will use during this course. Following the lecture, I will make the video available on the course portal.</p><p>In addition to the lecture quiz and <i>Open Organization</i> Appendix quiz&mdash;the appendix is the most relevant to the current topic&mdash;the homework assignment also includes a quiz. Because I wish to keep your Fall Break free of deadlines, the <i>Open Organization</i> and homework quizzes are due <b>Friday, October 7 @ 23.59</b>. All students should also upload the remaining homework deliverable (a screenshot) to Dropbox by <b>Friday, October 7 @ 23.59</b>. I encourage you to watch the tutorial before attempting the homework assignment. The final deadline for the practice set is also <b>Friday, October 7 @ 23.59</b>. Because of the short week, I have not posted any puzzles; they will return in two weeks.</p>",
+			"summary":"<p>This lecture will explain the fundamental parts of an operating system, as well as a brief historical overview of the operating systems most prominently used in enterprise-grade information systems. I will record and post a video tutorial demonstrating some functionality of the operating system we will use during this course. I encourage you to watch the tutorial before attempting the homework assignment.</p><p>In order to keep your Spring Break as free as possible, I have made this week's homework and practice set deliverables due on Friday, instead of Saturday. This includes the final deadline for the practice set. Because of the short week, I have not posted any puzzles; they will return after the break.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/operating-systems.html"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=nazhhpbbJfU"},
 				{"label":"Assignment", "type":"button", "href":"supplement/operating-systems/assignment.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
@@ -396,7 +394,7 @@ var myModules = [
 	{"week":"Week 8",
 	"topics":[
 		{"date":"March 13, 2017", "title":"Storage",
-			"summary":"<p>This week we begin our discussion of the Storage block of the Architecture. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage is a prerequisite for understanding analytics. Because of Fall Break, the lecture for this week will be on Wednesday, instead of Monday, so the live section will not have any student presentations this week. Additionally, I will give you a break this week from reading <i>Open Organization</i>. You're welcome.</p><p>However, you will have a homework assignment, and all students should submit the assignment to Dropbox by <b>Saturday, October 15 @ 23.59</b>. This assignment will take longer to complete, and I encourage all students not to wait until the last minute to begin.</p>",
+			"summary":"<p>This week we begin our discussion of the Storage block of the Architecture. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage is a prerequisite for understanding analytics.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/storage.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/storage/assignment.html"},
@@ -421,12 +419,11 @@ var myModules = [
 	{"week":"Week 9",
 	"topics":[
 		{"date":"March 20, 2017", "title":"Data Analytics",
-			"summary":"<p>Now that we have discussed Storage, we can return to the Software block and discuss data analytics, a current hot topic. After the live lecture, I will provide a video tutorial demonstrating how to install MySQL&mdash;a popular open source RDBMS&mdash;how to import a database, and how to use SQL queries to analyze data in that database. I have also attached a link to the database I use in the tutorial: Library DB.</p><p>All students should submit the homework quiz by <b>Saturday, October 22 @ 23.59</b>. In order to complete this assignment, you will first need to follow the instructions in the tutorial to install MySQL and import a database. Please view the tutorial before you attempt this assignment, and please work through the entire assignment before beginning the quiz. Additionally, all students should complete the <i>Open Organization</i> Chapter 2 quiz by <b>Saturday, October 22 @ 23.59</b>.</p>",
+			"summary":"<p>Now that we have discussed Storage, we can return to the Software block and discuss data analytics, a current hot topic. I will provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I have also attached a link to the database I use in the tutorial: Library DB. Please view the tutorial before you attempt this assignment, and please work through the entire assignment before opening the homework quiz associated with the assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/data-analytics.html"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=GVebaJvnVBw"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/data-analytics/solution.html"},
 				{"label":"Library DB", "type":"button", "href":"supplement/data-analytics/library.sql"},
@@ -443,6 +440,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"20 March 2017"},
+				{"deliverable":"Puzzle", "deadline":"25 March 2017"},
 				{"deliverable":"Homework", "deadline":"25 March 2017"}
 			]
 		}
@@ -451,12 +449,11 @@ var myModules = [
 	{"week":"Week 10",
 	"topics":[
 		{"date":"March 27, 2017", "title":"Services",
-			"summary":"<p>Services is the final block in the Technology leg of the accounting architecture. This lecture places the other previously discussed technologies in the context of cloud computing. After the live lecture, I will also provide a video tutorial that explains how to complete the homework assignment. All students should upload the homework to Dropbox and complete the <i>Open Organization</i> Chapter 3 quiz by <b>Saturday, October 29 @ 23.59</b>.</p>",
+			"summary":"<p>Services is the final block in the Technology leg of the accounting architecture. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of today's computing environemnt. I will also provide a video tutorial that explains how to complete the homework assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=yLttnOVYWZo"},
 				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
 				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"},
 				{"label":"Readings", "type":"button readingsbutton"}
@@ -471,6 +468,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"27 March 2017"},
+				{"deliverable":"Puzzle", "deadline":"1 April 2017"},
 				{"deliverable":"Homework", "deadline":"1 April 2017"}
 			]
 		}
