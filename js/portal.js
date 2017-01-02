@@ -187,10 +187,11 @@ var myModules = [
 			]
 		},
 		{"date":"January 19, 2017", "title":"Practice Set",
-			"summary":"<p>As the syllabus explains, it is customary for accounting students to complete a practice set. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for this is that it takes approximately 20 hours to complete, and I want the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>.</p><p>In addition to the final deadline, to help you stay on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set. The Milestones button links to an explanation of these milestones, and the course schedule reports the milestone due dates.</p><p>A number of tools explain the practice set. The first group of tools are provided by Perdisco, the company that hosts the practice set. After purchasing the practice set, do the following:</p><ol><li>Read the Student Companion &amp; Helpful Hints</li><li>Complete the introduction</li><li>Read the Accounting Policies and Procedures document</li><li>Read pages 5 through 51 of the Accounting Cycle Supplement</li></ol><p>After completing these four items and before proceeding with the practice set, you must take the Practice Set quiz on eCourseware. This quiz will verify that you have read these documents and understood how to complete the assignment. You should not wait to purchase the practice set and complete these initial steps.</p><p>I will also upload a tutorial to the course portal to demonstrate the practice set. You may watch as much or as little of the tutorial as you feel you need.</p><p>NB: Every semester students email me after attempting part of the practice set to complain that it is too hard or confusing. The reason for these emails is always, <strong>always</strong>, <strong>ALWAYS</strong> because the students have not read what I assigned. I urge you not to assume that you can succeed at this practice set without reading the supporting documents.",
+			"summary":"<p>As the syllabus explains, it is customary for accounting students to complete a practice set. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for this is that it takes approximately 20 hours to complete, and I want the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>. In addition to the final deadline, to help you stay on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set. The Milestones button links to an explanation of these milestones, and the course schedule reports the milestone due dates. I will also upload a tutorial to the course portal to demonstrate the practice set. You may watch as much or as little of the tutorial as you feel you need.</p><p>NB: Every semester students email me after attempting part of the practice set to complain that it is too hard or confusing. The reason for these emails is always, <strong>always</strong>, <strong>ALWAYS</strong> because the students have not read what I assigned. I urge you not to assume that you can succeed at this practice set without reading the supporting documents.",
 			"nav":[
 				{"label":"Instructions", "type":"button", "href":"supplement/getting-started/syllabus.html#practiceset"},
 				{"label":"Practice Set", "type":"button", "href":"http://www.perdisco.com/"},
+				{"label":"Assignment", "type":"button", "href":"supplement/practice-set/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -202,7 +203,7 @@ var myModules = [
 	{"week":"Week 2",
 	"topics":[
 		{"date":"January 23, 2017", "title":"Professionalism",
-			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life.</p><p>Students should read the lecture and the required readings in preparation for a quiz. The schedule lists the quiz due date. This format will be the norm for the remainder of the semester.</p><p>One reason for holding this lecture at the beginning of the semester is to prepare students for Beta Alpha Psi's Meet the Firms event. This event will be <b>Friday, January 27 from 17.30 to 19.00</b> on the first floor of the Fogelman Classroom Building. This is an opportunity to network with your future employers. Please dress professionally&mdash;the lecture explains what constitutes professional dress&mdash; and bring copies of your resume.</p><p>Additionally, professionalism will be important throughout this course. Although I will not require it, I invite students to dress coming to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. Furthermore, as the syllabus indicates, I will grade you based on your professionalism during the semester.</p>",
+			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. Students should read the lecture and the required readings in preparation for a quiz. The schedule lists the quiz due date. This format will be the norm for the remainder of the semester.</p><p>One reason for holding this lecture at the beginning of the semester is to prepare students for Beta Alpha Psi's Meet the Firms event. This event will be <b>Friday, January 27 from 17.30 to 19.00</b> on the first floor of the Fogelman Classroom Building. This is an opportunity to network with your future employers. Please dress professionally&mdash;the lecture explains what constitutes professional dress&mdash; and bring copies of your resume.</p><p>Additionally, professionalism will be important throughout this course. Although I will not require it, I invite students to dress coming to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. Furthermore, as the syllabus indicates, I will grade you based on your professionalism during the semester.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/professionalism.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/professionalism/assignment.html"},
@@ -227,7 +228,7 @@ var myModules = [
 			]
 		},
 		{"date":"January 25, 2017", "title":"Accounting Architecture",
-				"summary":"<p>This lecture marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some are foreign because I have invented the terms. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the foundation for this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Starting this week, I will include a puzzle with each lecture. These are designed to get your creative juices flowing. They are completely optional, but I will give extra credit for each correct solution. Each puzzle has a separate Dropbox folder on eCourseware. You can submit your solution in any format you wish (e.g., screenshot, scanned image, photo of a sheet of paper, etc.). However, if I cannot open the file, I will not grade it, so I would advise that you only upload image or PDF files. Once the topic is archived, I will post the solution to the puzzle.</p><p>As the lecture explains, the role of accountants is to communicate and collaborate. In addition to IT knowledge, this requires communication skills. As a result, multiple deliverables will be memos and other writing assignments. I encourage you to invest the necessary time to allow these assignments to improve your writing skills, whatever level they may currently be.</p>",
+				"summary":"<p>This lecture marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some are foreign because I have invented the terms. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the foundation for this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Starting this week, I will include a puzzle with each lecture. These are designed to get your creative juices flowing. They are completely optional, but I will give extra credit for each correct solution. Once the topic is archived, I will replace the puzzle with its solution.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/sudoku.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution.html"},
@@ -477,7 +478,7 @@ var myModules = [
 	{"week":"Week 11",
 	"topics":[
 		{"date":"April 3, 2017", "title":"Security",
-			"summary":"<p>Security is the first block of the Control section of the Architecture. This section of the course will especially appeal to the students who have had difficulty recognizing the link between accounting and the lectures up to this point. Unlike the prior content, which is based on my own model of accounting architecture, the Control section is based on the AICPA Trust Services Framework, so the AICPA agrees that this knowledge is relevant to accountants. Similarly, the homework assignment for this topic is particularly relevant to accountants, especially in their role as information custodians. All students should submit their homework to Dropbox and also complete the <i>Open Organization</i> Chapter 4 quiz by <b>Saturday, November 5 @ 23.59</b>.</p>",
+			"summary":"<p>Security is the first block of the Control section of the Architecture. This section of the course will especially appeal to the students who have had difficulty recognizing the link between accounting and the lectures up to this point. Unlike the prior content, which is based on my own model of accounting architecture, the Control section is based on the AICPA Trust Services Framework, so the AICPA agrees that this knowledge is relevant to accountants. Similarly, the homework assignment for this topic is particularly relevant to accountants, especially in their role as information custodians.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution.html"},
@@ -497,6 +498,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"3 April 2017"},
+				{"deliverable":"Puzzle", "deadline":"8 April 2017"},
 				{"deliverable":"Homework", "deadline":"8 April 2017"}
 			]
 		}
@@ -505,12 +507,11 @@ var myModules = [
 	{"week":"Week 12",
 	"topics":[
 		{"date":"April 10, 2017", "title":"Availability",
-			"summary":"<p>Availability is the second Control block. This lecture ties significantly into the Services lecture because the principles of this lecture often deal with the availability of online (i.e., cloud) systems. After the live lecture, I will also provide a video tutorial explaining how to complete the homework assignment. Students should initiate pull requests&mdash;this signifies that the assignment is complete&mdash;by <b>Saturday, November 12 @ 23.59</b>. Students should also complete the <i>Open Organization</i> Chapter 5 quiz by <b>Saturday, November 12 @ 23.59</b>.</p>",
+			"summary":"<p>Availability is the second Control block. This lecture ties significantly into the Services lecture because the principles of this lecture often deal with the availability of online (i.e., cloud) systems. I will also provide a video tutorial explaining how to complete the homework assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=fhYSE_5Dlzg"},
 				{"label":"Assignment", "type":"button", "href":"supplement/availability/assignment.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
@@ -524,6 +525,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"10 April 2017"},
+				{"deliverable":"Puzzle", "deadline":"15 April 2017"},
 				{"deliverable":"Homework", "deadline":"15 April 2017"}
 			]
 		}
@@ -532,7 +534,7 @@ var myModules = [
 	{"week":"Week 13",
 	"topics":[
 		{"date":"April 17, 2017", "title":"Processing Integrity",
-			"summary":"<p>Processing Integrity is the third Control block. This lecture relates to the Storage lecture because it addresses tools that verify error prevention in stored data, especially relational databases. Students should submit the homework assignment to Dropbox by <b>Saturday, November 19 @ 23.59</b>. After the live lecture, I will provide a video tutorial that demonstrates how to use the diagramming tool that I introduced earlier to complete the homework assignment, but you are not required to use this particular tool. Students should also complete the <i>Open Organization</i> Chapter 6 quiz by <b>Saturday, November 19 @ 23.59</b>. Finally, this week's puzzle will be the last because the remaining weeks of the semester are short weeks surrounding Thanksgiving.</p>",
+			"summary":"<p>Processing Integrity is the third Control block. This lecture relates to the Storage lecture because it addresses tools that verify error prevention in stored data, especially relational databases. I will provide a video tutorial that demonstrates how to use the diagramming tool that I introduced earlier, but you are not required to use this particular tool to complete the homework assignment. Finally, this week's puzzle will be the final puzzle of the semester.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/learning-curve.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution.html"},
@@ -543,6 +545,7 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"17 April 2017"},
+				{"deliverable":"Puzzle", "deadline":"22 April 2017"},
 				{"deliverable":"Homework", "deadline":"22 April 2017"}
 			]
 		}
@@ -551,7 +554,7 @@ var myModules = [
 	{"week":"Week 14",
 	"topics":[
 		{"date":"April 24, 2017", "title":"Confidentiality",
-			"summary":"<p>Confidentiality, as well as the related topic of Privacy, is the final block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic. In order to keep the Thanksgiving Break free, students should submit the homework assignment to Dropbox by <b>Tuesday, November 22 @ 23.59</b>. No <i>Open Organization</i> reading will be due this week, but the online students should submit their Technology Reports to Dropbox by <b>Tuesday, November 22 @ 23.59</b>.</p>",
+			"summary":"<p>Confidentiality, with its related topic of privacy, is the final block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic. Please note the early deadline for this week's homework assignment because of the end of classes.",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/confidentiality.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/confidentiality/assignment.html"},
@@ -573,7 +576,7 @@ var myModules = [
 	{"week":"Final",
 	"topics":[
 		{"date":"May 3, 2017", "title":"Final Exam",
-			"summary":"<p>All students have until <b>Wednesday, December 7 @ 12.00</b> to complete the final exam. The exam is on eCourseware for the live and online students. You must complete the exam in one sitting. You will have 75 minutes to answer 40 questions. The exam is open-note and open-lecture. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p><b>Good luck!</b></p>",
+			"summary":"<p>All students have until <strong>May 3 @ 15.00</strong> to complete the final exam. You may begin the exam at any time during Finals Week prior to the deadline, but you must complete the exam in one sitting. Please note that the exam is not due at 23.59 as is the case with other assignments, but rather at 15.00 (i.e., 3 pm) according to the Registrar's final exam calendar for the live section of this course. The exam is on eCourseware, and eCourseware also reports the deadline for the exam. Every semester students email me after the exam has closed stating that they had not understood when it was due and asking whether I would change the deadline. I will not reopen or extend the exam <em>for any reason</em>.</p><p>The exam is open-note and open-lecture. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p><b>Good luck!</b></p>",
 			"due":[
 				{"deliverable":"Final Exam", "deadline":"3 May 2017"}
 			]
