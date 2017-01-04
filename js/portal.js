@@ -14,14 +14,18 @@ function builder(modules) {
 					for(k = 0; k < modules[i].topics[j].nav.length; k++) {
 						if(!(~modules[i].topics[j].nav[k].type.indexOf('assignmentbutton') != 0 && isHomeOrArchive() == 'Archive') && !(~modules[i].topics[j].nav[k].type.indexOf('solutionbutton') != 0 && isHomeOrArchive() == 'Home')) {
 							navbuttons += '<a class="' + modules[i].topics[j].nav[k].type + '" ';
-							if(modules[i].topics[j].nav[k].hasOwnProperty('href')) navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank"';
+							if(modules[i].topics[j].nav[k].hasOwnProperty('href')) {
+								if(modules[i].topics[j].nav[k].hasOwnProperty('filetype')) navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" aria-label="' + modules[i].topics[j].nav[k].filetype + ' opens in new window"';
+								else navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" aria-label="Website opens in new window"';
+							}
 							navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
 						}
 					}
 					if(modules[i].topics[j].hasOwnProperty('readings')) {
 						for(l = 0; l < modules[i].topics[j].readings.length; l++) {
 							for(m = 0; m < modules[i].topics[j].readings[l].list.length; m++) {
-								readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
+								if(modules[i].topics[j].readings[l].list[m].hasOwnProperty('filetype')) readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + ' href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" aria-label="' + modules[i].topics[j].readings[l].list[m].filetype + ' opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
+								else readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + ' href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" aria-label="Website opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
 							}
 							readsets += '<div class="set"><h3>' + modules[i].topics[j].readings[l].set + '</h3><div class="articles">' + readbuttons + '</div></div>';
 							readbuttons = '';
@@ -211,12 +215,12 @@ var myModules = [
 			],
 			"readings":[
 				{"set":"Required", "list":[
-					{"label":"Measure Your Life", "type":"button", "href":"supplement/professionalism/christensen.pdf"}
+					{"label":"Measure Your Life", "type":"button", "href":"supplement/professionalism/christensen.pdf", "filetype":"PDF"}
 				]},
 				{"set":"Optional", "list":[
 					{"label":"Diligence", "type":"button", "href":"http://www.theatlantic.com/magazine/archive/1978/03/writing-typing-and-economics/305165/"},
 					{"label":"Enron", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=rgm&AN=504193370&site=eds-live"},
-					{"label":"Worldcom", "type":"button", "href":"supplement/professionalism/worldcom.pdf"},
+					{"label":"Worldcom", "type":"button", "href":"supplement/professionalism/worldcom.pdf", "filetype":"PDF"},
 					{"label":"Barings Bank", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=9503077597&site=eds-live"},
 					{"label":"Bernie Madoff", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=38711267&site=eds-live"},
 					{"label":"Arthur Andersen", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=7079735&site=eds-live"}
@@ -240,12 +244,12 @@ var myModules = [
 			"readings":[
 				{"set":"Required", "list":[
 					{"label":"Need for Change", "type":"button", "href":"http://www.ft.com/cms/s/2/bffcc032-a34d-11e5-8d70-42b68cfae6e4.html#axzz3x2IZba4Z"},
-					{"label":"Change Proposal", "type":"button", "href":"supplement/accounting-architecture/pwc.pdf"},
+					{"label":"Change Proposal", "type":"button", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
 					{"label":"Collaboration", "type":"button", "href":"https://opensource.com/open-organization/16/8/how-collaborative-should-i-be-during-strategic-planning"},
 					{"label":"Be a Technologist", "type":"button", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"}
 				]},
 				{"set":"Optional", "list":[
-					{"label":"Businesses Want Change", "type":"button", "href":"supplement/accounting-architecture/digitaltransformation.pdf"},
+					{"label":"Businesses Want Change", "type":"button", "href":"supplement/accounting-architecture/digitaltransformation.pdf", "filetype":"PDF"},
 				]}
 			],
 			"due":[
@@ -267,7 +271,7 @@ var myModules = [
 				{"label":"Lecture", "type":"button", "href":"lectures/business-processes.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/business-processes/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-processes/solution.html"},
-				{"label":"Diagram", "type":"button", "href":"supplement/business-processes/payment-process.png"},
+				{"label":"Diagram", "type":"button", "href":"supplement/business-processes/payment-process.png", "filetype":"Image"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -293,13 +297,13 @@ var myModules = [
 			],
 			"readings":[
 				{"set":"Required", "list":[
-					{"label":"3 V's of Big Data", "type":"button", "href":"supplement/information-life-cycle/3d-data-management.pdf"},
+					{"label":"3 V's of Big Data", "type":"button", "href":"supplement/information-life-cycle/3d-data-management.pdf", "filetype":"PDF"},
 					{"label":"Big Data for CPAs", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=99629685&site=eds-live"},
 					{"label":"XBRL", "type":"button", "href":"http://www.xbrl.org/the-standard/what/an-introduction-to-xbrl/"}
 				]},
 				{"set":"Optional", "list":[
-					{"label":"Forensics", "type":"button", "href":"supplement/information-life-cycle/forensics.pdf"},
-					{"label":"Big Data Survey", "type":"button", "href":"supplement/information-life-cycle/big-data.pdf"}
+					{"label":"Forensics", "type":"button", "href":"supplement/information-life-cycle/forensics.pdf", "filetype":"PDF"},
+					{"label":"Big Data Survey", "type":"button", "href":"supplement/information-life-cycle/big-data.pdf", "filetype":"PDF"}
 				]}
 			],
 			"due":[
@@ -407,7 +411,7 @@ var myModules = [
 					{"label":"NoSQL and Big Data", "type":"button", "href":"http://www.bobsguide.com/guide/news/2014/Aug/13/big-data-new-approach.html"}
 				]},
 				{"set":"Optional", "list":[
-					{"label":"History of Storage Devices", "type":"button", "href":"http://www.dailyinfographic.com/wp-content/uploads/2013/03/4b20d4ec68d60f454c722e64a8a40d34.jpg"}
+					{"label":"History of Storage Devices", "type":"button", "href":"http://www.dailyinfographic.com/wp-content/uploads/2013/03/4b20d4ec68d60f454c722e64a8a40d34.jpg", "filetype":"Image"}
 				]}
 			],
 			"due":[
@@ -427,13 +431,13 @@ var myModules = [
 				{"label":"Lecture", "type":"button", "href":"lectures/data-analytics.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/data-analytics/solution.html"},
-				{"label":"Library DB", "type":"button", "href":"supplement/data-analytics/library.sql"},
-				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql"},
+				{"label":"Library DB", "type":"button", "href":"supplement/data-analytics/library.sql", "filetype":"SQL plain-text file"},
+				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
-					{"label":"Analytics and Auditing", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf"}
+					{"label":"Analytics and Auditing", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"}
 				]},
 				{"set":"Optional", "list":[
 					{"label":"MapReduce", "type":"button", "href":"https://www.youtube.com/watch?v=bcjSe0xCHbE"}
@@ -462,7 +466,7 @@ var myModules = [
 			"readings":[
 				{"set":"Optional", "list":[
 					{"label":"Public Cloud", "type":"button", "href":"https://www.youtube.com/watch?v=jOhbTAU4OPI"},
-					{"label":"History of ERP", "type":"button", "href":"supplement/services/erp-history.jpg"},
+					{"label":"History of ERP", "type":"button", "href":"supplement/services/erp-history.jpg", "filetype":"Image"},
 					{"label":"Super Pi", "type":"button", "href":"http://www.zdnet.com/article/build-your-own-supercomputer-out-of-raspberry-pi-boards/"},
 					{"label":"Mobility as a Service", "type":"button", "href":"https://opensource.com/business/16/9/travelspirit-mobility-service"}
 				]}
@@ -488,7 +492,7 @@ var myModules = [
 			],
 			"readings":[
 				{"set":"Required", "list":[
-					{"label":"Population Data", "type":"button", "href":"supplement/security/acch-51065.pdf"},
+					{"label":"Population Data", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"},
 					{"label":"Everyone's Problem", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"}
 				]},
 				{"set":"Optional", "list":[
@@ -562,7 +566,7 @@ var myModules = [
 			],
 			"readings":[
 				{"set":"Required", "list":[
-					{"label":"Auditing Big Data", "type":"button", "href":"supplement/confidentiality/acch-51070.pdf"}
+					{"label":"Auditing Big Data", "type":"button", "href":"supplement/confidentiality/acch-51070.pdf", "filetype":"PDF"}
 				]}
 			],
 			"due":[
