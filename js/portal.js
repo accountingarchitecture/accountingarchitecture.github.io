@@ -320,7 +320,7 @@ var myModules = [
 		{"date":"February 13, 2017", "title":"Hardware",
 			"summary":"<p>This is the first lecture on the Technology section of the accounting architecture model. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course were the <em>most</em> interesting&mdash;it introduces concepts that are valuable towards understanding the deeper points of systems design. As you read the lecture, I encourage you to think about the hardware in your own computing device, and you may find that these topics are quite close to home. I have not assigned homework for this topic, so you should consider investing additional time with the practice set.</p>",
 			"nav":[
-				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.pdf"},
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/hardware.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
@@ -345,7 +345,7 @@ var myModules = [
 		{"date":"February 20, 2017", "title":"Open Source",
 			"summary":"<p>This lecture begins our multi-week discussion of the Software block of the arch. This first lecture introduces the concepts behind open content as a precursor to subsequent introductions of the various components of the Software block. Please pay special attention to the required readings because open source is the primary force behind the development of enterprise-grade information systems.</p>",
 			"nav":[
-				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.pdf"},
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/open-source/assignment.html"},
