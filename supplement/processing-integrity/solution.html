@@ -3,21 +3,21 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Assignment</title>
+	<title>Solution</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="/images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css" id="theme">
+	<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../../css/slides.css">
+	<link rel="stylesheet" href="/css/slides.css">
 </head>
 
 <body>
@@ -27,15 +27,16 @@
 			<h3>Normalization Assignment</h3>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width: 80%">
-				<p>Dependency resolution is an important component of maintaining the integrity of a relational database. Your assignment is to convert this non-normalized table into a set of six normalized tables, and draw an entity-relationship (ER) diagram of the six tables with attributes, relationships, and cardinalities. Use the following business rules:</p>
+				<p>Dependency resolution is an important component of maintaining the integrity of a relational database. Your assignment is to convert this non-normalized table into a set of four normalized tables, and draw an entity-relationship (ER) diagram with attributes, relationships, and cardinalities. Use the following business rules:</p>
 				<ol>
 					<li>Each purchase order has exactly one vendor, and the vendor is associated with the purchase order, not the inventory item.</li>
-					<li>Each purchase order and sales order can have multiple items.</li>
+					<li>Each purchase order can have multiple items.</li>
 				</ol>
 				</div>
 				<div class="flex-item override"><img src="assignment.png" alt="Nonnormalized Table"/></div>
 			</div>
 		</section>
+
 		<section>
 			<h3>Solution</h3>
 			<div class="override"><img src="solution.png" alt="Normalized Tables"/></div>
@@ -44,8 +45,9 @@
 	</div>
 	</div>
 
-	<script src="../../reveal.js/lib/js/head.min.js"></script>
-	<script src="../../reveal.js/js/reveal.js"></script>
-	<script src="../../js/slides.js"></script>
+	<script src="/reveal.js/lib/js/head.min.js"></script>
+	<script src="/reveal.js/js/reveal.js"></script>
+	<script src="/js/slides.js"></script>
+	<script src="/js/printing.js"></script>
 </body>
 </html>
