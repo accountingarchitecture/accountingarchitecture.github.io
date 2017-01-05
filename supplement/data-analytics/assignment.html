@@ -6,18 +6,18 @@
 	<title>Assignment</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="/images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css" id="theme">
+	<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../../css/slides.css">
+	<link rel="stylesheet" href="/css/slides.css">
 </head>
 
 <body>
@@ -25,22 +25,24 @@
 	<div class="slides">
 		<section>
 			<h3>SQL Assignment - Intro</h3>
-			<p>This assignment tests your ability to query a database to find the answers to four question. You will use the Company database on the course portal, but your assignment is <strong>not</strong> to find the <em>answers</em> to the four questions, but rather to identify the <em>queries</em> necessary to find the answers. Stated otherwise, this assignment asks four questions (on the next slide), and the online homework quiz, by which you will submit your solution, asks the same questions. You should not enter the answers to the questions in the quiz, rather you should enter the SQL query you would use to determine the answer. Before completing the quiz, you should verify the accuracy of your queries using your Linux environment.</p>
+			<p>This assignment tests your ability to query a database to find the answers to four question. You will use the Company database on the course portal, but your assignment is <strong>not</strong> to find the <em>answers</em> to the four questions, but rather to identify the <em>queries</em> necessary to find the answers. Stated otherwise, this assignment asks four questions (on the next slide). Using MySQL on your Linux container, you should determine the query that you would use to determine the answer to each question. Once you have identified the correct queries, create a document with the queries, save the document as a PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
 		</section>
+
 		<section>
 			<h3>Queries</h3>
 			<ol>
+				<li>What are the first and last names of the employee with the social security number 333445555?</li>
 				<li>What is the total number of hours logged in the WORKS_ON table?</li>
-				<li>How many employees work in the Research department? (You may not hardcode the department number in your query.)</li>
-				<li>What is the total number of hours worked on each project by project name? (Your query should report one number for each project.)</li>
-				<li>Which employees are supervisors? (List first, middle initial, and last name. You may not hardcode the Ssn in your query, and the query must print each name only once.)</li>
+				<li>What is the total number of hours worked on each project by project number? (Your query should report one record for each project number.)</li>
+				<li>Which employees work in the Research department? (Your query may not include "WHERE DNO = 5".)</li>
 			</ol>
 		</section>
 	</div>
 	</div>
 
-	<script src="../../reveal.js/lib/js/head.min.js"></script>
-	<script src="../../reveal.js/js/reveal.js"></script>
-	<script src="../../js/slides.js"></script>
+	<script src="/reveal.js/lib/js/head.min.js"></script>
+	<script src="/reveal.js/js/reveal.js"></script>
+	<script src="/js/slides.js"></script>
+	<script src="/js/printing.js"></script>
 </body>
 </html>
