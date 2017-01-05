@@ -30,7 +30,7 @@
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="/images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
 					<p>Availability is the second block of the Control section. This principle applies to the ability to access a network device, such as a Web server, and it applies to the ability to access data on both local and network systems.</p>
 				</div>
@@ -42,16 +42,16 @@
 			<blockquote>The system is available for operation and use as committed or agreed.</blockquote>
 			<p>Two threats of availability are data loss and downtime. Three tools combat these threats:</p>
 			<ul>
-				<li><u><i>Redundancy</i></u> avoids data loss and unplanned downtime.</li>
-				<li><u><i>Change management</i></u> limits planned downtime.</li>
-				<li><u><i>Interpretation</i></u> preserves accessibility of legacy data.</li>
+				<li><u><em>Redundancy</em></u> avoids data loss and unplanned downtime.</li>
+				<li><u><em>Change management</em></u> limits planned downtime.</li>
+				<li><u><em>Interpretation</em></u> preserves accessibility of legacy data.</li>
 			</ul>
 		</section>
 
 		<section>
 			<h3>Trust Services</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="/images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
 					<p>Security is the foundation of Trust Services because although all five components are necessary for reliable system, security supports each of the remaining concepts. Restricting unauthorized access to information systems, especially network-enabled (i.e., cloud-based) systems, is the first step in promoting confidentiality/privacy, availability, and processing integrity.</p>
 				</div>
@@ -65,12 +65,12 @@
 
 		<section>
 			<h3>Redundancy</h3>
-			<p>System components can fail. A <u><i>single point of failure</i></u> is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site (i.e., server room) creates redundancy for an entire cloud by duplicating all hardware and software in a remote location. A server cluster, in addition to increasing availability by adding processing power, allows alternative servers to take over when one server fails. <u><i>Backups</i></u> create duplicates of data in case storage volumes become corrupted.</p>
+			<p>System components can fail. A <u><em>single point of failure</em></u> is a failure that stops an entire system, and redundancy is designed to avoid this phenomenon. A duplicate site (i.e., server room) creates redundancy for an entire cloud by duplicating all hardware and software in a remote location. A server cluster, in addition to increasing availability by adding processing power, allows alternative servers to take over when one server fails. <u><em>Backups</em></u> create duplicates of data in case storage volumes become corrupted.</p>
 		</section>
 
 		<section>
 			<h3>Backups</h3>
-			<p>Two common backup methods are full and incremental. <u><i>Full backups</i></u> create a complete copy of all data during each backup. As a result, each subsequent backup contains the data stored in all earlier backups. Because it is generally good practice to keep more than one backup (e.g., three weeks of daily backups) full backups can quickly become infeasibly large, and backing up a large data volume can take a long time. <u><i>Incremental backups</i></u> only store the changes since the previous backup, also called deltas. Backing up deltas takes less time than backing up an entire volume, but in order to restore an entire incremental backup, it is necessary to restore every delta. The restoration process can become infeasibly time-consuming.</p>
+			<p>Two common backup methods are full and incremental. <u><em>Full backups</em></u> create a complete copy of all data during each backup. As a result, each subsequent backup contains the data stored in all earlier backups. Because it is generally good practice to keep more than one backup (e.g., three weeks of daily backups) full backups can quickly become infeasibly large, and backing up a large data volume can take a long time. <u><em>Incremental backups</em></u> only store the changes since the previous backup, also called deltas. Backing up deltas takes less time than backing up an entire volume, but in order to restore an entire incremental backup, it is necessary to restore every delta. The restoration process can become infeasibly time-consuming.</p>
 		</section>
 
 		<section>
@@ -85,8 +85,8 @@
 
 		<section>
 			<h3>Mirroring</h3>
-			<p>A third backup option is a <u><i>mirror</i></u>. As the name implies, a mirror is an exact duplicate of a storage volume. The benefits of a mirror are that the backup procedure usually only involves storing deltas, similar to an incremental backup, and the restoration procedure only involves copying over the current mirror version. This reduces the amount of storage needed for backups, and the amount of time to back up and to restore. The drawback of a mirror is that it is a copy of the current data. If the current data is corrupt, the mirror may also be corrupt. Additionally, if a file is accidentally modified or deleted, the mirror cannot restore an earlier version.</p>
-			<p>RAID provides the opportunity to mirror. This is the reason for the name: <i>Redundant</i> Array of Independent Disks.</p>
+			<p>A third backup option is a <u><em>mirror</em></u>. As the name implies, a mirror is an exact duplicate of a storage volume. The benefits of a mirror are that the backup procedure usually only involves storing deltas, similar to an incremental backup, and the restoration procedure only involves copying over the current mirror version. This reduces the amount of storage needed for backups, and the amount of time to back up and to restore. The drawback of a mirror is that it is a copy of the current data. If the current data is corrupt, the mirror may also be corrupt. Additionally, if a file is accidentally modified or deleted, the mirror cannot restore an earlier version.</p>
+			<p>RAID provides the opportunity to mirror. This is the reason for the name: <em>Redundant</em> Array of Independent Disks.</p>
 		</section>
 
 		<section>
@@ -101,22 +101,22 @@
 
 		<section>
 			<h3>Version Control System</h3>
-			<p>One backup tool that combines the best aspects of full, incremental, and mirrored backups is the <u><i>version control system</i></u> (VCS). A VCS backs up deltas, but it can restore all data at once. Additionally, it provides a convenient timelies of changes and can restore the data to any given point in the timeline in history. Version control systems, or versioning software, are especially prevalent among software developers because in addition to the backup features, it allows for collaboration between multiple contributors. In fact, additional collaboration creates additional backups because each collaborator has a complete copy of the data store.</p>
+			<p>One backup tool that combines the best aspects of full, incremental, and mirrored backups is the <u><em>version control system</em></u> (VCS). A VCS backs up deltas, but it can restore all data at once. Additionally, it provides a convenient timelies of changes and can restore the data to any given point in the timeline in history. Version control systems, or versioning software, are especially prevalent among software developers because in addition to the backup features, it allows for collaboration between multiple contributors. In fact, additional collaboration creates additional backups because each collaborator has a complete copy of the data store.</p>
 		</section>
 
 		<section>
 			<h3>Change Management</h3>
-			<p>Every information system needs hardware and software updates (i.e., patches) at some point, and these patches sometimes require shutting down or restarting a system. During these periods, any data is unavailable, and any externally facing systems are inaccessible to external stakeholders, such as customers. This can result in a loss of business, missed opportunities for data collection and analysis, or lower customer satisfaction. <u><i>Change management</i></u> is the set of processes that govern system changes and patches. Proper implementation minimizes the negative effects of downtime by (1) scheduling downtime when it would inconvenience the fewest users and (2) structuring patches to reduce the likelihood of breakage following an update.</p>
+			<p>Every information system needs hardware and software updates (i.e., patches) at some point, and these patches sometimes require shutting down or restarting a system. During these periods, any data is unavailable, and any externally facing systems are inaccessible to external stakeholders, such as customers. This can result in a loss of business, missed opportunities for data collection and analysis, or lower customer satisfaction. <u><em>Change management</em></u> is the set of processes that govern system changes and patches. Proper implementation minimizes the negative effects of downtime by (1) scheduling downtime when it would inconvenience the fewest users and (2) structuring patches to reduce the likelihood of breakage following an update.</p>
 		</section>
 
 		<section>
 			<h3>DevOps</h3>
-			<p>In order to ensure that system patches will work and not break existing functionality, developers, especially in-house developers, who write the code, and IT staff, who maintain the hardware and software and implement the updates, must work together in order to ensure that the system will run smoothly after the update. This is the premise of <u><i>DevOps</i></u>, which is a combination of &ldquo;Development&rdquo; and &ldquo;Operations.&rdquo; Business-led IT is an outcropping of this, in which the DevOps team expands to include business experts. Accounting architecture, or accounting-led IT, is an extension of business-led IT that specifies that accountants play the role of business experts. </p>
+			<p>In order to ensure that system patches will work and not break existing functionality, developers, especially in-house developers, who write the code, and IT staff, who maintain the hardware and software and implement the updates, must work together in order to ensure that the system will run smoothly after the update. This is the premise of <u><em>DevOps</em></u>, which is a combination of &ldquo;Development&rdquo; and &ldquo;Operations.&rdquo; Business-led IT is an outcropping of this, in which the DevOps team expands to include business experts. Accounting architecture, or accounting-led IT, is an extension of business-led IT that specifies that accountants play the role of business experts. </p>
 		</section>
 
 		<section>
 			<h3>Interpretation</h3>
-			<p>One of the original philosophies of the Unix developers was that the basis of all data is plain text. Many software applications, such as office suites, store data in compiled binaries (e.g., DOCX, PDF, PNG, etc.). While it is not reasonable to store everything as plain text (e.g., XML, HTML, TXT, CSV, etc.), one overwhelming benefit of is the maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. In order to preserve access to the data stored in binary files, users can either (1) retain in perpetuity the hardware and software necessary to access the data or (2) <u><i>emulate</i></u> the hardware and software when necessary.</p>
+			<p>One of the original philosophies of the Unix developers was that the basis of all data is plain text. Many software applications, such as office suites, store data in compiled binaries (e.g., DOCX, PDF, PNG, etc.). While it is not reasonable to store everything as plain text (e.g., XML, HTML, TXT, CSV, etc.), one overwhelming benefit of is the maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. In order to preserve access to the data stored in binary files, users can either (1) retain in perpetuity the hardware and software necessary to access the data or (2) <u><em>emulate</em></u> the hardware and software when necessary.</p>
 		</section>
 
 		<section>
@@ -127,13 +127,13 @@
 		<section>
 			<h3>Big Picture</h3>
 			<p>A complete cloud-based information system includes multiple components that promote the availability needs of both internal and external stakeholders by operationalizing the information life cycle or Big Data life cycle. This graphic provides an example of such a system. First, externally facing, department-specific OLTP databases support specialized data collection. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
-			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
+			<div class="override"><img src="/images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
 			<h3>Integration</h3>
 			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides a intermediate store where data is cleaned and converted. This process is called ETL (Extract, Transform, and Load).</p>
-			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
+			<div class="override"><img src="/images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
@@ -143,8 +143,8 @@
 
 		<section>
 			<h3>Data Warehouse and Marts</h3>
-			<p>The <u><i>data warehouse</i></u> receives clean data from staging and stores it. <u><i>Data marts</i></u> are small warehouses that store department-specific data for analysis. The warehouse and marts serve two special purposes. First, they allow OLTP systems to remain unencumbered when performing resource-intensive data analysis. Second, they can store pre-calculated OLAP cubes and MapReduce statistics in addition to the original data.</p>
-			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
+			<p>The <u><em>data warehouse</em></u> receives clean data from staging and stores it. <u><em>Data marts</em></u> are small warehouses that store department-specific data for analysis. The warehouse and marts serve two special purposes. First, they allow OLTP systems to remain unencumbered when performing resource-intensive data analysis. Second, they can store pre-calculated OLAP cubes and MapReduce statistics in addition to the original data.</p>
+			<div class="override"><img src="/images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
