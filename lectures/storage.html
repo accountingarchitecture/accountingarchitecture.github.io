@@ -40,8 +40,8 @@
 		<section>
 			<h3>Types of Storage</h3>
 			<ul>
-				<li><u><i>File systems</i></u> contain data in separate files and folders. This is the traditional storage format we use in our individual computers.</li>
-				<li><u><i>Database systems</i></u> store all data in a single location.</li>
+				<li><u><em>File systems</em></u> contain data in separate files and folders. This is the traditional storage format we use in our individual computers.</li>
+				<li><u><em>Database systems</em></u> store all data in a single location.</li>
 			</ul>
 			<p>These two systems can accommodate physical and digital resources. However, for our purposes, we will exclusively focus on digital storage systems.</p>
 		</section>
@@ -58,12 +58,12 @@
 
 		<section>
 			<h3>File System Layers</h3>
-			<p>However, the file system structure of files and folders is merely how the user sees the storage. One or more <u><i>physical</i></u> or <u><i>logical</i></u> <u><i>volumes</i></u> underlie that file system, and as a result, the user's file system view is not consistent with the physical view (i.e., where the data sits on the physical storage device). The physical volume is the physical storage device (e.g., HDD, SSD, etc), whereas logical volumes combine physical volumes into <i>ad-hoc</i> storage devices that can change size, as needed. Several different forms of logical volumes exist, but one common example is <u><i>RAID</i></u>.</p>
+			<p>However, the file system structure of files and folders is merely how the user sees the storage. One or more <u><em>physical</em></u> or <u><em>logical</em></u> <u><em>volumes</em></u> underlie that file system, and as a result, the user's file system view is not consistent with the physical view (i.e., where the data sits on the physical storage device). The physical volume is the physical storage device (e.g., HDD, SSD, etc), whereas logical volumes combine physical volumes into <em>ad-hoc</em> storage devices that can change size, as needed. Several different forms of logical volumes exist, but one common example is <u><em>RAID</em></u>.</p>
 		</section>
 
 		<section>
 			<h3>Physical Volumes</h3>
-			<p>The lowest level of storage is the physical volume. A physical volume is either an entire storage device or a <u><i>partition</i></u>, which is a portion of a physical disk. Whether the volume spans the entire storage drive or only a partition, the size of the volume once it is created is static. This makes physical volumes difficult to manage because storage needs can change over time.</p>
+			<p>The lowest level of storage is the physical volume. A physical volume is either an entire storage device or a <u><em>partition</em></u>, which is a portion of a physical disk. Whether the volume spans the entire storage drive or only a partition, the size of the volume once it is created is static. This makes physical volumes difficult to manage because storage needs can change over time.</p>
 			<div class="override"><img src="/images/partition.png" alt="Partition" style="height: 175px"/></div>
 		</section>
 
@@ -95,7 +95,7 @@
 
 		<section>
 			<h3>Database System</h3>
-			<p>The role of a database system is to collate data, often data stored on a file system, and present it in a centralized manner. The most widely implemented database systems are either <u><i>relational database management systems</i></u> (RDBMS) or <u><i>non-relational databases</i></u> (NoSQL). However, many other applications implement these concepts of a database system. For example, many music players, such as iTunes or Google Play Music, present the user's music library in one centralized location with various attributes of each track, such as artist, title, etc. Because these tracks are generally stored in multiple files and folders in a file system, the music player creates a database that references these individual files.</p>
+			<p>The role of a database system is to collate data, often data stored on a file system, and present it in a centralized manner. The most widely implemented database systems are either <u><em>relational database management systems</em></u> (RDBMS) or <u><em>non-relational databases</em></u> (NoSQL). However, many other applications implement these concepts of a database system. For example, many music players, such as iTunes or Google Play Music, present the user's music library in one centralized location with various attributes of each track, such as artist, title, etc. Because these tracks are generally stored in multiple files and folders in a file system, the music player creates a database that references these individual files.</p>
 		</section>
 
 		<section>
@@ -137,12 +137,12 @@
 					<div class="table-cell">janine.cray@abc.xyz</div>
 				</div>
 			</div>
-			<p>Each relational database contains one of more two-dimensional <i><u>tables</u></i>. The technical name for a table is a <u><i>relation</i></u>, hence <i>relational database</i>. These tables are similar to spreadsheets found in office software. The individual rows in the relations are called <u><i>records</i></u> or <u><i>tuples</i></u>. The individual columns are called <u><i>attributes</i></u> or <i><u>fields</u></i>. The intersection of a row and a column is a <i><u>cell</u></i>. Cells hold a single value.</p>
+			<p>Each relational database contains one of more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software. The individual rows in the relations are called <u><em>records</em></u> or <u><em>tuples</em></u>. The individual columns are called <u><em>attributes</em></u> or <em><u>fields</u></em>. The intersection of a row and a column is a <em><u>cell</u></em>. Cells hold a single value.</p>
 		</section>
 
 		<section>
 			<h3>Data Types</h3>
-			<p>All cells for a single attribute must have the same <u><i>data type</i></u>. This type determines the characteristics of the data, as well as any available operations. The most basic data types are called <u><i>primitives</i></u>:</p>
+			<p>All cells for a single attribute must have the same <u><em>data type</em></u>. This type determines the characteristics of the data, as well as any available operations. The most basic data types are called <u><em>primitives</em></u>:</p>
 			<div class="table" style="border: 3px solid black; font-size: 24px">
 				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
 					<div class="table-cell" style="font-weight: bold">Type name</div>
@@ -173,17 +173,17 @@
 
 		<section>
 			<h3>Non-relational Databases</h3>
-			<p>Generically speaking, any database that is not relational could be considered non-relational, but in practice, non-relational (Not Only SQL; NoSQL) databases are a specific class of databases that abandoned the principles of relational databases in favor of alternative models. Although this class comprises several distinct models, we will focus on three popular examples: <u><i>key-value stores</i></u>, <u><i>document stores</i></u>, and <u><i>column stores</i></u>.
+			<p>Generically speaking, any database that is not relational could be considered non-relational, but in practice, non-relational (Not Only SQL; NoSQL) databases are a specific class of databases that abandoned the principles of relational databases in favor of alternative models. Although this class comprises several distinct models, we will focus on three popular examples: <u><em>key-value stores</em></u>, <u><em>document stores</em></u>, and <u><em>column stores</em></u>.
 		</section>
 
 		<section>
 			<h3>Key-value Store</h3>
-			<p>Key-value is the model that governs all metadata. A <u><i>key-value store</i></u> is a database that pairs unique keys or attributes (i.e., unique identifiers) with data objects. The data object can be anything from a primitive to an entire file (e.g., document, audio file, etc.). The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys.</p>
+			<p>Key-value is the model that governs all metadata. A <u><em>key-value store</em></u> is a database that pairs unique keys or attributes (i.e., unique identifiers) with data objects. The data object can be anything from a primitive to an entire file (e.g., document, audio file, etc.). The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys.</p>
 		</section>
 
 		<section>
 			<h3>Document Store</h3>
-			<p>A <i><u>document store</u></i> is a special case of a key-value store in which the value is a text file with multiple metadata attributes and values, frequently in XML or JavaScript Object Notation (JSON) format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (i.e., the entire document).</p>
+			<p>A <em><u>document store</u></em> is a special case of a key-value store in which the value is a text file with multiple metadata attributes and values, frequently in XML or JavaScript Object Notation (JSON) format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (i.e., the entire document).</p>
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
 				<div style="font-size: 24px">Relational Table</div>
 				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
@@ -225,7 +225,7 @@
 
 		<section>
 			<h3>Column Store</h3>
-			<p>A <u><i>column store</i></u> is a key-value store that groups key and values into columns and multiple key-value pairs into families, similar to rows in relational tables. Unlike relational tables, these "rows" can have different numbers of attributes (i.e., keys), and attributes that appear in multiple rows can have different data types.</p>
+			<p>A <u><em>column store</em></u> is a key-value store that groups key and values into columns and multiple key-value pairs into families, similar to rows in relational tables. Unlike relational tables, these "rows" can have different numbers of attributes (i.e., keys), and attributes that appear in multiple rows can have different data types.</p>
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
 				<div style="font-size: 24px">Relational Table</div>
 				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
@@ -286,22 +286,22 @@
 		<section>
 			<h3>Benefits of NoSQL Databases</h3>
 			<ul>
-				<li><u><i>Volume</i></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
-				<li><u><i>Velocity</i></u>: Relational databases must find each field for a write request. NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number, and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a family. A document store could take the order and place all attributes and values into a single document.</li>
+				<li><u><em>Volume</em></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
+				<li><u><em>Velocity</em></u>: Relational databases must find each field for a write request. NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number, and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a family. A document store could take the order and place all attributes and values into a single document.</li>
 			</ul>
 		</section>
 
 		<section>
 			<h3>Benefits of NoSQL Databases</h3>
 			<ul>
-				<li><u><i>Variety</i></u>: Unlike relational databases which primarily store primitives, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
+				<li><u><em>Variety</em></u>: Unlike relational databases which primarily store primitives, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
 			</ul>
 			<p>These V's are the same V's that characterize Big Data. Unsurprisingly, NoSQL databases frequently serve as the stores for firms' Big Data.</p>
 		</section>
 
 		<section>
 			<h3>Graph Database</h3>
-			<p>With the large contribution social media has made to Big Data, a different type of NoSQL database has become increasingly popular. A <u><i>graph database</i></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object, just as each row in a relational database or each document in a document store is an object, and each node can have one or more properties,just as a row in a relational database can have attributes. Edges connect nodes to describe how nodes relate to one another.</p>
+			<p>With the large contribution social media has made to Big Data, a different type of NoSQL database has become increasingly popular. A <u><em>graph database</em></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object, just as each row in a relational database or each document in a document store is an object, and each node can have one or more properties,just as a row in a relational database can have attributes. Edges connect nodes to describe how nodes relate to one another.</p>
 			<div class="override"><img src="/images/graph-database.png" alt="Graph Database" style="max-width: 300px; margin-top: 0"/></div>
 		</section>
 
@@ -335,31 +335,31 @@
 		<section>
 			<h3>Structure Models for Relational Databases</h3>
 			<ul>
-				<li><u><i>Activity models</i></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
-				<li><u><i>Structure models</i></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
+				<li><u><em>Activity models</em></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
+				<li><u><em>Structure models</em></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
 			</ul>
 			<p>Relational databases are a popular context for discussing structure models because the models provide a conceptual view of data storage and identify what attributes are necessary prior to the implementation of the storage solution.</p>
 		</section>
 
 		<section>
 			<h3>Why More Diagrams?</h3>
-			<p>Once we know how to diagram business activities, why is it necessary to create <i>another</i> diagram about the objects in those activities?</p>
+			<p>Once we know how to diagram business activities, why is it necessary to create <em>another</em> diagram about the objects in those activities?</p>
 			<p>A process diagram identifies players (agents, processes, and data objects) in a system, but an information system needs more dimensionality. It needs the metadata about each item in the activity diagram. For example, an activity diagram may include the object Invoice, but the information system needs to know the particulars of each instance (i.e., occurrence) of Invoice (e.g., vendor, amount due, due date, etc.).</p>
 		</section>
 
 		<section>
 			<h3>Entity-Relationship Diagrams</h3>
-			<p>The entity-relationship model initially introduced by Peter Chen in 1976 is the <i>de facto</i> standard for modeling relational databases. As the name indicates, the components of an E-R diagram are <i><u>entities</u></i> and <i><u>relationships</u></i> between entities. Additionally, thorough diagrams also include a series of <i><u>attributes</u></i> for each entity and <i><u>cardinalities</u></i> of the relationships.</p>
+			<p>The entity-relationship model initially introduced by Peter Chen in 1976 is the <i>de facto</i> standard for modeling relational databases. As the name indicates, the components of an E-R diagram are <em><u>entities</u></em> and <em><u>relationships</u></em> between entities. Additionally, thorough diagrams also include a series of <em><u>attributes</u></em> for each entity and <em><u>cardinalities</u></em> of the relationships.</p>
 		</section>
 
 		<section>
 			<h3>Entities</h3>
-			<p>An <u><i>entity</i></u> is something of importance that needs to be represented in the database. Examples of an entity may be Employee, Invoice, Inventory, Time Stamp, etc. It is important to note that these entities are concepts and not instances. For example, Employee is an entity, but a particular employee, Joe Smith, is an instance of that entity. Entities correspond to tables in the database, whereas instances correspond to records in those tables.
+			<p>An <u><em>entity</em></u> is something of importance that needs to be represented in the database. Examples of an entity may be Employee, Invoice, Inventory, Time Stamp, etc. It is important to note that these entities are concepts and not instances. For example, Employee is an entity, but a particular employee, Joe Smith, is an instance of that entity. Entities correspond to tables in the database, whereas instances correspond to records in those tables.
 		</section>
 
 		<section>
 			<h3>Relationships</h3>
-			<p>A <u><i>relationship</i></u> is a link between entities. Because entities are nouns, relationships can be described as verbs of one entity acting on another. Examples of this would be the relationship of Employee and Purchase Requisition. These two entities have a relationship describable as: Employee Creates Purchase Requisition.</p>
+			<p>A <u><em>relationship</em></u> is a link between entities. Because entities are nouns, relationships can be described as verbs of one entity acting on another. Examples of this would be the relationship of Employee and Purchase Requisition. These two entities have a relationship describable as: Employee Creates Purchase Requisition.</p>
 		</section>
 
 		<section>
@@ -379,12 +379,12 @@
 
 		<section>
 			<h3>Attributes</h3>
-			<p>An <u><i>attribute</i></u> is any relevant characteristic of an entity. Unsurprisingly, E-R attributes correspond to attributes in a relational table.</p>
+			<p>An <u><em>attribute</em></u> is any relevant characteristic of an entity. Unsurprisingly, E-R attributes correspond to attributes in a relational table.</p>
 		</section>
 
 		<section>
 			<h3>Cardinalities</h3>
-			<p>The magnitude of the potential relationships between an instance of one entity and the instances of another (i.e., between a record of one table and the records of another table) is <u><i>cardinality</i></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. For example, if the two entities are Customer and Sale, then a customer is associated with at least (minimum) zero and at most (maximum) many sales, and each sale is associated with at least one customer and at most one customer. When the minimum and maximum cardinalities are equal, then it is only necessary to report one: each sale is associated with exactly one customer.</p>
+			<p>The magnitude of the potential relationships between an instance of one entity and the instances of another (i.e., between a record of one table and the records of another table) is <u><em>cardinality</em></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. For example, if the two entities are Customer and Sale, then a customer is associated with at least (minimum) zero and at most (maximum) many sales, and each sale is associated with at least one customer and at most one customer. When the minimum and maximum cardinalities are equal, then it is only necessary to report one: each sale is associated with exactly one customer.</p>
 		</section>
 
 		<section>
@@ -394,17 +394,17 @@
 
 		<section>
 			<h3>Exceptions to Entities and Attributes</h3>
-			<p>Not everything that is important to represent is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are potential entities and attributes that are combinations of pre-existing attributes. One simple example of this relates to Inventory costs. Unit Cost and Quantity on Hand would be attributes of the entity Inventory, but Total Cost (= Unit Cost x Quantity on Hand) would not. Another example would be employee supervisors. Supervisor would not be an entity because it would simply be a subset of the Employee entity. These would-be entities and attributes become <i><u>user views</u></i> because they are not stored in the database but can be provided to the user, as needed.</p>
+			<p>Not everything that is important to represent is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are potential entities and attributes that are combinations of pre-existing attributes. One simple example of this relates to Inventory costs. Unit Cost and Quantity on Hand would be attributes of the entity Inventory, but Total Cost (= Unit Cost x Quantity on Hand) would not. Another example would be employee supervisors. Supervisor would not be an entity because it would simply be a subset of the Employee entity. These would-be entities and attributes become <em><u>user views</u></em> because they are not stored in the database but can be provided to the user, as needed.</p>
 		</section>
 
 		<section>
 			<h3>Keys</h3>
-			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><i>primary key</i></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><i>foreign key</i></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale. The foreign key belongs to the entity that has the instance that is created last. For example, an employee exists before a time card, so the primary key from the Employee entity becomes a foreign key with the Time Card entity.</p>
+			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><em>primary key</em></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><em>foreign key</em></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale. The foreign key belongs to the entity that has the instance that is created last. For example, an employee exists before a time card, so the primary key from the Employee entity becomes a foreign key with the Time Card entity.</p>
 		</section>
 
 		<section>
 			<h3>Composite Keys</h3>
-			<p>Sometimes no single attribute uniquely identifies an instance of an entity. For example, neither Semester nor Year nor Course nor Section could be a primary key in a course schedule, but the combination of Semester and Year and Course and Section can. Primary keys that comprise multiple attributes are <u><i>composite keys</i></u>.</p>
+			<p>Sometimes no single attribute uniquely identifies an instance of an entity. For example, neither Semester nor Year nor Course nor Section could be a primary key in a course schedule, but the combination of Semester and Year and Course and Section can. Primary keys that comprise multiple attributes are <u><em>composite keys</em></u>.</p>
 		</section>
 
 		<section>
