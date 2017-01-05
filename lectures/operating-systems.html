@@ -41,7 +41,7 @@
 			<h3>Operating System</h3>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width: 65%">
-					<p>The most fundamental piece of software is the <u><i>operating system</i></u> (OS), which provides the user and user applications access to the computer hardware. Usually, operating systems comprise a <u><i>kernel</i></u> and <u><i>userland</i></u>. Additionally, operating systems generally require two supporting tools: a <u><i>firmware interface</i></u> and a <u><i>bootloader</i></u>.</p>
+					<p>The most fundamental piece of software is the <u><em>operating system</em></u> (OS), which provides the user and user applications access to the computer hardware. Usually, operating systems comprise a <u><em>kernel</em></u> and <u><em>userland</em></u>. Additionally, operating systems generally require two supporting tools: a <u><em>firmware interface</em></u> and a <u><em>bootloader</em></u>.</p>
 				</div>
 				<!--License: CC-BY-SA 3.0 Attribution: Golftheman-->
 				<div class="flex-item override"><img src="/images/operating_system.png" alt="Operating System" style="max-height: 450px"/></div>
@@ -55,7 +55,7 @@
 
 		<section>
 			<h3>Types of Kernels</h3>
-			<p>Depending on the type of kernel, the kernel itself may communicate directly with user applications (monolithic kernel) or the kernel may communicate with a series of <u><i>servers</i></u> that serve as intermediaries between the kernel and user applications (microkernel). Either way, the kernel interacts with the hardware. Some praise microkernels for their simplicity, and others prefer monolithic kernels because they handle requests more quickly.</p>
+			<p>Depending on the type of kernel, the kernel itself may communicate directly with user applications (monolithic kernel) or the kernel may communicate with a series of <u><em>servers</em></u> that serve as intermediaries between the kernel and user applications (microkernel). Either way, the kernel interacts with the hardware. Some praise microkernels for their simplicity, and others prefer monolithic kernels because they handle requests more quickly.</p>
 			<div class="flex-row">
 				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
 				<!--<div class="flex-item"><img src="../images/monolithic.png" alt="Monolithic Kernel" style="max-width: 50%"/></div>-->
@@ -68,12 +68,12 @@
 
 		<section>
 			<h3>Daemons</h3>
-			<p>Frequently, the word &ldquo;server&rdquo; is used to identify a specific type of computer hardware, but a more appropriate definition would be <u><i>software that provides a service</i></u>, also known as a <u><i>daemon</i></u>. Unlike more visible interactive applications, daemons run in the background without user input, and many start when the operating system boots. Micro kernels use daemons to communicate with user applications, but operating systems with monolithic kernels also use daemons to handle several functions, such as network communication, user input, and output to computer peripherals, such as monitors and speakers. Some of these daemons are labeled &ldquo;middleware&rdquo; because they sit between the kernel and user applications.</p>
+			<p>Frequently, the word &ldquo;server&rdquo; is used to identify a specific type of computer hardware, but a more appropriate definition would be <u><em>software that provides a service</em></u>, also known as a <u><em>daemon</em></u>. Unlike more visible interactive applications, daemons run in the background without user input, and many start when the operating system boots. Micro kernels use daemons to communicate with user applications, but operating systems with monolithic kernels also use daemons to handle several functions, such as network communication, user input, and output to computer peripherals, such as monitors and speakers. Some of these daemons are labeled &ldquo;middleware&rdquo; because they sit between the kernel and user applications.</p>
 		</section>
 
 		<section>
 			<h3>Userland</h3>
-			<p>Userland is the part of the operating system that interacts with the user. The primary layer in userland is the <u><i>shell</i></u>, which provide the user either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computing devices have graphical shells, but the vast majority of server computers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
+			<p>Userland is the part of the operating system that interacts with the user. The primary layer in userland is the <u><em>shell</em></u>, which provide the user either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computing devices have graphical shells, but the vast majority of server computers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="/images/bash.png" alt="Bash Shell" style="max-height: 250px; margin-top: 0"/></div>
 				<div class="flex-item override"><img src="/images/gnome.png" alt="GNOME Shell" style="max-height: 250px; margin-top: 0"/></div>
@@ -88,7 +88,7 @@
 
 		<section>
 			<h3>Firmware Interface</h3>
-			<p>The kernel and userland make an operating system, but in order for the operating system to be available to the user, a firmware interface is necessary. Two common forms are <u><i>Basic Input/Output System</i></u> (BIOS) or, more recently <u><i>Unified Extensible Firmware Interface</i></u> (UEFI). This firmware resides on the motherboard's own flash storage, and it performs two important functions. The first is to initialize and test the computer hardware, and the second is to load the bootloader.</p>
+			<p>The kernel and userland make an operating system, but in order for the operating system to be available to the user, a firmware interface is necessary. Two common forms are <u><em>Basic Input/Output System</em></u> (BIOS) or, more recently <u><em>Unified Extensible Firmware Interface</em></u> (UEFI). This firmware resides on the motherboard's own flash storage, and it performs two important functions. The first is to initialize and test the computer hardware, and the second is to load the bootloader.</p>
 			<p>BIOS and UEFI are only two examples of firmware. Firmware comprises a large variety of embedded software that controls hardware. For example, jets and space shuttles use firmware to control their systems, and the same applies to thermostats, video game systems, and automobiles.</p>
 		</section>
 
@@ -99,7 +99,7 @@
 
 		<section>
 			<h3>Which Operating Systems?</h3>
-			<p>Microsoft Windows and Apple OS X are the two dominant desktop and laptop operating systems, but these are effectively <em>irrelevant</em> in other components of the information system (e.g., servers, mobile devices, firmware). Although less well known, <i><u>Unix</u></i>, <i><u>BSD</u></i>, and <i><u>Linux</u></i> run the overwhelming majority of information system hardware. As a result, the ability to participate in systems design and maintenance relies in large part on familiarity with these operating systems. Familiarity is not equivalent to knowledge of the historical background, but because these three operating systems, their developers, and their philosophies have had, and continue to have, such a profound impact on the software community, especially open source software, a brief history is warranted.</p>
+			<p>Microsoft Windows and Apple OS X are the two dominant desktop and laptop operating systems, but these are effectively <em>irrelevant</em> in other components of the information system (e.g., servers, mobile devices, firmware). Although less well known, <em><u>Unix</u></em>, <em><u>BSD</u></em>, and <em><u>Linux</u></em> run the overwhelming majority of information system hardware. As a result, the ability to participate in systems design and maintenance relies in large part on familiarity with these operating systems. Familiarity is not equivalent to knowledge of the historical background, but because these three operating systems, their developers, and their philosophies have had, and continue to have, such a profound impact on the software community, especially open source software, a brief history is warranted.</p>
 		</section>
 
 		<section>
@@ -131,7 +131,7 @@
 
 		<section>
 			<h3>An Open Standard</h3>
-			<p>Despite the appeal of both System V Unix and BSD Unix, disputes arose between the programming communities. In an attempt to reconcile differences, the Institute of Electrical and Electronics Engineers (IEEE) developed a set of <u><i>Portable Operating System Interface</i></u> (POSIX) standards based on System V Unix which continue to govern Unix and Unix-like operating systems today. The list of POSIX-certified operating systems currently contains the three most prominent Unix offerings: IBM AIX, HP-UX and Oracle Solaris. Although BSD continues not to be POSIX-certified, it is mostly POSIX compliant.</p>
+			<p>Despite the appeal of both System V Unix and BSD Unix, disputes arose between the programming communities. In an attempt to reconcile differences, the Institute of Electrical and Electronics Engineers (IEEE) developed a set of <u><em>Portable Operating System Interface</em></u> (POSIX) standards based on System V Unix which continue to govern Unix and Unix-like operating systems today. The list of POSIX-certified operating systems currently contains the three most prominent Unix offerings: IBM AIX, HP-UX and Oracle Solaris. Although BSD continues not to be POSIX-certified, it is mostly POSIX compliant.</p>
 		</section>
 
 		<section>
