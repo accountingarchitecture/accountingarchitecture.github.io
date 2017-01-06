@@ -24,8 +24,8 @@ function builder(modules) {
 					if(modules[i].topics[j].hasOwnProperty('readings')) {
 						for(l = 0; l < modules[i].topics[j].readings.length; l++) {
 							for(m = 0; m < modules[i].topics[j].readings[l].list.length; m++) {
-								if(modules[i].topics[j].readings[l].list[m].hasOwnProperty('filetype')) readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + ' href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" aria-label="' + modules[i].topics[j].readings[l].list[m].filetype + ' opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
-								else readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + ' href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" aria-label="Website opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
+								if(modules[i].topics[j].readings[l].list[m].hasOwnProperty('filetype')) readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" aria-label="' + modules[i].topics[j].readings[l].list[m].filetype + ' opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
+								else readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" aria-label="Website opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
 							}
 							readsets += '<div class="set"><h3>' + modules[i].topics[j].readings[l].set + '</h3><div class="articles">' + readbuttons + '</div></div>';
 							readbuttons = '';
@@ -182,7 +182,7 @@ var myModules = [
 			"nav":[
 				{"label":"Syllabus", "type":"button", "href":"supplement/getting-started/syllabus.html"},
 				{"label":"Course Description", "type":"button", "href":"supplement/getting-started/syllabus.html#description"},
-				{"label":"Instructor", "type":"button", "href":"supplement/getting-started/syllabus.html#description"},
+				{"label":"Instructor", "type":"button", "href":"supplement/getting-started/syllabus.html#instructor"},
 				{"label":"Academic Integrity", "type":"button", "href":"supplement/getting-started/syllabus.html#integrity"},
 				{"label":"Accessibility Assistance", "type":"button", "href":"supplement/getting-started/syllabus.html#accessibility"}
 			],
