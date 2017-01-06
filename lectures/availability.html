@@ -6,18 +6,18 @@
 	<title>Availability</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="/images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/reveal.js/css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="/css/slides.css">
+	<link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="/images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
 					<p>Availability is the second block of the Control section. This principle applies to the ability to access a network device, such as a Web server, and it applies to the ability to access data on both local and network systems.</p>
 				</div>
@@ -51,7 +51,7 @@
 		<section>
 			<h3>Trust Services</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="/images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
 					<p>Security is the foundation of Trust Services because although all five components are necessary for reliable system, security supports each of the remaining concepts. Restricting unauthorized access to information systems, especially network-enabled (i.e., cloud-based) systems, is the first step in promoting confidentiality/privacy, availability, and processing integrity.</p>
 				</div>
@@ -127,13 +127,13 @@
 		<section>
 			<h3>Big Picture</h3>
 			<p>A complete cloud-based information system includes multiple components that promote the availability needs of both internal and external stakeholders by operationalizing the information life cycle or Big Data life cycle. This graphic provides an example of such a system. First, externally facing, department-specific OLTP databases support specialized data collection. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
-			<div class="override"><img src="/images/warehouse.png" alt="Data Warehouse"/></div>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
 			<h3>Integration</h3>
 			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides a intermediate store where data is cleaned and converted. This process is called ETL (Extract, Transform, and Load).</p>
-			<div class="override"><img src="/images/warehouse.png" alt="Data Warehouse"/></div>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
@@ -144,7 +144,7 @@
 		<section>
 			<h3>Data Warehouse and Marts</h3>
 			<p>The <u><em>data warehouse</em></u> receives clean data from staging and stores it. <u><em>Data marts</em></u> are small warehouses that store department-specific data for analysis. The warehouse and marts serve two special purposes. First, they allow OLTP systems to remain unencumbered when performing resource-intensive data analysis. Second, they can store pre-calculated OLAP cubes and MapReduce statistics in addition to the original data.</p>
-			<div class="override"><img src="/images/warehouse.png" alt="Data Warehouse"/></div>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
@@ -159,9 +159,8 @@
 	</div>
 	</div>
 
-	<script src="/reveal.js/lib/js/head.min.js"></script>
-	<script src="/reveal.js/js/reveal.js"></script>
-	<script src="/js/slides.js"></script>
-	<script src="/js/printing.js"></script>
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../js/slides.js"></script>
 </body>
 </html>

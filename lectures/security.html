@@ -6,18 +6,18 @@
 	<title>Security</title>
 
 	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="/images/memphis.ico" type="image/x-icon" sizes="32x32">
+	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/reveal.js/css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
 	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="/css/slides.css">
+	<link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 		<section>
 			<h3>Accounting Architecture</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="/images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
 					<p>Information is the keystone of any information system, and Technology is the set of tools necessary to implement that system. Control, however, is a choice. A system can function without proper controls. However, a system without proper controls exposes internal and external stakeholders to risks. The different blocks in the Control section represent different control objectives.</p>
 				</div>
@@ -65,7 +65,7 @@
 		<section>
 			<h3>Trust Services</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="/images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 70%">
 					<p>Trust Services has a foundation and four pillars:</p>
 					<ul>
@@ -93,7 +93,7 @@
 			<h3>Why Permissions?</h3>
 			<div class="flex-row">
 				<!--License: CC-BY-SA 4.0 Attribution: DavidBailey-->
-				<div class="flex-item override"><img src="/images/fraudtriangle.png" alt="Fraud Triangle" style="max-height: 400px"/></div>
+				<div class="flex-item override"><img src="../images/fraudtriangle.png" alt="Fraud Triangle" style="max-height: 400px"/></div>
 				<div class="flex-item" style="max-width: 60%">
 					<p>The purpose of permissions is two-fold. First, permissions prevent outsiders (e.g., non-employees) from gaining access to confidential materials. Second, correctly assigned permissions prevent insiders from gaining access to content that would increase the <em>opportunity</em> to commit fraud.</p>
 				</div>
@@ -182,14 +182,14 @@
 		<section>
 			<h3>First Character</h3>
 			<p>Symbolic notation uses nine characters (i.e., three triads), but the string contains ten spaces. The first character identifies the file type: regular file (-), directory (d), or link (l). Several other file types exist, but these three are the most useful examples of symbolic notation.</p>
-			<img src="/images/symbolic-notation.png" alt="Permissions in Symbolic Notation"/>
+			<img src="../images/symbolic-notation.png" alt="Permissions in Symbolic Notation"/>
 			<p>(This screenshot is of the output of the &lsquo;ls -l&rsquo; command&mdash;these are lowercase L's. In this case, ubuntu is the name of the owner, and the name of the group is also ubuntu.)</p>
 		</section>
 
 		<section>
 			<h3>Octal Permissions</h3>
 			<p>Numeric notation, frequently referred to as octal or octet permissions, uses base-8 notation to report permissions. In this notation, &lsquo;read&rsquo; receives a value of 4, &lsquo;write&rsquo; a value of 2, and &lsquo;execute&rsquo; a value of 1. These are added together to obtain one value for each of three significant digits. The first digit reports owner permissions, the second reports group permissions, and the third reports world permissions.</p>
-			<img src="/images/numeric-notation.png" alt="Permissions in Numeric Notation"/>
+			<img src="../images/numeric-notation.png" alt="Permissions in Numeric Notation"/>
 			<p>(This screenshot is of the same files as in the previous slide or purposes of comparing numeric and symbolic notation of the same data objects.)
 		</section>
 
@@ -362,9 +362,8 @@
 	</div>
 	</div>
 
-	<script src="/reveal.js/lib/js/head.min.js"></script>
-	<script src="/reveal.js/js/reveal.js"></script>
-	<script src="/js/slides.js"></script>
-	<script src="/js/printing.js"></script>
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../js/slides.js"></script>
 </body>
 </html>
