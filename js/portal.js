@@ -558,10 +558,11 @@ var myModules = [
 	{"week":"Week 14",
 	"topics":[
 		{"date":"April 24, 2017", "title":"Confidentiality",
-			"summary":"<p>Confidentiality, with its related topic of privacy, is the final block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic. Please note the early deadline for this week's homework assignment because of the end of classes.",
+			"summary":"<p>Confidentiality, with its related topic of privacy, is the final block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic. Please note the early deadline for this week's homework assignments because of the end of classes. The second, and final, homework assignment this week is very brief and will not interfere with the other bigger assignments due this week, especially the Technology Report.",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/confidentiality.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/confidentiality/assignment.html"},
+				{"label":"Final Assignment", "type":"button assignmentbutton", "href":"supplement/final/assignment.html"},
 				{"label":"Readings", "type":"button readingsbutton"}
 			],
 			"readings":[
@@ -572,6 +573,7 @@ var myModules = [
 			"due":[
 				{"deliverable":"Quiz", "deadline":"24 April 2017"},
 				{"deliverable":"Homework", "deadline":"26 April 2017"},
+				{"deliverable":"Final Homework", "deadline":"26 April 2017"},
 				{"deliverable":"Technology Report", "deadline":"26 April 2017"}
 			]
 		}
@@ -580,8 +582,12 @@ var myModules = [
 	{"week":"Final",
 	"topics":[
 		{"date":"May 3, 2017", "title":"Final Exam",
-			"summary":"<p>All students have until <strong>May 3 @ 15.00</strong> to complete the final exam. You may begin the exam at any time during Finals Week prior to the deadline, but you must complete the exam in one sitting. Please note that the exam is not due at 23.59 as is the case with other assignments, but rather at 15.00 (i.e., 3 pm) according to the Registrar's final exam calendar for the live section of this course. The exam is on eCourseware, and eCourseware also reports the deadline for the exam. Every semester students email me after the exam has closed stating that they had not understood when it was due and asking whether I would change the deadline. I will not reopen or extend the exam <em>for any reason</em>.</p><p>The exam is open-note and open-lecture. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p><strong>Good luck!</strong></p>",
+			"summary":"<p>All students have until <strong>May 3 @ 15.00</strong> to complete the final exam and to submit evidence of your SETE for extra credit. You may begin the exam at any time during Finals Week prior to the deadline, but you must complete the exam in one sitting. Please note that the exam is not due at 23.59 as is the case with other assignments, but rather at 15.00 (i.e., 3 pm) according to the Registrar's final exam calendar for the live section of this course, so I encourage you not to wait until the last day to complete the exam. The exam is on eCourseware, and eCourseware also reports the deadline for the exam. Every semester students email me after the exam has closed stating that they had not understood when it was due and asking whether I would change the deadline. I will not reopen or extend the exam <em>for any reason</em>.</p><p>The exam is open-note and open-lecture. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p><strong>Good luck!</strong></p>",
+			"nav":[
+				{"label":"Extra Credit Instructions", "type":"button assignmentbutton", "href":"supplement/final/SETE.html"},
+			],
 			"due":[
+				{"deliverable":"SETE", "deadline":"3 May 2017"},
 				{"deliverable":"Final Exam", "deadline":"3 May 2017"}
 			]
 		}
