@@ -196,6 +196,7 @@ var myModules = [
 				{"label":"Instructions", "type":"button", "href":"supplement/getting-started/syllabus.html#practiceset"},
 				{"label":"Practice Set", "type":"button", "href":"http://www.perdisco.com/"},
 				{"label":"Quiz Instructions", "type":"button", "href":"supplement/practice-set/quiz-instructions.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=EBDM_m0_CQA"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
