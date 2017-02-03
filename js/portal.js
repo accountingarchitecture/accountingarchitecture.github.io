@@ -22,6 +22,7 @@ function builder(modules) {
 						}
 					}
 					if(modules[i].topics[j].hasOwnProperty('readings')) {
+						navbuttons += '<a class="button readingsbutton">Readings</a>';
 						for(l = 0; l < modules[i].topics[j].readings.length; l++) {
 							for(m = 0; m < modules[i].topics[j].readings[l].list.length; m++) {
 								if(modules[i].topics[j].readings[l].list[m].hasOwnProperty('filetype')) readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" aria-label="' + modules[i].topics[j].readings[l].list[m].filetype + ' opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
@@ -211,8 +212,7 @@ var myModules = [
 			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. Students should read the lecture and the required readings in preparation for a quiz. The schedule lists the quiz due date. This format will be the norm for the remainder of the semester.</p><p>One reason for holding this lecture at the beginning of the semester is to prepare students for Beta Alpha Psi's Meet the Firms event. This event will be <strong>Friday, January 27 from 17.30 to 19.00</strong> on the first floor of the Fogelman Classroom Building. This is an opportunity to network with your future employers. Please dress professionally&mdash;the lecture explains what constitutes professional dress&mdash;and bring copies of your resume.</p><p>Additionally, professionalism will be important throughout this course. Although I will not require it, I invite students to dress professionally when coming to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. Furthermore, as the syllabus indicates, I will grade you based on your professionalism during the semester.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/professionalism.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/professionalism/assignment.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Assignment", "type":"button", "href":"supplement/professionalism/assignment.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -239,8 +239,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/accounting-architecture.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/accounting-architecture/assignment.html"},
-				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -250,7 +249,7 @@ var myModules = [
 					{"label":"Be a Technologist", "type":"button", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"}
 				]},
 				{"set":"Optional", "list":[
-					{"label":"Businesses Want Change", "type":"button", "href":"supplement/accounting-architecture/digitaltransformation.pdf", "filetype":"PDF"},
+					{"label":"Businesses Want Change", "type":"button", "href":"supplement/accounting-architecture/digitaltransformation.pdf", "filetype":"PDF"}
 				]}
 			],
 			"due":[
@@ -265,7 +264,7 @@ var myModules = [
 	{"week":"Week 3",
 	"topics":[
 		{"date":"January 30, 2017", "title":"Business Processes",
-			"summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture model. Regulations (i.e., Compliance) are important, but these are the topics of other accounting courses, and Environment is a very broad concept that touches on several disciplines beyond the scope of this course. (In the future, I may add a lecture to this course that explains the Environment block of the arch.) However, it is worthwhile to discuss the Business Model block of the foundation, especially in the context of the primary tool used for communicating business processes: diagramming. Understanding this block will prepare you to learn about the information life cycle. This topic has no additional readings.</p>",
+			"summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture model. Regulations (i.e., Compliance) are important, but these are the topics of other accounting courses, and Environment is a very broad concept that touches on several disciplines beyond the scope of this course. (In the future, I may add a lecture to this course that explains the Environment block of the arch.) However, it is worthwhile to discuss the Business Model block of the foundation, especially in the context of the primary tool used for communicating business processes: diagramming. Understanding this block will prepare you to learn about the information life cycle.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/robbers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/robbers-solution.html"},
@@ -274,6 +273,12 @@ var myModules = [
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-processes/solution.html"},
 				{"label":"Diagram", "type":"button", "href":"supplement/business-processes/payment-process.png", "filetype":"Image"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
+			],
+			"readings":[
+				{"set":"Optional", "list":[
+					{"label":"Become a CIO", "type":"button", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
+					{"label":"Failure to Communicate", "type":"button", "href":"https://opensource.com/open-organization/16/12/failing-collaboration-game"}
+				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"30 January 2017"},
@@ -293,8 +298,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"https://docs.google.com/presentation/d/13fG0U0H49izogaeotdDkZVxX9F4GT99FB3wK2kU9Big/pub?start=false&loop=false&delayms=0&slide=id.p"},
 				{"label":"Assignment", "type":"button", "href":"supplement/information-life-cycle/assignment.html"},
-				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -324,8 +328,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/hardware.html"},
-				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -351,8 +354,7 @@ var myModules = [
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/open-source/solution.html"},
-				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -380,8 +382,7 @@ var myModules = [
 			"summary":"<p>This lecture will explain the fundamental parts of an operating system, as well as a brief historical overview of the operating systems most prominently used in enterprise-grade information systems. I will record and post a video tutorial demonstrating some functionality of the operating system we will use during this course. I encourage you to watch the tutorial before attempting the homework assignment.</p><p>In order to keep your Spring Break as free as possible, I have made this week's homework and practice set deliverables due on Friday, instead of Saturday. This includes the final deadline for the practice set. Because of the short week, I have not posted any puzzles; they will return after the break.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/operating-systems.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/operating-systems/assignment.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Assignment", "type":"button", "href":"supplement/operating-systems/assignment.html"}
 			],
 			"readings":[
 				{"set":"Optional", "list":[
@@ -404,8 +405,7 @@ var myModules = [
 			"summary":"<p>This week we begin our discussion of the Storage block of the Architecture. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage is a prerequisite for understanding analytics.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/storage.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/storage/assignment.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Assignment", "type":"button", "href":"supplement/storage/assignment.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -434,14 +434,15 @@ var myModules = [
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/data-analytics/solution.html"},
 				{"label":"Library DB", "type":"button", "href":"supplement/data-analytics/library.sql", "filetype":"SQL plain-text file"},
-				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
 					{"label":"Analytics and Auditing", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"}
 				]},
 				{"set":"Optional", "list":[
+					{"label":"Data and Loans, Part 1", "type":"button", "href":"https://enterprisersproject.com/article/2016/12/loan-company-realizes-power-data-scientists-and-software-engineers-joining-forces"},
+					{"label":"Data and Loans, Part 2", "type":"button", "href":"https://enterprisersproject.com/article/2016/12/want-make-better-decisions-break-down-wall-between-data-and-it"},
 					{"label":"MapReduce", "type":"button", "href":"https://www.youtube.com/watch?v=bcjSe0xCHbE"}
 				]}
 			],
@@ -462,8 +463,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
-				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"}
 			],
 			"readings":[
 				{"set":"Optional", "list":[
@@ -489,8 +489,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/security.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -518,8 +517,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/availability/assignment.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Assignment", "type":"button", "href":"supplement/availability/assignment.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -563,8 +561,7 @@ var myModules = [
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/confidentiality.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/confidentiality/assignment.html"},
-				{"label":"Final Assignment", "type":"button assignmentbutton", "href":"supplement/final/assignment.html"},
-				{"label":"Readings", "type":"button readingsbutton"}
+				{"label":"Final Assignment", "type":"button assignmentbutton", "href":"supplement/final/assignment.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
