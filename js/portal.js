@@ -382,6 +382,7 @@ var myModules = [
 			"summary":"<p>This lecture will explain the fundamental parts of an operating system, as well as a brief historical overview of the operating systems most prominently used in enterprise-grade information systems. I will record and post a video tutorial demonstrating some functionality of the operating system we will use during this course. I encourage you to watch the tutorial before attempting the homework assignment.</p><p>In order to keep your Spring Break as free as possible, I have made this week's homework and practice set deliverables due on Friday, instead of Saturday. This includes the final deadline for the practice set. Because of the short week, I have not posted any puzzles; they will return after the break.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/operating-systems.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=sqbXNK3rxK4"},
 				{"label":"Assignment", "type":"button", "href":"supplement/operating-systems/assignment.html"}
 			],
 			"readings":[
