@@ -459,7 +459,7 @@ var myModules = [
 	{"week":"Week 10",
 	"topics":[
 		{"date":"March 27, 2017", "title":"Services",
-			"summary":"<p>Services is the final block in the Technology leg of the accounting architecture. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of today's computing environemnt. I will also provide a video tutorial that explains how to complete the homework assignment.</p>",
+			"summary":"<p>Services is the final block in the Technology leg of the accounting architecture. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of today's computing environment. I will also provide a video tutorial that explains how to complete the homework assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution.html"},
