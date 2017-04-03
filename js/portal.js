@@ -465,7 +465,8 @@ var myModules = [
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=lr5pYsjR_rk"},
-				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
+				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/services/assignment.html"},
+				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/services/solution.html"},
 				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"}
 			],
 			"readings":[
