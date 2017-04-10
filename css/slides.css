@@ -19,10 +19,12 @@
 .reveal .slides > section {
 	padding: 0px;
 }
+.reveal .slides img {
+	margin: 0;
+}
 .reveal .override img {
 	border: 0;
 	box-shadow: none;
-	margin-top: 20px;
 	background: initial;
 }
 .reveal blockquote {
