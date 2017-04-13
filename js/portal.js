@@ -548,6 +548,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/learning-curve.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/processing-integrity.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/processing-integrity/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution.html"}
 			],
