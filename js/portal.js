@@ -543,7 +543,7 @@ var myModules = [
 	{"week":"Week 13",
 	"topics":[
 		{"date":"April 17, 2017", "title":"Processing Integrity",
-			"summary":"<p>Processing Integrity is the third Control block. This lecture relates to the Storage lecture because it addresses tools that verify error prevention in stored data, especially relational databases. I will provide a video tutorial that demonstrates how to use the diagramming tool that I introduced earlier, but you are not required to use this particular tool to complete the homework assignment. Also, this week's puzzle will be the final puzzle of the semester.</p>",
+			"summary":"<p>Processing Integrity is the third Control block. This lecture relates to the Storage lecture because it addresses tools that verify error prevention in stored data, especially relational databases. I will provide a video tutorial that showcases a diagramming tool, but you are not required to use this particular tool to complete the homework assignment. Also, this week's puzzle will be the final puzzle of the semester.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/learning-curve.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution.html"},
