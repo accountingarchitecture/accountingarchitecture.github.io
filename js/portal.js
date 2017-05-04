@@ -236,7 +236,7 @@ var myModules = [
 				"summary":"<p>This lecture marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some are foreign because I have invented the terms. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the foundation for this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Starting this week, I will include a puzzle each week. These are designed to get your creative juices flowing. They are completely optional, but I will give extra credit for each correct solution. Once the topic is archived, I will replace the puzzle with its solution.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/sudoku.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution-wxkfp.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/accounting-architecture.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/accounting-architecture/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
@@ -267,10 +267,10 @@ var myModules = [
 			"summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture model. Regulations (i.e., Compliance) are important, but these are the topics of other accounting courses, and Environment is a very broad concept that touches on several disciplines beyond the scope of this course. (In the future, I may add a lecture to this course that explains the Environment block of the arch.) However, it is worthwhile to discuss the Business Model block of the foundation, especially in the context of the primary tool used for communicating business processes: diagramming. Understanding this block will prepare you to learn about the information life cycle.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/robbers.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/robbers-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/robbers-solution-uhxxx.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/business-processes.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/business-processes/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-processes/solution.html"},
+				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-processes/solution-uhxep.html"},
 				{"label":"Diagram", "type":"button", "href":"supplement/business-processes/payment-process.png", "filetype":"Image"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
@@ -289,7 +289,7 @@ var myModules = [
 			"summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, I have asked my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science to write the lecture for this topic. This lecture will explain the role that an information system should play (i.e., what the system <em>does</em>). Beginning next week, the Technology section will demonstrate the makeup of an information system (i.e., what the system <em>is</em>).</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/coins.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution-umgqj.html"},
 				{"label":"Lecture", "type":"button", "href":"https://docs.google.com/presentation/d/13fG0U0H49izogaeotdDkZVxX9F4GT99FB3wK2kU9Big/pub?start=false&loop=false&delayms=0&slide=id.p"},
 				{"label":"Assignment", "type":"button", "href":"supplement/information-life-cycle/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
@@ -320,7 +320,7 @@ var myModules = [
 			"summary":"<p>This is the first lecture on the Technology section of the accounting architecture model. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course were the <em>most</em> interesting&mdash;it introduces concepts that are valuable towards understanding the deeper points of systems design. As you read the lecture, I encourage you to think about the hardware in your own computing device, and you may find that these topics are quite close to home. I have not assigned homework for this topic, so you should consider investing additional time with the practice set.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution-tnclb.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/hardware.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
@@ -339,10 +339,10 @@ var myModules = [
 			"summary":"<p>This lecture begins our multi-week discussion of the Software block of the arch. This first lecture introduces the concepts behind open content as a precursor to subsequent introductions of the various components of the Software block. Please pay special attention to the required readings because open source is the primary force behind the development of enterprise-grade information systems.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution-qryjz.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/open-source/solution.html"},
+				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"readings":[
@@ -415,11 +415,11 @@ var myModules = [
 			"summary":"<p>Now that we have discussed Storage, we can return to the Software block and discuss data analytics, a current hot topic. I will provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I have also attached a link to the database I use in the tutorial: Library DB. Please view the tutorial before you attempt this assignment, and please work through the entire assignment before opening the homework quiz associated with the assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution-ziwfu.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/data-analytics.html"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=N418C3Po0sM"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/data-analytics/solution.html"},
+				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
 				{"label":"Library DB", "type":"button", "href":"supplement/data-analytics/library.sql", "filetype":"SQL plain-text file"},
 				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"}
 			],
@@ -448,11 +448,10 @@ var myModules = [
 			"summary":"<p>Services is the final block in the Technology leg of the accounting architecture. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of today's computing environment. I will also provide a video tutorial that explains how to complete the homework assignment. Also, the final practice set deadline is this week. You should have already completed all five milestones, and this week you should complete the remaining modules after milestone 5.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution-unbfz.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=lr5pYsjR_rk"},
-				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/services/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/services/solution.html"},
+				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
 				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"}
 			],
 			"readings":[
@@ -478,7 +477,7 @@ var myModules = [
 			"summary":"<p>Security is the first block of the Control section of the Architecture. This section of the course will especially appeal to the students who have had difficulty recognizing the link between accounting and the lectures up to this point. Unlike the prior content, which is based on my own model of accounting architecture, the Control section is based on the AICPA Trust Services Framework, so the AICPA agrees that this knowledge is relevant to accountants. Similarly, the homework assignment for this topic is particularly relevant to accountants, especially in their role as information custodians.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution-pnnvr.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/security.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"}
 			],
@@ -502,7 +501,7 @@ var myModules = [
 			"summary":"<p>Availability is the second Control block. This lecture ties significantly into the Services lecture because the principles of this lecture often deal with the availability of online (i.e., cloud) systems. I will also provide a video tutorial explaining how to complete the homework assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution-azqhi.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=G6iAfW2Dq5M"},
 				{"label":"Assignment", "type":"button", "href":"supplement/availability/assignment.html"}
@@ -528,11 +527,11 @@ var myModules = [
 			"summary":"<p>Processing Integrity is the third Control block. This lecture relates to the Storage lecture because it addresses tools that verify error prevention in stored data, especially relational databases. I will provide a video tutorial that showcases a diagramming tool, but you are not required to use this particular tool to complete the homework assignment. Also, this week's puzzle will be the final puzzle of the semester.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/learning-curve.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution-wjsku.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/processing-integrity.html"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/processing-integrity/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution.html"}
+				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution-stvdt.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"24 July 2017"},
