@@ -350,6 +350,7 @@ var myModules = [
 				]},
 				{"set":"Optional", "list":[
 					{"label":"Free Software", "type":"button", "href":"http://www.gnu.org/events/rms-nyu-2001-transcript.html"},
+					{"label":"Open Source in 2016", "type":"button", "href":"supplement/open-source/2016-open-source-yearbook.pdf", "filetype":"PDF"}
 				]}
 			],
 			"due":[
