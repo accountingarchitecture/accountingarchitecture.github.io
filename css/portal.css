@@ -81,14 +81,6 @@
 		font: 15px/25px Arial, sans-serif;
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
 	}
-	#calendar {
-		-webkit-flex: 0 0 15%;
-		flex: 0 0 15%;
-	}
-	#content {
-		-webkit-flex: 1 1 auto;
-		flex: 1 1 auto;
-	}
 	h2 {
 		font: 36px/43px Arial, sans-serif;
 		font-weight: bold;
@@ -171,6 +163,10 @@
 	}
 
 /********** Topics **********/
+	#content {
+		-webkit-flex: 1 1 auto;
+		flex: 1 1 auto;
+	}
 	.module {
 		box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 1px 4px 0 rgba(0,0,0,.08), 0 3px 1px -2px rgba(0,0,0,.2);
 		width: 97%;
@@ -291,9 +287,11 @@
 
 /********** Calendar **********/
 	#calendar {
+		-webkit-flex: 0 0 15%;
+		flex: 0 0 15%;
 		width: 97%;
-		margin: 10px 25px;
-		white-space: nowrap;
+		min-width: 310px;
+		margin: 10px 0px 0px 25px;
 		-ms-user-select: none;
 		-moz-user-select: none;
 		-webkit-user-select: none;
@@ -316,7 +314,7 @@
 		padding: 0;
 	}
 	dl {
-		margin: 0px 50px;
+		margin-left: 50px;
 		padding-bottom: 20px;
 	}
 	dt {
@@ -324,8 +322,8 @@
 		padding-top: 10px;
 	}
 	dd {
-		list-style-type: decimal;
 		margin-left: 25px;
+		white-space: nowrap;
 	}
 
 /********** Accessibility **********/
@@ -335,12 +333,59 @@
 	}
 
 /********** Media Queries **********/
+	@media screen and (max-width: 950px) {
+		#calendar {
+			min-width: 270px;
+		}
+		h2.calendar {
+			margin-left: 0px;
+		}
+		h3.calendar {
+			margin-left: 5px;
+		}
+		dl {
+			margin-left: 10px;
+		}
+		dd {
+			margin-left: 15px;
+		}
+	}
 	@media screen and (max-width: 750px) {
 		#wrapper {
 			display: block;
 		}
+		::-webkit-scrollbar {
+				width: 0px;
+		}
+		#menu-bar {
+			box-shadow: initial;
+		}
+		#logo > img {
+			max-height: 35px;
+			margin-top: 5px;
+		}
+		#branding {
+			-webkit-flex: 1 1 100%;
+			flex: 1 1 100%;
+		}
+		h1 {
+			font-size: 15px;
+		}
+		#menu-links {
+			-webkit-flex: 1 1 50%;
+			flex: 1 1 50%;
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+		.menu-item {
+			-webkit-flex: 0 1 50%;
+			flex: 0 1 50%;
+			text-align: center;
+			padding: 5px 0;
+		}
 		#page {
 			display: block;
+			overflow-y: hidden;
 		}
 		#calendar {
 			width: 100%;
@@ -376,45 +421,6 @@
 		dd {
 			margin-left: 0px;
 		}
-	}
-	@media screen and (min-width: 570px) {
-		body, html {
-			overflow: hidden;
-		}
-		#wrapper {
-			overflow-x: hidden;
-		}
-	}
-	@media screen and (max-width: 570px) {
-		::-webkit-scrollbar {
-				width: 0px;
-		}
-		#menu-bar {
-			box-shadow: initial;
-		}
-		#logo > img {
-			max-height: 35px;
-			margin-top: 5px;
-		}
-		#branding {
-			-webkit-flex: 1 1 100%;
-			flex: 1 1 100%;
-		}
-		h1 {
-			font-size: 15px;
-		}
-		#menu-links {
-			-webkit-flex: 1 1 50%;
-			flex: 1 1 50%;
-			-webkit-justify-content: center;
-			justify-content: center;
-		}
-		.menu-item {
-			-webkit-flex: 0 1 50%;
-			flex: 0 1 50%;
-			text-align: center;
-			padding: 5px 0;
-		}
 		.module {
 			box-shadow: initial;
 		}
@@ -428,5 +434,13 @@
 		}
 		h3 {
 			font: 27px/34px Arial, sans-serif;
+		}
+	}
+	@media screen and (min-width: 750px) {
+		body, html {
+			overflow: hidden;
+		}
+		#wrapper {
+			overflow-x: hidden;
 		}
 	}
