@@ -263,15 +263,15 @@ var myModules = [
 	},
 	{"week":"Week 3",
 	"topics":[
-		{"date":"June 12, 2017", "title":"Business Processes",
-			"summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture model. Regulations (i.e., Compliance) are important, but these are the topics of other accounting courses, and Environment is a very broad concept that touches on several disciplines beyond the scope of this course. (In the future, I may add a lecture to this course that explains the Environment block of the arch.) However, it is worthwhile to discuss the Business Model block of the foundation, especially in the context of the primary tool used for communicating business processes: diagramming. Understanding this block will prepare you to learn about the information life cycle.</p>",
+		{"date":"June 12, 2017", "title":"Business Model",
+			"summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture model. Compliance is important, but this is primarily the topic of other accounting courses. However, a discussion of the other two Environment blocks, Business Model and Risk, is worthwhile to give context to the other sections of the arch. We discuss the Risk block later in connection with the Control section. We discuss Business Model at this point for two reasons. First, this foundational block highlights the informational needs of internal and external stakeholders. Second, diagrams are the primary tool for communicating the processes that make up the business model, and discussing these processes is a convenient way to learn how to read and draw diagrams.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/robbers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/robbers-solution-uhxxx.html"},
-				{"label":"Lecture", "type":"button", "href":"lectures/business-processes.html"},
-				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/business-processes/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-processes/solution-uhxep.html"},
-				{"label":"Diagram", "type":"button", "href":"supplement/business-processes/payment-process.png", "filetype":"Image"},
+				{"label":"Lecture", "type":"button", "href":"lectures/business-model.html"},
+				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/business-model/assignment.html"},
+				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-model/solution-uhxep.html"},
+				{"label":"Diagram", "type":"button", "href":"supplement/business-model/payment-process.png", "filetype":"Image"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"readings":[
