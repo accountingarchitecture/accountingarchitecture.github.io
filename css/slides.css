@@ -41,7 +41,7 @@
 	text-align: left;
 }
 
-.reveal .slides ul, .reveal .slides ol {
+.reveal .slides ul, .reveal .slides ol, .reveal .slides dl {
 	display: block;
 }
 
