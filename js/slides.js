@@ -49,11 +49,11 @@ Reveal.initialize({
 	// Opens links in an iframe preview overlay
 		previewLinks: false,
 	// Transition style
-		transition: 'slide', // none/fade/slide/convex/concave/zoom
+		transition: 'none', // none/fade/slide/convex/concave/zoom
 	// Transition speed
 		transitionSpeed: 'default', // default/fast/slow
 	// Transition style for full page slide backgrounds
-		backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+		backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
 	// Number of slides away from the current that are visible
 		viewDistance: 3,
 	// Optional reveal.js plugins
