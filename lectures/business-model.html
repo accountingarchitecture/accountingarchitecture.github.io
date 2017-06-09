@@ -32,7 +32,7 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture arch" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>The Business Model includes an entity's operations, ownership and financing, governance, and investments. All of these aspects of the business model, especially the operations, impact the informational needs of the entity's stakeholders. As a result, a clear understanding of business cycles and processes is vital for implementing effective accounting architecture.</p>
+					<p>The Business Model includes an entity's operations, ownership and governance, financing, and investments. All of these aspects of the business model, especially the operations, impact the informational needs of the entity's stakeholders. As a result, a clear understanding of business cycles and processes is vital for implementing effective accounting architecture.</p>
 				</div>
 			</div>
 		</section>
@@ -44,8 +44,8 @@
 
 		<section>
 			<h3>Business Processes</h3>
-			<p>A <u><em>business process</em></u> is a series of tasks or activities that serve to transfer resources between two parties. The process begins with a pre-determined trigger event (e.g., receiving a sales order from a customer) and ends when the process objective (e.g., depositing customer payment) has been achieved. For accountants, the &ldquo;recording&rdquo; tasks in each process are vital because these are the steps in the process that serve to keep the accounting records accurate and up-to-date. It is insufficient simply to assume that transactions will be recorded. These tasks must be an explicit part of any business process.</p>
-			<p>(NB: The word &ldquo;process&rdquo; can mean a series of tasks, but it may also be used mean a task within a series. This can be confusing.)</p>
+			<p>A <u><em>business process</em></u> is a series of tasks or activities that serve to transfer resources&mdash;goods, services, money and/or information&mdash;between two parties. The process begins with a pre-determined trigger event (e.g., receiving a sales order from a customer) and ends when the process objective (e.g., depositing customer payment) has been achieved. Additionally, a complete process will include the tasks necessary to record all accounting data about the process (e.g., increase in accounts receivable for a sale on credit).</p>
+			<p>(NB: The word &ldquo;process&rdquo; can mean a series of tasks, but it may also be used to mean a task within a series. This ambiguity can be confusing.)</p>
 		</section>
 
 		<section>
@@ -109,32 +109,37 @@
 
 		<section>
 			<h3>Need for Flexibility</h3>
-			<p>Just as financial accounting, tax, and auditing standards reflect differences in business models between companies and industries, the identification of relevant business cycles is also unique. For example, the production of inventory or fixed assets is no longer a relevant component of many business models, whereas given the importance of corporate taxes, a tax cycle might manifest. In a services firm, such as is common to public accounting, the distinction between the expenditure and payroll cycles may be negligent because employees are the primary assets of the firm. A company that deals primarily in the creation of open source software might not even have a revenue cycle.</p>
+			<p>Accounting, tax, and auditing standards apply to different business models differently. Similarly, the identification of relevant business cycles also depends on the business model. For example, the conversion cycle (i.e., production of inventory) is not a relevant component of service-oriented business models, whereas given the significance of tax planning and compliance, a tax cycle might be an important additional business cycle. The processes and cycles listed here are merely examples, although some, such as those processes in the revenue and expenditure cycles, may be common across multiple business models. Accounting architecture must be specialized enough to accommodate the specific processes and cycles in an entity's business model.</p>
+		</section>
+
+		<section>
+			<h3>Accounting Information</h3>
+			<p>To accountants, the need for a financial reporting process, including internal audit and tax tasks, is an obvious part of the Compliance block of the Environment section of accounting architecture. The data for this financial reporting process (i.e., the data to create internal and external financial reports) comes from the other individual business processes. The recording tasks in these other processes serve to keep accounting records accurate and up-to-date. It is insufficient simply to assume that transactions will be recorded. These tasks must be an explicit part of any business process.</p>
 		</section>
 
 		<section>
 			<h3>A Word on Ledgers</h3>
-			<p>Regulation&mdash;part of the Compliance block of the architecture&mdash;dictates the reporting of financial items in a specific fashion without much room for flexibility. As a result, a financial reporting cycle is vital, at least for public companies. (Because lenders may also require financial disclosures&mdash;another component of the Compliance block&mdash;the need for a financial reporting cycle is not unique to public companies.) However, that is not a prescription to have a general ledger or general ledger cycle. Journals and ledgers are merely an example of an information system. The information system is not restricted to one form, and informational needs, technological feasibility, best practices, and preferences will dictate how to track accounting, tax, payroll, HR, etc., information.</p>
+			<p>Accounting records are necessary. Financial accounting textbooks teach that &ldquo;accounting records&rdquo; means journals and ledgers. However, this is neither necessarily nor even likely the case. Journals and ledgers are merely an example of an information system. In fact, double-entry accounting is merely an example method for maintaining accounting records. The information system is not restricted to one form, and informational needs, technological feasibility, best practices, and preferences will dictate how to track accounting, tax, payroll, HR, etc., information.</p>
 		</section>
 
 		<section>
 			<h3>Data &ne; Presentation</h3>
-			<p>One of the reasons why accounting data is not restricted to the familiar journal and ledger form is that data is separate from presentation. For example, a journal is nothing more than a series of accounts with their associated debit or credit adjustments sorted by date, and a ledger is nothing more than the same list of accounts with their associated debits and credits sorted by account. They are simply two presentations of the same data, and several other presentations could also be acceptable. Data is the relevant construct when measuring economic activities.</p>
+			<p>One of the reasons why accounting data is not restricted to the familiar journal and ledger form is that data is separate from presentation. For example, a journal is nothing more than a series of accounts with their associated debit or credit adjustments sorted by date, and a ledger is nothing more than the same list of accounts with their associated debits and credits sorted by account. They are simply two presentations of the same data, and in the case of digital data it would not be wise to store this data twice for the sole purpose of having the data presented in two different ways. Data is the relevant construct when measuring economic activities. Presentation is driven by the type of desired report. The journal model and the ledger model are simply types of reports.</p>
 		</section>
 
 		<section>
-			<h3>What's the Point?</h3>
-			<p>If information systems and business processes are unique to each organization, what is the point of teaching anything? It may not be possible to answer this question satisfactorily, but the truth is that an understanding of principles and examples makes it easier to adapt to unique situations in the future, so the goal becomes to provide exposure to new ideas, and open the door towards being able to acquire additional information about specific implementations.</p>
-			<p>The tool to enable future learning about information systems is knowledge of the individual building blocks, and this is the focus of the accounting architecture. The tool to enable future learning about business models is the ability to read diagrams.</p>
+			<h3>Understanding the Processes</h3>
+			<p>Although information systems and business processes are unique to each organization, familiarity with example processes and cycles makes adaptation to unique circumstances easier. (This is primary purpose of learning the concepts of accounting architecture. Familiarity with information principles, technologies, and controls is the first step toward adapting these concepts to a specific business model.) Additionally, the CPA exam covers business cycles and processes in, at least, the Auditing section.</p>
+			<p>The primary tools for communicating the configuration of business processes are <u><em>diagrams</em></u>. As a result, the ability to read diagrams is a necessary precursor to learning a new process.</p>
 		</section>
 
 		<section>
-			<h3>Diagram</h3>
+			<h3>Diagrams</h3>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width:50%">
 					<p>A diagram is a visual representation of logic useful for efficient communication. Diagrams are not the only tool for communicating a series of processes, but drawings are more efficient than narrations. They are frequently easier to understand and interpret. Because they can portray multiple parts of the whole at once, they can identify links between objects.</p>
 				</div>
-				<div class="flex-item"><img src="../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/>
+				<div class="flex-item override"><img src="../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/>
 				</div>
 			</div>
 		</section>
@@ -142,26 +147,23 @@
 		<section>
 			<h3>Diagrams in Action</h3>
 			<div class="flex-row" style="-webkit-justify-content: flex-start; justify-content: flex-start">
-				<div class="flex-item" style="max-width: 90%"><blockquote>I'm going to make a flow process chart for each of the parts that make up the gun. These charts will show, step by step, how the part is made.<br>&ndash; Alan Mogensen</blockquote></div>
+				<div class="flex-item" style="max-width: 90%"><blockquote>I'm going to make a flow process chart for each of the parts that make up the gun. These charts will show, step by step, how the part is made.<br>&ndash; Alan Mogensen to Remington Arms Company foreman</blockquote></div>
 			</div>
 			<div class="flex-row" style="-webkit-justify-content: flex-end; justify-content: flex-end">
-				<div class="flex-item" style="max-width: 90%"><blockquote>I made the chart, and I found out that we were doing some dumb stupid things that I didn't realize we were doing so we're fixing them.<br>&ndash; Remington Arms Company foreman</blockquote></div>
+				<div class="flex-item" style="max-width: 90%"><blockquote>I made the chart, and I found out that we were doing some dumb stupid things that I didn't realize we were doing so we're fixing them.<br>&ndash; Remington Arms Company foreman to Alan Mogensen</blockquote></div>
 			</div>
 		</section>
 
 		<section>
 			<h3>Two Types of Models</h3>
-			<ul>
-				<li><u><em>Activity models</em></u> describe a series of tasks that comprise a system. This system may be a computer program or a business process or cycle involving many programs and people, called agents. Activity models track flow of resources, data, and control. Information systems focus on data flow, but control flow is also important.</li>
-				<li><u><em>Structure models</em></u> describe the characteristics of people, assets, and data and their relationships with one another. Structure models are useful for creating conceptual models of data stores.</li>
-			</ul>
-			<p></p>
+			<p><u><em>Activity models</em></u> describe a series of tasks that comprise a system. This system may be a computer program or a business process or cycle involving many programs and people, called agents. Activity models track flow of resources, data, and control. Information systems focus on data flow, but control flow is also important.</p>
+			<p><u><em>Structure models</em></u> describe the characteristics of people, assets, and data and their relationships with one another. Structure models are useful for creating conceptual models of data stores.</p>
 		</section>
 
 		<section>
 			<h3>Activity Model</h3>
 			<div class="flex-row">
-				<div class="flex-item"><img src="../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/></div>
+				<div class="flex-item override"><img src="../images/accounting-curriculum.png" alt="Undergraduate Accounting Curriculum" style="max-height: 600px"/></div>
 				<div class="flex-item" style="max-width:50%">
 					<p>A curriculum plan is a simple example of an activity model. Passing a course represents one task, and the model demonstrates how to navigate the entire degree process. This model contains no data objects, so the purpose of the arrows is to demonstrate which tasks must precede others. This is an example of control flow.</p>
 				</div>
@@ -170,91 +172,100 @@
 
 		<section>
 			<h3>Control Flow</h3>
-			<p><u><em>Control flow</em></u> determines which tasks in a process may execute in which order. A traditional card game illustrates this principle. If one turn involves (1) requesting cards and (2) placing a bet, then the requesting cards activity must complete before placing a bet, and both activities must complete before the next player can have a turn. The current task has control, and when it completes, control is passed to the next task.</p>
-			<p>(The accounting architecture arch has a Control section, but this is a different use of the word.)</p>
+			<p><u><em>Control flow</em></u> determines which tasks in a process may execute in which order. A traditional card game illustrates this principle. If one turn involves (1) requesting cards and (2) placing a bet, then the requesting cards activity must be complete before placing a bet, and both activities must complete before the next player can have a turn. The current task has control, and when it completes, control is passed to the next task.</p>
+			<p>(NB: Accountants frequently refer to &ldquo;controls&rdquo; or &ldquo;internal controls.&rdquo; These terms are unrelated to control flow. They are part to the Control section of accounting architecture.)</p>
 		</section>
 
 		<section>
 			<h3>Data Flow</h3>
-			<p>Data flow is simpler to understand than control flow. The purpose of many process tasks, especially the measurement and reporting tasks familiar to accountants, is to create data. Data flow tracks data creation, use, and storage by identifying which task creates the data, which tasks use the data, and where the data is stored. A straightforward example would be a sample sales order process. The customer contacts the sales rep to place an order; the sales rep creates a sales order that the inventory warehouse uses to fill the order; the warehouse passes the sales order to billing department, so that the billing department can create an invoice to send to the customer.</p>
+			<p>The purpose of many process tasks, especially recording tasks familiar to accountants, is to create data. <u><em>Data flow</em></u> tracks data creation, use, and storage by identifying which task creates the data, which tasks use the data, and where the data is stored. A straightforward example would be a sample sales order process. The customer contacts the sales rep to place an order; the sales rep creates a sales order that the inventory warehouse uses to fill the order; the warehouse passes the sales order to the billing department, so that the billing department can create an invoice to send to the customer.</p>
 		</section>
 
 		<section>
 			<h3>Modeling Standards</h3>
-			<p>In order to understand the principles of data and control flow, it is best to view actual diagrams. The curriculum diagram is a rudimentary example, but many diagrams adhere to specific frameworks that include templates (i.e., predefined sets of shapes), and it is necessary to recognize these shapes in order to be able to read and write proper diagrams. Three well-known examples are of diagramming frameworks are:</p>
-			<ul>
+			<p>Sometimes, in order to quickly communicate processes, individuals may draft ad-hoc activity diagrams with arbitrary shapes, just as individuals or groups may invent words or phrases to communicate complex concepts. However, many activity diagrams adhere to specific frameworks with that templates (i.e., predefined sets of shapes). These frameworks serve to make the diagrams more widely understood. Two well-known diagramming frameworks are:</p>
+			<ul style="display: inline-block">
+				<li>Data flow diagrams</li>
 				<li>Flowcharts</li>
-				<li>Data flow diagrams (DFD)</li>
-				<li>Business Process Model and Notation (BPMN)</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Flowchart Shapes</h3>
-			<div class="override"><img src="../images/Flowchart.png" alt="Flowchart Shapes"/></div>
-		</section>
-
-		<section>
-			<h3>Sample Flowchart</h3>
-			<div class="override"></div>
-			<div class="flex-row">
-				<div class="flex-item override"><img src="../images/sample-flowchart.png" alt="Sample Flowchart"/></div>
-				<div class="flex-item" style="max-width: 70%">
-					<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory. (This might occur if inventory has fallen below its reorder point.) Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy of the purchase order to Inventory Control to file with Inventory Control's copy of the purchase requisition, and sends a copy of the purchase order to the Vendor.</p>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h3>Flowchart Conventions</h3>
-			<p>In addition to a set of prescribed shapes, diagramming frameworks also stipulate drawing conventions to increase readability. For example:</p>
-			<ul>
-				<li>Flowcharts are read from top to bottom and left to right.</li>
-				<li>Flow of data and control is signified by arrows with arrowheads.</li>
-				<li>Arrows should only point vertically or horizontally with 90&deg; angles.</li>
-				<li>For system flowcharts with multiple agents, flowcharts are subdivided into swimlanes, which are columns that signify which activities belong to which agent.</li>
 			</ul>
 		</section>
 
 		<section>
 			<h3>Data Flow Diagrams</h3>
-			<p>Two different groups introduced nearly identical templates for DFDs:</p>
-			<div class="override"><img src="../images/DFD.png" alt="DFD Shapes"/></div>
-		</section>
-
-		<section>
-			<h3>Sample DFD</h3>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../images/sample-dfd.png" alt="Sample DFD"/></div>
-				<div class="flex-item" style="max-width: 41%">
-					<p>The Vendor sends an invoice. The invoice is compared to the purchase order for discrepancies. Once the invoice is approved, a check is signed and sent to the Vendor. A journal entry is added to the cash disbursements journal, and a journal voucher is used to update the accounts payable subledger.</p>
+				<div class="flex-item" style="max-width: 55%">
+					<p>Data flow diagrams (DFDs) are one of the simplest forms of diagrams. They use only three shapes, along with arrows to show flow. Two different groups introduced nearly identical templates for DFDs:</p>
+					<p>(NB: This is an example of the multiple uses of &ldquo;process.&rdquo; The whole DFD describes a business process, and the process shape shows one task within the business process.)</p>
 				</div>
+				<div class="flex-item override"><img src="../images/dfd.png" alt="DFD Template"/></div>
 			</div>
 		</section>
 
 		<section>
+			<h3>Sample DFD</h3>
+			<div class="override"><img src="../images/sample-dfd.png" alt="Sample DFD"/></div>
+		</section>
+
+		<section>
+			<h3>Narrative</h3>
+				<p>The vendor sends an invoice. The invoice is compared to the purchase order for discrepancies. If the invoice and the purchase order agree, the invoice is approved and added to the invoice file. A check is prepared from the data in the invoice file and sent to the vendor. The check stub is used to update the cash payments file, and the check stub is filed by vendor and date.</p>
+				<p>(NB: These files may be either digital or physical. For example, the check stub file may be a physical file with printed check stubs, whereas the invoice file is likely a database table with the information from approved invoices.)</p>
+		</section>
+
+		<section>
 			<h3>DFD Conventions</h3>
+			<p>In addition to a set of prescribed shapes, diagramming frameworks may also stipulate drawing conventions. For example:</p>
 			<ul>
-				<li>Flow of data and control is signified by arrows with arrowheads just as with flowcharts.</li>
+				<li>Flow of data and control (i.e., flowlines) is signified by arrows with arrowheads.</li>
 				<li>Because DFDs have no data shapes other than data stores, the data transfered from step to step is displayed as a label next to the arrow between the two steps.</li>
-				<li>Gane-Sarson arrows only point vertically or horizontally with 90&deg; angles, but Yourdon arrows can point in any direction and even curve.</li>
-				<li>DFDs have no predetermined direction or swimlanes.</li>
+				<li>Gane-Sarson flowlines only point vertically or horizontally with 90&deg; angles, but Yourdon flowlines can point in any direction and even curve.</li>
 			</ul>
 		</section>
 
 		<section>
 			<h3>Simplicity &ne; Readability</h3>
-			<p>Unlike flowcharts which have a large set of shapes to increase specificity, data flow diagrams promote simplicity by restricting themselves to three simple shapes. The large flowchart template can result in a cluttered diagram, which reduces readability. However, simplicity will not always increase readability. For example, the lack of predetermined direction for DFDs conflicts with a preference to read from top to bottom and left to right. Additionally, the lack of swimlanes obscures accountability (i.e., who performs a task), which is important information for accountants and auditors. As a result, DFDs are better for high-level and flowcharts better for low-level perspectives.</p>
+			<p>Data flow diagrams promote simplicity by restricting themselves to three shapes. Other diagramming frameworks with larger templates can result in cluttered diagrams, which reduces readability. However, simplicity will not always increase readability. For example, the lack of predetermined direction for DFDs conflicts with a preference to read from top to bottom and left to right. Additionally, DFDs have no mechanism for communicating accountability (i.e., who performs a task), which is important information for accountants and auditors. As a result, DFDs may be better for a high-level overview, instead of a detailed perspective.</p>
 		</section>
 
 		<section>
-			<h3>Business Process Model and Notation</h3>
-			<p>Business Process Model and Notation (BPMN) is an attempt to create a modeling notation specifically for business processes. BPMN comprises multiple diagram types, and these different types follow different conventions and rely on different templates. Two examples are <u><em>collaborations</em></u>, which are similar to flowcharts and <u><em>choreographies</em></u>, which are similar to DFDs.</p>
+			<h3>Types of Flowcharts</h3>
+			<p>Flowcharts are one of the oldest diagramming frameworks and, perhaps, also the most common. Although they are more complex than DFDs, they can provide more relevant information about a business process. The two primary types of flowcharts are:</p>
+			<ul>
+				<li><u><em>System flowcharts</em></u> show data and control flow through a system from origin through processing to final disposition.</li>
+				<li><u><em>Program flowcharts</em></u> show logic and control flow in a program, usually a computer program.</li>
+			</ul>
+			<p>System flowcharts are for business processes. However, because of the current reliance on digital systems, program flowcharts can be a valuable tool for diagramming automated tasks.</p>
 		</section>
 
 		<section>
-			<h3>Ad-hoc</h3>
-			<p>The ability to read and write flowcharts and DFDs provides a valuable basis for understanding and communicating business processes, a basis which is not necessarily improved by exposure to yet another diagramming framework. Part of the reason for this is that when attempting to describe a process, individuals may create diagrams on the spot that follow no prescribed framework. The measure of a diagram is not its adherence to templates, but rather its ability to share information. The skill of reading and writing flowcharts and DFDs simply increases the likelihood of being able to create and read useful diagrams.</p>
+			<h3>Common Flowchart Shapes</h3>
+			<div class="override"><img src="../images/flowchart.png" alt="Flowchart Shapes"/></div>
+		</section>
+
+		<section>
+			<h3>Sample Flowchart</h3>
+				<div class="override"><img src="../images/sample-flowchart.png" alt="Sample Flowchart" style="max-height: 600px"/></div>
+		</section>
+
+		<section>
+			<h3>Narrative</h3>
+			<p>Inventory Control reviews inventory levels and generates a purchase requisition for inventory. (This might occur if inventory has fallen below its reorder point.) Inventory Control then files a copy of the purchase requisition and sends a copy to the Purchasing Department. The Purchasing Department generates a purchase order, files a copy of the purchase order with the purchase requisition, sends a copy of the purchase order to Inventory Control to file with Inventory Control's copy of the purchase requisition, and sends a copy of the purchase order to the Vendor.</p>
+			<p>(NB: This flowchart demonstrates a paper-based system, but the process would be only marginally different if the purchase requisition and purchase orders were digital.)</p>
+		</section>
+
+		<section>
+			<h3>Flowchart Conventions</h3>
+			<p>Flowcharts have more shapes in their template than DFDs, and they also have more specific drawing conventions. Because of the high number of shapes in a flowchart, these conventions can significantly increase readability:</p>
+			<ul>
+				<li>Flowcharts are read from top to bottom and left to right.</li>
+				<li>Flow of data and control is signified by arrows with arrowheads.</li>
+				<li>Flowlines should only point vertically or horizontally with 90&deg; angles. Arrows should also not cross. Connectors serve to link process steps when unbroken flowlines are not possible.</li>
+				<li>For system flowcharts with multiple agents, flowcharts are subdivided into swimlanes (i.e., columns that signify which activities belong to which agent).</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Sales Process</h3>
 		</section>
 
 		<section>
