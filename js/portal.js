@@ -219,12 +219,7 @@ var myModules = [
 					{"label":"Measure Your Life", "type":"button", "href":"supplement/professionalism/christensen.pdf", "filetype":"PDF"}
 				]},
 				{"set":"Optional", "list":[
-					{"label":"Diligence", "type":"button", "href":"http://www.theatlantic.com/magazine/archive/1978/03/writing-typing-and-economics/305165/"},
-					{"label":"Enron", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=rgm&AN=504193370&site=eds-live"},
-					{"label":"Worldcom", "type":"button", "href":"supplement/professionalism/worldcom.pdf", "filetype":"PDF"},
-					{"label":"Barings Bank", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=9503077597&site=eds-live"},
-					{"label":"Bernie Madoff", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=38711267&site=eds-live"},
-					{"label":"Arthur Andersen", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=7079735&site=eds-live"}
+					{"label":"Diligence", "type":"button", "href":"http://www.theatlantic.com/magazine/archive/1978/03/writing-typing-and-economics/305165/"}
 				]}
 			],
 			"due":[
