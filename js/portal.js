@@ -178,7 +178,7 @@ document.getElementById('calendar').addEventListener('click', function(e) {
 var myModules = [
 	{"week":"Week 1",
 	"topics":[
-		{"date":"May 30, 2017", "title":"Getting Started",
+		{"date":"August 28, 2017", "title":"Getting Started",
 			"summary":"<p>Welcome to ACCT 4020 &ndash; Accounting and Information Systems. To begin, carefully read the course syllabus. You will find a link to the syllabus in the navigation buttons below. The syllabus explains the course policies, objectives, and deliverables. The syllabus also explains what this course <em>is</em> and what it <em>is not</em>. The more carefully you read the syllabus, the better prepared you will be for the unique nature of the course. The other buttons listed below link to individual components of the syllabus that are required by the Fogelman College. After reading, you will find a syllabus quiz on eCourseware.</p>" ,
 			"nav":[
 				{"label":"Syllabus", "type":"button", "href":"supplement/getting-started/syllabus.html"},
@@ -191,7 +191,7 @@ var myModules = [
 				{"deliverable":"Syllabus Quiz", "deadline":"31 May 2017"}
 			]
 		},
-		{"date":"May 31, 2017", "title":"Practice Set",
+		{"date":"August 28, 2017", "title":"Practice Set",
 			"summary":"<p>As the syllabus explains, it is customary for accounting students to complete a practice set. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for this is that it takes approximately 20 hours to complete, and I want the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>. In addition to the final deadline, to help you stay on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set. The Milestones button links to an explanation of these milestones, and the course schedule reports the milestone due dates. I will also upload a tutorial to the course portal to demonstrate the practice set. You may watch as much or as little of the tutorial as you feel you need.</p><p>NB: Every semester students email me after attempting part of the practice set to complain that it is too hard or confusing. The reason for these emails is always, <strong>always</strong>, <strong>ALWAYS</strong> because the students have not read what I assigned. I urge you not to assume that you can succeed at this practice set without reading the supporting documents.",
 			"nav":[
 				{"label":"Instructions", "type":"button", "href":"supplement/getting-started/syllabus.html#practiceset"},
@@ -204,11 +204,7 @@ var myModules = [
 				{"deliverable":"Quiz", "deadline":"3 June 2017"},
 			]
 		},
-	]
-	},
-	{"week":"Week 2",
-	"topics":[
-		{"date":"June 5, 2017", "title":"Professionalism",
+		{"date":"August 30, 2017", "title":"Professionalism",
 			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. Students should read the lecture and the required readings in preparation for a quiz. The schedule lists the quiz due date. This format will be the norm for the remainder of the semester.</p><p>Professionalism will be important throughout this course. Although I will not require it, I invite students to dress professionally when coming to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. Furthermore, as the syllabus indicates, I will grade you based on your professionalism during the semester.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/professionalism.html"},
@@ -226,8 +222,12 @@ var myModules = [
 				{"deliverable":"Quiz", "deadline":"5 June 2017"},
 				{"deliverable":"Homework", "deadline":"10 June 2017"}
 			]
-		},
-		{"date":"June 7, 2017", "title":"Accounting Architecture",
+		}
+	]
+	},
+	{"week":"Week 2",
+	"topics":[
+		{"date":"September 6, 2017", "title":"Accounting Architecture",
 				"summary":"<p>This lecture marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some are foreign because I have invented the terms. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the foundation for this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Starting this week, I will include a puzzle each week. These are designed to get your creative juices flowing. They are completely optional, but I will give extra credit for each correct solution. Once the topic is archived, I will replace the puzzle with its solution.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/sudoku.html"},
@@ -258,7 +258,7 @@ var myModules = [
 	},
 	{"week":"Week 3",
 	"topics":[
-		{"date":"June 12, 2017", "title":"Business Model",
+		{"date":"September 11, 2017", "title":"Business Model",
 			"summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture model. Compliance is important, but this is primarily the topic of other accounting courses. However, a discussion of the other two Environment blocks, Business Model and Risk, is worthwhile to give context to the other sections of the arch. We discuss the Risk block later in connection with the Control section. We discuss Business Model at this point for two reasons. First, this foundational block highlights the informational needs of internal and external stakeholders. Second, diagrams are the primary tool for communicating the processes that make up the business model, and discussing these processes is a convenient way to learn how to read and draw diagrams.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/robbers.html"},
@@ -279,8 +279,12 @@ var myModules = [
 				{"deliverable":"Quiz", "deadline":"12 June 2017"},
 				{"deliverable":"Puzzle", "deadline":"17 June 2017"},
 				{"deliverable":"Homework", "deadline":"17 June 2017"}			]
-		},
-		{"date":"June 14, 2017", "title":"Information Life Cycle &amp; Big Data",
+		}
+	]
+	},
+	{"week":"Week 4",
+	"topics":[
+		{"date":"September 18, 2017", "title":"Information",
 			"summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, I have asked my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science to write the lecture for this topic. This lecture will explain the role that an information system should play (i.e., what the system <em>does</em>). Beginning next week, the Technology section will demonstrate the makeup of an information system (i.e., what the system <em>is</em>).</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"https://docs.google.com/presentation/d/13fG0U0H49izogaeotdDkZVxX9F4GT99FB3wK2kU9Big/pub?start=false&loop=false&delayms=0&slide=id.p"},
@@ -307,9 +311,9 @@ var myModules = [
 		}
 	]
 	},
-	{"week":"Week 4",
+	{"week":"Week 5",
 	"topics":[
-		{"date":"June 19, 2017", "title":"Hardware",
+		{"date":"September 25, 2017", "title":"Hardware",
 			"summary":"<p>This is the first lecture on the Technology section of the accounting architecture model. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course were the <em>most</em> interesting&mdash;it introduces concepts that are valuable towards understanding the deeper points of systems design. As you read the lecture, I encourage you to think about the hardware in your own computing device, and you may find that these topics are quite close to home. I have not assigned homework for this topic, so you should consider investing additional time with the practice set.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/coins.html"},
@@ -327,8 +331,12 @@ var myModules = [
 				{"deliverable":"Quiz", "deadline":"19 June 2017"},
 				{"deliverable":"Puzzle", "deadline":"24 June 2017"}
 			]
-		},
-		{"date":"June 21, 2017", "title":"Open Source",
+		}
+	]
+	},
+	{"week":"Week 6",
+	"topics":[
+		{"date":"October 2, 2017", "title":"Open Source",
 			"summary":"<p>This lecture begins our multi-week discussion of the Software block of the arch. This first lecture introduces the concepts behind open content as a precursor to subsequent introductions of the various components of the Software block. Please pay special attention to the required readings because open source is the primary force behind the development of enterprise-grade information systems.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
@@ -356,9 +364,9 @@ var myModules = [
 		}
 	]
 	},
-	{"week":"Week 5",
+	{"week":"Week 7",
 	"topics":[
-		{"date":"June 26, 2017", "title":"Operating Systems",
+		{"date":"October 9, 2017", "title":"Operating Systems",
 			"summary":"<p>This lecture will explain the fundamental parts of an operating system, as well as a brief historical overview of the operating systems most prominently used in enterprise-grade information systems. I will record and post a video tutorial demonstrating some functionality of the operating system we will use during this course. I encourage you to watch the tutorial before attempting the homework assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.html"},
@@ -379,8 +387,12 @@ var myModules = [
 				{"deliverable":"Puzzle", "deadline":"1 July 2017"},
 				{"deliverable":"Homework", "deadline":"1 July 2017"}
 			]
-		},
-		{"date":"June 28, 2017", "title":"Storage",
+		}
+	]
+	},
+	{"week":"Week 8",
+	"topics":[
+		{"date":"October 18, 2017", "title":"Storage",
 			"summary":"<p>This week we begin our discussion of the Storage block of the Architecture. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage is a prerequisite for understanding analytics.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/storage.html"},
@@ -403,9 +415,9 @@ var myModules = [
 		}
 	]
 	},
-	{"week":"Week 6",
+	{"week":"Week 9",
 	"topics":[
-		{"date":"July 3, 2017", "title":"Data Analytics",
+		{"date":"October 23, 2017", "title":"Data Analytics",
 			"summary":"<p>Now that we have discussed Storage, we can return to the Software block and discuss data analytics, a current hot topic. I will provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I have also attached a link to the database I use in the tutorial: Library DB. Please view the tutorial before you attempt this assignment, and please work through the entire assignment before opening the homework quiz associated with the assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
@@ -436,9 +448,9 @@ var myModules = [
 		}
 	]
 	},
-	{"week":"Week 7",
+	{"week":"Week 10",
 	"topics":[
-		{"date":"July 10, 2017", "title":"Services",
+		{"date":"October 30, 2017", "title":"Services",
 			"summary":"<p>Services is the final block in the Technology leg of the accounting architecture. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of today's computing environment. I will also provide a video tutorial that explains how to complete the homework assignment. Also, the final practice set deadline is this week. You should have already completed all five milestones, and this week you should complete the remaining modules after milestone 5.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
@@ -465,9 +477,37 @@ var myModules = [
 		}
 	]
 	},
-	{"week":"Week 8",
+	{"week":"Week 11",
 	"topics":[
-		{"date":"July 17, 2017", "title":"Security",
+		{"date":"November 6, 2017", "title":"Risk &amp; Control",
+			"summary":"<p>Security is the first block of the Control section of the Architecture. This section of the course will especially appeal to the students who have had difficulty recognizing the link between accounting and the lectures up to this point. Unlike the prior content, which is based on my own model of accounting architecture, the Control section is based on the AICPA Trust Services Framework, so the AICPA agrees that this knowledge is relevant to accountants. Similarly, the homework assignment for this topic is particularly relevant to accountants, especially in their role as information custodians.</p>",
+			"nav":[
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution-pnnvr.html"},
+				{"label":"Lecture", "type":"button", "href":"lectures/risk-and-control.html"},
+				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"}
+			],
+			"readings":[
+				{"set":"Required", "list":[
+					{"label":"Population Data", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"},
+					{"label":"Everyone's Problem", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"}
+				]},
+				{"set":"Optional", "list":[
+					{"label":"Breaches", "type":"button", "href":"http://www.esecurityplanet.com/network-security/76-percent-of-organizations-breached-in-2014.html"},
+					{"label":"Passphrases", "type":"button", "href":"http://www.esecurityplanet.com/hackers/why-longer-passphrases-are-more-secure-than-passwords-video.html"}
+				]}
+			],
+			"due":[
+				{"deliverable":"Quiz", "deadline":"17 July 2017"},
+				{"deliverable":"Puzzle", "deadline":"22 July 2017"},
+				{"deliverable":"Homework", "deadline":"22 July 2017"}
+			]
+		}
+	]
+	},
+	{"week":"Week 12",
+	"topics":[
+		{"date":"November 13, 2017", "title":"Security",
 			"summary":"<p>Security is the first block of the Control section of the Architecture. This section of the course will especially appeal to the students who have had difficulty recognizing the link between accounting and the lectures up to this point. Unlike the prior content, which is based on my own model of accounting architecture, the Control section is based on the AICPA Trust Services Framework, so the AICPA agrees that this knowledge is relevant to accountants. Similarly, the homework assignment for this topic is particularly relevant to accountants, especially in their role as information custodians.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
@@ -490,8 +530,12 @@ var myModules = [
 				{"deliverable":"Puzzle", "deadline":"22 July 2017"},
 				{"deliverable":"Homework", "deadline":"22 July 2017"}
 			]
-		},
-		{"date":"July 19, 2017", "title":"Availability",
+		}
+	]
+	},
+	{"week":"Week 13",
+	"topics":[
+		{"date":"November 20, 2017", "title":"Availability",
 			"summary":"<p>Availability is the second Control block. This lecture ties significantly into the Services lecture because the principles of this lecture often deal with the availability of online (i.e., cloud) systems. I will also provide a video tutorial explaining how to complete the homework assignment.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
@@ -513,9 +557,9 @@ var myModules = [
 		}
 	]
 	},
-	{"week":"Week 9",
+	{"week":"Week 14",
 	"topics":[
-		{"date":"July 24, 2017", "title":"Processing Integrity",
+		{"date":"November 27, 2017", "title":"Processing Integrity",
 			"summary":"<p>Processing Integrity is the third Control block. This lecture relates to the Storage lecture because it addresses tools that verify error prevention in stored data, especially relational databases. I will provide a video tutorial that showcases a diagramming tool, but you are not required to use this particular tool to complete the homework assignment. Also, this week's puzzle will be the final puzzle of the semester.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
@@ -533,9 +577,9 @@ var myModules = [
 		}
 	]
 	},
-	{"week":"Week 10",
+	{"week":"Week 15",
 	"topics":[
-		{"date":"July 31, 2017", "title":"Confidentiality",
+		{"date":"December 4, 2017", "title":"Confidentiality",
 			"summary":"<p>Confidentiality, with its related topic of privacy, is the final block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic. Please note the early deadline for this week's homework assignments because of the end of classes. The second, and final, homework assignment this week is very brief and will not interfere with the other bigger assignments due this week, especially the Technology Report.",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/confidentiality.html"},
