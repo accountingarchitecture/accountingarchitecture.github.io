@@ -55,8 +55,9 @@ function schedule(modules) {
 			var hasDeliverable = false;
 			if(modules[i].topics[j].hasOwnProperty('due')) {
 				for(k = 0; k < modules[i].topics[j].due.length; k++) {
-					if(Date.parse(modules[i].topics[j].due[k].deadline) + 86400000 > currentDate) {
-						deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + modules[i].topics[j].due[k].deadline.split(' ')[1] + ' ' + modules[i].topics[j].due[k].deadline.split(' ')[0] + '</dd>';
+					dueDate = new Date(Date.parse(modules[i].topics[j].date) + (modules[i].topics[j].due[k].deadline * 86400000));
+					if(dueDate > currentDate) {
+						deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + '</dd>';
 						hasDeliverable = true;
 						hasTopicWithDeliverable = true;
 					}
@@ -188,7 +189,7 @@ var myModules = [
 				{"label":"Accessibility Assistance", "type":"button", "href":"supplement/getting-started/syllabus.html#accessibility"}
 			],
 			"due":[
-				{"deliverable":"Syllabus Quiz", "deadline":"31 May 2017"}
+				{"deliverable":"Syllabus Quiz", "deadline":"1"}
 			]
 		},
 		{"date":"August 28, 2017", "title":"Practice Set",
@@ -201,7 +202,7 @@ var myModules = [
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"3 June 2017"},
+				{"deliverable":"Quiz", "deadline":"5"},
 			]
 		},
 		{"date":"August 30, 2017", "title":"Professionalism",
@@ -219,8 +220,8 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"5 June 2017"},
-				{"deliverable":"Homework", "deadline":"10 June 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Homework", "deadline":"3"}
 			]
 		}
 	]
