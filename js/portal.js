@@ -248,10 +248,10 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"7 June 2017"},
-				{"deliverable":"Puzzle", "deadline":"10 June 2017"},
-				{"deliverable":"Homework", "deadline":"10 June 2017"},
-				{"deliverable":"Milestone 1", "deadline":"10 June 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"3"},
+				{"deliverable":"Homework", "deadline":"3"},
+				{"deliverable":"Milestone 1", "deadline":"3"}
 			]
 		}
 	]
@@ -276,9 +276,11 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"12 June 2017"},
-				{"deliverable":"Puzzle", "deadline":"17 June 2017"},
-				{"deliverable":"Homework", "deadline":"17 June 2017"}			]
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"},
+				{"deliverable":"Milestone 2", "deadline":"5"}
+			]
 		}
 	]
 	},
@@ -303,10 +305,10 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"14 June 2017"},
-				{"deliverable":"Homework", "deadline":"17 June 2017"},
-				{"deliverable":"Milestone 2", "deadline":"17 June 2017"}
-
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"},
+				{"deliverable":"Milestone 3", "deadline":"5"}
 			]
 		}
 	]
@@ -328,8 +330,10 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"19 June 2017"},
-				{"deliverable":"Puzzle", "deadline":"24 June 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"},
+				{"deliverable":"Milestone 4", "deadline":"5"}
 			]
 		}
 	]
@@ -357,9 +361,10 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"21 June 2017"},
-				{"deliverable":"Homework", "deadline":"24 June 2017"},
-				{"deliverable":"Milestone 3", "deadline":"24 June 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"},
+				{"deliverable":"Milestone 5", "deadline":"5"}
 			]
 		}
 	]
@@ -383,9 +388,9 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"26 June 2017"},
-				{"deliverable":"Puzzle", "deadline":"1 July 2017"},
-				{"deliverable":"Homework", "deadline":"1 July 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Homework", "deadline":"5"},
+				{"deliverable":"Practice Set", "deadline":"5"}
 			]
 		}
 	]
@@ -408,9 +413,8 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"28 June 2017"},
-				{"deliverable":"Homework", "deadline":"1 July 2017"},
-				{"deliverable":"Milestone 4", "deadline":"1 July 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Homework", "deadline":"3"}
 			]
 		}
 	]
@@ -440,10 +444,9 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"3 July 2017"},
-				{"deliverable":"Puzzle", "deadline":"8 July 2017"},
-				{"deliverable":"Homework", "deadline":"8 July 2017"},
-				{"deliverable":"Milestone 5", "deadline":"8 July 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"}
 			]
 		}
 	]
@@ -469,10 +472,9 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"10 July 2017"},
-				{"deliverable":"Puzzle", "deadline":"15 July 2017"},
-				{"deliverable":"Homework", "deadline":"15 July 2017"},
-				{"deliverable":"Practice Set", "deadline":"15 July 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"}
 			]
 		}
 	]
@@ -498,9 +500,9 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"17 July 2017"},
-				{"deliverable":"Puzzle", "deadline":"22 July 2017"},
-				{"deliverable":"Homework", "deadline":"22 July 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"}
 			]
 		}
 	]
@@ -526,9 +528,9 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"17 July 2017"},
-				{"deliverable":"Puzzle", "deadline":"22 July 2017"},
-				{"deliverable":"Homework", "deadline":"22 July 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"}
 			]
 		}
 	]
@@ -551,8 +553,9 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"19 July 2017"},
-				{"deliverable":"Homework", "deadline":"22 July 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"}
 			]
 		}
 	]
@@ -570,9 +573,8 @@ var myModules = [
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution-stvdt.html"}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"24 July 2017"},
-				{"deliverable":"Puzzle", "deadline":"29 July 2017"},
-				{"deliverable":"Homework", "deadline":"29 July 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Homework", "deadline":"5"}
 			]
 		}
 	]
@@ -592,24 +594,23 @@ var myModules = [
 				]}
 			],
 			"due":[
-				{"deliverable":"Quiz", "deadline":"31 July 2017"},
-				{"deliverable":"Homework", "deadline":"3 August 2017"},
-				{"deliverable":"Final Homework", "deadline":"3 August 2017"},
-				{"deliverable":"Technology Report", "deadline":"3 August 2017"}
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Homework", "deadline":"2"},
+				{"deliverable":"Final Homework", "deadline":"2"}
 			]
 		}
 	]
 	},
 	{"week":"Final",
 	"topics":[
-		{"date":"August 4, 2017", "title":"Final Exam",
+		{"date":"December 13, 2017", "title":"Final Exam",
 			"summary":"<p>All students have until <strong>August 4 @ 23.59</strong> to complete the final exam and to submit evidence of your SETE for extra credit. You may begin the exam at any time during Finals Week prior to the deadline, but you must complete the exam in one sitting. The exam is on eCourseware, and eCourseware also reports the deadline for the exam. I will not reopen or extend the exam <em>for any reason</em>.</p><p>The exam is open-note and open-lecture. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p><strong>Good luck!</strong></p>",
 			"nav":[
 				{"label":"Extra Credit Instructions", "type":"button assignmentbutton", "href":"supplement/final/SETE.html"},
 			],
 			"due":[
-				{"deliverable":"SETE", "deadline":"4 August 2017"},
-				{"deliverable":"Final Exam", "deadline":"4 August 2017"}
+				{"deliverable":"SETE", "deadline":"0"},
+				{"deliverable":"Final Exam", "deadline":"0"}
 			]
 		}
 	]
