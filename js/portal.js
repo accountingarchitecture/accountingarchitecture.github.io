@@ -86,9 +86,8 @@ function isHomeOrArchive() {
 function isCurrentOrArchived(topic) {
 	topicDate = new Date(Date.parse(topic.date));
 	currentDate = new Date();
-	if(topicDate.getDay() == 1 || topicDate.getDay() == 2 || topicDate.getDay() == 5) startDate = new Date(topicDate.valueOf() - 345600000);
-	else if(topicDate.getDay() == 3 || topicDate.getDay() == 4) startDate = new Date(topicDate.valueOf() - 518400000);
-	endDate = new Date(topicDate.valueOf() + (7 - topicDate.getDay()) * 86400000);
+	startDate = new Date(topicDate.valueOf() - (6 + topicDate.getDay()) * 86400000);
+	endDate = new Date(topicDate.valueOf() + ((6 - topicDate.getDay()) * 86400000) + 86399999);
 	if(startDate < currentDate && currentDate <= endDate) return 'current';
 	else if(currentDate > endDate) return 'archived';
 }
