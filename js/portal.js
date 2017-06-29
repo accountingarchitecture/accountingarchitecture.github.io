@@ -15,8 +15,8 @@ function builder(modules) {
 						if(!(~modules[i].topics[j].nav[k].type.indexOf('assignmentbutton') != 0 && isHomeOrArchive() == 'Archive') && !(~modules[i].topics[j].nav[k].type.indexOf('solutionbutton') != 0 && isHomeOrArchive() == 'Home')) {
 							navbuttons += '<a class="' + modules[i].topics[j].nav[k].type + '" ';
 							if(modules[i].topics[j].nav[k].hasOwnProperty('href')) {
-								if(modules[i].topics[j].nav[k].hasOwnProperty('filetype')) navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" ref="noopener" aria-label="' + modules[i].topics[j].nav[k].filetype + ' opens in new window"';
-								else navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" ref="noopener" aria-label="Website opens in new window"';
+								if(modules[i].topics[j].nav[k].hasOwnProperty('filetype')) navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="' + modules[i].topics[j].nav[k].filetype + ' opens in new window"';
+								else navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="Website opens in new window"';
 							}
 							navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
 						}
@@ -25,8 +25,8 @@ function builder(modules) {
 						navbuttons += '<a class="button readingsbutton">Readings</a>';
 						for(l = 0; l < modules[i].topics[j].readings.length; l++) {
 							for(m = 0; m < modules[i].topics[j].readings[l].list.length; m++) {
-								if(modules[i].topics[j].readings[l].list[m].hasOwnProperty('filetype')) readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" ref="noopener" aria-label="' + modules[i].topics[j].readings[l].list[m].filetype + ' opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
-								else readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" aref="noopener" ria-label="Website opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
+								if(modules[i].topics[j].readings[l].list[m].hasOwnProperty('filetype')) readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" rel="noopener" aria-label="' + modules[i].topics[j].readings[l].list[m].filetype + ' opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
+								else readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" rel="noopener" aria-label="Website opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
 							}
 							readsets += '<div class="set"><h3>' + modules[i].topics[j].readings[l].set + '</h3><div class="articles">' + readbuttons + '</div></div>';
 							readbuttons = '';
