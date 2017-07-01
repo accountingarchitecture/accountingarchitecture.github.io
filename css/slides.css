@@ -43,9 +43,14 @@
 .reveal .slides p {
 	text-align: left;
 }
-
 .reveal .slides ul, .reveal .slides ol, .reveal .slides dl {
 	display: block;
+}
+.reveal .slides h1 {
+	font-size: 2.11em;
+}
+.reveal .slides h2 {
+	font-size: 1.55em;
 }
 
 /***** Flexbox Containers *****/
