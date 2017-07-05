@@ -24,21 +24,94 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Operating Systems</h2>
+			<h1>Operating Systems</h1>
 		</section>
 
 		<section>
-			<h3>Accounting Architecture</h3>
+			<h2>Accounting Architecture</h2>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
-				<div class="flex-item" style="max-width: 60%">
-					<p>Software is the most important block in the Technology section. Software performs all of the automated tasks and facilitates all of the manual tasks in the information system. Software stores and retrieves data; software analyses and generates reports. Without software, none of the other technology components could serve their intended purpose.</p>
+				<div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>Software is a fundamental part of the Technology section of accounting architecture. Software performs all of the automated tasks and facilitates the manual tasks in the information system. Software stores and retrieves data; software analyses and generates reports. Without software, none of the other technology components could serve their intended purpose. The <u><em>operating system</em></u> (OS) is a fundamental piece of software. It provides a platform for the functionality of the information system.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Operating System</h3>
+			<h2>Nothing &lsquo;Just Works&rsquo;</h2>
+			<p>Users of personal computers and mobile devices frequently report that their motivation for selecting a particular operating system or platform was that it &ldquo;just works.&rdquo; This is sufficient for an end user because the purpose of the operating system is to facilitate the functionality of the information system by getting out of the user's way. The user should be as little aware of the operating system as possible, and in many situations, especially with Web content, the user never interacts with the operating system at all. An accounting architect, on the other hand, must direct the operating system to meet the users' needs. As a result, the ability to participate in systems design and maintenance relies in large part on familiarity with enterprise-grade operating systems. </p>
+		</section>
+
+		<section>
+			<h2>OSS OS</h2>
+			<p>The capabilities of the operating system have a strong influence over of the capabilities of the information system, and open source has had a strong influence over the capabilities of enterprise-grade operating systems. Despite the popularity of Microsoft Windows and Apple macOS on personal computers, the most widely used enterprise-grade operating systems are open source. Furthermore, the open source development of enterprise-grade operating systems has galvanized the open source movement, and the wide adoption of open source software in enterprise-grade information systems is due to the successes in developing open source operating systems.</p>
+		</section>
+
+		<section>
+			<h2>Unintended Consequences</h2>
+			<p>The original creator of the most successful enterprise-grade OS had not intended to develop the software for enterprise use. This is one of the marks of crowdsourcing and open sourcing: the influence of the community at large over the final product. Eric Raymond illustrates this effect in his book <u>The Cathedral and the Bazaar</u>. The cathedral represents a development model, in which the creator determines the direction of the product. The bazaar represents a development model, in which the community jointly determines the direction of the product. (Many understand this to be a comparison between closed and open source development, but it is actually a comparison of two open source products.) Because of the open mentality, the community grew this OS project to be much larger than the creator had envisioned.</p>
+		</section>
+
+		<section>
+			<h2>UNIX</h2>
+			<p>The history of current enterprise-grade operating systems begins with UNIX. Although it is not an open source OS, its development model, as well as its history, have strongly influenced the functionality its open source competitors.</p>
+			<p>In 1969, researchers at AT&amp;T Bell Laboratories became dissatisfied with Multics, the operating system that they had begun to develop with MIT and General Electric, and they decided to develop an alternative operating system, which they named UNIX. UNIX engineers operated under a philosophy that continues to govern software development: <q>Write programs that do one thing and do it well.</q> One popular representation of this philosophy is KISS (Keep It Simple, Stupid!).</p>
+		</section>
+
+		<section>
+			<h2>Licensing</h2>
+			<p>In 1973, AT&amp;T began selling UNIX licenses&mdash;AT&amp;T was a regulated company and could only sell licenses and not software&mdash;to universities and corporations. Unlike common current software licenses, UNIX licenses included source code and no other support. The availability of source code and the lack of commercial support motivated licensees to form communities that supported, modified, and improved on the operating system. Several of these development groups were founded by universities and funded by research grants, which was common for software development at that time. These efforts were similar to open source development, except that users could only share their improvements with other UNIX licensees because no one without a license was allowed to own a copy of UNIX.</p>
+		</section>
+
+		<section>
+			<h2>Microsoft Who?</h2>
+			<p>As an aside, in 1978, a small, unknown company named Microsoft purchased a UNIX license and began creating the UNIX-based operating system Xenix. UNIX was designed for large servers or mainframes, and Bill Gates designed Xenix for what he believed was the impending proliferation of personal computers. Microsoft eventually abandoned Xenix in favor of MS-DOS, which was the foundation for the most popular operating system for personal computers: Microsoft Windows. However, the brief existence of Xenix is evidence of a very important point: UNIX is not merely alternatives to Microsoft Windows. UNIX was the operating system of choice before anyone had heard of Microsoft. The subsequent creation of UNIX-like operating systems&mdash;operating systems that mimic the functionality of UNIX&mdash;reinforces its importance.</p>
+		</section>
+
+		<section>
+			<h2>System V</h2>
+			<p>In 1983, AT&amp;T struck a blow against crowdsourcing. Bell Systems broke up after an antitrust case, and AT&amp;T became able to sell UNIX software, not only licenses. AT&amp;T released a commercialized UNIX System V and forbade access to UNIX source code. This restriction essentially ended community UNIX development.</p>
+			<blockquote>Knowing no other model than secrecy for collecting profits from software and no other model than centralized control for developing a commercial product, AT&amp;T clamped down hard on source-code distribution.<br>&ndash; Eric Raymond</blockquote>
+		</section>
+
+		<section>
+			<h2>BSD</h2>
+			<p>Before AT&amp;T stopped distributing UNIX source code, the University of California, Berkeley had purchased a UNIX license and begun modifying the operating system. Berkeley subsequently released their modifications as a separate operating system, which they called BSD (Berkeley Software Distribution). Through the fourth release of BSD (4BSD), users needed to have purchased a UNIX license from AT&amp;T. Interestingly, many licensees, including employees of AT&amp;T's Bell Labs, preferred 4BSD to System V, and the Defense Advanced Research Project (DARPA) funded the creation of the Computer Systems Research Group (CSRG) at Berkeley to develop a BSD for ARPAnet, the precursor to the Internet.</p>
+		</section>
+
+		<section>
+			<h2>OS Importance</h2>
+			<p>DARPA's decision to fund Berkeley's CSRG highlights the importance of the operating system's capabilities for facilitating an information system. When DARPA approached the CSRG, no operating system existed that would have supported the ARPAnet experiment. DARPA had reason to believe that BSD UNIX would be the best candidate to provide the necessary functionality.</p>
+			<p>At that time, the process of selecting an operating system may have been more difficult because development communities were segregated and operating system development followed no established standards, but today, companies continue to make similar evaluations. The majority have concluded that open source has provided the best operating system for their specific information system needs.</p> 
+		</section>
+
+		<section>
+			<h2>An Open Standard</h2>
+			<p>Despite the appeal of both System V Unix and BSD Unix, disputes arose between the programming communities. In an attempt to reconcile differences, the Institute of Electrical and Electronics Engineers (IEEE) developed a set of <u><em>Portable Operating System Interface</em></u> (POSIX) standards based on System V UNIX which continue to govern UNIX and UNIX-like operating systems today. The list of POSIX-certified operating systems currently contains the three most prominent Unix offerings: IBM AIX, HP-UX and Oracle Solaris. Although BSD is not POSIX-certified, it is mostly POSIX compliant. Today, the POSIX standard continues to be a valuable standard for enterprise-grade open source operating systems.</p>
+		</section>
+
+		<section>
+			<h2>BSD Becomes Free</h2>
+			<p>Starting in 1992, CSRG began replacing the remaining AT&amp;T code in 4BSD with code that they had written. Once CSRG had removed all AT&amp;T code, it released 386BSD as a free Unix-compatible operating systems for Intel's 80386 processor, an early iteration of the x86 line of CPUs. This was the first prominent example of an operational, enterprise-grade, open source operating system. Similar to the early days of UNIX, communities immediately formed to continue development of 386BSD. This lead to two forks of 386BSD: NetBSD for technical users and FreeBSD for less technical personal computer users. Because the CSRG released 386BSD freely to users without UNIX licenses, AT&amp;T sued Berkeley claiming that the operating system contained proprietary code.</p>
+		</section>
+
+		<section>
+			<h2>After the Suit</h2>
+			<p>Although Berkeley was exonerated, the legal uncertainty during the two-year suit encouraged many developers to transition to Linux. The BSD community has been much smaller ever since, but BSD is still widely used and supported, and many flavors exist. The most prominent are FreeBSD, NetBSD, OpenBSD (focused on security) and Mac OS X. Furthermore, most operating systems, including Microsoft Windows, use network tools from BSD. In 2006, InformationWeek rated 4BSD as the &ldquo;Greatest Software Ever Written&rdquo; and the &ldquo;Theoretical undergirder of the Internet.&rdquo;</p>
+		</section>
+
+		<section>
+			<h2>Linux</h2>
+			<p>Linux is currently the most widely adopted operating system. It began in 1991 when Linus Torvalds, a Finnish university student, decided to develop a free Unix-compatible kernel from scratch as a hobby. Today, 70% of internet servers, 55% of mobile devices and 97% of supercomputers run Linux. It is also the operating system of choice for many single-board computers, such as Raspberry Pi. Although the Linux kernel is one project, the resulting operating system has over 600 different versions (called distributions or distros, for short). Some of the more prominent distributions are Debian GNU/Linux, Ubuntu Linux, Red Hat Enterprise Linux, and Android. Each of these uses a different combination of kernel and userland tools to provide a specialized user experience.</p>
+		</section>
+
+		<section>
+			<h2>GNU/Linux</h2>
+			<p>In actuality, Linux is not an operating system. It is merely the operating system kernel. Many of the userland tools come from a similar, but essentially failed, attempt by none other than Richard Stallman to develop a free Unix-compatible operating system called GNU. Because the userland tools come from the GNU project, Richard Stallman insists that the Linux operating system should actually be called GNU/Linux to highlight the contributions of both projects. The Debian GNU/Linux distribution has adopted this name, but most others prefer the shorter label.</p>
+		</section>
+
+		<section>
+			<h2>Operating System</h2>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width: 65%">
 					<p>The most fundamental piece of software is the <u><em>operating system</em></u> (OS), which provides the user and user applications access to the computer hardware. Usually, operating systems comprise a <u><em>kernel</em></u> and <u><em>userland</em></u>. Additionally, operating systems generally require two supporting tools: a <u><em>firmware interface</em></u> and a <u><em>bootloader</em></u>.</p>
@@ -49,12 +122,12 @@
 		</section>
 
 		<section>
-			<h3>At the Heart of the Matter</h3>
+			<h2>At the Heart of the Matter</h2>
 			<p>The kernel is the part of the operating system that interacts with the computer hardware. This is the lowest level of the operating system. The kernel receives requests from user applications to access computer hardware, such as the CPU, RAM, storage, audio, or video, and forwards these requests to the hardware components. Once the request is fulfilled, the kernel returns the results of the request to the application. For example, if the user wishes to retrieve a spreadsheet from storage, the spreadsheet application requests the file from the kernel. The kernel retrieves the file from storage and returns the file to the application. (This process has additional steps, such as transferring the file to main memory (i.e., RAM), but this simplified description is sufficient to explain the role of a kernel.)</p>
 		</section>
 
 		<section>
-			<h3>Types of Kernels</h3>
+			<h2>Types of Kernels</h2>
 			<p>Depending on the type of kernel, the kernel itself may communicate directly with user applications (monolithic kernel) or the kernel may communicate with a series of <u><em>servers</em></u> that serve as intermediaries between the kernel and user applications (microkernel). Either way, the kernel interacts with the hardware. Some praise microkernels for their simplicity, and others prefer monolithic kernels because they handle requests more quickly.</p>
 			<div class="flex-row">
 				<!--License: CC-BY-SA 3.0 Attribution: Ysangkok-->
@@ -67,12 +140,12 @@
 		</section>
 
 		<section>
-			<h3>Daemons</h3>
+			<h2>Daemons</h2>
 			<p>Frequently, the word &ldquo;server&rdquo; is used to identify a specific type of computer hardware, but a more appropriate definition would be <u><em>software that provides a service</em></u>, also known as a <u><em>daemon</em></u>. Unlike more visible interactive applications, daemons run in the background without user input, and many start when the operating system boots. Micro kernels use daemons to communicate with user applications, but operating systems with monolithic kernels also use daemons to handle several functions, such as network communication, user input, and output to computer peripherals, such as monitors and speakers. Some of these daemons are labeled &ldquo;middleware&rdquo; because they sit between the kernel and user applications.</p>
 		</section>
 
 		<section>
-			<h3>Userland</h3>
+			<h2>Userland</h2>
 			<p>Userland is the part of the operating system that interacts with the user. The primary layer in userland is the <u><em>shell</em></u>, which provide the user either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computing devices have graphical shells, but the vast majority of server computers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/bash.png" alt="Bash Shell" style="max-height: 250px; margin-top: 0"/></div>
@@ -81,81 +154,24 @@
 		</section>
 
 		<section>
-			<h3>Putting It All Together</h3>
+			<h2>Putting It All Together</h2>
 			<!--License: CC-BY-SA 3.0 Attribution: Shmuel Csaba Otto Traian-->
 			<div class="override"><img src="../images/input-output-loop.png" alt="I/O Loop" style="max-height: 600px"/></div>
 		</section>
 
 		<section>
-			<h3>Firmware Interface</h3>
+			<h2>Firmware Interface</h2>
 			<p>The kernel and userland make an operating system, but in order for the operating system to be available to the user, a firmware interface is necessary. Two common forms are <u><em>Basic Input/Output System</em></u> (BIOS) or, more recently <u><em>Unified Extensible Firmware Interface</em></u> (UEFI). This firmware resides on the motherboard's own flash storage, and it performs two important functions. The first is to initialize and test the computer hardware, and the second is to load the bootloader.</p>
 			<p>BIOS and UEFI are only two examples of firmware. Firmware comprises a large variety of embedded software that controls hardware. For example, jets and space shuttles use firmware to control their systems, and the same applies to thermostats, video game systems, and automobiles.</p>
 		</section>
 
 		<section>
-			<h3>Bootloader</h3>
+			<h2>Bootloader</h2>
 			<p>The firmware interface initializes the storage drive and looks for a bootloader on the drive. The bootloader contains the instructions necessary to locate and boot the operating system kernel. Although this process is frequently transparent to Windows and OS X users, some operating systems expose the bootloader to the user so that the user can customize how the operating system boots.</p>
 		</section>
 
 		<section>
-			<h3>Which Operating Systems?</h3>
-			<p>Microsoft Windows and Apple OS X are the two dominant desktop and laptop operating systems, but these are effectively <em>irrelevant</em> in other components of the information system (e.g., servers, mobile devices, firmware). Although less well known, <em><u>Unix</u></em>, <em><u>BSD</u></em>, and <em><u>Linux</u></em> run the overwhelming majority of information system hardware. As a result, the ability to participate in systems design and maintenance relies in large part on familiarity with these operating systems. Familiarity is not equivalent to knowledge of the historical background, but because these three operating systems, their developers, and their philosophies have had, and continue to have, such a profound impact on the software community, especially open source software, a brief history is warranted.</p>
-		</section>
-
-		<section>
-			<h3>UNIX</h3>
-			<p>1969: Researchers at AT&amp;T Bell Laboratories became dissatisfied with Multics, the operating system that they had begun to develop with MIT and General Electric, and they decided to develop an alternative operating system, which they named UNIX.</p>
-			<p>Unix engineers operated under an implicit philosophy, which continues to govern software development practices: <q>Write programs that do one thing and do it well.</q> One popular representation of this philosophy is KISS (Keep It Simple, Stupid!) which serves as a reminder that simplicity is more virtuous than complexity.</p>
-		</section>
-
-		<section>
-			<h3>Licensing</h3>
-			<p>1973: AT&amp;T began selling UNIX licenses&mdash;AT&amp;T was a regulated company and could only sell licenses and not software&mdash;to universities. Unlike common current software licenses, UNIX licenses included source code and no other support. The availability of source code, the lack of commercial support, and the distribution of licenses to universities motivated the development of communities that supported, modified, and improved on the operating system.</p>
-		</section>
-
-		<section>
-			<h3>Microsoft Who?</h3>
-			<p>1978: Microsoft purchased a UNIX license and began creating Xenix for what Bill Gates believed was the impending proliferation of personal computers. Microsoft eventually abandoned Xenix in favor of MS-DOS, but the existence of Xenix is evidence of a very important point: Unix, and other subsequent Unix-like operating systems, are not merely alternatives to Microsoft Windows. Unix was the operating system of choice before anyone had heard of Microsoft.</p>
-		</section>
-
-		<section>
-			<h3>System V</h3>
-			<p>1983: Bell Systems broke up after an antitrust case, and AT&amp;T became able to sell Unix. AT&amp;T released a commercialized Unix System V and forbade access to Unix source code, which essentially ended community Unix development.</p>
-			<blockquote>Knowing no other model than secrecy for collecting profits from software and no other model than centralized control for developing a commercial product, AT&amp;T clamped down hard on source-code distribution.<br>&ndash; Eric Raymond</blockquote>
-		</section>
-
-		<section>
-			<h3>BSD</h3>
-			<p>1974-1980: Before AT&amp;T stopped distributing Unix source code, the University of California, Berkeley purchased a license and began modifying the operating system. Berkeley subsequently released their modifications as a separate operating system, which they called BSD (Berkeley Software Distribution). Through the fourth release of BSD (4BSD), users needed to have purchased a UNIX license from AT&amp;T. Interestingly, many licensees, including employees of Bell Labs, preferred 4BSD to System V, and the Defense Advanced Research Project (DARPA) funded the creation of the Computer Systems Research Group (CSRG) at Berkeley to develop a Unix for ARPAnet, the precursor to the Internet.</li>
-		</section>
-
-		<section>
-			<h3>An Open Standard</h3>
-			<p>Despite the appeal of both System V Unix and BSD Unix, disputes arose between the programming communities. In an attempt to reconcile differences, the Institute of Electrical and Electronics Engineers (IEEE) developed a set of <u><em>Portable Operating System Interface</em></u> (POSIX) standards based on System V Unix which continue to govern Unix and Unix-like operating systems today. The list of POSIX-certified operating systems currently contains the three most prominent Unix offerings: IBM AIX, HP-UX and Oracle Solaris. Although BSD continues not to be POSIX-certified, it is mostly POSIX compliant.</p>
-		</section>
-
-		<section>
-			<h3>BSD Becomes Free</h3>
-			<p>1992: CSRG began replacing the remaining AT&amp;T code in 4BSD with code that they had written. Once CSRG had removed all AT&amp;T code, it released 386BSD as a free Unix-compatible operating systems for Intel's 80386 processor, an early iteration of the x86 line of CPUs. Communities began to develop two different versions of 386BSD: NetBSD for technical users and FreeBSD for less technical PC users. As a result, of releasing 386BSD for free, AT&amp;T sued Berkeley claiming that the operating system contained proprietary code.</p>
-		</section>
-
-		<section>
-			<h3>After the Suit</h3>
-			<p>Although Berkeley was exonerated, the legal uncertainty during the two-year suit encouraged many developers to transition to Linux. The BSD community has been much smaller ever since, but BSD is still widely used and supported, and many flavors exist. The most prominent are FreeBSD, NetBSD, OpenBSD (focused on security) and Mac OS X. Furthermore, most operating systems, including Microsoft Windows, use network tools from BSD. In 2006, InformationWeek rated 4BSD as the &ldquo;Greatest Software Ever Written&rdquo; and the &ldquo;Theoretical undergirder of the Internet.&rdquo;</p>
-		</section>
-
-		<section>
-			<h3>Linux</h3>
-			<p>Linux is currently the most widely adopted operating system. It began in 1991 when Linus Torvalds, a Finnish university student, decided to develop a free Unix-compatible kernel from scratch as a hobby. Today, 70% of internet servers, 55% of mobile devices and 97% of supercomputers run Linux. It is also the operating system of choice for many single-board computers, such as Raspberry Pi. Although the Linux kernel is one project, the resulting operating system has over 600 different versions (called distributions or distros, for short). Some of the more prominent distributions are Debian GNU/Linux, Ubuntu Linux, Red Hat Enterprise Linux, and Android. Each of these uses a different combination of kernel and userland tools to provide a specialized user experience.</p>
-		</section>
-
-		<section>
-			<h3>GNU/Linux</h3>
-			<p>In actuality, Linux is not an operating system. It is merely the operating system kernel. Many of the userland tools come from a similar, but essentially failed, attempt by none other than Richard Stallman to develop a free Unix-compatible operating system called GNU. Because the userland tools come from the GNU project, Richard Stallman insists that the Linux operating system should actually be called GNU/Linux to highlight the contributions of both projects. The Debian GNU/Linux distribution has adopted this name, but most others prefer the shorter label.</p>
-		</section>
-
-		<section>
-			<h3>Accounting Tie-in</h3>
+			<h2>Accounting Tie-in</h2>
 			<p>The operating system is the most foundational piece of software. As a result, it is important for accounting architects to understand which operating system options are available for designing information systems, and traditional auditors and IT auditors must understand operating systems in order to audit existing systems. Enterprise-grade information systems run on Unix, BSD, and Linux, and audits face significant roadblocks when no auditors on the team have ever even heard those names before.</p>
 		</section>
 	</div>
