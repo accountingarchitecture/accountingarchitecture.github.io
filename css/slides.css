@@ -10,7 +10,6 @@
 }
 .reveal .table-cell {
 	display: table-cell;
-	vertical-align: middle;
 	padding: 0 40px;
 	text-align: left;
 }
