@@ -24,7 +24,7 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h1>Digital Storage</h1>
+			<h1>Storage</h1>
 		</section>
 
 		<section>
@@ -38,12 +38,38 @@
 		</section>
 
 		<section>
-			<h2>Types of Storage</h2>
+			<h2>Types of Storage Systems</h2>
 			<ul>
 				<li><u><em>File systems</em></u> store data in separate files and folders.</li>
 				<li><u><em>Database systems</em></u> store all data in a single location.</li>
 			</ul>
-			<p>These two storage systems predate digital storage. A paper documents and folders in a filing cabinet is a physical file system, and a card catalog in a library is an example of a physical database system. This is the traditional storage format we use in our individual computers.</p>
+			<p>These two storage systems predate digital storage. A paper documents and folders in a filing cabinet is a physical file system, and a card catalog in a library is an example of a physical database system. The same principles apply to digital storage, and although the software portion of digital storage is the most visible from the users' perspective, the storage system begins with hardware. Digital storage hardware is analagous to the filing cabinet in a physical file system.</p>
+		</section>
+
+		<section>
+			<h2>Physical Volumes</h2>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 85%">
+				<p>Digital storage begins with the storage drive. The storage drives provide the <u><em>physical volumes</em></u>. A physical volume is a <u><em>partition</em></u>, and it cover all or part of the capacity of a storage drive. Once created, the size of a partition is static. This makes file or database systems stored on physical volumes more difficult to manage because storage needs can change over time. Each storage drive with at least one partition first needs a <u><em>partition table</em></u>, which is a small amount of software stored on the drive to identify how many partitions the drive has, what type they are, and how large they are.</p>
+				</div>
+				<div class="flex-item override"><img src="../images/partition.png" alt="Storage Drive with 3 Partitions" style="max-width: 300px"/></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Volume Groups</h2>
+			<p>Logical volumes help to overcome the rigidity of physical volumes. Logical volumes begin by combining one or more physical volumes into a volume group. Physical volumes in a volume group can be can come from one or more storage drives. This creates considerable flexibility in forming volume groups. They can comprise a part of one storage drive, a whole storage drive, parts of multiple storage drives, all of multiple storage drives, or all of some storage drives and some others. Volume groups are also resizable. Additional physical volumes, either additional partitions of a drive that already belongs to the volume group or an additional drive altogether, can be added to an existing volume group to increase available storage capacity.</p>
+		</section>
+
+		<section>
+			<h2>Logical Volumes</h2>
+			<p>Each logical volume created draws storage space from the volume group. As long as the volume group has free space, logical volumes can be resized after creation to include more storage from the volume group. </p>
+		</section>
+
+		<section>
+			<h2>From Physical to Logical</h2>
+			<!--License: CC-BY 2.0 Attribution: Sarmed Rahman-->
+			<img src="../images/lvm.png" alt="LVM" style="max-height: 550px"/>
 		</section>
 
 		<section>
@@ -59,23 +85,6 @@
 		<section>
 			<h2>File System Layers</h2>
 			<p>However, the file system structure of files and folders is merely how the user sees the storage. One or more <u><em>physical</em></u> or <u><em>logical</em></u> <u><em>volumes</em></u> underlie that file system, and as a result, the user's file system view is not consistent with the physical view (i.e., where the data sits on the physical storage device). The physical volume is the physical storage device (e.g., HDD, SSD, etc), whereas logical volumes combine physical volumes into <em>ad-hoc</em> storage devices that can change size, as needed. Several different forms of logical volumes exist, but one common example is <u><em>RAID</em></u>.</p>
-		</section>
-
-		<section>
-			<h2>Physical Volumes</h2>
-			<p>The lowest level of storage is the physical volume. A physical volume is either an entire storage device or a <u><em>partition</em></u>, which is a portion of a physical disk. Whether the volume spans the entire storage drive or only a partition, the size of the volume once it is created is static. This makes physical volumes difficult to manage because storage needs can change over time.</p>
-			<div class="override"><img src="../images/partition.png" alt="Partition" style="height: 175px"/></div>
-		</section>
-
-		<section>
-			<h2>Logical Volumes</h2>
-			<p>Logical volumes help to overcome the lack of flexibility of physical volumes. Logical volumes begin by combining multiple physical volumes into a volume group. Each logical volume draws space from the volume group. As long as the volume group has free space, logical volumes can be resized after creation to include more storage from the volume group. It is also possible to add additional physical partitions to the volume group to increase the free space that can be allocated to logical volumes.</p>
-		</section>
-
-		<section>
-			<h2>From Physical to Logical</h2>
-			<!--License: CC-BY 2.0 Attribution: Sarmed Rahman-->
-			<img src="../images/lvm.png" alt="LVM" style="max-height: 550px"/>
 		</section>
 
 		<section>
