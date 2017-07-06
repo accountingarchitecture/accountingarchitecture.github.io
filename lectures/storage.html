@@ -49,10 +49,10 @@
 		<section>
 			<h2>Physical Volumes</h2>
 			<div class="flex-row">
-				<div class="flex-item" style="max-width: 85%">
+				<div class="flex-item" style="max-width: 80%">
 				<p>Digital storage begins with the storage drive. The storage drives provide the <u><em>physical volumes</em></u>. A physical volume is a <u><em>partition</em></u>, and it cover all or part of the capacity of a storage drive. Once created, the size of a partition is static. This makes file or database systems stored on physical volumes more difficult to manage because storage needs can change over time. Each storage drive with at least one partition first needs a <u><em>partition table</em></u>, which is a small amount of software stored on the drive to identify how many partitions the drive has, what type they are, and how large they are.</p>
 				</div>
-				<div class="flex-item override"><img src="../images/partition.png" alt="Storage Drive with 3 Partitions" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/partition.png" alt="Storage Drive with 3 Partitions"/></div>
 			</div>
 		</section>
 
@@ -73,44 +73,30 @@
 		</section>
 
 		<section>
-			<h2>LVM &amp;RAID</h2>
+			<h2>LVM &amp; RAID</h2>
 			<p>In Linux, the tool used to create and manage logical volumes and volume groups is LVM. Another common tool is Redundant Array of Independent Disks (RAID). RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a stripe. RAID is somewhat more rigid than LVM, in that the RAID number determines the exact number of physical volumes and logical volumes. Additionally, the physical volumes in a RAID are commonly entire storage drives and not partitions. Users continue to use RAID in order to allow volumes to span multiple drives, but in order to gain additional flexibility, some users place the RAID volume in a volume group and allocate the storage to logical volumes.</p>
 		</section>
 
 		<section>
-			<h2>Hardware-level RAID Controllers</h2>
-			<p>Three different types of controllers can manage a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive, and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
-		</section>
-
-		<section>
-			<h2>Software-level RAID Controllers</h2>
-			<p>In the two prior cases, the operating system stored on the storage device will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID.</p>
-		</section>
-
-		<section>
-			<h2>File System</h2>
+			<h2>File Systems</h2>
 			<div class="flex-row">
-				<div class="flex-item" style="max-width: 75%">
-					<p>The file system provides the familiar logical hierarchical folder structure. Different operating systems support different file systems (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD. The differences between these is not important, but many consider ZFS to be the <em>most awesome</em>.) The operating system and other application software reside on the file system. Because the file system sits below the operating system, users can remove a storage device, such as a USB drive, from one computer and access files on the file system from another computer.</p>
+				<div class="flex-item" style="max-width: 80%">
+					<p>The physical or logical volume is formatted with a file system. Different operating systems support different file systems (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD). Different file systems have different features for protecting against data loss (ZFS is the most advanced), but they all provide the hierarchical folder structure common in desktop operating systems. The operating system and other applications are stored on the file system. Because the file system is separate from the operating system, users can remove a storage drive from one computer and access the file system from another computer.</p>
 				</div>
 				<div class="flex-item"><img src="../images/das.png" alt="Direct Access Storage" style="max-width: 200px"/></div>
 			</div>
 		</section>
 
 		<section>
-			<h2>File System Layers</h2>
-			<p>However, the file system structure of files and folders is merely how the user sees the storage. One or more <u><em>physical</em></u> or <u><em>logical</em></u> <u><em>volumes</em></u> underlie that file system, and as a result, the user's file system view is not consistent with the physical view (i.e., where the data sits on the physical storage device). The physical volume is the physical storage device (e.g., HDD, SSD, etc), whereas logical volumes combine physical volumes into <em>ad-hoc</em> storage devices that can change size, as needed. Several different forms of logical volumes exist, but one common example is <u><em>RAID</em></u>.</p>
+			<h2>From File System to Database System</h2>
+			<p>The role of a database system is to collate data and present it in a centralized manner. In the example of the library card catalog, a physical database system functions as an alternative to a file system. However, in digital storage, this is not the case. A digital database system is an application, which runs on an operating system, which sits on a file system. In the current computing world, database systems are not an alternative to file systems, rather they collate data stored on a file system and present it as if it were stored in a centralized manner. Many software applications are database systems. Music players are a common example. The individual song files are stored in separate files and folders on a file system. The music player collates the songs and provides the user with a single library.</p>
 		</section>
 
 		<section>
-			<h2>Database System</h2>
-			<p>The role of a database system is to collate data, often data stored on a file system, and present it in a centralized manner. The most widely implemented database systems are either <u><em>relational database management systems</em></u> (RDBMS) or <u><em>non-relational databases</em></u> (NoSQL). However, many other applications implement these concepts of a database system. For example, many music players, such as iTunes or Google Play Music, present the user's music library in one centralized location with various attributes of each track, such as artist, title, etc. Because these tracks are generally stored in multiple files and folders in a file system, the music player creates a database that references these individual files.</p>
-		</section>
-
-		<section>
-			<h2>Components of a Relational Database</h2>
-			<div class="table" style="font-size: 20px; border: 3px solid black">
-				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+			<h2>Relational Database Management Systems</h2>
+			<p>Many database systems for storing business data are relational database management systems (RBDMS). Each relational database contains one of more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software.</p>
+			<div class="table">
+				<div class="table-row" style="background-color: lightgray">
 					<div class="table-cell" style="font-weight: bold">ID</div>
 					<div class="table-cell" style="font-weight: bold">First Name</div>
 					<div class="table-cell" style="font-weight: bold">Last Name</div>
@@ -146,14 +132,14 @@
 					<div class="table-cell">janine.cray@abc.xyz</div>
 				</div>
 			</div>
-			<p>Each relational database contains one of more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software. The individual rows in the relations are called <u><em>records</em></u> or <u><em>tuples</em></u>. The individual columns are called <u><em>attributes</em></u> or <em><u>fields</u></em>. The intersection of a row and a column is a <em><u>cell</u></em>. Cells hold a single value.</p>
+			<p>The individual rows in the relations are called <u><em>records</em></u> or <u><em>tuples</em></u>. The individual columns are called <u><em>attributes</em></u> or <em><u>fields</u></em>. The intersection of a row and a column is a <em><u>cell</u></em>. Cells hold a single value.</p>
 		</section>
 
 		<section>
 			<h2>Data Types</h2>
 			<p>All cells for a single attribute must have the same <u><em>data type</em></u>. This type determines the characteristics of the data, as well as any available operations. The most basic data types are called <u><em>primitives</em></u>:</p>
-			<div class="table" style="border: 3px solid black; font-size: 24px">
-				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+			<div class="table">
+				<div class="table-row" style="background-color: lightgray">
 					<div class="table-cell" style="font-weight: bold">Type name</div>
 					<div class="table-cell" style="font-weight: bold">Usage</div>
 				</div>
@@ -196,7 +182,7 @@
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
 				<div style="font-size: 24px">Relational Table</div>
 				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-row" style="background-color: lightgray">
 						<div class="table-cell" style="font-weight: bold">ID</div>
 						<div class="table-cell" style="font-weight: bold">First Name</div>
 						<div class="table-cell" style="font-weight: bold">Last Name</div>
@@ -215,7 +201,7 @@
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
 				<div style="font-size: 24px">Document Store</div>
 				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-row" style="background-color: lightgray">
 						<div class="table-cell" style="font-weight: bold">Key</div>
 						<div class="table-cell" style="font-weight: bold">Value</div>
 					</div>
@@ -238,7 +224,7 @@
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
 				<div style="font-size: 24px">Relational Table</div>
 				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-row" style="background-color: lightgray">
 						<div class="table-cell" style="font-weight: bold">ID</div>
 						<div class="table-cell" style="font-weight: bold">First Name</div>
 						<div class="table-cell" style="font-weight: bold">Last Name</div>
@@ -264,7 +250,7 @@
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
 				<div style="font-size: 24px">Column Store</div>
 				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: white; border-bottom: 1px solid black">
+					<div class="table-row" style="background-color: white">
 						<div class="table-cell" style="font-weight: bold">ID</div>
 						<div class="table-cell" style="font-weight: bold">First Name</div>
 						<div class="table-cell" style="font-weight: bold">Last Name</div>
@@ -276,7 +262,7 @@
 						<div class="table-cell">Tuttle</div>
 						<div class="table-cell">Janitor</div>
 					</div>
-					<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-row" style="background-color: lightgray">
 						<div class="table-cell" style="font-weight: bold">ID</div>
 						<div class="table-cell" style="font-weight: bold">First Name</div>
 						<div class="table-cell" style="font-weight: bold">Last Name</div>
