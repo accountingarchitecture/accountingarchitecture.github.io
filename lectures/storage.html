@@ -63,13 +63,28 @@
 
 		<section>
 			<h2>Logical Volumes</h2>
-			<p>Each logical volume created draws storage space from the volume group. As long as the volume group has free space, logical volumes can be resized after creation to include more storage from the volume group. </p>
+			<p>Logical volumes function like physical volumes, except that physical volumes are formed from the storage capacity of storage drives, whereas logical volumes are formed from the storage capacity of the volume group. When creating logical volumes, the volume group makes no disctinction between the various physical volumes that make up the group. A single logical volume may be contained within a single physical volume, or it may straddle multiple physical volumes. A primary benefit of logical volumes is resizability. As long as the volume group has free space, logical volumes can expand after creation to include more storage from the volume group.</p>
 		</section>
 
 		<section>
 			<h2>From Physical to Logical</h2>
 			<!--License: CC-BY 2.0 Attribution: Sarmed Rahman-->
 			<img src="../images/lvm.png" alt="LVM" style="max-height: 550px"/>
+		</section>
+
+		<section>
+			<h2>LVM &amp;RAID</h2>
+			<p>In Linux, the tool used to create and manage logical volumes and volume groups is LVM. Another common tool is Redundant Array of Independent Disks (RAID). RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a stripe. RAID is somewhat more rigid than LVM, in that the RAID number determines the exact number of physical volumes and logical volumes. Additionally, the physical volumes in a RAID are commonly entire storage drives and not partitions. Users continue to use RAID in order to allow volumes to span multiple drives, but in order to gain additional flexibility, some users place the RAID volume in a volume group and allocate the storage to logical volumes.</p>
+		</section>
+
+		<section>
+			<h2>Hardware-level RAID Controllers</h2>
+			<p>Three different types of controllers can manage a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive, and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
+		</section>
+
+		<section>
+			<h2>Software-level RAID Controllers</h2>
+			<p>In the two prior cases, the operating system stored on the storage device will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID.</p>
 		</section>
 
 		<section>
@@ -85,21 +100,6 @@
 		<section>
 			<h2>File System Layers</h2>
 			<p>However, the file system structure of files and folders is merely how the user sees the storage. One or more <u><em>physical</em></u> or <u><em>logical</em></u> <u><em>volumes</em></u> underlie that file system, and as a result, the user's file system view is not consistent with the physical view (i.e., where the data sits on the physical storage device). The physical volume is the physical storage device (e.g., HDD, SSD, etc), whereas logical volumes combine physical volumes into <em>ad-hoc</em> storage devices that can change size, as needed. Several different forms of logical volumes exist, but one common example is <u><em>RAID</em></u>.</p>
-		</section>
-
-		<section>
-			<h2>RAID</h2>
-			<p>Perhaps the most common type of logical volume is the Redundant Array of Independent Disks (RAID). RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. Unlike with some other forms of logical volume, with RAID, the user never interacts with a volume group and never creates logical volumes. Instead, the number of the RAID determines the exact number of physical volumes and logical volumes. In order to gain additional flexibility, some users place the RAID volume in a volume group and allocate the storage to logical volumes.</p>
-		</section>
-
-		<section>
-			<h2>Hardware-level RAID Controllers</h2>
-			<p>Three different types of controllers can manage a RAID. A hardware RAID uses specialized hardware to control the RAID and the underlying disks. This is the most sophisticated, most expensive, and rarest form of RAID. The next level down is the motherboard RAID. In this scenario, the motherboard acts as RAID hardware and controls the RAID. Because this only simulates a hardware RAID, users frequently refer to this as fake RAID, and many individuals feel that this form of RAID is too unreliable to be a safe option.</p>
-		</section>
-
-		<section>
-			<h2>Software-level RAID Controllers</h2>
-			<p>In the two prior cases, the operating system stored on the storage device will only see the logical volume created by the RAID and not the physical volumes. The simplest form of RAID, as well as the most popular, is the software RAID. Here, the operating system sees the physical volumes and creates and manages the logical RAID volume. This is a popular RAID solution for workstations because it is cheaper than a hardware RAID and more reliable than a fake RAID.</p>
 		</section>
 
 		<section>
