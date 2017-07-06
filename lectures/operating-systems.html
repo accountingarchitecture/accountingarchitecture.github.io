@@ -102,7 +102,7 @@
 
 		<section>
 			<h2>Linux</h2>
-			<p>Linux is currently the most widely adopted operating system. It began in 1991 when Linus Torvalds, a Finnish university student, decided to develop a free UNIX-compatible kernel from scratch as a hobby. Today, 70% of internet servers, 55% of mobile devices and 97% of supercomputers run Linux. It is also the operating system of choice for many single-board computers, such as the Raspberry Pi. Although the Linux kernel is one project, the resulting operating system has over 600 different versions (called distributions or distros, for short). Some of the more prominent distributions are Debian GNU/Linux, Ubuntu Linux, Red Hat Enterprise Linux, and Android. Each of these uses a different combination of kernel and userland tools to provide a specialized user experience.</p>
+			<p>Linux is currently the most widely adopted operating system. It began in 1991 when Linus Torvalds, a Finnish university student, decided to develop a free UNIX-compatible kernel from scratch as a hobby. Today, 70% of internet servers, 55% of mobile devices and 97% of supercomputers run Linux. It is also the operating system of choice for many single-board computers, such as the Raspberry Pi. Although the Linux is one development project, the resulting operating system has over 600 different versions (called distributions or distros, for short). The developers of each of these distributions benefit from the open source nature of Linux by being able to modify the kernel and userland to provide a specialized user experience.</p>
 		</section>
 
 		<section>
@@ -130,7 +130,7 @@
 
 		<section>
 			<h2>Userland</h2>
-			<p>Userland is the part of the operating system that user interacts with. The primary layer in userland is the <u><em>shell</em></u>, which provides the user with either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computers and mobile devices have graphical shells, but the vast majority of servers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
+			<p>Userland is the part of the operating system that user interacts with. The user interacts with userland by means of the <u><em>shell</em></u>, which provides the user with either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computers and mobile devices have graphical shells, but the vast majority of servers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/bash.png" alt="Bash Shell" style="max-height: 250px; margin-top: 0"/></div>
 				<div class="flex-item override"><img src="../images/gnome.png" alt="GNOME Shell" style="max-height: 250px; margin-top: 0"/></div>
@@ -138,19 +138,13 @@
 		</section>
 
 		<section>
-			<h2>Putting It All Together</h2>
-			<!--License: CC-BY-SA 3.0 Attribution: Shmuel Csaba Otto Traian-->
-			<div class="override"><img src="../images/input-output-loop.png" alt="I/O Loop" style="max-height: 600px"/></div>
-		</section>
-
-		<section>
 			<h2>GNU/Linux</h2>
-			<p>Many familiar operating systems include In actuality, Linux is not an operating system. It is merely the operating system kernel. Many of the userland tools come from a similar, but essentially failed, attempt by none other than Richard Stallman to develop a free Unix-compatible operating system called GNU OS. Because the userland tools come from the GNU project, Richard Stallman insists that the Linux operating system should actually be called GNU/Linux to highlight the contributions of both projects. The Debian GNU/Linux distribution has adopted this name, but most others prefer the shorter label.</p>
+			<p>BSD is both kernel and userland in one. Linux, on the other hand, is merely the kernel. Many of the userland tools come from another project. Before Linus Torvalds began developing Linux, Richard Stallmen attempted to provide a free UNIX-compatible operating system call GNU OS. The GNU project was not successful in developing a kernel, but it created many userland tools. The resulting Linux operating system is a combination of the Linux kernel and GNU userland. Because the userland tools come from the GNU project, Richard Stallman insists that the Linux operating system should actually be called GNU/Linux to highlight the contributions of both projects. The Debian GNU/Linux distribution has adopted this name, but most others prefer the shorter label of just Linux.</p>
 		</section>
 
 		<section>
-			<h2>Linux Dictionary</h2>
-			<p>Linux graphical shells, also called desktop environments or window managers, function similar to the graphical shells of familiar operating systems for personal computing. Much of the power of Linux is in the text shell, and system administrators almost exclusively use terminals to manage Linux computers. Familiarity with Linux terminal commands is a valuable skill for an accounting architect. Common Linux commands include:</p>
+			<h2>Command Line</h2>
+			<p>Linux graphical shells, also called desktop environments or window managers, function similar to the graphical shells of other desktop operating systems. Much of the power of Linux is in the text shell, and system administrators almost exclusively use the command line in a terminal to manage Linux computers. Knowledge with Linux terminal commands is a valuable competency for an accounting architect. The most basic commands are the same across all Linux distributions, as well as BSD and UNIX. As a result, familiarity with a few line commands can immediately unlock basic functionality of most enterprise-grade operating systems. More advanced commands, such as how to control system daemons or the package manager, vary from distribution to distribution.</p>
 		</section>
 
 		<section>
@@ -208,23 +202,73 @@
 
 		<section>
 			<h2>Package Managers</h2>
-			<p></p>
+			<p>One of the trademarks of BSD and Linux is the package manager. The package manager manages the installation and updating of all software in the operating system, including the operating system kernel. The benefit of a package manager is two-fold. First, the package manager provides the user with access to a vast collection of software repositories (i.e., data stores) that contain most applications the user would need. Linux and BSD users rarely need to search the Web for applications to download and install because the software repos often have a solution. Second, the package manager provides a single solution for keeping all applications and the operating system itself up to date.</p>
 		</section>
 
 		<section>
-			<h2>Firmware Interface</h2>
-			<p>The kernel and userland make an operating system, but in order for the operating system to be available to the user, a firmware interface is necessary. Two common forms are <u><em>Basic Input/Output System</em></u> (BIOS) or, more recently <u><em>Unified Extensible Firmware Interface</em></u> (UEFI). This firmware resides on the motherboard's own flash storage, and it performs two important functions. The first is to initialize and test the computer hardware, and the second is to load the bootloader.</p>
-			<p>BIOS and UEFI are only two examples of firmware. Firmware comprises a large variety of embedded software that controls hardware. For example, jets, space shuttles thermostats, video game systems, and automobiles all have firmware.</p>
+			<h2>Linux Distributions</h2>
+			<p>Although over 600 different Linux distributions currently exist, many of these vary only by the software applications included by default with the operating system. However, a user can have distro A mimic distro B simply by using the package manager to install the applications from distro B on distro A.<p>
+			<p>A much smaller number of distributions families exist. These families differ from one another by the choice of package manager. The package manager determines software compatibility, and an application written for one package manager will not be compatible with an operating system that uses a different package manager. The most common package managers are DEB-based; the second most common are RPM-based.</p>
 		</section>
 
 		<section>
-			<h2>Bootloader</h2>
-			<p>The firmware interface initializes the storage drive and looks for a bootloader on the drive. The bootloader contains the instructions necessary to locate and boot the operating system kernel. Although this process is frequently transparent to Windows and OS X users, some operating systems expose the bootloader to the user so that the user can customize how the operating system boots.</p>
+			<h2>Apt Commands</h2>
+			<p>Apt is a DEB-based package manager. The following are some apt commands:</p>
+			<div class="table" style="font-size: 24px; border: 3px solid black; margin: 0 auto">
+				<div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+					<div class="table-cell" style="font-weight: bold">Command</div>
+					<div class="table-cell" style="font-weight: bold">Function</div>
+					<div class="table-cell" style="font-weight: bold">Examples</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">apt update</div>
+					<div class="table-cell">Update repository list to identify newest version of all applications</div>
+					<div class="table-cell"></div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">apt upgrade</div>
+					<div class="table-cell">Upgrade all installed applications to newest versions</div>
+					<div class="table-cell"></div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">apt search</div>
+					<div class="table-cell">Look for application in repositories</div>
+					<div class="table-cell">apt search mysql (Find all applications with the word mysql in the name or description)</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">apt install</div>
+					<div class="table-cell">Install application</div>
+					<div class="table-cell">apt install mysql-server (Install application named mysql-server)</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell">apt remove</div>
+					<div class="table-cell">Uninstall application</div>
+					<div class="table-cell">apt remove mysql-server (Remove application named mysql-server)</div>
+				</div>
+			</div>
 		</section>
 
 		<section>
-			<h2>Accounting Tie-in</h2>
-			<p>The operating system is the most foundational piece of software. As a result, it is important for accounting architects to understand which operating system options are available for designing information systems, and traditional auditors and IT auditors must understand operating systems in order to audit existing systems. Enterprise-grade information systems run on Unix, BSD, and Linux, and audits face significant roadblocks when no auditors on the team have ever even heard those names before.</p>
+			<h2>Dependencies</h2>
+			<p>Software applications rarely include all code necessary perform their intended functions. One reason for this is that multiple applications can share the same functionality and duplicating the code would be inefficient. As a result, many applications rely on software <u><em>libraries</em></u>. Just as a physical library provides a shared store of knowledge, a software library provides applications with a shared store of functionality.</p>
+			<p>Libraries that an application needs in order to function properly represent <u><em>dependencies</em></u> of that application. Many package managers identify and install all dependencies when installing a software application. This makes software administration much easier for the user.</p>
+		</section>
+
+		<section>
+			<h2>Firmware Interface &amp; Bootloader</h2>
+			<p>The kernel and userland make an operating system, but in order for the operating system to be available to the user, a firmware interface is necessary. <u><em>Firmware</em></u> is software embedded hardware that controls that hardware. Two common computer firmware interfaces are <u><em>Basic Input/Output System</em></u> (BIOS) or, more recently <u><em>Unified Extensible Firmware Interface</em></u> (UEFI). This firmware resides on the motherboard's own flash storage, and it performs two important functions. The first is to initialize and test the computer hardware, and the second is to load the <u><em>bootloader</em></u>. The bootloader contains the instructions necessary to locate and boot the operating system kernel. Once the bootloader initializes the kernel, the operating system kernel launches any necessary services, daemons, and the user shell.</p>
+		</section>
+
+		<section>
+			<h2>Putting It All Together</h2>
+			<!--License: CC-BY-SA 3.0 Attribution: Shmuel Csaba Otto Traian-->
+			<div class="override"><img src="../images/input-output-loop.png" alt="I/O Loop" style="max-height: 600px"/></div>
+		</section>
+
+		<section>
+			<h2>Powering the Software</h2>
+			<p>The operating system is a complex collection of kernel and userland tools. Designers and maintainers of information systems must understand operating system administration and functionality, but not for the sake of the operating system itself. The purpose of the operating system is to power the information system applications, provide data storage, and serve and process data for the users.</p>
+			<p>Most companies have chosen Linux as the operating system of choice for their information system. The Linux kernel is one of the most successful open source projects. More than 13,000 developers contribute more than 4,500 lines of code per day. It powers the Android operating system and the Web services of Netflix, Amazon, Google, and many others. </p>
 		</section>
 	</div>
 	</div>
