@@ -90,6 +90,9 @@
 	-ms-flex-align: center;
 	align-items: center;
 }
+.reveal .flex-row p {
+	margin-top: 0;
+}
 .reveal .flex-row.float {
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
