@@ -93,8 +93,13 @@
 		</section>
 
 		<section>
-			<h2>Relational Database Management Systems</h2>
-			<p>Many database systems for storing business data are relational database management systems (RBDMS). Each relational database contains one of more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software.</p>
+			<h2>Flat File Databases</h2>
+			<p>The simplest databases are <u><em>flat files</em></u>. A flat file database is a single file that contains only data with each row representing a single record. Spreadsheets and comma- or tab-delimited files (CSV or TXT) are examples of flat files. In flat file databases, all data is stored in a single table. These are popular for storing small datasets because they place no restrictions on the form of the data. As a result, adding additional records tends to be quick and easy. Additionally, many users are familiar with applications that read flat files, such as Microsoft Excel. The largest drawback of flat files is an inability to create relationships between data in different tables. Additionally, flat file databases have none of the functionality necessary to support data integrity in a large-scale enterprise-grade information system.</p>
+		</section>
+
+		<section>
+			<h2>Relational Databases</h2>
+			<p>Many database systems for storing business data are relational databases. Each relational database contains one of more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software.</p>
 			<div class="table">
 				<div class="table-row" style="background-color: lightgray">
 					<div class="table-cell" style="font-weight: bold">ID</div>
@@ -137,7 +142,7 @@
 
 		<section>
 			<h2>Data Types</h2>
-			<p>All cells for a single attribute must have the same <u><em>data type</em></u>. This type determines the characteristics of the data, as well as any available operations. The most basic data types are called <u><em>primitives</em></u>:</p>
+			<p>All cells for a single attribute must have the same <u><em>data type</em></u>. This type determines the characteristics of the data, as well as any available operations.</p>
 			<div class="table">
 				<div class="table-row" style="background-color: lightgray">
 					<div class="table-cell" style="font-weight: bold">Type name</div>
@@ -153,178 +158,27 @@
 				</div>
 				<div class="table-row" style="background-color: white">
 					<div class="table-cell">String</div>
-					<div class="table-cell">Series of chars (not a primitive)</div>
+					<div class="table-cell">Series of chars</div>
 				</div>
 				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">Integer, Long</div>
+					<div class="table-cell">Integer</div>
 					<div class="table-cell">Whole number</div>
 				</div>
 				<div class="table-row" style="background-color: white">
-					<div class="table-cell">Float, Double</div>
+					<div class="table-cell">Double</div>
 					<div class="table-cell">Decimal number</div>
 				</div>
-			</div>
-		</section>
-
-		<section>
-			<h2>Non-relational Databases</h2>
-			<p>Generically speaking, any database that is not relational could be considered non-relational, but in practice, non-relational (Not Only SQL; NoSQL) databases are a specific class of databases that abandoned the principles of relational databases in favor of alternative models. Although this class comprises several distinct models, we will focus on three popular examples: <u><em>key-value stores</em></u>, <u><em>document stores</em></u>, and <u><em>column stores</em></u>.
-		</section>
-
-		<section>
-			<h2>Key-value Store</h2>
-			<p>Key-value is the model that governs all metadata. A <u><em>key-value store</em></u> is a database that pairs unique keys or attributes (i.e., unique identifiers) with data objects. The data object can be anything from a primitive to an entire file (e.g., document, audio file, etc.). The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys.</p>
-		</section>
-
-		<section>
-			<h2>Document Store</h2>
-			<p>A <em><u>document store</u></em> is a special case of a key-value store in which the value is a text file with multiple metadata attributes and values, frequently in XML or JavaScript Object Notation (JSON) format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (i.e., the entire document).</p>
-			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
-				<div style="font-size: 24px">Relational Table</div>
-				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell" style="font-weight: bold">ID</div>
-						<div class="table-cell" style="font-weight: bold">First Name</div>
-						<div class="table-cell" style="font-weight: bold">Last Name</div>
-						<div class="table-cell" style="font-weight: bold">Job Title</div>
-						<div class="table-cell" style="font-weight: bold">Email</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">1</div>
-						<div class="table-cell">John</div>
-						<div class="table-cell">Smith</div>
-						<div class="table-cell">Manager</div>
-						<div class="table-cell">john.smith@abc.xyz</div>
-					</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell">Date</div>
+					<div class="table-cell">Year, month, and day</div>
 				</div>
 			</div>
-			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
-				<div style="font-size: 24px">Document Store</div>
-				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell" style="font-weight: bold">Key</div>
-						<div class="table-cell" style="font-weight: bold">Value</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">1</div>
-						<div class="table-cell">
-							<div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
-							<div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
-							<div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
-							<div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<p>Numerical data types support arithmetic and statistical functions, such as addition, subtraction, and average. String data types support pattern matching. Date types and numerical types both support comparisons (e.g., greater than or less than).</p>
 		</section>
 
 		<section>
-			<h2>Column Store</h2>
-			<p>A <u><em>column store</em></u> is a key-value store that groups key and values into columns and multiple key-value pairs into families, similar to rows in relational tables. Unlike relational tables, these "rows" can have different numbers of attributes (i.e., keys), and attributes that appear in multiple rows can have different data types.</p>
-			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
-				<div style="font-size: 24px">Relational Table</div>
-				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell" style="font-weight: bold">ID</div>
-						<div class="table-cell" style="font-weight: bold">First Name</div>
-						<div class="table-cell" style="font-weight: bold">Last Name</div>
-						<div class="table-cell" style="font-weight: bold">Job Title</div>
-						<div class="table-cell" style="font-weight: bold">Email</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">3</div>
-						<div class="table-cell">Jack</div>
-						<div class="table-cell">Tuttle</div>
-						<div class="table-cell">Janitor</div>
-						<div class="table-cell"></div>
-					</div>
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell">4</div>
-						<div class="table-cell">Janine</div>
-						<div class="table-cell">Cray</div>
-						<div class="table-cell"></div>
-						<div class="table-cell">janine.cray@abc.xyz</div>
-					</div>
-				</div>
-			</div>
-			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
-				<div style="font-size: 24px">Column Store</div>
-				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell" style="font-weight: bold">ID</div>
-						<div class="table-cell" style="font-weight: bold">First Name</div>
-						<div class="table-cell" style="font-weight: bold">Last Name</div>
-						<div class="table-cell" style="font-weight: bold">Job Title</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">3</div>
-						<div class="table-cell">Jack</div>
-						<div class="table-cell">Tuttle</div>
-						<div class="table-cell">Janitor</div>
-					</div>
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell" style="font-weight: bold">ID</div>
-						<div class="table-cell" style="font-weight: bold">First Name</div>
-						<div class="table-cell" style="font-weight: bold">Last Name</div>
-						<div class="table-cell" style="font-weight: bold">Email</div>
-					</div>
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell">4</div>
-						<div class="table-cell">Janine</div>
-						<div class="table-cell">Cray</div>
-						<div class="table-cell">janine.cray@abc.xyz</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h2>Benefits of NoSQL Databases</h2>
-			<ul>
-				<li><u><em>Volume</em></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
-				<li><u><em>Velocity</em></u>: Relational databases must find each field for a write request. NoSQL databases take the data input and simply append it to the end of the store. For example, a relational database might need to find customer name, address, date, inventory number, and unit price fields in order to store a new sales order. A column store could simply create a new column for each attribute and combine them into a family. A document store could take the order and place all attributes and values into a single document.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h2>Benefits of NoSQL Databases</h2>
-			<ul>
-				<li><u><em>Variety</em></u>: Unlike relational databases which primarily store primitives, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
-			</ul>
-			<p>These V's are the same V's that characterize Big Data. Unsurprisingly, NoSQL databases frequently serve as the stores for firms' Big Data.</p>
-		</section>
-
-		<section>
-			<h2>Graph Database</h2>
-			<p>With the large contribution social media has made to Big Data, a different type of NoSQL database has become increasingly popular. A <u><em>graph database</em></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object, just as each row in a relational database or each document in a document store is an object, and each node can have one or more properties,just as a row in a relational database can have attributes. Edges connect nodes to describe how nodes relate to one another.</p>
-			<div class="override"><img src="../images/graph-database.png" alt="Graph Database" style="max-width: 300px; margin-top: 0"/></div>
-		</section>
-
-		<section>
-			<h2>Database Solutions</h2>
-			<p>Several popular relational database management systems (RDBMS), as well as non-relational databases exist. Although the older systems are proprietary, almost all new database systems are open source.</p>
-			<div class="flex-row" style="-webkit-align-items: flex-start; align-items: flex-start">
-				<div class="flex-item">
-					<p>Relational</p>
-					<ul>
-						<li>IBM DB2</li>
-						<li>Oracle DB</li>
-						<li>Microsoft SQL Server</li>
-						<li>MySQL</li>
-						<li>PostgreSQL</li>
-					</ul>
-				</div>
-				<div class="flex-item">
-					<p>Nonrelational</p>
-					<ul>
-						<li>MongoDB (Document store)</li>
-						<li>Cassandra (Wide column store)</li>
-						<li>CouchDB (Document store)</li>
-						<li>HBase (Wide column store)</li>
-						<li>Neo4j (Graph database)</li>
-					</ul>
-				</div>
-			</div>
+			<h2>Database Records</h2>
+			<p>The strength of a relational database is in the relationships between the database tables. Each table represents an entity (e.g., sales order), rows represents instances of an entity (e.g., a specific sales order), and columns represent attributes of the entity (e.g., sales order date). Relationships between tables represent interactions between entities. The relational database model stores data by entity while relating it to data from other entities. However, this also poses a weakness of the relational model. When adding data to a relational database, it can be necessary to add data to multiple tables. For example, if a customer places an order to be shipped to a new address, then the database would need to add a record to the customer order table, a record to the customer address table, and it would need to edit a record in the inventory table.</p>
 		</section>
 
 		<section>
@@ -413,6 +267,133 @@
 					<img src="../images/sample-er.png" alt="Sample E-R Diagram"/>
 				</div>
 			</div>
+		</section>
+
+		<section>
+			<h2>Non-relational Databases</h2>
+			<p>For several decades, RDBMSs have been the data store of choice for business data. However, Web commerce has created the need for database solutions that can add data quickly and can increase in size to accommodate very large datasets. These solutions fall into a class of non-relational databases, also called NoSQL (Not Only SQL). These databases abandon the principles of relational databases in favor of alternative models. One popular NoSQL model is the key-value store.</p>
+			<p>A <u><em>key-value store</em></u> pairs unique keys with data objects. The data object can be anything from a single number to an entire file. The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys. Two types of key-value stores are document stores and column stores.</p>
+		</section>
+
+		<section>
+			<h2>Document Store</h2>
+			<p>A <em><u>document store</u></em> is a key-value store in which the &ldquo;value&rdquo; is a text file with multiple metadata attributes and values, frequently in XML, YAML, or JavaScript Object Notation (JSON) format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (i.e., the entire document).</p>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+				<div style="font-size: 24px">Relational Table</div>
+				<div class="table" style="margin: 0">
+					<div class="table-row" style="background-color: lightgray">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Job Title</div>
+						<div class="table-cell" style="font-weight: bold">Email</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">1</div>
+						<div class="table-cell">John</div>
+						<div class="table-cell">Smith</div>
+						<div class="table-cell">Manager</div>
+						<div class="table-cell">john.smith@abc.xyz</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+				<div style="font-size: 24px">Document Store</div>
+				<div class="table" style="margin: 0">
+					<div class="table-row" style="background-color: lightgray">
+						<div class="table-cell" style="font-weight: bold">Key</div>
+						<div class="table-cell" style="font-weight: bold">Value</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">1</div>
+						<div class="table-cell">
+							<div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
+							<div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
+							<div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
+							<div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Column Store</h2>
+			<p>A <u><em>column store</em></u> is a key-value store that groups key and values into columns and multiple key-value pairs into families, similar to rows in relational tables. Unlike relational tables, these "rows" can have different numbers of attributes (i.e., keys), and attributes that appear in multiple rows can have different data types.</p>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+				<div style="font-size: 24px">Relational Table</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+					<div class="table-row" style="background-color: lightgray">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Job Title</div>
+						<div class="table-cell" style="font-weight: bold">Email</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">3</div>
+						<div class="table-cell">Jack</div>
+						<div class="table-cell">Tuttle</div>
+						<div class="table-cell">Janitor</div>
+						<div class="table-cell"></div>
+					</div>
+					<div class="table-row" style="background-color: lightgray">
+						<div class="table-cell">4</div>
+						<div class="table-cell">Janine</div>
+						<div class="table-cell">Cray</div>
+						<div class="table-cell"></div>
+						<div class="table-cell">janine.cray@abc.xyz</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+				<div style="font-size: 24px">Column Store</div>
+				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Job Title</div>
+					</div>
+					<div class="table-row" style="background-color: white">
+						<div class="table-cell">3</div>
+						<div class="table-cell">Jack</div>
+						<div class="table-cell">Tuttle</div>
+						<div class="table-cell">Janitor</div>
+					</div>
+					<div class="table-row" style="background-color: lightgray">
+						<div class="table-cell" style="font-weight: bold">ID</div>
+						<div class="table-cell" style="font-weight: bold">First Name</div>
+						<div class="table-cell" style="font-weight: bold">Last Name</div>
+						<div class="table-cell" style="font-weight: bold">Email</div>
+					</div>
+					<div class="table-row" style="background-color: lightgray">
+						<div class="table-cell">4</div>
+						<div class="table-cell">Janine</div>
+						<div class="table-cell">Cray</div>
+						<div class="table-cell">janine.cray@abc.xyz</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Graph Database</h2>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 55%">
+					<p>With the advent of social media, a different type of NoSQL database has become increasingly popular. A <u><em>graph database</em></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object similar to a row in a relational database, and each node can have one or more properties or attributes. Edges connect nodes to describe how nodes relate to one another.</p>
+				</div>
+				<div class="flex-item override"><img src="../images/graph-database.png" alt="Graph Database"/></div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Benefits of NoSQL Databases</h2>
+			<ul>
+				<li><u><em>Volume</em></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
+				<li><u><em>Velocity</em></u>: Relational databases must find each field, perhaps across multiple tables, to add new records. NoSQL databases take the data input and simply append it to the end of the store.</li>
+				<li><u><em>Variety</em></u>: Unlike relational databases which primarily store simple data types, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
+			</ul>
 		</section>
 
 		<section>
