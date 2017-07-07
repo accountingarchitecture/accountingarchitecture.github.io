@@ -141,6 +141,16 @@
 		</section>
 
 		<section>
+			<h2>Database Components</h2>
+			<p>In a relational database, each table or relation represents an <u><em>entity</em></u>, which is either a person (e.g., Customer or Employee), an asset (e.g., Inventory) or a data object (e.g., Invoice). Rows or records represent instances of an entity (e.g., a specific customer or a specific invoice). Columns or attributes represent characteristics of an entity (e.g., customer name or inventory SKU). Cells represent characteristics of an instance (e.g., the address of a specific employee or the date on specific invoice).This structure is no different from the structure of a flat file database. However, the strength of a relational database is in the relationships between the database tables. Relationships between tables represent interactions between entities. The relational database model stores data by entity while relating it to data from other entities.</p>
+		</section>
+
+		<section>
+			<h2>Primary Keys</h2>
+			<p>Each record in a table must have a unique identifier. Without it, it would not be possible to locate and retrieve a specific instance of an entity. This unique identifier is a <u><em>primary key</em></u>. Frequently, a primary key is a single entity attribute. It may be a characteristic inherent to an entity (e.g., telephone number, user login, SSN, etc.), or it may simply be an incremented ID number (e.g., 00001, 00002, 00003, etc.). As a unique identifier, each value of a primary key can only occur once per table. Sometimes no single attribute uniquely identifies an instance of an entity. For example, neither Semester nor Year nor Course Name nor Section uniquely identify an instance of a course, but the combination of Semester and Year and Course Name and Section can. Primary keys that comprise multiple attributes are <u><em>composite keys</em></u>.</p>
+		</section>
+
+		<section>
 			<h2>Data Types</h2>
 			<p>All cells for a single attribute must have the same <u><em>data type</em></u>. This type determines the characteristics of the data, as well as any available operations.</p>
 			<div class="table">
@@ -177,107 +187,65 @@
 		</section>
 
 		<section>
-			<h2>Database Records</h2>
-			<p>The strength of a relational database is in the relationships between the database tables. Each table represents an entity (e.g., sales order), rows represents instances of an entity (e.g., a specific sales order), and columns represent attributes of the entity (e.g., sales order date). Relationships between tables represent interactions between entities. The relational database model stores data by entity while relating it to data from other entities. However, this also poses a weakness of the relational model. When adding data to a relational database, it can be necessary to add data to multiple tables. For example, if a customer places an order to be shipped to a new address, then the database would need to add a record to the customer order table, a record to the customer address table, and it would need to edit a record in the inventory table.</p>
-		</section>
-
-		<section>
-			<h2>Structure Models for Relational Databases</h2>
+			<h2>Structure Models</h2>
 			<ul>
-				<li><u><em>Activity models</em></u> describe a series of processes that comprise a system. This system may be a computer program or a business cycle involving many programs and people.</li>
+				<li><u><em>Activity models</em></u> describe a series of processes that comprise a system.</li>
 				<li><u><em>Structure models</em></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
 			</ul>
-			<p>Relational databases are a popular context for discussing structure models because the models provide a conceptual view of data storage and identify what attributes are necessary prior to the implementation of the storage solution.</p>
-		</section>
-
-		<section>
-			<h2>Why More Diagrams?</h2>
-			<p>Once we know how to diagram business activities, why is it necessary to create <em>another</em> diagram about the objects in those activities?</p>
-			<p>A process diagram identifies players (agents, processes, and data objects) in a system, but an information system needs more dimensionality. It needs the metadata about each item in the activity diagram. For example, an activity diagram may include the object Invoice, but the information system needs to know the particulars of each instance (i.e., occurrence) of Invoice (e.g., vendor, amount due, due date, etc.).</p>
+			<p>Designing a relational database involves identifying all relevant entities, their attributes, and the relationships between those entities. Activity diagrams of business processes are useful for identifying people, assets, and data objects that become entities. Entities are the foundation for a structural model of a relational database that stores instances and attributes of these entities. A structural model allows shows how entities relate to one another.</p>
 		</section>
 
 		<section>
 			<h2>Entity-Relationship Diagrams</h2>
-			<p>The entity-relationship model initially introduced by Peter Chen in 1976 is the <i>de facto</i> standard for modeling relational databases. As the name indicates, the components of an E-R diagram are <em><u>entities</u></em> and <em><u>relationships</u></em> between entities. Additionally, thorough diagrams also include a series of <em><u>attributes</u></em> for each entity and <em><u>cardinalities</u></em> of the relationships.</p>
-		</section>
-
-		<section>
-			<h2>Entities</h2>
-			<p>An <u><em>entity</em></u> is something of importance that needs to be represented in the database. Examples of an entity may be Employee, Invoice, Inventory, Time Stamp, etc. It is important to note that these entities are concepts and not instances. For example, Employee is an entity, but a particular employee, Joe Smith, is an instance of that entity. Entities correspond to tables in the database, whereas instances correspond to records in those tables.
-		</section>
-
-		<section>
-			<h2>Relationships</h2>
-			<p>A <u><em>relationship</em></u> is a link between entities. Because entities are nouns, relationships can be described as verbs of one entity acting on another. Examples of this would be the relationship of Employee and Purchase Requisition. These two entities have a relationship describable as: Employee Creates Purchase Requisition.</p>
-		</section>
-
-		<section>
-			<h2>E-R Shapes</h2>
+			<p>The entity-relationship (E-R) diagram is the standard for modeling relational databases. Multiple E-R diagramming conventions exist that present the same data in different ways. The primary components of an E-R diagram are database entities and the relationships between them. A <u><em>relationship</em></u> is a link between entities that can be described as a verb of one entity acting on another (e.g., Customer Has Account or Employee Creates Receiving Report). E-R diagrams can also portray the attributes of each entity.</p>
 			<div class="flex-row">
-				<div class="flex-item override">
-					<div>E-R Diagram</div>
-					<img src="../images/simple-er.png" alt="Simple E-R Diagram" style="max-height: 200px"/>
-				</div>
-				<div class="flex-item override">
-					<div>Chen Notation</div>
-					<img src="../images/simple-chen-er.png" alt="Simple E-R Diagram with Chen Notation" style="max-height: 200px"/>
-				</div>
+			<div class="flex-item" style="max-width: 50%">E-R Diagram (without Attributes) in Chen Notation</div>
+			<div class="override"><img src="../images/simple-chen-er.png" alt="Simple E-R Diagram with 3 Entities in Chen Notation" style="max-height: 250px"/></div>
 			</div>
-			<p>The rounded rectangles represent the entities, and the connecting lines signify relationships. Chen notation adds a diamond to allow for explicit labeling of relationships.</p>
 		</section>
 
 		<section>
-			<h2>Attributes</h2>
-			<p>An <u><em>attribute</em></u> is any relevant characteristic of an entity. Unsurprisingly, E-R attributes correspond to attributes in a relational table.</p>
+			<h2>Foreign Keys</h2>
+			<p>Because primary keys uniquely identify an instance of an entity, they also serve to link entities together to implement relationships. Creating a relationship between two tables in a relational database involves taking the primary key from the table that represents the acting entity and placing it in the table that represents the entity being acted upon as a <u><em>foreign key</em></u>. A foreign key is a special attribute that can only take values of the primary key it links to, in order to show which instance of one entity relates to which instance of another. For example, Employee might include Employee ID as a primary key, and Sales Order could include Employee ID as a foreign key to identify the employee who initiated the sales order.</p>
 		</section>
 
 		<section>
 			<h2>Cardinalities</h2>
-			<p>The magnitude of the potential relationships between an instance of one entity and the instances of another (i.e., between a record of one table and the records of another table) is <u><em>cardinality</em></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. For example, if the two entities are Customer and Sale, then a customer is associated with at least (minimum) zero and at most (maximum) many sales, and each sale is associated with at least one customer and at most one customer. When the minimum and maximum cardinalities are equal, then it is only necessary to report one: each sale is associated with exactly one customer.</p>
+			<p>The magnitude of the potential relationships between an instance of one entity and the instances of another is <u><em>cardinality</em></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. Minimum cardinalities can be either zero or one, and they demonstrate that an instance of one entity is associated with at least zero instances or at least one instance of another entity . Maximum cardinalities can be either one or many, and they demonstrate that an instance of one entity is associated with at most one instance or at most many instances of another entity. For example, a customer is associated with at least (minimum) one and at most (maximum) many sales, and each sale is associated with at least one and at most one customer.</p>
 		</section>
 
 		<section>
-			<h2>Coyne Rule of Zero</h2>
-			<p>Although this is not a widely accepted rule of cardinalities, I believe that each relationship must have at least one minimum cardinality of zero. The reason for this is that the database can only create one record at a time. If a sale is associated with at least one customer, then the customer record must exist prior to the sale. If however, a customer is associated with at least one sale, as well, then the sale record must exist prior to the creation of the customer. However, they cannot both exist first. To avoid a Catch-22, one of the minimum cardinalities must be zero.</p>
-		</section>
-
-		<section>
-			<h2>Exceptions to Entities and Attributes</h2>
-			<p>Not everything that is important to represent is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are potential entities and attributes that are combinations of pre-existing attributes. One simple example of this relates to Inventory costs. Unit Cost and Quantity on Hand would be attributes of the entity Inventory, but Total Cost (= Unit Cost x Quantity on Hand) would not. Another example would be employee supervisors. Supervisor would not be an entity because it would simply be a subset of the Employee entity. These would-be entities and attributes become <em><u>user views</u></em> because they are not stored in the database but can be provided to the user, as needed.</p>
-		</section>
-
-		<section>
-			<h2>Keys</h2>
-			<p>A special subset of attributes that uniquely identifies a specific instance of an entity is a <u><em>primary key</em></u>. Each value of a primary key can only occur once per entity. Because these primary keys uniquely identify an instance, they also serve to link entities together to implement relationships. A primary key from one entity is included in another entity as a <u><em>foreign key</em></u> to create a link. For example, Employee might include Employee ID as a primary key, and Sales might include Employee ID as a foreign key to identify the employee responsible for the sale. The foreign key belongs to the entity that has the instance that is created last. For example, an employee exists before a time card, so the primary key from the Employee entity becomes a foreign key with the Time Card entity.</p>
-		</section>
-
-		<section>
-			<h2>Composite Keys</h2>
-			<p>Sometimes no single attribute uniquely identifies an instance of an entity. For example, neither Semester nor Year nor Course nor Section could be a primary key in a course schedule, but the combination of Semester and Year and Course and Section can. Primary keys that comprise multiple attributes are <u><em>composite keys</em></u>.</p>
-		</section>
-
-		<section>
-			<h2>Sample Diagram</h2>
+			<h2>Sample E-R Diagram</h2>
 			<div class="flex-row">
-				<div class="flex-item" style="max-width: 75%">
-					<p>Each course in the catalog has a unique number and each professor a unique ID as primary key [PK]. These primary keys also link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK/FK]. Each professor can teach zero or many scheduled courses, and each catalog entry can be scheduled zero or many times, but each scheduled course must have exactly one professor and one catalog reference.</p>
+				<div class="flex-item" style="max-width: 80%">
+					<p>This E-R diagram shows entities with attributes and relationships with cardinalities. Each course in the catalog has a unique number and each faculty member a unique ID as primary key [PK]. These primary keys link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK/FK]. Faculty can teach at least zero and at most many scheduled courses, and each catalog entry can be scheduled at least zero and at most many times. Each scheduled course has at least one and at most one instructor and at least one and at most one catalog reference.</p>
 				</div>
 				<div class="flex-item override">
 					<div>Crow's Foot Notation</div>
-					<img src="../images/sample-er.png" alt="Sample E-R Diagram"/>
+					<img src="../images/sample-er.png" alt="Sample E-R Diagram with 3 Entities in Crow's Foot Notation"/>
 				</div>
 			</div>
 		</section>
 
 		<section>
+			<h2>Exceptions to Entities and Attributes</h2>
+			<p>Not important object is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are objects and characteristics that are combinations of existing instances or attributes. Combinations of existing attributes are usually calculations. For example, the Inventory entity would have Unit Cost and Quantity On Hand as attributes. Total Cost would not be an attribute because it is a combination of other attributes (Unit Cost &times; Quantity on Hand). Combinations of existing instances are often subsets or alternative representations of entities. For example, Supervisor would not be an entity because it would simply be a subset of the Employee entity. These objects and characteristics become <em><u>user views</u></em> because they are not stored in the database but can be provided to the user, as needed.</p>
+		</section>
+
+		<section>
+			<h2>Accounting Records</h2>
+			<p>Traditional accounting journals and ledgers are examples of user views. Financial accounting textbooks imply that transaction processing involves recording a journal entry and then posting the journal entry to a ledger. However, in a relational database, Journal and Ledger could not both be entities because they represent alternative representations of the same instances. Furthermore, in a database with tables to track different types of assets (e.g., inventory, receivables, fixed assets) and financial transactions (e.g., sales, purchases, cash payments, cash receipts), either a Journal entity or a Ledger entity would be a combination of instances from asset and transaction entities. Journals, ledgers, and financial statements are not storage objects. They are user views sorted by date, account, financial statement, etc.</p>
+		</section>
+
+		<section>
 			<h2>Non-relational Databases</h2>
-			<p>For several decades, RDBMSs have been the data store of choice for business data. However, Web commerce has created the need for database solutions that can add data quickly and can increase in size to accommodate very large datasets. These solutions fall into a class of non-relational databases, also called NoSQL (Not Only SQL). These databases abandon the principles of relational databases in favor of alternative models. One popular NoSQL model is the key-value store.</p>
-			<p>A <u><em>key-value store</em></u> pairs unique keys with data objects. The data object can be anything from a single number to an entire file. The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys. Two types of key-value stores are document stores and column stores.</p>
+			<p>For several decades, RDBMSs have been the data store of choice for business data. However, Web commerce has created the need for database solutions that can add data quickly and can increase in size to accommodate very large datasets. These solutions fall into a class of non-relational databases, also called NoSQL. These databases abandon the principles of relational databases in favor of alternative models. Many NoSQL databases are key-value stores.</p>
+			<p>A <u><em>key-value store</em></u> pairs unique keys with data objects. The data object can be anything from a single number to an entire file. The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys. Two common types of key-value stores are document stores and column stores.</p>
 		</section>
 
 		<section>
 			<h2>Document Store</h2>
-			<p>A <em><u>document store</u></em> is a key-value store in which the &ldquo;value&rdquo; is a text file with multiple metadata attributes and values, frequently in XML, YAML, or JavaScript Object Notation (JSON) format. The document store is essentially a condensed version of a relational database, except that instead of storing the individual values as fields in a record of a relational table, the document store keeps all values together in a single field (i.e., the entire document).</p>
+			<p>A <em><u>document store</u></em> is a key-value store in which the data object is a text file with multiple metadata attributes and values, frequently in XML, YAML, or JavaScript Object Notation (JSON) format. Instead of storing the individual values as fields in a record of a relational table, a document store keeps all values together in a single data object.</p>
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
 				<div style="font-size: 24px">Relational Table</div>
 				<div class="table" style="margin: 0">
@@ -319,10 +287,10 @@
 
 		<section>
 			<h2>Column Store</h2>
-			<p>A <u><em>column store</em></u> is a key-value store that groups key and values into columns and multiple key-value pairs into families, similar to rows in relational tables. Unlike relational tables, these "rows" can have different numbers of attributes (i.e., keys), and attributes that appear in multiple rows can have different data types.</p>
+			<p>A <u><em>column store</em></u> groups individual key and values into columns and then combines columns into families. A column is similar to an attribute, and a family is similar to a record. Unlike records in relational tables, different families can have different numbers of keys (i.e., attributes), and the value from the same key in different family can have a different data type.</p>
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
 				<div style="font-size: 24px">Relational Table</div>
-				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+				<div class="table" style="margin: 0">
 					<div class="table-row" style="background-color: lightgray">
 						<div class="table-cell" style="font-weight: bold">ID</div>
 						<div class="table-cell" style="font-weight: bold">First Name</div>
@@ -348,7 +316,7 @@
 			</div>
 			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
 				<div style="font-size: 24px">Column Store</div>
-				<div class="table" style="font-size: 20px; border: 3px solid black; margin: 0">
+				<div class="table" style="margin: 0">
 					<div class="table-row" style="background-color: white">
 						<div class="table-cell" style="font-weight: bold">ID</div>
 						<div class="table-cell" style="font-weight: bold">First Name</div>
@@ -381,7 +349,7 @@
 			<h2>Graph Database</h2>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width: 55%">
-					<p>With the advent of social media, a different type of NoSQL database has become increasingly popular. A <u><em>graph database</em></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object similar to a row in a relational database, and each node can have one or more properties or attributes. Edges connect nodes to describe how nodes relate to one another.</p>
+					<p>With the advent of social media, graph databases have become a popular NoSQL model. A <u><em>graph database</em></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object with one or more attributes similar to a row in a relational database. Edges connect nodes to describe how nodes relate to one another. Graph databases are similar to relational databases, but the emphasis is on the relationships.</p>
 				</div>
 				<div class="flex-item override"><img src="../images/graph-database.png" alt="Graph Database"/></div>
 			</div>
@@ -391,14 +359,14 @@
 			<h2>Benefits of NoSQL Databases</h2>
 			<ul>
 				<li><u><em>Volume</em></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
-				<li><u><em>Velocity</em></u>: Relational databases must find each field, perhaps across multiple tables, to add new records. NoSQL databases take the data input and simply append it to the end of the store.</li>
+				<li><u><em>Velocity</em></u>: Relational databases must find each field, perhaps across multiple tables, to add and retrieve records. NoSQL databases take the data input and simply append it to the end of the store.</li>
 				<li><u><em>Variety</em></u>: Unlike relational databases which primarily store simple data types, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>Accounting Tie-in</h2>
-			<p>Accountants have always had the responsibility to store economic data in journals and ledgers. As the world becomes more digital, databases have replaced paper journals and ledgers, but that is only the beginning. eCommerce and Big Data have created the need for faster, more scalable data stores so that firms can capture customer data as fast as the customers create it. Because of mobile devices, which soon will outnumber humans on earth, this data is created constantly. Proper storage solutions are a necessary first step towards creating reports for internal and external stakeholders that support strategic decision making.</p>
+			<h2>Just So Fresh And Clean</h2>
+			<p>Accountants have a long tradition of storing economic data in paper journals and ledgers. Databases have replaced paper journals and ledgers, but databases are more than digital ledgers. Flat file databases are popular because of their ease of use, but they have drawbacks over relational and NoSQL databases. Relational databases promote data integrity by grouping data by entity and by requiring attributes to have a uniform data type. Clean data from well-designed relational databases results in better analytics. NoSQL databases promote eCommerce and Big Data analytics by storing and retrieving larger datasets faster. Proper storage solutions are necessary for data retrieval and analysis that results in reports for internal and external stakeholders that effectively support strategic decision making.</p>
 		</section>
 	</div>
 	</div>
