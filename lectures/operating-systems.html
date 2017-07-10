@@ -143,66 +143,13 @@
 		</section>
 
 		<section>
+			<h2>Package Managers</h2>
+			<p>One of the trademarks of BSD and Linux is the package manager. The package manager manages the installation and updating of all software in the operating system, including the operating system kernel. The benefit of a package manager is two-fold. First, the package manager provides the user with access to a vast collection of software repositories (i.e., data stores) that contain most applications the user would need. Linux and BSD users rarely need to search the Web for applications to download and install because the software repos often have a solution. Second, the package manager provides a single solution for keeping all applications and the operating system itself up to date. The command line is the primary interface for the package manager.</p>
+		</section>
+
+		<section>
 			<h2>Command Line</h2>
 			<p>Linux graphical shells, also called desktop environments or window managers, function similar to the graphical shells of other desktop operating systems. Much of the power of Linux is in the text shell, and system administrators almost exclusively use the command line in a terminal to manage Linux computers. Knowledge with Linux terminal commands is a valuable competency for an accounting architect. The most basic commands are the same across all Linux distributions, as well as BSD and UNIX. As a result, familiarity with a few line commands can immediately unlock basic functionality of most enterprise-grade operating systems. More advanced commands, such as how to control system daemons or the package manager, vary from distribution to distribution.</p>
-		</section>
-
-		<section>
-			<h2>Basic Line Commands</h2>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell" style="font-weight: bold">Command</div>
-					<div class="table-cell" style="font-weight: bold">Function</div>
-					<div class="table-cell" style="font-weight: bold">Examples</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">ls</div>
-					<div class="table-cell">List the contents of the current folder</div>
-					<div class="table-cell">
-						<ul>
-							<li>ls (Show contents of current folder)</li>
-							<li>ls Documents (Show contents of Documents folder)</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">cd</div>
-					<div class="table-cell">Change folder</div>
-					<div class="table-cell">
-						<ul>
-							<li>cd Documents (Change folder to Documents)</li>
-							<li>cd .. (Change folder to parent folder)</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">mv</div>
-					<div class="table-cell">Move or rename file or folder</div>
-					<div class="table-cell">
-						<ul>
-							<li>mv test.doc test2.doc (Rename test.doc to test2.doc)</li>
-							<li>mv test.doc Documents/test.doc (Move test.doc into Documents folder</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">cp</div>
-					<div class="table-cell">Copy file or folder</div>
-					<div class="table-cell">
-						<ul>
-							<li>cp test.doc test2.doc (Make a copy of test.doc called test2.doc)</li>
-							<li>cp test.doc Documents/. (Place a copy of test.doc in Documents folder)</li>
-							<li>cp test.doc Documents/test2.doc (Make a copy of test.doc called test2.doc and place it in Documents folder)</li>
-							<li>cp -r Documents Documents2 (Make a copy of Documents folder called Documents2)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h2>Package Managers</h2>
-			<p>One of the trademarks of BSD and Linux is the package manager. The package manager manages the installation and updating of all software in the operating system, including the operating system kernel. The benefit of a package manager is two-fold. First, the package manager provides the user with access to a vast collection of software repositories (i.e., data stores) that contain most applications the user would need. Linux and BSD users rarely need to search the Web for applications to download and install because the software repos often have a solution. Second, the package manager provides a single solution for keeping all applications and the operating system itself up to date.</p>
 		</section>
 
 		<section>
@@ -213,7 +160,7 @@
 
 		<section>
 			<h2>Apt Commands</h2>
-			<p>Apt is a DEB-based package manager. The following are some apt commands:</p>
+			<p>Apt is a DEB-based package manager. The following are some apt line commands:</p>
 			<div class="table">
 				<div class="table-row" style="background-color: lightgray">
 					<div class="table-cell" style="font-weight: bold">Command</div>
@@ -221,29 +168,29 @@
 					<div class="table-cell" style="font-weight: bold">Examples</div>
 				</div>
 				<div class="table-row" style="background-color: white">
-					<div class="table-cell">apt update</div>
+					<div class="table-cell" style="white-space: nowrap">sudo apt update</div>
 					<div class="table-cell">Update repository list to identify newest version of all applications</div>
 					<div class="table-cell"></div>
 				</div>
 				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">apt upgrade</div>
+					<div class="table-cell" style="white-space: nowrap">sudo apt upgrade</div>
 					<div class="table-cell">Upgrade all installed applications to newest versions</div>
 					<div class="table-cell"></div>
 				</div>
 				<div class="table-row" style="background-color: white">
-					<div class="table-cell">apt search</div>
+					<div class="table-cell" style="white-space: nowrap">sudo apt search</div>
 					<div class="table-cell">Look for application in repositories</div>
-					<div class="table-cell">apt search mysql (Find all applications with the word mysql in the name or description)</div>
+					<div class="table-cell">sudo apt search mysql (Find all applications with the word mysql in the name or description)</div>
 				</div>
 				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">apt install</div>
+					<div class="table-cell" style="white-space: nowrap">sudo apt install</div>
 					<div class="table-cell">Install application</div>
-					<div class="table-cell">apt install mysql-server (Install application named mysql-server)</div>
+					<div class="table-cell">sudo apt install mysql-server (Install application named mysql-server)</div>
 				</div>
 				<div class="table-row" style="background-color: white">
-					<div class="table-cell">apt remove</div>
+					<div class="table-cell" style="white-space: nowrap">sudo apt remove</div>
 					<div class="table-cell">Uninstall application</div>
-					<div class="table-cell">apt remove mysql-server (Remove application named mysql-server)</div>
+					<div class="table-cell">sudo apt remove mysql-server (Remove application named mysql-server)</div>
 				</div>
 			</div>
 		</section>
