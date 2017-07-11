@@ -60,7 +60,7 @@
 		<section>
 			<h2>Retrieval First</h2>
 			<p>Effective data retrival is the bridge between data storage and data analytics. As a result, stored data is only useful if it is retrievable; irretrievable data may just as well not exist. Metadata is a primary requirement for data retrievability. By defining the data, metadata identifies the location and form of the desired data. Without metadata, data is indistinguishable making retrieval and subsequent analysis of specific data infeasible.</p>
-			<p>Data retrival can take on many forms. Retrival from a relational database can involve combining multiple tables into a single flat file database. Retrieval from a document store can involve creating an XML or JSON document </p> 
+			<p>Data retrival can take on many forms. Retrival from a relational database can involve combining multiple tables into a single flat file database. Retrieval from a document store can involve creating a new XML or JSON file from specific attributes and values across multiple documents.</p> 
 		</section>
 
 		<section>
@@ -74,7 +74,138 @@
 		</section>
 
 		<section>
-			<h2>Creation Commands</h2>
+			<h2>Linux Data Retrieval Commands</h2>
+			<div class="table">
+				<div class="table-row" style="background-color: lightgray; font-weight: bold">
+					<div class="table-cell">Command</div>
+					<div class="table-cell">Function</div>
+					<div class="table-cell">Examples</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell"><strong>sudo find</strong></div>
+					<div class="table-cell">Find file or folder by name</div>
+					<div class="table-cell">
+						<ul>
+							<li><strong>sudo find . -name test.txt</strong> (Search in current folder and all sub-folders for any file with name test.txt)</li>
+							<li><strong>sudo find / -name test.txt</strong> (Search in root folder and all sub-folders for any file with name test.txt)</li>
+							<li><strong>sudo find /etc -iname test.txt</strong> (Search case-insensitive in etc folder in root folder and all sub-folders for any file with name test.txt)</li>
+							<li><strong>sudo find . -iname *test*</strong> (Search case-insensitive in current folder and all sub-folders for any file or folder with name containing string test)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell"><strong>grep</strong></div>
+					<div class="table-cell">Find text file by contents</div>
+					<div class="table-cell">
+						<ul>
+							<li><strong>grep test .</strong> (Search in current folder for any text file containing string test)</li>
+							<li><strong>grep -i test /</strong> (Search case-insensitive in root folder for any text file containing string test)</li>
+							<li><strong>grep -R test ~</strong> (Search in home folder and all sub-folders for any text file containing string test)</li>
+							<li><strong>grep -iR test /bin</strong> (Search case-insensitive in bin folder in root folder and all sub-folders for any text file containing string test)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Linux Data Output Commands</h2>
+			<div class="table">
+				<div class="table-row" style="background-color: lightgray; font-weight: bold">
+					<div class="table-cell">Command</div>
+					<div class="table-cell">Function</div>
+					<div class="table-cell">Examples</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell"><strong>less</strong></div>
+					<div class="table-cell">View contents of text file in terminal</div>
+					<div class="table-cell">
+						<ul>
+							<li><strong>less test.txt</strong> (View contents of test.txt in current folder)</li>
+							<li><strong>less Downloads/test.txt</strong> (View contents of test.txt in Downloads folder in current folder)</li>
+							<li><strong>q</strong> (Exit contents view)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell"><strong>cat</strong></div>
+					<div class="table-cell">Print contents of text file</div>
+					<div class="table-cell">
+						<ul>
+							<li><strong>cat test.txt</strong> (Print contents of test.txt in current folder to terminal window)</li>
+							<li><strong>cat /etc/smb.conf</strong> (Print contents of smb.conf in etc folder in root folder to terminal window)</li>
+							<li><strong>cat /etc/smb.conf</strong> (Print contents of smb.conf in etc folder in root folder to terminal window)</li>
+							<li><strong>cat test.txt > test2.txt</strong> (Replace contents of test2.txt in current folder with contents of test.txt in current folder)</li>
+							<li><strong>cat test.txt >> Downloads/test2.txt</strong> (Append contents of test2.txt in Downloads folder in current folder with contents of test.txt in current folder)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Python and PERL</h2>
+			<p><u><em>Python</em></u> and <u><em>PERL</em></u> are two other general purpose languages. However, because they rely heavily on <u><em>regular expressions</em></u> (Regex), which are sequences of characters that allow for convenient retrieval of strings in text files, they are useful for data, and specifically textual analysis. One use might be to look for specific words in the body of all Twitter posts.</p>
+			<div>Regex Cheatsheet</div>
+			<div class="flex-row">
+				<div class="flex-item">
+					<div class="table">
+						<div class="table-row" style="background-color: lightgray; font-weight: bold">
+							<div class="table-cell">Expression</div>
+							<div class="table-cell">Definition</div>
+						</div>
+						<div class="table-row" style="background-color: white">
+							<div class="table-cell">(\d{1,2}\/\d{1,2}\/\d{4})</div>
+							<div class="table-cell">Date</div>
+						</div>
+						<div class="table-row" style="background-color: lightgray">
+							<div class="table-cell">(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})</div>
+							<div class="table-cell">Email address</div>
+						</div>
+						<div class="table-row" style="background-color: white">
+							<div class="table-cell">(^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^50$)</div>
+							<div class="table-cell">Any number from 1 to 50</div>
+						</div>
+						<div class="table-row" style="background-color: lightgray">
+							<div class="table-cell">([A-Za-z0-9-]+)</div>
+							<div class="table-cell">Any letter, number, or hyphen</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex-item">
+					<div class="table">
+						<div class="table-row" style="background-color: lightgray; font-weight: bold">
+							<div class="table-cell">Expression</div>
+							<div class="table-cell">Definition</div>
+						</div>
+						<div class="table-row" style="background-color: white">
+							<div class="table-cell">(\d{1,2}\/\d{1,2}\/\d{4})</div>
+							<div class="table-cell">Date</div>
+						</div>
+						<div class="table-row" style="background-color: lightgray">
+							<div class="table-cell">(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})</div>
+							<div class="table-cell">Email address</div>
+						</div>
+						<div class="table-row" style="background-color: white">
+							<div class="table-cell">(^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^50$)</div>
+							<div class="table-cell">Any number from 1 to 50</div>
+						</div>
+						<div class="table-row" style="background-color: lightgray">
+							<div class="table-cell">([A-Za-z0-9-]+)</div>
+							<div class="table-cell">Any letter, number, or hyphen</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Regex Humor</h2>
+			<div class="override"><a href="http://xkcd.com/license.html" target="_blank" aria-label="Website opens in new window"><img src="http://imgs.xkcd.com/comics/regular_expressions.png" alt="XKCD"/></a></div>
+		</section>
+
+		<section>
+			<h2>Linux Regex Data Retrieval Commands</h2>
 			<div class="table">
 				<div class="table-row" style="background-color: lightgray">
 					<div class="table-cell" style="font-weight: bold">Command</div>
@@ -82,25 +213,14 @@
 					<div class="table-cell" style="font-weight: bold">Examples</div>
 				</div>
 				<div class="table-row" style="background-color: white">
-					<div class="table-cell"><strong>touch</strong> (<strong>sudo touch</strong>, if destination folder is not owned by user)</div>
-					<div class="table-cell">Create file</div>
+					<div class="table-cell"><strong>egrep</strong></div>
+					<div class="table-cell">Find text file by contents</div>
 					<div class="table-cell">
 						<ul>
-							<li><strong>touch test.txt</strong> (Create test.txt in current folder owned by user)</li>
-							<li><strong>sudo touch /test.txt</strong> (Create test.txt in root folder not owned by user)</li>
-							<li><strong>touch Downloads/test.txt</strong> (Create test.txt in Downloads folder owned by user in current folder)</li>
-							<li><strong>sudo touch /opt/test.txt</strong> (Create test.txt in opt folder not owned by user in root folder)</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell"><strong>mkdir</strong> (<strong>sudo mkdir</strong>, if destination folder is not owned by user)</div>
-					<div class="table-cell">Create folder</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>mkdir Documents</strong> (Create Documents folder in current folder owned by user)</li>
-							<li><strong>mkdir Videos/playlist</strong> (Create folder playlist in Video folder owned by user in current folder)</li>
-							<li><strong>sudo mkdir /bin/test</strong> (Create test folder in bin folder not owned by user in root folder)</li>
+							<li><strong>grep test .</strong> (Search in current folder for any text file containing string test)</li>
+							<li><strong>grep -i test /</strong> (Search case-insensitive in root folder for any text file containing string test)</li>
+							<li><strong>grep -R test ~</strong> (Search in home folder and all sub-folders for any text file containing string test)</li>
+							<li><strong>grep -iR test /bin</strong> (Search case-insensitive in bin folder in root folder and all sub-folders for any text file containing string test)</li>
 						</ul>
 					</div>
 				</div>
@@ -143,35 +263,6 @@
 					<img src="../images/json.png" alt="JSON" style="max-width: 250px"/>
 				</div>
 			</div>
-		</section>
-
-		<section>
-			<h2>Python and PERL</h2>
-			<p><u><em>Python</em></u> and <u><em>PERL</em></u> are two other general purpose languages. However, because they rely heavily on <u><em>regular expressions</em></u> (Regex), which are sequences of characters that allow for convenient retrieval of strings in text files, they are useful for data, and specifically textual analysis. One use might be to look for specific words in the body of all Twitter posts.</p>
-			<div>Regex Examples</div>
-			<div class="table" style="font-size: 20px; border: 3px solid black">
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">(\d{1,2}\/\d{1,2}\/\d{4})</div>
-					<div class="table-cell">Date</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})</div>
-					<div class="table-cell">Email address</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">(^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^50$)</div>
-					<div class="table-cell">Any number from 1 to 50</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">([A-Za-z0-9-]+)</div>
-					<div class="table-cell">Any letter, number, or hyphen</div>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h2>Regex Humor</h2>
-			<div class="override"><a href="http://xkcd.com/license.html" target="_blank" aria-label="Website opens in new window"><img src="http://imgs.xkcd.com/comics/regular_expressions.png" alt="XKCD"/></a></div>
 		</section>
 
 		<section>
