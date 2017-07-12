@@ -396,7 +396,7 @@ var myModules = [
 	{"week":"Week 8",
 	"topics":[
 		{"date":"October 18, 2017", "title":"Storage",
-			"summary":"<p>This lecture covers the Storage block of the arch. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage is a prerequisite for understanding analytics.</p>",
+			"summary":"<p>This lecture covers the Storage block of the arch. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage and services is a prerequisite for understanding analytics.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/storage.html"},
 				{"label":"Assignment", "type":"button", "href":"supplement/storage/assignment.html"}
@@ -419,8 +419,36 @@ var myModules = [
 	},
 	{"week":"Week 9",
 	"topics":[
-		{"date":"October 23, 2017", "title":"Software: Data Analytics",
-			"summary":"<p>The final Software topic is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. The lecture introduces multiple analytical tools and programming languages, but the homework assignment will only focus on one: SQL. I provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I recommend that you view the tutorial before you attempt the homework assignment.</p>",
+		{"date":"October 23, 2017", "title":"Services",
+			"summary":"<p>Services is the fourth block in the Technology section of the accounting architecture framework. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of enterprise-grade computing. I also provide a video tutorial that explains how to complete the homework assignment.</p>",
+			"nav":[
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution-unbfz.html"},
+				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=lr5pYsjR_rk"},
+				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
+				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"}
+			],
+			"readings":[
+				{"set":"Optional", "list":[
+					{"label":"Public Cloud", "type":"button", "href":"https://www.youtube.com/watch?v=jOhbTAU4OPI"},
+					{"label":"History of ERP", "type":"button", "href":"supplement/services/erp-history.jpg", "filetype":"Image"},
+					{"label":"Super Pi", "type":"button", "href":"http://www.zdnet.com/article/build-your-own-supercomputer-out-of-raspberry-pi-boards/"},
+					{"label":"Mobility as a Service", "type":"button", "href":"https://opensource.com/business/16/9/travelspirit-mobility-service"}
+				]}
+			],
+			"due":[
+				{"deliverable":"Quiz", "deadline":"0"},
+				{"deliverable":"Puzzle", "deadline":"5"},
+				{"deliverable":"Homework", "deadline":"5"}
+			]
+		}
+	]
+	},
+	{"week":"Week 10",
+	"topics":[
+		{"date":"October 30, 2017", "title":"Software: Data Analytics",
+			"summary":"<p>The final Software and Technology topic is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. The lecture introduces multiple analytical tools and programming languages, but the homework assignment will only focus on one: SQL. I provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I recommend that you view the tutorial before you attempt the homework assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution-ziwfu.html"},
@@ -439,34 +467,6 @@ var myModules = [
 					{"label":"Data and Loans, Part 1", "type":"button", "href":"https://enterprisersproject.com/article/2016/12/loan-company-realizes-power-data-scientists-and-software-engineers-joining-forces"},
 					{"label":"Data and Loans, Part 2", "type":"button", "href":"https://enterprisersproject.com/article/2016/12/want-make-better-decisions-break-down-wall-between-data-and-it"},
 					{"label":"MapReduce", "type":"button", "href":"https://www.youtube.com/watch?v=bcjSe0xCHbE"}
-				]}
-			],
-			"due":[
-				{"deliverable":"Quiz", "deadline":"0"},
-				{"deliverable":"Puzzle", "deadline":"5"},
-				{"deliverable":"Homework", "deadline":"5"}
-			]
-		}
-	]
-	},
-	{"week":"Week 10",
-	"topics":[
-		{"date":"October 30, 2017", "title":"Services",
-			"summary":"<p>Services is the final block in the Technology section of the accounting architecture framework. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of enterprise-grade computing. I also provide a video tutorial that explains how to complete the homework assignment.</p>",
-			"nav":[
-				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution-unbfz.html"},
-				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=lr5pYsjR_rk"},
-				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
-				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"}
-			],
-			"readings":[
-				{"set":"Optional", "list":[
-					{"label":"Public Cloud", "type":"button", "href":"https://www.youtube.com/watch?v=jOhbTAU4OPI"},
-					{"label":"History of ERP", "type":"button", "href":"supplement/services/erp-history.jpg", "filetype":"Image"},
-					{"label":"Super Pi", "type":"button", "href":"http://www.zdnet.com/article/build-your-own-supercomputer-out-of-raspberry-pi-boards/"},
-					{"label":"Mobility as a Service", "type":"button", "href":"https://opensource.com/business/16/9/travelspirit-mobility-service"}
 				]}
 			],
 			"due":[
