@@ -225,6 +225,42 @@
 		</section>
 
 		<section>
+			<h2>Mounting</h2>
+			<p>In order to access the contents of a storage drive, the user must first <u><em>mount</em></u> the file system. Operating systems automatically mount local file systems on startup. Several desktop operating systems also automatically mount the file systems on removable storage devices (e.g., USB drives). However, it is also possible to mount these file systems manually.</p>
+			<div class="table">
+				<div class="table-row" style="background-color: lightgray; font-weight: bold">
+					<div class="table-cell">Command</div>
+					<div class="table-cell">Function</div>
+					<div class="table-cell">Examples</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell"><strong>lsblk</strong></div>
+					<div class="table-cell">List all file systems</div>
+					<div class="table-cell"></div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell" style="white-space: nowrap"><strong>sudo mount</strong></div>
+					<div class="table-cell">Mount target file system</div>
+					<div class="table-cell">
+						<ul>
+							<li><strong>sudo mount /dev/sda1 /mnt</strong> (Mount file system on first physical volume of first storage drive to mnt folder)</li>
+							<li><strong>sudo mount /dev/sdb3 /media</strong> (Mount file system on third physical volume of second storage drive to media folder)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell" style="white-space: nowrap"><strong>sudo umount</strong></div>
+					<div class="table-cell">Unmount target file system</div>
+					<div class="table-cell">
+						<ul>
+							<li><strong>sudo umount /mnt</strong> (Unmount any file system mounted to mnt folder)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
 			<h2>From File System to Database System</h2>
 			<p>The role of a database system is to collate data and present it in a centralized manner. In the example of the library card catalog, a physical database system functions as an alternative to a file system. However, in digital storage, this is not the case. A digital database system is an application, which runs on an operating system, which sits on a file system. In the current computing world, database systems are not an alternative to file systems, rather they collate data stored on a file system and present it as if it were stored in a centralized manner. Many software applications are database systems. Music players are a common example. The individual song files are stored in separate files and folders on a file system. The music player collates the songs and provides the user with a single library.</p>
 		</section>
