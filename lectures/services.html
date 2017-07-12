@@ -106,7 +106,7 @@
 
 		<section>
 			<h2>Cloud as a Service</h2>
-			<p>In a cloud computing environment, computing power, storage, and content is made available to the user as a service. This is very similar to the services used by an operating system kernel to provide user applications with access to the hardware. Kernel services and services in cloud computing both rely on daemons to provide the user with access to resources. Two common examples are the Apache HTTP Server daemon that hosts (i.e., provides access to) Web pages and the FTP daemon that hosts shared files and folders. Additional examples include relational database management system daemons that provide access to relational databases and the Music Player Daemon that allows for streaming music to client-side applications. Cloud computing can also provide access to CPU, RAM, and storage capacity as a service.</p>
+			<p>In a cloud computing environment, computing power (CPU and RAM), storage, and content is made available to the user as a service. This is very similar to the services used by an operating system kernel to provide user applications with access to the hardware. Kernel services and services in cloud computing both rely on daemons to provide the user with access to resources. Common examples Apache HTTP Server for hosting (i.e., providing access to) Web pages, NFS for hosting a shared file system, CalDAV for hosting shared calendars, and IMAP and SMTP for sending and receiving email. Additionally, RDBMSs include daemons for sharing relational databases.</p>
 		</section>
 
 		<section>
@@ -160,39 +160,34 @@
 		</section>
 
 		<section>
-			<h2>Acquisition</h2>
-			<p>One of the primary roles of cloud computing for a firm's information system is the ability to collect data. In many cases, this may involve a customer-facing <u><em>online transaction processing</em></u> (OLTP) system. An OLTP system may be a Web server and database to receive customer orders (e.g., Amazon.com), or it might be a container running a Web app so that banking customers can interact with their accounts. Regardless of the specific configuration, the purpose of OLTP is to acquire data for subsequent analysis.</p>
+			<h2>File Shares</h2>
+			<p><u><em>File sharing</em></u> is one of the oldest forms of cloud computing. Users frequently think of file sharing specifically as peer-to-peer file sharing, which involves a single user sharing content with another single user. However, file sharing in cloud computing involves a centralized file server that provides access to a network-based file system so that users can access the same content from multiple devices. Three common file server daemons are the File Transfer Protocol (FTP) daemon, the Network File System (NFS) daemon, and the Server Message Block (SMB) daemon. SMB is the most common protocol for sharing file systems with Windows computers. NFS and SMB provide users with file systems that they can mount like local file systems or removable media.</p>
 		</section>
 
 		<section>
-			<h2>Storage</h2>
-			<p>Another role of cloud computing that is strongly related to acquisition is the need to store the collected data. File servers (e.g., FTP servers), which are cloud-based shared file systems, and database servers, which are cloud-based shared RDBMSs or NoSQL databases, can store data acquired by an OLTP and make it available to multiple users and roles, as necessary.</p>
+			<h2>Database Servers</h2>
+			<p><u><em>Database servers</em></u> are also a very common component of cloud computing. Relational database management systems combine a database server with a database client. The database server daemon collates data from the file system in order to present it to the database client in a centralized manner. The database server can be on the same device as the database client, or the database server can be on a different network-connected device. The database client treats local and remote database servers the same. Cloud-based database servers are the preferred storage solution for many cloud-based applications because they can provide application data better than a cloud-based file system. They are also useful for providing data analysts with access to datasets that are too large to store on their personal computers.</p>
 		</section>
 
 		<section>
 			<h2>Public Clouds</h2>
-			<p>The concepts of cloud computing and WAN and LAN networks create an important dichotomy for cloud computing. <u><em>Public clouds</em></u> are servers that are hosted by third parties and made available through Internet (i.e., WAN) access. The two most well-known public clouds are Amazon AWS and Microsoft Azure, but other popular offerings exist, such as Google Cloud Computing and Rackspace. The benefit of public clouds is the outsourced responsibility for purchasing and maintaining server and network hardware. Public cloud providers then rent space on shared server hardware to customers.</p>
+			<p>The collection of hardware and software servers in a cloud computing environment (i.e., a cloud) can be public or private. <u><em>Public clouds</em></u> are hosted by third parties and made available through Internet access. The benefit of public clouds is the outsourced responsibility for purchasing and maintaining server and network hardware. This can reduce both IT procurement costs, as well as IT staffing costs. Public cloud providers rent space on shared server hardware to customers based on their desired service level. The two most well-known public clouds are Amazon AWS and Microsoft Azure.</p>
 			<p>(As an aside, Amazon provides Netflix with an IaaS to host their video platform, which Netflix, in turn, provides to viewers as a SaaS.)</p>
 		</section>
 
 		<section>
 			<h2>Private Clouds</h2>
-			<p>However, not everyone is interested in sharing server hardware. As a result, <u><em>private clouds</em></u> have become increasingly popular. Private clouds are servers that are hosted on the company's own LAN or dedicated hardware that a company rents from a vendor. Private clouds require more effort but also provide greater control and flexibility. Although any server-based computing can constitute cloud computing, some software offerings focus specifically on private cloud computing. The three most well-known solutions are OpenStack, CloudStack, and ownCloud. (ownCloud began as a residential-grade private cloud with an email server, file server, and calendar server, but thanks to collaboration with CERN, it can now scale up to handle vast corporate clouds.)</p>
+			<p>However, not everyone is interested in sharing server hardware or in allowing another vendor access to private data. As a result, <u><em>private clouds</em></u> have become increasingly popular. Private clouds are servers that are hosted on the company's own LAN. Private clouds require more effort but also provide greater control and flexibility. Although any server-based computing can constitute private cloud computing, some software offerings focus specifically on supporting multi-functional private clouds. These offerings provide a collection of tools, including virtual machines, containers, email servers, file and database servers, etc. This type of solution is especially useful in a distributed computing environment because the software can utilize the hardware of multiple servers in a single cloud.</p>
 		</section>
 
 		<section>
 			<h2>Enterprise Resource Planning</h2>
-			<p><u><em>Enterprise Resource Planning</em></u> (ERP) is an early example of cloud computing. The goal of ERP systems was to have centralized data stores, as well as end-user applications and data entry systems with a uniform appearance, for tracking business and accounting data. Oracle and SAP are prominent vendors in this arena, and Peoplesoft had been prior to its acquisition by Oracle. Companies hastily adopted ERPs in the 1990s in the hope that they would increase profitability. Unfortunately, the difficulty of implementation paired with the rigidity of the software&mdash;ERPs expected uniform business process, which is not a realistic requirement&mdash;rendered several implementations costly (&gt;$100 million) and useless. Despite this fact, many ERP systems are still in use today.</p>
+			<p><u><em>Enterprise Resource Planning</em></u> (ERP) is an early example of private cloud computing. The goal of ERP systems was to have centralized data stores and data entry and reporting systems for business and accounting data. Oracle and SAP are prominent vendors in this arena. Companies hastily adopted ERPs in the 1990s in the hope that they would increase profitability, but the difficulty of implementation paired with the rigidity of the software&mdash;ERPs expected uniform business process, which is not a realistic requirement&mdash;rendered several implementations costly (&gt;$100 million) and useless. However, many ERP systems are still in use today in large corporations and universities as a part of their private clouds that focuses on traditional business data.</p>
 		</section>
 
 		<section>
 			<h2>Open Source in the Cloud</h2>
-			<p>All prominent private cloud offerings are open source. In fact, open source software dominates cloud computing. Ubuntu Linux is the number one operating system for the cloud&mdash;not the number one Linux distribution, the number one operating system&mdash;even on Microsoft's Azure platform, and the most popular databases in the cloud are open source. The primary reason for the popularity of open source private clouds is customizability. Firms have unique processes with unique informational needs, and they want to be able to customize the information system to meet their unique needs. That is why private clouds thrive while ERP adoption diminishes.</p>
-		</section>
-
-		<section>
-			<h2>Aside: Monetizing Open Source</h2>
-			<p>Recent news provides a convenient opportunity to explain how to make money with open source software. Microsoft has announced that it will port SQL Server to Linux. (To port means to make a software originally designed for one operating system or CPU architecture available on another operating system or CPU.) Although Microsoft would prefer users run Windows Server, users prefer Linux. As a result, Microsoft supports Linux on its Azure cloud platform, and if their users prefer Linux, making SQL Server available for Linux can make SQL Server more attractive, as well. Microsoft uses open source Linux to make money from Azure and SQL Server which, despite being available on Linux, remains closed source.</p>
+			<p>Open source software dominates cloud computing. Most prominent public and private cloud offerings are open source. Ubuntu Linux is the number one operating system for the cloud&mdash;not the number one Linux distribution, the number one operating system&mdash;even on Microsoft's Azure platform, and the most popular databases in the cloud are open source. The primary reason for the popularity of open source in cloud computing is customizability. Firms have unique processes with unique informational needs, and they want to be able to customize the information system to meet their unique needs. This is one reason why private clouds thrive while ERP adoption diminishes.</p>
 		</section>
 
 		<section>
@@ -207,8 +202,8 @@
 		</section>
 
 		<section>
-			<h2>Accounting Tie-in</h2>
-			<p>Data is everything to accountants, and in our current connected world, systems must be available to receive external data, storage systems must be able to preserve vital data, and accountants must have the analytical skills necessary to interpret the data for internal and external decision-makers. According to E&amp;Y, the tax function has become the largest consumer of data in the enterprise. Two reasons for this trend are (1) data analysis enables taxes to drive corporate strategy and (2) tax authorities have begun to demand increased granularity in tax disclosure (i.e., underlying transactional data instead of summary figures). A well-designed cloud captures transactional data and makes in available for analysis and reporting.</p>
+			<h2>Cloud is for Information</h2>
+			<p>The proliferation of cloud-based apps and IoT devices has reinforced the importance of data and information. As a result, a primary role of cloud computing is to gather data, especially Big Data, from current and potential customers. Mobile devices, wearables, sensors, and smart home devices are constantly connected to the Internet. Consumers use these because they provide access to resources, content, services, and conveniences, and business entities benefit by learning more about consumer behavior. A well-designed cloud captures this data and makes it available for analysis. The Big Data promise is that the answers inside this massive amount of data can lead to a competitive advantage.</p>
 		</section>
 	</div>
 	</div>
