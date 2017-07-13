@@ -90,7 +90,7 @@
 
 		<section>
 			<h2>Clusters and Backups</h2>
-			<p>In addition to addressing a number risks introduced by relying on vendors to provide power and network connectivity, redundancy also protects against additional risks solely within the entity's control. A distributed computing cluster, in addition to increasing availability by adding additional computing power, allows alternative servers to take over when one server fails. <u><em>Backups</em></u> create duplicates of data on file and database systems in case storage volumes become corrupted or data becomes unintentionally or nefariously deleted, altered, or locked. Regardless of the size or perceived importance of an information system, data backups are a vital control activity. Different backup techniques exist to create data duplicates to satisfy different needs for <u><em>disaster recovery</em></u> (i.e., restoring data and system functionality following a loss of availability).</p>
+			<p>In addition to addressing a number risks introduced by relying on vendors to provide power and network connectivity, redundancy also protects against additional risks solely within the entity's control. A distributed computing cluster, in addition to increasing availability by adding additional computing power, allows alternative servers to take over when one server fails. <u><em>Backups</em></u> create duplicates of data on file and database systems in case storage volumes become corrupted or data becomes unintentionally or nefariously deleted, altered, or locked. Regardless of the size or perceived importance of an information system, data backups are a vital control activity. Different backup techniques exist to create data duplicates to satisfy different needs for <u><em>disaster recovery</em></u> (i.e., restoring data and functionality following a loss of availability).</p>
 		</section>
 
 		<section>
@@ -131,7 +131,7 @@
 
 		<section>
 			<h2>Redundancy as a Service</h2>
-			<p>Several redundancy tools assume that the business entity hosts server and network hardware in a private cloud. However, one of the benefits of public clouds is that the public cloud provider is responsible for redundancy. As a customer of the public cloud provider, the entity has the same claim on availability of the cloud infrastructure as the entity's customers have on the content hosted in that cloud. In order to ensure that the public cloud remains available, the vendor must establish policies for power, network, and geographic redundancy, as well as maintaining a distributed computing environment with redundant server hardware. However, the entity retains the responsibility for data backups and virtual machine or container redundancy to protect against downtime and data loss for reasons unrelated to infrastructure, such as human or software error, data theft, and some types cyber incidents.</p>
+			<p>One of the benefits of public clouds is that the cloud provider is responsible for redundancy. As a customer of the public cloud provider, the entity has the same claim on availability of the cloud infrastructure as the entity's customers have on the content hosted in that cloud. In order to ensure that the public cloud remains available, the vendor must establish policies for power, network, and geographic redundancy, as well as maintaining a distributed computing environment with redundant server hardware. However, the entity retains the responsibility for data backups and virtual machine or container redundancy to protect against downtime and data loss for reasons unrelated to infrastructure, such as human or software error, data theft, and some types cyber incidents.</p>
 		</section>
 
 		<section>
@@ -156,24 +156,26 @@
 
 		<section>
 			<h2>Big Picture</h2>
-			<p>A complete cloud-based information system includes multiple components that promote the availability needs of both internal and external stakeholders by operationalizing the information life cycle or Big Data life cycle. This graphic provides an example of such a system. First, externally facing, department-specific OLTP databases support specialized data collection. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
+			<p>A complete cloud-based information system includes multiple components that satisfy the needs of both internal and external stakeholders by operationalizing the information life cycle or Big Data life cycle. First, externally facing, department-specific databases facilitate specialized data collection. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
 			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
 			<h2>Acquisition</h2>
-			<p>One of the primary roles of cloud computing for a firm's information system is data acquisition. In many cases, this involves a customer-facing <u><em>online transaction processing</em></u> (OLTP) system. OLTP systems are database systems that support high-frequency online customer transactions, such as sales order creation or banking transactions. The primary purpose of an OLTP system is to ensure that an online system is One definition of OLTP is An OLTP system may be a Web server and database to receive customer orders (e.g., Amazon.com), or it might be a container running a Web app so that banking customers can interact with their accounts. Regardless of the specific configuration, the purpose of OLTP is to acquire data for subsequent analysis.</p>
+			<p>One of the primary roles of cloud computing for a firm's information system is data acquisition. In many cases, this involves a customer-facing <u><em>online transaction processing</em></u> (OLTP) system. OLTP systems are database systems that support high-frequency online customer transactions, such as sales order creation or banking transactions. The primary purpose of an OLTP system is to ensure that an online system is always available to receive additional data.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
 			<h2>Integration</h2>
-			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This may be in addition to any conversion that is necessary prior to initial entry into the OLTP system.) The staging area provides an intermediate store where data is cleaned and converted. This process is called ETL (Extract, Transform, and Load).</p>
+			<p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This is in addition to any conversion that may be necessary prior to initial entry into the OLTP system.) The staging area provides an intermediate store where data is cleaned and converted. This process is called ETL (Extract, Transform, and Load).</p>
 			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
 			<h2>Clean Up</h2>
-			<p>Expertise in data analytics is currently a desirable skill, but one of the precursors to useful data analytics is good data. One of the purposes for teaching the information life cycle is to provide you with the awareness of the need to design systems that will ensure good data for analytics, but for pre-existing systems, sometimes the only solution is to take the data as given. As a result, data specialists confess that a large part of their job is cleaning data (e.g., looking for likely errors, finding duplicate data, matching records in one store with the records in another). It is not fun, but it is necessary.</p>
+			<p>Expertise in data analytics is currently a desirable skill, but one of the precursors to useful data analytics is good data. One of the benefits of understanding the information life cycle is the ability design systems that will ensure good data for analytics, but for pre-existing systems, sometimes the only solution is to take the data as given. As a result, data specialists confess that a large part of their job is cleaning data (e.g., looking for likely errors, finding duplicate data, matching records in one store with the records in another). It is not fun, but it is necessary.</p>
+			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
 		<section>
@@ -184,12 +186,12 @@
 
 		<section>
 			<h2>In Or Out?</h2>
-			<p>With an increase in desire and capacity to perform real-time data analytics, this traditional four-step data warehouse model has fallen out of favor. Some (e.g., representatives from EY Tax) have even asserted that the data warehouse was a thing of the past, but this is an overstatement. Newer tools allow for real-time analysis of data on OLTP systems, and greater processing power has made this a possibility without overloading the OLTP system and making it unavailable for data acquisition. However, these tools have not completely replaced the need for data warehouses when analysis requires data from multiple OLTP systems; when the analysis requires resource-intensive pre-calculation, such as MOLAP or MapReduce; or when the answers sought are not needed in real time.</p>
+			<p>With an increase in desire and capacity to perform real-time data analytics, this traditional four-step data warehouse model has fallen out of favor. Some have even asserted that the data warehouse is a thing of the past, but this is likely an overstatement. Newer tools allow for real-time analysis of data on OLTP systems, and greater processing power has made this a possibility without overloading the OLTP system and making it unavailable for data acquisition. However, these tools have not completely replaced the need for data warehouses when analysis requires data from multiple OLTP systems; when the analysis requires resource-intensive pre-calculation, such as MOLAP or MapReduce; or when the answers sought are not needed in real time.</p>
 		</section>
 
 		<section>
-			<h2>Accounting Tie-in</h2>
-			<p>Availability addresses access to data and network systems. Accounting regulation has strict rules about the preservation of accounting data. For example, tax authorities can audit the past three years' returns; financial statements require presentation of prior years' numbers for comparability; restatements or the adoption of new standards may require retroactive adjustments. Old accounting data must be available. Furthermore, much of accounting work is cloud-based. For example, data may be stored on a shared file server. In addition to these, internal decision makers require constant access to data, and systems must be available to collect and analyze it. That is the requirement of the Information Era.</p>
+			<h2>Only if It's Available</h2>
+			<p>Information and IT security are hot topics because of the frequency of cyber incidents, but many of these incidents threaten availability by bringing down systems are destroying data. In addition to losing business and access to valuable data for analytics, unavailable systems or data can pose compliance risks. Accounting regulation has strict rules about the preservation of accounting data. For example, tax authorities can audit the past three years' returns; financial statements require presentation of prior years' numbers for comparability; restatements or the adoption of new standards may require retroactive adjustments. Additionally internal and external stakeholders have expectations regarding the availability of systems for data entry, retrieval, analysis, use. Only available systems can make money.</p>
 		</section>
 	</div>
 	</div>
