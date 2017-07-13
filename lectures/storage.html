@@ -225,6 +225,40 @@
 		</section>
 
 		<section>
+			<h2>Delete Command</h2>
+			<div class="table">
+				<div class="table-row" style="background-color: lightgray; font-weight: bold">
+					<div class="table-cell">Command</div>
+					<div class="table-cell">Function</div>
+					<div class="table-cell">Examples</div>
+				</div>
+				<div class="table-row" style="background-color: white">
+					<div class="table-cell"><strong>rm</strong> (<strong>sudo rm</strong>, if file is not owned by user)</div>
+					<div class="table-cell">Delete file</div>
+					<div class="table-cell">
+						<ul>
+							<li><strong>rm test.txt</strong> (Delete test.txt in current folder owned by user)</li>
+							<li><strong>rm Documents/test.txt</strong> (Delete test.txt owned by user in Documents folder in current folder)</li>
+							<li><strong>sudo rm /etc/test.txt</strong> (Delete test.txt not owned by user in etc folder in root folder)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="table-row" style="background-color: lightgray">
+					<div class="table-cell"><strong>rm -rf</strong> (<strong>sudo rm -rf</strong>, if folder or its contents are not owned by user)</div>
+					<div class="table-cell">Delete folder and its contents</div>
+					<div class="table-cell">
+						<ul>
+							<li><strong>rm -rf Downloads/.</strong> (Delete Downloads folder and all of its contents owned by user in current folder)</li>
+							<li><strong>rm -rf Music/playlist</strong> (Delete playlist folder and all of its contents owned by user in Music folder in current folder)</li>
+							<li><strong>sudo rm -rf /opt/test</strong> (Delete test folder and all of its contents not owned by user in opt folder in root folder)</li>
+							<li><strong>sudo rm -rf /</strong> (Delete root folder and all of its contents not owned by user; this command should never be run as it will delete everything on the file system)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
 			<h2>Mounting</h2>
 			<p>In order to access the contents of a storage drive, the user must first <u><em>mount</em></u> the file system. Operating systems automatically mount local file systems on startup. Several desktop operating systems also automatically mount the file systems on removable storage devices (e.g., USB drives). However, it is also possible to mount these file systems manually.</p>
 			<div class="table">
