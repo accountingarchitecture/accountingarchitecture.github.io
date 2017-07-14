@@ -24,199 +24,211 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h2>Confidentiality</h2>
+			<h1>Confidentiality</h1>
 		</section>
 		
 		<section>
-			<h3>Accounting Architecture</h3>
+			<h2>Accounting Architecture</h2>
 			<div class="flex-row">
-				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Confidentiality is the final Control block in the accounting architecture arch. It comprises more than one pillar of the Trust Services Framework, but it has a single overarching goal: to prevent unauthorized access to secret information. It is not an accident that this sounds similar to the role of access controls because Confidentiality and Security are closely related.</p>
+					<p>Confidentiality is the final Control block in the accounting architecture framework. Unlike to the other blocks in the Control section, Confidentiality comprises two related Trust Services Criteria with a single overarching goal: to prevent unauthorized access to secret information. Although unauthorized access is also the purview of the Security block, Confidentiality addresses risks and control activities that extend beyond what Security addresses.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Trust Services Framework</h3>
+			<h2>Trust Services Criteria</h2>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
-				<div class="flex-item" style="max-width: 70%">
-					<p>The two pillars in the Trust Services Framework that the Confidentiality block comprises are Confidentiality and Privacy. The AICPA explains the difference between these two terms. &ldquo;Confidentiality is distinguished from privacy in that privacy deals with personal information whereas, confidentiality refers to a broader range of information that is not restricted to personal information.&rdquo; From this explanation it is clear that the same tools protect privacy and confidentiality.</p>
+				<div class="flex-item" style="max-width: 65%">
+					<blockquote>Information designated as confidential is protected as committed or agreed.</blockquote>
+					<p>Protection means to keep secret data from being read, modified, or used by unauthorized individuals. Three tools serve to keep data confidential:</p>
+					<ul>
+						<li><u><em>Rights management</em></u> avoids unlicensed use of intellectual property.</li>
+						<li><u><em>Intermediation</em></u> anonymizes communication.</li>
+						<li><u><em>Encryption</em></u> prevents reading sensitive content, especially in transit.</li>
+					</ul>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Security and Confidentiality</h3>
+			<h2>Confidentiality and Privacy</h2>
 			<div class="flex-row">
-				<div class="flex-item" style="max-width: 70%">
-					<p>As it does with the other pillars of the Trust Services Framework, Security plays a role in promoting confidentiality. In fact, a primary focus of Security (i.e., access controls) is to keep data confidential. Because of the similarity between the concepts of Security and Confidentiality, many tools designed to preserve confidentiality are commonly referred to as security tools. The fundamental difference between these two is the precise methods of preventing unauthorized access.</p>
+				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+				<div class="flex-item" style="max-width: 65%">
+					<p>The two Trust Services Criteria that the Confidentiality block comprises are Confidentiality and Privacy. The AICPA explains the difference between these two terms. &ldquo;Confidentiality is distinguished from privacy in that privacy deals with personal information whereas, confidentiality refers to a broader range of information that is not restricted to personal information.&rdquo; From this explanation it is clear that the same tools protect privacy and confidentiality.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Confidentiality and Security</h2>
+			<div class="flex-row">
+				<div class="flex-item" style="max-width: 65%">
+					<p>As the foundation of the Trust Services framework, Security plays a role in promoting all other criteria, especially confidentiality. In fact, a primary focus of Security (i.e., access controls) is to keep data secret. Because of the similarity between the concepts of Security and Confidentiality, many tools designed to preserve confidentiality are commonly referred to as security tools. The difference between these criteria is the precise methods used to prevent unauthorized access.</p>
 				</div>
 				<div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Confidentiality and Compliance</h3>
+			<h2>Confidentiality and Compliance</h2>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width: 65%">
-					<p>Especially as it pertains to the &ldquo;privacy&rdquo; side, Compliance is particularly applicable to the Confidentiality block of the Architecture. Much of the concept of compliance is familiar to accountants because so much of the profession revolves around regulatory compliance (e.g., GAAP, IFRS, IRC). However, compliance also includes the laws and private contracts that dictate the protection of trade secrets, customer data, intellectual property, etc.</p>
+					<p>In addition to the need to keep an entity's own data confidential, internal controls should protect any digital resources in the information system owned by third parties. As a result, Compliance is particularly applicable to the Confidentiality block of the Architecture. From the perspective of accountants, much of Compliance revolves around financial accounting, auditing, and tax regulations. However, Compliance also includes the laws and private contracts that dictate the protection of trade secrets, customer data, intellectual property, etc.</p>
 				</div>
-				<div class="flex-item override"><img src="../images/Arch5Color.png" alt="AA Arch" style="max-width: 300px"/></div>
+				<div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Confidentiality</h3>
-			<blockquote>Information designated as confidential is protected as committed or agreed.</blockquote>
-			<p>Three tools commonly serve to keep information secret:</p>
-			<ul>
-				<li><u><em>Rights management</em></u> avoids unlicensed use of intellectual property.</li>
-				<li><u><em>Intermediation</em></u> anonymizes communication.</li>
-				<li><u><em>Encryption</em></u> prevents reading sensitive content, especially in transit.</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3>Rights Management</h3>
+			<h2>Rights Management</h2>
 			<p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents authorized access and ensures prompt deletion of content with expired licenses. As a result, rights management is a required compliance activity when using licensed content. This practice applies not only to proprietary content, but also to open source. Because open source licenses are licenses, rights management is necessary to comply with the license requirements. This frequently involves correct attribution (i.e., including the name of the original creator with the product) and reciprocation (i.e., using a license for an internal modifications that is compatible with the original license).</p>
 		</section>
 
 		<section>
-			<h3>Intermediation</h3>
-			<p>The concept of intermediation is not unique to digital communication. Any time that one party interacts with another via a middleman, intermediation has occurred. This is not a perfect analogy because the purpose of these middlemen is not always to anonymize interactions. For example, information intermediaries, such as analysts, communicate information regarding firm performance to investors; financial intermediaries funnel funds from one group to another. In the case of analysts, anonymity is not an issue, and for financial intermediation, only sometimes is the intent to preserve anonymity, frequently it is simply for convenience.</p>
+			<h2>Intermediation</h2>
+			<p>Intermediation involves one party interacting with another via a middleman. The decision to rely on intermediation to communicate or transact business can have multiple motivations. One motivation is convenience. For example, information intermediaries, such as debt and equity analysts, communicate information regarding firm performance to investors so that these investors will not need to engage in their own financial statement analysis. Another motivation is reliability. Financial intermediaries funnel funds from one group to another when the groups cannot trust each other. One frequent motivation is anonymity. A human intermediary can hide the identity of the party requesting access to resources. Similarly, a digital intermediary can hide the identity of a user requesting access to Internet resources.</p>
 		</section>
 		
 		<section>
-			<h3>Review of the WAN</h3>
-			<p>In order to access Internet (i.e., WAN) resources, a device must have a public IP address. Although this address may differ from the IP address that a computer reports for itself, it is the address that the device uses to communicate on the WAN. Similar to the premise of caller ID, when a computer accesses an Internet resource (e.g., a Web site), the server that hosts that resource records the public IP address the client computer. This record exposes some aspects of the identity of the user because the public IP can be traced to the geographical location of the client.</p>
+			<h2>Review of the WAN</h2>
+			<p>In order to access Internet (i.e., WAN) resources, a device must have a public IP address. Because of network address translation (NAT), this IP address can differ from a device's LAN address, but the public IP address the address that the device uses to access the Internet. Similar to caller ID, when a device accesses an Internet resource (e.g., visiting a Web site), the server that hosts that resource records the public IP address of the client device in a log file. This record exposes some aspects of the identity of the user. Because the public IP can be traced to the geographic location of the client, logs can identify where the client device is, which ISP the client used to connect to the Internet, and, if applicable, on which company's LAN the device resides.</p>
 		</section>
 
 		<section>
-			<h3>Proxy Servers</h3>
-			<p><u><em>Proxy servers</em></u> serve as intermediaries between a user and an Web server to change the client's public IP address. The client selects and connects to a proxy server, and while connected, the proxy server forwards all Internet requests from the client to the Web server and content from the Web server to the client. The Web server records the IP address of the proxy server, instead of the client. Attempts to identify the location of the client would prove fruitless, as the proxy server may be in a different part of the world as the actual client.</p>
+			<h2>Proxy Servers</h2>
+			<p><u><em>Proxy servers</em></u> serve as intermediaries between a user and a Web server in order to hide details about the client. The client selects and connects to a proxy server, and while connected, the proxy server forwards all Internet requests from the client to the Web server and content from the Web server to the client. The Web server records the IP address of the proxy server, instead of the public IP address of the client. Attempts to identify the location or ISP of the client would prove fruitless, as the proxy server may be in a different country as the actual client. Perpetrators of illicit activities (e.g., hacking or the sale or purchase of contraband) use this feature to evade discovery. Others use remote proxy servers in order to anonymize country of origin and access restricted digital content available only to the residents of another country.</p>
 		</section>
 
 		<section>
-			<h3>Why Hide?</h3>
-			<p>Hiding the client's public IP address has a number of advantages. On the less nefarious side of things, the user can access resources that are restricted to a particular country. For example, a US IP address is necessary in order to stream the Netflix content that Americans expect to find. Using a US-based proxy server will provide a client outside the US with a US IP address. On the more nefarious side of things, proxy servers can allow perpetrators of illicit activities (e.g., hacking or the sale or purchase of contraband) to evade detection. Corporations also often use them to anonymize traffic from the devices inside their LANs.</p>
-		</section>
-
-		<section>
-			<h3>Bring to Light</h3>
-			<p>Corporations also use proxy servers for two other reasons. First, if users inside a corporate LAN need to access the same WAN resources (e.g., a Web site) frequently, the proxy server can create a cache (i.e., a temporary copy) of that resource so that the clients can access it more quickly. Second, although a proxy server can hide the IP address of the client from the Internet server, the proxy server itself records the IP address of the client, as well as the traffic to and from the client. This provides the corporation an easy method to track which Web sites their employees have accessed.</p>
-		</section>
-
-		<section>
-			<h3>Proxy Servers and Firewalls</h3>
-			<p>A firm can use a firewall to keep remote users away from a server, but they can also use a firewall to keep LAN users from accessing remote servers. For example, if a university wanted to prevent its employees from accessing social media sites, a firewall could block access to these sites from university computers. Proxy servers can circumvent these restrictions because to the university's firewall the client only accessed a proxy server, not a social media site.</p>
+			<h2>Proxy Servers and Firewalls</h2>
+			<p>Firewalls keep unauthorized WAN users from accessing LAN servers, but they can also LAN users from accessing certain WAN resources. For example, if a university wanted to prevent its employees from accessing social media sites, a firewall could block access to these sites from university computers. Proxy servers can circumvent these restrictions because to the university's firewall the client only accessed a proxy server, not a social media site.</p>
 			<!--License: CC-BY-SA 4.0 Attribution: Milesjpool-->
-			<div class="override"><img src="../images/proxy-firewall.png" alt="Proxy Server through Firewall" style="max-height: 175px"/></div>
+			<div class="override"><img src="../images/proxy-firewall.png" alt="Proxy Server through Firewall" style="max-height: 275px"/></div>
 		</section>
 
 		<section>
-			<h3>VPN</h3>
-			<p><u><em>Virtual private networks</em></u> are similar to proxy servers in that they serve as an intermediary between a client and Internet servers. However, VPN servers have a particular advantage over proxy servers, and that is that VPN servers encrypt the communication with the client. This prevents eavesdropping by unauthorized third parties. VPN is a popular tool for teleworking. If the VPN server is part of an organization's LAN, then a client connecting to the VPN from the WAN can access LAN resources, such as private clouds, as if that client were inside the LAN, hence the name &ldquo;virtual private network&rdquo; because it simulates being connected to a private network. VPN servers are also popular for secure use of public WiFi networks (e.g., coffee shops).</p>
+			<h2>Put to a Good Use</h2>
+			<p>Corporations also use proxy servers in other ways to promote confidentiality and convenience. First, forcing employees to access the Internet through a proxy server effectively anonymizes their Internet activity by masking the IP address of origin. Second, if users inside a corporate LAN need to access the same WAN resources (e.g., a Web site) frequently, the proxy server can create a cache (i.e., a temporary copy) of that resource so that the clients can access it more quickly. Third, although a proxy server can hide the IP address of the client from the Internet server, the proxy server itself records the IP address of the client, as well as the traffic to and from the client. This provides the corporation an easy method to track the Internet resources their employees have accessed.</p>
 		</section>
 
 		<section>
-			<h3>Eavesdropping</h3>
-			<p>Unauthorized eavesdropping on network communication is a problem because the standard for network communication is plain text. A fitting analogy would be tapping a phone line. It is possible to eavesdrop on a phone call because it transmits human-interpretable speech. The same applies to intercepting written communication. Plain text is the human-readable form of digital data. Just as with phone calls and letters, it is usually infeasible to protect network messages while in transit from being intercepted. Access controls are not useful to prevent unauthorized access to communication.</p>
+			<h2>VPN</h2>
+			<p><u><em>Virtual private network</em></u> (VPN) servers are similar to proxy servers in that they serve as an intermediary between a client and the Internet. However, VPN servers have a particular advantage over proxy servers, and that is that VPN servers use <u><em>encryption</em></u> to protect the communication between VPN server and client.</p>
 			<div class="flex-row">
 				<!--License: Copyright Fossbytes, 2017-->
-				<div class="flex-item"><img src="../images/proxy-server.png" alt="Unecrypted Proxy Server" style="max-width: 300px"/></div>
+				<div class="flex-item"><img src="../images/proxy-server.png" alt="Unecrypted Proxy Server"/></div>
 				<!--License: Copyright Fossbytes, 2017-->
-				<div class="flex-item"><img src="../images/vpn.png" alt="Encrpyted VPN" style="max-width: 300px"/></div>
+				<div class="flex-item"><img src="../images/vpn.png" alt="Encrpyted VPN"/></div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Encryption</h3>
-			<p>Since restricting access to data messages in transit is not feasible, the only option is to render a message unreadable if intercepted. <u><em>Encryption</em></u> uses a key to convert plain text into cipher text, which is unreadable by humans and computers. The key, sometimes referred to as a cipher, is a string of characters and an algorithm that determines a transformation of plain text to obtain cipher text. Although enterprise-grade data encryption keys rely on complicated mathematics, the principles are no different from those used to create a cipher text by shifting the letters in a message by one (i.e., a becomes b, b becomes c, etc.).</p>
+			<h2>Eavesdropping</h2>
+			<p>Because the standard for network communication is plain text, anyone who can intercept a message (e.g., requesting a Web page, entering data into username and password or form fields, etc.) can read it. Strong RADIUS authentication protocols restrict access to a LAN in order to prevent network sniffing on the LAN, but anyone can connect to the Internet and sniff (i.e., eavesdrop) on communication between clients and Internet servers. Access controls cannot prevent unauthorized access to communication over the Internet. By encrypting communication to and from a client, VPN servers ensure that anyone who eavesdrops will not be able to interpret the communication. As a result, VPNs are a popular choice for preserving confidentiality when using public Wi-Fi networks (e.g., coffee shops).</p>
 		</section>
 
 		<section>
-			<h3>Decryption</h3>
-			<p><u><em>Decryption</em></u> involves the opposite process of encryption. A decryption key uses a string of characters and an algorithm to convert cipher text back into plain text. In order to decrypt a message that the sender has encrypted, the recipient must have the decryption key. Although it may be possible to guess the decryption algorithm for simpler methods, such as shifting letters by one, the mathematics involved in popular encryption models (e.g., AES) are complex enough that calculating (i.e., guessing) a decryption key would take a computer billions of years.</p>
+			<h2>Encryption and Decryption</h2>
+			<p><u><em>Encryption</em></u> uses a key to convert plain text into cipher text, which is unreadable by humans and computers. The key, sometimes referred to as a cipher, is a string of characters and an algorithm that determines a transformation of plain text to obtain cipher text. Enterprise-grade data encryption keys rely on complicated mathematics but the principles are no different from create cipher text by shifting the letters in a message by one (i.e., a becomes b, b becomes c, etc.). In order to read an encrypted message, the recipient must have the <u><em>decryption</em></u> key, a string of characters and an algorithm to convert cipher text back into plain text. As long as the decryption key is protected from unauthorized recipients, communication is secure.</p>
 		</section>
 
 		<section>
-			<h3>Two Forms of Encryption</h3>
-			<p>Encryption keys can either be symmetric or asymmetric. In symmetric, or private key, encryption, the encryption and decryption keys are the same, and both the sender and the recipient must have the same key. In asymmetric, or public key, encryption, the key to encrypt the data is publicly distributed and a paired private key is used for decryption. Public key encryption is secure so long as users keep their own private keys secret because, although users share their encryption keys, it is not feasible to infer the private decryption key from the public encryption key.</p>
+			<h2>Two Forms of Encryption</h2>
+			<p>Encryption keys can either be <u><em>symmetric</em></u> or <u><em>asymmetric</em></u>. In symmetric, or private key, encryption, the encryption and decryption keys are the same, and both the sender and the recipient must have the same key. The difficulty with this form of encryption is that the sender must find a way to share the decryption key with the recipient without it falling into unauthorized hands. In asymmetric, or public key, encryption, the key to encrypt the data is publicly distributed and a paired private key is used for decryption. The sender encrypts the message with the recipient's public key, and the recipient decrypts the message with his/her own private key. Public key encryption is more secure because users never share private keys, but this method of encryption takes longer and both encryption and decryption require more processing power.</p>
 		</section>
 
 		<section>
-			<h3>Public Key Cryptography</h3>
+			<h2>Public Key Cryptography</h2>
 			<div class="flex-row">
-				<div class="flex-item"><img src="../images/keygen.png" alt="Key Generation"/></div>
-				<div class="flex-item"><img src="../images/public-key.png" alt="Public Key Cryptography"/></div>
+				<div class="flex-item override" style="max-width: 50%"><img src="../images/keygen.png" alt="Key Generation"/></div>
+				<div class="flex-item" style="max-width: 50%"><img src="../images/public-key.png" alt="Public Key Cryptography"/></div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Oversharing</h3>
-			<p>Although the concept of public and private keys can be confusing, email addresses provide a suitable analogy that explains the concept in an accessible manner. A public key is like an email address. In order to receive email, the recipient must distribute the address. This is a secure behavior because the email address is not sufficient to read received emails. Viewing emails requires an additional input: a password which the owner of the account keeps secret and which is not inferable from the email address. Similarly, a public key allows a sender to specify a recipient, so the public key must be publicly available. A private key, like a password, remains secret in order to restrict access to decrypted messages.</p>
+			<h2>Oversharing</h2>
+			<p>Sharing public keys in public key cryptography is safe for two reasons. Using the analogy of a safe, the public key places a lock on the safe to seal it shut. Only one key fits the lock and that is the private key. An unauthorized user with another lock (i.e., another copy of the public key) cannot tamper with or read the message, nor can that user guess the decryption key from studying the lock. An email account provides another analogy to illustrate this point. A public key is like an email address. In order to receive email, the recipient must distribute the address. This is a secure behavior because the email address is not sufficient to read received emails. Viewing emails requires an additional input: a password which the owner of the account keeps secret. Knowing an email address is not enough to guess the password.</p>
 		</section>
 
 		<section>
-			<h3>Cryptographic Hash</h3>
-			<p>Even though cipher text is not human- or computer-readable, it can still provide useful information even when decryption is not possible. In fact, some encryption protocols (e.g., MD5) are designed to convert data into a short cipher text that cannot be decrypted. This short cipher text is called a <u><em>cryptographic hash</em></u> or a checksum. The purpose of a hash is not to protect a message in transit but rather to verify the integrity of the data. Because hash encryption protocols use a single key that is common to all users of the protocol, any attempt to create a hash of the same content will result in the same hash. However, even a slight modification to the data will result in a different hash.</p>
+			<h2>Cryptographic Hash</h2>
+			<p>Even though cipher text is not human- or computer-readable, it can still provide useful information even when decryption is not possible. In fact, some encryption protocols are designed to convert data into a short cipher text that cannot be decrypted. This is called one-way encryption and the cipher text is called a <u><em>cryptographic hash</em></u> or a checksum. The purpose of a hash is not to protect a message in transit but rather to verify the integrity of the data. Because hash encryption protocols use a single key that is common to all users of the protocol, any attempt to create a hash of the same content will result in the same hash. However, even a slight modification to the data will result in a different hash.</p>
 		</section>
 		
 		<section>
-			<h3>Tamper-proof</h3>
+			<h2>Tamper-proof</h2>
 			<div class="flex-row">
-				<div class="flex-item" style="max-width: 65%">
-					<p>Calculating a hash after receiving a file and comparing it to a hash that the sender provides will reveal whether the file has been modified. For example, if a hacker gains access to and adds a virus to an online file, then users who download and launch the file can become infected. If the creator of the file provided a hash of the original file and users calculated a hash of the downloaded file, they would learn that the file had become corrupted and delete it.</p>
+				<div class="flex-item" style="max-width: 60%">
+					<p>Calculating a hash after receiving a file and comparing it to a hash that the sender separately provides will reveal whether the file has been modified. For example, if a hacker gains access to and adds a virus to an online file, then users who download and launch the file can become infected. If the creator of the file provides a hash of the original file and users calculate a hash of the downloaded file, they would learn that the file had become corrupted and delete it.</p>
 				</div>
-				<div class="flex-item override"><img src="../images/checksum.png" alt="Checksum"/></div>
+				<div class="flex-item override"><img src="../images/checksum.png" alt="Checksum Verifying Download"/></div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Digital Signature</h3>
+			<h2>When Worlds Collide</h2>
+			<p>Hashing has a flaw. The total number of potential hashes is much smaller than the total number of different files imaginable. As a result, multiple files must have the same hash at some point. A <u><em>collision</em></u> is when two different files generate the same hash. Once a hashing algorithm causes a collision, it should no longer be used.</p>
+			<!--Copyright Alphabet Inc.-->
+			<div class="override"><img src="../images/collision.png" alt="SHA-1 Collision"/></div>
+		</section>
+		
+		<section>
+			<h2>Digital Signature</h2>
 			<div class="flex-row">
 				<div class="flex-item" style="max-width: 70%">
-					<p>Another benefit of encrypted cipher text is its ability to identify the sender. Because a public-private key pair is unique to a single user, it turns out that these keys can verify the senders identity by allowing the sender to attach a <u><em>digital signature</em></u> to the message. (This is different from the digital signature that cardholders create after swiping a credit card.) A sender creates a cryptographic digital signature by (1) creating a hash of the message and (2) encrypting the hash with the sender's private key.</p>
+					<p>Another benefit of encrypted cipher text is its ability to identify the sender. Because a public-private key pair is unique to a single user, they can confirm the senders identity by allowing the sender to attach a <u><em>digital signature</em></u> to the message. (This is different from the digital signature that cardholders create after swiping a credit card.) A sender creates a cryptographic digital signature by (1) creating a hash of the message and (2) encrypting the hash with the sender's own private key.</p>
 				</div>
 				<div class="flex-item"><img src="../images/signing.png" alt="Digital Signature" style="max-width: 300px"/></div>
 			</div>
 		</section>
 
 		<section>
-			<h3>Verify the Signature</h3>
+			<h2>Verify the Signature</h2>
 			<div class="flex-row">
 				<div class="flex-item"><img src="../images/signature-verification.png" alt="Verify the Signature" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 70%">
-					<p>The sender then transmits the message and the signature to the recipient. The recipient (1) creates a hash of the message, (2) decrypts the signature using the sender's public key and (3) compares the hash with the decrypted signature. If they are equal, then the sender's identity is confirmed <em>and</em> the message has not been modified in transit. If they are different, then either the message has been modified or the sender is not who he claims to be.</p>
+					<p>The sender then transmits the message and the signature to the recipient. The recipient (1) creates a hash of the message, (2) decrypts the signature using the sender's public key and (3) compares the hash with the decrypted signature. If they are equal, then the sender's identity is confirmed <em>and</em> the message has not been modified in transit. If they are different, then either the message has been modified or the sender is not who he/she claims to be.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h3>HTTPS and SFTP</h3>
-			<p>Although it is possible to use a computer to create keys, hashes, cipher text, and signatures manually, these processes frequently occur transparently for the end user. For example, when a Web site relies on <u><em>Secure Sockets Layer</em></u> (SSL) or <u><em>Transport Layer Security</em></u> (TLS) to establish encrypted communication with a client-side browser, the end-user is completely unaware of the transmission of keys. Sometimes, the only salient evidence of the encryption is the &ldquo;HTTPS&rdquo; schema with the URL. Just as the HTTP schema has a secure alternative (HTTPS), the FTP schema also has a secure alternative (SFTP). SFTP uses similar protocols for encrypted communication with a file server.</p>
+			<h2>HTTPS and SFTP</h2>
+			<p>Although it is possible to use a computer to create keys, hashes, cipher text, and signatures manually, these processes frequently occur transparently for the end user. For example, when a Web site relies on <u><em>Secure Sockets Layer</em></u> (SSL) or <u><em>Transport Layer Security</em></u> (TLS) to establish encrypted communication with a client-side browser, the end user is completely unaware of the transmission of keys. Sometimes, the only salient evidence of the encryption is the &ldquo;HTTPS&rdquo; schema with the URL, which is the encrypted alternative to the HTTP protocol. The FTP schema also has a secure alternative (SFTP). SFTP uses similar encryption methods for communication with a file server as HTTPS uses for communication with an HTTP server (i.e., a server that hosts a Web page).</p>
 		</section>
 
 		<section>
-			<h3>Secure Shell</h3>
-			<p>VPN provides encrypted access to any number of WAN and LAN resources and is frequently used to provide teleworkers access to corporate information system components. Another popular tool for encrypted communication with remote computers is <u><em>Secure Shell</em></u> (SSH). As the name implies, SSH provides access to a text-based shell on a remote computer. This is comparable to using the terminal on a Unix-like operating system, except that the commands are run against a remote computer, instead of the local machine. This is the current standard for accessing the command line of another computer. SSH is commonly considered the secure alternative to telnet, which historically was the standard for communication between two computers.</p>
+			<h2>Secure Shell</h2>
+			<p>VPN provides encrypted access to any number of WAN and LAN resources and is frequently used to provide teleworkers access to private corporate networks and clouds. Another popular tool for encrypted communication with remote computers is <u><em>Secure Shell</em></u> (SSH). As the name implies, SSH provides access to a text-based shell on a remote computer. This is comparable to using the terminal on a Unix-like operating system, except that the commands are run against a remote computer, instead of the local machine. This is the current standard for accessing the command line of another computer. SSH is commonly considered the secure alternative to telnet, which historically was the standard for communication between two computers.</p>
 		</section>
 
 		<section>
-			<h3>Stationary</h3>
-			<p>Many, and perhaps most, examples of digital encryption address network communication, but this is not the only valuable context. Encryption can also serve to secure stored data. One of the reasons why unauthorized physical access is dangerous is that although an unauthorized user cannot log in to a workstation, that same user can steal the hard drive and connect it to another device in order to read confidential data. Storage volume encryption can alleviate this concern by encrypting all content on a drive. An authorized user can enter a password while booting the computer in order to decrypt the volume. Once the volume is decrypted, it functions as an ordinary storage volume until the user shuts down the computer.</p>
+			<h2>Stationary</h2>
+			<p>Many, and perhaps most, examples of digital encryption address network communication, but this is not the only valuable use. Encryption can also serve to secure stored data. One of the reasons why unauthorized physical access is dangerous is that although an unauthorized user cannot log in to a workstation, that same user can steal the hard drive and connect it to another device in order to read confidential data. Storage volume encryption can alleviate this concern by encrypting all content on a drive. An authorized user can enter a password while booting the computer in order to decrypt the volume. Once the volume is decrypted, it functions as an ordinary storage volume until the user shuts down the computer.</p>
 		</section>
 
 		<section>
-			<h3>Cryptocurrency</h3>
-			<p>Interestingly, one use of public key cryptography is cryptocurrency, of which Bitcoin is the most well-known variant. Each Bitcoin transaction (i.e., payment) is digitally signed by the private key of the payer to prove ownership of the coins, and each payment identifies its payee by the payee's public key. This use of keys creates a system that allows for complete anonymity because no method currently exists to identify the real-world identity of a payee by public key.</p>
+			<h2>Cryptocurrency</h2>
+			<p>One interesting use of public key cryptography is in <u><em>cryptocurrency</em></u>, which is a form of digital currency that relies on multiple forms of cryptography to create a decentralized banking system that is independent of any central authority. Bitcoin is the most well-known variant, but many others exist. In cryptocurrency, each transaction (i.e., payment) is digitally signed by the private key of the payer to prove ownership of the coins, and each payment identifies its payee by the payee's public key. Cryptography serves multiple purposes. First, private keys demonstrate authenticity and authorization to spend coins, and second, public keys establish anonymity because no method currently exists to identify the real-world identity of a payee by public key.</p>
 		</section>
 
 		<section>
-			<h3>Accounting Tie-in</h3>
-			<p>Businesses always care about keeping data confidential, and regulations require that employee, patient, and customer data remain private. Even in the absence of these regulations, media coverage of past data breaches demonstrates the harrowing effects of the leakage of confidential data. Internal and external auditors care about the implementation of proper protocols to secure Web pages, customer profile and payment sites, and off-site telework (e.g., company-issued mobile devices). Tax accountants care about properly secured communication for receiving and filing tax documents. A clear understanding of the proper tools enables accountants to promote systems that satisfy regulatory compliance, client expectations, and business needs.</p>
+			<h2>Blockchain</h2>
+			<p>Cryptography also serves a third purpose in cryptocurrency: maintaining the integrity of the transaction ledger. The <u><em>blockchain</em></u> is a database that records all cryptocurrency transactions. Each block in the chain is a collection of transactions, and the entire chain allows users to track account balances by netting all receipts and payments. No other record of account balances exists. In order to maintain the veracity of the ledger and prevent users from retroactively modifying prior transactions, each block is connected to the previous block in the chain by cryptographic hash. Each block has a hash, and that has includes the transactions in the block, as well as the hash of the previous block. Any attempt to modify a transaction would change the hash of a block, as well as the hash of all subsequent blocks making the blockchain virtually immutable.</p>
+		</section>
+
+		<section>
+			<h2>Ransomware</h2>
+			<p>Just as proxy servers can serve to hide the identities of hackers or traffickers in contraband, cryptography can also be put to nefarious purposes. On the one hand, cryptography can hide the identities of black markets participants in a cryptocurrency transaction, and it can also encrypt messages that contain harmful information. On the other hand, hackers can also use cryptography in cyber attacks. Public key cryptography enables ransomware to lock users out of their data. Attackers then demand a ransom, frequently in cryptocurrency because it preserves their identity, in order to turn over the private key that decrypts the data. Each day the ransom increases, and if users fail to pay, the ransomware begins to delete their data.</p>
+		</section>
+
+		<section>
+			<h2>Is Cryptography the Future?</h2>
+			<p>Businesses care about keeping data confidential, and regulations require that employee, patient, and customer data remain private. Even in the absence of these regulations, media coverage of past data breaches demonstrates the harrowing effects of the leakage of confidential data. Proper tools and controls enable systems to satisfy regulatory compliance, client expectations, and business needs. Cryptography is a powerful tool for protecting confidentiality and privacy, and users have no begun to investigate whether it can do more to promote data integrity. The blockchain has successful served as a secure database of cryptocurrency transactions, and the financial, insurance, and accounting professions have investigated whether this ledger technology could replace traditional ledgers in other settings, as well.</p>
 		</section>
 	</div>
 	</div>
