@@ -347,8 +347,8 @@
 
 		<section>
 			<h2>Many-to-Many</h2>
-			<p>One indication that a functional dependency exists in a relation table is a relationship between two tables with maximum cardinalities of &ldquo;many&rdquo; in both directions. A many-to-many relationship create repeating groups in at least one of the two tables by creating a partial dependency. </p>
-			<p>If the Sales Order entity added a record for each sales order item, all header information (e.g., customer, date, etc.) would be duplicated for each line item.</p>
+			<p>One indication that a functional dependency exists in a relation table is a many-to-many relationship between two tables. This results in a partial dependency in one of the two tables by converting what was a single primary key into a composite key formed of the primary keys from both tables.</p>
+			<p>For example, if the Sales Order entity added a record for each sales order item, all header information (e.g., customer, date, etc.) would be duplicated for each line item because the (composite) primary key would no longer be order number. It would be the combination of order number and line item SKU. Because the order header information is only dependent on order number, this forms a partial dependency.</p>
 		</section>
 
 		<section>
@@ -360,8 +360,8 @@
 			<h2>Foreign Keys</h2>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/normal-step8.png" alt="Step 8" style="max-width: 475px"/></div>
-				<div class="flex-item" style="max-width: 50%">
-					<p>Before creating a linking table, we add foreign keys to operationalize relationships. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity becomes a foreign key. This links customer ZIP to sales tax rate, and it restricts customers to ZIP codes already in the Sales Tax table.</p>
+				<div class="flex-item" style="max-width: 55%">
+					<p>Before creating a linking table, it is useful to add foreign keys to each entity, as necessary, to operationalize the relationships between entities. Primary keys from the entities whose instances are created first become a foreign keys with entities whose instances are created second. Customer email, carrier ID, and SKU are foreign keys in the Sales Order table, and ZIP, which already was an attribute of the Customer entity, becomes a foreign key.</p>
 				</div>
 			</div>
 		</section>
@@ -370,18 +370,18 @@
 			<h2>Linking Table</h2>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/normal-step9.png" alt="Step 9" style="max-width: 475px"/></div>
-				<div class="flex-item" style="max-width: 50%">
-					<p>In order to construct the linking table, we combine the primary keys from Sales Order and Inventory and make them primary and foreign keys in an Order Line Item entity. Each instance of this entity is a sales order-inventory item pair. If, for example, an order had five items, this linking table would have five records for that order.</p>
+				<div class="flex-item" style="max-width: 55%">
+					<p>The linking table between the Sales Order and Inventory entities should include the primary keys from each entity as a composite key. Because these partial keys are also primary keys in their respective entities, they are both primary and foreign keys in the linking table. Each record in this linking table entity is a sales order-inventory item pair. If, for example, an order had five items, this linking table would have five records for that order.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h2>Relationships</h2>
+			<h2>Linking Table Relationships</h2>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/normal-step10.png" alt="Step 10" style="max-width: 475px"/></div>
-				<div class="flex-item" style="max-width: 50%">
-					<p>Each inventory item can be on at least zero&mdash;the inventory exists before it is first purchased&mdash;and at most many orders, but each order line item references exactly one inventory item. Similarly, each order can have at least zero&mdash;the order is created before items are added to it&mdash;and at most many line items, but each line item belongs to exactly one order.</p>
+				<div class="flex-item" style="max-width: 55%">
+					<p>The linking table divides the many-to-many relationship and creates two one-to-many relationships in its place. Each inventory item can be on at least zero&mdash;the inventory exists before it is first purchased&mdash;and at most many orders, but each order line item references exactly one inventory item. Similarly, each order must have at least one and at most many line items, but each line item belongs to exactly one order.</p>
 				</div>
 			</div>
 		</section>
@@ -390,15 +390,15 @@
 			<h2>Final Step</h2>
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/normal-step11.png" alt="Step 11" style="max-width: 475px"/></div>
-				<div class="flex-item" style="max-width: 50%">
-					<p>This set of entities is 3NF, but in order to have a well-defined database, we must remove some extraneous attributes. Extension (quantity x price), subtotal (the sum of all extensions), sales tax (subtotal x tax rate), and total cost (subtotal + sales tax, are all functions of other attributes and should not be stored. These data points can be calculated when needed for a user view.</p>
+				<div class="flex-item" style="max-width: 55%">
+					<p>With the linking table, this set of entities is 3NF, but the E-R diagram lists a number of extraneous attributes. Extension (quantity &times; price) from the Order Line Item linking table and subtotal (the sum of all extensions), sales tax (subtotal &times; tax rate), and total cost (subtotal + sales tax) from the Sales Order entity, are all functions of other attributes and should not be stored. These data points can be calculated when needed for a user view.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
 			<h2>Accounting Tie-in</h2>
-			<p>Because decision makers rely on the information extracted from data, they implicitly rely on the quality of the data, and the principle of &ldquo;garbage in, garbage out&rdquo; applies. A system may function without error prevention, but uncontrolled data leads to uncontrolled inferences and uncontrolled business decisions. This is true of internal stakeholders, who are the primary consumers of information from the information system, but it also applies to external stakeholders, who rely on the accuracy of financial statements, audits, tax returns, and other accounting information.</p>
+			<p>Because decision makers rely on the information extracted from data, they implicitly rely on the quality of the data, and the principle of &ldquo;garbage in, garbage out&rdquo; applies. A system may function without error prevention, but uncontrolled data leads to uncontrolled inferences and uncontrolled business decisions. This is true of internal stakeholders, who are the primary consumers of information from the information system, but it also applies to external stakeholders, who rely on the accuracy of financial statements, audits, tax returns, and other accounting information. Proper data entry and processing tools, up-to-date data for analysis and well-designed relational databases help to ensure clean data, good information, and correct inferences.</p>
 		</section>
 	</div>
 	</div>
