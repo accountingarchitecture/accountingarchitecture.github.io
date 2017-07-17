@@ -208,15 +208,8 @@ var myModules = [
 			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. Students should read the lecture and the required readings in preparation for a quiz. The schedule lists the quiz due date.</p><p>Professionalism will be important throughout this course. Although I will not require it, I invite students to dress professionally when coming to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. Furthermore, as the syllabus indicates, I will grade you based on your professionalism throughout the semester.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/professionalism.html"},
+				{"label":"Reading", "type":"button", "href":"supplement/professionalism/christensen.pdf", "filetype":"PDF"},
 				{"label":"Assignment", "type":"button", "href":"supplement/professionalism/assignment.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Measure Your Life", "type":"button", "href":"supplement/professionalism/christensen.pdf", "filetype":"PDF"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"Diligence", "type":"button", "href":"http://www.theatlantic.com/magazine/archive/1978/03/writing-typing-and-economics/305165/"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -233,19 +226,9 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/sudoku.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution-wxkfp.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/accounting-architecture.html"},
+				{"label":"Reading", "type":"button", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
 				{"label":"Assignment", "type":"button", "href":"supplement/accounting-architecture/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Need for Change", "type":"button", "href":"http://www.ft.com/cms/s/2/bffcc032-a34d-11e5-8d70-42b68cfae6e4.html#axzz3x2IZba4Z"},
-					{"label":"Change Proposal", "type":"button", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
-					{"label":"Collaboration", "type":"button", "href":"https://opensource.com/open-organization/16/8/how-collaborative-should-i-be-during-strategic-planning"},
-					{"label":"Be a Technologist", "type":"button", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"Businesses Want Change", "type":"button", "href":"supplement/accounting-architecture/digitaltransformation.pdf", "filetype":"PDF"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -264,16 +247,12 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/robbers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/robbers-solution-uhxxx.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/business-model.html"},
+				{"label":"Reading 1", "type":"button", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
+				{"label":"Reading 2", "type":"button", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/business-model/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-model/solution-uhxep.html"},
 				{"label":"Diagram", "type":"button", "href":"supplement/business-model/payment-process.png", "filetype":"Image"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
-			],
-			"readings":[
-				{"set":"Optional", "list":[
-					{"label":"Become a CIO", "type":"button", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
-					{"label":"Failure to Communicate", "type":"button", "href":"https://opensource.com/open-organization/16/12/failing-collaboration-game"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -321,13 +300,8 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/coins.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution-umgqj.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/hardware.html"},
+				{"label":"Reading", "type":"button", "href":"http://www.zdnet.com/article/we-thought-wed-sell-1000-the-inside-story-of-the-raspberry-pi/"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Raspberry Pi", "type":"button", "href":"http://www.zdnet.com/article/we-thought-wed-sell-1000-the-inside-story-of-the-raspberry-pi/"},
-					{"label":"Chromebook", "type":"button", "href":"http://www.zdnet.com/article/how-to-pick-the-best-chromebook-for-school/"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -425,17 +399,10 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution-unbfz.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
+				{"label":"Reading", "type":"button", "href":"supplement/services/erp-history.jpg", "filetype":"Image"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=lr5pYsjR_rk"},
 				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
 				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"}
-			],
-			"readings":[
-				{"set":"Optional", "list":[
-					{"label":"Public Cloud", "type":"button", "href":"https://www.youtube.com/watch?v=jOhbTAU4OPI"},
-					{"label":"History of ERP", "type":"button", "href":"supplement/services/erp-history.jpg", "filetype":"Image"},
-					{"label":"Super Pi", "type":"button", "href":"http://www.zdnet.com/article/build-your-own-supercomputer-out-of-raspberry-pi-boards/"},
-					{"label":"Mobility as a Service", "type":"button", "href":"https://opensource.com/business/16/9/travelspirit-mobility-service"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -565,6 +532,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution-azqhi.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/processing-integrity.html"},
+				{"label":"Reading", "type":"button", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/processing-integrity/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution-stvdt.html"}
