@@ -269,19 +269,9 @@ var myModules = [
 			"summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, I have asked my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science to write the lecture for this topic. This lecture will explain the role that an information system should play (i.e., what the system <em>does</em>). Beginning next week, the Technology section will demonstrate the makeup of an information system (i.e., what the system <em>is</em>).</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"https://docs.google.com/presentation/d/13fG0U0H49izogaeotdDkZVxX9F4GT99FB3wK2kU9Big/pub?start=false&loop=false&delayms=0&slide=id.p"},
-				{"label":"Assignment", "type":"button", "href":"supplement/information-life-cycle/assignment.html"},
+				{"label":"Reading", "type":"button", "href":"supplement/information/cpas-and-big-data.pdf", "filetype":"PDF"},
+				{"label":"Assignment", "type":"button", "href":"supplement/information/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"3 V's of Big Data", "type":"button", "href":"supplement/information-life-cycle/3d-data-management.pdf", "filetype":"PDF"},
-					{"label":"Big Data for CPAs", "type":"button", "href":"http://ezproxy.memphis.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=99629685&site=eds-live"},
-					{"label":"XBRL", "type":"button", "href":"http://www.xbrl.org/the-standard/what/an-introduction-to-xbrl/"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"Forensics", "type":"button", "href":"supplement/information-life-cycle/forensics.pdf", "filetype":"PDF"},
-					{"label":"Big Data Survey", "type":"button", "href":"supplement/information-life-cycle/big-data.pdf", "filetype":"PDF"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -318,21 +308,10 @@ var myModules = [
 			"summary":"<p>This lecture begins our multi-week discussion of the Software block of the arch. This first lecture introduces the most important concept in enterprise-grade software today: open source. The term &ldquo;open&rdquo; applies to more than only software, and the lecture introduces other aspects of openness, as well.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
+				{"label":"Reading", "type":"button", "href":"https://opensource.com/open-organization/16/10/open-means-not-movement"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Open Movement", "type":"button", "href":"https://opensource.com/open-organization/16/10/open-means-not-movement"},
-					{"label":"Open Maker", "type":"button", "href":"https://opensource.com/life/16/11/maker-open-source-communities"},
-					{"label":"Open Access", "type":"button", "href":"https://opensource.com/life/16/9/open-formats-academic-content"},
-					{"label":"Open Source", "type":"button", "href":"http://opensource.org/faq"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"Free Software", "type":"button", "href":"http://www.gnu.org/events/rms-nyu-2001-transcript.html"},
-					{"label":"Open Source in 2016", "type":"button", "href":"supplement/open-source/2016-open-source-yearbook.pdf", "filetype":"PDF"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -349,15 +328,9 @@ var myModules = [
 			"summary":"<p>The operating system is the most fundamental software in an information system, and this lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems. (Hint: Microsoft Windows and Apple macOS are not on the list.) I also provide a video tutorial of the operating system that you will use in this course. I encourage you to watch the tutorial before attempting the homework assignment.</p><p>This week also marks the final deadline for the practice set. Please complete <em>all</em> remaining practice set modules, not only the modules listed in the milestones, by the deadline. In order to avoid having anything due during Fall Break, the homework and practice set will be due on Friday of this week, instead of Saturday. Additionally, no puzzle will be due for the next two weeks.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/operating-systems.html"},
+				{"label":"Reading", "type":"button", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=sqbXNK3rxK4"},
 				{"label":"Assignment", "type":"button", "href":"supplement/operating-systems/assignment.html"}
-			],
-			"readings":[
-				{"set":"Optional", "list":[
-					{"label":"History of GNU", "type":"button", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
-					{"label":"25 Years of Linux", "type":"button", "href":"http://www.zdnet.com/pictures/the-25-biggest-events-in-linuxs-25-year-history/"},
-					{"label":"Linux Commands", "type":"button", "href":"https://linuxjourney.com/lesson/the-shell"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
