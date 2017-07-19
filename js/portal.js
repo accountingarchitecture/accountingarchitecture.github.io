@@ -393,21 +393,12 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution-ziwfu.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/data-analytics.html"},
+				{"label":"Reading", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=N418C3Po0sM"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
 				{"label":"Library DB", "type":"button", "href":"supplement/data-analytics/library.sql", "filetype":"SQL plain-text file"},
 				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Analytics and Auditing", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"Data and Loans, Part 1", "type":"button", "href":"https://enterprisersproject.com/article/2016/12/loan-company-realizes-power-data-scientists-and-software-engineers-joining-forces"},
-					{"label":"Data and Loans, Part 2", "type":"button", "href":"https://enterprisersproject.com/article/2016/12/want-make-better-decisions-break-down-wall-between-data-and-it"},
-					{"label":"MapReduce", "type":"button", "href":"https://www.youtube.com/watch?v=bcjSe0xCHbE"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -453,17 +444,9 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution-pnnvr.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/security.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Population Data", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"},
-					{"label":"Everyone's Problem", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"Breaches", "type":"button", "href":"http://www.esecurityplanet.com/network-security/76-percent-of-organizations-breached-in-2014.html"},
-					{"label":"Passphrases", "type":"button", "href":"http://www.esecurityplanet.com/hackers/why-longer-passphrases-are-more-secure-than-passwords-video.html"}
-				]}
+				{"label":"Reading", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"},
+				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"},
+				{"label":"Article", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -479,16 +462,9 @@ var myModules = [
 			"summary":"<p>Availability is the second Control block. The concepts in this lecture tie into the Services block because availability most frequently applies to cloud computing. I also provide a video tutorial explaining how to use a popular version control system&mdash;the lecture explains what a version control system is&mdash;to complete this week's homework assignment. No puzzle will be due this week because of Thanksgiving Break.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
+				{"label":"Reading", "type":"button", "href":"https://fossbytes.com/dos-and-ddos-attacks-the-origin-of-a-species/"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=G6iAfW2Dq5M"},
 				{"label":"Assignment", "type":"button", "href":"supplement/availability/assignment.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Cyber Warfare", "type":"button", "href":"https://fossbytes.com/dos-and-ddos-attacks-the-origin-of-a-species/"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"Learn Git", "type":"button", "href":"https://www.codeschool.com/courses/try-git"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
