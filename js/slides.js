@@ -56,23 +56,7 @@ Reveal.initialize({
 		backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
 	// Number of slides away from the current that are visible
 		viewDistance: 3,
-	// Optional reveal.js plugins
-		dependencies: [
-			{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-			{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
-			{ src: '../reveal.js/plugin/notes/notes.js', async: true }
-		]
 });
-
-//Add ability to print slides
-var link = document.createElement( 'link' );
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
-document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 // Add ability to click through slides
 window.addEventListener("mousedown", handleClick, false);
