@@ -192,7 +192,7 @@ var myModules = [
 			]
 		},
 		{"date":"August 28, 2017", "title":"Practice Set",
-			"summary":"<p>The practice set will test your understanding of financial accounting principles in a digital business environment. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for this is that it takes approximately 20 hours to complete, and I want the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>. In order to keep you on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set each week. The Milestones button links to an explanation of these milestones, and the course schedule reports the milestone due dates.</p><p>The practice set introduction and supporting documentation provide all the information necessary in order to complete each practice set task successfully. The Quiz Instructions lists the readings that I most recommend. You should complete those readings, the practice set introduction, and the quiz before attempting the practice set. I also provide a video tutorial as a walkthrough. You may watch as much or as little of the tutorial as you feel you need.</p><p>NB: Every semester students email me after attempting part of the practice set to complain that it is too hard or confusing. The reason for these emails is always, <strong>always</strong>, <strong>ALWAYS</strong> because the students have not read what I assigned. I urge you not to assume that you can succeed at this practice set without reading the supporting documents.",
+			"summary":"<p>The practice set will test your understanding of financial accounting principles in a digital business environment. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for this is that it takes approximately 20 hours to complete, and I want the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>. In order to keep you on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set each week. The Milestones button links to an explanation of these milestones, and the course schedule reports the milestone due dates.</p><p>The practice set introduction and supporting documentation provide all the information necessary in order to complete each practice set task successfully. The Quiz Instructions lists the readings that I most recommend. You should complete those readings, the practice set introduction, and the quiz before attempting the first milestone. I also provide a video tutorial as a walkthrough. You may watch as much or as little of the tutorial as you feel you need.</p><p>NB: Every semester students email me after attempting part of the practice set to complain that it is too hard or confusing. The reason for these emails is always, <strong>always</strong>, <strong>ALWAYS</strong> because the students have not read what I assigned. I urge you not to assume that you can succeed at this practice set without reading the supporting documents.",
 			"nav":[
 				{"label":"Instructions", "type":"button", "href":"supplement/getting-started/syllabus.html#practiceset"},
 				{"label":"Practice Set", "type":"button", "href":"http://www.perdisco.com/"},
@@ -205,11 +205,11 @@ var myModules = [
 			]
 		},
 		{"date":"August 30, 2017", "title":"Professionalism",
-			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. Students should read the lecture and the required readings in preparation for a quiz. The schedule lists the quiz due date.</p><p>Professionalism will be important throughout this course. Although I will not require it, I invite students to dress professionally when coming to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. Furthermore, as the syllabus indicates, I will grade you based on your professionalism throughout the semester.</p>",
+			"summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. Students should read the lecture and the article in preparation for the quiz. The schedule lists the quiz due date.</p><p>Professionalism will be important throughout this course. Although I will not require it, I invite students to dress professionally when coming to my office. Also, I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce this practice. Furthermore, as the syllabus indicates, I will grade you based on your professionalism throughout the semester.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/professionalism.html"},
-				{"label":"Reading", "type":"button", "href":"supplement/professionalism/christensen.pdf", "filetype":"PDF"},
-				{"label":"Assignment", "type":"button", "href":"supplement/professionalism/assignment.html"}
+				{"label":"Article", "type":"button", "href":"supplement/professionalism/christensen.pdf", "filetype":"PDF"},
+				{"label":"Homework", "type":"button", "href":"supplement/professionalism/assignment.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -226,8 +226,8 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/sudoku.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution-wxkfp.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/accounting-architecture.html"},
-				{"label":"Reading", "type":"button", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
-				{"label":"Assignment", "type":"button", "href":"supplement/accounting-architecture/assignment.html"},
+				{"label":"Article", "type":"button", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
+				{"label":"Homework", "type":"button", "href":"supplement/accounting-architecture/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -247,11 +247,12 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/robbers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/robbers-solution-uhxxx.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/business-model.html"},
-				{"label":"Reading 1", "type":"button", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
-				{"label":"Reading 2", "type":"button", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
-				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/business-model/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/business-model/solution-uhxep.html"},
-				{"label":"Diagram", "type":"button", "href":"supplement/business-model/payment-process.png", "filetype":"Image"},
+				{"label":"Article 1", "type":"button", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
+				{"label":"Article 2", "type":"button", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
+				{"label":"Homework", "type":"button assignmentbutton", "href":"supplement/business-model/assignment.html"},
+				{"label":"Homework", "type":"button solutionbutton", "href":"supplement/business-model/solution-uhxep.html"},
+				{"label":"Diagram 1", "type":"button", "href":"supplement/business-model/payment-process.png", "filetype":"Image"},
+				{"label":"Diagram 2", "type":"button", "href":"supplement/business-model/sales-order.png", "filetype":"Image"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -266,11 +267,13 @@ var myModules = [
 	{"week":"Week 4",
 	"topics":[
 		{"date":"September 18, 2017", "title":"Information",
-			"summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, I have asked my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science to write the lecture for this topic. This lecture will explain the role that an information system should play (i.e., what the system <em>does</em>). Beginning next week, the Technology section will demonstrate the makeup of an information system (i.e., what the system <em>is</em>).</p>",
+			"summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, I have asked my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science to write the lecture for this topic. This lecture will explain the role that an information system should play (i.e., what the system <em>does</em>).</p>",
 			"nav":[
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/coins.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution-umgqj.html"},
 				{"label":"Lecture", "type":"button", "href":"https://docs.google.com/presentation/d/13fG0U0H49izogaeotdDkZVxX9F4GT99FB3wK2kU9Big/pub?start=false&loop=false&delayms=0&slide=id.p"},
-				{"label":"Reading", "type":"button", "href":"supplement/information/cpas-and-big-data.pdf", "filetype":"PDF"},
-				{"label":"Assignment", "type":"button", "href":"supplement/information/assignment.html"},
+				{"label":"Article", "type":"button", "href":"supplement/information/cpas-and-big-data.pdf", "filetype":"PDF"},
+				{"label":"Homework", "type":"button", "href":"supplement/information/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -287,10 +290,11 @@ var myModules = [
 		{"date":"September 25, 2017", "title":"Hardware",
 			"summary":"<p>This is the first lecture on the Technology section of the accounting architecture framework. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course were the <em>most</em> interesting&mdash;familiarity with computer hardware is an important first step toward understanding systems design.</p>",
 			"nav":[
-				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/coins.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution-umgqj.html"},
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution-tnclb.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/hardware.html"},
-				{"label":"Reading", "type":"button", "href":"http://www.zdnet.com/article/we-thought-wed-sell-1000-the-inside-story-of-the-raspberry-pi/"},
+				{"label":"Article", "type":"button", "href":"http://www.zdnet.com/article/we-thought-wed-sell-1000-the-inside-story-of-the-raspberry-pi/"},
+				{"label":"Homework", "type":"button", "href":"supplement/hardware/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -307,10 +311,12 @@ var myModules = [
 		{"date":"October 2, 2017", "title":"Software: Open Source",
 			"summary":"<p>This lecture begins our multi-week discussion of the Software block of the arch. This first lecture introduces the most important concept in enterprise-grade software today: open source. The term &ldquo;open&rdquo; applies to more than only software, and the lecture introduces other aspects of openness, as well.</p>",
 			"nav":[
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution-qryjz.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
-				{"label":"Reading", "type":"button", "href":"https://opensource.com/open-organization/16/10/open-means-not-movement"},
-				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"},
+				{"label":"Article", "type":"button", "href":"https://opensource.com/open-organization/16/10/open-means-not-movement"},
+				{"label":"Homework", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
+				{"label":"Homework", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -330,12 +336,13 @@ var myModules = [
 				{"label":"Lecture", "type":"button", "href":"lectures/operating-systems.html"},
 				{"label":"Reading", "type":"button", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=sqbXNK3rxK4"},
-				{"label":"Assignment", "type":"button", "href":"supplement/operating-systems/assignment.html"}
+				{"label":"Assignment", "type":"button", "href":"supplement/operating-systems/assignment.html"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
 				{"deliverable":"Homework", "deadline":"5"},
-				{"deliverable":"Practice Set", "deadline":"5"}
+				{"deliverable":"Milestone 6", "deadline":"5"}
 			]
 		}
 	]
@@ -346,7 +353,8 @@ var myModules = [
 			"summary":"<p>This lecture covers the Storage block of the arch. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage and services is a prerequisite for understanding analytics.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/storage.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/storage/assignment.html"}
+				{"label":"Assignment", "type":"button", "href":"supplement/storage/assignment.html"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"readings":[
 				{"set":"Required", "list":[
@@ -359,7 +367,8 @@ var myModules = [
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
-				{"deliverable":"Homework", "deadline":"3"}
+				{"deliverable":"Homework", "deadline":"3"},
+				{"deliverable":"Milestone 7", "deadline":"5"}
 			]
 		}
 	]
@@ -369,18 +378,20 @@ var myModules = [
 		{"date":"October 23, 2017", "title":"Services",
 			"summary":"<p>Services is the fourth block in the Technology section of the accounting architecture framework. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of enterprise-grade computing. I also provide a video tutorial that explains how to complete the homework assignment.</p>",
 			"nav":[
-				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution-unbfz.html"},
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution-ziwfu.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
 				{"label":"Reading", "type":"button", "href":"supplement/services/erp-history.jpg", "filetype":"Image"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=lr5pYsjR_rk"},
 				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
-				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"}
+				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
 				{"deliverable":"Puzzle", "deadline":"5"},
-				{"deliverable":"Homework", "deadline":"5"}
+				{"deliverable":"Homework", "deadline":"5"},
+				{"deliverable":"Milestone 8", "deadline":"5"}
 			]
 		}
 	]
@@ -390,20 +401,22 @@ var myModules = [
 		{"date":"October 30, 2017", "title":"Software: Data Analytics",
 			"summary":"<p>The final Software and Technology topic is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. The lecture introduces multiple analytical tools and programming languages, but the homework assignment will only focus on one: SQL. I provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I recommend that you view the tutorial before you attempt the homework assignment.</p>",
 			"nav":[
-				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution-ziwfu.html"},
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution-unbfz.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/data-analytics.html"},
 				{"label":"Reading", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=N418C3Po0sM"},
 				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
 				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
 				{"label":"Library DB", "type":"button", "href":"supplement/data-analytics/library.sql", "filetype":"SQL plain-text file"},
-				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"}
+				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"},
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
 				{"deliverable":"Puzzle", "deadline":"5"},
-				{"deliverable":"Homework", "deadline":"5"}
+				{"deliverable":"Homework", "deadline":"5"},
+				{"deliverable":"Milestone 9", "deadline":"5"}
 			]
 		}
 	]
@@ -416,22 +429,13 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution-pnnvr.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/risk-and-control.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Population Data", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"},
-					{"label":"Everyone's Problem", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"Breaches", "type":"button", "href":"http://www.esecurityplanet.com/network-security/76-percent-of-organizations-breached-in-2014.html"},
-					{"label":"Passphrases", "type":"button", "href":"http://www.esecurityplanet.com/hackers/why-longer-passphrases-are-more-secure-than-passwords-video.html"}
-				]}
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
 				{"deliverable":"Puzzle", "deadline":"5"},
-				{"deliverable":"Homework", "deadline":"5"}
+				{"deliverable":"Final Milestone", "deadline":"5"},
+				{"deliverable":"Midterm Exam", "deadline":"5"}
 			]
 		}
 	]
@@ -441,8 +445,8 @@ var myModules = [
 		{"date":"November 13, 2017", "title":"Security",
 			"summary":"<p>Security is the first block of the Control section of the accounting architecture framework. The recent surge in cyber attacks and malicious software has made security a primary focus for all systems designers and maintainers.</p>",
 			"nav":[
-				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution-pnnvr.html"},
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution-azqhi.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/security.html"},
 				{"label":"Reading", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"},
 				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"},
@@ -478,8 +482,8 @@ var myModules = [
 		{"date":"November 27, 2017", "title":"Processing Integrity",
 			"summary":"<p>Processing Integrity is the third Control block. This lecture especially relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases. This week's video tutorial showcases the online, open source diagramming tool that I used to create the activity and structure diagrams for this course, but you are not required to use this particular tool to complete the homework assignment. Also, this week's puzzle will be the final puzzle of the semester.</p>",
 			"nav":[
-				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
-				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution-azqhi.html"},
+				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/learning-curve.html"},
+				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution-wjsku.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/processing-integrity.html"},
 				{"label":"Reading", "type":"button", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"},
