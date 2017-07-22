@@ -197,8 +197,8 @@ var myModules = [
 				{"label":"Instructions", "type":"button", "href":"supplement/getting-started/syllabus.html#practiceset"},
 				{"label":"Practice Set", "type":"button", "href":"http://www.perdisco.com/"},
 				{"label":"Quiz Instructions", "type":"button", "href":"supplement/practice-set/quiz-instructions.html"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=EBDM_m0_CQA"},
-				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
+				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=EBDM_m0_CQA"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"5"},
@@ -331,18 +331,18 @@ var myModules = [
 	{"week":"Week 7",
 	"topics":[
 		{"date":"October 9, 2017", "title":"Software: Operating Systems",
-			"summary":"<p>The operating system is the most fundamental software in an information system, and this lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems. (Hint: Microsoft Windows and Apple macOS are not on the list.) I also provide a video tutorial of the operating system that you will use in this course. I encourage you to watch the tutorial before attempting the homework assignment.</p><p>This week also marks the final deadline for the practice set. Please complete <em>all</em> remaining practice set modules, not only the modules listed in the milestones, by the deadline. In order to avoid having anything due during Fall Break, the homework and practice set will be due on Friday of this week, instead of Saturday. Additionally, no puzzle will be due for the next two weeks.</p>",
+			"summary":"<p>The operating system is the most fundamental software in an information system, and this lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems. (Hint: Microsoft Windows and Apple macOS are not on the list.) I also provide a video tutorial of the operating system that you will use in this course. I encourage you to watch the tutorial before attempting the homework assignment.</p><p>In order to avoid having anything due during Fall Break, the homework and practice set milestone will be due on Friday of this week, instead of Saturday. Additionally, no puzzle will be due for the next two weeks.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/operating-systems.html"},
-				{"label":"Reading", "type":"button", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=sqbXNK3rxK4"},
-				{"label":"Assignment", "type":"button", "href":"supplement/operating-systems/assignment.html"},
+				{"label":"Article", "type":"button", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
+				{"label":"Homework", "type":"button", "href":"supplement/operating-systems/assignment.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=zbsl0yS8zdE"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
-				{"deliverable":"Homework", "deadline":"5"},
-				{"deliverable":"Milestone 6", "deadline":"5"}
+				{"deliverable":"Homework", "deadline":"4"},
+				{"deliverable":"Milestone 6", "deadline":"4"}
 			]
 		}
 	]
@@ -353,22 +353,14 @@ var myModules = [
 			"summary":"<p>This lecture covers the Storage block of the arch. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage and services is a prerequisite for understanding analytics.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/storage.html"},
-				{"label":"Assignment", "type":"button", "href":"supplement/storage/assignment.html"},
+				{"label":"Article", "type":"button", "href":"supplement/storage/storage.png", "filetype":"Image"},
+				{"label":"Homework", "type":"button", "href":"supplement/storage/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"NoSQL vs SQL", "type":"button", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
-					{"label":"NoSQL and Big Data", "type":"button", "href":"http://www.bobsguide.com/guide/news/2014/Aug/13/big-data-new-approach.html"}
-				]},
-				{"set":"Optional", "list":[
-					{"label":"History of Storage Devices", "type":"button", "href":"http://www.dailyinfographic.com/wp-content/uploads/2013/03/4b20d4ec68d60f454c722e64a8a40d34.jpg", "filetype":"Image"}
-				]}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
 				{"deliverable":"Homework", "deadline":"3"},
-				{"deliverable":"Milestone 7", "deadline":"5"}
+				{"deliverable":"Milestone 7", "deadline":"3"}
 			]
 		}
 	]
@@ -376,15 +368,15 @@ var myModules = [
 	{"week":"Week 9",
 	"topics":[
 		{"date":"October 23, 2017", "title":"Services",
-			"summary":"<p>Services is the fourth block in the Technology section of the accounting architecture framework. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of enterprise-grade computing. I also provide a video tutorial that explains how to complete the homework assignment.</p>",
+			"summary":"<p>Services is the fourth block in the Technology section of the accounting architecture framework. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of enterprise-grade computing.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution-ziwfu.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
-				{"label":"Reading", "type":"button", "href":"supplement/services/erp-history.jpg", "filetype":"Image"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=lr5pYsjR_rk"},
-				{"label":"Assignment", "type":"button", "href":"supplement/services/assignment.html"},
-				{"label":"HTML File", "type":"button", "href":"supplement/services/index.zip"},
+				{"label":"Article 1", "type":"button", "href":"supplement/services/erp-history.pdf", "filetype":"PDF"},
+				{"label":"Article 2", "type":"button", "href":"supplement/services/erp.pdf", "filetype":"PDF"},
+				{"label":"Homework", "type":"button", "href":"supplement/services/assignment.html"},
+				{"label":"HTML File", "type":"button", "href":"supplement/services/index.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -399,17 +391,15 @@ var myModules = [
 	{"week":"Week 10",
 	"topics":[
 		{"date":"October 30, 2017", "title":"Software: Data Analytics",
-			"summary":"<p>The final Software and Technology topic is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. The lecture introduces multiple analytical tools and programming languages, but the homework assignment will only focus on one: SQL. I provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I recommend that you view the tutorial before you attempt the homework assignment.</p>",
+			"summary":"<p>The final Software and Technology topic is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. The lecture introduces multiple analytical tools and programming languages, but the homework assignment will only focus on one: SQL. I will provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I recommend that you view the tutorial before you attempt the homework assignment.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution-unbfz.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/data-analytics.html"},
-				{"label":"Reading", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=N418C3Po0sM"},
-				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
-				{"label":"Library DB", "type":"button", "href":"supplement/data-analytics/library.sql", "filetype":"SQL plain-text file"},
-				{"label":"Company DB", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"},
+				{"label":"Article", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
+				{"label":"Homework", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
+				{"label":"Homework", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
+				{"label":"Database", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -424,11 +414,12 @@ var myModules = [
 	{"week":"Week 11",
 	"topics":[
 		{"date":"November 6, 2017", "title":"Risk &amp; Control",
-			"summary":"<p>Control is the final section of the accounting architecture framework. The lecture begins with a discussion of risk, which is the final block in the Environment section, and then introduces internal controls, which protect against risk. Over the past decade, control has become a central focus of the accounting profession.</p>",
+			"summary":"<p>Control is the final section of the accounting architecture framework. The lecture begins with a discussion of risk, which is the final block in the Environment section, and then introduces internal controls, which protect against risk. Over the past decade, control has become a central focus of the accounting profession.</p><p>This will will have no homework assignment because of the midterm exam. You may begin the exam at any time during the week prior to the deadline, but you must complete the exam in one sitting. The exam is on eCourseware. I will not reopen or extend the exam <em>for any reason</em>. The exam is open-note, open-lecture, and open-article. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides and articles. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p>This week is also the deadline for the final practice set milestone and the final deadline for the practice set. You should submit any unfinished practice set modules by this week's deadline.</p>",
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution-pnnvr.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/risk-and-control.html"},
+				{"label":"Article", "type":"button", "href":"supplement/risk-and-control/coso.pdf", "filetype":"PDF"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
 			"due":[
@@ -448,9 +439,9 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution-azqhi.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/security.html"},
-				{"label":"Reading", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"},
-				{"label":"Assignment", "type":"button", "href":"supplement/security/assignment.html"},
-				{"label":"Article", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"}
+				{"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"},
+				{"label":"Homework", "type":"button", "href":"supplement/security/assignment.html"},
+				{"label":"HW Article", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -463,16 +454,16 @@ var myModules = [
 	{"week":"Week 13",
 	"topics":[
 		{"date":"November 20, 2017", "title":"Availability",
-			"summary":"<p>Availability is the second Control block. The concepts in this lecture tie into the Services block because availability most frequently applies to cloud computing. I also provide a video tutorial explaining how to use a popular version control system&mdash;the lecture explains what a version control system is&mdash;to complete this week's homework assignment. No puzzle will be due this week because of Thanksgiving Break.</p>",
+			"summary":"<p>Availability is the second Control block. The concepts in this lecture tie into the Services block because availability most frequently applies to cloud computing. I provide a video tutorial that demonstrates how to complete this week's homework assignment. No puzzle will be due this week because of Thanksgiving Break, but the homework assignment is due on Wednesday, instead of Saturday.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
-				{"label":"Reading", "type":"button", "href":"https://fossbytes.com/dos-and-ddos-attacks-the-origin-of-a-species/"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=G6iAfW2Dq5M"},
-				{"label":"Assignment", "type":"button", "href":"supplement/availability/assignment.html"}
+				{"label":"Article", "type":"button", "href":"https://fossbytes.com/dos-and-ddos-attacks-the-origin-of-a-species/"},
+				{"label":"Homework", "type":"button", "href":"supplement/availability/assignment.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=G6iAfW2Dq5M"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
-				{"deliverable":"Homework", "deadline":"5"}
+				{"deliverable":"Homework", "deadline":"2"}
 			]
 		}
 	]
@@ -485,10 +476,10 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/learning-curve.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution-wjsku.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/processing-integrity.html"},
-				{"label":"Reading", "type":"button", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
-				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"},
-				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/processing-integrity/assignment.html"},
-				{"label":"Assignment", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution-stvdt.html"}
+				{"label":"Article", "type":"button", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
+				{"label":"Homework", "type":"button assignmentbutton", "href":"supplement/processing-integrity/assignment.html"},
+				{"label":"Homework", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution-stvdt.html"},
+				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -504,13 +495,9 @@ var myModules = [
 			"summary":"<p>Confidentiality is the final block of the Control section, and the final block of the accounting architecture framework. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic.</p><p>Please note the early deadline for this week's homework assignments because of the end of classes. The second, and final, homework assignment this week is very brief and will not interfere with the other bigger deliverables you may need to focus on from other courses.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/confidentiality.html"},
-				{"label":"Assignment", "type":"button assignmentbutton", "href":"supplement/confidentiality/assignment.html"},
-				{"label":"Final Assignment", "type":"button assignmentbutton", "href":"supplement/final/assignment.html"}
-			],
-			"readings":[
-				{"set":"Required", "list":[
-					{"label":"Auditing Big Data", "type":"button", "href":"supplement/confidentiality/acch-51070.pdf", "filetype":"PDF"}
-				]}
+				{"label":"Article", "type":"button", "href":"supplement/confidentiality/blockchain.pdf", "filetype":"PDF"},
+				{"label":"Homework", "type":"button", "href":"supplement/confidentiality/assignment.html"},
+				{"label":"Final Homework", "type":"button", "href":"supplement/final/assignment.html"}
 			],
 			"due":[
 				{"deliverable":"Quiz", "deadline":"0"},
@@ -525,7 +512,7 @@ var myModules = [
 		{"date":"December 13, 2017", "title":"Final Exam",
 			"summary":"<p>All students have until <strong>December 13 @ 12.00</strong> to complete the final exam and to submit evidence of your SETE for extra credit. You may begin the exam at any time during Finals Week prior to the deadline, but you must complete the exam in one sitting. The exam is on eCourseware, and eCourseware also reports the deadline for the exam. I will not reopen or extend the exam <em>for any reason</em>. The exam is open-note and open-lecture. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p><strong>Good luck!</strong></p>",
 			"nav":[
-				{"label":"Extra Credit Instructions", "type":"button assignmentbutton", "href":"supplement/final/SETE.html"},
+				{"label":"Extra Credit", "type":"button", "href":"supplement/final/SETE.html"},
 			],
 			"due":[
 				{"deliverable":"SETE", "deadline":"0"},
