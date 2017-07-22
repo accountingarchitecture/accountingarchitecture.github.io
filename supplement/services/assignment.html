@@ -24,14 +24,22 @@
 	<div class="reveal">
 	<div class="slides">
 		<section>
-			<h3>Server Assignment</h3>
-			<p>Daemons or servers can seems confusing, but this assignment will demonstrate how straightforward servers can be. Using Codeanywhere, install apache2, which is a Web server. It should start automatically, but if not, launch it. On your container Info screen, which you can open by right-clicking on the container icon in the side pane and selecting Info, click the first URL, and the Apache2 Ubuntu Default Page will open in a new tab. Then, download the HTML page from the course portal to your container, extract the file from the ZIP archive, move it to the /var/www/html folder, and restart apache2. Take a screenshot of your container window after running these commands. Reload the Apache2 Ubuntu Default Page tab, and take another screenshot. Upload both images to Dropbox on eCourseware.</p>
+			<h3>Practice</h3>
+			<p>Follow these steps to set up a Web server on your Codeanywhere:</p>
+			<ol style="font-size: 30px">
+				<li>Use apt to update the repository list and to install the package named apache2.</li>
+				<li>Use the following command to start the Web server: <strong>sudo service apache2 start</strong></li>
+				<li>Use the following command to download the HTML File from the course portal:<br><strong>wget accounting-architecture.github.io/portal/services/index.html</strong></li>
+				<li>Move or copy index.html to the folder /var/www/html</li>
+				<li>Click the Run Project button from the shortcut bar in Codeanywhere to open your Web page in a browser window.</li>
+			</ol>
+			<p>Take a screenshot of your container window after running these commands and take another screenshot of the browser window with your Web page. Paste both screenshots into a document along with list of the commands you used to complete these tasks. Export the document to PDF, and upload it to Dropbox on eCourseware.</p>
 		</section>
 	</div>
 	</div>
 
 	<script src="../../reveal.js/lib/js/head.min.js"></script>
 	<script src="../../reveal.js/js/reveal.js"></script>
-	<script src="../js/slides.js"></script>
+	<script src="../../js/slides.js"></script>
 </body>
 </html>
