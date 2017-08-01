@@ -216,8 +216,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/robbers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/robbers-solution-uhxxx.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/business-model.html"},
-				{"label":"Article 1", "type":"button", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
-				{"label":"Article 2", "type":"button", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
+				{"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
 				{"label":"Homework", "type":"button assignmentbutton", "href":"supplement/business-model/assignment.html"},
 				{"label":"Homework", "type":"button solutionbutton", "href":"supplement/business-model/solution-uhxep.html"},
 				{"label":"Diagram 1", "type":"button", "href":"supplement/business-model/payment-process.png", "filetype":"Image"},
@@ -262,7 +261,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution-tnclb.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/hardware.html"},
-				{"label":"Article", "type":"button", "href":"http://www.zdnet.com/article/we-thought-wed-sell-1000-the-inside-story-of-the-raspberry-pi/"},
+				{"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
 				{"label":"Homework", "type":"button", "href":"supplement/hardware/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
 			],
@@ -283,7 +282,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution-qryjz.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
-				{"label":"Article", "type":"button", "href":"https://opensource.com/open-organization/16/10/open-means-not-movement"},
+				{"label":"Article", "type":"button", "href":"https://opensource.com/article/17/4/itch-to-scratch-model-user-problems"},
 				{"label":"Homework", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
 				{"label":"Homework", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
@@ -408,7 +407,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution-azqhi.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/security.html"},
-				{"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2016/3/it-shouldnt-be-shouldering-burden-security-alone"},
+				{"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2017/3/it-security-start-3-ways-make-it-business-priority"},
 				{"label":"Homework", "type":"button", "href":"supplement/security/assignment.html"},
 				{"label":"HW Article", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"}
 			],
@@ -426,7 +425,7 @@ var myModules = [
 			"summary":"<p>Availability is the second Control block. The concepts in this lecture tie into the Services block because availability most frequently applies to cloud computing. I provide a video tutorial that demonstrates how to complete this week's homework assignment. No puzzle will be due this week because of Thanksgiving Break, but the homework assignment is due on Wednesday, instead of Saturday.</p>",
 			"nav":[
 				{"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
-				{"label":"Article", "type":"button", "href":"https://fossbytes.com/dos-and-ddos-attacks-the-origin-of-a-species/"},
+				{"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2017/3/sas-cio-be-proactive-leading-your-organization-sensor-enabled-world"},
 				{"label":"Homework", "type":"button", "href":"supplement/availability/assignment.html"},
 				{"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=G6iAfW2Dq5M"}
 			],
