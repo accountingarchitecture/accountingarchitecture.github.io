@@ -32,7 +32,7 @@
 			<div class="flex-row">
 				<div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
 				<div class="flex-item" style="max-width: 65%">
-					<p>Availability is the second block of the Control section. The only useful type of information system is one that is available for use. In order to qualify as available for use, a system and its data must be accessible. An accessible system is powered on, connected to the network if necessary, and running all required services. Accessible data is complete an can be read and written by permissioned users.</p>
+					<p>Availability is the second block of the Control section. The only useful type of information system is one that is available for use. In order to qualify as available for use, a system and its data must be accessible. An accessible system is powered on, connected to the network if necessary, and running all required services. Accessible data is complete and can be read and written by permissioned users.</p>
 				</div>
 			</div>
 		</section>
@@ -60,12 +60,12 @@
 
 		<section>
 			<h2>Hold Hostage</h2>
-			<p>An entire system can be the target of an attack to deny availability. An attack can also be against a single device: server, personal computer, mobile device, IoT device, etc. In many cases, attacks against individual devices have less severe consequences (i.e., lower exposure). Attacks can also be specifically against the data on a system or device, and these targeted attacks can be even more detrimental than rendering a device or cloud service inoperable. One common threat to data availability is <u><em>ransomware</em></u>, which is malware planted by trojan horse or software exploit that locks a device and refuses to release its data until the users pays a ransom. If the users refuses to pay, the ransomware begins to delete the data. Ransomware has successfully crippled entire systems by locking users out of their data.</p>
+			<p>An entire system can be the target of an attack to deny availability. An attack can also be against a single device: server, personal computer, mobile device, IoT device, etc. In many cases, attacks against individual devices have less severe consequences (i.e., lower exposure). Attacks can also be specifically against the data on a system or device, and these targeted attacks can be even more detrimental than rendering a device or cloud service inoperable. One common threat to data availability is <u><em>ransomware</em></u>, which is malware planted by trojan horse or software exploit that locks a device and refuses to release its data until the users pays a ransom. If the user refuses to pay, the ransomware begins to delete the data. Ransomware has successfully crippled entire systems by locking users out of their data.</p>
 		</section>
 
 		<section>
 			<h2>Foundation of Security</h2>
-			<p>Security tools restrict unauthorized access to networks, devices, ports, and data, and frequently unauthorized access is what threatens the availability of a system and its data. Firewalls and other packet filters can prevent pings from crippling a server by forcing the server to ignore them. This precludes the benefit of being able to use a ping to confirm server availability, but all security tools bear a cost of inefficiency. Preventing unpermissioned execution of malware and patching software exploits reduce the likelihood of creating zombies that fail to perform intended functions and instead engaging in nefarious attacks. As a result, security is necessary for ensuring availability. However, additional control activities that focus specific on availability extend the availability benefits of security policies and procedures.</p>
+			<p>Security tools restrict unauthorized access to networks, devices, ports, and data, and frequently unauthorized access is what threatens the availability of a system and its data. Firewalls and other packet filters can prevent pings from crippling a server by forcing the server to ignore them. This precludes the benefit of being able to use a ping to confirm server availability, but all security tools bear a cost of inefficiency. Preventing unpermissioned execution of malware and patching software exploits reduce the likelihood of creating zombies that fail to perform intended functions and instead engage in nefarious attacks. As a result, security is necessary for ensuring availability. However, additional control activities that focus specifically on availability extend the availability benefits of security policies and procedures.</p>
 		</section>
 
 		<section>
@@ -75,12 +75,12 @@
 
 		<section>
 			<h2>No Interruptions</h2>
-			<p>Because an information system, especially a cloud-based information system, has so many dependent components, complete redundancy is multi-faceted and can take on many different forms. Some redundancy solutions are small and serve a single purpose. An <u><em>uninterruptible power supply</em></u> (UPS) provides power redundancy be supplying electricity in the case of power loss. A UPS is only designed to power devices for a few minutes to provide enough time to shutdown devices or enable a auxiliary power source or backup generator. Although a shutdown device is not available, having the ability to shut them down properly, including unmounting file systems, can preserve availability in the long term by protecting against data corruption and physical wear from sudden power loss.</p>
+			<p>Because an information system, especially a cloud-based information system, has so many dependent components, complete redundancy is multi-faceted and can take on many different forms. Some redundancy solutions are small and serve a single purpose. An <u><em>uninterruptible power supply</em></u> (UPS) provides power redundancy by supplying electricity in the case of power loss. A UPS is only designed to power devices for a few minutes to provide enough time to shutdown devices or enable an auxiliary power source or backup generator. Although a device is not available once it is shut down, having the ability to shut it down properly, including unmounting file systems, can preserve availability in the long term by protecting against data corruption and physical wear from sudden power loss.</p>
 		</section>
 
 		<section>
 			<h2>Deja Vu All Over Again</h2>
-			<p>Emergency power, generators, and uninterruptible power supplies create redundancy for an externally provided utility: electricity. Because the entity cannot supply itself with electricity on a consistent basis, this risk to availability is not with the entity's control. Other redundancies also exist to protect against other risks the entity cannot control, such as network outages and natural disasters. ISP or network redundancy provides a server or cloud with multiple Internet service providers in case one becomes unable to provide Internet connectivity. A duplicate site creates geographic redundancy for by duplicating all hardware and software for a server or cloud in a secondary location. Duplicate sites are especially useful in cases of fire and other natural disasters where any local redundancies would also be consumed.</p>
+			<p>Emergency power, generators, and uninterruptible power supplies create redundancy for an externally provided utility: electricity. Because the entity cannot supply itself with electricity on a consistent basis, this risk to availability is not with the entity's control. Other redundancies also exist to protect against other risks the entity cannot control, such as network outages and natural disasters. ISP or network redundancy provides a server or cloud with multiple Internet service providers in case one becomes unable to provide Internet connectivity. A duplicate site creates geographic redundancy by duplicating all hardware and software for a server or cloud in a secondary location. Duplicate sites are especially useful in cases of fire and other natural disasters where any local redundancies would also be destroyed.</p>
 		</section>
 
 		<section>
@@ -90,7 +90,7 @@
 
 		<section>
 			<h2>Clusters and Backups</h2>
-			<p>In addition to addressing a number risks introduced by relying on vendors to provide power and network connectivity, redundancy also protects against additional risks solely within the entity's control. A distributed computing cluster, in addition to increasing availability by adding additional computing power, allows alternative servers to take over when one server fails. <u><em>Backups</em></u> create duplicates of data on file and database systems in case storage volumes become corrupted or data becomes unintentionally or nefariously deleted, altered, or locked. Regardless of the size or perceived importance of an information system, data backups are a vital control activity. Different backup techniques exist to create data duplicates to satisfy different needs for <u><em>disaster recovery</em></u> (i.e., restoring data and functionality following a loss of availability).</p>
+			<p>In addition to addressing a number of risks introduced by relying on vendors to provide power and network connectivity, redundancy also protects against additional risks solely within the entity's control. A distributed computing cluster, in addition to increasing availability by adding additional computing power, allows alternative servers to take over when one server fails. <u><em>Backups</em></u> create duplicates of data on file and database systems in case storage volumes become corrupted or data becomes unintentionally or nefariously deleted, altered, or locked. Regardless of the size or perceived importance of an information system, data backups are a vital control activity. Different backup techniques exist to create data duplicates to satisfy different needs for <u><em>disaster recovery</em></u> (i.e., restoring data and functionality following a loss of availability).</p>
 		</section>
 
 		<section>
@@ -100,7 +100,7 @@
 
 		<section>
 			<h2>Easier is not Better</h2>
-			<p>One option for reducing the size of full backups or the restoration time of incremental backups is to decrease the frequency of backups (e.g., once a week, instead of once a day). The problem with this option is that the likelihood of data loss will not decrease, but the exposure to a loss will increase, perhaps to an unacceptable level. For example, if the current policy is daily backups and a storage volume fails immediately before that day's backup, at most 24 hours worth of data is irreplaceable. If that policy changes to weekly backups and a storage volumes fails immediately before that week's backup, as much as 168 hours of data is lost! For a large company, that may be hundreds of millions of database records. The solution to more efficient disaster recovery is a riskier backup plan.</p>
+			<p>One option for reducing the size of full backups or the restoration time of incremental backups is to decrease the frequency of backups (e.g., once a week, instead of once a day). The problem with this option is that the likelihood of data loss will not decrease, but the exposure to a loss will increase, perhaps to an unacceptable level. For example, if the current policy is daily backups and a storage volume fails immediately before that day's backup, at most 24 hours worth of data is irreplaceable. If that policy changes to weekly backups and a storage volume fails immediately before that week's backup, as much as 168 hours of data is lost! For a large company, that may be hundreds of millions of database records. The solution to more efficient disaster recovery should not be a riskier backup plan.</p>
 		</section>
 
 		<section>
@@ -131,7 +131,7 @@
 
 		<section>
 			<h2>Redundancy as a Service</h2>
-			<p>One of the benefits of public clouds is that the cloud provider is responsible for redundancy. As a customer of the public cloud provider, the entity has the same claim on availability of the cloud infrastructure as the entity's customers have on the content hosted in that cloud. In order to ensure that the public cloud remains available, the vendor must establish policies for power, network, and geographic redundancy, as well as maintaining a distributed computing environment with redundant server hardware. However, the entity retains the responsibility for data backups and virtual machine or container redundancy to protect against downtime and data loss for reasons unrelated to infrastructure, such as human or software error, data theft, and some types cyber incidents.</p>
+			<p>One of the benefits of public clouds is that the cloud provider is responsible for redundancy. As a customer of the public cloud provider, the entity has the same claim on availability of the cloud infrastructure as the entity's customers have on the content hosted in that cloud. In order to ensure that the public cloud remains available, the vendor must establish policies for power, network, and geographic redundancy, as well as maintaining a distributed computing environment with redundant server hardware. However, the entity retains the responsibility for data backups and virtual machine or container redundancy to protect against downtime and data loss for reasons unrelated to infrastructure, such as human or software error, data theft, and some types of cyber incidents.</p>
 		</section>
 
 		<section>
@@ -146,7 +146,7 @@
 
 		<section>
 			<h2>Interpretation</h2>
-			<p>One of the original philosophies of the Unix developers was that the basis of all data is plain text. While it is not reasonable to store everything as plain text (e.g., XML, HTML, TXT, CSV, etc.), one overwhelming benefit of plain text is the maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. However, many software applications, store data in compiled binaries (e.g., DOCX, PDF, PNG, etc.). In order to preserve access to the data stored in binary files, users can either (1) retain in perpetuity the hardware and software necessary to access the data or (2) <u><em>emulate</em></u> the hardware and software when necessary.</p>
+			<p>One of the original philosophies of the Unix developers was that the basis of all data is plain text. While it is not reasonable to store everything as plain text (e.g., XML, HTML, TXT, CSV, etc.), one overwhelming benefit of plain text is the maximization of data accessibility. Any system can read plain text files, whereas binary files require specific hardware and software to access. However, many software applications store data in compiled binaries (e.g., DOCX, PDF, PNG, etc.). In order to preserve access to the data stored in binary files, users can either (1) retain in perpetuity the hardware and software necessary to access the data or (2) <u><em>emulate</em></u> the hardware and software when necessary.</p>
 		</section>
 
 		<section>
@@ -174,7 +174,7 @@
 
 		<section>
 			<h2>Clean Up</h2>
-			<p>Expertise in data analytics is currently a desirable skill, but one of the precursors to useful data analytics is good data. One of the benefits of understanding the information life cycle is the ability design systems that will ensure good data for analytics, but for pre-existing systems, sometimes the only solution is to take the data as given. As a result, data specialists confess that a large part of their job is cleaning data (e.g., looking for likely errors, finding duplicate data, matching records in one store with the records in another). It is not fun, but it is necessary.</p>
+			<p>Expertise in data analytics is currently a desirable skill, but one of the precursors to useful data analytics is good data. One of the benefits of understanding the information life cycle is the ability to design systems that will ensure good data for analytics, but for pre-existing systems, sometimes the only solution is to take the data as given. As a result, data specialists confess that a large part of their job is cleaning data (e.g., looking for likely errors, finding duplicate data, matching records in one store with the records in another). It is not fun, but it is necessary.</p>
 			<div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
 		</section>
 
@@ -191,7 +191,7 @@
 
 		<section>
 			<h2>Only if It's Available</h2>
-			<p>Information and IT security are hot topics because of the frequency of cyber incidents, but many of these incidents threaten availability by bringing down systems are destroying data. In addition to losing business and access to valuable data for analytics, unavailable systems or data can pose compliance risks. Accounting regulation has strict rules about the preservation of accounting data. For example, tax authorities can audit the past three years' returns; financial statements require presentation of prior years' numbers for comparability; restatements or the adoption of new standards may require retroactive adjustments. Additionally internal and external stakeholders have expectations regarding the availability of systems for data entry, retrieval, analysis, use. Only available systems can make money.</p>
+			<p>Information and IT security are hot topics because of the frequency of cyber incidents, but many of these incidents threaten availability by bringing down systems and destroying data. In addition to losing business and access to valuable data for analytics, unavailable systems or data can pose compliance risks. Accounting regulation has strict rules about the preservation of accounting data. For example, tax authorities can audit the past three years' returns; financial statements require presentation of prior years' numbers for comparability; restatements or the adoption of new standards may require retroactive adjustments. Additionally, internal and external stakeholders have expectations regarding the availability of systems for data entry, retrieval, analysis, and use. Only available systems can make money.</p>
 		</section>
 	</div>
 	</div>
