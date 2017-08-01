@@ -71,7 +71,7 @@
 
 		<section>
 			<h2>Database Permissions</h2>
-			<p>Database permissions identify which users can (1) access the database and (2) initiate the four primary storage functions: <u><em>create</em></u>, <u><em>read</em></u>, <u><em>update</em></u>, and <u><em>delete</em></u> (CRUD). Create allows users to create new tables and add new records to existing table; read allows users to view existing tables and records; update allows users to modify existing records to replace values of certain attributes with new values; delete allows users to remove records and tables from the database. These four functions map directly into SQL commands. SELECT reads tables and records. CREATE and INSERT INTO create new tables and add records to existing tables, respectively. UPDATE updates existing records. DROP TABLE and DELETE delete tables and records, respectively.</p>
+			<p>Database permissions identify which users can (1) access the database and (2) initiate the four primary storage functions: <u><em>create</em></u>, <u><em>read</em></u>, <u><em>update</em></u>, and <u><em>delete</em></u> (CRUD). Create allows users to create new tables and add new records to an existing table; read allows users to view existing tables and records; update allows users to modify existing records to replace values of certain attributes with new values; delete allows users to remove records and tables from the database. These four functions map directly into SQL commands. SELECT reads tables and records. CREATE and INSERT INTO create new tables and add records to existing tables, respectively. UPDATE updates existing records. DROP TABLE and DELETE delete tables and records, respectively.</p>
 		</section>
 
 		<section>
@@ -92,12 +92,12 @@
 
 		<section>
 			<h2>Protect Yourself</h2>
-			<p>Different file system permissions protect against different risks. One risk, and perhaps the most important risk, to protect against is unauthorized viewing of confidential data. This is the risk that the majority of cyber incidents exploits. Restricting read access to sensitive files and databases reduces the likelihood that unauthorized individuals will see confidential data. Another risk to protect against is launching of unauthorized applications. Software applications can access file and database systems, as well as computer hardware through the operating system kernel. <u><em>Malware</em></u> (i.e., malicious software) can take control of a system an leak or destroy sensitive data. Restricting execute permissions can prevent unauthorized users from launching software that will infect or compromise a device or network.</p>
+			<p>Different file system permissions protect against different risks. One risk, and perhaps the most important risk, to protect against is unauthorized viewing of confidential data. This is the risk that the majority of cyber incidents exploits. Restricting read access to sensitive files and databases reduces the likelihood that unauthorized individuals will see confidential data. Another risk to protect against is launching of unauthorized applications. Software applications can access file and database systems, as well as computer hardware through the operating system kernel. <u><em>Malware</em></u> (i.e., malicious software) can take control of a system and leak or destroy sensitive data. Restricting execute permissions can prevent unauthorized users from launching software that will infect or compromise a device or network.</p>
 		</section>
 
 		<section>
 			<h2>Me Against the World</h2>
-			<p>Different users need different access to file systems, and restricting unauthorized access should not remove functionality for authorized users. In addition to three functions (read, write, and execute), file permissions also apply separately to three different types of users: user, group, and others. User is the owner, usually the creator, of a file or folder. Group is a collection of users that need some access but less access than the owner. The owner may or may be a member of the group. Others are every other authorized and unauthorized user. Whatever permissions others have, anyone who gains access to the file system can do. As a result, others are frequently referred to as world. Ownership and permissions are automatically set when a file or folder is created, but they can be changed thereafter by anyone with write permissions.</p>
+			<p>Different users need different access to file systems, and restricting unauthorized access should not remove functionality for authorized users. In addition to three functions (read, write, and execute), file permissions also apply separately to three different types of users: user, group, and others. User is the owner, usually the creator, of a file or folder. Group is a collection of users that need some access but less access than the owner. The owner may or may not be a member of the group. Others are every other authorized and unauthorized user. Whatever permissions others have, anyone who gains access to the file system can do. As a result, others are frequently referred to as world. Ownership and permissions are automatically set when a file or folder is created, but they can be changed thereafter by anyone with write permissions.</p>
 		</section>
 
 		<section>
@@ -198,7 +198,7 @@
 
 		<section>
 			<h2>Groups</h2>
-			<p>User can belong to multiple groups in Unix-like systems. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware. For example, the &lsquo;storage&rsquo; group allows its members to access storage volumes, such as the internal hard drive or external USB drives.</p>
+			<p>Users can belong to multiple groups in Unix-like systems. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware. For example, the &lsquo;storage&rsquo; group allows its members to access storage volumes, such as the internal hard drive or external USB drives.</p>
 			<p>Users can also create additional groups in a Unix-like system to serve business purposes. Creating business groups allows owners to have primary access to files and for group members to have lesser access but more access than others (e.g., the owner has read-write access, group members have read-only access, and others have no access).</p>
 		</section>
 
@@ -209,7 +209,7 @@
 
 		<section>
 			<h2>Physical Access</h2>
-			<p>Digital permissions serve to restrict digital access to digital resources. However, an often overlooked risk is the risk of physical access to digital resources. Physical access to a digital resources is is access to the computer and network hardware that store those resources (e.g., a server room that houses server or network hardware). Digital permissions only serve to protect digital resources if users cannot gain unauthorized physical access. A user, who can gain unauthorized physical access to a digital resource, can steal it and its data, make it unavailable to other users, or destroy it. Additionally, given enough time, a user with physical access to data can gain digital access, regardless of digital permissions. No amount of digital permissions replaces the need for physical permissions. <em>Physical access is total access</em>.</p>
+			<p>Digital permissions serve to restrict digital access to digital resources. However, an often overlooked risk is the risk of physical access to digital resources. Physical access to digital resources is access to the computer and network hardware that store those resources (e.g., a server room that houses server or network hardware). Digital permissions only serve to protect digital resources if users cannot gain unauthorized physical access. A user who can gain unauthorized physical access to a digital resource can steal it and its data, make it unavailable to other users, or destroy it. Additionally, given enough time, a user with physical access to data can gain digital access, regardless of digital permissions. No amount of digital permissions replaces the need for physical permissions. <em>Physical access is total access</em>.</p>
 		</section>
 
 		<section>
@@ -227,7 +227,7 @@
 
 		<section>
 			<h2>Secure Passwords</h2>
-			<p>The protection that passwords provide is only effective if an unauthorized user cannot guess the password. <u><em>Brute-force attacks</em></u> involve a computer randomly guessing what a password might be and attempting to log in with that password. Simple passwords, such as words commonly found in the dictionary or simple strings of numbers, are easy targets because of <u><em>dictionary attacks</em></u>, brute-force attacks that quickly try every word in the dictionary. Requiring long (e.g. &gt;12 characters), frequently changed (e.g., every 90 days), complex (e.g., upper- and lowercase letters, numbers, and special characters) passwords reduces the success of brute-force attacks. However, complex password are only effective if users can remember them without writing them down and storing in an accessible location (e.g., next to that user's workstation).</p>
+			<p>The protection that passwords provide is only effective if an unauthorized user cannot guess the password. <u><em>Brute-force attacks</em></u> involve a computer randomly guessing what a password might be and attempting to log in with that password. Simple passwords, such as words commonly found in the dictionary or simple strings of numbers, are easy targets because of <u><em>dictionary attacks</em></u>, brute-force attacks that quickly try every word in the dictionary. Requiring long (e.g. &gt;12 characters), frequently changed (e.g., every 90 days), complex (e.g., upper- and lowercase letters, numbers, and special characters) passwords reduces the success of brute-force attacks. However, complex passwords are only effective if users can remember them without writing them down and storing them in an accessible location (e.g., next to that user's workstation).</p>
 		</section>
 
 		<section>
@@ -243,7 +243,7 @@
 
 		<section>
 			<h2>Keylogging</h2>
-			<p>Attackers can also use <u><em>keyloggers</em></u> to gain access to login credentials. Keyloggers can be either hardware or software, but their purpose is to log or record the keystrokes of an authorized user. By recording keystrokes, an attacker can learn anything that a users types into the infected computer. Attackers require physical access in order to plant hardware keyloggers. This is one example of the threat that physical access can pose for digital resources. Software-based keylogging often comes from <u><em>cross-site scripting</em></u> (XSS) and <u><em>man-in-the-middle</em></u> (MITM) attacks. XSS attacks involve executing attack code when a user visits a legitimate Web site, and MITM involves intercepting network communication between two devices.</p>
+			<p>Attackers can also use <u><em>keyloggers</em></u> to gain access to login credentials. Keyloggers can be either hardware or software, but their purpose is to log or record the keystrokes of an authorized user. By recording keystrokes, an attacker can learn anything that a user types into the infected computer. Attackers require physical access in order to plant hardware keyloggers. This is one example of the threat that physical access can pose for digital resources. Software-based keylogging often comes from <u><em>cross-site scripting</em></u> (XSS) and <u><em>man-in-the-middle</em></u> (MITM) attacks. XSS attacks involve executing attack code when a user visits a legitimate Web site, and MITM involves intercepting network communication between two devices.</p>
 		</section>
 
 		<section>
@@ -263,7 +263,7 @@
 
 		<section>
 			<h2>Network Sniffing</h2>
-			<p>Having strong passwords is also important for remote authentication in order to join a network. Although methods exist to protect data while in transit between two networked devices, a primary purpose of local-area networks is to create secure network for devices to communicate with one another. Unauthorized access to a network can result in unauthorized access to data, even if an attacker gains no access to a single device on the network. <u><em>Network sniffing</em></u> involves &ldquo;listening&rdquo; to network communication in order to read data in transit. Network sniffing can reveal the contents of emails, shared files, even login credentials shared between a client and a server.</p>
+			<p>Having strong passwords is also important for remote authentication in order to join a network. Although methods exist to protect data while in transit between two networked devices, a primary purpose of local-area networks is to create a secure network for devices to communicate with one another. Unauthorized access to a network can result in unauthorized access to data, even if an attacker gains no access to a single device on the network. <u><em>Network sniffing</em></u> involves &ldquo;listening&rdquo; to network communication in order to read data in transit. Network sniffing can reveal the contents of emails, shared files, even login credentials shared between a client and a server.</p>
 		</section>
 
 		<section>
@@ -284,12 +284,12 @@
 
 		<section>
 			<h2>Isolation</h2>
-			<p>When attackers gain unauthorized access to network-connected device, they can use that access to attack other devices on the same network. As a result, one method of hardening is to isolate services and computing environments from one another. This is one of the primary roles of both virtualization and containerization. Virtual machines and containers create environments that are isolated from each other. Any application run in a container cannot access any other container or the host kernel, and any operating system run in a virtual machine cannot access any other virtual machine or the computer hardware.</p>
+			<p>When attackers gain unauthorized access to a network-connected device, they can use that access to attack other devices on the same network. As a result, one method of hardening is to isolate services and computing environments from one another. This is one of the primary roles of both virtualization and containerization. Virtual machines and containers create environments that are isolated from each other. Any application run in a container cannot access any other container or the host kernel, and any operating system run in a virtual machine cannot access any other virtual machine or the computer hardware.</p>
 		</section>
 
 		<section>
 			<h2>Deauthorization</h2>
-			<p>Permissions and authentication allow authorized users to perform intended functions. As users change roles or leave an organization, those same permissions and authentication credentials permit unintended and unauthorized access. This is a especially a concern when employees leave their jobs on negative terms and would use their prior credentials for nefarious purposes. All organizations should have a policy for the deletion of permissions and credentials as soon as any user's authorization level changes.</p>
+			<p>Permissions and authentication allow authorized users to perform intended functions. As users change roles or leave an organization, those same permissions and authentication credentials permit unintended and unauthorized access. This is especially a concern when employees leave their jobs on negative terms and would use their prior credentials for nefarious purposes. All organizations should have a policy for the deletion of permissions and credentials as soon as any user's authorization level changes.</p>
 			<p>This is one of the benefits of role- over user-based permissions. When a user changes roles, instead of needing to change the user's access to each individual digital resource, assigning the user to a new role can execute all access changes at once.</p>
 		</section>
 
