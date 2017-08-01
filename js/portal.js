@@ -21,20 +21,9 @@ function builder(modules) {
 							navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
 						}
 					}
-					if(modules[i].topics[j].hasOwnProperty('readings')) {
-						navbuttons += '<a class="button readingsbutton">Readings</a>';
-						for(l = 0; l < modules[i].topics[j].readings.length; l++) {
-							for(m = 0; m < modules[i].topics[j].readings[l].list.length; m++) {
-								if(modules[i].topics[j].readings[l].list[m].hasOwnProperty('filetype')) readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" rel="noopener" aria-label="' + modules[i].topics[j].readings[l].list[m].filetype + ' opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
-								else readbuttons += '<a class="' + modules[i].topics[j].readings[l].list[m].type + '" href="' + modules[i].topics[j].readings[l].list[m].href + '" target="_blank" rel="noopener" aria-label="Website opens in new window">' + modules[i].topics[j].readings[l].list[m].label + '</a>';
-							}
-							readsets += '<div class="set"><h3>' + modules[i].topics[j].readings[l].set + '</h3><div class="articles">' + readbuttons + '</div></div>';
-							readbuttons = '';
-						}
-					}
 				}
-				if(isCurrentOrArchived(modules[i].topics[0]) == 'current') topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div><div class="nav">' + navbuttons + '</div><div class="readings" style="display: none">' + readsets + '</div></div>';
-				else topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="summary" style="display: none">' + modules[i].topics[j].summary + '</div><div class="nav" style="display: none">' + navbuttons + '</div><div class="readings" style="display: none">' + readsets + '</div></div>';
+				if(isCurrentOrArchived(modules[i].topics[0]) == 'current') topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div><div class="nav">' + navbuttons + '</div></div>';
+				else topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="summary" style="display: none">' + modules[i].topics[j].summary + '</div><div class="nav" style="display: none">' + navbuttons + '</div></div>';
 			}
 			content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
 		}
@@ -111,27 +100,17 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 function openTopic(topic) {
 	topic.getElementsByClassName('title')[0].className='title expand';
 	topic.getElementsByClassName('summary')[0].style.display='';
-	try {
-		topic.getElementsByClassName('nav')[0].style.display='';
-	} catch(err) {
-		// Catch TypeError when topic has no readings
-	}
+	topic.getElementsByClassName('nav')[0].style.display='';
 }
 
 // How to hide topic content
 function closeTopic(topic) {
 	topic.getElementsByClassName('title')[0].className='title';
 	topic.getElementsByClassName('summary')[0].style.display='none';
-	try {
-		topic.getElementsByClassName('nav')[0].style.display='none';
-		topic.getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
-		topic.getElementsByClassName('readings')[0].style.display='none';
-	} catch(err) {
-		// Catch TypeError when topic has no readings and/or puzzle
-	}
+	topic.getElementsByClassName('nav')[0].style.display='none';
 }
 
-// Show topic summary or readings list on click
+// Show topic summary on click
 document.getElementById('content').addEventListener('click', function(e) {
 	topics = document.getElementsByClassName('topic');
 	// Show topic summary
@@ -147,16 +126,6 @@ document.getElementById('content').addEventListener('click', function(e) {
 			}
 		} else if(e.target == topics[i].getElementsByClassName('title')[0] && topics[i].getElementsByClassName('title')[0].className == 'title expand') {
 			closeTopic(topics[i]);
-		}
-	}
-	// Show readings list
-	for(i = 0; i < topics.length; i++) {
-		if(e.target == topics[i].getElementsByClassName('readingsbutton')[0] && topics[i].getElementsByClassName('readingsbutton')[0].className != 'button readingsbutton expand') {
-			topics[i].getElementsByClassName('readingsbutton')[0].className='button readingsbutton expand';
-			topics[i].getElementsByClassName('readings')[0].style.display='';
-		} else if(e.target == topics[i].getElementsByClassName('readingsbutton')[0] && topics[i].getElementsByClassName('readingsbutton')[0].className == 'button readingsbutton expand') {
-			topics[i].getElementsByClassName('readingsbutton')[0].className='button readingsbutton';
-			topics[i].getElementsByClassName('readings')[0].style.display='none';
 		}
 	}
 });
