@@ -341,8 +341,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution-ziwfu.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/services.html"},
-				{"label":"Article 1", "type":"button", "href":"supplement/services/erp-history.pdf", "filetype":"PDF"},
-				{"label":"Article 2", "type":"button", "href":"supplement/services/erp.pdf", "filetype":"PDF"},
+				{"label":"Article", "type":"button", "href":"supplement/services/erp.pdf", "filetype":"PDF"},
 				{"label":"Homework", "type":"button", "href":"supplement/services/assignment.html"},
 				{"label":"HTML File", "type":"button", "href":"supplement/services/index.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
