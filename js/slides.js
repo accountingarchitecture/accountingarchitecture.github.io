@@ -23,7 +23,7 @@ Reveal.initialize({
 	// Vertical centering of slides
 		center: true,
 	// Enables touch navigation on devices with touch input
-		touch: false,
+		touch: true,
 	// Loop the presentation
 		loop: false,
 	// Change the presentation direction to be RTL
@@ -59,23 +59,10 @@ Reveal.initialize({
 });
 
 // Add ability to click through slides
-window.addEventListener("click", handleClick, false);
-
-function handleClick(e) {
+$(".reveal").click(function(e) {
 	e.preventDefault();
 	if(e.target.tagName != "A" && e.target.parentNode.tagName != "A") {
-		if(e.clientX > window.innerWidth / 2) Reveal.next();
+		if(e.pageX > $(this).outerWidth() / 2) Reveal.next();
 		else Reveal.prev();
 	}
-}
-
-// Add ability to click through slides (jQuery)
-//$(document).ready(function () {
-//$(".reveal").click(function(e) {
-//	e.preventDefault();
-//	if(e.target.tagName != "A" && e.target.parentNode.tagName != "A") {
-//		if(e.pageX > $(this).outerWidth() / 2) Reveal.next();
-//		else Reveal.prev();
-//	}
-//});
-//);
+});
