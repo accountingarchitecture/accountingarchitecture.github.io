@@ -17,8 +17,11 @@
 }
 
 /***** Override Default Settings *****/
+.reveal {
+	font-size: 36px;
+}
 .reveal .slides {
-		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .reveal .slides > section {
 	padding: 0px;
