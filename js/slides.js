@@ -58,9 +58,10 @@ Reveal.initialize({
 		viewDistance: 3,
 });
 
-// Add ability to click through slides
+// Add ability to click through slides while masking left click default
+window.addEventListener("mousedown", function(e) { e.preventDefault(); }, false);
+
 $(".reveal").click(function(e) {
-	e.preventDefault();
 	if(e.target.tagName != "A" && e.target.parentNode.tagName != "A") {
 		if(e.pageX > $(this).outerWidth() / 2) Reveal.next();
 		else Reveal.prev();
