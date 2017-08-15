@@ -102,7 +102,7 @@
 
 		<section>
 			<h2>Symbolic Notation</h2>
-			<p>Unix-like (i.e., POSIX) operating systems display file permissions in two different but equivalent ways. One is more readable and one is more concise. Symbolic notation, the more readable format, uses ten characters to explain whether the user, group, or others can read (r), write (w), or execute (e). Missing permissions are replaced with hyphens.</p>
+			<p>UNIX-like (i.e., POSIX) operating systems display file permissions in two different but equivalent ways. One is more readable and one is more concise. Symbolic notation, the more readable format, uses ten characters to explain whether the user, group, or others can read (r), write (w), or execute (e). Missing permissions are replaced with hyphens.</p>
 			<div class="table">
 				<div class="table-row" style="background-color: lightgray; font-weight: bold">
 					<div class="table-cell">Permissions</div>
@@ -187,24 +187,24 @@
 
 		<section>
 			<h2>One User to Rule Them All</h2>
-			<p>In any system, whether file or database, every data object must have an owner. In Unix-like operating systems, most users only own content that they create. This prevents unauthorized manipulation of system files. These files belong to the <em><u>root</u></em> user, also called the superuser or system user. In addition to owning the system files, the root user has full access to all files owned by any other user. Popular database systems also employ a root user who has all privileges and can grant those privileges to other users. Because permissions can be difficult to navigate, some succumb to the temptation to run all applications as the root user. This is a <em>worst-case scenario</em> for security; it increases the likelihood of unauthorized or unintended changes to the system. Consistent use of the root user is a red flag that proper IT controls are not in place.</p>
+			<p>In any system, whether file or database, every data object must have an owner. In UNIX-like operating systems, most users only own content that they create. This prevents unauthorized manipulation of system files. These files belong to the <em><u>root</u></em> user, also called the superuser or system user. In addition to owning the system files, the root user has full access to all files owned by any other user. Popular database systems also employ a root user who has all privileges and can grant those privileges to other users. Because permissions can be difficult to navigate, some succumb to the temptation to run all applications as the root user. This is a <em>worst-case scenario</em> for security; it increases the likelihood of unauthorized or unintended changes to the system. Consistent use of the root user is a red flag that proper IT controls are not in place.</p>
 		</section>
 
 		<section>
 			<h2>Sudo</h2>
-			<p>A normal user must obtain root privileges in order to alter the system (i.e., edit and delete system files or install applications). In Unix-like systems, this is often done by prepending &lsquo;sudo&rsquo; to any command that requires elevated privileges. (For example, sudo is only necessary for chown and chmod commands if the user has no write access to the file or folder or its contents.)</p>
+			<p>A normal user must obtain root privileges in order to alter the system (i.e., edit and delete system files or install applications). In UNIX-like systems, this is often done by prepending &lsquo;sudo&rsquo; to any command that requires elevated privileges. (For example, sudo is only necessary for chown and chmod commands if the user has no write access to the file or folder or its contents.)</p>
 			<div class="override"><a href="http://xkcd.com/license.html" target="_blank" aria-label="Website opens in new window"><img src="https://imgs.xkcd.com/comics/sandwich.png" alt="XKCD"/></a></div>
 		</section>
 
 		<section>
 			<h2>Groups</h2>
-			<p>Users can belong to multiple groups in Unix-like systems. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware. For example, the &lsquo;storage&rsquo; group allows its members to access storage volumes, such as the internal hard drive or external USB drives.</p>
-			<p>Users can also create additional groups in a Unix-like system to serve business purposes. Creating business groups allows owners to have primary access to files and for group members to have lesser access but more access than others (e.g., the owner has read-write access, group members have read-only access, and others have no access).</p>
+			<p>Users can belong to multiple groups in UNIX-like systems. These groups frequently have no useful interpretation outside of the system because they are designed to assign control of software and hardware. For example, the &lsquo;storage&rsquo; group allows its members to access storage volumes, such as the internal hard drive or external USB drives.</p>
+			<p>Users can also create additional groups in a UNIX-like system to serve business purposes. Creating business groups allows owners to have primary access to files and for group members to have lesser access but more access than others (e.g., the owner has read-write access, group members have read-only access, and others have no access).</p>
 		</section>
 
 		<section>
 			<h2>Role-Based Access Control (RBAC)</h2>
-			<p>Unfortunately, the emphasis of owner permissions over group permissions is incompatible with an important tenet of access controls: <em>permissions should be role- and not user-based</em>. Individual employees should not have access based on who they are, but rather based on their job description. By default, Unix-like systems are not equipped to set this kind of role-based permission. However, supplemental tools exist that allow for assigning users in a Unix-like system to roles. Two popular examples are Security-Enhanced Linux (SELinux), which controls permissions on a single computer, and Lightweight Directory Access Protocol (LDAP), which controls permissions on a network. These tools are more complicated to administrate, but they can map a user to a role and the role to permissions.</p>
+			<p>Unfortunately, the emphasis of owner permissions over group permissions is incompatible with an important tenet of access controls: <em>permissions should be role- and not user-based</em>. Individual employees should not have access based on who they are, but rather based on their job description. By default, UNIX-like systems are not equipped to set this kind of role-based permission. However, supplemental tools exist that allow for assigning users in a UNIX-like system to roles. Two popular examples are Security-Enhanced Linux (SELinux), which controls permissions on a single computer, and Lightweight Directory Access Protocol (LDAP), which controls permissions on a network. These tools are more complicated to administrate, but they can map a user to a role and the role to permissions.</p>
 		</section>
 
 		<section>
