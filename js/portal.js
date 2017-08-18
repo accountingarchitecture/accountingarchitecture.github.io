@@ -282,7 +282,7 @@ var myModules = [
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution-qryjz.html"},
 				{"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
-				{"label":"Article", "type":"button", "href":"https://opensource.com/article/17/4/itch-to-scratch-model-user-problems"},
+				{"label":"Article", "type":"button", "href":"https://opensource.com/article/17/8/enterprise-open-source-advantages"},
 				{"label":"Homework", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
 				{"label":"Homework", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
