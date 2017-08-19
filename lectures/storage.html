@@ -1,586 +1,586 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-	<title>Storage</title>
+  <title>Storage</title>
 
-	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
+  <meta name="author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
 
-	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../css/slides.css">
+  <!-- Personalized CSS -->
+  <link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
-	<div class="reveal">
-	<div class="slides">
-		<section>
-			<h1>Storage</h1>
-		</section>
+  <div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>Storage</h1>
+    </section>
 
-		<section>
-			<h2>Accounting Architecture</h2>
-			<div class="flex-row">
-				<div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
-				<div class="flex-item" style="max-width: 65%">
-					<p>The Storage block of accounting architecture builds on both the Hardware and Software blocks because digital storage comprises a combination of hardware and software components. The storage drives represent the storage hardware, and file and database systems represent the storage software. Together, storage hardware and software serve to operationalize the Storage step in the information life cycle.</p>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Accounting Architecture</h2>
+      <div class="flex-row">
+        <div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
+        <div class="flex-item" style="max-width: 65%">
+          <p>The Storage block of accounting architecture builds on both the Hardware and Software blocks because digital storage comprises a combination of hardware and software components. The storage drives represent the storage hardware, and file and database systems represent the storage software. Together, storage hardware and software serve to operationalize the Storage step in the information life cycle.</p>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Types of Storage Systems</h2>
-			<ul>
-				<li><u><em>File systems</em></u> store data in separate files and folders.</li>
-				<li><u><em>Database systems</em></u> store all data in a single location.</li>
-			</ul>
-			<p>These two storage systems predate digital storage. Paper documents and folders in a filing cabinet is a physical file system, and a card catalog in a library is an example of a physical database system. The same principles apply to digital storage, and although the software portion of digital storage is the most visible from the users' perspective, the storage system begins with hardware. Digital storage hardware is analogous to the filing cabinet in a physical file system.</p>
-		</section>
+    <section>
+      <h2>Types of Storage Systems</h2>
+      <ul>
+        <li><u><em>File systems</em></u> store data in separate files and folders.</li>
+        <li><u><em>Database systems</em></u> store all data in a single location.</li>
+      </ul>
+      <p>These two storage systems predate digital storage. Paper documents and folders in a filing cabinet is a physical file system, and a card catalog in a library is an example of a physical database system. The same principles apply to digital storage, and although the software portion of digital storage is the most visible from the users' perspective, the storage system begins with hardware. Digital storage hardware is analogous to the filing cabinet in a physical file system.</p>
+    </section>
 
-		<section>
-			<h2>Physical Volumes</h2>
-			<div class="flex-row">
-				<div class="flex-item" style="max-width: 80%">
-				<p>Digital storage begins with the storage drive. The storage drives provide the <u><em>physical volumes</em></u>. A physical volume is a <u><em>partition</em></u>, and it covers all or part of the capacity of a storage drive. Once created, the size of a partition is static. This makes file or database systems stored on physical volumes more difficult to manage because storage needs can change over time. Each storage drive with at least one partition first needs a <u><em>partition table</em></u>, which is a small amount of software stored on the drive to identify how many partitions the drive has, what type they are, and how large they are.</p>
-				</div>
-				<div class="flex-item override"><img src="../images/partition.png" alt="Storage Drive with 3 Partitions"/></div>
-			</div>
-		</section>
+    <section>
+      <h2>Physical Volumes</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 80%">
+        <p>Digital storage begins with the storage drive. The storage drives provide the <u><em>physical volumes</em></u>. A physical volume is a <u><em>partition</em></u>, and it covers all or part of the capacity of a storage drive. Once created, the size of a partition is static. This makes file or database systems stored on physical volumes more difficult to manage because storage needs can change over time. Each storage drive with at least one partition first needs a <u><em>partition table</em></u>, which is a small amount of software stored on the drive to identify how many partitions the drive has, what type they are, and how large they are.</p>
+        </div>
+        <div class="flex-item override"><img src="../images/partition.png" alt="Storage Drive with 3 Partitions"/></div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Volume Groups</h2>
-			<p>Logical volumes help to overcome the rigidity of physical volumes. Logical volumes begin by combining one or more physical volumes into a volume group. Physical volumes in a volume group can come from one or more storage drives. This creates considerable flexibility in forming volume groups. They can comprise a part of one storage drive, a whole storage drive, parts of multiple storage drives, all of multiple storage drives, or all of some storage drives and some others. Volume groups are also resizable. Additional physical volumes, either additional partitions of a drive that already belongs to the volume group or an additional drive altogether, can be added to an existing volume group to increase available storage capacity.</p>
-		</section>
+    <section>
+      <h2>Volume Groups</h2>
+      <p>Logical volumes help to overcome the rigidity of physical volumes. Logical volumes begin by combining one or more physical volumes into a volume group. Physical volumes in a volume group can come from one or more storage drives. This creates considerable flexibility in forming volume groups. They can comprise a part of one storage drive, a whole storage drive, parts of multiple storage drives, all of multiple storage drives, or all of some storage drives and some others. Volume groups are also resizable. Additional physical volumes, either additional partitions of a drive that already belongs to the volume group or an additional drive altogether, can be added to an existing volume group to increase available storage capacity.</p>
+    </section>
 
-		<section>
-			<h2>Logical Volumes</h2>
-			<p>Logical volumes function like physical volumes, except that physical volumes are formed from the storage capacity of storage drives, whereas logical volumes are formed from the storage capacity of the volume group. When creating logical volumes, the volume group makes no disctinction between the various physical volumes that make up the group. A single logical volume may be contained within a single physical volume, or it may straddle multiple physical volumes. A primary benefit of logical volumes is resizability. As long as the volume group has free space, logical volumes can expand after creation to include more storage from the volume group.</p>
-		</section>
+    <section>
+      <h2>Logical Volumes</h2>
+      <p>Logical volumes function like physical volumes, except that physical volumes are formed from the storage capacity of storage drives, whereas logical volumes are formed from the storage capacity of the volume group. When creating logical volumes, the volume group makes no disctinction between the various physical volumes that make up the group. A single logical volume may be contained within a single physical volume, or it may straddle multiple physical volumes. A primary benefit of logical volumes is resizability. As long as the volume group has free space, logical volumes can expand after creation to include more storage from the volume group.</p>
+    </section>
 
-		<section>
-			<h2>From Physical to Logical</h2>
-			<!--License: CC-BY 2.0 Attribution: Sarmed Rahman-->
-			<img src="../images/lvm.png" alt="LVM" style="max-height: 550px"/>
-		</section>
+    <section>
+      <h2>From Physical to Logical</h2>
+      <!--License: CC-BY 2.0 Attribution: Sarmed Rahman-->
+      <img src="../images/lvm.png" alt="LVM" style="max-height: 550px"/>
+    </section>
 
-		<section>
-			<h2>LVM &amp; RAID</h2>
-			<p>In Linux, the tool used to create and manage logical volumes and volume groups is LVM. Another common tool is Redundant Array of Independent Disks (RAID). RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a stripe. RAID is somewhat more rigid than LVM, in that the RAID number determines the exact number of physical volumes and logical volumes. Additionally, the physical volumes in a RAID are commonly entire storage drives and not partitions. Users continue to use RAID in order to allow volumes to span multiple drives, but in order to gain additional flexibility, some users place the RAID volume in a volume group and allocate the storage to logical volumes.</p>
-		</section>
+    <section>
+      <h2>LVM &amp; RAID</h2>
+      <p>In Linux, the tool used to create and manage logical volumes and volume groups is LVM. Another common tool is Redundant Array of Independent Disks (RAID). RAID can take on many forms, and each form has a number. RAID 0 involves combining two physical volumes into one logical volume, called a stripe. RAID is somewhat more rigid than LVM, in that the RAID number determines the exact number of physical volumes and logical volumes. Additionally, the physical volumes in a RAID are commonly entire storage drives and not partitions. Users continue to use RAID in order to allow volumes to span multiple drives, but in order to gain additional flexibility, some users place the RAID volume in a volume group and allocate the storage to logical volumes.</p>
+    </section>
 
-		<section>
-			<h2>File Systems</h2>
-			<div class="flex-row">
-				<div class="flex-item" style="max-width: 80%">
-					<p>The physical or logical volume is formatted with a file system. Different operating systems support different file systems (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD). Different file systems have different features for protecting against data loss (ZFS is the most advanced), but they all provide the hierarchical folder structure common in desktop operating systems. The operating system and other applications are stored on the file system. Because the file system is separate from the operating system, users can remove a storage drive from one computer and access the file system from another computer.</p>
-				</div>
-				<div class="flex-item"><img src="../images/das.png" alt="Direct Access Storage" style="max-width: 200px"/></div>
-			</div>
-		</section>
+    <section>
+      <h2>File Systems</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 80%">
+          <p>The physical or logical volume is formatted with a file system. Different operating systems support different file systems (NTFS for Windows, HFS+ for OS X, EXT4 for Linux, ZFS for BSD). Different file systems have different features for protecting against data loss (ZFS is the most advanced), but they all provide the hierarchical folder structure common in desktop operating systems. The operating system and other applications are stored on the file system. Because the file system is separate from the operating system, users can remove a storage drive from one computer and access the file system from another computer.</p>
+        </div>
+        <div class="flex-item"><img src="../images/das.png" alt="Direct Access Storage" style="max-width: 200px"/></div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Storage Drive to File System</h2>
-			<img src="../images/file-system.png" alt="Hierarchical Model of Storage from Drive to File System"/>
-		</section>
+    <section>
+      <h2>Storage Drive to File System</h2>
+      <img src="../images/file-system.png" alt="Hierarchical Model of Storage from Drive to File System"/>
+    </section>
 
-		<section>
-			<h2>File System Navigation Commands</h2>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray; font-weight: bold">
-					<div class="table-cell">Command</div>
-					<div class="table-cell">Function</div>
-					<div class="table-cell">Examples</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell"><strong>cd</strong></div>
-					<div class="table-cell">Navigate to folder</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>cd /</strong> (Navigate to top-level folder, called root)</li>
-							<li><strong>cd /home</strong> (Navigate to home folder in root folder)</li>
-							<li><strong>cd /var/www</strong> (Navigate to www folder in var folder in root folder)</li>
-							<li><strong>cd Documents</strong> (Navigate to Documents folder in current folder)</li>
-							<li><strong>cd Music/Playlists</strong> (Navigate to Playlists folder in Music folder in current folder)</li>
-							<li><strong>cd ..</strong> (Navigate to parent folder)</li>
-							<li><strong>cd ~</strong> (Navigate to user's home folder)</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell"><strong>ls</strong></div>
-					<div class="table-cell">Show contents of a folder</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>ls</strong> (Show contents of current folder)</li>
-							<li><strong>ls /etc</strong> (Show contents of etc folder in root folder)</li>
-							<li><strong>ls Desktop/storage</strong> (Show contents of storage folder Desktop folder in current folder)</li>
-							<li><strong>ls ..</strong> (Show contents of parent folder)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<p style="text-align: center">(NB: In Linux, file and folder names are case sensitive.)
-		</section>
+    <section>
+      <h2>File System Navigation Commands</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>cd</strong></div>
+          <div class="table-cell">Navigate to folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>cd /</strong> (Navigate to top-level folder, called root)</li>
+              <li><strong>cd /home</strong> (Navigate to home folder in root folder)</li>
+              <li><strong>cd /var/www</strong> (Navigate to www folder in var folder in root folder)</li>
+              <li><strong>cd Documents</strong> (Navigate to Documents folder in current folder)</li>
+              <li><strong>cd Music/Playlists</strong> (Navigate to Playlists folder in Music folder in current folder)</li>
+              <li><strong>cd ..</strong> (Navigate to parent folder)</li>
+              <li><strong>cd ~</strong> (Navigate to user's home folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>ls</strong></div>
+          <div class="table-cell">Show contents of a folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>ls</strong> (Show contents of current folder)</li>
+              <li><strong>ls /etc</strong> (Show contents of etc folder in root folder)</li>
+              <li><strong>ls Desktop/storage</strong> (Show contents of storage folder Desktop folder in current folder)</li>
+              <li><strong>ls ..</strong> (Show contents of parent folder)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p style="text-align: center">(NB: In Linux, file and folder names are case sensitive.)
+    </section>
 
-		<section>
-			<h2>Creation Commands</h2>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray; font-weight: bold">
-					<div class="table-cell">Command</div>
-					<div class="table-cell">Function</div>
-					<div class="table-cell">Examples</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell"><strong>touch</strong> (<strong>sudo touch</strong>, if destination folder is not owned by user)</div>
-					<div class="table-cell">Create file</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>touch test.txt</strong> (Create test.txt in current folder owned by user)</li>
-							<li><strong>sudo touch /test.txt</strong> (Create test.txt in root folder not owned by user)</li>
-							<li><strong>touch Downloads/test.txt</strong> (Create test.txt in Downloads folder owned by user in current folder)</li>
-							<li><strong>sudo touch /opt/test.txt</strong> (Create test.txt in opt folder not owned by user in root folder)</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell"><strong>mkdir</strong> (<strong>sudo mkdir</strong>, if destination folder is not owned by user)</div>
-					<div class="table-cell">Create folder</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>mkdir Documents</strong> (Create Documents folder in current folder owned by user)</li>
-							<li><strong>mkdir Videos/playlist</strong> (Create folder playlist in Video folder owned by user in current folder)</li>
-							<li><strong>sudo mkdir /bin/test</strong> (Create test folder in bin folder not owned by user in root folder)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Creation Commands</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>touch</strong> (<strong>sudo touch</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell">Create file</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>touch test.txt</strong> (Create test.txt in current folder owned by user)</li>
+              <li><strong>sudo touch /test.txt</strong> (Create test.txt in root folder not owned by user)</li>
+              <li><strong>touch Downloads/test.txt</strong> (Create test.txt in Downloads folder owned by user in current folder)</li>
+              <li><strong>sudo touch /opt/test.txt</strong> (Create test.txt in opt folder not owned by user in root folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>mkdir</strong> (<strong>sudo mkdir</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell">Create folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>mkdir Documents</strong> (Create Documents folder in current folder owned by user)</li>
+              <li><strong>mkdir Videos/playlist</strong> (Create folder playlist in Video folder owned by user in current folder)</li>
+              <li><strong>sudo mkdir /bin/test</strong> (Create test folder in bin folder not owned by user in root folder)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Move Command</h2>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray; font-weight: bold">
-					<div class="table-cell">Command</div>
-					<div class="table-cell">Function</div>
-					<div class="table-cell">Examples</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell"><strong>mv</strong> (<strong>sudo mv</strong>, if source file or folder or destination folder is not owned by user)</div>
-					<div class="table-cell">Move or rename file or folder</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>mv test.txt test2.txt</strong> (Rename test.txt owned by user in current folder owned by user to test2.txt)</li>
-							<li><strong>mv test.txt Documents/.</strong> (Move test.txt owned by user in current folder to Documents folder owned by user in current folder)</li>
-							<li><strong>sudo mv test.txt /.</strong> (Move test.txt in current folder to root folder not owned by user)</li>
-							<li><strong>mv Documents/* Downloads/.</strong> (Move contents of Documents folder owned by user in current folder to Downloads folder owned by user in current folder)</li>
-							<li><strong>sudo mv /etc /etc_bak</strong> (Rename etc folder not owned by user in root folder not owned by user to etc_bak in root folder not owned by user)</li>
-							<li><strong>mv Music Downloads/mymusic</strong> (Move Music folder owned by user in current folder to Downloads folder owned by user in current folder and rename to mymusic)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Move Command</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>mv</strong> (<strong>sudo mv</strong>, if source file or folder or destination folder is not owned by user)</div>
+          <div class="table-cell">Move or rename file or folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>mv test.txt test2.txt</strong> (Rename test.txt owned by user in current folder owned by user to test2.txt)</li>
+              <li><strong>mv test.txt Documents/.</strong> (Move test.txt owned by user in current folder to Documents folder owned by user in current folder)</li>
+              <li><strong>sudo mv test.txt /.</strong> (Move test.txt in current folder to root folder not owned by user)</li>
+              <li><strong>mv Documents/* Downloads/.</strong> (Move contents of Documents folder owned by user in current folder to Downloads folder owned by user in current folder)</li>
+              <li><strong>sudo mv /etc /etc_bak</strong> (Rename etc folder not owned by user in root folder not owned by user to etc_bak in root folder not owned by user)</li>
+              <li><strong>mv Music Downloads/mymusic</strong> (Move Music folder owned by user in current folder to Downloads folder owned by user in current folder and rename to mymusic)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Copy Command</h2>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray; font-weight: bold">
-					<div class="table-cell">Command</div>
-					<div class="table-cell">Function</div>
-					<div class="table-cell">Examples</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell"><strong>cp</strong> (<strong>sudo cp</strong>, if destination folder is not owned by user)</div>
-					<div class="table-cell">Copy file</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>cp test.txt test2.txt</strong> (Copy test.txt in current folder to current folder owned by user and name test2.txt)</li>
-							<li><strong>cp test.txt Documents/.</strong> (Copy test.txt in current folder to Documents folder owned by user in current folder)</li>
-							<li><strong>sudo cp test.txt /.</strong> (Copy test.txt in current folder to root folder not owned by user)</li>
-							<li><strong>cp Documents/* Downloads/.</strong> (Copy contents of Documents folder in current folder to Downloads folder owned by user in current folder)</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell"><strong>cp -r</strong> (<strong>sudo cp -r</strong>, if destination folder is not owned by user)</div>
-					<div class="table-cell">Copy folder</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>cp -r Documents Downloads/.</strong> (Copy Documents folder in current folder to Downloads folder owned by user in current folder)</li>
-							<li><strong>sudo cp -r /etc /etc_bak</strong> (Copy etc folder in root folder to root folder not owned by user and name etc_bak)</li>
-							<li><strong>cp -r Music /var/mymusic</strong> (Copy Music folder in current folder to var folder not owned by user in root folder and name mymusic)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Copy Command</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>cp</strong> (<strong>sudo cp</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell">Copy file</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>cp test.txt test2.txt</strong> (Copy test.txt in current folder to current folder owned by user and name test2.txt)</li>
+              <li><strong>cp test.txt Documents/.</strong> (Copy test.txt in current folder to Documents folder owned by user in current folder)</li>
+              <li><strong>sudo cp test.txt /.</strong> (Copy test.txt in current folder to root folder not owned by user)</li>
+              <li><strong>cp Documents/* Downloads/.</strong> (Copy contents of Documents folder in current folder to Downloads folder owned by user in current folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>cp -r</strong> (<strong>sudo cp -r</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell">Copy folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>cp -r Documents Downloads/.</strong> (Copy Documents folder in current folder to Downloads folder owned by user in current folder)</li>
+              <li><strong>sudo cp -r /etc /etc_bak</strong> (Copy etc folder in root folder to root folder not owned by user and name etc_bak)</li>
+              <li><strong>cp -r Music /var/mymusic</strong> (Copy Music folder in current folder to var folder not owned by user in root folder and name mymusic)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Delete Command</h2>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray; font-weight: bold">
-					<div class="table-cell">Command</div>
-					<div class="table-cell">Function</div>
-					<div class="table-cell">Examples</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell"><strong>rm</strong> (<strong>sudo rm</strong>, if file is not owned by user)</div>
-					<div class="table-cell">Delete file</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>rm test.txt</strong> (Delete test.txt in current folder owned by user)</li>
-							<li><strong>rm Documents/test.txt</strong> (Delete test.txt owned by user in Documents folder in current folder)</li>
-							<li><strong>sudo rm /etc/test.txt</strong> (Delete test.txt not owned by user in etc folder in root folder)</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell"><strong>rm -rf</strong> (<strong>sudo rm -rf</strong>, if folder or its contents are not owned by user)</div>
-					<div class="table-cell">Delete folder and its contents</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>rm -rf Downloads/.</strong> (Delete Downloads folder and all of its contents owned by user in current folder)</li>
-							<li><strong>rm -rf Music/playlist</strong> (Delete playlist folder and all of its contents owned by user in Music folder in current folder)</li>
-							<li><strong>sudo rm -rf /opt/test</strong> (Delete test folder and all of its contents not owned by user in opt folder in root folder)</li>
-							<li><strong>sudo rm -rf /</strong> (Delete root folder and all of its contents not owned by user; this command should never be run as it will delete everything on the file system)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Delete Command</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>rm</strong> (<strong>sudo rm</strong>, if file is not owned by user)</div>
+          <div class="table-cell">Delete file</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>rm test.txt</strong> (Delete test.txt in current folder owned by user)</li>
+              <li><strong>rm Documents/test.txt</strong> (Delete test.txt owned by user in Documents folder in current folder)</li>
+              <li><strong>sudo rm /etc/test.txt</strong> (Delete test.txt not owned by user in etc folder in root folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>rm -rf</strong> (<strong>sudo rm -rf</strong>, if folder or its contents are not owned by user)</div>
+          <div class="table-cell">Delete folder and its contents</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>rm -rf Downloads/.</strong> (Delete Downloads folder and all of its contents owned by user in current folder)</li>
+              <li><strong>rm -rf Music/playlist</strong> (Delete playlist folder and all of its contents owned by user in Music folder in current folder)</li>
+              <li><strong>sudo rm -rf /opt/test</strong> (Delete test folder and all of its contents not owned by user in opt folder in root folder)</li>
+              <li><strong>sudo rm -rf /</strong> (Delete root folder and all of its contents not owned by user; this command should never be run as it will delete everything on the file system)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Mounting</h2>
-			<p>In order to access the contents of a storage drive, the user must first <u><em>mount</em></u> the file system. Operating systems automatically mount local file systems on startup. Several desktop operating systems also automatically mount the file systems on removable storage devices (e.g., USB drives). However, it is also possible to mount these file systems manually.</p>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray; font-weight: bold">
-					<div class="table-cell">Command</div>
-					<div class="table-cell">Function</div>
-					<div class="table-cell">Examples</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell"><strong>lsblk</strong></div>
-					<div class="table-cell">List all file systems</div>
-					<div class="table-cell"></div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell" style="white-space: nowrap"><strong>sudo mount</strong></div>
-					<div class="table-cell">Mount target file system</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>sudo mount /dev/sda1 /mnt</strong> (Mount file system on first physical volume of first storage drive to mnt folder)</li>
-							<li><strong>sudo mount /dev/sdb3 /media</strong> (Mount file system on third physical volume of second storage drive to media folder)</li>
-						</ul>
-					</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell" style="white-space: nowrap"><strong>sudo umount</strong></div>
-					<div class="table-cell">Unmount target file system</div>
-					<div class="table-cell">
-						<ul>
-							<li><strong>sudo umount /mnt</strong> (Unmount any file system mounted to mnt folder)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Mounting</h2>
+      <p>In order to access the contents of a storage drive, the user must first <u><em>mount</em></u> the file system. Operating systems automatically mount local file systems on startup. Several desktop operating systems also automatically mount the file systems on removable storage devices (e.g., USB drives). However, it is also possible to mount these file systems manually.</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>lsblk</strong></div>
+          <div class="table-cell">List all file systems</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo mount</strong></div>
+          <div class="table-cell">Mount target file system</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo mount /dev/sda1 /mnt</strong> (Mount file system on first physical volume of first storage drive to mnt folder)</li>
+              <li><strong>sudo mount /dev/sdb3 /media</strong> (Mount file system on third physical volume of second storage drive to media folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo umount</strong></div>
+          <div class="table-cell">Unmount target file system</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo umount /mnt</strong> (Unmount any file system mounted to mnt folder)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>From File System to Database System</h2>
-			<p>The role of a database system is to collate data and present it in a centralized manner. In the example of the library card catalog, a physical database system functions as an alternative to a file system. However, in digital storage, this is not the case. A digital database system is an application, which runs on an operating system, which sits on a file system. In the current computing world, database systems are not an alternative to file systems, rather they collate data stored on a file system and present it as if it were stored in a centralized manner. Many software applications are database systems. Music players are a common example. The individual song files are stored in separate files and folders on a file system. The music player collates the songs and provides the user with a single library.</p>
-		</section>
+    <section>
+      <h2>From File System to Database System</h2>
+      <p>The role of a database system is to collate data and present it in a centralized manner. In the example of the library card catalog, a physical database system functions as an alternative to a file system. However, in digital storage, this is not the case. A digital database system is an application, which runs on an operating system, which sits on a file system. In the current computing world, database systems are not an alternative to file systems, rather they collate data stored on a file system and present it as if it were stored in a centralized manner. Many software applications are database systems. Music players are a common example. The individual song files are stored in separate files and folders on a file system. The music player collates the songs and provides the user with a single library.</p>
+    </section>
 
-		<section>
-			<h2>Flat File Databases</h2>
-			<p>The simplest databases are <u><em>flat files</em></u>. A flat file database is a single file that contains only data with each row representing a single record. Spreadsheets and comma- or tab-delimited files (CSV or TXT) are examples of flat files. In flat file databases, all data is stored in a single table. These are popular for storing small datasets because they place no restrictions on the form of the data. As a result, adding additional records tends to be quick and easy. Additionally, many users are familiar with applications that read flat files, such as Microsoft Excel. The largest drawback of flat files is an inability to create relationships between data in different tables. Additionally, flat file databases have none of the functionality necessary to support data integrity in a large-scale enterprise-grade information system.</p>
-		</section>
+    <section>
+      <h2>Flat File Databases</h2>
+      <p>The simplest databases are <u><em>flat files</em></u>. A flat file database is a single file that contains only data with each row representing a single record. Spreadsheets and comma- or tab-delimited files (CSV or TXT) are examples of flat files. In flat file databases, all data is stored in a single table. These are popular for storing small datasets because they place no restrictions on the form of the data. As a result, adding additional records tends to be quick and easy. Additionally, many users are familiar with applications that read flat files, such as Microsoft Excel. The largest drawback of flat files is an inability to create relationships between data in different tables. Additionally, flat file databases have none of the functionality necessary to support data integrity in a large-scale enterprise-grade information system.</p>
+    </section>
 
-		<section>
-			<h2>Relational Databases</h2>
-			<p>Many database systems for storing business data are relational databases. Each relational database contains one of more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software.</p>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray; font-weight: bold">
-					<div class="table-cell">ID</div>
-					<div class="table-cell">First Name</div>
-					<div class="table-cell">Last Name</div>
-					<div class="table-cell">Job Title</div>
-					<div class="table-cell">Email</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">1</div>
-					<div class="table-cell">John</div>
-					<div class="table-cell">Smith</div>
-					<div class="table-cell">Manager</div>
-					<div class="table-cell">john.smith@abc.xyz</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">2</div>
-					<div class="table-cell">Mary</div>
-					<div class="table-cell">Higgins</div>
-					<div class="table-cell">CEO</div>
-					<div class="table-cell">mary.higgins@abc.xyz</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">3</div>
-					<div class="table-cell">Jack</div>
-					<div class="table-cell">Tuttle</div>
-					<div class="table-cell">Janitor</div>
-					<div class="table-cell"></div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">4</div>
-					<div class="table-cell">Janine</div>
-					<div class="table-cell">Cray</div>
-					<div class="table-cell"></div>
-					<div class="table-cell">janine.cray@abc.xyz</div>
-				</div>
-			</div>
-			<p>The individual rows in the relations are called <u><em>records</em></u> or <u><em>tuples</em></u>. The individual columns are called <u><em>attributes</em></u> or <em><u>fields</u></em>. The intersection of a row and a column is a <em><u>cell</u></em>. Cells hold a single value.</p>
-		</section>
+    <section>
+      <h2>Relational Databases</h2>
+      <p>Many database systems for storing business data are relational databases. Each relational database contains one of more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software.</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">ID</div>
+          <div class="table-cell">First Name</div>
+          <div class="table-cell">Last Name</div>
+          <div class="table-cell">Job Title</div>
+          <div class="table-cell">Email</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">1</div>
+          <div class="table-cell">John</div>
+          <div class="table-cell">Smith</div>
+          <div class="table-cell">Manager</div>
+          <div class="table-cell">john.smith@abc.xyz</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">2</div>
+          <div class="table-cell">Mary</div>
+          <div class="table-cell">Higgins</div>
+          <div class="table-cell">CEO</div>
+          <div class="table-cell">mary.higgins@abc.xyz</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">3</div>
+          <div class="table-cell">Jack</div>
+          <div class="table-cell">Tuttle</div>
+          <div class="table-cell">Janitor</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">4</div>
+          <div class="table-cell">Janine</div>
+          <div class="table-cell">Cray</div>
+          <div class="table-cell"></div>
+          <div class="table-cell">janine.cray@abc.xyz</div>
+        </div>
+      </div>
+      <p>The individual rows in the relations are called <u><em>records</em></u> or <u><em>tuples</em></u>. The individual columns are called <u><em>attributes</em></u> or <em><u>fields</u></em>. The intersection of a row and a column is a <em><u>cell</u></em>. Cells hold a single value.</p>
+    </section>
 
-		<section>
-			<h2>Database Components</h2>
-			<p>In a relational database, each table or relation represents an <u><em>entity</em></u>, which is either a person (e.g., Customer or Employee), an asset (e.g., Inventory) or a data object (e.g., Invoice). Rows or records represent instances of an entity (e.g., a specific customer or a specific invoice). Columns or attributes represent characteristics of an entity (e.g., customer name or inventory SKU). Cells represent characteristics of an instance (e.g., the address of a specific employee or the date on a specific invoice).This structure is no different from the structure of a flat file database. However, the strength of a relational database is in the relationships between the database tables. Relationships between tables represent interactions between entities. The relational database model stores data by entity while relating it to data from other entities.</p>
-		</section>
+    <section>
+      <h2>Database Components</h2>
+      <p>In a relational database, each table or relation represents an <u><em>entity</em></u>, which is either a person (e.g., Customer or Employee), an asset (e.g., Inventory) or a data object (e.g., Invoice). Rows or records represent instances of an entity (e.g., a specific customer or a specific invoice). Columns or attributes represent characteristics of an entity (e.g., customer name or inventory SKU). Cells represent characteristics of an instance (e.g., the address of a specific employee or the date on a specific invoice).This structure is no different from the structure of a flat file database. However, the strength of a relational database is in the relationships between the database tables. Relationships between tables represent interactions between entities. The relational database model stores data by entity while relating it to data from other entities.</p>
+    </section>
 
-		<section>
-			<h2>Primary Keys</h2>
-			<p>Each record in a table must have a unique identifier. Without it, it would not be possible to locate and retrieve a specific instance of an entity. This unique identifier is a <u><em>primary key</em></u>. Frequently, a primary key is a single entity attribute. It may be a characteristic inherent to an entity (e.g., telephone number, user login, SSN, etc.), or it may simply be an incremented ID number (e.g., 00001, 00002, 00003, etc.). As a unique identifier, each value of a primary key can only occur once per table. Sometimes no single attribute uniquely identifies an instance of an entity. For example, neither Semester nor Year nor Course Name nor Section uniquely identify an instance of a course, but the combination of Semester and Year and Course Name and Section can. Primary keys that comprise multiple attributes are <u><em>composite keys</em></u>.</p>
-		</section>
+    <section>
+      <h2>Primary Keys</h2>
+      <p>Each record in a table must have a unique identifier. Without it, it would not be possible to locate and retrieve a specific instance of an entity. This unique identifier is a <u><em>primary key</em></u>. Frequently, a primary key is a single entity attribute. It may be a characteristic inherent to an entity (e.g., telephone number, user login, SSN, etc.), or it may simply be an incremented ID number (e.g., 00001, 00002, 00003, etc.). As a unique identifier, each value of a primary key can only occur once per table. Sometimes no single attribute uniquely identifies an instance of an entity. For example, neither Semester nor Year nor Course Name nor Section uniquely identify an instance of a course, but the combination of Semester and Year and Course Name and Section can. Primary keys that comprise multiple attributes are <u><em>composite keys</em></u>.</p>
+    </section>
 
-		<section>
-			<h2>Data Types</h2>
-			<p>All cells for a single attribute must have the same <u><em>data type</em></u>. This type determines the characteristics of the data, as well as any available operations.</p>
-			<div class="table">
-				<div class="table-row" style="background-color: lightgray; font-weight: bold">
-					<div class="table-cell">Type name</div>
-					<div class="table-cell">Usage</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">Boolean</div>
-					<div class="table-cell">True/False</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">Char</div>
-					<div class="table-cell">Single alphanumeric character</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">String</div>
-					<div class="table-cell">Series of chars</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">Integer</div>
-					<div class="table-cell">Whole number</div>
-				</div>
-				<div class="table-row" style="background-color: white">
-					<div class="table-cell">Double</div>
-					<div class="table-cell">Decimal number</div>
-				</div>
-				<div class="table-row" style="background-color: lightgray">
-					<div class="table-cell">Date</div>
-					<div class="table-cell">Year, month, and day</div>
-				</div>
-			</div>
-			<p>Numerical data types support arithmetic and statistical functions, such as addition, subtraction, and average. String data types support pattern matching. Date types and numerical types both support comparisons (e.g., greater than or less than).</p>
-		</section>
+    <section>
+      <h2>Data Types</h2>
+      <p>All cells for a single attribute must have the same <u><em>data type</em></u>. This type determines the characteristics of the data, as well as any available operations.</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Type name</div>
+          <div class="table-cell">Usage</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Boolean</div>
+          <div class="table-cell">True/False</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Char</div>
+          <div class="table-cell">Single alphanumeric character</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">String</div>
+          <div class="table-cell">Series of chars</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Integer</div>
+          <div class="table-cell">Whole number</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Double</div>
+          <div class="table-cell">Decimal number</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Date</div>
+          <div class="table-cell">Year, month, and day</div>
+        </div>
+      </div>
+      <p>Numerical data types support arithmetic and statistical functions, such as addition, subtraction, and average. String data types support pattern matching. Date types and numerical types both support comparisons (e.g., greater than or less than).</p>
+    </section>
 
-		<section>
-			<h2>Structure Models</h2>
-			<ul>
-				<li><u><em>Activity models</em></u> describe a series of processes that comprise a system.</li>
-				<li><u><em>Structure models</em></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
-			</ul>
-			<p>Designing a relational database involves identifying all relevant entities, their attributes, and the relationships between those entities. Activity diagrams of business processes are useful for identifying people, assets, and data objects that become entities. Entities are the foundation for a structural model of a relational database that stores instances and attributes of these entities. A structural model shows how entities relate to one another.</p>
-		</section>
+    <section>
+      <h2>Structure Models</h2>
+      <ul>
+        <li><u><em>Activity models</em></u> describe a series of processes that comprise a system.</li>
+        <li><u><em>Structure models</em></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
+      </ul>
+      <p>Designing a relational database involves identifying all relevant entities, their attributes, and the relationships between those entities. Activity diagrams of business processes are useful for identifying people, assets, and data objects that become entities. Entities are the foundation for a structural model of a relational database that stores instances and attributes of these entities. A structural model shows how entities relate to one another.</p>
+    </section>
 
-		<section>
-			<h2>Entity-Relationship Diagrams</h2>
-			<p>The entity-relationship (E-R) diagram is the standard for modeling relational databases. Multiple E-R diagramming conventions exist that present the same data in different ways. The primary components of an E-R diagram are database entities and the relationships between them. A <u><em>relationship</em></u> is a link between entities that can be described as a verb of one entity acting on another (e.g., Customer Has Account or Employee Creates Receiving Report). E-R diagrams can also portray the attributes of each entity.</p>
-			<div class="flex-row">
-			<div class="flex-item" style="max-width: 50%">E-R Diagram (without Attributes) in Chen Notation</div>
-			<div class="override"><img src="../images/simple-chen-er.png" alt="Simple E-R Diagram with 3 Entities in Chen Notation" style="max-height: 250px"/></div>
-			</div>
-		</section>
+    <section>
+      <h2>Entity-Relationship Diagrams</h2>
+      <p>The entity-relationship (E-R) diagram is the standard for modeling relational databases. Multiple E-R diagramming conventions exist that present the same data in different ways. The primary components of an E-R diagram are database entities and the relationships between them. A <u><em>relationship</em></u> is a link between entities that can be described as a verb of one entity acting on another (e.g., Customer Has Account or Employee Creates Receiving Report). E-R diagrams can also portray the attributes of each entity.</p>
+      <div class="flex-row">
+      <div class="flex-item" style="max-width: 50%">E-R Diagram (without Attributes) in Chen Notation</div>
+      <div class="override"><img src="../images/simple-chen-er.png" alt="Simple E-R Diagram with 3 Entities in Chen Notation" style="max-height: 250px"/></div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Foreign Keys</h2>
-			<p>Because primary keys uniquely identify an instance of an entity, they also serve to link entities together to implement relationships. Creating a relationship between two tables in a relational database involves taking the primary key from the table that represents the acting entity and placing it in the table that represents the entity being acted upon as a <u><em>foreign key</em></u>. A foreign key is a special attribute that can only take values of the primary key it links to, in order to show which instance of one entity relates to which instance of another. For example, Employee might include Employee ID as a primary key, and Sales Order could include Employee ID as a foreign key to identify the employee who initiated the sales order.</p>
-		</section>
+    <section>
+      <h2>Foreign Keys</h2>
+      <p>Because primary keys uniquely identify an instance of an entity, they also serve to link entities together to implement relationships. Creating a relationship between two tables in a relational database involves taking the primary key from the table that represents the acting entity and placing it in the table that represents the entity being acted upon as a <u><em>foreign key</em></u>. A foreign key is a special attribute that can only take values of the primary key it links to, in order to show which instance of one entity relates to which instance of another. For example, Employee might include Employee ID as a primary key, and Sales Order could include Employee ID as a foreign key to identify the employee who initiated the sales order.</p>
+    </section>
 
-		<section>
-			<h2>Cardinalities</h2>
-			<p>The magnitude of the potential relationships between an instance of one entity and the instances of another is <u><em>cardinality</em></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. Minimum cardinalities can be either zero or one, and they demonstrate that an instance of one entity is associated with at least zero instances or at least one instance of another entity . Maximum cardinalities can be either one or many, and they demonstrate that an instance of one entity is associated with at most one instance or at most many instances of another entity. For example, a customer is associated with at least (minimum) one and at most (maximum) many sales, and each sale is associated with at least one and at most one customer.</p>
-		</section>
+    <section>
+      <h2>Cardinalities</h2>
+      <p>The magnitude of the potential relationships between an instance of one entity and the instances of another is <u><em>cardinality</em></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. Minimum cardinalities can be either zero or one, and they demonstrate that an instance of one entity is associated with at least zero instances or at least one instance of another entity . Maximum cardinalities can be either one or many, and they demonstrate that an instance of one entity is associated with at most one instance or at most many instances of another entity. For example, a customer is associated with at least (minimum) one and at most (maximum) many sales, and each sale is associated with at least one and at most one customer.</p>
+    </section>
 
-		<section>
-			<h2>Sample E-R Diagram</h2>
-			<div class="flex-row">
-				<div class="flex-item" style="max-width: 80%">
-					<p>This E-R diagram shows entities with attributes and relationships with cardinalities. Each course in the catalog has a unique number and each faculty member a unique ID as primary key [PK]. These primary keys link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK/FK]. Faculty can teach at least zero and at most many scheduled courses, and each catalog entry can be scheduled at least zero and at most many times. Each scheduled course has at least one and at most one instructor and at least one and at most one catalog reference.</p>
-				</div>
-				<div class="flex-item override">
-					<div>Crow's Foot Notation</div>
-					<img src="../images/sample-er.png" alt="Sample E-R Diagram with 3 Entities in Crow's Foot Notation"/>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Sample E-R Diagram</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 80%">
+          <p>This E-R diagram shows entities with attributes and relationships with cardinalities. Each course in the catalog has a unique number and each faculty member a unique ID as primary key [PK]. These primary keys link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK/FK]. Faculty can teach at least zero and at most many scheduled courses, and each catalog entry can be scheduled at least zero and at most many times. Each scheduled course has at least one and at most one instructor and at least one and at most one catalog reference.</p>
+        </div>
+        <div class="flex-item override">
+          <div>Crow's Foot Notation</div>
+          <img src="../images/sample-er.png" alt="Sample E-R Diagram with 3 Entities in Crow's Foot Notation"/>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Exceptions to Entities and Attributes</h2>
-			<p>Not every important object is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are objects and characteristics that are combinations of existing instances or attributes. Combinations of existing attributes are usually calculations. For example, the Inventory entity would have Unit Cost and Quantity On Hand as attributes. Total Cost would not be an attribute because it is a combination of other attributes (Unit Cost &times; Quantity on Hand). Combinations of existing instances are often subsets or alternative representations of entities. For example, Supervisor would not be an entity because it would simply be a subset of the Employee entity. These objects and characteristics become <em><u>user views</u></em> because they are not stored in the database but can be provided to the user, as needed.</p>
-		</section>
+    <section>
+      <h2>Exceptions to Entities and Attributes</h2>
+      <p>Not every important object is an entity, and not every relevant characteristic is an attribute. The exceptions to this rule are objects and characteristics that are combinations of existing instances or attributes. Combinations of existing attributes are usually calculations. For example, the Inventory entity would have Unit Cost and Quantity On Hand as attributes. Total Cost would not be an attribute because it is a combination of other attributes (Unit Cost &times; Quantity on Hand). Combinations of existing instances are often subsets or alternative representations of entities. For example, Supervisor would not be an entity because it would simply be a subset of the Employee entity. These objects and characteristics become <em><u>user views</u></em> because they are not stored in the database but can be provided to the user, as needed.</p>
+    </section>
 
-		<section>
-			<h2>Accounting Records</h2>
-			<p>Traditional accounting journals and ledgers are examples of user views. Financial accounting textbooks imply that transaction processing involves recording a journal entry and then posting the journal entry to a ledger. However, in a relational database, Journal and Ledger could not both be entities because they represent alternative representations of the same instances. Furthermore, in a database with tables to track different types of assets (e.g., inventory, receivables, fixed assets) and financial transactions (e.g., sales, purchases, cash payments, cash receipts), either a Journal entity or a Ledger entity would be a combination of instances from asset and transaction entities. Journals, ledgers, and financial statements are not storage objects. They are user views sorted by date, account, financial statement, etc.</p>
-		</section>
+    <section>
+      <h2>Accounting Records</h2>
+      <p>Traditional accounting journals and ledgers are examples of user views. Financial accounting textbooks imply that transaction processing involves recording a journal entry and then posting the journal entry to a ledger. However, in a relational database, Journal and Ledger could not both be entities because they represent alternative representations of the same instances. Furthermore, in a database with tables to track different types of assets (e.g., inventory, receivables, fixed assets) and financial transactions (e.g., sales, purchases, cash payments, cash receipts), either a Journal entity or a Ledger entity would be a combination of instances from asset and transaction entities. Journals, ledgers, and financial statements are not storage objects. They are user views sorted by date, account, financial statement, etc.</p>
+    </section>
 
-		<section>
-			<h2>Non-relational Databases</h2>
-			<p>For several decades, RDBMSs have been the data store of choice for business data. However, Web commerce has created the need for database solutions that can add data quickly and can increase in size to accommodate very large datasets. These solutions fall into a class of non-relational databases, also called NoSQL. These databases abandon the principles of relational databases in favor of alternative models. Many NoSQL databases are key-value stores.</p>
-			<p>A <u><em>key-value store</em></u> pairs unique keys with data objects. The data object can be anything from a single number to an entire file. The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys. Two common types of key-value stores are document stores and column stores.</p>
-		</section>
+    <section>
+      <h2>Non-relational Databases</h2>
+      <p>For several decades, RDBMSs have been the data store of choice for business data. However, Web commerce has created the need for database solutions that can add data quickly and can increase in size to accommodate very large datasets. These solutions fall into a class of non-relational databases, also called NoSQL. These databases abandon the principles of relational databases in favor of alternative models. Many NoSQL databases are key-value stores.</p>
+      <p>A <u><em>key-value store</em></u> pairs unique keys with data objects. The data object can be anything from a single number to an entire file. The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys. Two common types of key-value stores are document stores and column stores.</p>
+    </section>
 
-		<section>
-			<h2>Document Store</h2>
-			<p>A <em><u>document store</u></em> is a key-value store in which the data object is a text file with multiple metadata attributes and values, frequently in XML, YAML, or JavaScript Object Notation (JSON) format. Instead of storing the individual values as fields in a record of a relational table, a document store keeps all values together in a single data object.</p>
-			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
-				<div style="font-size: 24px">Relational Table</div>
-				<div class="table" style="margin: 0">
-					<div class="table-row" style="background-color: lightgray; font-weight: bold">
-						<div class="table-cell">ID</div>
-						<div class="table-cell">First Name</div>
-						<div class="table-cell">Last Name</div>
-						<div class="table-cell">Job Title</div>
-						<div class="table-cell">Email</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">1</div>
-						<div class="table-cell">John</div>
-						<div class="table-cell">Smith</div>
-						<div class="table-cell">Manager</div>
-						<div class="table-cell">john.smith@abc.xyz</div>
-					</div>
-				</div>
-			</div>
-			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
-				<div style="font-size: 24px">Document Store</div>
-				<div class="table" style="margin: 0">
-					<div class="table-row" style="background-color: lightgray; font-weight: bold">
-						<div class="table-cell">Key</div>
-						<div class="table-cell">Value</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">1</div>
-						<div class="table-cell">
-							<div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
-							<div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
-							<div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
-							<div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Document Store</h2>
+      <p>A <em><u>document store</u></em> is a key-value store in which the data object is a text file with multiple metadata attributes and values, frequently in XML, YAML, or JavaScript Object Notation (JSON) format. Instead of storing the individual values as fields in a record of a relational table, a document store keeps all values together in a single data object.</p>
+      <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+        <div style="font-size: 24px">Relational Table</div>
+        <div class="table" style="margin: 0">
+          <div class="table-row" style="background-color: lightgray; font-weight: bold">
+            <div class="table-cell">ID</div>
+            <div class="table-cell">First Name</div>
+            <div class="table-cell">Last Name</div>
+            <div class="table-cell">Job Title</div>
+            <div class="table-cell">Email</div>
+          </div>
+          <div class="table-row" style="background-color: white">
+            <div class="table-cell">1</div>
+            <div class="table-cell">John</div>
+            <div class="table-cell">Smith</div>
+            <div class="table-cell">Manager</div>
+            <div class="table-cell">john.smith@abc.xyz</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+        <div style="font-size: 24px">Document Store</div>
+        <div class="table" style="margin: 0">
+          <div class="table-row" style="background-color: lightgray; font-weight: bold">
+            <div class="table-cell">Key</div>
+            <div class="table-cell">Value</div>
+          </div>
+          <div class="table-row" style="background-color: white">
+            <div class="table-cell">1</div>
+            <div class="table-cell">
+              <div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
+              <div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
+              <div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
+              <div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Column Store</h2>
-			<p>A <u><em>column store</em></u> groups individual key and values into columns and then combines columns into families. A column is similar to an attribute, and a family is similar to a record. Unlike records in relational tables, different families can have different numbers of keys (i.e., attributes), and the value from the same key in different family can have a different data type.</p>
-			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
-				<div style="font-size: 24px">Relational Table</div>
-				<div class="table" style="margin: 0">
-					<div class="table-row" style="background-color: lightgray; font-weight: bold">
-						<div class="table-cell">ID</div>
-						<div class="table-cell">First Name</div>
-						<div class="table-cell">Last Name</div>
-						<div class="table-cell">Job Title</div>
-						<div class="table-cell">Email</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">3</div>
-						<div class="table-cell">Jack</div>
-						<div class="table-cell">Tuttle</div>
-						<div class="table-cell">Janitor</div>
-						<div class="table-cell"></div>
-					</div>
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell">4</div>
-						<div class="table-cell">Janine</div>
-						<div class="table-cell">Cray</div>
-						<div class="table-cell"></div>
-						<div class="table-cell">janine.cray@abc.xyz</div>
-					</div>
-				</div>
-			</div>
-			<div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
-				<div style="font-size: 24px">Column Store</div>
-				<div class="table" style="margin: 0">
-					<div class="table-row" style="background-color: white; font-weight: bold">
-						<div class="table-cell">ID</div>
-						<div class="table-cell">First Name</div>
-						<div class="table-cell">Last Name</div>
-						<div class="table-cell">Job Title</div>
-					</div>
-					<div class="table-row" style="background-color: white">
-						<div class="table-cell">3</div>
-						<div class="table-cell">Jack</div>
-						<div class="table-cell">Tuttle</div>
-						<div class="table-cell">Janitor</div>
-					</div>
-					<div class="table-row" style="background-color: lightgray; font-weight: bold">
-						<div class="table-cell">ID</div>
-						<div class="table-cell">First Name</div>
-						<div class="table-cell">Last Name</div>
-						<div class="table-cell">Email</div>
-					</div>
-					<div class="table-row" style="background-color: lightgray">
-						<div class="table-cell">4</div>
-						<div class="table-cell">Janine</div>
-						<div class="table-cell">Cray</div>
-						<div class="table-cell">janine.cray@abc.xyz</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Column Store</h2>
+      <p>A <u><em>column store</em></u> groups individual key and values into columns and then combines columns into families. A column is similar to an attribute, and a family is similar to a record. Unlike records in relational tables, different families can have different numbers of keys (i.e., attributes), and the value from the same key in different family can have a different data type.</p>
+      <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+        <div style="font-size: 24px">Relational Table</div>
+        <div class="table" style="margin: 0">
+          <div class="table-row" style="background-color: lightgray; font-weight: bold">
+            <div class="table-cell">ID</div>
+            <div class="table-cell">First Name</div>
+            <div class="table-cell">Last Name</div>
+            <div class="table-cell">Job Title</div>
+            <div class="table-cell">Email</div>
+          </div>
+          <div class="table-row" style="background-color: white">
+            <div class="table-cell">3</div>
+            <div class="table-cell">Jack</div>
+            <div class="table-cell">Tuttle</div>
+            <div class="table-cell">Janitor</div>
+            <div class="table-cell"></div>
+          </div>
+          <div class="table-row" style="background-color: lightgray">
+            <div class="table-cell">4</div>
+            <div class="table-cell">Janine</div>
+            <div class="table-cell">Cray</div>
+            <div class="table-cell"></div>
+            <div class="table-cell">janine.cray@abc.xyz</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+        <div style="font-size: 24px">Column Store</div>
+        <div class="table" style="margin: 0">
+          <div class="table-row" style="background-color: white; font-weight: bold">
+            <div class="table-cell">ID</div>
+            <div class="table-cell">First Name</div>
+            <div class="table-cell">Last Name</div>
+            <div class="table-cell">Job Title</div>
+          </div>
+          <div class="table-row" style="background-color: white">
+            <div class="table-cell">3</div>
+            <div class="table-cell">Jack</div>
+            <div class="table-cell">Tuttle</div>
+            <div class="table-cell">Janitor</div>
+          </div>
+          <div class="table-row" style="background-color: lightgray; font-weight: bold">
+            <div class="table-cell">ID</div>
+            <div class="table-cell">First Name</div>
+            <div class="table-cell">Last Name</div>
+            <div class="table-cell">Email</div>
+          </div>
+          <div class="table-row" style="background-color: lightgray">
+            <div class="table-cell">4</div>
+            <div class="table-cell">Janine</div>
+            <div class="table-cell">Cray</div>
+            <div class="table-cell">janine.cray@abc.xyz</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Graph Database</h2>
-			<div class="flex-row">
-				<div class="flex-item" style="max-width: 55%">
-					<p>With the advent of social media, graph databases have become a popular NoSQL model. A <u><em>graph database</em></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object with one or more attributes similar to a row in a relational database. Edges connect nodes to describe how nodes relate to one another. Graph databases are similar to relational databases, but the emphasis is on the relationships.</p>
-				</div>
-				<div class="flex-item override"><img src="../images/graph-database.png" alt="Graph Database"/></div>
-			</div>
-		</section>
+    <section>
+      <h2>Graph Database</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 55%">
+          <p>With the advent of social media, graph databases have become a popular NoSQL model. A <u><em>graph database</em></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object with one or more attributes similar to a row in a relational database. Edges connect nodes to describe how nodes relate to one another. Graph databases are similar to relational databases, but the emphasis is on the relationships.</p>
+        </div>
+        <div class="flex-item override"><img src="../images/graph-database.png" alt="Graph Database"/></div>
+      </div>
+    </section>
 
-		<section>
-			<h2>Benefits of NoSQL Databases</h2>
-			<ul>
-				<li><u><em>Volume</em></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
-				<li><u><em>Velocity</em></u>: Relational databases must find each field, perhaps across multiple tables, to add and retrieve records. NoSQL databases take the data input and simply append it to the end of the store.</li>
-				<li><u><em>Variety</em></u>: Unlike relational databases which primarily store simple data types, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
-			</ul>
-		</section>
+    <section>
+      <h2>Benefits of NoSQL Databases</h2>
+      <ul>
+        <li><u><em>Volume</em></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
+        <li><u><em>Velocity</em></u>: Relational databases must find each field, perhaps across multiple tables, to add and retrieve records. NoSQL databases take the data input and simply append it to the end of the store.</li>
+        <li><u><em>Variety</em></u>: Unlike relational databases which primarily store simple data types, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
+      </ul>
+    </section>
 
-		<section>
-			<h2>Just So Fresh And Clean</h2>
-			<p>Accountants have a long tradition of storing economic data in paper journals and ledgers. Databases have replaced paper journals and ledgers, but databases are more than digital ledgers. Flat file databases are popular because of their ease of use, but they have drawbacks over relational and NoSQL databases. Relational databases promote data integrity by grouping data by entity and by requiring attributes to have a uniform data type. Clean data from well-designed relational databases results in better analytics. NoSQL databases promote eCommerce and Big Data analytics by storing and retrieving larger datasets faster. Proper storage solutions are necessary for data retrieval and analysis that results in reports for internal and external stakeholders that effectively support strategic decision making.</p>
-		</section>
-	</div>
-	</div>
+    <section>
+      <h2>Just So Fresh And Clean</h2>
+      <p>Accountants have a long tradition of storing economic data in paper journals and ledgers. Databases have replaced paper journals and ledgers, but databases are more than digital ledgers. Flat file databases are popular because of their ease of use, but they have drawbacks over relational and NoSQL databases. Relational databases promote data integrity by grouping data by entity and by requiring attributes to have a uniform data type. Clean data from well-designed relational databases results in better analytics. NoSQL databases promote eCommerce and Big Data analytics by storing and retrieving larger datasets faster. Proper storage solutions are necessary for data retrieval and analysis that results in reports for internal and external stakeholders that effectively support strategic decision making.</p>
+    </section>
+  </div>
+  </div>
 
-	<script src="../js/jquery.min.js"></script>
-	<script src="../reveal.js/js/reveal.js"></script>
-	<script src="../js/slides.js"></script>
-	<script src="../js/printing.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+  <script src="../js/slides.js"></script>
+  <script src="../js/printing.js"></script>
 </body>
 </html>
