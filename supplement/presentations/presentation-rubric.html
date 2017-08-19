@@ -1,197 +1,197 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ACCT 4020</title>
-	<meta name="Author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../memphis.ico" type="image/x-icon" sizes="32x32">
-	<style>
-		/********** Eric Meyer's Reset CSS v2.0 **********/
-		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-			margin: 0;
-			padding: 0;
-			border: 0;
-			font-size: 100%;
-			font: inherit;
-			vertical-align: baseline;
-		}
-		/* HTML5 display-role reset for older browsers */
-		article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-			display: block;
-		}
-		body {
-			line-height: 1;
-		}
-		ol, ul {
-			list-style: none;
-		}
-		blockquote, q {
-			quotes: none;
-		}
-		blockquote:before, blockquote:after, q:before, q:after {
-			content: '';
-			content: none;
-		}
-		table {
-			border-collapse: collapse;
-			border-spacing: 0;
-		}
+  <title>ACCT 4020</title>
+  <meta name="Author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../memphis.ico" type="image/x-icon" sizes="32x32">
+  <style>
+    /********** Eric Meyer's Reset CSS v2.0 **********/
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after, q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
 
-		/********** Set Default HTML Tags ***********/
-		b, strong {
-			font-weight: bold;
-		}
-		i, em {
-			font-style: italic;
-		}
-		ol {
-			list-style-type: decimal;
-		}
-		ul {
-			list-style-type: disc;
-		}
+    /********** Set Default HTML Tags ***********/
+    b, strong {
+      font-weight: bold;
+    }
+    i, em {
+      font-style: italic;
+    }
+    ol {
+      list-style-type: decimal;
+    }
+    ul {
+      list-style-type: disc;
+    }
 
-		/********** Set Custom HTML Tags **********/
-		body {
-			font: 16px/18px "Times New Roman", Times, serif;
-			color: #333;
-			background-color: ghostwhite
-		}
-		header {
-			text-align: center;
-			font-weight: bold;
-			padding-bottom: 20px;
-		}
-		h1 {
-			font-weight: bold;
-			text-transform: uppercase;
-		}
-		h2 {
-			padding-bottom: 15px;
-		}
-		p {
-			padding-bottom: 10px;
-		}
+    /********** Set Custom HTML Tags **********/
+    body {
+      font: 16px/18px "Times New Roman", Times, serif;
+      color: #333;
+      background-color: ghostwhite
+    }
+    header {
+      text-align: center;
+      font-weight: bold;
+      padding-bottom: 20px;
+    }
+    h1 {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    h2 {
+      padding-bottom: 15px;
+    }
+    p {
+      padding-bottom: 10px;
+    }
 
-		/********** Create Style Classes **********/
-		.table {
-			display: table;
-			table-layout: fixed;
-			padding-bottom: 5px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		.table.bordered {
-			padding-bottom: 15px;
-		}
-		.table.bordered > .row > .cell {
-		}
-		.row {
-			display: table-row;
-		}
-		.row.header, .row.footer {
-			font-weight: bold;
-			text-align: center;
-			text-transform: uppercase;
-		}
-		.cell {
-			display: table-cell;
-			border: 2px ridge #eee;
-			padding: 4px 2px;
-		}
-		.cell.header {
-			font-weight: bold;
-			text-transform: uppercase;
-		}
-		/********** Media Queries **********/
-		@media screen and (min-width: 950px) {
-			article {
-				background-color: white;
-				padding: 50px 50px;
-				box-shadow: 0 0 7px rgba(0,0,0,0.1);
-				margin: 10px auto;
-				max-width: 1150px;
-			}
-		}
-		@media print {
-			body {
-				font-size: 12px;
-				line-height: 16px;
-			}
-			article {
-				margin: 0px auto;
-			}
-			header {
-				padding-bottom: 10px;
-			}
-			h2 {
-				font-size: 14px;
-				line-height: 18px;
-				padding-bottom: 5px;
-			}
-			h3 {
-				font-size: 13px;
-				line-height: 17px;
-				padding-bottom: 2px;
-			}
-		}
-	</style>
+    /********** Create Style Classes **********/
+    .table {
+      display: table;
+      table-layout: fixed;
+      padding-bottom: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .table.bordered {
+      padding-bottom: 15px;
+    }
+    .table.bordered > .row > .cell {
+    }
+    .row {
+      display: table-row;
+    }
+    .row.header, .row.footer {
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .cell {
+      display: table-cell;
+      border: 2px ridge #eee;
+      padding: 4px 2px;
+    }
+    .cell.header {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    /********** Media Queries **********/
+    @media screen and (min-width: 950px) {
+      article {
+        background-color: white;
+        padding: 50px 50px;
+        box-shadow: 0 0 7px rgba(0,0,0,0.1);
+        margin: 10px auto;
+        max-width: 1150px;
+      }
+    }
+    @media print {
+      body {
+        font-size: 12px;
+        line-height: 16px;
+      }
+      article {
+        margin: 0px auto;
+      }
+      header {
+        padding-bottom: 10px;
+      }
+      h2 {
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 5px;
+      }
+      h3 {
+        font-size: 13px;
+        line-height: 17px;
+        padding-bottom: 2px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-	<article>
-		<header>
-			<h1>Presentation Rubric</h1>
-		</header>
-		<div class="table">
-			<div class="row header">
-				<div class="cell">Categories</div>
-				<div class="cell">Exemplary</div>
-				<div class="cell">Satisfactory</div>
-				<div class="cell">Needs Improvement</div>
-			</div>
-			<div class="row">
-				<div class="cell header">Topic</div>
-				<div class="cell">Ideas are well developed, and support specific purpose; purpose is clearly evident; very relevant for audience interest, occasion, and setting.</div>
-				<div class="cell">Ideas are generally developed and support purpose; purpose is evident; generally relevant for audience interest, occasion, and setting.</div>
-				<div class="cell">Ideas lack development and focus; purpose not clear; not related to audience interest, occasion, and setting.</div>
-			</div>
-			<div class="row">
-				<div class="cell header">Composition</div>
-				<div class="cell">Familiar to audience and appropriate for setting; sentences flow together well; excellent word choice; appropriate complexity.</div>
-				<div class="cell">Generally familiar to audience and appropriate for setting; with few exceptions, sentences flow together and word choice is good; generally appropriate complexity.</div>
-				<div class="cell">Sometimes not appropriate for audience or setting; some sentences are choppy, incomplete, or difficult to follow; poor or inappropriate word choice.</div>
-			</div>
-			<div class="row">
-				<div class="cell header">Evidence &amp; Reasoning</div>
-				<div class="cell">Support claims; accurate and complete; very logical argument; appropriate use of evidence.</div>
-				<div class="cell">Generally support claims; logical argument; generally appropriate use of evidence.</div>
-				<div class="cell">Arguments based on opinions and/or emotions; lack of evidence.</div>
-			</div>
-			<div class="row">
-				<div class="cell header">Delivery</div>
-				<div class="cell">Very natural, confident, and spontaneous; delivery supports speech very well.</div>
-				<div class="cell">Generally natural and confident; delivery supports speech.</div>
-				<div class="cell">Not always natural and confident; speaker reads much of the speech.</div>
-			</div>
-			<div class="row">
-				<div class="cell header">Timeliness</div>
-				<div class="cell">Effectively manages material for the time allotted for the presentation.</div>
-				<div class="cell">Speaker rushes the presentation and finishes early.</div>
-				<div class="cell">Speaker prepares insufficient material to fill the time.</div>
-			</div>
-			<div class="row">
-				<div class="cell header">Audience Interaction</div>
-				<div class="cell">Keeps audience engaged for duration of presentation; responds well to all questions.</div>
-				<div class="cell">Audience is engaged for most of presentation; responds to most questions.</div>
-				<div class="cell">Unable to keep the audience engaged; unable to respond to questions.</div>
-			</div>
-			<div class="row">
-				<div class="cell header">Professionalism</div>
-				<div class="cell">Professionally dressed and groomed.</div>
-				<div class="cell">Some elements of professional dress.</div>
-				<div class="cell">Casual or inappropriate dress; chewing candy or gum.</div>
-			</div>
-		</div>
-	</article>
+  <article>
+    <header>
+      <h1>Presentation Rubric</h1>
+    </header>
+    <div class="table">
+      <div class="row header">
+        <div class="cell">Categories</div>
+        <div class="cell">Exemplary</div>
+        <div class="cell">Satisfactory</div>
+        <div class="cell">Needs Improvement</div>
+      </div>
+      <div class="row">
+        <div class="cell header">Topic</div>
+        <div class="cell">Ideas are well developed, and support specific purpose; purpose is clearly evident; very relevant for audience interest, occasion, and setting.</div>
+        <div class="cell">Ideas are generally developed and support purpose; purpose is evident; generally relevant for audience interest, occasion, and setting.</div>
+        <div class="cell">Ideas lack development and focus; purpose not clear; not related to audience interest, occasion, and setting.</div>
+      </div>
+      <div class="row">
+        <div class="cell header">Composition</div>
+        <div class="cell">Familiar to audience and appropriate for setting; sentences flow together well; excellent word choice; appropriate complexity.</div>
+        <div class="cell">Generally familiar to audience and appropriate for setting; with few exceptions, sentences flow together and word choice is good; generally appropriate complexity.</div>
+        <div class="cell">Sometimes not appropriate for audience or setting; some sentences are choppy, incomplete, or difficult to follow; poor or inappropriate word choice.</div>
+      </div>
+      <div class="row">
+        <div class="cell header">Evidence &amp; Reasoning</div>
+        <div class="cell">Support claims; accurate and complete; very logical argument; appropriate use of evidence.</div>
+        <div class="cell">Generally support claims; logical argument; generally appropriate use of evidence.</div>
+        <div class="cell">Arguments based on opinions and/or emotions; lack of evidence.</div>
+      </div>
+      <div class="row">
+        <div class="cell header">Delivery</div>
+        <div class="cell">Very natural, confident, and spontaneous; delivery supports speech very well.</div>
+        <div class="cell">Generally natural and confident; delivery supports speech.</div>
+        <div class="cell">Not always natural and confident; speaker reads much of the speech.</div>
+      </div>
+      <div class="row">
+        <div class="cell header">Timeliness</div>
+        <div class="cell">Effectively manages material for the time allotted for the presentation.</div>
+        <div class="cell">Speaker rushes the presentation and finishes early.</div>
+        <div class="cell">Speaker prepares insufficient material to fill the time.</div>
+      </div>
+      <div class="row">
+        <div class="cell header">Audience Interaction</div>
+        <div class="cell">Keeps audience engaged for duration of presentation; responds well to all questions.</div>
+        <div class="cell">Audience is engaged for most of presentation; responds to most questions.</div>
+        <div class="cell">Unable to keep the audience engaged; unable to respond to questions.</div>
+      </div>
+      <div class="row">
+        <div class="cell header">Professionalism</div>
+        <div class="cell">Professionally dressed and groomed.</div>
+        <div class="cell">Some elements of professional dress.</div>
+        <div class="cell">Casual or inappropriate dress; chewing candy or gum.</div>
+      </div>
+    </div>
+  </article>
 </body>
 </html>
