@@ -63,7 +63,9 @@ window.addEventListener("mousedown", function(e) { e.preventDefault(); }, false)
 
 $(".reveal").click(function(e) {
 	if(e.target.tagName != "A" && e.target.parentNode.tagName != "A") {
-		if(e.pageX > $(this).outerWidth() / 2) Reveal.next();
-		else Reveal.prev();
+		if(e.pageY < $(this).outerHeight() / 10 * 9.5) {
+		  if(e.pageX > $(this).outerWidth() / 2) Reveal.next();
+		  else Reveal.prev();
+		}
 	}
 });
