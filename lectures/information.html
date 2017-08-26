@@ -104,44 +104,37 @@
     </section>
 
     <section>
-      <h2>Flying Monkeys?</h2>
-      <p>The use of units is a simple example of metadata. The Monetary Unit Principle of the FASB Conceptual Framework identifies the US dollar as the unit of measurement for financial statements, but when identifying the cost of  Similarly, when measuring and reporting distances, the number 10 could mean centimeters, feet, or miles. Although it may be possible in some cases to infer units from context&mdash;for example, it is more likely that an inventory item would cost 10 dollars than 10 flying monkeys&mdash; Although Whenever my son, who is in the fifth grade, answers a math question by writing a number without noting the unit of measurement, his teacher assumes that his “2” means “2 flying monkeys”. A silly example, but without the metadata describing that this number is a measurement of cubic feet, “2” as an answer is meaningless. The same applies to an accounting transaction. 42,589 means nothing unless we can associate it with the appropriate metadata indicating that it is a debit on a specific account on a certain date.</p>
+      <h2>Metadata Gives Life Meaning</h2>
+      <p>The use of units is a simple example of metadata. The Monetary Unit Principle of the FASB Conceptual Framework identifies the US dollar as the unit of measurement for financial statements, but the number 1,000 on a financial statement could be in dollars, thousands or dollars, or even millions of dollars. Each of these units gives the number 1,000 a different meaning. Similarly, when measuring and reporting distances, the number 1,000 could be in centimeters, feet, or miles. Each of these lengths gives the number 1,000 a different meaning that is also very different from 1,000 dollars. The units of measurement are a form of metadata that gives a number a particular meaning. Without units, the number 1,000 has no meaning.</p>
     </section>
 
     <section>
-      <h2>Metdata Makes Life Worth Living</h2>
-      <p>Metadata is the most important concept to understand from the information life cycle. Metadata, as it is assigned to an information object, has two paired components. The metadata <u><em>attribute</em></u> gives the context of the characteristic being described, while the <u><em>value</em></u> delineates the object-specific description itself. Keep in mind that a collection of metadata attributes and their values should be sufficient to identify any individual information object.</p>
-    </section>
-
-    <section>
-      <h2>If You Forget Everything Else</h2>
-      <p>You need to remember metadata. It is the way that documents and other information objects are described and understood, and accurate metadata absolutely must be in place in order to find information later as well as analyze it properly. You unknowingly interact with metadata every day. Google search engines read web page and image metadata in order to return results, a library catalog searches metadata records to find relevant books and articles, and metadata is how your file browser knows which files were created when and by whom. If metadata is missing or wrong, our understanding is impaired and finding the item later can be impossible.</p>
+      <h2>What Shall We Play?</h2>
+      <p>The importance of metadata for lending meaning extends beyond single numbers to entire documents or files. If a radio studio had 10,000 songs with incremented file names (i.e., 0000.mp3, 0001.mp3, 0002.mp3, etc.), how would the DJ know which song to choose? Put differently, what is the meaning of 0145.mp3? Meaning is this case could be song title, artist, album, and year, but without metadata a DJ would not know that 0145.mp3 means Bohemian Rhapsody by Queen on A Night at the Opera from 1975. In order to find the track with that meaning, the DJ would need to listen to each file in order to find the correct one. In a set of 10,000 files, listening to each in order to find a specific one would make for a lousy radio station. However, with the proper metadata to give the files meaning, the DJ can always retrieve the correct song.</p>
     </section>
 
     <section>
       <h2>ATTRIBUTE : value</h2>
-      <p>The attribute is the aspect of an object that is being described, or the characteristic in general such as TITLE or CREATOR. The value is the specific description for the object in question such as Jaws or William Shakespeare. The following example is a portion of the metadata for an item in Dr. Coyne’s personal library.</p>
+      <p>Metadata relies on pairs of <u><em>attributes</em></u> and <u><em>values</em></u>. An attribute is a characteristic of a data object. Each attribute takes on a different value for each data object. For example, a book may have the attributes title, author, year, and publisher, and a specific book would have the following attribute-value pairs:</p>
       <ul style="list-style-type: none; display: inline-block">
         <li>(ATTRIBUTE) : (value)</li>
-        <li>OBJECT TYPE : hardcover book</li>
         <li>TITLE : The Open Organization</li>
         <li>AUTHOR : Jim Whitehurst</li>
-        <li>YEAR OF PUBLICATION : 2015</li>
+        <li>YEAR : 2015</li>
         <li>PUBLISHER : Harvard Business Review Press</li>
       </ul>
     </section>
 
     <section>
       <h2>A Question of Formatting</h2>
-      <p><u><em>eXtensible Markup Language</em></u> (XML) is used to annotate documents and text. It is widely used to “mark up” texts and documents on the internet. Metadata is frequently stored in XML format. The &lt;tag&gt; corresponds to the ATTRIBUTE; the text between the open &lt;tag&gt; and the close &lt;/tag&gt; is the value. It follows the following formula: <strong>&lt;attribute&gt;value&lt;/attribute&gt;</strong> Here is the prior example in XML format.</p>
-      <ul style="list-style-type: none; display: inline block">
-        <li>&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?></li>
+      <p><u><em>eXtensible Markup Language</em></u> (XML) is a popular convention for formatting metadata using tags. The &lt;tag&gt; corresponds to the attribute, and the text between the open &lt;tag&gt; and the close &lt;/tag&gt; is the value, such that XML reads &lt;attribute&gt;value&lt;/attribute&gt;. The same book listed previously would have the following XML-formatted metadata:</p>
+      <ul style="list-style-type: none; display: inline-block">
         <li>&lt;metadata&gt;
           <ul style="list-style-type: none">
             <li>&lt;title&gt;The Open Organization&lt;/title&gt;</li>
             <li>&lt;creator&gt;Jim Whitehurst&lt;/creator&gt;</li>
+            <li>&lt;year&gt;2015&lt;/year&gt;</li>
             <li>&lt;publisher&gt;Harvard Business Review Press&lt;/publisher&gt;</li>
-            <li>&lt;publication_date&gt;2015&lt;/publication_date&gt;</li>
           </ul>
           &lt;/metadata&gt;
         </li>
@@ -155,34 +148,35 @@
 
     <section>
       <h2>Creation Phase: Conversion and Ingestion</h2>
-      <p><u><em>Conversion</em></u> is the transformation of data from its current format to a more desirable format for the purposes of storage. This might be done to promote uniformity, or to comply with the access technology that is already in use in the information system. Scanning a document to create a PDF is one example.</p>
-      <p><u><em>Ingestion</em></u> is the process through which the prepared information is entered into the organization’s storage. Data entry can be automated or done by humans. It is additionally categorized as either “continuous” or “batch”. When done continuously it is resource-intensive, but the information is available immediately. When it is delayed and then executed in batches (i.e. groups) it is more efficient, but this should be restricted to data that is not needed immediately.</p>
+      <p><u><em>Conversion</em></u> is the transformation of data from its current format to a more desirable format for the purposes of storage. This might be done to promote uniformity or to conform the data to the technology that is already in use in the information system. Scanning a document to create a PDF is one example.</p>
+      <p>The final step in the Creation phase is  <u><em>ingestion</em></u>, which is when data enters in information system. Data entry can be manual or automated and <u><em>continuous</em></u> or <u><em>batch</em></u>. Continuous ingestion is a greater burden on information system resources, but it makes data available immediately. Batch ingestion uses resources more efficiently by entering data in groups (i.e., batches) when information system resources are not needed by other functions (e.g., after work hours).</p>
+    </section>
+
+    <section>
+      <h2>Who Needs What When?</h2>
+      <p>Although continuous data entry is more resource-intensive than batch entry, it is necessary when a business entity must respond immediately to the data. For example, sales orders require continuous ingestion so that sales people can fill customer orders as soon as possible. On the other hand, the ingestion of employee time cards can be in batches because the generation of paychecks and pay stubs will rarely immediately follow the receipt of a time card. However, neither of these examples is necessarily true in all cases. For example, sales orders may be suited to batch ingestion if the finished good takes a long time to complete (e.g., a house). A needs assessment should identify which data needs continuous ingestion and which data can wait for batch ingestion.</p>
     </section>
 
     <section>
       <h2>Maintenance Phase: Storage</h2>
-      <p><u><em>Storage</em></u> is the action as well as the method of storing something for future use. The principles of storage are straightforward and unchanging, regardless of the format of the object being stored. The primary key to successful storage is choosing the appropriate medium in which to store it. Considerations include such things as the length of time it needs to be stored, the desired level of accessibility, and how much you anticipate needing to add to the storage in the future. You cannot store a horse underneath your bed, nor should you store large files marked for permanent retention on cheaply made thumb drives.</p>
+      <p><u><em>Storage</em></u> is both the act of storing physical and digital data, as well as the method of storing that data, for future use. The principles of storage are straightforward and unchanging. One key to successful storage is choosing the appropriate medium for each data object. Considerations include the length of time the data should be stored, desired ease of access to the data, and expected future increases (i.e., scalability) in storage needs. Here again, a needs assessment will discover what medium is appropriate for which data. It is not feasible to store a horse underneath a bed, nor is it wise to store large files marked for permanent retention on cheaply made thumb drives.</p>
     </section>
 
     <section>
       <h2>You Cannot Store Everything</h2>
-      <blockquote>There’s a temptation to think that you’re just going to store everything. First, that’s a fool’s errand because it will break the bank. Yes, storage is getting cheaper, but it’s not getting cheaper as fast as we’re getting more data. And second, it just doesn’t make good business sense. Your need for all that data varies with time.<br>&ndash; Jeffrey Crigler, CTO, Catalist</blockquote>
+      <p>Another key to successful storage is identifying what data is important enough to store in the first place. The world is full of data, and storing more than is absolutely necessary increases costs and makes necessary less findable and useable.</p>
+      <blockquote>There's a temptation to think that you're just going to store everything. First, that's a fool's errand because it will break the bank. Yes, storage is getting cheaper, but it's not getting cheaper as fast as we're getting more data. And second, it just doesn't make good business sense.<br>&ndash; Jeffrey Crigler, CTO, Catalist</blockquote>
     </section>
 
     <section>
       <h2>Maintenance Phase: Indexing</h2>
-      <p>If you have ever used a table of contents or an index in a book, you can understand <u><em>indexing</em></u>: the creation of a finding aid (i.e. index) to facilitate quick retrieval of objects. Completing a full search of the contents of a database every time a search is completed is resource-intensive and wastes time. Instead, a search can look for a reference to the requested item in an index. That reference in the index then points to the actual item’s location. Every index, digital or otherwise, works with these <u><em>keys</em></u> and <u><em>pointers</em></u>. As an example, the alphabetized term in an index is the key, while the page number it directs you to is a pointer. Indexing is not a requirement in order to perform a search, but the creation of an index can save valuable time as well as computing resources.</p>
+      <p>The goal of the classification and storage steps is to make the right data retrievable when needed. <u><em>Indexing</em></u> increases findability by creating an additional data store of <u><em>keys</em></u> and <u><em>pointers</em></u>. An index is a store of metadata. The metadata attribute identifies the type of index, the metadata value is the key, and the pointer identifies the location of the data object the metadata describes. A library catalog of book titles, a keyword index in the back of a textbook, or a list of song titles in a playlist are all examples of indexes. Looking for a key in an index and then following the pointer to the data object is faster than through an entire data store for the desired data item. Indexing is not a requirement in order to retrieve data, but the creation of an index can save valuable time, as well as computing resources when data is needed.</p>
     </section>
 
     <section>
       <h2>Maintenance Phase: Refreshing and Interpretation</h2>
-      <p><u><em>Refreshing</em></u> is the updating of data stores to ensure that data and metadata are current and up-to-date. It is also used as a preservation process to prevent data loss over time by creating fresh but still identical copies of information.</p>
-      <p><u><em>Interpretation</em></u> is the selection and preservation of hardware and software that are necessary to “read” digital information, presenting it in both human- and computer-readable formats. Software and hardware frequently change. Floppy discs won’t fit in CD drives. Outdated file formats can’t be opened by incompatible software programs. Laser discs are only useful if one has access to a working laser disc player to interpret the information on the discs.</p>
-    </section>
-
-    <section>
-      <h2>Maintenance Phase: Disposition</h2>
-      <p>The decision point where an organization decides when and how an information object will leave the information system is known as <u><em>disposition</em></u>. Items marked for retention are moved to long term storage. Licensed items might be returned to the owner. Useless information is scheduled for deletion, sensitive items are destroyed, and valuable items may be transferred or sold to another organization. These decisions should never be made on a case-by-case basis, but instead should be in accordance with <u><em>disposition schedules</em></u>, an organization's specific guidelines for disposing of information at the end of its useful life.</p>
+      <p><u><em>Refreshing</em></u> updates data stores to ensure that data and metadata are current and up-to-date. Refreshing also preserves data from corruption over time by creating fresh but still identical copies of stored data.</p>
+      <p><u><em>Interpretation</em></u> is the selection and preservation of hardware and software necessary to access data from digital data stores. Software and hardware frequently change, and the selection of storage technologies will not guarantee data accessibility permanently. For example, floppy discs won't fit in CD drives. Laser discs are only useful with access to a working laser disc player. Microsoft Access files require a Microsoft Access.</p>
     </section>
 
     <section>
@@ -198,6 +192,11 @@
     <section>
       <h2>Use Phase: Reporting</h2>
       <p><u><em>Reporting</em></u> is a familiar concept. Many of the reports created by accountants are driven by regulation compliance. It follows that these reports by law must contain accurate information. Various reports may be generated for clients, marketing, or other outside entities as well. However, the most important consumers of reports are internal decision makers. These decision makers use business data from the information system to make strategic decisions for the firm. All of these reports rely on accurate business data.</p>
+    </section>
+
+    <section>
+      <h2>Maintenance Phase: Disposition</h2>
+      <p>The decision point where an organization decides when and how an information object will leave the information system is known as <u><em>disposition</em></u>. Items marked for retention are moved to long term storage. Licensed items might be returned to the owner. Useless information is scheduled for deletion, sensitive items are destroyed, and valuable items may be transferred or sold to another organization. These decisions should never be made on a case-by-case basis, but instead should be in accordance with <u><em>disposition schedules</em></u>, an organization's specific guidelines for disposing of information at the end of its useful life.</p>
     </section>
 
     <section>
