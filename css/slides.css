@@ -131,3 +131,10 @@
 .reveal .flex-row.float > .flex-item:nth-child(2) p {
 	text-align: right;
 }
+
+/********** In-class Lecture Formats **********/
+.reveal .slides .thought-question {
+	text-align: center;
+	font-variant: small-caps;
+}
+
