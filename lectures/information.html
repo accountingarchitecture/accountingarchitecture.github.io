@@ -100,17 +100,12 @@
 
     <section>
       <h2>Creation Phase: Classification</h2>
-      <p>The first of these additional processing steps prior to data entry is <u><em>classification</em></u>, which is the act of assigning descriptive attributes to a data item. These descriptives attributes are called <u><em>metadata</em></u>. Metadata is literally data about data. It is what the data, be it a single number or an entire document, means.</p>
+      <p>The first processing step prior to data entry is <u><em>classification</em></u>, which is the act of assigning descriptive attributes to a data item. These descriptives attributes are called <u><em>metadata</em></u>. Metadata is literally data about data. It is what the data, be it a single number or an entire document, means. Units are a simple example of metadata. the number 1,000 on a financial statement could be dollars, thousands of dollars, or even millions of dollars. Each of these units gives the number 1,000 a different meaning. Similarly, when measuring distances, the number 1,000 could be centimeters, feet, or miles. Each of these lengths gives the number 1,000 a different meaning that is also very different from 1,000 dollars. Units of measurement are a form of metadata that gives a number a particular meaning. Without units, the number 1,000 has no meaning.</p>
     </section>
 
     <section>
       <h2>Metadata Gives Life Meaning</h2>
-      <p>The use of units is a simple example of metadata. The Monetary Unit Principle of the FASB Conceptual Framework identifies the US dollar as the unit of measurement for financial statements, but the number 1,000 on a financial statement could be in dollars, thousands of dollars, or even millions of dollars. Each of these units gives the number 1,000 a different meaning. Similarly, when measuring and reporting distances, the number 1,000 could be in centimeters, feet, or miles. Each of these lengths gives the number 1,000 a different meaning that is also very different from 1,000 dollars. The units of measurement are a form of metadata that gives a number a particular meaning. Without units, the number 1,000 has no meaning.</p>
-    </section>
-
-    <section>
-      <h2>What Shall We Play?</h2>
-      <p>The importance of metadata for lending meaning extends beyond single numbers to entire documents or files. If a radio studio had 10,000 songs with incremented file names (i.e., 0000.mp3, 0001.mp3, 0002.mp3, etc.), how would the DJ know which song to choose? Put differently, what is the meaning of 0145.mp3? Meaning is this case could be song title, artist, album, and year, but without metadata a DJ would not know that 0145.mp3 means Bohemian Rhapsody by Queen on A Night at the Opera from 1975. In order to find the track with that meaning, the DJ would need to listen to each file in order to find the correct one. In a set of 10,000 files, listening to each in order to find a specific one would make for a lousy radio station. However, with the proper metadata to give the files meaning, the DJ can always retrieve the correct song.</p>
+      <p>The importance of metadata for lending meaning extends beyond single numbers to entire documents or files. If a radio studio had 10,000 songs with incremented file names (i.e., 0000.mp3, 0001.mp3, 0002.mp3, etc.), how would the DJ know which song to choose? Put differently, what is the meaning of 0145.mp3? Meaning in this case could be song title, artist, album, and year, but without metadata a DJ would not know that 0145.mp3 means Bohemian Rhapsody by Queen on A Night at the Opera from 1975. In order to find the track with that meaning, the DJ would need to listen to each file in order to find the correct one. In a set of 10,000 files, listening to each in order to find a specific one would make for a lousy radio station. However, with the proper metadata to give the files meaning, the DJ can always retrieve the correct song.</p>
     </section>
 
     <section>
@@ -143,7 +138,7 @@
 
     <section>
       <h2>Financial Statement Metadata</h2>
-      <p><u><em>eXtensible Business Reporting Language</em></u> (XBRL)</p>
+      <p><u><em>eXtensible Business Reporting Language</em></u> (XBRL) is an XML-based metadata framework for financial reporting data. Since 2009, the SEC has mandated the use of XBRL for public company financial statements. A primary purpose of XBRL is to improve the findability of individual numbers in corporate filings by giving those numbers direct meaning (i.e., metadata). The metadata attribute lists the account name (e.g., AccountsPayableCurrent) and the value is the balance of that account. This tagging system allows users to interpret numbers directly, instead of requiring readers to interpret them from their table or footnote disclosure. This also increases computer-readability of financial reports making it easier to analyze data for large collections of financial statements and to compare financial data across companies.</p>
     </section>
 
     <section>
@@ -222,18 +217,19 @@
 
     <section>
       <h2>BDLC vs. ILC: Maintenance Phase</h2>
-      <p>The changes in the storage step are some of the most significant because the underlying technology is very different. Big Data’s volume and variety make it ill-suited to traditional storage technologies, and a variety of creative data stores have been developed to address these issues.</p>
-      <p><u><em>Pre-processing</em></u> replaces indexing as a means of transforming data into more usable information. Cleaning and manipulation, which must be completed before data analysis, occur during this step. This includes removing duplicates, checking for integrity violations, filtering, sorting, and grouping appropriate data together. Not all data, however, is subject to pre-processing.</p>
+      <p>The changes in the storage step are some of the most significant because the underlying technology is very different. Big Data's volume and variety make it ill-suited to traditional storage technologies, and a variety of creative data stores have been developed to address these issues.</p>
+      <p><u><em>Pre-processing</em></u> replaces indexing as a means of transforming Big Data into more usable that is ready for analysis. Cleaning and manipulation, which must be completed before data analysis, occur during this step. This includes removing duplicate or unnecessary data, sorting data, and grouping appropriate data together.</p>
     </section>
 
     <section>
       <h2>BDLC vs. ILC: Use Phase</h2>
-      <p><u><em>Monitoring</em></u> replaces searching in the Use phase of the Big Data life cycle. Although real-time analytics is on the rise, manual searching of Big Data remains rare. Automated monitoring of trends and outliers is more common. One reason for this is that unlike traditional business and accounting data, managers will frequently not know what story Big Data tells or even what to look for. Monitoring can find the message hidden within Big Data. These differences affect Analytics in a similar fashion.</p>
+      <p><u><em>Monitoring</em></u> replaces searching in the Use phase of the Big Data life cycle. One reason for continuous, automated monitoring of trends and outliers in Big Data is that unlike with traditional business data, managers will frequently not know what &ldquo;story&rdquo; Big Data tells or what questions to use data analytics to answer. Monitoring can help to discover the right questions to ask in order to find the message hidden within Big Data.</p>
+      <p>The sheer volume, as well as variety, of Big Data also changes the selection of tools used for data analysis. This gives rise to the term <u><em>Big Data analytics</em></u>. These analytical tools often require much more time to process data. However, recent attempts to simplify and expedite Big Data analytics have caused a covergence in the types of tools available for both traditional and Big Data analytics.</p>
     </section>
 
     <section>
       <h2>Risky Business</h2>
-      <p>Big Data, when used wisely, offers entities the opportunity to improve knowledge discovery, solve problems, offer superior customer service, and increase profits. However, Big Data is not always accurate, reliable, or ethical to use. There are definitely risks to overemphasizing the importance of Big Data. Allocating storage to preserve useless data costs money. Analyzing data for the sake of itself wastes staff time and resources. Basing business decisions on inaccurate information can cause significant damage to a company’s profits and reputations. Each of these has a cost without providing sufficient organizational value in exchange. Big Data, like all information, should only be used when it contributes to an organization’s goals.</p>
+      <p>Big Data, when used wisely, offers entities the opportunity to improve knowledge discovery, solve problems, offer superior customer service, and increase profits. However, Big Data is not always accurate, reliable, or ethical to use. There are definitely risks to overemphasizing the importance of Big Data. Allocating storage to preserve useless data costs money. Analyzing data for the sake of itself wastes staff time and resources. Basing business decisions on inaccurate information can cause significant damage to a company's profits and reputations. Each of these has a cost without providing sufficient organizational value in exchange. Big Data, like all information, should only be used when it contributes to an organization's goals.</p>
     </section>
 
     <section>
