@@ -239,7 +239,7 @@ var myModules = [
 			"nav":[
 				{"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/coins.html"},
 				{"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution-umgqj.html"},
-				{"label":"Lecture", "type":"button", "href":"https://docs.google.com/presentation/d/13fG0U0H49izogaeotdDkZVxX9F4GT99FB3wK2kU9Big/pub?start=false&loop=false&delayms=0&slide=id.p"},
+				{"label":"Lecture", "type":"button", "href":"lectures/information.html"},
 				{"label":"Article", "type":"button", "href":"supplement/information/cpas-and-big-data.pdf", "filetype":"PDF"},
 				{"label":"Homework", "type":"button", "href":"supplement/information/assignment.html"},
 				{"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
