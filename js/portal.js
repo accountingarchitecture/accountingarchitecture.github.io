@@ -44,7 +44,7 @@ function schedule(modules) {
 			var hasDeliverable = false;
 			if(modules[i].topics[j].hasOwnProperty('due')) {
 				for(k = 0; k < modules[i].topics[j].due.length; k++) {
-					dueDate = new Date(Date.parse(modules[i].topics[j].date) + (modules[i].topics[j].due[k].deadline * 86400000));
+					dueDate = new Date(Date.parse(modules[i].topics[j].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999);
 					if(dueDate > currentDate) {
 						deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + '</dd>';
 						hasDeliverable = true;
