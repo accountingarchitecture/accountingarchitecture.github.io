@@ -473,7 +473,7 @@ var myModules = [
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
         {"deliverable":"Homework", "deadline":"2"},
-        {"deliverable":"Final Homework", "deadline":"2", "time":"12.00"}
+        {"deliverable":"Final Homework", "deadline":"2"}
       ]
     }
   ]
@@ -487,7 +487,7 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"SETE", "deadline":"0"},
-        {"deliverable":"Final Exam", "deadline":"0"}
+        {"deliverable":"Final Exam", "deadline":"0", "time":"12.00"}
       ]
     }
   ]
