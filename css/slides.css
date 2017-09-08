@@ -1,140 +1,140 @@
 /***** Tables *****/
 .reveal .table {
-	display: table;
-	table-layout: fixed;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 23px;
-	border: 3px solid black;
+  display: table;
+  table-layout: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 23px;
+  border: 3px solid black;
 }
 .reveal .table-row {
-	display: table-row;
+  display: table-row;
 }
 .reveal .table-cell {
-	display: table-cell;
-	padding: 0 30px;
-	text-align: left;
+  display: table-cell;
+  padding: 0 30px;
+  text-align: left;
 }
 
 /***** Override Default Settings *****/
 .reveal {
-	font-size: 36px;
+  font-size: 36px;
 }
 .reveal .slides {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .reveal .slides > section {
-	padding: 0px;
+  padding: 0px;
 }
 .reveal .slides img {
-	margin: 0;
+  margin: 0;
 }
 .reveal .override img {
-	border: 0;
-	box-shadow: none;
-	background: initial;
+  border: 0;
+  box-shadow: none;
+  background: initial;
 }
 .reveal blockquote {
-	margin: 10px auto;
-	text-align: center;
-	width: 90%;
+  margin: 10px auto;
+  text-align: center;
+  width: 90%;
 }
 .reveal .nobullet {
-	list-style-type: none;
-	text-indent: -35px;
-	padding-left: 35px;
+  list-style-type: none;
+  text-indent: -35px;
+  padding-left: 35px;
 }
 .reveal .slides p {
-	text-align: left;
+  text-align: left;
 }
 .reveal .slides ul, .reveal .slides ol, .reveal .slides dl {
-	display: block;
+  display: block;
 }
 .reveal .slides h1 {
-	font-size: 2.11em;
+  font-size: 2.11em;
 }
 .reveal .slides h2 {
-	font-size: 1.55em;
+  font-size: 1.55em;
 }
 
 /***** Flexbox Containers *****/
 .reveal .flex-column {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-flow: column nowrap;
-	-ms-flex-direction: column;
-	-ms-flex-wrap: none;
-	flex-flow: column nowrap;
-	padding-bottom: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-direction: column;
+  -ms-flex-wrap: none;
+  flex-flow: column nowrap;
+  padding-bottom: 10px;
 }
 .reveal .flex-column.left {
-	-webkit-align-items: flex-start;
-	-ms-flex-align: start;
-	align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .reveal .flex-column.right {
-	-webkit-align-items: flex-end;
-	-ms-flex-align: end;
-	align-items: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 .reveal .flex-row {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-flow: row nowrap;
-	-ms-flex-direction: row;
-	-ms-flex-wrap: none;
-	flex-flow: row nowrap;
-	-webkit-justify-content: space-around;
-	-ms-flex-pack: justify;
-	justify-content: space-around;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-direction: row;
+  -ms-flex-wrap: none;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .reveal .flex-row p {
-	margin-top: 0;
+  margin-top: 0;
 }
 .reveal .flex-row.float {
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 .reveal .flex-row.float > .flex-column:nth-child(1) {
-	-webkit-align-items: flex-start;
-	-ms-flex-align: start;
-	align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .reveal .flex-row.float > .flex-column:nth-child(2) {
-	-webkit-align-items: flex-end;
-	-ms-flex-align: end;
-	align-items: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 .reveal .flex-row.top {
-	-webkit-align-items: flex-start;
-	-ms-flex-align: start;
-	align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .reveal .flex-row.bottom {
-	-webkit-align-items: flex-end;
-	-ms-flex-align: end;
-	align-items: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 .reveal .flex-item {
-	-webkit-flex: 0 1 auto;
-	-ms-flex: 0 1 auto;
-	flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
 }
 .reveal .flex-row.float > .flex-item:nth-child(1) p {
-	text-align: left;
+  text-align: left;
 }
 .reveal .flex-row.float > .flex-item:nth-child(2) p {
-	text-align: right;
+  text-align: right;
 }
 
 /********** In-class Lecture Formats **********/
 .reveal .slides .thought-question {
-	text-align: center;
-	font-variant: small-caps;
+  text-align: center;
+  font-variant: small-caps;
 }
 
