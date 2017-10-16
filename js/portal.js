@@ -370,7 +370,7 @@ var myModules = [
         {"label":"Article", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
         {"label":"Homework", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
         {"label":"Homework", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
-        {"label":"Database", "type":"button", "href":"supplement/data-analytics/company.sql", "filetype":"SQL plain-text file"},
+        {"label":"Database", "type":"button", "href":"https://www.dropbox.com/s/r5ziqedm5wd3erm/company.sql?dl=1", "filetype":"SQL plain-text file"},
         {"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
