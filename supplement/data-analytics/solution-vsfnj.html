@@ -31,20 +31,27 @@
         <li>Import the Database file into MySQL</li>
         <li>Launch the MySQL client to run SQL queries</li>
       </ol>
-      <p>take a screenshot of the output of each query, and paste them into a document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries. The questions are listed on the next screen:</p>
+      <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries. The questions are listed on the next screen:</p>
+    </section>
+
+    <section>
+      <ol>
+        <li>Which payment ID has no purchase order number?</li>
+        <p style="font-style: italic; margin: 0 10px">SELECT ID FROM PAYMENT WHERE PO IS NULL;</li>
+        <li>What is total sales revenue for the current period?</li>
+        <p style="font-style: italic; margin: 0 10px">SELECT FINISHEDGOOD, SUM(PRICE * QUANTITY) FROM SALE;</li>
+        <li>How many employees work at each location? (Your query should report one number for each location.)</li>
+        <p style="font-style: italic; margin: 0 10px">SELECT LOCATION COUNT(ID) FROM EMPLOYEE GROUP BY LOCATION;</li>
+        <li>Which, if any, receipt has a different number of raw materials delivered than were ordered in the purchase order?</li>
+        <p style="font-style: italic; margin: 0 10px">SELECT A.ID, A.PO, A.QUANTITY - B.QUANTITY FROM RECEIPT AS A JOIN PURCHASE AS B ON A.PO = B.ID WHERE A.QUANTITY != B.QUANTITY;</li>
+        <li>Which customer(s) placed the largest single orders?</li>
+        <p style="font-style: italic; margin: 0 10px">SELECT CUSTOMER, QUANTITY * PRICE FROM SALE WHERE (QUANTITY * PRICE) = (SELECT MAX(QUANTITY * PRICE) FROM SALE);</li>
+      </ol>
     </section>
 
     <section>
       <h3>Solution</h3>
-      <ol>
-        <li>What is the first and last name of the employee with the social security number 333445555?</li>
-        <p style="margin-top: 0; margin-left: 50px; font-style: italic">SELECT FNAME, LNAME FROM EMPLOYEE WHERE SSN = '333445555';</p>
-        <li>What is the total number of hours logged in the WORKS_ON table?</li>
-        <p style="margin-top: 0; margin-left: 50px; margin-bottom: 10px; font-style: italic">SELECT SUM(HOURS) FROM WORKS_ON;</p>
-        <li>What is the total number of hours worked on each project by project name?</li>
-        <p style="margin-top: 0; margin-left: 50px; margin-bottom: 10px; font-style: italic">SELECT A.PNAME, SUM(B.HOURS) FROM PROJECT AS A JOIN WORKS_ON AS B ON A.PNUMBER = B.PNO GROUP BY A.PNAME;</p>
-        <li>Which employees work in the Research department?</li>
-        <p style="margin-top: 0; margin-left: 50px; margin-bottom: 10px; font-style: italic">SELECT * FROM EMPLOYEE AS A JOIN DEPARTMENT AS B ON A.DNO = B.DNUMBER WHERE B.DNAME = 'RESEARCH';</p>
+      <ol style="font-style: italic">
       </ol>
     </section>
   </div>
