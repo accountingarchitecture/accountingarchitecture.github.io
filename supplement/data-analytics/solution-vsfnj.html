@@ -25,13 +25,21 @@
   <div class="slides">
     <section>
       <h3>Practice</h3>
-      <p>This assignment tests your ability to query a database to analyze data. Your assignment is <strong>not</strong> to find the <em>answers</em> to questions, but rather to identify the <em>queries</em> necessary to find the answers. Following these steps, you should identify the queries to answer the questions:</p>
+      <p>This assignment tests your ability to query a database to analyze data. Your assignment is to identify the <em>queries</em> necessary to find the answers.</p>
+      <p>Begin by using apt to install mysql-server on your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Then follow the steps on the next screen to create and import your database. Afterwards, use SQL to create queries to answer the questions on the third screen.</p>
+      <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
+    </section>
+
+    <section>
+      <h3>Instructions</h3>
       <ol>
-        <li>Use apt to install mysql-server on your Linux container</li>
-        <li>Import the Database file into MySQL</li>
-        <li>Launch the MySQL client to run SQL queries</li>
+        <li>Log in to MySQL: <strong>mysql -uroot</strong></li>
+        <li>Create a database named company: <strong>create database company;</strong></li>
+        <li>Exit MySQL: <strong>quit;</strong></li>
+        <li>Download the database file to your container using wget and the URL of the database file on the course portal. However, between the wget command the URL add: <strong>-O company.sql</strong> (That is a capital O, not a zero, after the hyphen.)</li>
+        <li>Import the Database file into MySQL:<br><strong>mysql -uroot company &lt; company.sql</strong></li>
+        <li>Log in to the newly created database: <strong>mysql -uroot company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
       </ol>
-      <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries. The questions are listed on the next screen:</p>
     </section>
 
     <section>
@@ -46,12 +54,6 @@
         <p style="font-style: italic; margin: 0 10px">SELECT A.ID, A.PO, A.QUANTITY - B.QUANTITY FROM RECEIPT AS A JOIN PURCHASE AS B ON A.PO = B.ID WHERE A.QUANTITY != B.QUANTITY;</li>
         <li>Which customer(s) placed the largest single orders?</li>
         <p style="font-style: italic; margin: 0 10px">SELECT CUSTOMER, QUANTITY * PRICE FROM SALE WHERE (QUANTITY * PRICE) = (SELECT MAX(QUANTITY * PRICE) FROM SALE);</li>
-      </ol>
-    </section>
-
-    <section>
-      <h3>Solution</h3>
-      <ol style="font-style: italic">
       </ol>
     </section>
   </div>

@@ -158,8 +158,7 @@
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell" style="white-space: nowrap; font-weight: bold">
-            <div>SELECT *</div>
-            <div>FROM PURCHASE;</div>
+            <div>SELECT * FROM PURCHASE;</div>
           </div>
           <div class="table-cell">Select all attributes and all records from the purchase table</div>
         </div>
@@ -173,7 +172,7 @@
         <div class="table-row" style="background-color: white">
           <div class="table-cell" style="white-space: nowrap; font-weight: bold">
             <div>SELECT CUSTOMERID, CUSTOMERNAME, AMOUNT</div>
-            <div>FROM ACCOUNTSPAYABLE;</div>
+            <div>FROM ACCOUNTSPAYABLE</div>
             <div>ORDER BY AMOUNT;</div>
           </div>
           <div class="table-cell">Select customerid, customername, and amount attributes and all records from the accountspayable table and sort by amount in ascending order</div>
@@ -195,6 +194,17 @@
           <div class="table-cell">Select ID and and lastname attributes from the employee table and name and managerid attributes from the project table and records from both tables where ID and managerid match</div>
         </div>
       </div>
+    </section>
+
+    <section>
+      <h3>SQL Rules</h3>
+      <p>SQL syntax is not complicated, but it has certain strict rules, and SQL is not tolerant of syntax errors:</p>
+      <ul>
+        <li>SQL queries can span multiple lines, but they always end in a semicolon.</li>
+        <li>Attribute lists in a SELECT statement are comma-delimited with no comma after the final attribute in the list before the FROM statement.</li>
+        <li>WHERE statements use a boolean test which can be &gt; (greater than), &lt; (less than), = (equal), != (not equal), or IS NULL (missing value). If the data type of the variable is a string type, then the test value must have quotes around it (e.g., NAME = 'John').</li>
+        <li>When using ORDER BY, it must be at the end of the query.</li>
+      </ul>
     </section>
 
     <section>
@@ -235,7 +245,7 @@
           <div class="table-cell" style="white-space: nowrap; font-weight: bold">
             <div>SELECT YEAR, MIN(AMOUNT), MAX(AMOUNT)</div>
             <div>FROM BUDGET</div>
-            <div>GROUP BY YEAR</div>
+            <div>GROUP BY YEAR;</div>
           </div>
           <div class="table-cell">Select year attributes and calculate the minimum and maximum amounts for each year from the budget table</div>
         </div>
@@ -247,6 +257,63 @@
             <div>HAVING COUNT(TRANSACTIONID) > 10;</div>
           </div>
           <div class="table-cell">Select employeeid attribute, count the number of transactions, and add their amounts by employeeid for any employeeids with more than 10 transactions from the procurement table</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Advanced Queries</h2>
+      <p>In certain situations, users need more complex output then basic queries will allow. SELECT DISTINCT modifies the SELECT statement to return only those records with unique values for the SELECTed attributes. If the SELECT DISTINCT statement includes a single attribute, then the query returns unique values for that attribute. If the query lists two or more attributes, the query returns unique combinations of all attributes. Aliases replace the name of attributes and variables with placeholders that can make easier to reference. Nested queries allow users to create temporary tables that provide specific records and attributes to the main query. This is especially useful when trying to filter results by the value of a summary function, which is not feasible with a single WHERE statement.</p>
+    </section>
+
+    <section>
+      <h2>Distinct, Aliases, and Nesting</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Examples</div>
+          <div class="table-cell">Explanation</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT DISTINCT EMPLOYEEID</div>
+            <div>FROM INVOICE;</div>
+          </div>
+          <div class="table-cell">Select employee IDs from the invoice table without any duplicates.</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT SUM(HOURS) AS TOTALHOURS</div>
+            <div>FROM PROJECT;</div>
+          </div>
+          <div class="table-cell">Add the values in hours attribute in the project table and label the output attribute TotalHours</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="font-weight: bold">
+            <div>SELECT A.ID, A.LASTNAME, B.NAME, B.MANAGERID</div>
+            <div>FROM EMPLOYEE AS A</div>
+            <div>JOIN PROJECT AS B</div>
+            <div>ON A.ID = B.MANAGERID;</div>
+          </div>
+          <div class="table-cell">Select ID and and lastname attributes from the employee table using A as an alias for the table name and name and managerid attributes from the project table using B as an alias for the table name and records from both tables where ID and managerid match</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT EMPLOYEEID, HOURS</div>
+            <div>FROM TIMECARD</div>
+            <div>WHERE HOURS =</div> 
+            <div>(SELECT MAX(HOURS) FROM TIMECARD);</div>
+          </div>
+          <div class="table-cell">Select employee ID and hours worked from the timecard table where hours worked equals the maximum hours worked entry in the table.</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="font-weight: bold">
+            <div>SELECT * FROM</div>
+            <div>(SELECT DISTINCT CREATOR, APPROVER</div>
+            <div>FROM PURCHASE) AS A</div>
+            <div>GROUP BY CREATOR</div>
+            <div>HAVING COUNT(APPROVER) = 1;</div>
+          </div>
+          <div class="table-cell">Select all pairs of creators and approvers where the creator always has the same approver from a list of all unique pairs of creators and approvers.</div>
         </div>
       </div>
     </section>
