@@ -1,73 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-	<title>Security</title>
+  <title>Security</title>
 
-	<meta name="author" content="Joshua G. Coyne, PhD">
-	<link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
+  <meta name="author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../images/memphis.ico" type="image/x-icon" sizes="32x32">
 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../reveal.js/css/theme/beige.css" id="theme">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/beige.css" id="theme">
 
-	<!-- Personalized CSS -->
-	<link rel="stylesheet" href="../css/slides.css">
+  <!-- Personalized CSS -->
+  <link rel="stylesheet" href="../css/slides.css">
 </head>
 
 <body>
-	<div class="reveal">
-	<div class="slides">
-		<section>
-			<h2>Security</h2>
-		</section>
+  <div class="reveal">
+  <div class="slides">
+    <section>
+      <h2>Security</h2>
+    </section>
 
-		<section>
-			<h3>Physical Access</h3>
-			<p style="text-align: center">Proof that physical access is <em>total</em> access.</p>
-			<p style="text-align: center"><i>Burn Notice</i></p>
-			<iframe src="https://drive.google.com/file/d/0B1wE9_dgrqtYS3RZdU1razh5Uk0/preview" width="420" height="315" allowfullscreen></iframe>
-		</section>
+    <section>
+      <h3>Trust Services Criteria</h3>
+      <div class="flex-item override"><img src="../images/trust-services.png" alt="Trust Services Framework" style="max-width: 300px"/></div>
+    </section>
 
-		<section>
-			<h2>Show and Tell</h2>
-			<p style="text-align: center; font-variant: small-caps">Permissions</p>
-		</section>
+    <section>
+      <h3>Physical Access</h3>
+      <p style="text-align: center">Proof that physical access is <em>total</em> access.</p>
+      <p style="text-align: center"><i>Burn Notice</i></p>
+      <iframe src="https://drive.google.com/file/d/0B1wE9_dgrqtYS3RZdU1razh5Uk0/preview" width="420" height="315" allowfullscreen></iframe>
+    </section>
 
-		<section>
-			<h3>Social Engineering</h3>
-			<p style="text-align: center"><i>Burn Notice</i></p>
-			<div class="flex-row top">
-				<div class="flex-item" style="max-width: 50%">
-					<p style="text-align: center">The Hook</p>
-					<iframe src="https://drive.google.com/file/d/0B1wE9_dgrqtYUFZKcU9rLVZ2d2M/preview" width="420" height="315" allowfullscreen></iframe>
-				</div>
-				<div class="flex-item" style="max-width: 50%">
-					<p style="text-align: center">The Trap</p>
-					<iframe src="https://drive.google.com/file/d/0B1wE9_dgrqtYbHN1QkZKakhTWVk/preview" width="420" height="315" allowfullscreen></iframe>
-				</div>
-			</div>
-		</section>
+    <section>
+      <h2>Show and Tell</h2>
+      <p class="thought-question">Permissions</p>
+    </section>
 
-		<section>
-			<h2>Disagree to Disagree</h2>
-			<p style="text-align: center; font-variant: small-caps">Multifactor Authentication</p>
-			<p style="text-align: center">Instructions: <a href="http://www.howtogeek.com/208205/how-to-use-two-factor-authentication-on-your-linux-desktop-with-google-authenticator/" style="text-align: center" target="_blank">Graphical Login</a>; <a href="https://www.howtoforge.com/tutorial/how-to-configure-sudo-for-two-factor-authentication-using-pam-radius-on-ubuntu-and-centos/" style="text-align: center" target="_blank">Sudo</a></p>
+    <section>
+      <h3>Social Engineering</h3>
+      <p style="text-align: center"><i>Burn Notice</i></p>
+      <div class="flex-row top">
+        <div class="flex-item" style="max-width: 50%">
+          <p style="text-align: center">The Hook</p>
+          <iframe src="https://drive.google.com/file/d/0B1wE9_dgrqtYUFZKcU9rLVZ2d2M/preview" width="420" height="315" allowfullscreen></iframe>
+        </div>
+        <div class="flex-item" style="max-width: 50%">
+          <p style="text-align: center">The Trap</p>
+          <iframe src="https://drive.google.com/file/d/0B1wE9_dgrqtYbHN1QkZKakhTWVk/preview" width="420" height="315" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p class="thought-question">Is multifactor authentication useful in discouraging social engineering?</p>
+    </section>
 
-		</section>
+    <section>
+      <h2>Disagree to Disagree</h2>
+      <p class="thought-question">Password or Passphrase</p>
+    </section>
 
-		<section>
-			<h2>Show and Tell</h2>
-			<p style="text-align: center; font-variant: small-caps">Firewalls</p>
-			<p style="text-align: center">Instructions: <a href="https://www.howtoforge.com/tutorial/ufw-uncomplicated-firewall-on-ubuntu-15-04/" style="text-align: center" target="_blank">UFW</a></p>
-		</section>
-	</div>
-	</div>
+    <section>
+      <h2>Show and Tell</h2>
+      <p class="thought-question">Firewalls</p>
+      <p style="text-align: center">Instructions: <a href="https://www.howtoforge.com/tutorial/ufw-uncomplicated-firewall-on-ubuntu-15-04/" style="text-align: center" target="_blank">UFW</a></p>
+    </section>
+  </div>
+  </div>
 
   <script src="../js/jquery.min.js"></script>
   <script src="../reveal.js/js/reveal.js"></script>
