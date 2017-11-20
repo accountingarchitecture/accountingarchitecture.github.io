@@ -371,6 +371,7 @@ var myModules = [
         {"label":"Homework", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
         {"label":"Homework", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
         {"label":"Database", "type":"button", "href":"https://www.dropbox.com/s/r5ziqedm5wd3erm/company.sql?dl=1", "filetype":"SQL plain-text file"},
+        {"label":"Dictionary", "type":"button", "href":"supplement/data-analytics/data-dictionary.pdf", "filetype":"PDF"},
         {"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
@@ -430,7 +431,6 @@ var myModules = [
         {"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
         {"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2017/3/sas-cio-be-proactive-leading-your-organization-sensor-enabled-world"},
         {"label":"Homework", "type":"button", "href":"supplement/availability/assignment.html"},
-        {"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=G6iAfW2Dq5M"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
