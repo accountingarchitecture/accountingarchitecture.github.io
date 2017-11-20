@@ -130,6 +130,51 @@
     </section>
 
     <section>
+      <h2>Git Commands</h2>
+      <p>Git is currently the most widely used VCS, used for, among other things, the source code for the Linux kernel. The following are some basic git line commands:</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap">git clone</div>
+          <div class="table-cell">Create a local copy of a cloud git repository (i.e., data store)</div>
+          <div class="table-cell">git clone https://github.com/accounting-architecture/accounting-architecture.github.io.git</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap">git pull</div>
+          <div class="table-cell">Update local repository for any changes made to cloud repository</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap">git status</div>
+          <div class="table-cell">List local repository changes</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap">git add</div>
+          <div class="table-cell">Stage local changes to be added to the local repository</div>
+          <div class="table-cell">
+            <div>git add test.txt (Stage file test.txt)</div>
+            <div>git add lectures/* (Stage all files in lectures folder)</div>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap">git commit</div>
+          <div class="table-cell">Add staged changes to local repository</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap">git push</div>
+          <div class="table-cell">Upload local changes to cloud repository</div>
+          <div class="table-cell"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <h2>Redundancy as a Service</h2>
       <p>One of the benefits of public clouds is that the cloud provider is responsible for redundancy. As a customer of the public cloud provider, the entity has the same claim on availability of the cloud infrastructure as the entity's customers have on the content hosted in that cloud. In order to ensure that the public cloud remains available, the vendor must establish policies for power, network, and geographic redundancy, as well as maintaining a distributed computing environment with redundant server hardware. However, the entity retains the responsibility for data backups and virtual machine or container redundancy to protect against downtime and data loss for reasons unrelated to infrastructure, such as human or software error, data theft, and some types of cyber incidents.</p>
     </section>
