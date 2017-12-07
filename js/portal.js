@@ -81,7 +81,20 @@ function isCurrentOrArchived(topic) {
   currentDate = new Date();
   startDate = new Date(topicDate.valueOf() - (6 + topicDate.getDay()) * 86400000);
   endDate = new Date(topicDate.valueOf() + ((6 - topicDate.getDay()) * 86400000) + 86399999);
-  if(startDate < currentDate && currentDate <= endDate) return 'current';
+  if(startDate < currentDate && currentDate <= endDate) {
+    if(topic.hasOwnProperty('due')) {
+      for(q = 0; q < topic.due.length; q++) {
+        if(topic.due[q].hasOwnProperty('time')) {
+          dueDate = new Date(Date.parse(topic.date) + (topic.due[q].deadline * 86400000) + (topic.due[q].time.split(/[.]/)[0] * 3600000 + topic.due[q].time.split(/[.]/)[1] * 60000));
+        } else {
+          dueDate = new Date(Date.parse(topic.date) + (topic.due[q].deadline * 86400000) + 86399999);
+        }
+        if(dueDate > currentDate) return 'current';
+        else return 'archived';
+      }
+    }
+    else return 'current';
+  }
   else if(currentDate > endDate) return 'archived';
 }
 
