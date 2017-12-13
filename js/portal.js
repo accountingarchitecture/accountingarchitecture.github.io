@@ -49,7 +49,11 @@ function schedule(modules) {
           } else {
             dueDate = new Date(Date.parse(modules[i].topics[j].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999);
           }
-          if(dueDate > currentDate) {
+          if(dueDate > currentDate && isHomeOrArchive() == 'Home') {
+            deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + ' @ ' + dueDate.toString().split(' ')[4].split(':')[0] + '.' + dueDate.toString().split(' ')[4].split(':')[1] +'</dd>';
+            hasDeliverable = true;
+            hasTopicWithDeliverable = true;
+          } else if(dueDate < currentDate && isHomeOrArchive() == 'Archive') {
             deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + ' @ ' + dueDate.toString().split(' ')[4].split(':')[0] + '.' + dueDate.toString().split(' ')[4].split(':')[1] +'</dd>';
             hasDeliverable = true;
             hasTopicWithDeliverable = true;
@@ -64,6 +68,8 @@ function schedule(modules) {
       calendar += '<h3 class="calendar">' + modules[i].week + '</h3><dl>' + topics + '</dl>';
     }
   }
+  if(calendar == '' && isHomeOrArchive() == 'Home') calendar = '<div style="margin-left: 25px">No future assignments.</div>';
+  if(calendar == '' && isHomeOrArchive() == 'Archive') calendar = '<div style="margin-left: 25px">No archived assignments.</div>';
   document.getElementById('calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div>';
 }
 
@@ -108,6 +114,7 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
   }
   // Load topics for current page
   builder(myModules);
+  schedule(myModules);
   // Hide schedule if expanded on small screen
   document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
   document.getElementById('schedule').className='hide';
