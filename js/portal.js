@@ -1,39 +1,5 @@
-// Build Content HTML
-function builder(modules) {
-  document.getElementById('content').innerHTML = '';
-  document.getElementById('page').scrollTop = 0;
-  var content = '';
-  for(i = 0; i < modules.length; i++) {
-    var topic = '';
-    if((isCurrentOrArchived(modules[i].topics[0]) != 'archived' && isHomeOrArchive() == 'Home') || (isCurrentOrArchived(modules[i].topics[0]) == 'archived' && isHomeOrArchive() == 'Archive')) {
-      for(j = 0; j < modules[i].topics.length; j++) {
-        var navbuttons = '';
-        var readsets = '';
-        var readbuttons = '';
-        if(modules[i].topics[j].hasOwnProperty('nav')) {
-          for(k = 0; k < modules[i].topics[j].nav.length; k++) {
-            if(!(~modules[i].topics[j].nav[k].type.indexOf('assignmentbutton') != 0 && isHomeOrArchive() == 'Archive') && !(~modules[i].topics[j].nav[k].type.indexOf('solutionbutton') != 0 && isHomeOrArchive() == 'Home')) {
-              navbuttons += '<a class="' + modules[i].topics[j].nav[k].type + '" ';
-              if(modules[i].topics[j].nav[k].hasOwnProperty('href')) {
-                if(modules[i].topics[j].nav[k].hasOwnProperty('filetype')) navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="' + modules[i].topics[j].nav[k].filetype + ' opens in new window"';
-                else navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="Website opens in new window"';
-              }
-              navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
-            }
-          }
-        }
-        if(isCurrentOrArchived(modules[i].topics[0]) == 'current') topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div><div class="nav">' + navbuttons + '</div></div>';
-        else topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="summary" style="display: none">' + modules[i].topics[j].summary + '</div><div class="nav" style="display: none">' + navbuttons + '</div></div>';
-      }
-      content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
-    }
-  }
-  document.getElementById('content').innerHTML = content;
-}
-
 // Build Calendar HTML
 function schedule(modules) {
-  document.getElementById('calendar').innerHTML = '';
   currentDate = new Date();
   var calendar = '';
   for(i = 0; i < modules.length; i++) {
@@ -64,7 +30,78 @@ function schedule(modules) {
       calendar += '<h3 class="calendar">' + modules[i].week + '</h3><dl>' + topics + '</dl>';
     }
   }
-  document.getElementById('calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div>';
+  if(calendar != '') {
+    var cal = document.createElement('div');
+    cal.id = 'calendar';
+    document.getElementById('page').appendChild(cal);
+    document.getElementById('calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div>';
+    // Toggle schedule on click on small screen
+    document.getElementById('calendar').addEventListener('click', function(e) {
+      if(e.target == document.getElementById('calendar').getElementsByTagName('h2')[0]) {
+        if(document.getElementById('calendar').getElementsByTagName('h2')[0].className !='calendar show') {
+          document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar show';
+          document.getElementById('schedule').className='';
+        } else {
+          document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
+          document.getElementById('schedule').className='hide';
+        }
+      }
+    });
+  }
+}
+
+// Build Content HTML
+function builder(modules) {
+  document.getElementById('page').scrollTop = 0;
+  var content = '';
+  for(i = 0; i < modules.length; i++) {
+    var topic = '';
+    if((isCurrentOrArchived(modules[i].topics[0]) != 'archived' && isHomeOrArchive() == 'Home') || (isCurrentOrArchived(modules[i].topics[0]) == 'archived' && isHomeOrArchive() == 'Archive')) {
+      for(j = 0; j < modules[i].topics.length; j++) {
+        var navbuttons = '';
+        var readsets = '';
+        var readbuttons = '';
+        if(modules[i].topics[j].hasOwnProperty('nav')) {
+          for(k = 0; k < modules[i].topics[j].nav.length; k++) {
+            if(!(~modules[i].topics[j].nav[k].type.indexOf('assignmentbutton') != 0 && isHomeOrArchive() == 'Archive') && !(~modules[i].topics[j].nav[k].type.indexOf('solutionbutton') != 0 && isHomeOrArchive() == 'Home')) {
+              navbuttons += '<a class="' + modules[i].topics[j].nav[k].type + '" ';
+              if(modules[i].topics[j].nav[k].hasOwnProperty('href')) {
+                if(modules[i].topics[j].nav[k].hasOwnProperty('filetype')) navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="' + modules[i].topics[j].nav[k].filetype + ' opens in new window"';
+                else navbuttons += 'href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="Website opens in new window"';
+              }
+              navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
+            }
+          }
+        }
+        if(isCurrentOrArchived(modules[i].topics[0]) == 'current') topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div><div class="nav">' + navbuttons + '</div></div>';
+        else topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="summary" style="display: none">' + modules[i].topics[j].summary + '</div><div class="nav" style="display: none">' + navbuttons + '</div></div>';
+      }
+      content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
+    }
+  }
+  var con = document.createElement('div');
+  con.id = 'content';
+  document.getElementById('page').appendChild(con);
+  document.getElementById('content').innerHTML = content;
+  // Show topic summary on click
+  document.getElementById('content').addEventListener('click', function(e) {
+    topics = document.getElementsByClassName('topic');
+    // Show topic summary
+    for(i = 0; i < topics.length; i++) {
+      if(e.target == topics[i].getElementsByClassName('title')[0] && topics[i].getElementsByClassName('title')[0].className != 'title expand') {
+        openTopic(topics[i]);
+        if(isHomeOrArchive() == 'Archive') {
+          for(j = 0; j < topics.length; j++) {
+            if(i != j) {
+              closeTopic(topics[j]);
+            }
+          }
+        }
+      } else if(e.target == topics[i].getElementsByClassName('title')[0] && topics[i].getElementsByClassName('title')[0].className == 'title expand') {
+        closeTopic(topics[i]);
+      }
+    }
+  });
 }
 
 // Test for current page
@@ -107,10 +144,14 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
     else menuItem[i].className='menu-item';
   }
   // Load topics for current page
+  document.getElementById('page').removeChild(document.getElementById('content'));
   builder(myModules);
   // Hide schedule if expanded on small screen
-  document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
-  document.getElementById('schedule').className='hide';
+  try {
+    document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
+    document.getElementById('schedule').className='hide';
+  } catch (e) {
+  }
 });
 
 // How to expand topic content
@@ -126,39 +167,6 @@ function closeTopic(topic) {
   topic.getElementsByClassName('summary')[0].style.display='none';
   topic.getElementsByClassName('nav')[0].style.display='none';
 }
-
-// Show topic summary on click
-document.getElementById('content').addEventListener('click', function(e) {
-  topics = document.getElementsByClassName('topic');
-  // Show topic summary
-  for(i = 0; i < topics.length; i++) {
-    if(e.target == topics[i].getElementsByClassName('title')[0] && topics[i].getElementsByClassName('title')[0].className != 'title expand') {
-      openTopic(topics[i]);
-      if(isHomeOrArchive() == 'Archive') {
-        for(j = 0; j < topics.length; j++) {
-          if(i != j) {
-            closeTopic(topics[j]);
-          }
-        }
-      }
-    } else if(e.target == topics[i].getElementsByClassName('title')[0] && topics[i].getElementsByClassName('title')[0].className == 'title expand') {
-      closeTopic(topics[i]);
-    }
-  }
-});
-
-// Toggle schedule on click on small screen
-document.getElementById('calendar').addEventListener('click', function(e) {
-  if(e.target == document.getElementById('calendar').getElementsByTagName('h2')[0]) {
-    if(document.getElementById('calendar').getElementsByTagName('h2')[0].className !='calendar show') {
-      document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar show';
-      document.getElementById('schedule').className='';
-    } else {
-      document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
-      document.getElementById('schedule').className='hide';
-    }
-  }
-});
 
 // Content
 var myModules = [
@@ -509,7 +517,7 @@ var myModules = [
 
 // Build page on load
 window.addEventListener('load', function(e) {
-  builder(myModules);
   schedule(myModules);
+  builder(myModules);
 });
 
