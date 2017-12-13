@@ -499,7 +499,7 @@ var myModules = [
         {"label":"Extra Credit", "type":"button", "href":"supplement/final/SETE.html"},
       ],
       "due":[
-        {"deliverable":"SETE", "deadline":"0"},
+        {"deliverable":"SETE", "deadline":"0", "time":"12.00"},
         {"deliverable":"Final Exam", "deadline":"0", "time":"12.00"}
       ]
     }
