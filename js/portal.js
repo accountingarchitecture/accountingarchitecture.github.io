@@ -28,6 +28,8 @@ function builder(modules) {
       content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
     }
   }
+  if(content == '' && isHomeOrArchive() == 'Home') content += '<div class="module"><div class="topic"><div class="date">' + Date() + '</div><h2>No current topics.</h2>' + '</div>';
+  else if(content == '' && isHomeOrArchive() == 'Archive') content += '<div class="module"><div class="topic"><div class="date">' + Date() + '</div><h2>No archived topics.</h2>' + '</div>';
   document.getElementById('content').innerHTML = content;
 }
 
@@ -69,7 +71,7 @@ function schedule(modules) {
     }
   }
   if(calendar == '' && isHomeOrArchive() == 'Home') calendar = '<div style="margin-left: 25px">No future assignments.</div>';
-  if(calendar == '' && isHomeOrArchive() == 'Archive') calendar = '<div style="margin-left: 25px">No archived assignments.</div>';
+  else if(calendar == '' && isHomeOrArchive() == 'Archive') calendar = '<div style="margin-left: 25px">No archived assignments.</div>';
   document.getElementById('calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div>';
 }
 
