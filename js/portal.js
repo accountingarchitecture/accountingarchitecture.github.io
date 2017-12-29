@@ -70,8 +70,8 @@ function schedule(modules) {
       calendar += '<h3 class="calendar">' + modules[i].week + '</h3><dl>' + topics + '</dl>';
     }
   }
-  if(calendar == '' && isHomeOrArchive() == 'Home') calendar = '<div style="margin-left: 25px">No future assignments.</div>';
-  else if(calendar == '' && isHomeOrArchive() == 'Archive') calendar = '<div style="margin-left: 25px">No archived assignments.</div>';
+  if(calendar == '' && isHomeOrArchive() == 'Home') calendar = '<dl><dt>No future assignments.</dt></dl>';
+  else if(calendar == '' && isHomeOrArchive() == 'Archive') calendar = '<dl><dt>No past assignments.</dt></dl>';
   document.getElementById('calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div>';
 }
 

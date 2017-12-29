@@ -85,7 +85,6 @@
     font: 36px/43px Arial, sans-serif;
     font-weight: bold;
     color: #333;
-    max-width: 95%;
   }
   h3 {
     font: 24px/31px Arial, sans-serif;
@@ -297,7 +296,7 @@
     -webkit-user-select: none;
   }
   h2.calendar {
-    margin: 10px 20px;
+    margin: 10px 0px 10px 20px;
   }
   h2.calendar::after {
     content: '';
