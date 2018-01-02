@@ -222,8 +222,7 @@ var myModules = [
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/sudoku-solution-wxkfp.html"},
         {"label":"Lecture", "type":"button", "href":"lectures/accounting-architecture.html"},
         {"label":"Article", "type":"button", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
-        {"label":"Homework", "type":"button", "href":"supplement/accounting-architecture/assignment.html"},
-        {"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
+        {"label":"Homework", "type":"button", "href":"supplement/accounting-architecture/assignment.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2"},
@@ -274,7 +273,7 @@ var myModules = [
   {"week":"Week 4",
   "topics":[
     {"date":"February 5, 2018", "title":"Hardware",
-      "summary":"<p>This is the first lecture on the Technology section of the accounting architecture framework. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course are the <em>most</em> interesting&mdash;familiarity with computer hardware is an important first step toward understanding the design requirements of an information system.</p><p>The first exam will also be due this week. It will consist of similar questions to the quizzes, and it will cover the Accounting Architecture, Business Model, and Information topics. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
+      "summary":"<p>This is the first lecture on the Technology section of the accounting architecture framework. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course are the <em>most</em> interesting&mdash;familiarity with computer hardware is an important first step toward understanding the design requirements of an information system.</p><p>The first exam will also be due this week. It will consist of similar questions to the quizzes, and it will cover the Accounting Architecture, Business Model, and Information topics. The exam is on eCourseware. I will not reopen or extend the exam <em>for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
       "nav":[
         {"label":"Lecture", "type":"button", "href":"lectures/hardware.html"},
         {"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
@@ -293,15 +292,14 @@ var myModules = [
   {"week":"Week 5",
   "topics":[
     {"date":"February 12, 2018", "title":"Software: Open Source",
-      "summary":"<p>This lecture begins our multi-week discussion of the Software block of the arch. This first lecture introduces the most important concept in enterprise-grade software today: open source. The term &ldquo;open&rdquo; applies to more than only software, and the lecture introduces other aspects of openness, as well.</p>",
+      "summary":"<p>This lecture begins our discussion of the Software block of the arch. This first Software lecture introduces the most important concept in enterprise-grade software today: open source. However, because the term &ldquo;open&rdquo; applies to more than only software, the lecture introduces multiple aspects of openness that affect the design and implementation of corporate information systems. Openness also influences the breadth of IT tools that we use for personal computing each and every day.</p>",
       "nav":[
         {"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/coins.html"},
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution-umgqj.html"},
         {"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
         {"label":"Article", "type":"button", "href":"https://opensource.com/article/17/8/enterprise-open-source-advantages"},
         {"label":"Homework", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
-        {"label":"Homework", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"},
-        {"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
+        {"label":"Homework", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2"},
@@ -310,7 +308,7 @@ var myModules = [
       ]
     },
     {"date":"February 12, 2018", "title":"Software: Operating Systems",
-      "summary":"<p>The operating system is the most fundamental software in an information system, and this lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems. (Hint: Microsoft Windows and Apple macOS are not on the list.) I also provide a video tutorial of the operating system that you will use in this course. I encourage you to watch the tutorial before attempting the homework assignment.</p><p>In order to avoid having anything due during Fall Break, the homework and practice set milestone will be due on Friday of this week, instead of Saturday. Additionally, no puzzle will be due for the next two weeks.</p>",
+      "summary":"<p>The second Software lecture introduces the most fundamental software in an information system: the operating system. This lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems.</p><p>I also provide a video tutorial of the operating system that you will use in this course. I encourage you to watch the tutorial before attempting the homework assignment. Also, please remember to the review the Milestones document before attempting this week's practice set milestone.</p>",
       "nav":[
         {"label":"Lecture", "type":"button", "href":"lectures/operating-systems.html"},
         {"label":"Article", "type":"button", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
@@ -329,7 +327,7 @@ var myModules = [
   {"week":"Week 6",
   "topics":[
     {"date":"February 19, 2018", "title":"Storage",
-      "summary":"<p>This lecture covers the Storage block of the arch. We have not yet finished our discussion of the Software block because we still need to cover data analytics, but knowledge of storage and services is a prerequisite for understanding analytics.</p>",
+      "summary":"<p>This lecture covers the Storage block of the arch. Data storage is especially important for operationalizing the information and Big Data life cycles in order to transition successfully from raw data to retrievable data to accurate information. The concepts in this lecture will arise again in the Control section of the accounting architecture framework, as well as the Data Analytics topic, and the homework assignment for this topic will provide valuable preparation for completing the Analytics project.</p>",
       "nav":[
         {"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/tangram.html"},
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/tangram-solution-tnclb.html"},
@@ -350,7 +348,7 @@ var myModules = [
   {"week":"Week 7",
   "topics":[
     {"date":"February 26, 2018", "title":"Services",
-      "summary":"<p>Services is the fourth block in the Technology section of the accounting architecture framework. This lecture places the other previously discussed technologies in the context of cloud computing, which is a crucial part of enterprise-grade computing.</p>",
+      "summary":"<p>Services is the fourth block in the Technology section of the accounting architecture framework. This lecture places the other previously discussed technologies (Hardware, Software, and Storage) in the context of cloud computing, which is a crucial part of enterprise-grade computing.</p><p>I encourage you to begin working on this week's homework assignment early. The homework instructions explain how to complete the assignment, but some troubleshooting may be necessary. The earlier you begin, the more time you will have to troubleshoot any errors that may arise.</p>",
       "nav":[
         {"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/teasers.html"},
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/teasers-solution-qryjz.html"},
@@ -372,7 +370,7 @@ var myModules = [
   {"week":"Week 8",
   "topics":[
     {"date":"March 12, 2018", "title":"Risk &amp; Control",
-      "summary":"<p>Control is the final section of the accounting architecture framework. The lecture begins with a discussion of risk, which is the final block in the Environment section, and then introduces internal controls, which protect against risk. Over the past decade, control has become a central focus of the accounting profession.</p><p>This week will have no homework assignment because of the midterm exam. You may begin the exam at any time during the week prior to the deadline, but you must complete the exam in one sitting. The exam is on eCourseware. I will not reopen or extend the exam <em>for any reason</em>. The exam is open-note, open-lecture, and open-article. That is to say, you may use any notes that you have written during the semester, and you may reference the lecture slides and articles. You may not use any other resource, and you may not discuss the exam questions or answers with any other individual at any point until after the exam has closed.</p><p>This week is also the deadline for the final practice set milestone and the final deadline for the practice set. You should submit any unfinished practice set modules by this week's deadline.</p>",
+      "summary":"<p>Control is the final section of the accounting architecture framework. This lecture begins with a discussion of risk, which is the third block in the Environment section, and then introduces internal controls, which protect against risk. Over the past decade, control has become a central focus of the accounting profession.</p><p>This week will have no homework assignment because of Exam 2. The same rules apply to Exam 2 as applied to Exam 1, except that this exam will be longer because it covers Accounting Architecture, Business Model, Information, and Technology. The exam is on eCourseware. I will not reopen or extend the exam <em>for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
       "nav":[
         {"label":"Lecture", "type":"button", "href":"lectures/risk-and-control.html"},
         {"label":"Article", "type":"button", "href":"supplement/risk-and-control/coso.pdf", "filetype":"PDF"},
@@ -389,14 +387,15 @@ var myModules = [
   {"week":"Week 9",
   "topics":[
     {"date":"March 19, 2018", "title":"Security",
-      "summary":"<p>Security is the first block of the Control section of the accounting architecture framework. The recent surge in cyber attacks and malicious software has made security a primary focus for all systems designers and maintainers.</p>",
+      "summary":"<p>Security is the first block of the Control section of the accounting architecture framework. The recent surge in cyber attacks and malicious software has made security a primary focus for all systems designers and maintainers, and increasingly businesses view security as a responsibility shared by all employees, regardless of their title or job description.</p><p>You will have two articles to read this week. The first article is a supplement to the lecture, just as the articles for other topics are supplements to their respective lectures. The second article, labeled &lsquo;HW Article,&rsquo; is a research article about accounting data that you will need to read before completing the homework assignment.</p>",
       "nav":[
         {"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/logic-problem.html"},
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/logic-problem-solution-ziwfu.html"},
         {"label":"Lecture", "type":"button", "href":"lectures/security.html"},
         {"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2017/3/it-security-start-3-ways-make-it-business-priority"},
         {"label":"Homework", "type":"button", "href":"supplement/security/assignment.html"},
-        {"label":"HW Article", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"}
+        {"label":"HW Article", "type":"button", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"},
+        {"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2"},
@@ -410,13 +409,14 @@ var myModules = [
   {"week":"Week 10",
   "topics":[
     {"date":"March 26, 2018", "title":"Availability",
-      "summary":"<p>Availability is the second Control block. The concepts in this lecture tie into the Services block because availability most frequently applies to cloud computing. I provide a video tutorial that demonstrates how to complete this week's homework assignment. No puzzle will be due this week because of Thanksgiving Break, but the homework assignment is due on Wednesday, instead of Saturday.</p>",
+      "summary":"<p>Availability is the second Control block. The concepts in this lecture tie into the Services block because availability most frequently applies to cloud computing.</p><p>I again advise you to begin the homework assignment early. The homework instructions provide multiple pages of step-by-step instructions, but troubleshooting may again be necessary. Also, I reiterate that you will not need to submit anything to Dropbox for this assignment. Once it is complete, I will receive a notification automatically. However, you will only receive credit for this assignment if it is complete, and I receive a notification. I will not award partial credit for trying.</p>",
       "nav":[
         {"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/checkmate.html"},
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/checkmate-solution-unbfz.html"},
         {"label":"Lecture", "type":"button", "href":"lectures/availability.html"},
         {"label":"Article", "type":"button", "href":"https://enterprisersproject.com/article/2017/3/sas-cio-be-proactive-leading-your-organization-sensor-enabled-world"},
         {"label":"Homework", "type":"button", "href":"supplement/availability/assignment.html"},
+        {"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2"},
@@ -430,7 +430,7 @@ var myModules = [
   {"week":"Week 11",
   "topics":[
     {"date":"April 2, 2018", "title":"Processing Integrity",
-      "summary":"<p>Processing Integrity is the third Control block. This lecture especially relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases. This week's video tutorial showcases the online, open source diagramming tool that I used to create the activity and structure diagrams for this course, but you are not required to use this particular tool to complete the homework assignment. Also, this week's puzzle will be the final puzzle of the semester.</p>",
+      "summary":"<p>Processing Integrity is the third Control block. This lecture especially relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases. This week's video tutorial showcases the online, open source diagramming tool that I used to create the activity and structure diagrams for this course, but you are not required to use this particular tool to complete the homework assignment. However, you should use a software tool to complete the assignment. You should not submit a hand-drawn diagram. Also, your diagram should look as professional as possible.</p><p>This week also marks the final deadline for the practice set. All practice set modules must be complete by this week's deadline. I will not extend this deadline <em>for any reason</em>.</p>",
       "nav":[
         {"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/math-facts.html"},
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/math-facts-solution-pnnvr.html"},
@@ -438,7 +438,8 @@ var myModules = [
         {"label":"Article", "type":"button", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
         {"label":"Homework", "type":"button assignmentbutton", "href":"supplement/processing-integrity/assignment.html"},
         {"label":"Homework", "type":"button solutionbutton", "href":"supplement/processing-integrity/solution-stvdt.html"},
-        {"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"}
+        {"label":"Tutorial", "type":"button", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"},
+        {"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2"},
@@ -452,14 +453,14 @@ var myModules = [
   {"week":"Week 12",
   "topics":[
     {"date":"April 9, 2018", "title":"Confidentiality",
-      "summary":"<p>Confidentiality is the final block of the Control section, and the final block of the accounting architecture framework. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic.</p><p>Please note the early deadline for this week's homework assignments because of the end of classes. The second, and final, homework assignment this week is very brief and will not interfere with the other bigger deliverables you may need to focus on from other courses.</p>",
+      "summary":"<p>Confidentiality is the final block of the Control section, and the final block of the accounting architecture framework. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic.</p><p>This week is also the deadline for your tech reports. The Report Instructions button links to the syllabus instructions for this deliverable.</p>",
       "nav":[
         {"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/gauss.html"},
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/gauss-solution-azqhi.html"},
         {"label":"Lecture", "type":"button", "href":"lectures/confidentiality.html"},
         {"label":"Article", "type":"button", "href":"supplement/confidentiality/blockchain.pdf", "filetype":"PDF"},
         {"label":"Homework", "type":"button", "href":"supplement/confidentiality/assignment.html"},
-        {"label":"Final Homework", "type":"button", "href":"supplement/final/assignment.html"}
+        {"label":"Report Instructions", "type":"button", "href":"supplement/getting-started/syllabus.html#research"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2"},
@@ -473,23 +474,23 @@ var myModules = [
   {"week":"Week 13/14",
   "topics":[
     {"date":"April 16, 2018", "title":"Data Analytics",
-      "summary":"<p>The final topic of this course is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. Effective data analytics relies on an accurate understanding of all aspects of the accounting architecture. The lecture introduces multiple analytical tools and programming languages, but the homework assignment will only focus on one: SQL. I will provide a video tutorial demonstrating how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. I recommend that you view the tutorial before you attempt the homework assignment.</p>",
+      "summary":"<p>The final topic of this course is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. Effective data analytics relies on an accurate understanding of all aspects of accounting architecture. The lecture introduces multiple analytical tools and programming languages, but the Analytics project focuses on one: SQL. The project instructions explain how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. You will need the Project, Database, and Dictionary files in order to complete this deliverable.</p><p>Please note the deadlines for this week's deliverables because of the end of classes. Also, you must complete the Analytics project before completing this week's homework assignment, as the homework assignment instructs you to delete your Codeanywhere account, which you will need for the Analytics project.</p>",
       "nav":[
         {"label":"Puzzle", "type":"button assignmentbutton", "href":"supplement/puzzles/learning-curve.html"},
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/learning-curve-solution-wjsku.html"},
         {"label":"Lecture", "type":"button", "href":"lectures/data-analytics.html"},
         {"label":"Article", "type":"button", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
-        {"label":"Homework", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
-        {"label":"Homework", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
+        {"label":"Project", "type":"button assignmentbutton", "href":"supplement/data-analytics/assignment.html"},
+        {"label":"Project", "type":"button solutionbutton", "href":"supplement/data-analytics/solution-vsfnj.html"},
         {"label":"Database", "type":"button", "href":"https://www.dropbox.com/s/r5ziqedm5wd3erm/company.sql?dl=1", "filetype":"SQL plain-text file"},
         {"label":"Dictionary", "type":"button", "href":"supplement/data-analytics/data-dictionary.pdf", "filetype":"PDF"},
-        {"label":"Milestones", "type":"button", "href":"supplement/practice-set/milestones.html"}
+        {"label":"Homework", "type":"button", "href":"supplement/final/assignment.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2"},
         {"deliverable":"Puzzle", "deadline":"5"},
         {"deliverable":"Analytics Project", "deadline":"9"},
-        {"deliverable":"Final Homework", "deadline":"9"}
+        {"deliverable":"Homework", "deadline":"9"}
       ]
     }
   ]
