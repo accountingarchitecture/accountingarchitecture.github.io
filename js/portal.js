@@ -87,10 +87,10 @@ function isHomeOrArchive() {
 function isCurrentOrArchived(module) {
   for(r = 0; r < module.topics.length; r++) {
     topicDate = new Date(Date.parse(module.topics[r].date));
-    currentDate = new Date();
+    currentDate = new Date("January 22, 2018 00:00:01");
     startDate = new Date(topicDate.valueOf() - (6 + topicDate.getDay()) * 86400000);
     endDate = new Date(topicDate.valueOf() + ((6 - topicDate.getDay()) * 86400000) + 86399999);
-    if(startDate < currentDate && currentDate <= endDate) {
+    if(startDate < currentDate) {
       if(module.topics[r].hasOwnProperty('due')) {
         for(q = 0; q < module.topics[r].due.length; q++) {
           if(module.topics[r].due[q].hasOwnProperty('time')) {
@@ -100,7 +100,7 @@ function isCurrentOrArchived(module) {
           }
           if(dueDate > currentDate) return 'current';
         }
-      } else return 'current';
+      } else if(currentDate <= endDate) return 'current';
     }
   }
 }
