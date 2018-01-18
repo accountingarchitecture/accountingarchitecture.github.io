@@ -5,7 +5,7 @@ function builder(modules) {
   var content = '';
   for(i = 0; i < modules.length; i++) {
     var topic = '';
-    if((isCurrentOrArchived(modules[i].topics[0]) != 'archived' && isHomeOrArchive() == 'Home') || (isCurrentOrArchived(modules[i].topics[0]) == 'archived' && isHomeOrArchive() == 'Archive')) {
+    if((isCurrentOrArchived(modules[i]) != 'archived' && isHomeOrArchive() == 'Home') || (isCurrentOrArchived(modules[i]) == 'archived' && isHomeOrArchive() == 'Archive')) {
       for(j = 0; j < modules[i].topics.length; j++) {
         var navbuttons = '';
         var readsets = '';
@@ -22,7 +22,7 @@ function builder(modules) {
             }
           }
         }
-        if(isCurrentOrArchived(modules[i].topics[0]) == 'current') topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div><div class="nav">' + navbuttons + '</div></div>';
+        if(isCurrentOrArchived(modules[i]) == 'current') topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div><div class="nav">' + navbuttons + '</div></div>';
         else topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="summary" style="display: none">' + modules[i].topics[j].summary + '</div><div class="nav" style="display: none">' + navbuttons + '</div></div>';
       }
       content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
@@ -83,27 +83,26 @@ function isHomeOrArchive() {
   }
 }
 
-// Test for topic currency
-function isCurrentOrArchived(topic) {
-  topicDate = new Date(Date.parse(topic.date));
-  currentDate = new Date();
-  startDate = new Date(topicDate.valueOf() - (6 + topicDate.getDay()) * 86400000);
-  endDate = new Date(topicDate.valueOf() + ((6 - topicDate.getDay()) * 86400000) + 86399999);
-  if(startDate < currentDate && currentDate <= endDate) {
-    if(topic.hasOwnProperty('due')) {
-      for(q = 0; q < topic.due.length; q++) {
-        if(topic.due[q].hasOwnProperty('time')) {
-          dueDate = new Date(Date.parse(topic.date) + (topic.due[q].deadline * 86400000) + (topic.due[q].time.split(/[.]/)[0] * 3600000 + topic.due[q].time.split(/[.]/)[1] * 60000));
-        } else {
-          dueDate = new Date(Date.parse(topic.date) + (topic.due[q].deadline * 86400000) + 86399999);
+// Test for module currency
+function isCurrentOrArchived(module) {
+  for(r = 0; r < module.topics.length; r++) {
+    topicDate = new Date(Date.parse(module.topics[r].date));
+    currentDate = new Date();
+    startDate = new Date(topicDate.valueOf() - (6 + topicDate.getDay()) * 86400000);
+    endDate = new Date(topicDate.valueOf() + ((6 - topicDate.getDay()) * 86400000) + 86399999);
+    if(startDate < currentDate && currentDate <= endDate) {
+      if(module.topics[r].hasOwnProperty('due')) {
+        for(q = 0; q < module.topics[r].due.length; q++) {
+          if(module.topics[r].due[q].hasOwnProperty('time')) {
+            dueDate = new Date(Date.parse(module.topics[r].date) + (module.topics[r].due[q].deadline * 86400000) + (module.topics[r].due[q].time.split(/[.]/)[0] * 3600000 + module.topics[r].due[q].time.split(/[.]/)[1] * 60000));
+          } else {
+            dueDate = new Date(Date.parse(module.topics[r].date) + (module.topics[r].due[q].deadline * 86400000) + 86399999);
+          }
+          if(dueDate > currentDate) return 'current';
         }
-        if(dueDate > currentDate) return 'current';
-        else return 'archived';
-      }
+      } else return 'current';
     }
-    else return 'current';
   }
-  else if(currentDate > endDate) return 'archived';
 }
 
 // Toggle topics and current page link on click
