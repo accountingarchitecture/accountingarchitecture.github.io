@@ -83,13 +83,13 @@ function isHomeOrArchive() {
   }
 }
 
-// Test for module currency
+// Test for module currency (return current for current, archived for archived, or nothing for future)
 function isCurrentOrArchived(module) {
   for(r = 0; r < module.topics.length; r++) {
     topicDate = new Date(Date.parse(module.topics[r].date));
-    currentDate = new Date("January 22, 2018 00:00:01");
+    currentDate = new Date();
     startDate = new Date(topicDate.valueOf() - (6 + topicDate.getDay()) * 86400000);
-    endDate = new Date(topicDate.valueOf() + ((6 - topicDate.getDay()) * 86400000) + 86399999);
+    endDate = new Date(topicDate.valueOf() + (7 - topicDate.getDay()) * 86400000);
     if(startDate < currentDate) {
       if(module.topics[r].hasOwnProperty('due')) {
         for(q = 0; q < module.topics[r].due.length; q++) {
@@ -99,8 +99,10 @@ function isCurrentOrArchived(module) {
             dueDate = new Date(Date.parse(module.topics[r].date) + (module.topics[r].due[q].deadline * 86400000) + 86399999);
           }
           if(dueDate > currentDate) return 'current';
+          else if(r == module.topics.length - 1 && q == module.topics[r].due.length - 1) return 'archived';
         }
-      } else if(currentDate <= endDate) return 'current';
+      } else if(currentDate < endDate) return 'current';
+        else return 'archived';
     }
   }
 }
