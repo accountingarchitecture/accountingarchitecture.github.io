@@ -299,8 +299,7 @@ var myModules = [
         {"label":"Puzzle", "type":"button solutionbutton", "href":"supplement/puzzles/coins-solution-umgqj.html"},
         {"label":"Lecture", "type":"button", "href":"lectures/open-source.html"},
         {"label":"Article", "type":"button", "href":"https://opensource.com/article/17/8/enterprise-open-source-advantages"},
-        {"label":"Homework", "type":"button assignmentbutton", "href":"supplement/open-source/assignment.html"},
-        {"label":"Homework", "type":"button solutionbutton", "href":"supplement/open-source/solution-fxvup.html"}
+        {"label":"Homework", "type":"button", "href":"supplement/open-source/assignment2.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2"},
