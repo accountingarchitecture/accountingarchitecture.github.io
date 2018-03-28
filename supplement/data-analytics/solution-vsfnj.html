@@ -26,7 +26,7 @@
     <section>
       <h3>Project - Intro</h3>
       <p>This assignment tests your ability to query a database to analyze data. Your assignment is to identify the <em>queries</em> necessary to find the answers.</p>
-      <p>Begin by using apt to install mysql-server on your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Then follow the steps on the next screen to create and import your database. Afterwards, use SQL to create queries to answer the questions on the third screen.</p>
+      <p>Begin by using apt to install mysql-server on your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Follow the steps on the next slide of these instructions to create and import your database. Use SQL to create queries to answer the questions on the fourth slide.</p>
       <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
     </section>
 
@@ -36,10 +36,57 @@
         <li>Log in to MySQL: <strong>mysql -uroot</strong></li>
         <li>Create a database named company: <strong>create database company;</strong></li>
         <li>Exit MySQL: <strong>quit;</strong></li>
-        <li>Download the database file to your container using wget and the URL of the database file on the course portal. However, between the wget command and the URL add: <strong>-O company.sql</strong> (That is a capital O, not a zero, after the hyphen.)</li>
+        <li>Use the following command to download the database file from the course portal:<br><strong>wget -O company.sql https://goo.gl/aQwKm3</strong><br>(Note: That is a capital O after the hyphen, not a zero.)</li>
         <li>Import the Database file into MySQL:<br><strong>mysql -uroot company &lt; company.sql</strong></li>
         <li>Log in to the newly created database: <strong>mysql -uroot company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
       </ol>
+    </section>
+
+    <section>
+      <h3>MySQL Commands</h3>
+      <p>Use of MySQL for data retrieval and analysis requires knowledge of both SQL and some built-in MySQL commands. (NB: Although it is best to type SQL commands in all uppercase letters, these commands are best executed in lowercase letters because they are case-sensitive and MySQL database names are commonly in lowercase letters. Also, just like SQL queries, all MySQL commands should end in a semicolon.)
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Explanation</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>show databases;</div>
+          </div>
+          <div class="table-cell">Print a list of all databases</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>create database homework;</div>
+          </div>
+          <div class="table-cell">Create a new, empty database and name it homework</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>use company;</div>
+          </div>
+          <div class="table-cell">Execute all future commands in this MySQL session against the company database</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>show tables;</div>
+          </div>
+          <div class="table-cell">Print a list of all tables in the currently selected database</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>describe CUSTOMER;</div>
+          </div>
+          <div class="table-cell">Print a list of all fields in the CUSTOMER table with their data types</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="font-weight: bold">
+            <div>quit;</div>
+          </div>
+          <div class="table-cell">Exit MySQL</div>
+        </div>
+      </div>
     </section>
 
     <section>
