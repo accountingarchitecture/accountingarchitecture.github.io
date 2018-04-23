@@ -101,7 +101,7 @@
         <li>Which payment IDs have no purchase order number?</li>
         <p style="font-style: italic; margin: 0 10px">SELECT ID FROM PAYMENT WHERE PO IS NULL;</li>
         <li>What is total sales revenue for the current period?</li>
-        <p style="font-style: italic; margin: 0 10px">SELECT SUM(PRICE * QUANTITY) FROM SALE;</li>
+        <p style="font-style: italic; margin: 0 10px">SELECT SUM(PRICE * QUANTITY * (1 - PROMOTION)) FROM SALE;</li>
         <li>How many employees work at each location? (Your query should report one number for each location.)</li>
         <p style="font-style: italic; margin: 0 10px">SELECT LOCATION, COUNT(ID) FROM EMPLOYEE GROUP BY LOCATION;</li>
         <li>Which, if any, receipt has a different number of raw materials delivered than were ordered in the purchase order?</li>
