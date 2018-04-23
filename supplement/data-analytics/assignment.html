@@ -26,7 +26,7 @@
     <section>
       <h3>Project - Intro</h3>
       <p>This assignment tests your ability to query a database to analyze data. Your assignment is to identify the <em>queries</em> necessary to find the answers.</p>
-      <p>Begin by using apt to install mysql-server on your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Follow the steps on the next slide of these instructions to create and import your database. Use SQL to create queries to answer the questions on the fourth slide.</p>
+      <p>Begin by using apt to install mysql-server on your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Follow the steps on the next slide of these instructions to create and import your database. Use SQL to create queries to answer the questions on the final slide.</p>
       <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
     </section>
 
@@ -91,10 +91,15 @@
     </section>
 
     <section>
+      <h3>Tips</h3>
+        <p>Begin each question by looking at the Dictionary file for the relevant table(s). The Dictionary file on the course portal provides a list of all tables and attributes with their respective definitions. Then, use MySQL to print out the table in its entirety: SELECT * FROM [TABLENAME]; (Replace [TABLENAME] with the actual table name. For example, SELECT * FROM VENDOR; to view all data in the Vendor table.) The data may be more than you can see on one screen, but you can use your mouse to scroll in Codeanywhere.</p>
+        <p>Before considering SQL syntax, think logically about what you want to know. This will help you to determine which attributes to select (e.g., Do I need ID or PO?), which summary functions may be necessary (e.g., Do I need to add values from multiple records?), and how to limit the results to records that match all question criteria (e.g., I only need orders in March.)</p>
+    </section>
+
+    <section>
       <h3>Questions</h3>
-      <p>The Dictionary file on the course portal provides a list of all tables and attributes with their respective definitions.</p>
       <ol>
-        <li>(PAYMENT table) Which payment ID has no purchase order number?</li>
+        <li>(PAYMENT table) Which payment IDs have no purchase order number?</li>
         <li>(SALE table) What is total sales revenue for the current period?</li>
         <li>(EMPLOYEE table) How many employees work at each location? (Your query should report one number for each location.)</li>
         <li>(RECEIPT and PURCHASE tables) Which, if any, receipt has a different number of raw materials delivered than were ordered in the purchase order?</li>
