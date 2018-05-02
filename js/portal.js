@@ -339,7 +339,6 @@ var myModules = [
         {"label":"Lecture", "href":"lectures/services.html"},
         {"label":"Article", "href":"supplement/services/erp.pdf", "filetype":"PDF"},
         {"label":"Homework", "href":"supplement/services/assignment.html"},
-        {"label":"HTML File", "href":"supplement/services/index.html"},
         {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
