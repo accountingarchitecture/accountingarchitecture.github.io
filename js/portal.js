@@ -230,13 +230,11 @@ var myModules = [
       ]
     },
     {"date":"June 11, 2018", "title":"Business Model",
-      "summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture framework. With regards to the Environment section of the framework, Compliance is especially important for accountants, but this is primarily the focus of other accounting courses. However, a discussion of the other two Environment blocks, Business Model and Risk, is worthwhile to motivate and give context to the other sections of the arch. You will learn about Risk later in the course in connection with the Control section. We discuss Business Model at this point for two reasons. First, this foundational block highlights the informational needs of internal and external stakeholders. Second, diagrams are the primary tool for communicating the processes that make up the business model, and discussing a business model is a useful way to learn how to read and draw diagrams.</p><p>In addition to posting solutions for the puzzles and the analytics project, I provide solutions for a small number of homework assignments. Following the deadline for this homework, you will be able to find its solution on eCourseware under the Content section.</p>",
+      "summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture framework. With regards to the Environment section of the framework, Compliance is especially important for accountants, but this is primarily the focus of other accounting courses. However, a discussion of the other two Environment blocks, Business Model and Risk, is worthwhile to motivate and give context to the other sections of the arch. You will learn about Risk later in the course in connection with the Control section. We discuss Business Model at this point for two reasons. First, this foundational block highlights the informational needs of internal and external stakeholders. Second, diagrams are the primary tool for communicating the processes that make up the business model, and discussing a business model is a useful way to learn how to read and draw diagrams.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/business-model.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
         {"label":"Homework", "href":"supplement/business-model/assignment.html"},
-        {"label":"Diagram 1", "href":"supplement/business-model/payment-process.png", "filetype":"Image"},
-        {"label":"Diagram 2", "href":"supplement/business-model/sales-order.png", "filetype":"Image"},
         {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
@@ -403,7 +401,7 @@ var myModules = [
       ]
     },
     {"date":"July 23, 2018", "title":"Processing Integrity",
-      "summary":"<p>Processing Integrity is the third Control block. This lecture strongly relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases.</p><p>This week's video tutorial showcases the online, open source diagramming tool that I used to create the activity and structure diagrams for this course. You may use this tool to complete the homework assignment, but you are not required to use it. However, you must use a software tool to complete the assignment. You should not submit a hand-drawn diagram because your diagram should look as professional as possible.</p>",
+      "summary":"<p>Processing Integrity is the third Control block. This lecture strongly relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases.</p><p>This week's video tutorial showcases the online, open source diagramming tool that I used to create the activity and structure diagrams for this course. You may use this tool to complete the homework assignment, but you are not required to use it. However, you must use a software tool to complete the assignment. You should not submit a hand-drawn diagram because your diagram should look as professional as possible. You can find the solution to this homework under the Content section of eCoursware following the assignment due date.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/processing-integrity.html"},
         {"label":"Article", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
