@@ -367,12 +367,11 @@ var myModules = [
       ]
     },
     {"date":"July 16, 2018", "title":"Security",
-      "summary":"<p>Security is the first block of the Control section of the accounting architecture framework. The recent surge in cyber attacks and malicious software has made security a primary focus for all systems designers and maintainers, and businesses have increasingly viewed security as a responsibility shared by all employees, regardless of their title or job description.</p><p>You will have two articles to read this week. The first article is a supplement to the lecture, just as the articles for other topics are supplements to their respective lectures. The second article, labeled &lsquo;HW Article,&rsquo; is a research article about accounting data that you will need to read in order to complete the homework assignment.</p><p>This week also marks the final deadline for the practice set. All practice set modules must be complete by this week's deadline. I will not extend this deadline <em>for any reason</em>.</p>",
+      "summary":"<p>Security is the first block of the Control section of the accounting architecture framework. The recent surge in cyber attacks and malicious software has made security a primary focus for all systems designers and maintainers, and businesses have increasingly viewed security as a responsibility shared by all employees, regardless of their title or job description.</p><p>This week marks the final deadline for the practice set. All practice set modules must be complete by this week's deadline. I will not extend this deadline <em>for any reason</em>.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/security.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2017/3/it-security-start-3-ways-make-it-business-priority"},
         {"label":"Homework", "href":"supplement/security/assignment.html"},
-        {"label":"HW Article", "href":"supplement/security/acch-51065.pdf", "filetype":"PDF"},
         {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
