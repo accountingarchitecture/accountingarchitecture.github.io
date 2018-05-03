@@ -264,7 +264,7 @@ var myModules = [
       ]
     },
     {"date":"June 18, 2018", "title":"Hardware",
-      "summary":"<p>This is the first lecture on the Technology section of the accounting architecture framework. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course are the <em>most</em> interesting&mdash;familiarity with computer hardware is an important first step toward understanding the design requirements of an information system.</p><p>The first exam will also be due this week. It will consist of similar questions to the quizzes, and it will cover the Accounting Architecture, Business Model, and Information topics. The exam is on eCourseware. I will not reopen or extend the exam <em>for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
+      "summary":"<p>This is the first lecture on the Technology section of the accounting architecture framework. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course are the <em>most</em> interesting&mdash;familiarity with computer hardware is an important first step toward understanding the design requirements of an information system.</p><p>The first exam will also be due this week. It will consist of similar questions to the quizzes, and it will cover the Accounting Architecture, Business Model, and Information topics. The exam is on eCourseware. <em>I will not reopen or extend the exam for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/hardware.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
@@ -352,7 +352,7 @@ var myModules = [
   {"week":"Week 7",
   "topics":[
     {"date":"July 16, 2018", "title":"Risk &amp; Control",
-      "summary":"<p>Control is the final section of the accounting architecture framework. This lecture begins with a discussion of Risk, which is the third block in the Environment section, and then introduces internal controls, which protect against risk. Over the past decade, Control has become a central focus of the accounting profession.</p><p>This topic has no homework assignment. Instead, you should use this time to study for and take Exam 2. The same rules apply to Exam 2 as applied to Exam 1, except that this exam will be longer because it covers Accounting Architecture, Business Model, Information, and Technology. The exam is on eCourseware. I will not reopen or extend the exam <em>for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
+      "summary":"<p>Control is the final section of the accounting architecture framework. This lecture begins with a discussion of Risk, which is the third block in the Environment section, and then introduces internal controls, which protect against risk. Over the past decade, Control has become a central focus of the accounting profession.</p><p>This topic has no homework assignment. Instead, you should use this time to study for and take Exam 2. The same rules apply to Exam 2 as applied to Exam 1, except that this exam will be longer because it covers Accounting Architecture, Business Model, Information, and Technology. The exam is on eCourseware. <em>I will not reopen or extend the exam for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
         {"label":"Lecture", "href":"lectures/risk-and-control.html"},
@@ -452,12 +452,8 @@ var myModules = [
   {"week":"Final",
   "topics":[
     {"date":"August 10, 2018", "title":"Final Exam",
-      "summary":"<p>You have until <strong>August 10 @ 23.59</strong> to complete the final exam and to submit evidence of your SETE for extra credit. The exam is on eCourseware. I will not reopen or extend the exam <em>for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p><p><strong>Good luck!</strong></p>",
-      "nav":[
-        {"label":"Extra Credit", "href":"supplement/final/SETE.html"},
-      ],
+      "summary":"<p>You have until <strong>August 10 @ 23.59</strong> to complete the final exam. The exam is on eCourseware. <em>I will not reopen or extend the exam for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p><p><strong>Good luck!</strong></p>",
       "due":[
-        {"deliverable":"SETE", "deadline":"0"},
         {"deliverable":"Final Exam", "deadline":"0"}
       ]
     }
