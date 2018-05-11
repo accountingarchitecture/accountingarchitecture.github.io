@@ -51,20 +51,14 @@
     margin: 0;
     min-height: 100%;
     height: 100%;
-    background-color: #eee;
+    background-color: white;
   }
   #wrapper {
     height: 100%;
     min-height: 100%;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    -webkit-align-items: center;
-    align-items: center;
+    display: block;
     margin: 0 auto;
+    overflow: scroll;
   }
   #page {
     display: -webkit-flex;
@@ -75,7 +69,6 @@
     justify-content: center;
     -webkit-align-items: flex-start;
     align-items: flex-start;
-    overflow: auto;
     margin: 0px auto;
     width: 100%;
     font: 15px/25px Arial, sans-serif;
@@ -102,7 +95,7 @@
     -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(0,0,0,.06);
   }
   #menu {
     display: -webkit-flex;
@@ -167,7 +160,6 @@
     flex: 1 1 auto;
   }
   .module {
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 1px 4px 0 rgba(0,0,0,.08), 0 3px 1px -2px rgba(0,0,0,.2);
     width: 97%;
     max-width: 1000px;
     margin: 25px auto;
@@ -184,9 +176,12 @@
     margin-left: 15px;
   }
   .topic {
-    box-shadow: 0 -1px 1px rgba(0,0,0,.06);
+    border-top: 1px solid rgba(0,0,0,.06);
     padding: 20px 25px;
-    background-color: white;
+    background-color: rgba(242,245,245,0.8);
+  }
+  .topic:nth-of-type(1), .topic:nth-of-type(2) {
+    border-top: 0;
   }
   h2.title {
     cursor: pointer;
@@ -350,15 +345,6 @@
     }
   }
   @media screen and (max-width: 750px) {
-    #wrapper {
-      display: block;
-    }
-    ::-webkit-scrollbar {
-        width: 0px;
-    }
-    #menu-bar {
-      box-shadow: initial;
-    }
     #logo > img {
       max-height: 35px;
       margin-top: 5px;
@@ -384,7 +370,6 @@
     }
     #page {
       display: block;
-      overflow-y: hidden;
     }
     #calendar {
       width: 100%;
@@ -420,9 +405,6 @@
     dd {
       margin-left: 0px;
     }
-    .module {
-      box-shadow: initial;
-    }
     h2 {
       font-size: 30px;
       line-height: 37px;
@@ -433,13 +415,5 @@
     }
     h3 {
       font: 27px/34px Arial, sans-serif;
-    }
-  }
-  @media screen and (min-width: 750px) {
-    body, html {
-      overflow: hidden;
-    }
-    #wrapper {
-      overflow-x: hidden;
     }
   }
