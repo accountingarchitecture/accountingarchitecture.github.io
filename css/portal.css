@@ -58,7 +58,8 @@
     min-height: 100%;
     display: block;
     margin: 0 auto;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   #page {
     display: -webkit-flex;
