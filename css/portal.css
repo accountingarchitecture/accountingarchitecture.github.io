@@ -51,7 +51,9 @@
     margin: 0;
     min-height: 100%;
     height: 100%;
+    width: 100%;
     background-color: white;
+    position: fixed;
   }
   #wrapper {
     height: 100%;
@@ -60,6 +62,7 @@
     margin: 0 auto;
     overflow-y: scroll;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   #page {
     display: -webkit-flex;
@@ -161,7 +164,7 @@
     flex: 1 1 auto;
   }
   .module {
-    width: 97%;
+    width: 90%;
     max-width: 1000px;
     margin: 25px auto;
     background-color: white;
@@ -328,6 +331,11 @@
   }
 
 /********** Media Queries **********/
+  @media screen and (max-width: 1100px) {
+    .module {
+      width: 97%;
+    }
+  }
   @media screen and (max-width: 950px) {
     #calendar {
       min-width: 270px;
