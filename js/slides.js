@@ -1,71 +1,160 @@
 // Default slide settings
 Reveal.initialize({
-	// The "normal" size of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions
-		width: 1150,
-		height: 700,
+	// The "normal" size of the presentation, aspect ratio will be preserved
+	// when the presentation is scaled to fit different resolutions
+	width: 1150,
+	height: 700,
+
 	// Factor of the display size that should remain empty around the content
-		margin: 0.1,
+	margin: 0.1,
+
 	// Bounds for smallest/largest possible scale to apply to content
-		minScale: 0.2,
-		maxScale: 1.5,
-	// Display controls in the bottom right corner
-		controls: false,
+	minScale: 0.2,
+	maxScale: 1.5,
+
+	// Display presentation control arrows
+	controls: true,
+
+	// Help the user learn the controls by providing hints, for example by
+	// bouncing the down arrow when they first encounter a vertical slide
+	controlsTutorial: true,
+
+	// Determines where controls appear, "edges" or "bottom-right"
+	controlsLayout: 'edges',
+
+	// Visibility rule for backwards navigation arrows; "faded", "hidden"
+	// or "visible"
+	controlsBackArrows: 'visible',
+
 	// Display a presentation progress bar
-		progress: true,
+	progress: true,
+
 	// Display the page number of the current slide
-		slideNumber: true,
+	slideNumber: true,
+
+	// Determine which displays to show the slide number on
+	showSlideNumber: 'all',
+
 	// Push each slide change to the browser history
-		history: false,
+	history: false,
+
 	// Enable keyboard shortcuts for navigation
-		keyboard: true,
+	keyboard: true,
+
+	// Optional function that blocks keyboard events when retuning false
+	keyboardCondition: null,
+
 	// Enable the slide overview mode
-		overview: false,
+	overview: false,
+
 	// Vertical centering of slides
-		center: true,
+	center: true,
+
 	// Enables touch navigation on devices with touch input
-		touch: true,
+	touch: true,
+
 	// Loop the presentation
-		loop: false,
+	loop: false,
+
 	// Change the presentation direction to be RTL
-		rtl: false,
+	rtl: false,
+
+	// Randomizes the order of slides each time the presentation loads
+	shuffle: false,
+
 	// Turns fragments on and off globally
-		fragments: true,
+	fragments: true,
+
 	// Flags if the presentation is running in an embedded mode,
 	// i.e. contained within a limited portion of the screen
-		embedded: false,
-	// Flags if we should show a help overlay when the question mark
+	embedded: false,
+
+	// Flags if we should show a help overlay when the question-mark
 	// key is pressed
-		help: true,
-	// Number of milliseconds between automatically proceeding to the
-	// next slide, disabled when set to 0, this value can be overwritten
-	// by using a data-autoslide attribute on your slides
-		autoSlide: 0,
+	help: true,
+
+	// Flags if it should be possible to pause the presentation (blackout)
+	pause: true,
+
+	// Flags if speaker notes should be visible to all viewers
+	showNotes: false,
+
+	// Global override for autolaying embedded media (video/audio/iframe)
+	// - null:   Media will only autoplay if data-autoplay is present
+	// - true:   All media will autoplay, regardless of individual setting
+	// - false:  No media will autoplay, regardless of individual setting
+	autoPlayMedia: null,
+
+	// Controls automatic progression to the next slide
+	// - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+	//           is present on the current slide or fragment
+	// - 1+:     All slides will progress automatically at the given interval
+	// - false:  No auto-sliding, even if data-autoslide is present
+	autoSlide: 0,
+
 	// Stop auto-sliding after user input
-		autoSlideStoppable: true,
+	autoSlideStoppable: true,
+
+	// Use this method for navigation when auto-sliding (defaults to navigateNext)
+	autoSlideMethod: null,
+
 	// Enable slide navigation via mouse wheel
-		mouseWheel: true,
+	mouseWheel: true,
+
+	// Apply a 3D roll to links on hover
+	rollingLinks: false,
+
 	// Hides the address bar on mobile devices
-		hideAddressBar: true,
+	hideAddressBar: true,
+
 	// Opens links in an iframe preview overlay
-		previewLinks: false,
+	previewLinks: false,
+
+	// Exposes the reveal.js API through window.postMessage
+	postMessage: true,
+
+	// Dispatches all reveal.js events to the parent window through postMessage
+	postMessageEvents: false,
+
+	// Focuses body when page changes visibility to ensure keyboard shortcuts work
+	focusBodyOnPageVisibilityChange: true,
+
 	// Transition style
-		transition: 'none', // none/fade/slide/convex/concave/zoom
+	transition: 'none', // none/fade/slide/convex/concave/zoom
+
 	// Transition speed
-		transitionSpeed: 'default', // default/fast/slow
+	transitionSpeed: 'default', // default/fast/slow
+
 	// Transition style for full page slide backgrounds
-		backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+	backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+	// Parallax background image
+	parallaxBackgroundImage: '', // CSS syntax, e.g. "a.jpg"
+
+	// Parallax background size
+	parallaxBackgroundSize: '', // CSS syntax, e.g. "3000px 2000px"
+
+	// Amount of pixels to move the parallax background per slide step
+	parallaxBackgroundHorizontal: null,
+	parallaxBackgroundVertical: null,
+
+	// The maximum number of pages a single slide can expand onto when printing
+	// to PDF, unlimited by default
+	pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+
+	// Offset used to reduce the height of content within exported PDF pages.
+	// This exists to account for environment differences based on how you
+	// print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+	// on precisely the total height of the document whereas in-browser
+	// printing has to end one pixel before.
+	pdfPageHeightOffset: -1,
+
 	// Number of slides away from the current that are visible
-		viewDistance: 3,
-});
+	viewDistance: 3,
 
-// Add ability to click through slides while masking left click default
-window.addEventListener("mousedown", function(e) { e.preventDefault(); }, false);
+	// The display mode that will be used to show slides
+	display: 'block',
 
-$(".reveal").click(function(e) {
-	if(e.target.tagName != "A" && e.target.parentNode.tagName != "A") {
-		if(e.pageY < $(this).outerHeight() / 10 * 9.5) {
-		  if(e.pageX > $(this).outerWidth() / 2) Reveal.next();
-		  else Reveal.prev();
-		}
-	}
+	// Script dependencies to load
+	dependencies: []
 });
