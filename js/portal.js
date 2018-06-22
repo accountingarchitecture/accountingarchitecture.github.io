@@ -437,7 +437,7 @@ var myModules = [
         {"label":"Lecture", "href":"lectures/data-analytics.html"},
         {"label":"Article", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
         {"label":"Project", "href":"supplement/data-analytics/assignment.html"},
-        {"label":"Database", "href":"https://www.dropbox.com/s/r5ziqedm5wd3erm/company.sql?dl=1", "filetype":"SQL plain-text file"},
+        {"label":"Database", "href":"https://www.dropbox.com/s/kb26ccuv0g7tc3u/company.sql?dl=1", "filetype":"SQL plain-text file"},
         {"label":"Dictionary", "href":"supplement/data-analytics/data-dictionary.pdf", "filetype":"PDF"},
         {"label":"Homework", "href":"supplement/final/assignment.html"}
       ],
