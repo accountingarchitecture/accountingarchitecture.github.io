@@ -26,7 +26,7 @@
     <section>
       <h3>Project - Intro</h3>
       <p>This assignment tests your ability to query a database to analyze data. Your assignment is to identify the <em>queries</em> necessary to find the answers.</p>
-      <p>Begin by using apt to install mysql-server on your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Follow the steps on the next slide of these instructions to create and import your database. Use SQL to create queries to answer the questions on the final slide.</p>
+      <p>Begin by installing mysql-server in your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Follow the steps on the next screen of these instructions to create and import your database. Use SQL to create queries to answer the questions on the final screen.</p>
       <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
     </section>
 
@@ -37,7 +37,7 @@
         <li>Log in to your MySQL database server: <strong>mysql -uroot</strong></li>
         <li>Create a database named company: <strong>create database company;</strong></li>
         <li>Exit MySQL: <strong>quit;</strong></li>
-        <li>Use the following command to download the database file from the course portal:<br><strong>wget -O company.sql https://goo.gl/aQwKm3</strong><br>(Note: That is a capital O after the hyphen, not a zero.)</li>
+        <li>Use the following command to download the database file from the course portal:<br><strong>wget -O company.sql https://goo.gl/Mc5Czc</strong><br>(Note: That is a capital O after the hyphen, not a zero.)</li>
         <li>Import the Database file into MySQL:<br><strong>mysql -uroot company &lt; company.sql</strong></li>
         <li>Log in to the newly created database: <strong>mysql -uroot company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
       </ol>
