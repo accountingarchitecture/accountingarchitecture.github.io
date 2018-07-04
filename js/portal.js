@@ -299,12 +299,11 @@ var myModules = [
       ]
     },
     {"date":"June 25, 2018", "title":"Software: Operating Systems",
-      "summary":"<p>The second Software lecture introduces the most fundamental software in an information system: the operating system. This lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems.</p><p>In connection with this week's homework assignment, I have created a video tutorial explaining how to sign up for Codeanywhere, which provides access to the Linux operating system environment that you will use to complete multiple deliverables in this course. Watching the tutorial may make completing the homework assignment simpler.</p>",
+      "summary":"<p>The second Software lecture introduces the most fundamental software in an information system: the operating system. This lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems. The homework assignment will begin to give you experience with using the operating system that powers most information systems. Subsequent homework assignments will build on this initial experience.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/operating-systems.html"},
         {"label":"Article", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
         {"label":"Homework", "href":"supplement/operating-systems/assignment.html"},
-        {"label":"Tutorial", "href":"https://www.youtube.com/watch?v=zbsl0yS8zdE"},
         {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
