@@ -170,7 +170,7 @@ document.getElementById('calendar').addEventListener('click', function(e) {
 var myModules = [
   {"week":"Week 1",
   "topics":[
-    {"date":"June 4, 2018", "title":"Getting Started",
+    {"date":"August 28, 2018", "title":"Getting Started",
       "summary":"<p>Welcome to ACCT 4020 &ndash; Accounting and Information Systems. To begin, carefully read the course syllabus. You will find a link to the syllabus in the navigation buttons below. The syllabus explains the course policies, objectives, and deliverables. The more carefully you read the syllabus, the better prepared you will be for the unique nature of the course. The other buttons listed below link to individual components of the syllabus that are required by the Fogelman College. After reading, you will find a syllabus quiz on eCourseware.</p><p>All current and future topics for this course are listed on the Home page on this course portal. Once a topic is no longer current, it will be moved to the Archive, where all past topics and deliverables will be stored for future reference. You can find the Archive by clicking on the link in the top-right corner of the page.</p>",
       "nav":[
         {"label":"Syllabus", "href":"supplement/getting-started/syllabus.html"},
@@ -183,7 +183,7 @@ var myModules = [
         {"deliverable":"Syllabus Quiz", "deadline":"1"}
       ]
     },
-    {"date":"June 4, 2018", "title":"Practice Set",
+    {"date":"August 28, 2018", "title":"Practice Set",
       "summary":"<p>The practice set deliverable will test your understanding of financial accounting principles in a digital business environment. You will have one attempt at this assignment, and it is worth a substantial portion of your final grade. The reason for weighting this deliverable heavily is that it takes approximately 20 hours to complete, and I want the grade weighting to be commensurate with the amount of effort. The syllabus reports the due date for this assignment. <em>I will not change the due date for any reason</em>. In order to keep you on track with this assignment, I have set a number of intermediate milestones. Each milestone involves completing a portion of the practice set by a specific due date. The Milestones button links to an explanation of these milestones, and the course schedule reports the milestone due dates. Please note that some milestones involve completing more than one practice set module, so please review the milestones each week to verify which module(s) will be due.</p><p>The practice set introduction and supporting documentation provide all the information necessary in order to complete each practice set task successfully. The Quiz Instructions lists the supporting documentation that I mostly recommend. You should read this documentation and complete the practice set introduction and the practice set quiz before attempting the first milestone. I also provide a video tutorial as a walkthrough. You may watch as much or as little of the tutorial as you feel you need.</p><p>NB: Every semester students email me after attempting part of the practice set to complain that it is too hard or confusing. The reason for these emails is always, <strong>always</strong>, <strong>ALWAYS</strong> because the students have not read what I assigned. I urge you not to assume that you can succeed at this practice set without reading the supporting documentation.",
       "nav":[
         {"label":"Instructions", "href":"supplement/getting-started/syllabus.html#practiceset"},
@@ -316,7 +316,7 @@ var myModules = [
   },
   {"week":"Week 6",
   "topics":[
-    {"date":"July 9, 2018", "title":"Storage",
+    {"date":"October 2, 2018", "title":"Storage",
       "summary":"<p>This lecture covers the Storage block of the arch. Data storage is especially important for operationalizing the information and Big Data life cycles in order for raw data to transition successfully into retrievable, accurate information. The concepts in this lecture will arise again in the Control section of the accounting architecture framework, as well as the Data Analytics topic, and the homework assignment for this topic will provide valuable preparation for completing the Analytics project.</p>",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
@@ -326,13 +326,17 @@ var myModules = [
         {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2"},
-        {"deliverable":"Puzzle", "deadline":"5"},
-        {"deliverable":"Homework", "deadline":"5"},
-        {"deliverable":"Milestone 7", "deadline":"5"}
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
+        {"deliverable":"Puzzle", "deadline":"4"},
+        {"deliverable":"Homework", "deadline":"4"},
+        {"deliverable":"Milestone 7", "deadline":"4"}
       ]
-    },
-    {"date":"July 9, 2018", "title":"Services",
+    }
+  ]
+  },
+  {"week":"Week 7",
+  "topics":[
+    {"date":"October 9, 2018", "title":"Services",
       "summary":"<p>Services is the fourth block in the Technology section of the accounting architecture framework. This lecture places the other previously discussed technologies (Hardware, Software, and Storage) in the context of cloud computing, which is a crucial part of enterprise-grade computing.</p><p>I encourage you to begin working on this week's homework assignment early. The homework instructions explain how to complete the assignment, but some troubleshooting may be necessary. The earlier you begin, the more time you will have to troubleshoot any errors that may, and likely will, arise.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/services.html"},
@@ -341,16 +345,16 @@ var myModules = [
         {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"3"},
-        {"deliverable":"Homework", "deadline":"5"},
-        {"deliverable":"Milestone 8", "deadline":"5"}
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
+        {"deliverable":"Homework", "deadline":"4"},
+        {"deliverable":"Milestone 8", "deadline":"4"}
       ]
     }
   ]
   },
-  {"week":"Week 7",
+  {"week":"Week 8",
   "topics":[
-    {"date":"July 16, 2018", "title":"Risk &amp; Control",
+    {"date":"October 18, 2018", "title":"Risk &amp; Control",
       "summary":"<p>Control is the final section of the accounting architecture framework. This lecture begins with a discussion of Risk, which is the third block in the Environment section, and then introduces internal controls, which protect against risk. Over the past decade, Control has become a central focus of the accounting profession.</p><p>This topic has no homework assignment. Instead, you should use this time to study for and take Exam 2. The same rules apply to Exam 2 as applied to Exam 1, except that this exam will be longer because it covers Accounting Architecture, Business Model, Information, and Technology. The exam is on eCourseware. <em>I will not reopen or extend the exam for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
@@ -359,13 +363,17 @@ var myModules = [
         {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2"},
-        {"deliverable":"Puzzle", "deadline":"5"},
-        {"deliverable":"Exam 2", "deadline":"5"},
-        {"deliverable":"Milestone 9", "deadline":"5"}
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
+        {"deliverable":"Puzzle", "deadline":"4"},
+        {"deliverable":"Exam 2", "deadline":"4"},
+        {"deliverable":"Milestone 9", "deadline":"4"}
       ]
-    },
-    {"date":"July 16, 2018", "title":"Security",
+    }
+  ]
+  },
+  {"week":"Week 9",
+  "topics":[
+    {"date":"October 23, 2018", "title":"Security",
       "summary":"<p>Security is the first block of the Control section of the accounting architecture framework. The recent surge in cyber attacks and malicious software has made security a primary focus for all systems designers and maintainers, and businesses have increasingly viewed security as a responsibility shared by all employees, regardless of their title or job description.</p><p>This week marks the final deadline for the practice set. All practice set modules must be complete by this week's deadline. I will not extend this deadline <em>for any reason</em>.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/security.html"},
@@ -374,17 +382,34 @@ var myModules = [
         {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"3"},
-        {"deliverable":"Homework", "deadline":"5"},
-        {"deliverable":"Final Milestone", "deadline":"5"}
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
+        {"deliverable":"Homework", "deadline":"4"},
       ]
     }
   ]
   },
-  {"week":"Week 8",
+  {"week":"Week 10",
   "topics":[
-    {"date":"July 23, 2018", "title":"Availability",
-      "summary":"<p>Availability is the second Control block. The concepts in this lecture tie into the Services block because availability most frequently applies to cloud computing.</p><p>I again advise you to begin the homework assignment early. The homework instructions provide multiple pages of step-by-step instructions, but troubleshooting may again be necessary. You will not need to submit anything to Dropbox for this assignment. Once it is complete, I will receive a notification automatically. However, you will only receive credit for this assignment if it is complete, and I receive a notification. I will not award partial credit for trying.</p>",
+    {"date":"October 30, 2018", "title":"Confidentiality",
+      "summary":"<p>Confidentiality is the second block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic.</p>",
+      "nav":[
+        {"label":"Puzzle", "href":"supplement/puzzles/gauss.html"},
+        {"label":"Lecture", "href":"lectures/confidentiality.html"},
+        {"label":"Article", "href":"supplement/confidentiality/blockchain.pdf", "filetype":"PDF"},
+        {"label":"Homework", "href":"supplement/confidentiality/assignment.html"}
+      ],
+      "due":[
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
+        {"deliverable":"Puzzle", "deadline":"4"},
+        {"deliverable":"Homework", "deadline":"4"}
+      ]
+    }
+  ]
+  },
+  {"week":"Week 11",
+  "topics":[
+    {"date":"November 6, 2018", "title":"Availability",
+      "summary":"<p>Availability is the third Control block. The concepts in this lecture tie into the Services block because availability most frequently applies to cloud computing.</p><p>I again advise you to begin the homework assignment early. The homework instructions provide multiple pages of step-by-step instructions, but troubleshooting may again be necessary. You will not need to submit anything to Dropbox for this assignment. Once it is complete, I will receive a notification automatically. However, you will only receive credit for this assignment if it is complete, and I receive a notification. I will not award partial credit for trying.</p>",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/math-facts.html"},
         {"label":"Lecture", "href":"lectures/availability.html"},
@@ -392,13 +417,18 @@ var myModules = [
         {"label":"Homework", "href":"supplement/availability/assignment.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2"},
-        {"deliverable":"Puzzle", "deadline":"5"},
-        {"deliverable":"Homework", "deadline":"5"}
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
+        {"deliverable":"Puzzle", "deadline":"4"},
+        {"deliverable":"Homework", "deadline":"4"},
+        {"deliverable":"Final Milestone", "deadline":"4"}
       ]
-    },
-    {"date":"July 23, 2018", "title":"Processing Integrity",
-      "summary":"<p>Processing Integrity is the third Control block. This lecture strongly relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases.</p><p>This week's video tutorial showcases the online, open source diagramming tool that I used to create the activity and structure diagrams for this course. You may use this tool to complete the homework assignment, but you are not required to use it. However, you must use a software tool to complete the assignment. You should not submit a hand-drawn diagram because your diagram should look as professional as possible. You can find the solution to this homework under the Content section of eCoursware following the assignment due date.</p>",
+    }
+  ]
+  },
+  {"week":"Week 12/13",
+  "topics":[
+    {"date":"November 13, 2018", "title":"Processing Integrity",
+      "summary":"<p>Processing Integrity is the final Control block. This lecture strongly relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases.</p><p>This week's video tutorial showcases the online, open source diagramming tool that I used to create the activity and structure diagrams for this course. You may use this tool to complete the homework assignment, but you are not required to use it. However, you must use a software tool to complete the assignment. You should not submit a hand-drawn diagram because your diagram should look as professional as possible. You can find the solution to this homework under the Content section of eCoursware following the assignment due date.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/processing-integrity.html"},
         {"label":"Article", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
@@ -406,31 +436,15 @@ var myModules = [
         {"label":"Tutorial", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"3"},
-        {"deliverable":"Homework", "deadline":"5"}
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
+        {"deliverable":"Homework", "deadline":"8"}
       ]
     }
   ]
   },
-  {"week":"Week 9/10",
+  {"week":"Week 14/15",
   "topics":[
-    {"date":"July 30, 2018", "title":"Confidentiality",
-      "summary":"<p>Confidentiality is the final block of the Control section, and the final block of the accounting architecture framework. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic.</p><p>This week is also the deadline for your tech reports. The Report Instructions button links to the syllabus instructions for this deliverable. I will not accept any late reports.</p>",
-      "nav":[
-        {"label":"Puzzle", "href":"supplement/puzzles/gauss.html"},
-        {"label":"Lecture", "href":"lectures/confidentiality.html"},
-        {"label":"Article", "href":"supplement/confidentiality/blockchain.pdf", "filetype":"PDF"},
-        {"label":"Homework", "href":"supplement/confidentiality/assignment.html"},
-        {"label":"Report Instructions", "href":"supplement/getting-started/syllabus.html#research"}
-      ],
-      "due":[
-        {"deliverable":"Quiz", "deadline":"2"},
-        {"deliverable":"Puzzle", "deadline":"5"},
-        {"deliverable":"Homework", "deadline":"5"},
-        {"deliverable":"Tech Report", "deadline":"5"}
-      ]
-    },
-    {"date":"July 30, 2018", "title":"Data Analytics",
+    {"date":"November 27, 2018", "title":"Data Analytics",
       "summary":"<p>The final topic of this course is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. Effective data analytics relies on an accurate understanding of all aspects of accounting architecture. The lecture introduces multiple analytical tools and programming languages, but the Analytics project focuses on one: SQL. The project instructions explain how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. You will need the Project, Database, and Dictionary files posted with this topic in order to complete the Analytics project. You can find the solution to this project under the Content section of eCourseware after the project due date. I will not accept any late project submissions.</p><p>Please note the deadlines for this week's deliverables because of the end of classes. Also, you must complete the Analytics project before completing this topic's homework assignment, as the homework assignment instructs you to delete your Codeanywhere account, which you will need for the Analytics project.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/data-analytics.html"},
@@ -441,19 +455,19 @@ var myModules = [
         {"label":"Homework", "href":"supplement/final/assignment.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"3"},
-        {"deliverable":"Analytics Project", "deadline":"10"},
-        {"deliverable":"Homework", "deadline":"10"}
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
+        {"deliverable":"Analytics Project", "deadline":"9"},
+        {"deliverable":"Homework", "deadline":"9"}
       ]
     }
   ]
   },
   {"week":"Final",
   "topics":[
-    {"date":"August 10, 2018", "title":"Final Exam",
-      "summary":"<p>You have until <strong>August 10 @ 23.59</strong> to complete the final exam. The exam is on eCourseware. <em>I will not reopen or extend the exam for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p><p><strong>Good luck!</strong></p>",
+    {"date":"December 7, 2018", "title":"Final Exam",
+      "summary":"<p>You have until <strong>December 13 @ 10.00</strong> to complete the final exam. The exam is on eCourseware. <em>I will not reopen or extend the exam for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p><p><strong>Good luck!</strong></p>",
       "due":[
-        {"deliverable":"Final Exam", "deadline":"0"}
+        {"deliverable":"Final Exam", "deadline":"6", "time":"10.00"}
       ]
     }
   ]
