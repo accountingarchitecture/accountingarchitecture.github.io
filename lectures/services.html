@@ -48,6 +48,11 @@
     </section>
 
     <section>
+      <h2>Edge Computing</h2>
+      <p>Another reason for the use of high-powered clients is the need for real-time data processing, especially for artificial intelligence. For example, a self-driving car needs to evaluate images of the road in real-time. Sending data to the cloud and waiting for a response would take too long. As a result, manufacturers have begun to increase device processing power by adding AI coprocessors. Local processing, especially local processing with coprocessors, is called <u><em>edge computing</em></u> because it occurs at the <em>edge</em> of the cloud (i.e., on a local device). However, this behavior is simply another cycle in the history of computing. When processing power and storage are expensive, we rely heavily on server-side computing; when processing power and storage becomes less expensive, we revert to client-side, or edge, computing.</p>
+    </section>
+
+    <section>
       <h2>Server Clusters</h2>
       <p>Parallel computing involves including multiple CPUs or CPU cores on the same motherboard. This is the standard for most computing devices today. <u><em>Distributed computing</em></u>, on the other hand, involves combining multiple computers together in a network or cluster to share a processing task. Any computer, even a tiny SBC, can play the role of the server in a cloud, but the demands placed on a cloud (e.g., the number of users watching Netflix simultaneously) frequently exceeds the abilities of a single computer. Many clouds are supported by a server cluster, not a single server. Some large clouds are supported by a single server, but in those cases, the single server may be a mainframe.</p>
     </section>
@@ -164,6 +169,37 @@
       <p><u><em>File sharing</em></u> is one of the oldest forms of cloud computing. Users frequently think of file sharing specifically as peer-to-peer file sharing, which involves a single user sharing content with another single user. However, file sharing in cloud computing involves a centralized file server that provides access to a network-based file system so that users and applications can access the same content from multiple devices. In a distributed computing environment, multiple servers provide a single <u><em>distributed file system</em></u>. Three common file server daemons are the File Transfer Protocol (FTP) daemon, the Network File System (NFS) daemon, and the Server Message Block (SMB) daemon. NFS and SMB provide users with file systems that they can mount like local file systems or removable media.</p>
     </section>
 
+    <section>
+      <h2>File Share Commands</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>wget</strong></div>
+          <div class="table-cell">Download a file from the World Wide Web (Literally: World Wide Web get)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>wget&nbsp;accountingarchitecture.github.io/index.html</strong> (Download a copy of index.html from accountingarchitecture.github.io)</li>
+              <li><strong>wget&nbsp;&#8209;O&nbsp;file.txt&nbsp;https://goo.gl/Ae3Sxv</strong> (Download a copy of Ae3Sxv from goo.gl and save it as file.txt; NB: That is a capital O, not a zero.)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>curl</strong></div>
+          <div class="table-cell">Download a file from the World Wide Web (Literally: Client URL Request Library)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>curl&nbsp;&#8209;O&nbsp;accountingarchitecture.github.io/index.html</strong> (Download a copy of index.html from accountingarchitecture.github.io; NB: That is a capital O, not a zero.)</li>
+              <li><strong>curl&nbsp;&#8209;o&nbsp;file.txt&nbsp;https://goo.gl/Ae3Sxv</strong> (Download a copy of Ae3Sxv from goo.gl and save it as file.txt)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>These commands are popular tools for downloading files from the Web Wide Web to the command line. The URL does not need to be for a file share necessarily, it can also use the HTTP protocol.</p>
+    </section>
     <section>
       <h2>Database Servers</h2>
       <p><u><em>Database servers</em></u> are also a very common component of cloud computing. Relational database management systems combine a database server with a database client. The database server daemon collates data from the file system in order to present it to the database client in a centralized manner. The database server can be on the same device as the database client, or the database server can be on a different network-connected device. The database client treats local and remote database servers the same. Cloud-based database servers are the preferred storage solution for many cloud-based applications because they can provide application data better than a cloud-based file system. They are also useful for providing data analysts with access to datasets that are too large to store on their personal computers.</p>
