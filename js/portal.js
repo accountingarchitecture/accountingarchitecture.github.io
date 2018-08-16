@@ -367,7 +367,8 @@ var myModules = [
       "nav":[
         {"label":"Lecture", "href":"lectures/confidentiality.html"},
         {"label":"Article", "href":"supplement/confidentiality/blockchain.pdf", "filetype":"PDF"},
-        {"label":"Homework", "href":"supplement/confidentiality/assignment.html"}
+        {"label":"Homework", "href":"supplement/confidentiality/assignment.html"},
+        {"label":"Project Part 1", "href":"supplement/data-analytics/project-part1.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
@@ -421,7 +422,7 @@ var myModules = [
       "nav":[
         {"label":"Lecture", "href":"lectures/data-analytics.html"},
         {"label":"Article", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
-        {"label":"Project", "href":"supplement/data-analytics/assignment.html"},
+        {"label":"Project Part 2", "href":"supplement/data-analytics/project-part2.html"},
         {"label":"Database", "href":"https://www.dropbox.com/s/kb26ccuv0g7tc3u/company.sql?dl=1", "filetype":"SQL plain-text file"},
         {"label":"Dictionary", "href":"supplement/data-analytics/data-dictionary.pdf", "filetype":"PDF"},
         {"label":"Homework", "href":"supplement/final/assignment.html"}
