@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Project Part 2</title>
+
+  <meta name="author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Personalized CSS -->
+  <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+  <div class="reveal">
+  <div class="slides">
+    <section>
+      <h3>Project Part 2 - Intro</h3>
+      <p>Part 2 of this project tests your ability to query a database to analyze data. Your assignment is to identify the <em>queries</em> necessary to find the answers.</p>
+      <p>In part 1 of this project, you already installed MySQL Server and imported a database. If you have not completed part 1 of this project, then you will not be able to complete part 2, and you should review the instructions for part 1 of this project in order to install MySQL and import the database for this project. For part 2 of this project, you will use that same database to run SQL queries.</p>
+      <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
+    </section>
+
+    <section>
+      <h3>Tips</h3>
+        <p>Begin each question by looking at the Dictionary file for the relevant table(s). Then, use MySQL to print out the table in its entirety: SELECT * FROM [TABLENAME]; (Replace [TABLENAME] with the actual table name. For example, SELECT * FROM VENDOR; to view all data in the Vendor table.) The data may be more than you can see on one screen, but you can use your mouse to scroll in Codeanywhere.</p>
+        <p>Before considering SQL syntax, think logically about what you want to know. This will help you to determine which attributes to select (e.g., Do I need ID or PO?), which summary functions may be necessary (e.g., Do I need to add values from multiple records or count the number of records?), and how to limit the results to records that match all question criteria (e.g., Do I only need orders from a single day?)</p>
+    </section>
+
+    <section>
+      <h3>Questions</h3>
+      <ol>
+        <li>(PAYMENT table) Which payment ID(s) have no purchase order number?</li>
+        <li>(SALE table) What is total sales revenue? (NB: Revenue is unit price times quantity less the savings from a promotional or discount rate.)</li>
+        <li>(EMPLOYEE table) How many employees work at each location? (You should generate one query that reports one number for each location.)</li>
+        <li>(RECEIPT and PURCHASE tables) Which, if any, receipt(s) have a different quantity of raw materials delivered than were ordered in the purchase order?</li>
+        <li>(SALE table) Which customer(s) placed the most expensive order?</li>
+      </ol>
+    </section>
+  </div>
+  </div>
+
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../reveal.js/js/reveal.js"></script>
+  <script src="../../js/slides.js"></script>
+</body>
+</html>

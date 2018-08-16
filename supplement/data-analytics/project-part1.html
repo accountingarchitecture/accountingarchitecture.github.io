@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Assignment</title>
+  <title>Project Part 1</title>
 
   <meta name="author" content="Joshua G. Coyne, PhD">
   <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
@@ -24,23 +24,8 @@
   <div class="reveal">
   <div class="slides">
     <section>
-      <h3>Project - Intro</h3>
-      <p>This assignment tests your ability to query a database to analyze data. Your assignment is to identify the <em>queries</em> necessary to find the answers.</p>
-      <p>Begin by installing mysql-server in your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Follow the steps on the next screen of these instructions to create and import your database. Use SQL to create queries to answer the questions on the final screen.</p>
-      <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
-    </section>
-
-    <section>
-      <h3>Linux Commands</h3>
-      <ol>
-        <li>Verify that MySQL server is running: <strong>sudo service mysql start</strong></li>
-        <li>Log in to your MySQL database server: <strong>mysql -uroot</strong></li>
-        <li>Create a database named company: <strong>create database company;</strong></li>
-        <li>Exit MySQL: <strong>quit;</strong></li>
-        <li>Use the following command to download the database file from the course portal:<br><strong>wget -O company.sql https://goo.gl/Mc5Czc</strong><br>(Note: That is a capital O after the hyphen, not a zero.)</li>
-        <li>Import the Database file into MySQL:<br><strong>mysql -uroot company &lt; company.sql</strong></li>
-        <li>Log in to the newly created database: <strong>mysql -uroot company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
-      </ol>
+      <h3>Project Part 1 - Intro</h3>
+      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server, import a database, run queries, and report your results. Pretend that a client has given you access to a dataset and a Dictionary file, which you can find on the course portal, that explains the dataset. The client wants you to answer a number of questions using SQL queries. Begin by installing mysql-server in your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Follow the steps on the next two screens of these instructions to create and import your database. The final screen lists the queries to run and how to report your results.</p>
     </section>
 
     <section>
@@ -91,19 +76,30 @@
     </section>
 
     <section>
-      <h3>Tips</h3>
-        <p>Begin each question by looking at the Dictionary file for the relevant table(s). The Dictionary file on the course portal provides a list of all tables and attributes with their respective definitions. Then, use MySQL to print out the table in its entirety: SELECT * FROM [TABLENAME]; (Replace [TABLENAME] with the actual table name. For example, SELECT * FROM VENDOR; to view all data in the Vendor table.) The data may be more than you can see on one screen, but you can use your mouse to scroll in Codeanywhere.</p>
-        <p>Before considering SQL syntax, think logically about what you want to know. This will help you to determine which attributes to select (e.g., Do I need ID or PO?), which summary functions may be necessary (e.g., Do I need to add values from multiple records?), and how to limit the results to records that match all question criteria (e.g., I only need orders in March.)</p>
+      <h3>Linux Commands</h3>
+      <ol>
+        <li>Verify that MySQL server is running: <strong>sudo service mysql start</strong></li>
+        <li>Log in to your MySQL database server: <strong>mysql -uroot</strong></li>
+        <li>Create a database named company.</li>
+        <li>Exit MySQL.</li>
+        <li>Download the database file from the following URL to your container and name is company.sql: <strong>https://goo.gl/Mc5Czc</strong></li>
+        <li>Import the Database file into MySQL:<br><strong>mysql -uroot company &lt; company.sql</strong></li>
+        <li>Log in to the newly created database: <strong>mysql -uroot company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
+      </ol>
     </section>
 
     <section>
-      <h3>Questions</h3>
-      <ol>
-        <li>(PAYMENT table) Which payment ID(s) have no purchase order number?</li>
-        <li>(SALE table) What is total sales revenue?</li>
-        <li>(EMPLOYEE table) How many employees work at each location? (Your query should report one number for each location.)</li>
-        <li>(RECEIPT and PURCHASE tables) Which, if any, receipt(s) have a different quantity of raw materials delivered than were ordered in the purchase order?</li>
-        <li>(SALE table) Which customer(s) placed the most expensive order?</li>
+      <h3>Queries</h3>
+      <p style="font-size: 30px">Take one screenshot of as much of the output of each query as possible, and save each screenshot as an image file. Draft a professional email to your client that gives the answers to these questions. Export your email document to PDF, and upload the PDF and all image files to Dropbox on eCourseware. Your grade will be based on accuracy and the professional quality of your email.</p>
+      <ol style="font-size: 30px">
+        <li>Which sale approvals have no approval date?</li>
+        <p style="margin: 0">SELECT ID FROM SALE WHERE APPROVALDATE = 0000-00-00;</p>
+        <li>What is the total we have paid to vendors for the current period?</li>
+        <p style="margin: 0">SELECT SUM(AMOUNT) FROM PAYMENT;</p>
+        <li>How many customers does each sales rep have?</li>
+        <p style="margin: 0">SELECT SALESREP, COUNT(ID) FROM CUSTOMER GROUP BY SALESREP;</p>
+        <li>Did I underpay any invoices?</li>
+        <p style="margin: 0">SELECT PAYMENT.ID, INVOICE.ID FROM PAYMENT JOIN INVOICE<br>ON PAYMENT.INVOICE = INVOICE.ID WHERE PAYMENT.AMOUNT &lt;<br>INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
       </ol>
     </section>
   </div>
