@@ -203,7 +203,7 @@ var myModules = [
         {"label":"Homework", "href":"supplement/accounting-architecture/assignment.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"0"},
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
         {"deliverable":"Homework", "deadline":"4"}
       ]
     },
@@ -215,7 +215,7 @@ var myModules = [
         {"label":"Homework", "href":"supplement/business-model/assignment.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"0"},
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
         {"deliverable":"Homework", "deadline":"2"}
       ]
     }
@@ -234,7 +234,7 @@ var myModules = [
 
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"0"},
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
         {"deliverable":"Puzzle", "deadline":"4"},
         {"deliverable":"Homework", "deadline":"4"}
       ]
@@ -252,7 +252,7 @@ var myModules = [
         {"label":"Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"0"},
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
         {"deliverable":"Homework", "deadline":"4"},
         {"deliverable":"AI Report", "deadline":"4"}
       ]
@@ -269,7 +269,7 @@ var myModules = [
         {"label":"Homework", "href":"supplement/open-source/assignment.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"0"},
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
         {"deliverable":"Homework", "deadline":"4"}
       ]
     },
@@ -281,7 +281,7 @@ var myModules = [
         {"label":"Homework", "href":"supplement/operating-systems/assignment.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"0"},
+        {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
         {"deliverable":"Homework", "deadline":"2"}
       ]
     }
