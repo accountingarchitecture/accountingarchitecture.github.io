@@ -180,7 +180,7 @@ var myModules = [
       ]
     },
     {"date":"August 30, 2018", "title":"Professionalism",
-      "summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. You should read the lecture and the article in preparation for the quiz. The schedule lists the quiz due date.</p><p>Professionalism will be important throughout this course.  I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce the practice of drafting professional emails, which is an important part of professional communication.</p>",
+      "summary":"<p>Before we get into the technical content for this course, I would like first to talk about your future as a professional. This lecture focuses on the traits of a professional in the context of issues relevant to accountants. I hope that the lecture will inspire you as you prepare yourself for job interviews, internships, careers, and life. You should read the lecture and the article in preparation for the quiz. The schedule lists the quiz due date.</p><p>Professionalism will be important throughout this course. I will communicate with you in a professional manner, and I expect the same from you. The homework assignment will reinforce the practice of drafting professional emails, which is an important part of professional communication.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/professionalism.html"},
         {"label":"Article", "href":"supplement/professionalism/christensen.pdf", "filetype":"PDF"},
@@ -196,7 +196,7 @@ var myModules = [
   {"week":"Week 2",
   "topics":[
     {"date":"September 4, 2018", "title":"Accounting Architecture",
-        "summary":"<p>This topic marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some terms will be foreign because I invented them. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the focus of this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Because this topic is the first core topic of the semester, reading and understanding this and all remaining lectures and accompanying articles during the semester are not only preparation for the quizzes. They are also preparation for the midterm and final exam. As a result, you should carefully study each topic's lecture and article in order to score well on the quizzes and exams and acquire knowledge that will benefit you for your career.</p>",
+        "summary":"<p>This topic marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some terms will be foreign because I invented them. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the focus of this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Because this topic is the first core topic of the semester, reading and understanding this and all remaining lectures and accompanying articles during the semester are not only preparation for the quizzes. They are also preparation for the exams. As a result, you should carefully study each topic's lecture and article in order to score well on the quizzes and exams and acquire knowledge that will benefit you for your career.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/accounting-architecture.html"},
         {"label":"Article", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
@@ -208,7 +208,7 @@ var myModules = [
       ]
     },
     {"date":"September 6, 2018", "title":"Business Model",
-      "summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture framework. With regards to the Environment section of the framework, Compliance is especially important for accountants, but this is primarily the focus of other accounting courses. However, a discussion of the other two Environment blocks, Business Model and Risk, is worthwhile to motivate and give context to the other sections of the arch. You will learn about Risk later in the course in connection with the Control section. We discuss Business Model at this point for two reasons. First, this foundational block highlights the informational needs of internal and external stakeholders. Second, diagrams are the primary tool for communicating the processes that make up the business model, and discussing a business model is a useful way to learn how to read and draw diagrams.</p><p>The homework assignment will give you experience reading and interpreting diagrams. You can find the solution to this homework under the Content section of eCoursware following the assignment due date.</p>",
+      "summary":"<p>The majority of the course will address the Information, Technology, and Control sections of the accounting architecture framework. With regards to the Environment section of the framework, Compliance is especially important for accountants, but this is primarily the focus of other accounting courses. However, a discussion of the other two Environment blocks, Business Model and Risk, is worthwhile to motivate and give context to the other sections of the arch. You will learn about Risk later in the course in connection with the Control section. We discuss Business Model at this point for two reasons. First, this foundational block highlights the informational needs of internal and external stakeholders, which will prepare you to learn about the Information section of the arch. Second, diagrams are the primary tool for communicating the processes that make up the business model, and discussing business processes is a useful way to learn how to read and draw diagrams.</p><p>The homework assignment will give you experience reading and interpreting diagrams. You can find the solution to this homework under the Content section of eCoursware following the assignment due date.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/business-model.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
@@ -224,7 +224,7 @@ var myModules = [
   {"week":"Week 3",
   "topics":[
     {"date":"September 11, 2018", "title":"Information",
-      "summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science, has crafted the lecture for this topic. This lecture will explain the role that an information system should play (i.e., what the system <em>does</em>).</p><p>Starting this week, I have added a puzzle designed to get your creative juices flowing. I will provide puzzles on occasion throughout the semester. They are completely optional, but I will give extra credit for each correct solution. The schedule reports the puzzle due dates. After each due date, you can find the correct puzzle solution under the Content section of eCourseware.</p><p>As a reminder, your AI reports will be due next week. You should already have begun researching and collecting references. The button below links to the syllabus explanation of the report requirements, including the requirement to meet with the Center for Writing and Communication before submitting your report.</p>",
+      "summary":"<p>The Information section of the accounting architecture model is the core competency of the information sciences discipline. As a result, my wife and co-author, Ms. Emily Coyne, who has a master's degree in information science, has crafted the lecture for this topic. This lecture will explain the role that an information system should play (i.e., what the system <em>does</em>).</p><p>Starting this week, I have added a puzzle designed to get your creative juices flowing. I will provide puzzles on occasion throughout the semester. They are completely optional, but I will give extra credit for each correct solution. The schedule reports the puzzle due dates. After each due date, you can find the correct puzzle solution under the Content section of eCourseware.</p><p>As a reminder, your AI reports will be due next week. You should already have begun researching and collecting references. The button below links to the syllabus explanation of the report requirements. Please remember that the <a href=\"http://www.memphis.edu/cwc/\" target=\"_blank\" rel=\"noopener\" aria-label=\"Website opens in new window\">Center for Writing and Communication</a> is available to help you to draft and revise your report.</p>",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/coins.html"},
         {"label":"Lecture", "href":"lectures/information.html"},
@@ -244,7 +244,7 @@ var myModules = [
   {"week":"Week 4",
   "topics":[
     {"date":"September 18, 2018", "title":"Hardware",
-      "summary":"<p>This is the first lecture on the Technology section of the accounting architecture framework. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course are the <em>most</em> interesting&mdash;familiarity with computer hardware is an important first step toward understanding the design requirements of an information system.</p><p>Your AI reports are also due this week. <em>I will not extend this deadline for any reason</em>.</p>",
+      "summary":"<p>This is the first lecture on the Technology section of the accounting architecture framework. Although this is not the most interesting lecture of the course&mdash;I know that some of you would snicker and say that none of the lectures in this course are the <em>most</em> interesting&mdash;familiarity with computer hardware is an important first step toward understanding the makeup of an information system.</p><p>Your AI reports are also due this week. You should have already completed the research for this report, and I encourage you to spend enough time writing to prepare multiple drafts. Please remember that the <a href=\"http://www.memphis.edu/cwc/\" target=\"_blank\" rel=\"noopener\" aria-label=\"Website opens in new window\">Center for Writing and Communication</a> is available to help you to draft and revise your report.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/hardware.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
@@ -262,7 +262,7 @@ var myModules = [
   {"week":"Week 5",
   "topics":[
     {"date":"September 25, 2018", "title":"Software: Open Source",
-      "summary":"<p>This lecture begins our discussion of the Software block of the arch. This first Software lecture introduces the most important concept in enterprise-grade software today: open source. However, because the term &ldquo;open&rdquo; applies to more than only software, the lecture introduces multiple aspects of openness that affect the design and implementation of corporate information systems. Openness also heavily influences the breadth of IT tools that we use for personal computing each and every day. The homework assignment for this topic will help you to understand differences between open and closed content. You can find the solution to this homework under the Content section of eCoursware following the assignment due date.</p>",
+      "summary":"<p>This lecture begins our discussion of the Software block of the arch. This first Software lecture introduces the most important concept in enterprise-grade software today: open source. However, because the term &ldquo;open&rdquo; applies to more than just software, the lecture introduces multiple aspects of openness that affect information systems. Openness also heavily influences the breadth of tools that we use for personal computing each and every day.</p><p>The homework assignment for this topic will help you to understand differences between open and closed content. You can find the solution to this homework under the Content section of eCoursware following the assignment due date.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/open-source.html"},
         {"label":"Article", "href":"https://opensource.com/article/17/8/enterprise-open-source-advantages"},
@@ -274,7 +274,7 @@ var myModules = [
       ]
     },
     {"date":"September 27, 2018", "title":"Software: Operating Systems",
-      "summary":"<p>The second Software lecture introduces the most fundamental software in an information system: the operating system. This lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems. The homework assignment will begin to give you experience with using the operating system that powers most information systems. Subsequent homework assignments will build on this initial experience.</p>",
+      "summary":"<p>The second Software lecture introduces the most fundamental software in an information system: the operating system. This lecture provides an explanation of what an operating system is, as well as a brief history of the most prominent enterprise-grade operating systems. (Hint: Windows is not on the list.)</p><p>The homework assignment will begin to give you experience with using the operating system that powers most information systems. Subsequent homework assignments will build on this initial experience.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/operating-systems.html"},
         {"label":"Article", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
@@ -290,13 +290,12 @@ var myModules = [
   {"week":"Week 6",
   "topics":[
     {"date":"October 2, 2018", "title":"Storage",
-      "summary":"<p>This lecture covers the Storage block of the arch. Data storage is especially important for operationalizing the information and Big Data life cycles in order for raw data to transition successfully into retrievable, accurate information. The concepts in this lecture will arise again in the Control section of the accounting architecture framework, as well as the Data Analytics topic, and the homework assignment for this topic will provide valuable preparation for completing the Analytics project.</p>",
+      "summary":"<p>This lecture covers the Storage block of the arch. Data storage is especially important for operationalizing the information and Big Data life cycles in order for raw data to transition successfully into retrievable, accurate information. The concepts in this lecture will arise again in the Control section of the accounting architecture framework, as well as the Data Analytics topic.</p><p>The homework assignment for this topic will also provide valuable preparation for completing the analytics project, so I encourage you to spend plenty of time on it and not shortcut the learning experience.</p>",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
         {"label":"Lecture", "href":"lectures/storage.html"},
         {"label":"Article", "href":"supplement/storage/storage.png", "filetype":"Image"},
-        {"label":"Homework", "href":"supplement/storage/assignment.html"},
-        {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
+        {"label":"Homework", "href":"supplement/storage/assignment.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
@@ -314,8 +313,7 @@ var myModules = [
         {"label":"Puzzle", "href":"supplement/puzzles/robbers.html"},
         {"label":"Lecture", "href":"lectures/services.html"},
         {"label":"Article", "href":"supplement/services/erp.pdf", "filetype":"PDF"},
-        {"label":"Homework", "href":"supplement/services/assignment.html"},
-        {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
+        {"label":"Homework", "href":"supplement/services/assignment.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
@@ -328,11 +326,10 @@ var myModules = [
   {"week":"Week 8",
   "topics":[
     {"date":"October 18, 2018", "title":"Risk &amp; Control",
-      "summary":"<p>Control is the final section of the accounting architecture framework. This lecture begins with a discussion of Risk, which is the third block in the Environment section, and then introduces internal controls, which protect against risk. Over the past decade, Control has become a central focus of the accounting profession.</p><p>This topic has no homework assignment. Instead, you should use this time to study for and take Exam 2. The same rules apply to Exam 2 as applied to Exam 1, except that this exam will be longer because it covers Accounting Architecture, Business Model, Information, and Technology. The exam is on eCourseware. <em>I will not reopen or extend the exam for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date.</p>",
+      "summary":"<p>Control is the final section of the accounting architecture framework. This lecture begins with a discussion of Risk, which is the third block in the Environment section, and then introduces internal controls, which protect against risk. Over the past two decades, internal controls have become a central focus of the accounting profession.</p><p>This topic has no homework assignment. Instead, you should use this time to study for and take the midterm exam. The exam covers all lectures on accounting architecture through the end of the Technology section. You will find the exam on eCourseware. It is similar to the lecture quizzes. <em>I will not reopen or extend the exam for any reason</em>. This is a timed, closed-book exam. You must complete the exam in one sitting, and you may not reference any resources while completing the exam. You may also not discuss the exam with any other individual until after the exam due date. As the syllabus explains, you may retake the exam if you score less than 65%. Barring any unforeseen circumstances, I will offer retakes in class on Thursday, November 1.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/risk-and-control.html"},
-        {"label":"Article", "href":"supplement/risk-and-control/coso.pdf", "filetype":"PDF"},
-        {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
+        {"label":"Article", "href":"supplement/risk-and-control/coso.pdf", "filetype":"PDF"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
@@ -344,13 +341,12 @@ var myModules = [
   {"week":"Week 9",
   "topics":[
     {"date":"October 23, 2018", "title":"Security",
-      "summary":"<p>Security is the first block of the Control section of the accounting architecture framework. The recent surge in cyber attacks and malicious software has made security a primary focus for all systems designers and maintainers, and businesses have increasingly viewed security as a responsibility shared by all employees, regardless of their title or job description.</p><p>This week marks the final deadline for the practice set. All practice set modules must be complete by this week's deadline. I will not extend this deadline <em>for any reason</em>.</p>",
+      "summary":"<p>Security is the first block of the Control section of the accounting architecture framework. The recent surge in cyber attacks and malicious software has made security a primary focus for all systems designers and maintainers, and businesses have increasingly viewed security as a responsibility shared by all employees, regardless of their title or job description.</p>",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/teasers.html"},
         {"label":"Lecture", "href":"lectures/security.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2017/3/it-security-start-3-ways-make-it-business-priority"},
-        {"label":"Homework", "href":"supplement/security/assignment.html"},
-        {"label":"Milestones", "href":"supplement/practice-set/milestones.html"}
+        {"label":"Homework", "href":"supplement/security/assignment.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
@@ -363,7 +359,7 @@ var myModules = [
   {"week":"Week 10",
   "topics":[
     {"date":"October 30, 2018", "title":"Confidentiality",
-      "summary":"<p>Confidentiality is the second block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic.</p>",
+      "summary":"<p>Confidentiality is the second block of the Control section. The concepts of this lecture explain some of the building blocks underlying the famous cryptocurrency Bitcoin, but they also apply heavily to everyday Internet traffic.</p><p>Please reserve extra time to complete assignments this week. In addition to the homework assignment, part 1 of the analytics project is due this week. The project instructions explain how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. You can find the solution to project part 1 under the Content section of eCourseware after the project due date. I will not accept any late project submissions. You should begin this project early to leave plenty of time for troubleshooting.</p><p>Also, instead of holding class on Thursday, I will offer exam retakes in our classroom during class time. Everyone who does not need to retake the midterm should use this time to work on the project.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/confidentiality.html"},
         {"label":"Article", "href":"supplement/confidentiality/blockchain.pdf", "filetype":"PDF"},
@@ -399,13 +395,12 @@ var myModules = [
   {"week":"Week 12/13",
   "topics":[
     {"date":"November 13, 2018", "title":"Processing Integrity",
-      "summary":"<p>Processing Integrity is the final Control block. This lecture strongly relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases.</p><p>This week's video tutorial showcases the online, open source diagramming tool that I used to create the activity and structure diagrams for this course. You may use this tool to complete the homework assignment, but you are not required to use it. However, you must use a software tool to complete the assignment. You should not submit a hand-drawn diagram because your diagram should look as professional as possible. You can find the solution to this homework under the Content section of eCoursware following the assignment due date.</p>",
+      "summary":"<p>Processing Integrity is the final Control block. This lecture strongly relates to the Storage block because processing integrity addresses error prevention in data stores, especially relational databases. Because of Thanksgiving Break next week, I have dedicated this week and the early part of next week to this topic.</p><p>One reason for reserving extra time for this topic is the complexity of one component of processing integrity: database normalization. The homework assignment combines the concepts of normalization with entity-relationships diagrams from the Storage lecture. Careful reading of this lecture and a thorough understanding of normalization and ER diagrams are necessary in order to complete this week's assignment.</p>",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
         {"label":"Lecture", "href":"lectures/processing-integrity.html"},
         {"label":"Article", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
-        {"label":"Homework", "href":"supplement/processing-integrity/assignment.html"},
-        {"label":"Tutorial", "href":"https://www.youtube.com/watch?v=XyYS5N1hCtk"}
+        {"label":"Homework", "href":"supplement/processing-integrity/assignment.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
@@ -418,12 +413,11 @@ var myModules = [
   {"week":"Week 14/15",
   "topics":[
     {"date":"November 27, 2018", "title":"Data Analytics",
-      "summary":"<p>The final topic of this course is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. Effective data analytics relies on an accurate understanding of all aspects of accounting architecture. The lecture introduces multiple analytical tools and programming languages, but the Analytics project focuses on one: SQL. The project instructions explain how to use MySQL&mdash;a popular open source RDBMS&mdash;to import a database and run SQL queries to analyze data in that database. You will need the Project, Database, and Dictionary files posted with this topic in order to complete the Analytics project. You can find the solution to this project under the Content section of eCourseware after the project due date. I will not accept any late project submissions.</p><p>Please note the deadlines for this week's deliverables because of the end of classes. Also, you must complete the Analytics project before completing this topic's homework assignment, as the homework assignment instructs you to delete your Codeanywhere account, which you will need for the Analytics project.</p>",
+      "summary":"<p>The final topic of this course is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. Effective data analytics relies on an accurate understanding of all aspects of accounting architecture.</p><p>This lecture introduces multiple analytical tools and programming languages, but the analytics project focuses on one: SQL. I have reserved the remainder of the semester for this topic and the analytics project. If you have not already done so, you must complete project part 1 before you can attempt project part 2. You cannot submit the solution to project part 1 at this point for credit, but project part 1 prepares the database that you will use in project part 2. You can find the solution to project part 2 under the Content section of eCourseware after the project due date. I will not accept any late project submissions.</p><p>Please note that the deadlines for this topics's deliverables are the last day of classes. That will give you plenty of time to complete both deliverables, but I encourage you not to procrastinate working on part 2 of the analytics project. Also note that you must complete project part 2 before completing this topic's homework assignment, as the homework assignment instructs you to delete your Codeanywhere account, which you need for the analytics project. Also, if you wish to submit any late homework assignments for credit, you must submit them and notify me before the last day of classes.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/data-analytics.html"},
         {"label":"Article", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
         {"label":"Project Part 2", "href":"supplement/data-analytics/project-part2.html"},
-        {"label":"Database", "href":"https://www.dropbox.com/s/kb26ccuv0g7tc3u/company.sql?dl=1", "filetype":"SQL plain-text file"},
         {"label":"Dictionary", "href":"supplement/data-analytics/data-dictionary.pdf", "filetype":"PDF"},
         {"label":"Homework", "href":"supplement/final/assignment.html"}
       ],
