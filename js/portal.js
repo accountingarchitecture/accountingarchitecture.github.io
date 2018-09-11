@@ -235,8 +235,8 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Puzzle", "deadline":"4"},
-        {"deliverable":"Homework", "deadline":"4"}
+        {"deliverable":"Puzzle", "deadline":"5"},
+        {"deliverable":"Homework", "deadline":"5"}
       ]
     },
   ]
@@ -253,8 +253,8 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Homework", "deadline":"4"},
-        {"deliverable":"AI Report", "deadline":"4"}
+        {"deliverable":"Homework", "deadline":"5"},
+        {"deliverable":"AI Report", "deadline":"5"}
       ]
     }
   ]
@@ -270,7 +270,7 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Homework", "deadline":"4"}
+        {"deliverable":"Homework", "deadline":"5"}
       ]
     },
     {"date":"September 27, 2018", "title":"Software: Operating Systems",
@@ -282,7 +282,7 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Homework", "deadline":"2"}
+        {"deliverable":"Homework", "deadline":"3"}
       ]
     }
   ]
@@ -299,8 +299,8 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Puzzle", "deadline":"4"},
-        {"deliverable":"Homework", "deadline":"4"}
+        {"deliverable":"Puzzle", "deadline":"5"},
+        {"deliverable":"Homework", "deadline":"5"}
       ]
     }
   ]
@@ -312,7 +312,7 @@ var myModules = [
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/robbers.html"},
         {"label":"Lecture", "href":"lectures/services.html"},
-        {"label":"Article", "href":"supplement/services/erp.pdf", "filetype":"PDF"},
+        {"label":"Article", "href":"https://www.oracle.com/applications/erp/what-is-erp.html"},
         {"label":"Homework", "href":"supplement/services/assignment.html"}
       ],
       "due":[
@@ -333,7 +333,7 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Midterm Exam", "deadline":"2"}
+        {"deliverable":"Midterm Exam", "deadline":"3"}
       ]
     }
   ]
@@ -350,8 +350,8 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Puzzle", "deadline":"4"},
-        {"deliverable":"Homework", "deadline":"4"},
+        {"deliverable":"Puzzle", "deadline":"5"},
+        {"deliverable":"Homework", "deadline":"5"},
       ]
     }
   ]
@@ -368,8 +368,8 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Homework", "deadline":"4"},
-        {"deliverable":"Project Part 1", "deadline":"4"}
+        {"deliverable":"Homework", "deadline":"5"},
+        {"deliverable":"Project Part 1", "deadline":"5"}
       ]
     }
   ]
@@ -386,8 +386,8 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Puzzle", "deadline":"4"},
-        {"deliverable":"Homework", "deadline":"4"}
+        {"deliverable":"Puzzle", "deadline":"5"},
+        {"deliverable":"Homework", "deadline":"5"}
       ]
     }
   ]
@@ -404,7 +404,7 @@ var myModules = [
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"0", "time":"11.20"},
-        {"deliverable":"Puzzle", "deadline":"4"},
+        {"deliverable":"Puzzle", "deadline":"5"},
         {"deliverable":"Homework", "deadline":"7"}
       ]
     }
