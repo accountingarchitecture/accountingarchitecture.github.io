@@ -25,7 +25,16 @@
   <div class="slides">
     <section>
       <h3>Project Part 1 - Intro</h3>
-      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server, import a database, run queries, and report your results. Pretend that a client has given you access to a dataset and a Dictionary file, which you can find on the course portal, that explains the dataset. The client wants you to answer a number of questions using SQL queries. Begin by installing mysql-server in your Linux container. (You should already have installed the dialog and man-db packages previously. These are necessary to install mysql-server. During the install, leave prompts to create a password blank by simply pressing ENTER.) Follow the steps on the next two screens of these instructions to create and import your database. The final screen lists the queries to run and how to report your results.</p>
+      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server, import a database, run queries, and report your results. Pretend that a client has given you access to a dataset and a Dictionary file, which you can find on the course portal, that explains the dataset. The client wants you to answer a number of questions using SQL queries. The next screen explains how to install the relational database management system MySQL. The screen screen provides a number of MySQL commands that you will need for this project. The third screen explains how to create and import the client's database. The final screen lists the questions and queries and explains how to report your results.</p>
+    </section>
+
+    <section>
+      <h3>Install MySQL</h3>
+      <ol style="font-size: 34px">
+        <li><u>Prerequisite</u>: Your container must have the dialog and bsdmainutils packages installed. These should be installed by default in all Blank Ubuntu 16.04 containers. If you are uncertain whether these are already installed, try to install them using your package manager. If these packages are already installed, your package manager will respond that they are already the newest version.)</li>
+        <li>Install mysql-server. During the install, you will see a dialog window asking for a password for the database root user. Enter a password that is easy for you to remember. You will not receive a visual feedback as you type the password (i.e., the screen will not move the cursor or show any asterisks to represent the password characters). Press ENTER when you have finished typing the password. On the next dialog screen, type your password again to confirm and press ENTER.</li>
+        <li>Start the MySQL server: <strong>sudo systemctl start mysql.service</strong></li>
+      </ol>
     </section>
 
     <section>
@@ -76,15 +85,14 @@
     </section>
 
     <section>
-      <h3>Linux Commands</h3>
-      <ol>
-        <li>Verify that MySQL server is running: <strong>sudo service mysql start</strong></li>
-        <li>Log in to your MySQL database server: <strong>mysql -uroot</strong></li>
-        <li>Create a database and name it &ldquo;company&rdquo; (without the quotes).</li>
+      <h3>Create and Import Database</h3>
+      <ol style="font-size: 34px">
+        <li>Log in to your MySQL database server: <strong>mysql -u root -p</strong> (Enter the root user password that you created when installing mysql-server into the password prompt. For security reasons, there will be no visual feedback as you type the password. Press ENTER after typing the password.)</li>
+        <li>Create a database and name it &ldquo;company&rdquo; (without quotes).</li>
         <li>Exit MySQL.</li>
-        <li>Download the database file from the following URL to your container and name it &ldquo;company.sql&rdquo; (without the quotes): <strong>https://goo.gl/Mc5Czc</strong></li>
-        <li>Import the Database file into MySQL:<br><strong>mysql -uroot company &lt; company.sql</strong></li>
-        <li>Log in to the newly created database: <strong>mysql -uroot company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
+        <li>Download the database file from the following URL to your container and name it &ldquo;company.sql&rdquo; (without quotes): <strong>https://goo.gl/Mc5Czc</strong></li>
+        <li>Import the Database file into MySQL:<br><strong>mysql -u root -p company &lt; company.sql</strong></li>
+        <li>Log in to the newly created database: <strong>mysql -u root -p company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
       </ol>
     </section>
 
