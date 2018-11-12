@@ -98,7 +98,7 @@
 
     <section>
       <h3>Queries</h3>
-      <p style="font-size: 30px">Take one screenshot of as much of the output of each query as possible, and save each screenshot as an image file. Draft a professional email to your client that gives the answers to these questions. Export your email document to PDF, and upload the PDF and all image files to Dropbox on eCourseware. Your grade will be based on accuracy and the professional quality of your email.</p>
+      <p style="font-size: 30px">Take one screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Export that document to PDF. In a separate document, draft a professional email to your client that gives the answers to these questions. Export your email document to PDF, and upload both PDF files to Dropbox on eCourseware. Your grade will be based on accuracy and the professional quality of your email.</p>
       <ol style="font-size: 30px">
         <li>Which sale approvals have no approval date?</li>
         <p style="margin: 0">SELECT ID FROM SALE WHERE APPROVALDATE = 0000-00-00;</p>
@@ -107,7 +107,7 @@
         <li>How many customers does each sales rep have?</li>
         <p style="margin: 0">SELECT SALESREP, COUNT(ID) FROM CUSTOMER GROUP BY SALESREP;</p>
         <li>Did I underpay any invoices?</li>
-        <p style="margin: 0">SELECT PAYMENT.ID, INVOICE.ID FROM PAYMENT JOIN INVOICE<br>ON PAYMENT.INVOICE = INVOICE.ID WHERE PAYMENT.AMOUNT &lt;<br>INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
+        <p style="margin: 0">SELECT INVOICE.ID FROM PAYMENT JOIN INVOICE<br>ON PAYMENT.INVOICE = INVOICE.ID WHERE PAYMENT.AMOUNT &lt;<br>INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
       </ol>
     </section>
   </div>
