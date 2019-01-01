@@ -18,14 +18,14 @@ function builder(modules) {
             navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
           }
         }
-        if(isCurrentOrArchived(modules[i]) == 'current') topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="summary">' + modules[i].topics[j].summary + '</div><div class="nav">' + navbuttons + '</div></div>';
-        else topic += '<div class="topic"><div class="date">' + modules[i].topics[j].date + '</div><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="summary" style="display: none">' + modules[i].topics[j].summary + '</div><div class="nav" style="display: none">' + navbuttons + '</div></div>';
+        if(isCurrentOrArchived(modules[i]) == 'current') topic += '<div class="topic"><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="nav">' + navbuttons + '</div></div>';
+        else topic += '<div class="topic"><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="nav" style="display: none">' + navbuttons + '</div></div>';
       }
-      content += '<div class="module"><div class="week">' + modules[i].week + '</div>' + topic + '</div>';
+      content += '<div class="module"><div class="week"><div class="label">' + modules[i].week + '</div><div class="date">' + modules[i].topics[0].date + '</div></div>' + topic + '</div>';
     }
   }
-  if(content == '' && isHomeOrArchive() == 'Home') content += '<div class="module"><div class="topic"><div class="date">' + Date() + '</div><h2>No current topics.</h2>' + '</div>';
-  else if(content == '' && isHomeOrArchive() == 'Archive') content += '<div class="module"><div class="topic"><div class="date">' + Date() + '</div><h2>No archived topics.</h2>' + '</div>';
+  if(content == '' && isHomeOrArchive() == 'Home') content += '<div class="module"><div class="topic"><h2>No current topics.</h2>' + '</div>';
+  else if(content == '' && isHomeOrArchive() == 'Archive') content += '<div class="module"><div class="topic"><h2>No archived topics.</h2>' + '</div>';
   document.getElementById('content').innerHTML = content;
 }
 
@@ -122,14 +122,12 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 // How to expand topic content
 function openTopic(topic) {
   topic.getElementsByClassName('title')[0].className='title expand';
-  topic.getElementsByClassName('summary')[0].style.display='';
   topic.getElementsByClassName('nav')[0].style.display='';
 }
 
 // How to hide topic content
 function closeTopic(topic) {
   topic.getElementsByClassName('title')[0].className='title';
-  topic.getElementsByClassName('summary')[0].style.display='none';
   topic.getElementsByClassName('nav')[0].style.display='none';
 }
 
