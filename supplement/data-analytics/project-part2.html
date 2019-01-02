@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <title>Project Part 2</title>
+  <title>Assignment</title>
 
   <meta name="author" content="Joshua G. Coyne, PhD">
   <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
@@ -25,28 +25,31 @@
   <div class="slides">
     <section>
       <h3>Project Part 2 - Intro</h3>
-      <p>Part 2 of this project tests your ability to query a database to analyze data. Your assignment is to identify the <em>queries</em> necessary to find the answers.</p>
-      <p>In part 1 of this project, you already installed MySQL Server and imported a database. If you have not completed part 1 of this project, then you will not be able to complete part 2, and you should review the instructions for part 1 of this project in order to install MySQL and import the database for this project. For part 2 of this project, you will use that same database to run SQL queries.</p>
-      <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
+      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server, import a database, run queries, and report your results. Pretend that a client has given you access to a dataset and a Dictionary file, which you can find on the course portal, that explains the dataset. The client wants you to answer a number of questions using SQL queries. The next screen explains how to install the relational database management system MySQL. The screen screen provides a number of MySQL commands that you will need for this project. The third screen explains how to create and import the client's database. The final screen lists the questions and queries and explains how to report your results.</p>
     </section>
 
     <section>
-      <h3>Tips</h3>
-        <p>Begin each question by looking at the Dictionary file for the relevant table(s). Then, use MySQL to print out the table in its entirety: SELECT * FROM [TABLENAME]; (Replace [TABLENAME] with the actual table name. For example, SELECT * FROM VENDOR; to view all data in the Vendor table.) The data may be more than you can see on one screen, but you can use your mouse to scroll in Codeanywhere.</p>
-        <p>Before considering SQL syntax, think logically about what you want to know. This will help you to determine which attributes to select (e.g., Do I need ID or PO?), which summary functions may be necessary (e.g., Do I need to add values from multiple records or count the number of records?), and how to limit the results to records that match all question criteria (e.g., Do I only need orders from a single day?)</p>
+      <h3>Create a Regular User</h3>
+      <p><u><em>Structured Query Language</em></u> (SQL) is the primary language for interacting with relational databases. This assignment is the first of two to increase your ability to work with this language for both storage and data analytics purposes. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF, and upload it to Dropbox on eCourseware. Your grade for this assignment will be your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt.</p>
     </section>
 
     <section>
-      <h3>Questions</h3>
-      <ol style="font-size: 33px">
-        <li>(PAYMENT table) Which payment ID(s) have no purchase order number?</li>
-        <li>(VENDOR table) How many vendors are located in Texas?</li>
-        <li>(SALE table) What is total sales revenue? (Revenue is unit price times quantity less the savings from a promotional or discount rate.)</li>
-        <li>(EMPLOYEE table) How many employees work at each location? (You should generate one query that reports one number for each location.)</li>
-        <li>(PAYMENT table) Which invoices have multiple payments?</li>
-        <li>(INVOICE and EMPLOYEE table) Which employees processed invoices? (Your query should report employee name without any duplicates.) 
-        <li>(RECEIPT and PURCHASE tables) Which, if any, receipt(s) have a different quantity of raw materials delivered than were ordered in the purchase order?</li>
-        <li>(SALE table) Which customer(s) placed the most expensive order?</li>
+      <h3>Learn SQL</h3>
+      <p><u><em>Structured Query Language</em></u> (SQL) is the primary language for interacting with relational databases. This assignment is the first of two to increase your ability to work with this language for both storage and data analytics purposes. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF, and upload it to Dropbox on eCourseware. Your grade for this assignment will be your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt.</p>
+    </section>
+
+    <section>
+      <h3>Queries</h3>
+      <p style="font-size: 30px">Take one screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Export that document to PDF. In a separate document, draft a professional email to your client that gives the answers to these questions. Export your email document to PDF, and upload both PDF files to Dropbox on eCourseware. Your grade will be based on accuracy and the professional quality of your email.</p>
+      <ol style="font-size: 30px">
+        <li>Which sale approvals have no approval date?</li>
+        <p style="margin: 0">SELECT ID FROM SALE WHERE APPROVALDATE = 0000-00-00;</p>
+        <li>What is the total we have paid to vendors for the current period?</li>
+        <p style="margin: 0">SELECT SUM(AMOUNT) FROM PAYMENT;</p>
+        <li>How many customers does each sales rep have?</li>
+        <p style="margin: 0">SELECT SALESREP, COUNT(ID) FROM CUSTOMER GROUP BY SALESREP;</p>
+        <li>Did I underpay any invoices?</li>
+        <p style="margin: 0">SELECT INVOICE.ID FROM PAYMENT JOIN INVOICE<br>ON PAYMENT.INVOICE = INVOICE.ID WHERE PAYMENT.AMOUNT &lt;<br>INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
       </ol>
     </section>
   </div>

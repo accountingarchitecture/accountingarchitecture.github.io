@@ -159,43 +159,6 @@
     </section>
 
     <section>
-      <h2>Apt Commands</h2>
-      <p>Apt is a DEB-based package manager. The following are some apt line commands:</p>
-      <div class="table">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap">sudo apt update</div>
-          <div class="table-cell">Update repository list to identify newest version of all applications</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap">sudo apt upgrade</div>
-          <div class="table-cell">Upgrade all installed applications to newest versions</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap">sudo apt search</div>
-          <div class="table-cell">Look for application in repositories</div>
-          <div class="table-cell">sudo apt search mysql (Find all applications with the word mysql in the name or description)</div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap">sudo apt install</div>
-          <div class="table-cell">Install application</div>
-          <div class="table-cell">sudo apt install mysql-server (Install application named mysql-server)</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap">sudo apt remove</div>
-          <div class="table-cell">Uninstall application</div>
-          <div class="table-cell">sudo apt remove mysql-server (Remove application named mysql-server)</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
       <h2>Dependencies</h2>
       <p>Software applications rarely include all code necessary perform their intended functions. One reason for this is that multiple applications can share the same functionality and duplicating the code would be inefficient. As a result, many applications rely on software <u><em>libraries</em></u>. Just as a physical library provides a shared store of knowledge, a software library provides applications with a shared store of functionality.</p>
       <p>Libraries that an application needs in order to function properly represent <u><em>dependencies</em></u> of that application. Many package managers identify and install all dependencies when installing a software application. This makes software administration much easier for the user.</p>
@@ -220,12 +183,117 @@
 
     <section>
       <h2>But the Winner Is...</h2>
-      <p>As an aside, despite the continued popularity of Linux in enterprise-grade information systems, it turns out that it is not the most widely used operating system. Thanks to Intel's decision to embed it in all of their CPUs, MINIX is the most widely used operating system, even though the computer user never actually interacts with it. MINIX is another open source, Unix-like operating system developed by Andrew S. Tanenbaum, originally intended as an educational tool. The permissive BSD license that applies to the MINIX source code allowed Intel to convert the open source operating system into a proprietary operating system that they could secretly embed in their CPUs as what they call &ldquo;Management Engine.&rdquo;</p>
+      <p>As an aside, despite the continued popularity of Linux in enterprise-grade information systems, it turns out that it is not the most widely used operating system. Thanks to Intel's decision to embed it in all of their CPUs, MINIX is the most widely used operating system, even though the computer user never actually interacts with it. MINIX is another open source, UNIX-like operating system developed by Andrew S. Tanenbaum, originally intended as an educational tool. The permissive BSD license that applies to the MINIX source code allowed Intel to convert the open source operating system into a proprietary operating system that they could secretly embed in their CPUs as what they call &ldquo;Management Engine.&rdquo;</p>
     </section>
 
     <section>
       <h2>A Heads Up Would Have Been Nice</h2>
       <p>Tanenbaum, after hearing that his OS is now the most widely used in the world, simply said, &ldquo;This was a complete surprise. I don't mind, of course, and was not expecting any kind of payment since that is not required. There isn't even any suggestion in the license that it would be appreciated. The only thing that would have been nice is that after the project had been finished and the chip deployed, that someone from Intel would have told me, just as a courtesy, that MINIX was now probably the most widely used operating system in the world on x86 computers. That certainly wasn't required in any way, but I think it would have been polite to give me a heads up, that's all.&rdquo;</p>
+    </section>
+
+    <section>
+      <h2>Appendix:<br>Linux Commands for Software and Package Management</h2>
+    </section>
+
+    <section>
+      <h2>Software Management Commands</h2>
+      <p>Apt is a DEB-based package manager. Although not all Linux distributions are DEB-based, simply knowing how to install and upgrade software on a DEB-based Linux distro is an excellent start to understanding how to manage, use, and interact with Linux:</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt update</strong></div>
+          <div class="table-cell">Update repository list to identify newest version of all applications</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt upgrade</strong></div>
+          <div class="table-cell">Upgrade all installed applications to newest versions</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt search</strong></div>
+          <div class="table-cell">Look for application in repositories</div>
+          <div class="table-cell">apt search mysql (Find all applications with the word mysql in the name or description)</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt install</strong></div>
+          <div class="table-cell">Install application</div>
+          <div class="table-cell">sudo apt install mysql-server (Install application named mysql-server)</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt remove</strong></div>
+          <div class="table-cell">Uninstall application</div>
+          <div class="table-cell">sudo apt remove mysql-server (Remove application named mysql-server)</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Software Help Commands</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>which</strong></div>
+          <div class="table-cell">Print path to installed application to terminal or print nothing if application is not installed</div>
+          <div class="table-cell">which nano (Print path to nano, e.g., /bin/nano, to terminal or print nothing if nano is not installed) </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap"><strong>man</strong></div>
+          <div class="table-cell">Open manual page for application</div>
+          <div class="table-cell">
+            <ul>
+              <li>man apt (Open manual page for the apt application)</li>
+              <li>q (Close manual page)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>(NB: The <strong>which</strong> command is most useful for determining whether an application is already installed. The path to the application is generally less useful, but whether <strong>which</strong> prints something or nothing to the terminal is a good test for whether an application is installed.)</p>
+    </section>
+
+    <section>
+      <h2>UNIX Philosophy</h2>
+      <p>The UNIX philosophy encourages software developers to make small programs that can perform a single task. The power of UNIX-like operating systems is in the ability to chain functions by passing the output of one program to the next program using certain special characters:</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Character</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"></div>
+          <div class="table-cell">Update repository list to identify newest version of all applications</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap">sudo apt upgrade</div>
+          <div class="table-cell">Upgrade all installed applications to newest versions</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap">sudo apt search</div>
+          <div class="table-cell">Look for application in repositories</div>
+          <div class="table-cell">sudo apt search mysql (Find all applications with the word mysql in the name or description)</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap">sudo apt install</div>
+          <div class="table-cell">Install application</div>
+          <div class="table-cell">sudo apt install mysql-server (Install application named mysql-server)</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap">sudo apt remove</div>
+          <div class="table-cell">Uninstall application</div>
+          <div class="table-cell">sudo apt remove mysql-server (Remove application named mysql-server)</div>
+        </div>
+      </div>
     </section>
   </div>
   </div>

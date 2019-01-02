@@ -150,42 +150,6 @@
     </section>
 
     <section>
-      <h2>Permission and Ownership Commands</h2>
-      <div class="table">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo chown</strong></div>
-          <div class="table-cell">Change file or folder user and group</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>sudo chown acc test.txt</strong> (Change user of test.txt to acc)</li>
-              <li><strong>sudo chown :dep test.txt</strong> (Change group of test.txt to dep)</li>
-              <li><strong>sudo chown acc:dep test.txt</strong> (Change user of file test.txt to acc and group to dep)</li>
-              <li><strong>sudo chown acc:dep Downloads</strong> (Change user of Downloads folder in current folder to acc and group to dep)</li>
-              <li><strong>sudo chown -R acc:dep Downloads</strong> (Change user of Downloads folder in current folder and all of its contents to acc and group to dep)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo chmod</strong></div>
-          <div class="table-cell">Change file or folder permissions</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>sudo chmod 644 test.txt</strong> (Change permissions of test.txt to 644)</li>
-              <li><strong>sudo chmod -R 777 /var/www</strong> (Change permissions of www folder in var folder and all its contents to 777)</li>
-              <li><strong>sudo chmod a+x Documents</strong> (Change permissions of Documents folder in current folder to add execute to all users)</li>
-              <li><strong>sudo chmod u+w,g-x,o-r test.txt</strong> (Change permissions of test.txt to add write to user, remove execute from group, and remove read from others)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
       <h2>One User to Rule Them All</h2>
       <p>In any system, whether file or database, every data object must have an owner. In UNIX-like operating systems, most users only own content that they create. This prevents unauthorized manipulation of system files. These files belong to the <em><u>root</u></em> user, also called the superuser or system user. In addition to owning the system files, the root user has full access to all files owned by any other user. Popular database systems also employ a root user who has all privileges and can grant those privileges to other users. Because permissions can be difficult to navigate, some succumb to the temptation to run all applications as the root user. This is a <em>worst-case scenario</em> for security; it increases the likelihood of unauthorized or unintended changes to the system. Consistent use of the root user is a red flag that proper IT controls are not in place.</p>
     </section>
@@ -317,6 +281,46 @@
       <h2>Security is Everyone's Problem</h2>
       <p>Security is the foundation of the Trust Services framework, and it is the first step toward internal control of an information system. As a wise person once said, &ldquo;No computing environment is invulnerable. The only secure system is one that is not connected to anything, locked in a secure room, and turned off.&rdquo; Because control is necessary to combat risks, security should be everyone's responsibility.</p>
       <blockquote>Every company should have a team focused on security but it shouldn't end there. Security needs to be the responsibility of everyone.<br> &ndash; George Papayiannis, CTO, Vena Solutions</blockquote>
+    </section>
+
+    <section>
+      <h2>Appendix:<br>Linux Security Commands</h2>
+    </section>
+
+    <section>
+      <h2>Permission and Ownership Commands</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo chown</strong></div>
+          <div class="table-cell">Change file or folder user and group</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo chown acc test.txt</strong> (Change user of test.txt to acc)</li>
+              <li><strong>sudo chown :dep test.txt</strong> (Change group of test.txt to dep)</li>
+              <li><strong>sudo chown acc:dep test.txt</strong> (Change user of file test.txt to acc and group to dep)</li>
+              <li><strong>sudo chown acc:dep Downloads</strong> (Change user of Downloads folder in current folder to acc and group to dep)</li>
+              <li><strong>sudo chown -R acc:dep Downloads</strong> (Change user of Downloads folder in current folder and all of its contents to acc and group to dep)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo chmod</strong></div>
+          <div class="table-cell">Change file or folder permissions</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo chmod 644 test.txt</strong> (Change permissions of test.txt to 644)</li>
+              <li><strong>sudo chmod -R 777 /var/www</strong> (Change permissions of www folder in var folder and all its contents to 777)</li>
+              <li><strong>sudo chmod a+x Documents</strong> (Change permissions of Documents folder in current folder to add execute to all users)</li>
+              <li><strong>sudo chmod u+w,g-x,o-r test.txt</strong> (Change permissions of test.txt to add write to user, remove execute from group, and remove read from others)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
   </div>

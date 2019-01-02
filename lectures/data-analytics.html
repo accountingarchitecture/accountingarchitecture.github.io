@@ -74,76 +74,6 @@
     </section>
 
     <section>
-      <h2>Linux Data Retrieval Commands</h2>
-      <div class="table">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>sudo find</strong></div>
-          <div class="table-cell">Find file or folder by name</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>sudo find . -name test.txt</strong> (Search in current folder and all sub-folders for any file with name test.txt)</li>
-              <li><strong>sudo find / -name test.txt</strong> (Search in root folder and all sub-folders for any file with name test.txt)</li>
-              <li><strong>sudo find /etc -iname test.txt</strong> (Search case-insensitive in etc folder in root folder and all sub-folders for any file with name test.txt)</li>
-              <li><strong>sudo find . -iname *test*</strong> (Search case-insensitive in current folder and all sub-folders for any file or folder with name containing string test)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell"><strong>grep</strong></div>
-          <div class="table-cell">Find text file by contents</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>grep test .</strong> (Search in current folder for any text file containing string test)</li>
-              <li><strong>grep -i test /</strong> (Search case-insensitive in root folder for any text file containing string test)</li>
-              <li><strong>grep -R test ~</strong> (Search in home folder and all sub-folders for any text file containing string test)</li>
-              <li><strong>grep -iR test /bin</strong> (Search case-insensitive in bin folder in root folder and all sub-folders for any text file containing string test)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Linux Data Output Commands</h2>
-      <div class="table">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>less</strong></div>
-          <div class="table-cell">View contents of text file in terminal</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>less test.txt</strong> (View contents of test.txt in current folder)</li>
-              <li><strong>less Downloads/test.txt</strong> (View contents of test.txt in Downloads folder in current folder)</li>
-              <li><strong>q</strong> (Exit contents view)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell"><strong>cat</strong></div>
-          <div class="table-cell">Print contents of text file</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>cat test.txt</strong> (Print contents of test.txt in current folder to terminal window)</li>
-              <li><strong>cat /etc/smb.conf</strong> (Print contents of smb.conf in etc folder in root folder to terminal window)</li>
-              <li><strong>cat /etc/smb.conf</strong> (Print contents of smb.conf in etc folder in root folder to terminal window)</li>
-              <li><strong>cat test.txt > test2.txt</strong> (Replace contents of test2.txt in current folder with contents of test.txt in current folder)</li>
-              <li><strong>cat test.txt >> Downloads/test2.txt</strong> (Append contents of test2.txt in Downloads folder in current folder with contents of test.txt in current folder)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
       <h2>SQL</h2>
       <p><u><em>Structured Query Language</em></u> (SQL) is the language for interacting with relational databases to create, modify, and retrieve data. Because of the prevalence of relational databases and because of the simplicity of its syntax, SQL has been and continues to be a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
       <p>A query is a single request for data. An SQL query SELECTs a certain number of attributes FROM one table or multiple tables by JOINing the tables ON common attributes (e.g., primary and foreign keys). SQL can limit the records returned by the query to only those WHERE a specific condition is true. Results can be ORDERed BY an attribute's values in either ascending or descending order.</p>
@@ -340,85 +270,6 @@
     </section>
 
     <section>
-      <h2>Linux Regex Data Retrieval Command</h2>
-      <div class="table">
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="font-weight: bold">Command</div>
-          <div class="table-cell" style="font-weight: bold">Function</div>
-          <div class="table-cell" style="font-weight: bold">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>egrep</strong></div>
-          <div class="table-cell">Find text file by contents using regular expressions</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>egrep '[0-9]{3}-[0-9]{4}' .</strong> (Search in current folder for any text file containing a seven-digit phone number XXX-XXXX)</li>
-              <li><strong>egrep '[A-Za-z]+ [0-9]{1,2}, [0-9]{4}' /</strong> (Search in root folder for any text file containing a date formatted Month Day, Year)</li>
-              <li><strong>egrep -R '[0-9]{1},[0-9]{3},[0-9]{3}' ~</strong> (Search in home folder and all sub-folders for any text file containing a number in the millions)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div>Regex Primer</div>
-      <div class="flex-row top">
-        <div class="flex-item" style="max-width: 55%">
-          <div>Characters</div>
-          <div class="table">
-            <div class="table-row" style="background-color: lightgray; font-weight: bold">
-              <div class="table-cell">Expression</div>
-              <div class="table-cell">Definition</div>
-            </div>
-            <div class="table-row" style="background-color: white">
-              <div class="table-cell">[a-z]</div>
-              <div class="table-cell">Any lowercase letter</div>
-            </div>
-            <div class="table-row" style="background-color: lightgray">
-              <div class="table-cell">[A-Z]</div>
-              <div class="table-cell">Any uppercase letter</div>
-            </div>
-            <div class="table-row" style="background-color: white">
-              <div class="table-cell">[0-9]</div>
-              <div class="table-cell">Any single digit</div>
-            </div>
-            <div class="table-row" style="background-color: lightgray">
-              <div class="table-cell" style="white-space: nowrap">[A-Za-z0-9-_]</div>
-              <div class="table-cell">Any uppercase or lowercase letter, single digit, hyphen, or underscore</div>
-            </div>
-          </div>
-        </div>
-        <div class="flex-item">
-          <div>Quantifiers</div>
-          <div class="table">
-            <div class="table-row" style="background-color: lightgray; font-weight: bold">
-              <div class="table-cell">Expression</div>
-              <div class="table-cell">Definition</div>
-            </div>
-            <div class="table-row" style="background-color: white">
-              <div class="table-cell">+</div>
-              <div class="table-cell">One or more times</div>
-            </div>
-            <div class="table-row" style="background-color: lightgray">
-              <div class="table-cell">*</div>
-              <div class="table-cell">Zero or more times</div>
-            </div>
-            <div class="table-row" style="background-color: white">
-              <div class="table-cell">?</div>
-              <div class="table-cell">Zero or one time</div>
-            </div>
-            <div class="table-row" style="background-color: lightgray">
-              <div class="table-cell">{3}</div>
-              <div class="table-cell">Exactly 3 times</div>
-            </div>
-            <div class="table-row" style="background-color: white">
-              <div class="table-cell">{3,5}</div>
-              <div class="table-cell">3 or 5 times</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
       <h2>Regex Humor</h2>
       <div class="override"><a href="http://xkcd.com/license.html" target="_blank" aria-label="Website opens in new window"><img src="http://imgs.xkcd.com/comics/regular_expressions.png" alt="XKCD"/></a></div>
     </section>
@@ -503,6 +354,124 @@
     <section>
       <h2>Which Tool to Choose?</h2>
       <p>Data analytics is an important part of the current professional landscape for accountants, and employers want accountants with data analytics skills. The path to becoming an analyst begins with understanding and judgment, but the next step involves selecting a tool. Multiple choices exist with their various advantages and disadvantages. Although employers want Python, SQL, R, and JavaScript are also sought after. No tool is clearly the best, and sometimes the best choice is simply the tool with which the analyst is most comfortable. That may not be obvious in the beginning, and selecting a tool may necessitate a blind step forward on a particular path. Becoming a data analyst is a process with many paths to take. Pick a tool; pick a path.</p>
+    </section>
+
+    <section>
+      <h2>Appendix:<br>Linux Data Retrieval Commands</h2>
+    </section>
+
+    <section>
+      <h2>File Retrieval Commands</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>sudo find</strong></div>
+          <div class="table-cell">Find file or folder by name</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo find . -name test.txt</strong> (Search in current folder and all sub-folders for any file with name test.txt)</li>
+              <li><strong>sudo find / -name test.txt</strong> (Search in root folder and all sub-folders for any file with name test.txt)</li>
+              <li><strong>sudo find /etc -iname test.txt</strong> (Search case-insensitive in etc folder in root folder and all sub-folders for any file with name test.txt)</li>
+              <li><strong>sudo find . -iname *test*</strong> (Search case-insensitive in current folder and all sub-folders for any file or folder with name containing string test)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>grep</strong></div>
+          <div class="table-cell">Find text file by contents</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>grep test .</strong> (Search in current folder for any text file containing string test)</li>
+              <li><strong>grep -i test /</strong> (Search case-insensitive in root folder for any text file containing string test)</li>
+              <li><strong>grep -R test ~</strong> (Search in home folder and all sub-folders for any text file containing string test)</li>
+              <li><strong>grep -iR test /bin</strong> (Search case-insensitive in bin folder in root folder and all sub-folders for any text file containing string test)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Regex File Retrieval Command</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="font-weight: bold">Command</div>
+          <div class="table-cell" style="font-weight: bold">Function</div>
+          <div class="table-cell" style="font-weight: bold">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>egrep</strong></div>
+          <div class="table-cell">Find text file by contents using regular expressions</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>egrep '[0-9]{3}-[0-9]{4}' .</strong> (Search in current folder for any text file containing a seven-digit phone number XXX-XXXX)</li>
+              <li><strong>egrep '[A-Za-z]+ [0-9]{1,2}, [0-9]{4}' /</strong> (Search in root folder for any text file containing a date formatted Month Day, Year)</li>
+              <li><strong>egrep -R '[0-9]{1},[0-9]{3},[0-9]{3}' ~</strong> (Search in home folder and all sub-folders for any text file containing a number in the millions)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>Regex Primer</div>
+      <div class="flex-row top">
+        <div class="flex-item" style="max-width: 55%">
+          <div>Characters</div>
+          <div class="table">
+            <div class="table-row" style="background-color: lightgray; font-weight: bold">
+              <div class="table-cell">Expression</div>
+              <div class="table-cell">Definition</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">[a-z]</div>
+              <div class="table-cell">Any lowercase letter</div>
+            </div>
+            <div class="table-row" style="background-color: lightgray">
+              <div class="table-cell">[A-Z]</div>
+              <div class="table-cell">Any uppercase letter</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">[0-9]</div>
+              <div class="table-cell">Any single digit</div>
+            </div>
+            <div class="table-row" style="background-color: lightgray">
+              <div class="table-cell" style="white-space: nowrap">[A-Za-z0-9-_]</div>
+              <div class="table-cell">Any uppercase or lowercase letter, single digit, hyphen, or underscore</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item">
+          <div>Quantifiers</div>
+          <div class="table">
+            <div class="table-row" style="background-color: lightgray; font-weight: bold">
+              <div class="table-cell">Expression</div>
+              <div class="table-cell">Definition</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">+</div>
+              <div class="table-cell">One or more times</div>
+            </div>
+            <div class="table-row" style="background-color: lightgray">
+              <div class="table-cell">*</div>
+              <div class="table-cell">Zero or more times</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">?</div>
+              <div class="table-cell">Zero or one time</div>
+            </div>
+            <div class="table-row" style="background-color: lightgray">
+              <div class="table-cell">{3}</div>
+              <div class="table-cell">Exactly 3 times</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">{3,5}</div>
+              <div class="table-cell">3 or 5 times</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
   </div>
