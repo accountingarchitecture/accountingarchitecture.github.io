@@ -197,7 +197,8 @@ var myModules = [
         "summary":"<p>This topic marks the start of the core content of this course. Many of the terms in this lecture may be foreign to you. Some terms will be foreign because I invented them. For example, I coined the term &ldquo;accounting architecture&rdquo; to describe the design of an enterprise-grade information system from the perspective of an accountant. (As an aside: I frequently use the term &ldquo;enterprise-grade&rdquo; throughout this course to highlight the tools and protocols that a large corporation would use.) Accounting architecture is the focus of this course, and this lecture introduces the framework and the topics we will discuss for the remainder of the semester.</p><p>Because this topic is the first core topic of the semester, reading and understanding this and all remaining lectures and accompanying articles during the semester are not only preparation for the quizzes. They are also preparation for the exams. As a result, you should carefully study each topic's lecture and article in order to score well on the quizzes and exams and acquire knowledge that will benefit you for your career.</p>",
       "nav":[
         {"label":"Lecture", "href":"lectures/accounting-architecture.html"},
-        {"label":"Article", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"}
+        {"label":"Article", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
+        {"label":"AI Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"1", "time":"23.59"}
@@ -226,7 +227,7 @@ var myModules = [
         {"label":"Lecture", "href":"lectures/information.html"},
         {"label":"Article", "href":"supplement/information/cpas-and-big-data.pdf", "filetype":"PDF"},
         {"label":"Homework", "href":"supplement/information/assignment.html"},
-        {"label":"Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
+        {"label":"AI Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
 
       ],
       "due":[
@@ -245,7 +246,7 @@ var myModules = [
         {"label":"Lecture", "href":"lectures/hardware.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
         {"label":"Homework", "href":"supplement/hardware/assignment.html"},
-        {"label":"Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
+        {"label":"AI Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
@@ -309,12 +310,12 @@ var myModules = [
         {"label":"Puzzle", "href":"supplement/puzzles/robbers.html"},
         {"label":"Lecture", "href":"lectures/services.html"},
         {"label":"Article", "href":"https://www.oracle.com/applications/erp/what-is-erp.html"},
-        {"label":"Homework", "href":"supplement/services/assignment.html"}
+        {"label":"Project Part 1", "href":"supplement/data-analytics/project-part1.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
         {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Homework", "deadline":"6"}
+        {"deliverable":"Project Part 1", "deadline":"6"}
       ]
     }
   ]
@@ -342,12 +343,13 @@ var myModules = [
         {"label":"Puzzle", "href":"supplement/puzzles/teasers.html"},
         {"label":"Lecture", "href":"lectures/security.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2017/3/it-security-start-3-ways-make-it-business-priority"},
-        {"label":"Homework", "href":"supplement/security/assignment.html"}
+        {"label":"Homework", "href":"supplement/security/assignment.html"},
+        {"label":"Tech Report Instructions", "href":"supplement/getting-started/syllabus.html#tech-report"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
         {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Homework", "deadline":"6"},
+        {"deliverable":"Homework", "deadline":"6"}
       ]
     }
   ]
@@ -360,12 +362,12 @@ var myModules = [
         {"label":"Lecture", "href":"lectures/confidentiality.html"},
         {"label":"Article", "href":"supplement/confidentiality/blockchain.pdf", "filetype":"PDF"},
         {"label":"Homework", "href":"supplement/confidentiality/assignment.html"},
-        {"label":"Project Part 1", "href":"supplement/data-analytics/project-part1.html"}
+        {"label":"Tech Report Instructions", "href":"supplement/getting-started/syllabus.html#tech-report"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
         {"deliverable":"Homework", "deadline":"6"},
-        {"deliverable":"Project Part 1", "deadline":"6"}
+        {"deliverable":"Tech Report", "deadline":"6"}
       ]
     }
   ]
@@ -396,13 +398,14 @@ var myModules = [
         {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
         {"label":"Lecture", "href":"lectures/processing-integrity.html"},
         {"label":"Article", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
-        {"label":"Homework", "href":"supplement/processing-integrity/assignment.html"}
+        {"label":"Homework", "href":"supplement/processing-integrity/assignment.html"},
+        {"label":"Project Part 2", "href":"supplement/data-analytics/project-part2.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
         {"deliverable":"Puzzle", "deadline":"6"},
         {"deliverable":"Homework", "deadline":"6"},
-        {"deliverable":"Tech Report", "deadline":"6"}
+        {"deliverable":"Project Part 2", "deadline":"6"}
       ]
     }
   ]
@@ -414,13 +417,13 @@ var myModules = [
       "nav":[
         {"label":"Lecture", "href":"lectures/data-analytics.html"},
         {"label":"Article", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
-        {"label":"Project Part 2", "href":"supplement/data-analytics/project-part2.html"},
+        {"label":"Project Part 3", "href":"supplement/data-analytics/project-part3.html"},
         {"label":"Dictionary", "href":"supplement/data-analytics/data-dictionary.pdf", "filetype":"PDF"},
         {"label":"Homework", "href":"supplement/final/assignment.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Project Part 2", "deadline":"9"},
+        {"deliverable":"Project Part 3", "deadline":"9"},
         {"deliverable":"Homework", "deadline":"9"}
       ]
     }

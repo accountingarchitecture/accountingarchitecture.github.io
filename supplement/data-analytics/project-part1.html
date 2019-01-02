@@ -25,7 +25,7 @@
   <div class="slides">
     <section>
       <h3>Project Part 1 - Intro</h3>
-      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server, import a database, run queries, and report your results. Pretend that a client has given you access to a dataset and a Dictionary file, which you can find on the course portal, that explains the dataset. The client wants you to answer a number of questions using SQL queries. The next screen explains how to install the relational database management system MySQL. The screen screen provides a number of MySQL commands that you will need for this project. The third screen explains how to create and import the client's database. The final screen lists the questions and queries and explains how to report your results.</p>
+      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server and import a database. Pretend that a client has given you access to a dataset. The client wants you to answer a number of questions using SQL queries. The next screen explains how to install the relational database management system MySQL. The screen screen provides a number of MySQL commands that you will need for this project. The third screen explains how to create and import the client's database. The final screen lists the questions and queries and explains how to report your results.</p>
     </section>
 
     <section>
@@ -93,21 +93,6 @@
         <li>Download the database file from the following URL to your container and name it &ldquo;company.sql&rdquo; (without quotes): <strong>https://goo.gl/Mc5Czc</strong></li>
         <li>Import the Database file into MySQL:<br><strong>mysql -u root -p company &lt; company.sql</strong></li>
         <li>Log in to the newly created database: <strong>mysql -u root -p company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
-      </ol>
-    </section>
-
-    <section>
-      <h3>Queries</h3>
-      <p style="font-size: 30px">Take one screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Export that document to PDF. In a separate document, draft a professional email to your client that gives the answers to these questions. Export your email document to PDF, and upload both PDF files to Dropbox on eCourseware. Your grade will be based on accuracy and the professional quality of your email.</p>
-      <ol style="font-size: 30px">
-        <li>Which sale approvals have no approval date?</li>
-        <p style="margin: 0">SELECT ID FROM SALE WHERE APPROVALDATE = 0000-00-00;</p>
-        <li>What is the total we have paid to vendors for the current period?</li>
-        <p style="margin: 0">SELECT SUM(AMOUNT) FROM PAYMENT;</p>
-        <li>How many customers does each sales rep have?</li>
-        <p style="margin: 0">SELECT SALESREP, COUNT(ID) FROM CUSTOMER GROUP BY SALESREP;</p>
-        <li>Did I underpay any invoices?</li>
-        <p style="margin: 0">SELECT INVOICE.ID FROM PAYMENT JOIN INVOICE<br>ON PAYMENT.INVOICE = INVOICE.ID WHERE PAYMENT.AMOUNT &lt;<br>INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
       </ol>
     </section>
   </div>
