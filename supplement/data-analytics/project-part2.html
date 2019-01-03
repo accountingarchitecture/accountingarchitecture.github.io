@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Assignment</title>
+  <title>Project Part 2</title>
 
   <meta name="author" content="Joshua G. Coyne, PhD">
   <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
@@ -25,23 +25,26 @@
   <div class="slides">
     <section>
       <h3>Project Part 2 - Intro</h3>
-      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server, import a database, run queries, and report your results. Pretend that a client has given you access to a dataset and a Dictionary file, which you can find on the course portal, that explains the dataset. The client wants you to answer a number of questions using SQL queries. The next screen explains how to install the relational database management system MySQL. The screen screen provides a number of MySQL commands that you will need for this project. The third screen explains how to create and import the client's database. The final screen lists the questions and queries and explains how to report your results.</p>
+      <p>For part 2 of this project, you will learn SQL and then practice SQL using the database server that you installed and the database that you imported in part 1. Structured Query Language (SQL) is the primary language for interacting with relational databases. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF. Your grade for this part of the project will be based in part on your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt. Once you have completed the tutorial, continue to the next screen. The next screen explains how to report your learning SQL. The following screen explains how to create a database user that will run the queries on the final screen.</p>
     </section>
 
-    <section>
+    <section style="font-size: 29px">
       <h3>Create a Regular User</h3>
-      <p><u><em>Structured Query Language</em></u> (SQL) is the primary language for interacting with relational databases. This assignment is the first of two to increase your ability to work with this language for both storage and data analytics purposes. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF, and upload it to Dropbox on eCourseware. Your grade for this assignment will be your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt.</p>
+      <p>Logging in to an operating system or a database management system using the root user is an insecure practice. Instead, create a regular user using the following commands. Take a screenshot, or more than one screenshot, if necessary, of the following commands and paste the screenshot(s) into a document. Each screenshot must display your container name. Export the document to PDF:</p>
+      <ol>
+        <li>Ensure that the MySQL service is running.</li>
+        <li>Log in to MySQL as the root user.</li>
+        <li>Create a user: <strong>create user 'you'@'localhost' identified by 'password';</strong> (Replace you with your first name and password with a password of your choosing.)</li>
+        <li>Give your regular user permission to query your database: <br><strong>grant select on database.* to 'you'@'localhost';</strong> (Replace database with the name of the database you created in part 1 of this project and you with the name of the user you created in the previous step.)</li>
+        <li>Update privileges: <strong>flush privileges;</strong></li>
+        <li>Exit MySQL and log back in as the regular user using the same command as in step 2 but replacing root with the name of your regular user.</li>
+      </ol>
     </section>
 
-    <section>
-      <h3>Learn SQL</h3>
-      <p><u><em>Structured Query Language</em></u> (SQL) is the primary language for interacting with relational databases. This assignment is the first of two to increase your ability to work with this language for both storage and data analytics purposes. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF, and upload it to Dropbox on eCourseware. Your grade for this assignment will be your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt.</p>
-    </section>
-
-    <section>
-      <h3>Queries</h3>
-      <p style="font-size: 30px">Take one screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Export that document to PDF. In a separate document, draft a professional email to your client that gives the answers to these questions. Export your email document to PDF, and upload both PDF files to Dropbox on eCourseware. Your grade will be based on accuracy and the professional quality of your email.</p>
-      <ol style="font-size: 30px">
+    <section style="font-size: 28px">
+      <h3>Run Queries</h3>
+      <p>Take a screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Each screenshot must display your container name. Beneath each screenshot type the question asked and the answer that your query gave you. Export that document to PDF.</p>
+      <ol>
         <li>Which sale approvals have no approval date?</li>
         <p style="margin: 0">SELECT ID FROM SALE WHERE APPROVALDATE = 0000-00-00;</p>
         <li>What is the total we have paid to vendors for the current period?</li>
@@ -49,8 +52,9 @@
         <li>How many customers does each sales rep have?</li>
         <p style="margin: 0">SELECT SALESREP, COUNT(ID) FROM CUSTOMER GROUP BY SALESREP;</p>
         <li>Did I underpay any invoices?</li>
-        <p style="margin: 0">SELECT INVOICE.ID FROM PAYMENT JOIN INVOICE<br>ON PAYMENT.INVOICE = INVOICE.ID WHERE PAYMENT.AMOUNT &lt;<br>INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
+        <p style="margin: 0">SELECT INVOICE.ID FROM PAYMENT JOIN INVOICE ON PAYMENT.INVOICE = INVOICE.ID<br>WHERE PAYMENT.AMOUNT &lt; INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
       </ol>
+      <p>Upload all PDF files to Dropbox on eCourseware. Your grade for this deliverable will based on your SQL Quiz score, the accuracy of your commands to create a regular user, and the accuracy of your queries and answers to these questions.</p>
     </section>
   </div>
   </div>
