@@ -25,74 +25,29 @@
   <div class="slides">
     <section>
       <h3>Project Part 1 - Intro</h3>
-      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server and import a database. Pretend that a client has given you access to a dataset. The client wants you to answer a number of questions using SQL queries. The next screen explains how to install the relational database management system MySQL. The screen screen provides a number of MySQL commands that you will need for this project. The third screen explains how to create and import the client's database. The final screen lists the questions and queries and explains how to report your results.</p>
+      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server and import a database. The next screen explains how to install the relational database management system MySQL. The final screen explains how to create and import the client's database. Take a screenshot of each task to install MySQL and to create and import the database. You may combine multiple tasks onto a single screenshot, if possible. Each screenshot must display your container name. Create a word processor document and paste each screenshot into that document. Beneath each screenshot in the document, type the task number(s) and the command used to complete the task(s). Export the document to PDF and upload it to Dropbox on eCourseware. Your grade will be based on accuracy and completeness of completing the tasks.</p>
     </section>
 
     <section>
       <h3>Install MySQL</h3>
-      <ol style="font-size: 34px">
-        <li><u>Prerequisite</u>: Your container must have the dialog and bsdmainutils packages installed. These should be installed by default in all Blank Ubuntu 16.04 containers. If you are uncertain whether these are already installed, try to install them using your package manager. If these packages are already installed, your package manager will respond that they are already the newest version.)</li>
-        <li>Install mysql-server. During the install, you will see a dialog window asking for a password for the database root user. Enter a password that is easy for you to remember. You will not receive a visual feedback as you type the password (i.e., the screen will not move the cursor or show any asterisks to represent the password characters). Press ENTER when you have finished typing the password. On the next dialog screen, type your password again to confirm and press ENTER.</li>
-        <li>Start the MySQL server: <strong>sudo systemctl start mysql.service</strong></li>
+      <ol>
+        <li>Verify that your container has the dialog and logger applications installed. Install them, if necessary. (NB: Logger is part of the bsdutils package.)</li>
+        <li>Search for the MySQL database server metapackage.</li>
+        <li>Install the MySQL database server metapackage. During the install, you will see a dialog window asking for a password for the database root user. Enter a password that is easy for you to remember. You will not receive a visual feedback as you type the password (i.e., the screen will not move the cursor or show any asterisks to represent the password characters). Press ENTER when you have finished typing the password. On the next dialog screen, type your password again to confirm and press ENTER.</li>
+        <li>Use systemd to check the status of the MySQL server.</li>
+        <li>Start the MySQL server.</li>
+        <li>Enable the MySQL server to launch when you boot the container.</li>
       </ol>
     </section>
 
     <section>
-      <h3>MySQL Commands</h3>
-      <p>Use of MySQL for data retrieval and analysis requires knowledge of both SQL and some built-in MySQL commands. (NB: Although it is best to type SQL commands in all uppercase letters, these commands are best executed in lowercase letters because they are case-sensitive and MySQL database names are commonly in lowercase letters. Also, just like SQL queries, all MySQL commands should end in a semicolon.)
-      <div class="table">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Explanation</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
-            <div>show databases;</div>
-          </div>
-          <div class="table-cell">Print a list of all databases</div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
-            <div>create database homework;</div>
-          </div>
-          <div class="table-cell">Create a new, empty database and name it &ldquo;homework&rdquo;</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
-            <div>use company;</div>
-          </div>
-          <div class="table-cell">Execute all future commands in this MySQL session against the company database</div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
-            <div>show tables;</div>
-          </div>
-          <div class="table-cell">Print a list of all tables in the currently selected database</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
-            <div>describe CUSTOMER;</div>
-          </div>
-          <div class="table-cell">Print a list of all fields in the CUSTOMER table with their data types</div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="font-weight: bold">
-            <div>quit;</div>
-          </div>
-          <div class="table-cell">Exit MySQL</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
       <h3>Create and Import Database</h3>
-      <ol style="font-size: 34px">
-        <li>Log in to your MySQL database server: <strong>mysql -u root -p</strong> (Enter the root user password that you created when installing mysql-server into the password prompt. For security reasons, there will be no visual feedback as you type the password. Press ENTER after typing the password.)</li>
+      <ol start="7">
+        <li>Log in to your MySQL database server as the root user. When prompted, enter the root user password that you created when installing mysql-server into the password prompt. For security reasons, there will be no visual feedback as you type the password. Press ENTER after typing the password.</li>
         <li>Create a database and name it &ldquo;company&rdquo; (without quotes).</li>
         <li>Exit MySQL.</li>
-        <li>Download the database file from the following URL to your container and name it &ldquo;company.sql&rdquo; (without quotes): <strong>https://goo.gl/Mc5Czc</strong></li>
-        <li>Import the Database file into MySQL:<br><strong>mysql -u root -p company &lt; company.sql</strong></li>
-        <li>Log in to the newly created database: <strong>mysql -u root -p company</strong>. From this screen, you can enter SQL queries. Use all capital letters in SQL queries.<br>(e.g., SELECT ID, USERNAME FROM EMPLOYEE;)</li>
+        <li>Download the database file from https://goo.gl/Mc5Czc to your container and name it &ldquo;company.sql&rdquo;</li>
+        <li>Import the Database file into MySQL by using the UNIX philosophy to redirect the company.sql file to the MySQL login command.Include the name of the database that you created in the login command.</li>
       </ol>
     </section>
   </div>
