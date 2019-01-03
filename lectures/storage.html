@@ -475,7 +475,6 @@
               <li><strong>cat test.txt</strong> (Print contents of test.txt in current folder to terminal window)</li>
               <li><strong>cat /etc/smb.conf</strong> (Print contents of smb.conf in etc folder in root folder to terminal window)</li>
               <li><strong>cat /etc/smb.conf</strong> (Print contents of smb.conf in etc folder in root folder to terminal window)</li>
-              <li><strong>cat test.txt > test2.txt</strong> (Replace contents of test2.txt in current folder with contents of test.txt in current folder)</li>
               <li><strong>cat test.txt >> Downloads/test2.txt</strong> (Append contents of test2.txt in Downloads folder in current folder with contents of test.txt in current folder)</li>
             </ul>
           </div>
@@ -576,6 +575,39 @@
       </div>
     </section>
 
+    <section>
+      <h2>More UNIX Philosophy</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Character</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>&gt;</strong> or <strong>&lt;</strong> (Called a &ldquo;redirect.&rdquo;)</div>
+          <div class="table-cell">Pass the output of an application to a file or pass the contents of a text file to an application (passing to a file creates the file, if it does not exist, or <em>replaces</em> the contents of the file, if it already exists)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>ls &gt; output.txt</strong> (Pass the output from ls to file output.txt)</li>
+              <li><strong>cat test.txt &gt; test2.txt</strong> (Pass the output from printing file test.txt to file test2.txt)</li>
+              <li><strong>echo "Testing..." &gt; test.txt</strong> (Pass the string Testing... to file test.txt)</li>
+              <li><strong>cat &lt; test.txt</strong> (Pass the contents of file test.txt to cat)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>&gt;&gt;</strong></div>
+          <div class="table-cell">Pass the output of an application to a file (passing to a file creates the file, if it does not exist, or <em>appends</em> the contents of the file, if it already exists)</div>
+          <div class="table-cell" style="width: 40%">
+            <ul>
+              <li><strong>ls &gt;&gt; output.txt</strong> (Pass the output from ls to file output.txt)</li>
+              <li><strong>echo "Testing..." &gt;&gt; test.txt</strong> (Pass the string Testing... to file test.txt)</li>
+              <li><strong>cat test.txt &gt;&gt; test2.txt</strong> (Pass the output from printing file test.txt to file test2.txt)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
   </div>
 

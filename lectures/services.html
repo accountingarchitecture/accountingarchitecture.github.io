@@ -273,22 +273,47 @@
           <div class="table-cell">Examples</div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>wget</strong></div>
-          <div class="table-cell">Download a file from the World Wide Web (Literally: World Wide Web get)</div>
+          <div class="table-cell"><strong>systemctl start</strong></div>
+          <div class="table-cell">Start a service</div>
           <div class="table-cell">
             <ul>
-              <li><strong>wget&nbsp;accountingarchitecture.github.io/index.html</strong> (Download a copy of index.html from accountingarchitecture.github.io)</li>
-              <li><strong>wget&nbsp;&#8209;O&nbsp;file.txt&nbsp;https://goo.gl/Ae3Sxv</strong> (Download a copy of Ae3Sxv from goo.gl and save it as file.txt; NB: That is a capital O, not a zero.)</li>
+              <li><strong>systemctl start apache.service</strong></li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell"><strong>curl</strong></div>
-          <div class="table-cell">Download a file from the World Wide Web (Literally: Client URL Request Library)</div>
+          <div class="table-cell"><strong>systemctl stop</strong></div>
+          <div class="table-cell">Stop a service</div>
           <div class="table-cell">
             <ul>
-              <li><strong>curl&nbsp;&#8209;LO&nbsp;accountingarchitecture.github.io/index.html</strong> (Download a copy of index.html from accountingarchitecture.github.io; NB: That is a capital O, not a zero.)</li>
-              <li><strong>curl&nbsp;&#8209;Lo&nbsp;file.txt&nbsp;https://goo.gl/Ae3Sxv</strong> (Download a copy of Ae3Sxv from goo.gl and save it as file.txt)</li>
+              <li><strong>systemctl stop sshd.service</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>systemctl status</strong></div>
+          <div class="table-cell">Check whether a service is running</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>systemctl status mysql.service</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>systemctl enable</strong></div>
+          <div class="table-cell">Set a service to start automatically on boot up</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>systemctl enable samba.service</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>systemctl disable</strong></div>
+          <div class="table-cell" style="width: 35%">Prevent a service from starting automatically on boot up</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>systemctl disable minidlna.service</strong></li>
             </ul>
           </div>
         </div>
