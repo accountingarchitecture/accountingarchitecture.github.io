@@ -264,6 +264,71 @@
     </section>
 
     <section>
+      <h3>Database Server Commands</h3>
+      <p>MySQL is a relational database management system that powers many database servers. In addition to knowing how to retrieve data from a relation database, knowing how to navigate the database server is necessary to perform useful data analysis.</p>
+      <div class="table" style="font-size: 20px">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Example</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>show databases;</strong></div>
+          <div class="table-cell">List all databases</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap"><strong>create database;</strong></div>
+          <div class="table-cell">Create new, empty database</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>create database homework;</strong> (Create new, empty database named homework)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>use;</strong></div>
+          <div class="table-cell">Open database</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>use client;</strong> (Open database named client)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>show tables;</strong></div>
+          <div class="table-cell">List all tables in current database</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"> <strong>describe;</strong></div>
+          <div class="table-cell">List all table attributes with data types and keys</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>describe PURCHASE;</strong> (Print a list of all attributes from PURCHASE table)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>quit;</strong></div>
+          <div class="table-cell">Exit MySQL</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>mysql -u -p</strong></div>
+          <div class="table-cell">Log in to MySQL server (will prompt for password)</div>
+          <div class="table-cell" style="width: 48%">
+            <ul>
+              <li><strong>mysql -u root -p</strong> (Log in to MySQL server as root user)</li>
+              <li><strong>mysql -u joe -p</strong> (Log in to MySQL server as user joe)</li>
+              <li><strong>mysql -u joe -p client</strong> (Log in to client database on MySQL server as user joe)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <h2>Systemd Commands</h2>
       <p>Systemd is a service that controls other services, and many different Linux distros use it. Because so much operating system functionality relies on services, knowing basic systemd commands is vital toward using Linux effectively.</p>
       <div class="table">

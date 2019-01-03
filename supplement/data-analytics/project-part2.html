@@ -25,7 +25,8 @@
   <div class="slides">
     <section>
       <h3>Project Part 2 - Intro</h3>
-      <p>For part 2 of this project, you will learn SQL and then practice SQL using the database server that you installed and the database that you imported in part 1. Structured Query Language (SQL) is the primary language for interacting with relational databases. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF. Your grade for this part of the project will be based in part on your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt. Once you have completed the tutorial, continue to the next screen. The next screen explains how to report your learning SQL. The following screen explains how to create a database user that will run the queries on the final screen.</p>
+      <p>For part 2 of this project, you will learn SQL and then practice using SQL on the database server that you installed and the database that you imported in part 1.</p>
+      <p>Structured Query Language (SQL) is the primary language for interacting with relational databases. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF. Your grade for this part of the project will be based in part on your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt. Once you have completed the tutorial, continue to the next screen, which explains how to create the database user that will run the queries on the following screen.</p>
     </section>
 
     <section style="font-size: 29px">
@@ -43,7 +44,7 @@
 
     <section style="font-size: 28px">
       <h3>Run Queries</h3>
-      <p>Take a screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Each screenshot must display your container name. Beneath each screenshot type the question asked and the answer that your query gave you. Export that document to PDF.</p>
+      <p>Take a screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Each screenshot must display your container name. Beneath each screenshot type the question asked and the answer that your query returned. Export that document to PDF.</p>
       <ol>
         <li>Which sale approvals have no approval date?</li>
         <p style="margin: 0">SELECT ID FROM SALE WHERE APPROVALDATE = 0000-00-00;</p>
@@ -54,7 +55,7 @@
         <li>Did I underpay any invoices?</li>
         <p style="margin: 0">SELECT INVOICE.ID FROM PAYMENT JOIN INVOICE ON PAYMENT.INVOICE = INVOICE.ID<br>WHERE PAYMENT.AMOUNT &lt; INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
       </ol>
-      <p>Upload all PDF files to Dropbox on eCourseware. Your grade for this deliverable will based on your SQL Quiz score, the accuracy of your commands to create a regular user, and the accuracy of your queries and answers to these questions.</p>
+      <p>Upload all PDF files to Dropbox on eCourseware. Your grade for this deliverable will be based on your SQL Quiz score, the accuracy of your commands to create a regular user, and the accuracy of your queries and answers to these questions.</p>
     </section>
   </div>
   </div>
