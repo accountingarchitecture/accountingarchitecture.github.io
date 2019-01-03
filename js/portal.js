@@ -379,7 +379,7 @@ var myModules = [
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/math-facts.html"},
         {"label":"Lecture", "href":"lectures/availability.html"},
-        {"label":"Article", "href":"https://enterprisersproject.com/article/2017/3/sas-cio-be-proactive-leading-your-organization-sensor-enabled-world"},
+        {"label":"Article", "href":"https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files"},
         {"label":"Homework", "href":"supplement/availability/assignment.html"}
       ],
       "due":[
@@ -397,7 +397,7 @@ var myModules = [
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
         {"label":"Lecture", "href":"lectures/processing-integrity.html"},
-        {"label":"Article", "href":"http://www.jamesserra.com/archive/2015/08/relational-databases-vs-non-relational-databases/"},
+        {"label":"Article", "href":"https://about.draw.io/entity-relationship-diagrams-with-draw-io/"},
         {"label":"Homework", "href":"supplement/processing-integrity/assignment.html"},
         {"label":"Project Part 2", "href":"supplement/data-analytics/project-part2.html"}
       ],
