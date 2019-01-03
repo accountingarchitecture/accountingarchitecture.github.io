@@ -25,43 +25,39 @@
   <div class="slides">
     <section>
       <h3>Interactive Assignment - Intro</h3>
-      <p>GitHub is a popular cloud-based store of git repositories. In fact, the materials for this course are stored on GitHub. This assignment will teach you how to use both git and GitHub. First, your Codeanywhere container must have two necessary applications: git and nano. Git is a VCS, and nano is a text editor. Use these steps to confirm that git and nano are installed in your Codeanywhere container:</p>
-      <ol style="font-size: 30px; margin-top: -10px; margin-bottom: -10px">
-        <li>Check that git is installed using the command: <strong>which git</strong>. (If this command outputs the path to git, e.g., /usr/bin/git, then git is installed. If the command outputs nothing, then git is not installed.) Use apt to install git, if necessary.</li>
-        <li>Check that nano is installed using the command: <strong>which nano</strong>. (If this command outputs the path to nano, then nano is installed. If the command outputs nothing, then nano is not installed.) Use apt to install nano, if necessary.</li>
-      </ol>
-      <p>I have created a repository on GitHub, and you will use git to make contributions to this repository following the steps on the next screens:</p>
-    </section>
-
-    <section>
-      <h3>Instructions - Page 1 of 3</h3>
+      <p>GitHub is a popular cloud-based store of git repositories. In fact, the materials for this course are stored on GitHub. This assignment will teach you how to use both git and GitHub. Git is a VCS, and GitHub is an Web service that hosts git repositories. I have created a repository on GitHub, and you will use git to make contributions to this repository following the steps on the next screens.>
       <ol>
         <li>Create a free GitHub account. (<a href="https://github.com/join?source=header-home" target="_blank" rel="noopener" aria-label="Website opens in new window">link</a>)</li>
         <li>Log in to GitHub, navigate to the assignment repository (<a href="https://github.com/accountingarchitecture/acct4020-github-assignment" target="_blank" rel="noopener" aria-label="Website opens in new window">link</a>), and click the &lsquo;Fork&rsquo; button in the top right corner of the screen.</li>
         <li>Click the &lsquo;Clone or download&rsquo; button and copy the URL under the label &lsquo;Clone with HTTPS Use Git or checkout with SVN using the web URL.&rsquo;</li>
-        <li>Use git in an SSH Terminal of your Codeanywhere container to clone your fork using the URL from the previous step. (Review the Availability lecture for help with git commands.)</li>
-        <li>Navigate to the Quotes folder within the acct4020-github-assignment folder. (Review the Storage lecture for help with this command.)</li>
-        <li>Use nano to edit a new text file with the filename FirstnameLastname (e.g., nano ProfessorCoyne).</li>
-        <li>Type your favorite quote (e.g., mine is &ldquo;When we speak of free software, we are referring to freedom, not price.&rdquo; --Richard Stallman).</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Instructions - Page 1 of 3</h3>
+      <ol start="4">
+        <li>Use git in an SSH Terminal of your Linux container to clone your fork using the URL from the previous step.</li>
+        <li>List the contents of your current folder to confirm that you have cloned the repository and created a folder named acct4020-github-assignment.</li>
+        <li>Navigate to the Quotes folder within the acct4020-github-assignment folder.</li>
+        <li>Using the UNIX philosophy, redirect your favorite quote to a file with your name. For example, my quote would be &ldquo;When we speak of free software, we are referring to freedom, not price. --Richard Stallman&rdquo; and my filename would be ProfessorCoyne. (NB: Do not use any spaces in your filename.)</li>
+        <li>List local repository changes to confirm that you have an untracked file with your name.</li>
       </ol>
     </section>
 
     <section>
       <h3>Instructions - Page 2 of 3</h3>
-      <ol start="8">
-        <li>Once you have finished typing your quote, save your changes with CTRL-X, then press &lsquo;y&rsquo; and ENTER.</li>
-        <li>List local repository changes to confirm that you have an untracked file with your name.</li>
+      <ol start="9">
         <li>Stage your changes.</li>
         <li>Assign yourself a username in git: <strong>git config user.name</strong>. (For example, I would type: git config user.name "Professor Coyne").
         <li>Assign yourself an email address in git: <strong>git config user.email</strong>. (For example, I would type: git config user.name "jgcoyne@memphis.edu").
-        <li>Commit your changes to your local git repository. This will open a new nano window. Enter a commit message. (For example, I would type Added ProfessorCoyne quote.). Save your changes with CTRL-X, y, and ENTER, just as in the earlier step.</li>
+        <li>Commit your changes to your local git repository with the commit message "Add [Your Name] quote" (without brackets). For example, my commit message would be "Add Professor Coyne quote".</li>
+        <li>Push your changes to your GitHub repository. Git will ask for your GitHub username and password. (When you type your password, your container will not provide any visual feedback of your typing, but it will record your key presses, so simply type your password and press ENTER.)</li>
       </ol>
     </section>
 
     <section>
       <h3>Instructions - Page 3 of 3</h3>
-      <ol start="15">
-        <li>Push your changes to your GitHub repository. Git will ask for your GitHub username and password. (When you type your password, your container will not provide any visual feedback of your typing, but it will record your key presses, so simply type your password and press ENTER.)</li>
+      <ol start="14">
         <li>After pushing your changes, return to your forked repository on GitHub.</li>
         <li>Click the gray &lsquo;New pull request&rsquo; button.</li>
         <li>On the next <em>two</em> screens, click the green &lsquo;Create pull request&rsquo; button. After clicking this button on the second screen, you may close the browser window.</li>

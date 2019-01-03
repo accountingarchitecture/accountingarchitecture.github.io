@@ -197,7 +197,7 @@
 
     <section>
       <h2>Software Management Commands</h2>
-      <p>Apt is a DEB-based package manager. Although not all Linux distributions are DEB-based, simply knowing how to install and upgrade software on a DEB-based Linux distro is an excellent start to understanding how to manage, use, and interact with Linux:</p>
+      <p style="font-size: 30px">Apt is a DEB-based package manager. Although not all Linux distributions are DEB-based, simply knowing how to install and upgrade software on a DEB-based Linux distro is an excellent start to understanding how to manage, use, and interact with Linux:</p>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; font-weight: bold">
           <div class="table-cell">Command</div>
@@ -215,19 +215,31 @@
           <div class="table-cell"></div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt search</strong></div>
+          <div class="table-cell" style="white-space: nowrap"><strong>apt search</strong></div>
           <div class="table-cell">Look for application in repositories</div>
-          <div class="table-cell">apt search mysql (Find all applications with the word mysql in the name or description)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>apt search music player</strong> (Find all applications with the words music player in the name or description)</li>
+            </ul>
+          </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
           <div class="table-cell" style="white-space: nowrap"><strong>sudo apt install</strong></div>
           <div class="table-cell">Install application</div>
-          <div class="table-cell">sudo apt install mysql-server (Install application named mysql-server)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo apt install mysql-server</strong> (Install application named mysql-server)</li>
+            </ul>
+          </div>
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell" style="white-space: nowrap"><strong>sudo apt remove</strong></div>
           <div class="table-cell">Uninstall application</div>
-          <div class="table-cell">sudo apt remove mysql-server (Remove application named mysql-server)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo apt remove man-db</strong> (Remove application named man-db)</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -243,15 +255,19 @@
         <div class="table-row" style="background-color: white">
           <div class="table-cell" style="white-space: nowrap"><strong>which</strong></div>
           <div class="table-cell">Print path to installed application to terminal or print nothing if application is not installed</div>
-          <div class="table-cell">which nano (Print path to nano, e.g., /bin/nano, to terminal or print nothing if nano is not installed) </div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>which nano</strong> (Print path to nano, e.g., /bin/nano, to terminal or print nothing if nano is not installed)</li>
+            </ul>
+          </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
           <div class="table-cell" style="white-space: nowrap"><strong>man</strong></div>
           <div class="table-cell">Open manual page for application</div>
           <div class="table-cell">
             <ul>
-              <li>man apt (Open manual page for the apt application)</li>
-              <li>q (Close manual page)</li>
+              <li><strong>man apt</strong> (Open manual page for the apt application)</li>
+              <li><strong>q</strong> (Close manual page)</li>
             </ul>
           </div>
         </div>
@@ -261,7 +277,7 @@
 
     <section>
       <h2>UNIX Philosophy</h2>
-      <p>The UNIX philosophy encourages software developers to make small programs that can perform a single task. The power of UNIX-like operating systems is in the ability to chain functions by passing the output of one program to the next program using certain special characters:</p>
+      <p>The UNIX philosophy encourages software developers to make small programs that can perform a single task. The power of UNIX-like operating systems is in the ability to chain functions by passing the output of one program or file to another using certain special characters:</p>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; font-weight: bold">
           <div class="table-cell">Character</div>
@@ -269,29 +285,14 @@
           <div class="table-cell">Examples</div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"></div>
-          <div class="table-cell">Update repository list to identify newest version of all applications</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap">sudo apt upgrade</div>
-          <div class="table-cell">Upgrade all installed applications to newest versions</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap">sudo apt search</div>
-          <div class="table-cell">Look for application in repositories</div>
-          <div class="table-cell">sudo apt search mysql (Find all applications with the word mysql in the name or description)</div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap">sudo apt install</div>
-          <div class="table-cell">Install application</div>
-          <div class="table-cell">sudo apt install mysql-server (Install application named mysql-server)</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap">sudo apt remove</div>
-          <div class="table-cell">Uninstall application</div>
-          <div class="table-cell">sudo apt remove mysql-server (Remove application named mysql-server)</div>
+          <div class="table-cell"><strong>|</strong> (Called a &ldquo;pipe.&rdquo; Made by pressing SHIFT-Backslash)</div>
+          <div class="table-cell">Pass the output from one application to another</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo apt update | less</strong> (Send the output of sudo apt update to the application named less)</li>
+              <li><strong>echo "10+2" | bc</strong> (Send 10+2 to the terminal calculator application bc)</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
