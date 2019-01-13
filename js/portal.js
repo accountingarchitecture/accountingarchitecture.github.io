@@ -172,6 +172,8 @@ var myModules = [
       "summary":"<p>Welcome to ACCT 4020 &ndash; Accounting and Information Systems. To begin, carefully read the course syllabus. You will find a link to the syllabus in the navigation buttons below. The syllabus explains the course policies, objectives, and deliverables. The more carefully you read the syllabus, the better prepared you will be for the unique nature of the course. After reading, you will find a Getting Started quiz on eCourseware.</p><p>All current and future topics for this course are listed on the Home page on this course portal. Once a topic is no longer current, it will be moved to the Archive, where all past topics, deliverables, and dates will be stored for future reference. You can find the Archive by clicking on the link in the top-right corner of this page.</p>",
       "nav":[
         {"label":"Syllabus", "href":"supplement/getting-started/syllabus.html"},
+        {"label":"Email Policy", "href":"supplement/getting-started/syllabus.html#email"},
+        {"label":"Academic Integrity", "href":"supplement/getting-started/syllabus.html#integrity"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"1"}
