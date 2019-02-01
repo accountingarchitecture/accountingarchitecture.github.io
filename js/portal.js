@@ -293,7 +293,7 @@ var myModules = [
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
         {"label":"Lecture", "href":"lectures/storage.html"},
-        {"label":"Article", "href":"supplement/storage/storage.png", "filetype":"Image"},
+        {"label":"Article", "href":"http://www.bbc.com/future/story/20190104-are-you-a-digital-hoarder?ocid=global_future_rss"},
         {"label":"Homework", "href":"supplement/storage/assignment.html"}
       ],
       "due":[
