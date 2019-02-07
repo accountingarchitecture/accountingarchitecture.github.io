@@ -257,8 +257,7 @@
   }
   a.button:hover, a.menu-item:hover, a.button:active {
     color: white;
-    background:-webkit-linear-gradient(top,#33a3c0 0,#038eb2 100%);
-    background:linear-gradient(to bottom,#33a3c0 0,#038eb2 100%);
+    background: #006fbf;
   }
 
 /********** Calendar **********/
