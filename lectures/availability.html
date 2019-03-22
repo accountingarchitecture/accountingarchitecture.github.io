@@ -237,21 +237,21 @@
           <div class="table-cell"></div>
         </div>
         <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>git add</strong></div>
+          <div class="table-cell" style="white-space: nowrap"><strong>git add -v</strong></div>
           <div class="table-cell">Stage local changes to be added to the local repository</div>
           <div class="table-cell">
             <ul>
-              <li><strong>git add test.txt</strong> (Stage file test.txt)</li>
-              <li><strong>git add lectures/*</strong> (Stage all files in lectures folder)</li>
+              <li><strong>git add -v test</strong> (Stage file test)</li>
+              <li><strong>git add -v lectures/*</strong> (Stage all files in lectures folder)</li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>git commit -m</strong></div>
+          <div class="table-cell" style="white-space: nowrap"><strong>git commit -vm</strong></div>
           <div class="table-cell">Add staged changes to local repository with a commit message</div>
           <div class="table-cell">
             <ul>
-              <li><strong>git commit -m "Fix errata"</strong> (Add staged changes to local repository with commit message Fix errata)</li>
+              <li><strong>git commit -vm "Fix errata"</strong> (Add staged changes to local repository with commit message Fix errata)</li>
             </ul>
           </div>
         </div>
@@ -261,6 +261,49 @@
           <div class="table-cell">
             <ul>
               <li><strong>git push origin master</strong> (Push changes in the local master branch to cloud repository named origin)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Archive Commands</h2>
+      <div class="table" style="font-size: 22px">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>zip</strong></div>
+          <div class="table-cell">Create a ZIP archive</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>zip archbac.zip test1 test2 test3</strong> (Create ZIP archive archbac from copy of files test1, test2, and test3)</li>
+              <li><strong>zip archbac.zip testfolder</strong> (Create ZIP archive archbac from copy of folder testfolder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap"><strong>unzip</strong></div>
+          <div class="table-cell">List contents in or extract contents from a ZIP archive</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>unzip -l archbac.zip</strong> (List contents of ZIP archive archbac; lowercase &ldquo;ell&rdquo;)</li>
+              <li><strong>unzip archbac.zip</strong> (Extract contents of ZIP archive archbac into current folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>tar</strong></div>
+          <div class="table-cell">Create, list contents in, or extract contents from TAR archive</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>tar cvfz archbac.tar.gz test1 test2 test3</strong> (Create TAR archive archbac using GZIP compression protocol from copy of files test1, test2, and test3)</li>
+              <li><strong>tar cvfz archbac.tar.gz testfolder</strong> (Create TAR archive archbac using GZIP compression protocol from copy of folder testfolder)</li>
+              <li><strong>tar tvfz archbac.tar.gz</strong> (List contents of TAR archive archbac that uses GZIP compression protocol)</li>
+              <li><strong>tar xvfz archbac.tar.gz</strong> (Extract contents of TAR archive archbac that uses GZIP compression protocol)</li>
             </ul>
           </div>
         </div>
