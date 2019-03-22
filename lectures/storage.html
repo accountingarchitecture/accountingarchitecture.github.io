@@ -571,8 +571,13 @@
             </ul>
           </div>
         </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>pwd</strong></div>
+          <div class="table-cell">Print current folder to terminal</div>
+          <div class="table-cell"></div>
+        </div>
       </div>
-      <p style="text-align: center">(NB: In Linux, file and folder names are case sensitive.)
+      <p>(NB: In Linux, file and folder names are case sensitive. Also, the cd command will not print any output to the terminal. Using the pwd command will confirm successful navigation.)
     </section>
 
     <section>
@@ -585,24 +590,24 @@
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell"><strong>touch</strong> (<strong>sudo touch</strong>, if destination folder is not owned by user)</div>
-          <div class="table-cell">Create file</div>
+          <div class="table-cell">Create file (only prints output to terminal in the case of a error)</div>
           <div class="table-cell">
             <ul>
-              <li><strong>touch test.txt</strong> (Create test.txt in current folder owned by user)</li>
-              <li><strong>sudo touch /test.txt</strong> (Create test.txt in root folder not owned by user)</li>
-              <li><strong>touch Downloads/test.txt</strong> (Create test.txt in Downloads folder owned by user in current folder)</li>
-              <li><strong>sudo touch /opt/test.txt</strong> (Create test.txt in opt folder not owned by user in root folder)</li>
+              <li><strong>touch test</strong> (Create file test in current folder owned by user)</li>
+              <li><strong>sudo touch /test</strong> (Create file test in root folder not owned by user)</li>
+              <li><strong>touch Downloads/test</strong> (Create file test in Downloads folder owned by user in current folder)</li>
+              <li><strong>sudo touch /opt/test</strong> (Create file test in opt folder not owned by user in root folder)</li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell"><strong>mkdir</strong> (<strong>sudo mkdir</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell"><strong>mkdir -v</strong> (<strong>sudo mkdir -v</strong>, if destination folder is not owned by user)</div>
           <div class="table-cell">Create folder</div>
           <div class="table-cell">
             <ul>
-              <li><strong>mkdir Documents</strong> (Create Documents folder in current folder owned by user)</li>
-              <li><strong>mkdir Videos/playlist</strong> (Create folder playlist in Video folder owned by user in current folder)</li>
-              <li><strong>sudo mkdir /bin/test</strong> (Create test folder in bin folder not owned by user in root folder)</li>
+              <li><strong>mkdir -v Documents</strong> (Create Documents folder in current folder owned by user)</li>
+              <li><strong>mkdir -v Videos/playlist</strong> (Create folder playlist in Video folder owned by user in current folder)</li>
+              <li><strong>sudo mkdir -v /bin/test</strong> (Create test folder in bin folder not owned by user in root folder)</li>
             </ul>
           </div>
         </div>
@@ -618,7 +623,7 @@
           <div class="table-cell">Examples</div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>ls</strong></div>
+          <div class="table-cell"><strong>ls</strong> (Read: lowercase &ldquo;ell&rdquo; followed by an &ldquo;ess,&rdquo; not an uppercase &ldquo;aye&rdquo;)</div>
           <div class="table-cell">List contents of a folder</div>
           <div class="table-cell">
             <ul>
@@ -642,14 +647,13 @@
           <div class="table-cell">Print contents of text file to terminal</div>
           <div class="table-cell">
             <ul>
-              <li><strong>cat test.txt</strong> (Print contents of test.txt in current folder to terminal window)</li>
-              <li><strong>cat /etc/smb.conf</strong> (Print contents of smb.conf in etc folder in root folder to terminal window)</li>
-              <li><strong>cat /etc/smb.conf</strong> (Print contents of smb.conf in etc folder in root folder to terminal window)</li>
-              <li><strong>cat test.txt >> Downloads/test2.txt</strong> (Append contents of test2.txt in Downloads folder in current folder with contents of test.txt in current folder)</li>
+              <li><strong>cat test</strong> (Print contents of file test in current folder to terminal window)</li>
+              <li><strong>cat /etc/smb.conf</strong> (Print contents of file smb.conf in etc folder in root folder to terminal window)</li>
             </ul>
           </div>
         </div>
       </div>
+      <p>(NB: The ls command is useful after performing any other storage-related Linux command to confirm that any intended changes were successful.)</p>
     </section>
 
     <section>
@@ -665,10 +669,10 @@
           <div class="table-cell">Pass the output of an application to a file or pass the contents of a text file to an application (passing to a file creates the file, if it does not exist, or <em>replaces</em> the contents of the file, if it already exists; the application comes first in the sequence and the file second; the direction of the arrow determines whether the output is passed to the application or the file)</div>
           <div class="table-cell">
             <ul>
-              <li><strong>ls &gt; output.txt</strong> (Pass the output from ls to file output.txt)</li>
-              <li><strong>cat test.txt &gt; test2.txt</strong> (Pass the output from printing file test.txt to file test2.txt)</li>
-              <li><strong>echo "Testing..." &gt; test.txt</strong> (Pass the string Testing... to file test.txt)</li>
-              <li><strong>cat &lt; test.txt</strong> (Pass the contents of file test.txt to cat)</li>
+              <li><strong>ls &gt; output</strong> (Pass the output from ls to file output)</li>
+              <li><strong>cat test &gt; test2</strong> (Pass the output from printing file test to file test2)</li>
+              <li><strong>echo "Testing..." &gt; test</strong> (Pass the string Testing... to file test)</li>
+              <li><strong>cat &lt; test</strong> (Pass the contents of file test to cat)</li>
             </ul>
           </div>
         </div>
@@ -677,13 +681,14 @@
           <div class="table-cell">Pass the output of an application to a file (passing to a file creates the file, if it does not exist, or <em>appends</em> the contents of the file, if it already exists)</div>
           <div class="table-cell" style="width: 40%">
             <ul>
-              <li><strong>ls &gt;&gt; output.txt</strong> (Pass the output from ls to file output.txt)</li>
-              <li><strong>echo "Testing..." &gt;&gt; test.txt</strong> (Pass the string Testing... to file test.txt)</li>
-              <li><strong>cat test.txt &gt;&gt; test2.txt</strong> (Pass the output from printing file test.txt to file test2.txt)</li>
+              <li><strong>ls &gt;&gt; output</strong> (Pass the output from ls to file output)</li>
+              <li><strong>echo "Testing..." &gt;&gt; test</strong> (Pass the string Testing... to file test)</li>
+              <li><strong>cat test &gt;&gt; test2</strong> (Pass the output from printing file test to file test2)</li>
             </ul>
           </div>
         </div>
       </div>
+      <p>(NB: Using redirects will generally not print any output to the terminal.)</p>
     </section>
 
     <section>
@@ -695,16 +700,16 @@
           <div class="table-cell">Examples</div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>mv</strong> (<strong>sudo mv</strong>, if source file or folder or destination folder is not owned by user)</div>
+          <div class="table-cell"><strong>mv -v</strong> (<strong>sudo mv -v</strong>, if source file or folder or destination folder is not owned by user)</div>
           <div class="table-cell">Move or rename file or folder</div>
           <div class="table-cell">
             <ul>
-              <li><strong>mv test.txt test2.txt</strong> (Rename test.txt owned by user in current folder owned by user to test2.txt)</li>
-              <li><strong>mv test.txt Documents/.</strong> (Move test.txt owned by user in current folder to Documents folder owned by user in current folder)</li>
-              <li><strong>sudo mv test.txt /.</strong> (Move test.txt in current folder to root folder not owned by user)</li>
+              <li><strong>mv -v test test2</strong> (Rename file test owned by user in current folder owned by user to test2)</li>
+              <li><strong>mv -v testtxt Documents/.</strong> (Move file test owned by user in current folder to Documents folder owned by user in current folder)</li>
+              <li><strong>sudo mv -v test /.</strong> (Move file test in current folder to root folder not owned by user)</li>
               <li><strong>mv Documents/* Downloads/.</strong> (Move contents of Documents folder owned by user in current folder to Downloads folder owned by user in current folder)</li>
-              <li><strong>sudo mv /etc /etc_bak</strong> (Rename etc folder not owned by user in root folder not owned by user to etc_bak in root folder not owned by user)</li>
-              <li><strong>mv Music Downloads/mymusic</strong> (Move Music folder owned by user in current folder to Downloads folder owned by user in current folder and rename to mymusic)</li>
+              <li><strong>sudo mv -v /etc /etc_bak</strong> (Rename etc folder not owned by user in root folder not owned by user to etc_bak in root folder not owned by user)</li>
+              <li><strong>mv -v Music Downloads/mymusic</strong> (Move Music folder owned by user in current folder to Downloads folder owned by user in current folder and rename to mymusic)</li>
             </ul>
           </div>
         </div>
@@ -720,25 +725,25 @@
           <div class="table-cell">Examples</div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>cp</strong> (<strong>sudo cp</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell"><strong>cp -v</strong> (<strong>sudo cp -v</strong>, if destination folder is not owned by user)</div>
           <div class="table-cell">Copy file</div>
           <div class="table-cell">
             <ul>
-              <li><strong>cp test.txt test2.txt</strong> (Copy test.txt in current folder to current folder owned by user and name test2.txt)</li>
-              <li><strong>cp test.txt Documents/.</strong> (Copy test.txt in current folder to Documents folder owned by user in current folder)</li>
-              <li><strong>sudo cp test.txt /.</strong> (Copy test.txt in current folder to root folder not owned by user)</li>
-              <li><strong>cp Documents/* Downloads/.</strong> (Copy contents of Documents folder in current folder to Downloads folder owned by user in current folder)</li>
+              <li><strong>cp -v test test2</strong> (Copy file test in current folder to current folder owned by user and name test2)</li>
+              <li><strong>cp -v test Documents/.</strong> (Copy file test in current folder to Documents folder owned by user in current folder)</li>
+              <li><strong>sudo cp -v test /.</strong> (Copy file test in current folder to root folder not owned by user)</li>
+              <li><strong>cp -v Documents/* Downloads/.</strong> (Copy contents of Documents folder in current folder to Downloads folder owned by user in current folder)</li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell"><strong>cp -r</strong> (<strong>sudo cp -r</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell"><strong>cp -vr</strong> (<strong>sudo cp -vr</strong>, if destination folder is not owned by user)</div>
           <div class="table-cell">Copy folder</div>
           <div class="table-cell">
             <ul>
-              <li><strong>cp -r Documents Downloads/.</strong> (Copy Documents folder in current folder to Downloads folder owned by user in current folder)</li>
-              <li><strong>sudo cp -r /etc /etc_bak</strong> (Copy etc folder in root folder to root folder not owned by user and name etc_bak)</li>
-              <li><strong>cp -r Music /var/mymusic</strong> (Copy Music folder in current folder to var folder not owned by user in root folder and name mymusic)</li>
+              <li><strong>cp -vr Documents Downloads/.</strong> (Copy Documents folder in current folder to Downloads folder owned by user in current folder)</li>
+              <li><strong>sudo cp -vr /etc /etc_bak</strong> (Copy etc folder in root folder to root folder not owned by user and name etc_bak)</li>
+              <li><strong>cp -vr Music /var/mymusic</strong> (Copy Music folder in current folder to var folder not owned by user in root folder and name mymusic)</li>
             </ul>
           </div>
         </div>
@@ -754,25 +759,25 @@
           <div class="table-cell">Examples</div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>rm</strong> (<strong>sudo rm</strong>, if file is not owned by user)</div>
+          <div class="table-cell"><strong>rm -v</strong> (<strong>sudo rm -v</strong>, if file is not owned by user)</div>
           <div class="table-cell">Delete file</div>
           <div class="table-cell">
             <ul>
-              <li><strong>rm test.txt</strong> (Delete test.txt in current folder owned by user)</li>
-              <li><strong>rm Documents/test.txt</strong> (Delete test.txt owned by user in Documents folder in current folder)</li>
-              <li><strong>sudo rm /etc/test.txt</strong> (Delete test.txt not owned by user in etc folder in root folder)</li>
+              <li><strong>rm -v test</strong> (Delete file test in current folder owned by user)</li>
+              <li><strong>rm -v Documents/test</strong> (Delete file test owned by user in Documents folder in current folder)</li>
+              <li><strong>sudo rm -v /etc/test</strong> (Delete file test not owned by user in etc folder in root folder)</li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell"><strong>rm -rf</strong> (<strong>sudo rm -rf</strong>, if folder or its contents are not owned by user)</div>
+          <div class="table-cell"><strong>rm -vrf</strong> (<strong>sudo rm -vrf</strong>, if folder or its contents are not owned by user)</div>
           <div class="table-cell">Delete folder and its contents</div>
           <div class="table-cell">
             <ul>
-              <li><strong>rm -rf Downloads/.</strong> (Delete Downloads folder and all of its contents owned by user in current folder)</li>
-              <li><strong>rm -rf Music/playlist</strong> (Delete playlist folder and all of its contents owned by user in Music folder in current folder)</li>
-              <li><strong>sudo rm -rf /opt/test</strong> (Delete test folder and all of its contents not owned by user in opt folder in root folder)</li>
-              <li><strong>sudo rm -rf /</strong> (Delete root folder and all of its contents not owned by user; this command should never be run as it will delete everything on the file system)</li>
+              <li><strong>rm -vrf Downloads/.</strong> (Delete Downloads folder and all of its contents owned by user in current folder)</li>
+              <li><strong>rm -vrf Music/playlist</strong> (Delete playlist folder and all of its contents owned by user in Music folder in current folder)</li>
+              <li><strong>sudo rm -vrf /opt/test</strong> (Delete test folder and all of its contents not owned by user in opt folder in root folder)</li>
+              <li><strong>sudo rm -vrf /</strong> (Delete root folder and all of its contents not owned by user; this command should never be run as it will delete everything on the file system)</li>
             </ul>
           </div>
         </div>
@@ -792,9 +797,9 @@
           <div class="table-cell">Find file or folder by name</div>
           <div class="table-cell">
             <ul>
-              <li><strong>sudo find . -name test.txt</strong> (Search in current folder and all sub-folders for any file with name test.txt)</li>
-              <li><strong>sudo find / -name test.txt</strong> (Search in root folder and all sub-folders for any file with name test.txt)</li>
-              <li><strong>sudo find /etc -iname test.txt</strong> (Search case-insensitive in etc folder in root folder and all sub-folders for any file with name test.txt)</li>
+              <li><strong>sudo find . -name test</strong> (Search in current folder and all sub-folders for any file with name test)</li>
+              <li><strong>sudo find / -name test</strong> (Search in root folder and all sub-folders for any file with name test)</li>
+              <li><strong>sudo find /etc -iname test</strong> (Search case-insensitive in etc folder in root folder and all sub-folders for any file with name test)</li>
               <li><strong>sudo find . -iname *test*</strong> (Search case-insensitive in current folder and all sub-folders for any file or folder with name containing string test)</li>
             </ul>
           </div>
