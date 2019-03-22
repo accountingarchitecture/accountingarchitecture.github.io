@@ -296,27 +296,27 @@
           <div class="table-cell">Examples</div>
         </div>
         <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo chown</strong></div>
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo chown -v</strong></div>
           <div class="table-cell">Change file or folder user and group</div>
           <div class="table-cell">
             <ul>
-              <li><strong>sudo chown acc test.txt</strong> (Change user of test.txt to acc)</li>
-              <li><strong>sudo chown :dep test.txt</strong> (Change group of test.txt to dep)</li>
-              <li><strong>sudo chown acc:dep test.txt</strong> (Change user of file test.txt to acc and group to dep)</li>
-              <li><strong>sudo chown acc:dep Downloads</strong> (Change user of Downloads folder in current folder to acc and group to dep)</li>
-              <li><strong>sudo chown -R acc:dep Downloads</strong> (Change user of Downloads folder in current folder and all of its contents to acc and group to dep)</li>
+              <li><strong>sudo chown -v acc test</strong> (Change user of file test to acc)</li>
+              <li><strong>sudo chown -v :dep test</strong> (Change group of file test to dep)</li>
+              <li><strong>sudo chown -v acc:dep test</strong> (Change user of file test to acc and group to dep)</li>
+              <li><strong>sudo chown -v acc:dep Downloads</strong> (Change user of Downloads folder in current folder to acc and group to dep)</li>
+              <li><strong>sudo chown -vR acc:dep Downloads</strong> (Change user of Downloads folder in current folder and all of its contents to acc and group to dep)</li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo chmod</strong></div>
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo chmod -v</strong></div>
           <div class="table-cell">Change file or folder permissions</div>
           <div class="table-cell">
             <ul>
-              <li><strong>sudo chmod 644 test.txt</strong> (Change permissions of test.txt to 644)</li>
-              <li><strong>sudo chmod -R 777 /var/www</strong> (Change permissions of www folder in var folder and all its contents to 777)</li>
-              <li><strong>sudo chmod a+x Documents</strong> (Change permissions of Documents folder in current folder to add execute to all users)</li>
-              <li><strong>sudo chmod u+w,g-x,o-r test.txt</strong> (Change permissions of test.txt to add write to user, remove execute from group, and remove read from others)</li>
+              <li><strong>sudo chmod -v 644 test.txt</strong> (Change permissions of file test to 644)</li>
+              <li><strong>sudo chmod -vR 777 /var/www</strong> (Change permissions of www folder in var folder and all its contents to 777)</li>
+              <li><strong>sudo chmod -v a+x Documents</strong> (Change permissions of Documents folder in current folder to add execute to all users)</li>
+              <li><strong>sudo chmod -v u+w,g-x,o-r test.txt</strong> (Change permissions of file test to add write to user, remove execute from group, and remove read from others)</li>
             </ul>
           </div>
         </div>
