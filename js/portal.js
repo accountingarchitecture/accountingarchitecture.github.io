@@ -63,7 +63,7 @@ function schedule(modules) {
       }
     }
     if(Boolean(hasTopicWithDeliverable)) {
-      calendar += '<h3 class="calendar">' + modules[i].week + '</h3><dl>' + topics + '</dl>';
+      calendar += '<h3 class="calendar">Week ' + String(i + 1) + '</h3><dl>' + topics + '</dl>';
     }
   }
   if(calendar == '' && isHomeOrArchive() == 'Home') calendar = '<dl><dt>No future assignments.</dt></dl>';
