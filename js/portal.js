@@ -389,31 +389,16 @@ var myModules = [
         {"label":"Lecture", "href":"lectures/processing-integrity.html"},
         {"label":"Article", "href":"https://about.draw.io/entity-relationship-diagrams-with-draw-io/"},
         {"label":"Homework", "href":"supplement/processing-integrity/assignment.html"},
-        {"label":"Project Part 2", "href":"supplement/data-analytics/project-part2.html"}
-      ],
-      "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Homework", "deadline":"6"},
-        {"deliverable":"Project Part 2", "deadline":"6"}
-      ]
-    }
-  ]
-  },
-  {"topics":[
-    {"date":"April 15, 2019", "title":"Data Analytics",
-      "summary":"<p>The final topic of this course is data analytics. Data analytics is a huge issue in the business and accounting world today, and employers view it as a vital skill. Effective data analytics relies on an accurate understanding of all aspects of accounting architecture.</p><p>This lecture introduces multiple analytical tools and programming languages, but the analytics project focuses on one: SQL. I have reserved the remainder of the semester for this topic and the analytics project. If you have not already done so, you must complete project part 1 before you can attempt project part 2. You cannot submit the solution to project part 1 at this point for credit, but project part 1 prepares the database that you will use in project part 2. You can find the solution to project part 2 under the Content section of eCourseware after the project due date. I will not accept any late project submissions.</p><p>Please note that the deadlines for this topics's deliverables are the last day of classes. That will give you plenty of time to complete both deliverables, but I encourage you not to procrastinate working on part 2 of the analytics project. Also note that you must complete project part 2 before completing this topic's homework assignment, as the homework assignment instructs you to delete your Codeanywhere account, which you need for the analytics project. Also, if you wish to submit any late homework assignments for credit, you must submit them and notify me before the last day of classes.</p>",
-      "nav":[
-        {"label":"Lecture", "href":"lectures/data-analytics.html"},
-        {"label":"Article", "href":"supplement/data-analytics/analytics-and-auditing.pdf", "filetype":"PDF"},
+        {"label":"Project Part 2", "href":"supplement/data-analytics/project-part2.html"},
         {"label":"Project Part 3", "href":"supplement/data-analytics/project-part3.html"},
         {"label":"Dictionary", "href":"supplement/data-analytics/data-dictionary.pdf", "filetype":"PDF"},
         {"label":"Homework", "href":"supplement/final/assignment.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Project Part 3", "deadline":"9"},
-        {"deliverable":"Homework", "deadline":"9"}
+        {"deliverable":"Puzzle", "deadline":"6"},
+        {"deliverable":"Homework", "deadline":"6"},
+        {"deliverable":"Project Part 2", "deadline":"6"}
       ]
     }
   ]
