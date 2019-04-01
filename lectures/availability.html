@@ -111,22 +111,16 @@
     <section>
       <h2>Mirroring</h2>
       <p>A third backup option is a <u><em>mirror</em></u>. As the name implies, a mirror is an exact duplicate of a storage volume. The benefits of a mirror are that the backup procedure usually only involves storing deltas, similar to an incremental backup, and the restoration procedure only involves copying over the current mirror version. This reduces the amount of storage needed for backups, and the amount of time to back up and to restore. The drawback of a mirror is that it is a copy of the current data. If the current data is corrupt, the mirror may also be corrupt. Additionally, if a file is accidentally modified or deleted, the mirror cannot restore an earlier version.</p>
-      <p>RAID provides the opportunity to mirror. This is the reason for the name: <em>Redundant</em> Array of Independent Disks.</p>
-    </section>
-
-    <section>
-      <h2>RAID 1</h2>
-      <p>RAID 0 involves combining two physical volumes into one logical volume, called a <em>stripe</em>, so that the file system only sees a single drive with the storage capacity of both physical volumes combined. The purpose of RAID 0 is to maximize the size of a logical volume. Interestingly, one of the problems with RAID 0 is its vulnerability to failure because the stripe becomes corrupted if either physical volume fails. Each drive represents a single point of failure. RAID 1, on the other hand, uses the same two physical volumes as mirrors. The user sees a logical volume with the capacity of one physical volume, and the other physical volume is a duplicate copy (i.e., backup). When redundancy is more important than storage capacity, RAID 1 is more valuable than RAID 0.</p>
-    </section>
-
-    <section>
-      <h2>Remote Mirror</h2>
-      <p>RAID 1 has an additional advantage, namely that the RAID system is designed to repair volumes while the system is live. If one drive becomes corrupted, it is possible to swap out that drive, replace it with a blank one, and have the RAID rebuild the data without ever shutting down the system. This promotes availability by preventing data loss and system downtime simultaneously. Unfortunately, RAID 1 requires that the devices be in the same physical location. If a disaster affects the entire computer, such as fire, electrical surge, or theft, the RAID will no longer provide a backup. Other mirroring tools can create mirrors that are stored off-site and can be accessible in these disaster situations. However, they continue to be subject to the general problems of mirrored backups.</p>
     </section>
 
     <section>
       <h2>Version Control System</h2>
       <p>One backup tool that combines the best aspects of full, incremental, and mirrored backups is the <u><em>version control system</em></u> (VCS). A VCS backs up deltas, but it can restore all data at once. Additionally, it provides a convenient timeline of changes and can restore the data to any given point in the timeline in history. Version control systems, also called versioning software, are especially prevalent among software developers because in addition to the backup features, they allow for collaboration between multiple contributors. In fact, additional collaboration creates additional backups because each contributor has a complete copy of the data. Developers make edits to their local versions of the data and then push those changes to all contibutors to update their copies.</p>
+    </section>
+
+    <section>
+      <h2>Remote Backups</h2>
+      <p>With backups, care must be exercised to ensure that whichever event results in corruption or loss of the original data will not also affect the backup. If the backup is stored on the same file system as the original data and file system is damaged or destroyed, then the original data and the backup may both be lost. If they are stored on separate file systems on the same computer, any disaster that affects the entire computer, such as fire, electrical surge, or theft, will render the backup useless. Even backups stored in the same building on different computers than the original data can suffer by any event that affects the whole building, such as a natural disaster. Storing backups off-site, for example in a safe deposit box or in the cloud, can reduce the likelihood that the original data and the backup will both be lost.</p>
     </section>
 
     <section>
