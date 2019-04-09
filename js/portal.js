@@ -194,7 +194,7 @@ var myModules = [
     {"date":"January 22, 2019", "title":"Accounting Architecture",
       "nav":[
         {"label":"Lecture", "href":"lectures/accounting-architecture.html"},
-        {"label":"Article", "href":"supplement/accounting-architecture/pwc.pdf", "filetype":"PDF"},
+        {"label":"Article", "href":"https://sfmagazine.com/post-entry/september-2018-how-to-master-digital-age-competencies/", "filetype":"PDF"},
         {"label":"AI Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
       ],
       "due":[
@@ -219,7 +219,7 @@ var myModules = [
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/coins.html"},
         {"label":"Lecture", "href":"lectures/information.html"},
-        {"label":"Article", "href":"supplement/information/cpas-and-big-data.pdf", "filetype":"PDF"},
+        {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
         {"label":"Homework", "href":"supplement/information/assignment.html"},
         {"label":"AI Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
 
@@ -339,7 +339,7 @@ var myModules = [
     {"date":"March 25, 2019", "title":"Confidentiality",
       "nav":[
         {"label":"Lecture", "href":"lectures/confidentiality.html"},
-        {"label":"Article", "href":"supplement/confidentiality/blockchain.pdf", "filetype":"PDF"},
+        {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
         {"label":"Homework", "href":"supplement/confidentiality/assignment.html"},
         {"label":"Tech Report Instructions", "href":"supplement/getting-started/syllabus.html#tech-report"}
       ],
