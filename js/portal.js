@@ -336,7 +336,7 @@ var myModules = [
   ]
   },
   {"topics":[
-    {"date":"March 25, 2019", "title":"Confidentiality",
+    {"date":"March 25, 2019", "title":"Confidentiality &amp; Privacy",
       "nav":[
         {"label":"Lecture", "href":"lectures/confidentiality.html"},
         {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
