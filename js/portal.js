@@ -389,7 +389,10 @@ var myModules = [
   ]
   },
   {"topics":[
-    {"date":"April 27, 2019", "title":"Final Exam",
+    {"date":"April 27, 2019", "title":"Final Exam... and Beyond!",
+      "nav":[
+        {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"}
+      ],
       "due":[
         {"deliverable":"Final Exam", "deadline":"0", "time":"23.59"}
       ]
