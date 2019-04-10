@@ -126,20 +126,19 @@
     </section>
 
     <section>
-      <h2>IaaS and PaaS</h2>
+      <h2>IaaS</h2>
       <p>Many corporate-grade clouds provide Infrastructure as a Service. This service level usually involves providing one or more <u><em>virtual machines</em></u>. IaaS is essentially a replacement for a physical server or workstation. It also provides the user with the most flexibility of the three service levels.</p>
-      <p>Platform as a Service provides a much more specialized environment. It usually includes a database, applications for writing code, and one or more engines, which are are applications necessary to execute code in a specific programming language (e.g., a Java engine can execute Java code). As a result, the primary role of PaaS is for software development and testing.</p>
+      <p><u><em>Virtualization</em></u> allows software to assume the role of hardware. Instead of a kernel communicating directly with the computer hardware, a virtualized operating system sits in a virtual machine, and its kernel communicates with a <u><em>hypervisor</em></u> which communicates with the computer hardware. The underlying system is the <u><em>host</em></u>, and the virtualized system is the <u><em>guest</em></u>. Virtualization allows for sharing computer hardware with multiple operating systems.</p>
     </section>
 
     <section>
-      <h2>Virtual Machines</h2>
-      <p><u><em>Virtualization</em></u> allows software to assume the role of hardware. Instead of a kernel communicating directly with the computer hardware, a virtualized operating system sits in a virtual machine, and its kernel communicates with a <u><em>hypervisor</em></u> which communicates with the computer hardware. The underlying system is the <u><em>host</em></u>, and the virtualized system is the <u><em>guest</em></u>. Virtualization allows for sharing computer hardware with multiple operating systems.</p>
-      <div class="override"><img src="../images/hypervisor.png" alt="Hypervisor"/></div>
+      <h2>PaaS and Serverless Computing</h2>
+      <p>Platform as a Service provides a much more specialized environment. It usually includes enough infrastructure to develop and deploy (i.e., run) one more cloud-based applications. The popularity of cloud-based applications (e.g., for use on mobile devices) has given rise to <u><em>serverless computing</em></u>, which is an adaptation of PaaS. Despite its poorly selected name, serverless computing does, in fact, use servers. PaaS and serverless computing both include a platform for application development and deployment. However, with PaaS, the user pays (e.g., per month) to use the environment, and the user deploys and monitors the application, bit with serverless computing, the user only pays (e.g., per second) when the application is in use, and the vendor deploys and monitors the application.</p>
     </section>
 
     <section>
       <h2>SaaS</h2>
-      <p>Software as a Service is the service level with which Web users are most familiar, even if they are not familiar with the term. The World Wide Web is essentially a combination of SaaS offerings. Netflix, Google Docs, YouTube, Instagram, Facebook, Twitter, and other social media interfaces, and even online email inboxes and search engines are examples of Software as a Service. The primary benefits of Software as a Service are (1) the ability to provide the same application to multiple users without needing to administrate installation, updating, and troubleshoot on each individual computer, and (2) the ability to have the application draw its computing needs from a powerful, centralized server, instead of requiring each client computer to have computing power sufficient to support the entire application.</p>
+      <p>Software as a Service is the service level with which Web users are most familiar, even if they are not familiar with the term. The World Wide Web is essentially a combination of SaaS offerings. Netflix, Google Docs, YouTube, Instagram, Facebook, Twitter, and other social media interfaces, and even online email inboxes and search engines are examples of SaaS. The primary benefits of SaaS are (1) the ability for multiple end-users to access the same application without needing to install, update, or maintain a local copy of the application, and (2) the ability to have the application draw its computing needs from a powerful, centralized server, instead of requiring each end-user's computer to have computing power sufficient to support the entire application. Whereas other service levels are for content creators, SaaS is for content users.</p>
     </section>
 
     <section>
@@ -153,25 +152,10 @@
       <h2>Containerization</h2>
       <div class="flex-row">
         <div class="flex-item" style="max-width: 62%">
-          <p><u><em>Containerization</em></u> is a newer alternative to virtualization. Virtualization shares computer hardware across a number of virtual machines containing full operating systems. Containerization shares one operating system kernel across a number of containers containing just enough software to perform one function (e.g., run one application). The leaner containers avoid the unnecessary, redundant resource consumption of full guest operating systems.</p>
+          <p><u><em>Containerization</em></u> is a newer alternative to virtualization. Virtualization shares computer hardware across a number of virtual machines containing full operating systems. Containerization shares one operating system kernel across a number of containers containing just enough software to perform one function (e.g., run one application). These leaner containers avoid the unnecessary, redundant resource consumption of virtual machines.</p>
         </div>
         <!--Copyright 1999-2016 QuinStreet, Inc. All rights reserved.-->
         <div class="flex-item"><img src="../images/containerization.jpg" alt="Containerization"/>
-    </section>
-
-    <section>
-      <h2>CaaS over IaaS and PaaS</h2>
-      <p>CaaS is more efficient than IaaS. Virtual machines are entire operating systems, whereas containers share one operating system. Containers generally contain only a single application or a single database, and they are particularly useful in a cloud environment. Containers are also easily duplicated to create multiple identical computing environments. They are a popular tool for DevOps because they provide IT staff with same configuration for hosting an application as SaaS as the developers have when developing the application. As a result, CaaS has already reduced the frequency of IaaS, and it may completely replace PaaS. In many situations, PaaS now actually means Platform-as-a-Service-provided-in-one-or-more-containers.</p>
-    </section>
-
-    <section>
-      <h2>File Shares</h2>
-      <p><u><em>File sharing</em></u> is one of the oldest forms of cloud computing. Users frequently think of file sharing specifically as peer-to-peer file sharing, which involves a single user sharing content with another single user. However, file sharing in cloud computing involves a centralized file server that provides access to a network-based file system so that users and applications can access the same content from multiple devices. In a distributed computing environment, multiple servers provide a single <u><em>distributed file system</em></u>. Three common file server daemons are the File Transfer Protocol (FTP) daemon, the Network File System (NFS) daemon, and the Server Message Block (SMB) daemon. NFS and SMB provide users with file systems that they can mount like local file systems or removable media.</p>
-    </section>
-
-    <section>
-      <h2>Database Servers</h2>
-      <p><u><em>Database servers</em></u> are also a very common component of cloud computing. Relational database management systems combine a database server with a database client. The database server daemon collates data from the file system in order to present it to the database client in a centralized manner. The database server can be on the same device as the database client, or the database server can be on a different network-connected device. The database client treats local and remote database servers the same. Cloud-based database servers are the preferred storage solution for many cloud-based applications because they can provide application data better than a cloud-based file system. They are also useful for providing data analysts with access to datasets that are too large to store on their personal computers.</p>
     </section>
 
     <section>
@@ -193,6 +177,16 @@
     <section>
       <h2>Open Source in the Cloud</h2>
       <p>Open source software dominates cloud computing. Most prominent public and private cloud offerings are open source. Ubuntu Linux is the number one operating system for the cloud&mdash;not the number one Linux distribution, the number one operating system&mdash;even on Microsoft's Azure platform, and the most popular databases in the cloud are open source. The primary reason for the popularity of open source in cloud computing is customizability. Firms have unique processes with unique informational needs, and they want to be able to customize the information system to meet their unique needs. This is one reason why private clouds thrive while ERP adoption diminishes.</p>
+    </section>
+
+    <section>
+      <h2>File Shares</h2>
+      <p><u><em>File sharing</em></u> is one of the oldest forms of cloud computing. Users frequently think of file sharing specifically as peer-to-peer file sharing, which involves a single user sharing content with another single user. However, file sharing in cloud computing involves a centralized file server that provides access to a network-based file system so that users and applications can access the same content from multiple devices. In a distributed computing environment, multiple servers provide a single <u><em>distributed file system</em></u>. Three common file server daemons are the File Transfer Protocol (FTP) daemon, the Network File System (NFS) daemon, and the Server Message Block (SMB) daemon. NFS and SMB provide users with file systems that they can mount like local file systems or removable media.</p>
+    </section>
+
+    <section>
+      <h2>Database Servers</h2>
+      <p><u><em>Database servers</em></u> are also a very common component of cloud computing. Relational database management systems combine a database server with a database client. The database server daemon collates data from the file system in order to present it to the database client in a centralized manner. The database server can be on the same device as the database client, or the database server can be on a different network-connected device. The database client treats local and remote database servers the same. Cloud-based database servers are the preferred storage solution for many cloud-based applications because they can provide application data better than a cloud-based file system. They are also useful for providing data analysts with access to datasets that are too large to store on their personal computers.</p>
     </section>
 
     <section>
