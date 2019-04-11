@@ -21,7 +21,10 @@ function builder(modules) {
         if(isCurrentOrArchived(modules[i]) == 'current') topic += '<div class="topic"><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="nav">' + navbuttons + '</div></div>';
         else topic += '<div class="topic"><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="nav" style="display: none">' + navbuttons + '</div></div>';
       }
-      content += '<div class="module"><div class="week"><div class="label">Week ' + String(i + 1) + '</div><div class="date">' + modules[i].topics[0].date + '</div></div>' + topic + '</div>';
+      content += '<div class="module"><div class="week"><div class="label">';
+      if(modules[i].hasOwnProperty('label')) content += modules[i].label;
+      else content += 'Week ' + String(i + 1);
+      content += '</div><div class="date">' + modules[i].topics[0].date + '</div></div>' + topic + '</div>';
     }
   }
   if(content == '' && isHomeOrArchive() == 'Home') content += '<div class="module"><div class="topic"><h2>No current topics.</h2>' + '</div>';
@@ -63,7 +66,10 @@ function schedule(modules) {
       }
     }
     if(Boolean(hasTopicWithDeliverable)) {
-      calendar += '<h3 class="calendar">Week ' + String(i + 1) + '</h3><dl>' + topics + '</dl>';
+      calendar += '<h3 class="calendar">';
+      if(modules[i].hasOwnProperty('label')) calendar += modules[i].label;
+      else calendar += 'Week ' + String(i + 1);
+      calendar += '</h3><dl>' + topics + '</dl>';
     }
   }
   if(calendar == '' && isHomeOrArchive() == 'Home') calendar = '<dl><dt>No future assignments.</dt></dl>';
@@ -167,234 +173,225 @@ document.getElementById('calendar').addEventListener('click', function(e) {
 // Content
 var myModules = [
   {"topics":[
-    {"date":"January 14, 2019", "title":"Getting Started",
+    {"date":"June 3, 2019", "title":"Getting Started",
       "nav":[
-        {"label":"Syllabus", "href":"supplement/getting-started/syllabus.html"},
-        {"label":"Email Policy", "href":"supplement/getting-started/syllabus.html#email"},
-        {"label":"Academic Integrity", "href":"supplement/getting-started/syllabus.html#integrity"}
+        {"label":"Syllabus", "href":"supplement/syllabus/syllabus.html"},
+        {"label":"Email Policy", "href":"supplement/syllabus/syllabus.html#email"},
+        {"label":"Academic Integrity", "href":"supplement/syllabus/syllabus.html#integrity"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"1"}
       ]
     },
-    {"date":"January 14, 2019", "title":"Professionalism",
+    {"date":"June 3, 2019", "title":"Professionalism",
       "nav":[
         {"label":"Lecture", "href":"lectures/professionalism.html"},
-        {"label":"Article", "href":"supplement/professionalism/christensen.pdf", "filetype":"PDF"},
-        {"label":"Homework", "href":"supplement/professionalism/assignment.html"}
+        {"label":"Article", "href":"supplement/readings/professionalism.pdf", "filetype":"PDF"},
+        {"label":"Homework", "href":"supplement/assignments/professionalism.html"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
         {"deliverable":"Homework", "deadline":"6"}
       ]
-    }
-  ]
-  },
-  {"topics":[
-    {"date":"January 22, 2019", "title":"Accounting Architecture",
+    },
+    {"date":"June 3, 2019", "title":"Accounting Architecture",
       "nav":[
         {"label":"Lecture", "href":"lectures/accounting-architecture.html"},
         {"label":"Article", "href":"https://sfmagazine.com/post-entry/september-2018-how-to-master-digital-age-competencies/", "filetype":"PDF"},
-        {"label":"AI Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"}
-      ]
-    },
-    {"date":"January 22, 2019", "title":"Business Model",
-      "nav":[
-        {"label":"Lecture", "href":"lectures/business-model.html"},
-        {"label":"Article", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
-        {"label":"Homework", "href":"supplement/business-model/assignment.html"}
-      ],
-      "due":[
-        {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
-        {"deliverable":"Homework", "deadline":"5"}
+        {"deliverable":"Quiz", "deadline":"5", "time":"23.59"}
       ]
     }
   ]
   },
   {"topics":[
-    {"date":"January 28, 2019", "title":"Information",
+    {"date":"June 10, 2019", "title":"Business Model",
       "nav":[
-        {"label":"Puzzle", "href":"supplement/puzzles/coins.html"},
-        {"label":"Lecture", "href":"lectures/information.html"},
-        {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
-        {"label":"Homework", "href":"supplement/information/assignment.html"},
-        {"label":"AI Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
-
+        {"label":"Lecture", "href":"lectures/business-model.html"},
+        {"label":"Article", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
+        {"label":"Homework", "href":"supplement/assignments/business-model.html"},
+        {"label":"AI Report Instructions", "href":"supplement/syllabus/syllabus.html#ai-report"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Homework", "deadline":"6"}
+        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+        {"deliverable":"Homework", "deadline":"6"},
+        {"deliverable":"Diagram I", "deadline":"6"}
       ]
     },
+    {"date":"June 10, 2019", "title":"Information",
+      "nav":[
+        {"label":"Lecture", "href":"lectures/information.html"},
+        {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
+        {"label":"Homework", "href":"supplement/assignments/information.html"}
+      ],
+      "due":[
+        {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
+        {"deliverable":"Homework", "deadline":"6"}
+      ]
+    }
   ]
   },
   {"topics":[
-    {"date":"February 4, 2019", "title":"Hardware",
+    {"date":"June 17, 2019", "title":"Hardware",
       "nav":[
         {"label":"Lecture", "href":"lectures/hardware.html"},
         {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
-        {"label":"Homework", "href":"supplement/hardware/assignment.html"},
-        {"label":"AI Report Instructions", "href":"supplement/getting-started/syllabus.html#ai-report"}
+        {"label":"Homework", "href":"supplement/assignments/hardware.html"},
+        {"label":"AI Report Instructions", "href":"supplement/syllabus/syllabus.html#ai-report"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
+        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
         {"deliverable":"Homework", "deadline":"6"},
+        {"deliverable":"Diagram II", "deadline":"6"},
         {"deliverable":"AI Report", "deadline":"6"}
       ]
     }
   ]
   },
   {"topics":[
-    {"date":"February 11, 2019", "title":"Software: Open Source",
+    {"date":"June 24, 2019", "title":"Software: Open Source",
       "nav":[
+        {"label":"Puzzle", "href":"supplement/puzzles/coins.html"},
         {"label":"Lecture", "href":"lectures/open-source.html"},
         {"label":"Article", "href":"https://opensource.com/article/17/8/enterprise-open-source-advantages"},
-        {"label":"Homework", "href":"supplement/open-source/assignment.html"}
+        {"label":"Homework", "href":"supplement/assignments/open-source.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
+        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+        {"deliverable":"Puzzle", "deadline":"6"},
         {"deliverable":"Homework", "deadline":"6"}
       ]
     },
-    {"date":"February 11, 2019", "title":"Software: Operating Systems",
+    {"date":"June 24, 2019", "title":"Software: Operating Systems",
       "nav":[
         {"label":"Lecture", "href":"lectures/operating-systems.html"},
         {"label":"Article", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
-        {"label":"Homework", "href":"supplement/operating-systems/assignment.html"}
+        {"label":"Linux I", "href":"supplement/projects/linux1.html"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"4", "time":"23.59"},
-        {"deliverable":"Homework", "deadline":"6"}
+        {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
+        {"deliverable":"Linux I", "deadline":"6"}
       ]
     }
   ]
   },
   {"topics":[
-    {"date":"February 18, 2019", "title":"Storage",
+    {"date":"July 1, 2019", "title":"Storage",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
         {"label":"Lecture", "href":"lectures/storage.html"},
         {"label":"Article", "href":"http://www.bbc.com/future/story/20190104-are-you-a-digital-hoarder?ocid=global_future_rss"},
-        {"label":"Homework", "href":"supplement/storage/assignment.html"}
+        {"label":"Linux II", "href":"supplement/projects/linux2.html"},
+        {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Homework", "deadline":"6"}
+        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+        {"deliverable":"Puzzle", "deadline":"3"},
+        {"deliverable":"Linux II", "deadline":"3"}
       ]
     }
   ]
   },
   {"topics":[
-    {"date":"February 25, 2019", "title":"Services",
+    {"date":"July 8, 2019", "title":"Services",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/robbers.html"},
         {"label":"Lecture", "href":"lectures/services.html"},
         {"label":"Article", "href":"https://www.oracle.com/applications/erp/what-is-erp.html"},
-        {"label":"Project Part 1", "href":"supplement/data-analytics/project-part1.html"}
+        {"label":"Analytics I", "href":"supplement/projects/analytics1.html"},
+        {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
+        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
         {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Project Part 1", "deadline":"6"}
-      ]
-    }
-  ]
-  },
-  {"topics":[
-    {"date":"March 11, 2019", "title":"Risk &amp; Control",
-      "nav":[
-        {"label":"Lecture", "href":"lectures/risk-and-control.html"},
-        {"label":"Article", "href":"supplement/risk-and-control/coso.pdf", "filetype":"PDF"}
-      ],
-      "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Midterm Exam", "deadline":"5"}
-      ]
-    }
-  ]
-  },
-  {"topics":[
-    {"date":"March 18, 2019", "title":"Security",
-      "nav":[
-        {"label":"Puzzle", "href":"supplement/puzzles/teasers.html"},
-        {"label":"Lecture", "href":"lectures/security.html"},
-        {"label":"Article", "href":"https://enterprisersproject.com/article/2017/3/it-security-start-3-ways-make-it-business-priority"},
-        {"label":"Homework", "href":"supplement/security/assignment.html"},
-        {"label":"Tech Report Instructions", "href":"supplement/getting-started/syllabus.html#tech-report"}
-      ],
-      "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Homework", "deadline":"6"}
-      ]
-    }
-  ]
-  },
-  {"topics":[
-    {"date":"March 25, 2019", "title":"Confidentiality &amp; Privacy",
-      "nav":[
-        {"label":"Lecture", "href":"lectures/confidentiality.html"},
-        {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
-        {"label":"Homework", "href":"supplement/confidentiality/assignment.html"},
-        {"label":"Tech Report Instructions", "href":"supplement/getting-started/syllabus.html#tech-report"}
-      ],
-      "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Homework", "deadline":"6"},
+        {"deliverable":"Analytics I", "deadline":"6"},
         {"deliverable":"Tech Report", "deadline":"6"}
       ]
     }
   ]
   },
   {"topics":[
-    {"date":"April 1, 2019", "title":"Availability",
+    {"date":"July 15, 2019", "title":"Risk &amp; Control",
       "nav":[
-        {"label":"Puzzle", "href":"supplement/puzzles/math-facts.html"},
-        {"label":"Lecture", "href":"lectures/availability.html"},
-        {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
-        {"label":"Homework", "href":"supplement/availability/assignment.html"}
+        {"label":"Puzzle", "href":"supplement/puzzles/teasers.html"},
+        {"label":"Lecture", "href":"lectures/risk-and-control.html"},
+        {"label":"Article", "href":"supplement/readings/risk-and-control.pdf", "filetype":"PDF"}
       ],
       "due":[
-        {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-        {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Homework", "deadline":"6"}
+        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+        {"deliverable":"Puzzle", "deadline":"6"}
+      ]
+    },
+    {"date":"July 15, 2019", "title":"Security",
+      "nav":[
+        {"label":"Lecture", "href":"lectures/security.html"},
+        {"label":"Article", "href":"supplement/readings/security.pdf", "filetype":"PDF"},
+        {"label":"Homework", "href":"supplement/assignments/security.html"},
+        {"label":"Analytics II", "href":"supplement/projects/analytics2.html"}
+      ],
+      "due":[
+        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+        {"deliverable":"Homework", "deadline":"6"},
+        {"deliverable":"Analytics II", "deadline":"6"}
       ]
     }
   ]
   },
   {"topics":[
-    {"date":"April 8, 2019", "title":"Processing Integrity",
+    {"date":"July 22, 2019", "title":"Confidentiality &amp; Privacy",
+      "nav":[
+        {"label":"Puzzle", "href":"supplement/puzzles/math-facts.html"},
+        {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
+        {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
+        {"label":"Homework", "href":"supplement/assignments/confidentiality-and-privacy.html"}
+      ],
+      "due":[
+        {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+        {"deliverable":"Puzzle", "deadline":"6"},
+        {"deliverable":"Homework", "deadline":"6"}
+      ]
+    },
+    {"date":"July 22, 2019", "title":"Availability",
+      "nav":[
+        {"label":"Lecture", "href":"lectures/availability.html"},
+        {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
+        {"label":"Linux III", "href":"supplement/projects/linux3.html"}
+      ],
+      "due":[
+        {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
+        {"deliverable":"Linux III", "deadline":"6"}
+      ]
+    }
+  ]
+  },
+  {"topics":[
+    {"date":"July 29, 2019", "title":"Processing Integrity",
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
         {"label":"Lecture", "href":"lectures/processing-integrity.html"},
         {"label":"Article", "href":"https://about.draw.io/entity-relationship-diagrams-with-draw-io/"},
-        {"label":"Homework", "href":"supplement/processing-integrity/assignment.html"},
-        {"label":"Project Part 2", "href":"supplement/data-analytics/project-part2.html"},
-        {"label":"Project Part 3", "href":"supplement/data-analytics/project-part3.html"},
-        {"label":"Dictionary", "href":"supplement/data-analytics/data-dictionary.pdf", "filetype":"PDF"},
-        {"label":"Homework", "href":"supplement/final/assignment.html"}
+        {"label":"Diagram III", "href":"supplement/projects/diagram3.html"},
+        {"label":"Analytics III", "href":"supplement/projects/analytics3.html"},
+        {"label":"Dictionary", "href":"supplement/projects/data-dictionary.pdf", "filetype":"PDF"},
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
         {"deliverable":"Puzzle", "deadline":"6"},
-        {"deliverable":"Homework", "deadline":"6"},
-        {"deliverable":"Project Part 2", "deadline":"6"}
+        {"deliverable":"Diagram III", "deadline":"6"},
+        {"deliverable":"Analytics III", "deadline":"6"}
       ]
     }
   ]
   },
-  {"topics":[
-    {"date":"April 27, 2019", "title":"Final Exam... and Beyond!",
+  {"label":"Final Exam", "topics":[
+    {"date":"August 9, 2019", "title":"Final Exam... and Beyond!",
       "nav":[
         {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"}
       ],
       "due":[
-        {"deliverable":"Final Exam", "deadline":"0", "time":"23.59"}
+        {"deliverable":"Exam Start", "deadline":"0", "time":"12.00"},
+        {"deliverable":"Exam End", "deadline":"0", "time":"13.00"}
       ]
     }
   ]
