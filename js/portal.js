@@ -356,7 +356,7 @@ var myModules = [
       "nav":[
         {"label":"Puzzle", "href":"supplement/puzzles/math-facts.html"},
         {"label":"Lecture", "href":"lectures/availability.html"},
-        {"label":"Article", "href":"https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files"},
+        {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
         {"label":"Homework", "href":"supplement/availability/assignment.html"}
       ],
       "due":[
