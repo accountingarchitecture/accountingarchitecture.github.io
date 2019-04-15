@@ -175,9 +175,9 @@ var myModules = [
   {"topics":[
     {"date":"June 3, 2019", "title":"Getting Started",
       "nav":[
-        {"label":"Syllabus", "href":"supplement/syllabus/syllabus.html"},
-        {"label":"Email Policy", "href":"supplement/syllabus/syllabus.html#email"},
-        {"label":"Academic Integrity", "href":"supplement/syllabus/syllabus.html#integrity"}
+        {"label":"Syllabus", "href":"supplement/syllabus/"},
+        {"label":"Email Policy", "href":"supplement/syllabus/#email"},
+        {"label":"Academic Integrity", "href":"supplement/syllabus/#integrity"}
       ],
       "due":[
         {"deliverable":"Quiz", "deadline":"1"}
