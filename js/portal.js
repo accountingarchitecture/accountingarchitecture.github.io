@@ -209,7 +209,7 @@ var myModules = [
   {"date":"June 10, 2019", "title":"Business Model",
     "nav":[
       {"label":"Lecture", "href":"lectures/business-model.html"},
-      {"label":"Article", "href":"https://enterprisersproject.com/article/2015/8/aspire-be-technology-strategist-whatever-your-title-says"},
+      {"label":"Article", "href":"supplement/readings/business-model.pdf", "filetype":"PDF"},
       {"label":"Homework", "href":"supplement/assignments/business-model.html"},
       {"label":"Diagram I", "href":"supplement/projects/digram1.html"}
     ],
@@ -256,7 +256,7 @@ var myModules = [
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/coins.html"},
       {"label":"Lecture", "href":"lectures/open-source.html"},
-      {"label":"Article", "href":"https://opensource.com/article/17/8/enterprise-open-source-advantages"},
+      {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/advantages-of-open-source-5-stats"},
       {"label":"Homework", "href":"supplement/assignments/open-source.html"}
     ],
     "due":[
@@ -329,7 +329,7 @@ var myModules = [
   {"date":"July 15, 2019", "title":"Security",
     "nav":[
       {"label":"Lecture", "href":"lectures/security.html"},
-      {"label":"Article", "href":"supplement/readings/security.pdf", "filetype":"PDF"},
+      {"label":"Article", "href":"https://www.bbc.com/news/technology-47974583"},
       {"label":"Homework", "href":"supplement/assignments/security.html"},
       {"label":"Analytics III", "href":"supplement/projects/analytics3.html"}
     ],
