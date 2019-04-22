@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <title>Project Part 3</title>
+  <title>Analytics Project</title>
 
   <meta name="author" content="Joshua G. Coyne, PhD">
   <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
@@ -24,27 +24,38 @@
   <div class="reveal">
   <div class="slides">
     <section>
-      <h3>Project Part 3 - Intro</h3>
-      <p>Part 3 of this project tests your ability to query a database to analyze data. Your assignment is to identify the <em>queries</em> necessary to find the answers. In part 1 of this project, you already installed MySQL Server and imported a database. If you have not completed part 1 of this project, then you will not be able to complete part 3, and you should review the instructions for part 1 of this project in order to install MySQL and import the database for this project. For part 3 of this project, you will use that database server and database to run SQL queries.</p>
-      <p>Take a screenshot of as much of the output of each query as possible, and paste each screenshot into a single document along with the query used to create the output. Each screenshot must display your container name. Export the document to PDF, and upload it to Dropbox on eCourseware. I will grade solely on the accuracy of the queries.</p>
+      <h3>Analytics III - Intro</h3>
+      <p>For this part of the analytics project, you will use SQL to analyze data in the database that you imported previously in order to answer questions that the client has posed. (NB: You must have already completed all steps in Analytics II in order to attempt Analytics III.) The next two screens explain how to create a user to access the database and run queries in a secure fashion. Each screen explains how to complete the required tasks and what information to include in the solution that you upload to eCourseware. Your grade for this deliverable will be based on the accuracy of your commands to create a regular user and the accuracy of your queries and answers to the questions.</p>
     </section>
 
-    <section>
-      <h3>Tips</h3>
-        <p>Begin each question by looking at the Dictionary file on the course portal for a definition of the necessary tables and their attributes. Before considering SQL syntax, think logically about what you want to know. This will help you to determine which attributes to select (e.g., Do I need ID or PO?), which summary functions may be necessary (e.g., Do I need to add values from multiple records or count the number of records?), and how to limit the results to records that match all question criteria (e.g., Do I only need orders from a single day?)</p>
-    </section>
-
-    <section>
-      <h3>Questions</h3>
+    <section style="font-size: 29px">
+      <h3>Create a Regular User</h3>
+      <p>Logging in to an operating system or a database management system using the root user is an insecure practice. Instead, create a regular user using the following commands. Take a screenshot, or more than one screenshot, if necessary, of the following commands and paste the screenshot(s) into a document. Each screenshot must display your container name. Export the document to PDF.</p>
       <ol>
-        <li>(PAYMENT table) Which payment ID(s) have no purchase order number?</li>
-        <li>(VENDOR table) How many vendors are located in Texas?</li>
-        <li>(SALE table) What is total sales revenue? (Revenue is unit price times quantity less the savings from a promotional or discount rate.)</li>
-        <li>(EMPLOYEE table) How many employees work at each location? (You should generate one query that reports one number for each location.)</li>
-        <li>(PAYMENT table) Which invoices have multiple payments?</li>
-        <li>(INVOICE and EMPLOYEE table) Which employees processed invoices? (Your query should report employee name without any duplicates.) 
-        <li>(RECEIPT and PURCHASE tables) Which, if any, receipt(s) have a different quantity of raw materials delivered than were ordered in the purchase order?</li>
-        <li>(SALE table) Which customer(s) placed the most expensive order?</li>
+        <li>Ensure that the MySQL service is running.</li>
+        <li>Log in to MySQL as the root user.</li>
+        <li>Create a user: <strong>create user 'you'@'localhost' identified by 'password';</strong> (Replace you with your first name and password with a password of your choosing.)</li>
+        <li>Give your regular user permission to query your database: <br><strong>grant select on database.* to 'you'@'localhost';</strong> (Replace database with the name of the database you created in part 1 of this project and you with the name of the user you created in the previous step.)</li>
+        <li>Update privileges: <strong>flush privileges;</strong></li>
+        <li>Exit MySQL and log back in as the regular user using the same command as in step 2 but replacing root with the name of your regular user.</li>
+      </ol>
+    </section>
+
+    <section style="font-size: 28px">
+      <h3>Run Queries</h3>
+      <p>Take a screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Each screenshot must display your container name. Beneath each screenshot type the question asked and the answer that your query returned. Export that document to PDF.</p>
+      <ol>
+        <li>Which payment ID(s) have no purchase order number?</li>
+        <p style="margin: 0">SELECT ID FROM PAYMENT WHERE PO IS NULL;</p>
+        <li>What is total sales revenue for the current period?</li>
+        <p style="margin: 0">SELECT SUM(PRICE * QUANTITY * (1 - PROMOTION)) FROM SALE;</p>
+        <li>How many employees work at each location?</li>
+        <p style="margin: 0">SELECT LOCATION, COUNT(ID) FROM EMPLOYEE GROUP BY LOCATION;</p>
+        <li>Which employees processed invoices?</li>
+        <p style="margin: 0">SELECT DISTINCT B.NAME FROM INVOICE AS A JOIN CUSTOMER AS B<br>ON A.PROCESSOR = B.USERNAME;</p>
+        <li>Which, if any, receipt(s) have a different quantity of raw materials delivered than were ordered in the purchase order?</li>
+        <p style="margin: 0">SELECT A.ID, A.PO, A.QUANTITY - B.QUANTITY FROM RECEIPT AS A JOIN PURCHASE AS B<br>ON A.PO = B.ID WHERE A.QUANTITY != B.QUANTITY;</p>
+
       </ol>
     </section>
   </div>

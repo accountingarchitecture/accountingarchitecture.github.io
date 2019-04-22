@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <title>Project Part 2</title>
+  <title>Analytics Project</title>
 
   <meta name="author" content="Joshua G. Coyne, PhD">
   <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
@@ -24,38 +24,31 @@
   <div class="reveal">
   <div class="slides">
     <section>
-      <h3>Project Part 2 - Intro</h3>
-      <p>For part 2 of this project, you will learn SQL and then practice using SQL on the database server that you installed and the database that you imported in part 1.</p>
-      <p>Structured Query Language (SQL) is the primary language for interacting with relational databases. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF. Your grade for this part of the project will be based in part on your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt. Once you have completed the tutorial, continue to the next screen, which explains how to create the database user that will run the queries on the following screen.</p>
+      <h3>Analytics II - Intro</h3>
+      <p>For this part of the analytics project, you will install a database server and import a database. The next screen explains how to install the relational database management system MySQL. The final screen explains how to create and import the client's database. Take a screenshot of each task to install MySQL and to create and import the database. You may combine multiple tasks onto a single screenshot, if possible. Each screenshot must display your container name. Create a word processor document and paste each screenshot into that document. Beneath each screenshot in the document, type the task number(s) and the command used to complete the task(s). You will lose points if you fall to type the task number and the command use to complete each task beneath each screenshot. Export the document to PDF and upload it to Dropbox on eCourseware. Your grade will be based on accuracy in completing each task.</p>
     </section>
 
-    <section style="font-size: 29px">
-      <h3>Create a Regular User</h3>
-      <p>Logging in to an operating system or a database management system using the root user is an insecure practice. Instead, create a regular user using the following commands. Take a screenshot, or more than one screenshot, if necessary, of the following commands and paste the screenshot(s) into a document. Each screenshot must display your container name. Export the document to PDF:</p>
+    <section>
+      <h3>Install MySQL</h3>
       <ol>
-        <li>Ensure that the MySQL service is running.</li>
-        <li>Log in to MySQL as the root user.</li>
-        <li>Create a user: <strong>create user 'you'@'localhost' identified by 'password';</strong> (Replace you with your first name and password with a password of your choosing.)</li>
-        <li>Give your regular user permission to query your database: <br><strong>grant select on database.* to 'you'@'localhost';</strong> (Replace database with the name of the database you created in part 1 of this project and you with the name of the user you created in the previous step.)</li>
-        <li>Update privileges: <strong>flush privileges;</strong></li>
-        <li>Exit MySQL and log back in as the regular user using the same command as in step 2 but replacing root with the name of your regular user.</li>
+        <li>Verify that your container has the dialog and logger applications installed. Install them, if necessary. (NB: Logger is part of the bsdutils package.)</li>
+        <li>Search for the MySQL database server metapackage.</li>
+        <li>Install the MySQL database server metapackage. During the install, you will see a dialog window asking for a password for the database root user. Enter a password that is easy for you to remember. You will not receive a visual feedback as you type the password (i.e., the screen will not move the cursor or show any asterisks to represent the password characters). Press ENTER when you have finished typing the password. On the next dialog screen, type your password again to confirm and press ENTER.</li>
+        <li>Use systemd to check the status of the MySQL server.</li>
+        <li>Start the MySQL server.</li>
+        <li>Enable the MySQL server to launch when you boot the container.</li>
       </ol>
     </section>
 
-    <section style="font-size: 28px">
-      <h3>Run Queries</h3>
-      <p>Take a screenshot of as much of the output of each query as possible, and paste all screenshots into a single document. Each screenshot must display your container name. Beneath each screenshot type the question asked and the answer that your query returned. Export that document to PDF.</p>
-      <ol>
-        <li>Which sale approvals have no approval date?</li>
-        <p style="margin: 0">SELECT ID FROM SALE WHERE APPROVALDATE = 0000-00-00;</p>
-        <li>What is the total we have paid to vendors for the current period?</li>
-        <p style="margin: 0">SELECT SUM(AMOUNT) FROM PAYMENT;</p>
-        <li>How many customers does each sales rep have?</li>
-        <p style="margin: 0">SELECT SALESREP, COUNT(ID) FROM CUSTOMER GROUP BY SALESREP;</p>
-        <li>Did I underpay any invoices?</li>
-        <p style="margin: 0">SELECT INVOICE.ID FROM PAYMENT JOIN INVOICE ON PAYMENT.INVOICE = INVOICE.ID<br>WHERE PAYMENT.AMOUNT &lt; INVOICE.QUANTITY * INVOICE.UNITCOST + INVOICE.FREIGHTCOST;</p>
+    <section>
+      <h3>Create and Import Database</h3>
+      <ol start="7">
+        <li>Log in to your MySQL database server as the root user. When prompted, enter the root user password that you created when installing mysql-server into the password prompt. For security reasons, there will be no visual feedback as you type the password. Press ENTER after typing the password.</li>
+        <li>Create a database and name it &ldquo;company&rdquo; (without quotes).</li>
+        <li>Exit MySQL.</li>
+        <li>Download the database file from https://bit.ly/2Zq9qsq to your container and name it &ldquo;company.sql&rdquo; (without quotes).</li>
+        <li>Import the database file into MySQL by using the UNIX philosophy to redirect the company.sql file to the MySQL login command. Use the root user and the name of the database that you created in the login command. (NB: Mysql is the application and company.sql is the file.)</li>
       </ol>
-      <p>Upload all PDF files to Dropbox on eCourseware. Your grade for this deliverable will be based on your SQL Quiz score, the accuracy of your commands to create a regular user, and the accuracy of your queries and answers to these questions.</p>
     </section>
   </div>
   </div>
