@@ -158,3 +158,7 @@ Reveal.initialize({
 	// Script dependencies to load
 	dependencies: []
 });
+
+// Disable left- and right-clicking on slides
+window.addEventListener("mousedown", function(e) { e.preventDefault(); }, false);
+window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
