@@ -211,7 +211,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/business-model.html"},
       {"label":"Article", "href":"supplement/readings/business-model.pdf", "filetype":"PDF"},
       {"label":"Homework", "href":"supplement/assignments/business-model.html"},
-      {"label":"Diagram I", "href":"supplement/projects/digram1.html"}
+      {"label":"Diagram I", "href":"supplement/projects/diagram1.html"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
@@ -239,7 +239,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/hardware.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
       {"label":"Homework", "href":"supplement/assignments/hardware.html"},
-      {"label":"Diagram II", "href":"supplement/projects/digram2.html"},
+      {"label":"Diagram II", "href":"supplement/projects/diagram2.html"},
       {"label":"AI Report Instructions", "href":"supplement/syllabus/syllabus.html#ai-report"}
     ],
     "due":[
@@ -302,7 +302,7 @@ var myModules = [
       {"label":"Puzzle", "href":"supplement/puzzles/robbers.html"},
       {"label":"Lecture", "href":"lectures/services.html"},
       {"label":"Article", "href":"https://www.oracle.com/applications/erp/what-is-erp.html"},
-      {"label":"Diagram III", "href":"supplement/projects/digram3.html"},
+      {"label":"Diagram III", "href":"supplement/projects/diagram3.html"},
       {"label":"Analytics II", "href":"supplement/projects/analytics2.html"}
     ],
     "due":[
