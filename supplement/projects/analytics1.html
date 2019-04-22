@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <title>Project Part 1</title>
+  <title>Analytics Project</title>
 
   <meta name="author" content="Joshua G. Coyne, PhD">
   <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
@@ -24,31 +24,8 @@
   <div class="reveal">
   <div class="slides">
     <section>
-      <h3>Project Part 1 - Intro</h3>
-      <p>This analytics project will give you practical experience using a relational database management system to analyze data. For part 1 of this project, you will install a database server and import a database. The next screen explains how to install the relational database management system MySQL. The final screen explains how to create and import the client's database. Take a screenshot of each task to install MySQL and to create and import the database. You may combine multiple tasks onto a single screenshot, if possible. Each screenshot must display your container name. Create a word processor document and paste each screenshot into that document. Beneath each screenshot in the document, type the task number(s) and the command used to complete the task(s). Export the document to PDF and upload it to Dropbox on eCourseware. Your grade will be based on accuracy and completeness of completing the tasks.</p>
-    </section>
-
-    <section>
-      <h3>Install MySQL</h3>
-      <ol>
-        <li>Verify that your container has the dialog and logger applications installed. Install them, if necessary. (NB: Logger is part of the bsdutils package.)</li>
-        <li>Search for the MySQL database server metapackage.</li>
-        <li>Install the MySQL database server metapackage. During the install, you will see a dialog window asking for a password for the database root user. Enter a password that is easy for you to remember. You will not receive a visual feedback as you type the password (i.e., the screen will not move the cursor or show any asterisks to represent the password characters). Press ENTER when you have finished typing the password. On the next dialog screen, type your password again to confirm and press ENTER.</li>
-        <li>Use systemd to check the status of the MySQL server.</li>
-        <li>Start the MySQL server.</li>
-        <li>Enable the MySQL server to launch when you boot the container.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h3>Create and Import Database</h3>
-      <ol start="7">
-        <li>Log in to your MySQL database server as the root user. When prompted, enter the root user password that you created when installing mysql-server into the password prompt. For security reasons, there will be no visual feedback as you type the password. Press ENTER after typing the password.</li>
-        <li>Create a database and name it &ldquo;company&rdquo; (without quotes).</li>
-        <li>Exit MySQL.</li>
-        <li>Download the database file from https://goo.gl/Mc5Czc to your container and name it &ldquo;company.sql&rdquo;</li>
-        <li>Import the Database file into MySQL by using the UNIX philosophy to redirect the company.sql file to the MySQL login command. Use the root user and the name of the database that you created in the login command. (NB: Mysql is the application and company.sql is the file.)</li>
-      </ol>
+      <h3>Analytics I</h3>
+      <p>This analytics project will give you practical experience using a relational database management system (RDBMS) to analyze data. For this part of the project, you will learn how to extract data from an RDBMS so that you can use that knowledge in subsequent project parts. Structured Query Language (SQL) is the primary language for interacting with relational databases. Complete the SQL Tutorial and SQL Quiz on <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener" aria-label="Website opens in new window">W3Schools</a>. After completing the SQL Quiz, print the results page of the quiz to PDF. Your grade for this part of the project will be based on your quiz score. You may retake the quiz as many times as you wish, but you should only submit your best attempt.</p>
     </section>
   </div>
   </div>
