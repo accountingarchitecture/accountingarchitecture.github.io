@@ -284,15 +284,14 @@ var myModules = [
       {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
       {"label":"Lecture", "href":"lectures/storage.html"},
       {"label":"Article", "href":"http://www.bbc.com/future/story/20190104-are-you-a-digital-hoarder?ocid=global_future_rss"},
-      {"label":"Diagram III", "href":"supplement/projects/digram3.html"},
       {"label":"Linux II", "href":"supplement/projects/linux2.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
+      {"label":"Analytics I", "href":"supplement/projects/analytics1.html"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Puzzle", "deadline":"3"},
-      {"deliverable":"Diagram III", "deadline":"3"},
-      {"deliverable":"Linux II", "deadline":"3"}
+      {"deliverable":"Linux II", "deadline":"3"},
+      {"deliverable":"Analytics I", "deadline":"3"}
     ]
   }
   ]
@@ -303,14 +302,14 @@ var myModules = [
       {"label":"Puzzle", "href":"supplement/puzzles/robbers.html"},
       {"label":"Lecture", "href":"lectures/services.html"},
       {"label":"Article", "href":"https://www.oracle.com/applications/erp/what-is-erp.html"},
-      {"label":"Analytics I", "href":"supplement/projects/analytics1.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
+      {"label":"Diagram III", "href":"supplement/projects/digram3.html"},
+      {"label":"Analytics II", "href":"supplement/projects/analytics2.html"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Puzzle", "deadline":"6"},
-      {"deliverable":"Analytics I", "deadline":"6"},
-      {"deliverable":"Tech Report", "deadline":"6"}
+      {"deliverable":"Diagram III", "deadline":"6"},
+      {"deliverable":"Analytics II", "deadline":"6"}
     ]
   }
   ]
@@ -332,12 +331,12 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/security.html"},
       {"label":"Article", "href":"supplement/readings/security.pdf", "filetype":"PDF"},
       {"label":"Homework", "href":"supplement/assignments/security.html"},
-      {"label":"Analytics II", "href":"supplement/projects/analytics2.html"}
+      {"label":"Analytics III", "href":"supplement/projects/analytics3.html"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
-      {"deliverable":"Analytics II", "deadline":"6"}
+      {"deliverable":"Analytics III", "deadline":"6"}
     ]
   }
   ]
@@ -360,7 +359,8 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/availability.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
-      {"label":"Linux III", "href":"supplement/projects/linux3.html"}
+      {"label":"Linux III", "href":"supplement/projects/linux3.html"},
+      {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
@@ -375,12 +375,14 @@ var myModules = [
       {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
       {"label":"Article", "href":"https://about.draw.io/entity-relationship-diagrams-with-draw-io/"},
-      {"label":"Homework", "href":"supplement/assignments/processing-integrity.html"}
+      {"label":"Homework", "href":"supplement/assignments/processing-integrity.html"},
+      {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
       {"deliverable":"Puzzle", "deadline":"6"},
-      {"deliverable":"Homework", "deadline":"6"}
+      {"deliverable":"Homework", "deadline":"6"},
+      {"deliverable":"Tech Report", "deadline":"6"}
     ]
   }
   ]
