@@ -12,13 +12,16 @@ function builder(modules) {
         var readbuttons = '';
         if(modules[i].topics[j].hasOwnProperty('nav')) {
           for(k = 0; k < modules[i].topics[j].nav.length; k++) {
-            navbuttons += '<a class="button" href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="';
-            if(modules[i].topics[j].nav[k].hasOwnProperty('filetype')) navbuttons += modules[i].topics[j].nav[k].filetype + ' opens in new window"';
-            else navbuttons += 'aria-label="Website opens in new window"';
-            navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
+            if(!isExam(modules) || (modules[i].topics[j].nav[k].label != "Article" && modules[i].topics[j].nav[k].label != "Exam Prep")) {
+              navbuttons += '<a class="button" href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="';
+              if(modules[i].topics[j].nav[k].hasOwnProperty('filetype')) navbuttons += modules[i].topics[j].nav[k].filetype + ' opens in new window"';
+              else navbuttons += 'aria-label="Website opens in new window"';
+              navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
+            }
           }
         }
-        if(isCurrentOrArchived(modules[i]) == 'current') topic += '<div class="topic"><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="nav">' + navbuttons + '</div></div>';
+        if(isCurrentOrArchived(modules[i]) == 'current' && !(isExam(modules) && modules[i].topics[j].title.indexOf('Final Exam') > -1)) topic += '<div class="topic"><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="nav">' + navbuttons + '</div></div>';
+        else if(isExam(modules) && modules[i].topics[j].title.indexOf('Final Exam') > -1) topic += '<div class="topic"><h2>' + modules[i].topics[j].title + '</div>';
         else topic += '<div class="topic"><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="nav" style="display: none">' + navbuttons + '</div></div>';
       }
       content += '<div class="module"><div class="week"><div class="label">';
@@ -107,6 +110,36 @@ function isCurrentOrArchived(module) {
         else return 'archived';
     }
   }
+}
+
+// Test for whether an exam is live
+function isExam(modules) {
+  currentDate = new Date();
+  for(w = 0; w < modules.length; w++) {
+    for(x = 0; x < modules[w].topics.length; x++) {
+      if(modules[w].topics[x].hasOwnProperty('due')) {
+        for(y = 0; y < modules[w].topics[x].due.length; y++) {
+          if(modules[w].topics[x].due[y].deliverable == 'Exam Start') {
+            if(modules[w].topics[x].due[y].hasOwnProperty('time')) {
+              startDateTime = new Date(Date.parse(modules[w].topics[x].date) + (modules[w].topics[x].due[y].deadline * 86400000) + (modules[w].topics[x].due[y].time.split(/[.]/)[0] * 3600000 + modules[w].topics[x].due[y].time.split(/[.]/)[1] * 60000));
+            } else {
+              startDateTime = new Date(Date.parse(modules[w].topics[x].date) + (modules[w].topics[x].due[y].deadline * 86400000));
+            }
+          }
+          if(modules[w].topics[x].due[y].deliverable == 'Exam End') {
+            if(modules[w].topics[x].due[y].hasOwnProperty('time')) {
+              endDateTime = new Date(Date.parse(modules[w].topics[x].date) + (modules[w].topics[x].due[y].deadline * 86400000) + (modules[w].topics[x].due[y].time.split(/[.]/)[0] * 3600000 + modules[w].topics[x].due[y].time.split(/[.]/)[1] * 60000));
+            } else {
+              endDateTime = new Date(Date.parse(modules[w].topics[x].date) + (modules[w].topics[x].due[y].deadline * 86400000) + 86399999);
+            }
+            if(!startDateTime) startDateTime = endDateTime - 86399999;
+            if(currentDate > startDateTime && currentDate < endDateTime) return true;
+          }
+        }
+      }
+    }
+  }
+  return false;
 }
 
 // Toggle topics and current page link on click
