@@ -20,8 +20,7 @@ function builder(modules) {
             }
           }
         }
-        if(isCurrentOrArchived(modules[i]) == 'current' && !(isExam(modules) && modules[i].topics[j].title.indexOf('Final Exam') > -1)) topic += '<div class="topic"><h2 class="title expand">' + modules[i].topics[j].title + '</h2><div class="nav">' + navbuttons + '</div></div>';
-        else if(isExam(modules) && modules[i].topics[j].title.indexOf('Final Exam') > -1) topic += '<div class="topic"><h2>' + modules[i].topics[j].title + '</div>';
+        if(isCurrentOrArchived(modules[i]) == 'current') topic += '<div class="topic"><h2>' + modules[i].topics[j].title + '</h2><div class="nav">' + navbuttons + '</div></div>';
         else topic += '<div class="topic"><h2 class="title">' + modules[i].topics[j].title + '</h2><div class="nav" style="display: none">' + navbuttons + '</div></div>';
       }
       content += '<div class="module"><div class="week"><div class="label">';
@@ -424,11 +423,13 @@ var myModules = [
   {"date":"August 9, 2019", "title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Exam Prep", "href":"supplement/exams/exam-prep.html"},
-      {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"}
+      {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
+      {"label":"Final Homework", "href":"supplement/assignments/final.html"}
     ],
     "due":[
       {"deliverable":"Exam Start", "deadline":"0", "time":"12.00"},
-      {"deliverable":"Exam End", "deadline":"0", "time":"13.00"}
+      {"deliverable":"Exam End", "deadline":"0", "time":"13.00"},
+      {"deliverable":"Final Homework", "deadline":"0", "time":"13.30"}
     ]
   }
   ]
