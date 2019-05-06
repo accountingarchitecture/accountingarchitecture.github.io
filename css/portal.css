@@ -83,6 +83,9 @@
     font-weight: bold;
     color: #333;
     text-align: center;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
   }
   h3 {
     font: 24px/31px Arial, sans-serif;
