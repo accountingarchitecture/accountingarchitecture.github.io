@@ -321,9 +321,9 @@ var myModules = [
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Puzzle", "deadline":"3"},
-      {"deliverable":"Linux II", "deadline":"3"},
-      {"deliverable":"Analytics I", "deadline":"3"}
+      {"deliverable":"Puzzle", "deadline":"2"},
+      {"deliverable":"Linux II", "deadline":"2"},
+      {"deliverable":"Analytics I", "deadline":"2"}
     ]
   }
   ]
@@ -366,7 +366,7 @@ var myModules = [
       {"label":"Analytics III", "href":"supplement/projects/analytics3.html"}
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
       {"deliverable":"Analytics III", "deadline":"6"}
     ]
