@@ -26,7 +26,7 @@ function builder(modules) {
       content += '<div class="module"><div class="week"><div class="label">';
       if(modules[i].hasOwnProperty('label')) content += modules[i].label;
       else content += 'Week ' + String(i + 1);
-      content += '</div><div class="date">' + modules[i].topics[0].date + '</div></div>' + topic + '</div>';
+      content += '</div><div class="date">' + modules[i].date + '</div></div>' + topic + '</div>';
     }
   }
   if(content == '' && isHomeOrArchive() == 'Home') content += '<div class="module"><div class="topic"><h2>No current topics.</h2>' + '</div>';
@@ -48,9 +48,9 @@ function schedule(modules) {
       if(modules[i].topics[j].hasOwnProperty('due')) {
         for(k = 0; k < modules[i].topics[j].due.length; k++) {
           if(modules[i].topics[j].due[k].hasOwnProperty('time')) {
-            dueDate = new Date(Date.parse(modules[i].topics[j].date) + (modules[i].topics[j].due[k].deadline * 86400000) + (modules[i].topics[j].due[k].time.split(/[.]/)[0] * 3600000 + modules[i].topics[j].due[k].time.split(/[.]/)[1] * 60000));
+            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + (modules[i].topics[j].due[k].time.split(/[.]/)[0] * 3600000 + modules[i].topics[j].due[k].time.split(/[.]/)[1] * 60000));
           } else {
-            dueDate = new Date(Date.parse(modules[i].topics[j].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999);
+            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999);
           }
           if(dueDate > currentDate && isHomeOrArchive() == 'Home') {
             deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + ' @ ' + dueDate.toString().split(' ')[4].split(':')[0] + '.' + dueDate.toString().split(' ')[4].split(':')[1] +'</dd>';
@@ -90,7 +90,7 @@ function isHomeOrArchive() {
 // Test for module currency (return current for current, archived for archived, or nothing for future)
 function isCurrentOrArchived(module) {
   for(r = 0; r < module.topics.length; r++) {
-    topicDate = new Date(Date.parse(module.topics[r].date));
+    topicDate = new Date(Date.parse(module.date));
     currentDate = new Date();
     startDate = new Date(topicDate.valueOf() - (6 + topicDate.getDay()) * 86400000);
     endDate = new Date(topicDate.valueOf() + (7 - topicDate.getDay()) * 86400000);
@@ -98,9 +98,9 @@ function isCurrentOrArchived(module) {
       if(module.topics[r].hasOwnProperty('due')) {
         for(q = 0; q < module.topics[r].due.length; q++) {
           if(module.topics[r].due[q].hasOwnProperty('time')) {
-            dueDate = new Date(Date.parse(module.topics[r].date) + (module.topics[r].due[q].deadline * 86400000) + (module.topics[r].due[q].time.split(/[.]/)[0] * 3600000 + module.topics[r].due[q].time.split(/[.]/)[1] * 60000));
+            dueDate = new Date(Date.parse(module.date) + (module.topics[r].due[q].deadline * 86400000) + (module.topics[r].due[q].time.split(/[.]/)[0] * 3600000 + module.topics[r].due[q].time.split(/[.]/)[1] * 60000));
           } else {
-            dueDate = new Date(Date.parse(module.topics[r].date) + (module.topics[r].due[q].deadline * 86400000) + 86399999);
+            dueDate = new Date(Date.parse(module.date) + (module.topics[r].due[q].deadline * 86400000) + 86399999);
           }
           if(dueDate > currentDate) return 'current';
           else if(r == module.topics.length - 1 && q == module.topics[r].due.length - 1) return 'archived';
@@ -120,16 +120,16 @@ function isExam(modules) {
         for(y = 0; y < modules[w].topics[x].due.length; y++) {
           if(modules[w].topics[x].due[y].deliverable == 'Exam Start') {
             if(modules[w].topics[x].due[y].hasOwnProperty('time')) {
-              startDateTime = new Date(Date.parse(modules[w].topics[x].date) + (modules[w].topics[x].due[y].deadline * 86400000) + (modules[w].topics[x].due[y].time.split(/[.]/)[0] * 3600000 + modules[w].topics[x].due[y].time.split(/[.]/)[1] * 60000));
+              startDateTime = new Date(Date.parse(modules[w].date) + (modules[w].topics[x].due[y].deadline * 86400000) + (modules[w].topics[x].due[y].time.split(/[.]/)[0] * 3600000 + modules[w].topics[x].due[y].time.split(/[.]/)[1] * 60000));
             } else {
-              startDateTime = new Date(Date.parse(modules[w].topics[x].date) + (modules[w].topics[x].due[y].deadline * 86400000));
+              startDateTime = new Date(Date.parse(modules[w].date) + (modules[w].topics[x].due[y].deadline * 86400000));
             }
           }
           if(modules[w].topics[x].due[y].deliverable == 'Exam End') {
             if(modules[w].topics[x].due[y].hasOwnProperty('time')) {
-              endDateTime = new Date(Date.parse(modules[w].topics[x].date) + (modules[w].topics[x].due[y].deadline * 86400000) + (modules[w].topics[x].due[y].time.split(/[.]/)[0] * 3600000 + modules[w].topics[x].due[y].time.split(/[.]/)[1] * 60000));
+              endDateTime = new Date(Date.parse(modules[w].date) + (modules[w].topics[x].due[y].deadline * 86400000) + (modules[w].topics[x].due[y].time.split(/[.]/)[0] * 3600000 + modules[w].topics[x].due[y].time.split(/[.]/)[1] * 60000));
             } else {
-              endDateTime = new Date(Date.parse(modules[w].topics[x].date) + (modules[w].topics[x].due[y].deadline * 86400000) + 86399999);
+              endDateTime = new Date(Date.parse(modules[w].date) + (modules[w].topics[x].due[y].deadline * 86400000) + 86399999);
             }
             if(!startDateTime) startDateTime = endDateTime - 86399999;
             if(currentDate > startDateTime && currentDate < endDateTime) return true;
@@ -204,8 +204,8 @@ document.getElementById('calendar').addEventListener('click', function(e) {
 
 // Content
 var myModules = [
-  {"topics":[
-  {"date":"June 3, 2019", "title":"Getting Started",
+  {"date":"June 3, 2019", "topics":[
+  {"title":"Getting Started",
     "nav":[
       {"label":"Syllabus", "href":"supplement/syllabus/"},
       {"label":"Email Policy", "href":"supplement/syllabus/#email"},
@@ -215,7 +215,7 @@ var myModules = [
       {"deliverable":"Quiz", "deadline":"1"}
     ]
   },
-  {"date":"June 3, 2019", "title":"Professionalism",
+  {"title":"Professionalism",
     "nav":[
       {"label":"Lecture", "href":"lectures/professionalism.html"},
       {"label":"Article", "href":"supplement/readings/professionalism.pdf", "filetype":"PDF"},
@@ -226,7 +226,7 @@ var myModules = [
       {"deliverable":"Homework", "deadline":"6"}
     ]
   },
-  {"date":"June 3, 2019", "title":"Accounting Architecture",
+  {"title":"Accounting Architecture",
     "nav":[
       {"label":"Lecture", "href":"lectures/accounting-architecture.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/september-2018-how-to-master-digital-age-competencies/", "filetype":"PDF"},
@@ -237,8 +237,8 @@ var myModules = [
   }
   ]
   },
-  {"topics":[
-  {"date":"June 10, 2019", "title":"Business Model",
+  {"date":"June 10, 2019", "topics":[
+  {"title":"Business Model",
     "nav":[
       {"label":"Lecture", "href":"lectures/business-model.html"},
       {"label":"Article", "href":"supplement/readings/business-model.pdf", "filetype":"PDF"},
@@ -251,7 +251,7 @@ var myModules = [
       {"deliverable":"Diagram I", "deadline":"6"}
     ]
   },
-  {"date":"June 10, 2019", "title":"Information",
+  {"title":"Information",
     "nav":[
       {"label":"Lecture", "href":"lectures/information.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
@@ -265,8 +265,8 @@ var myModules = [
   }
   ]
   },
-  {"topics":[
-  {"date":"June 17, 2019", "title":"Hardware",
+  {"date":"June 17, 2019", "topics":[
+  {"title":"Hardware",
     "nav":[
       {"label":"Lecture", "href":"lectures/hardware.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
@@ -283,8 +283,8 @@ var myModules = [
   }
   ]
   },
-  {"topics":[
-  {"date":"June 24, 2019", "title":"Software: Open Source",
+  {"date":"June 24, 2019", "topics":[
+  {"title":"Software: Open Source",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/coins.html"},
       {"label":"Lecture", "href":"lectures/open-source.html"},
@@ -297,7 +297,7 @@ var myModules = [
       {"deliverable":"Homework", "deadline":"6"}
     ]
   },
-  {"date":"June 24, 2019", "title":"Software: Operating Systems",
+  {"title":"Software: Operating Systems",
     "nav":[
       {"label":"Lecture", "href":"lectures/operating-systems.html"},
       {"label":"Article", "href":"http://www.gnu.org/gnu/the-gnu-project.html"},
@@ -310,8 +310,8 @@ var myModules = [
   }
   ]
   },
-  {"topics":[
-  {"date":"July 1, 2019", "title":"Storage",
+  {"date":"July 1, 2019", "topics":[
+  {"title":"Storage",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
       {"label":"Lecture", "href":"lectures/storage.html"},
@@ -328,8 +328,8 @@ var myModules = [
   }
   ]
   },
-  {"topics":[
-  {"date":"July 8, 2019", "title":"Services",
+  {"date":"July 8, 2019", "topics":[
+  {"title":"Services",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/robbers.html"},
       {"label":"Lecture", "href":"lectures/services.html"},
@@ -346,8 +346,8 @@ var myModules = [
   }
   ]
   },
-  {"topics":[
-  {"date":"July 15, 2019", "title":"Risk &amp; Control",
+  {"date":"July 15, 2019", "topics":[
+  {"title":"Risk &amp; Control",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/teasers.html"},
       {"label":"Lecture", "href":"lectures/risk-and-control.html"},
@@ -358,7 +358,7 @@ var myModules = [
       {"deliverable":"Puzzle", "deadline":"6"}
     ]
   },
-  {"date":"July 15, 2019", "title":"Security",
+  {"title":"Security",
     "nav":[
       {"label":"Lecture", "href":"lectures/security.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/technology-47974583"},
@@ -373,8 +373,8 @@ var myModules = [
   }
   ]
   },
-  {"topics":[
-  {"date":"July 22, 2019", "title":"Confidentiality &amp; Privacy",
+  {"date":"July 22, 2019", "topics":[
+  {"title":"Confidentiality &amp; Privacy",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/math-facts.html"},
       {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
@@ -387,7 +387,7 @@ var myModules = [
       {"deliverable":"Homework", "deadline":"6"}
     ]
   },
-  {"date":"July 22, 2019", "title":"Availability",
+  {"title":"Availability",
     "nav":[
       {"label":"Lecture", "href":"lectures/availability.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
@@ -401,8 +401,8 @@ var myModules = [
   }
   ]
   },
-  {"topics":[
-  {"date":"July 29, 2019", "title":"Processing Integrity",
+  {"date":"July 29, 2019", "topics":[
+  {"title":"Processing Integrity",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
@@ -419,8 +419,8 @@ var myModules = [
   }
   ]
   },
-  {"label":"Final Exam", "topics":[
-  {"date":"August 9, 2019", "title":"Final Exam... and Beyond!",
+  {"date":"August 9, 2019", "label":"Final Exam", "topics":[
+  {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Exam Prep", "href":"supplement/exams/exam-prep.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
