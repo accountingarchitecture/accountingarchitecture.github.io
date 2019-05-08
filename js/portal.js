@@ -241,7 +241,7 @@ var myModules = [
   {"title":"Business Model",
     "nav":[
       {"label":"Lecture", "href":"lectures/business-model.html"},
-      {"label":"Article", "href":"supplement/readings/business-model.pdf", "filetype":"PDF"},
+      {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/ai-enterprise-8-myths-debunked"},
       {"label":"Homework", "href":"supplement/assignments/business-model.html"},
       {"label":"Diagram I", "href":"supplement/projects/diagram1.html"}
     ],
@@ -406,7 +406,7 @@ var myModules = [
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
-      {"label":"Article", "href":"https://about.draw.io/entity-relationship-diagrams-with-draw-io/"},
+      {"label":"Article", "href":"supplement/readings/processing-integrity.pdf", "filetype":"PDF"},
       {"label":"Homework", "href":"supplement/assignments/processing-integrity.html"},
       {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
     ],
