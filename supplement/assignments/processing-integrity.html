@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Assignment</title>
+
+  <meta name="author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Personalized CSS -->
+  <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+  <div class="reveal">
+  <div class="slides">
+    <section style="font-size: 30px">
+      <h3>Interactive Assignment</h3>
+      <p>Database normalization is necessary to ensure data processing integrity. This assignment will give you practice normalizing a non-normalized database. Imagine that your client is a radio station. The client has given you a few records from their non-normalized database, and you need to convert the single non-normalized table into four tables that satisfy third normal form (3NF). The next screen displays the snippet of the client's database. Follow these steps to prepare a correct solution:</p>
+      <ol>
+        <li>Divide the attributes into four separate tables to resolve all dependencies and satisfy 3NF.</li>
+        <li>Identify and label the primary key for each table. Do not pick an attribute as primary key that may be duplicated (e.g., more than one song may have the same name). If necessary, create a new attribute with an ID for each record in the table.</li>
+        <li>Include the primary key from one table as a foreign key in another table to link the data in each table together.</li>
+      </ol>
+      <p>Create your normalized tables in a spreadsheet program with primary and foreign keys correctly labeled. Export your spreadsheet to PDF, and upload it to Dropbox on eCourseware.</p>
+    </section>
+
+    <section>
+      <h3>Non-normalized Database</h3>
+      <div class="table" style="font-size: 18px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Album Name</div>
+          <div class="table-cell" style="font-weight: bold">Song Title</div>
+          <div class="table-cell" style="font-weight: bold">Length</div>
+          <div class="table-cell" style="font-weight: bold">Artist</div>
+          <div class="table-cell" style="font-weight: bold">Album Year</div>
+          <div class="table-cell" style="font-weight: bold">Label</div>
+          <div class="table-cell" style="font-weight: bold">Address</div>
+          <div class="table-cell" style="font-weight: bold">Studio</div>
+          <div class="table-cell" style="font-weight: bold">Address</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Sgt. Pepper's Lonely Hearts Club Band</div>
+          <div class="table-cell">With a Little Help from My Friends</div>
+          <div class="table-cell">2:46</div>
+          <div class="table-cell">The Beatles</div>
+          <div class="table-cell">1967</div>
+          <div class="table-cell">Parlophone</div>
+          <div class="table-cell">London, UK</div>
+          <div class="table-cell">EMI Studios</div>
+          <div class="table-cell">London, UK</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Sgt. Pepper's Lonely Hearts Club Band</div>
+          <div class="table-cell">When I'm Sixty-Four</div>
+          <div class="table-cell">2:37</div>
+          <div class="table-cell">The Beatles</div>
+          <div class="table-cell">1967</div>
+          <div class="table-cell">Parlophone</div>
+          <div class="table-cell">London, UK</div>
+          <div class="table-cell">EMI Studios</div>
+          <div class="table-cell">London, UK</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Abbey Road</div>
+          <div class="table-cell">Here Comes the Sun</div>
+          <div class="table-cell">3:06</div>
+          <div class="table-cell">The Beatles</div>
+          <div class="table-cell">1969</div>
+          <div class="table-cell">Apple Records</div>
+          <div class="table-cell">London, UK</div>
+          <div class="table-cell">EMI Studios</div>
+          <div class="table-cell">London, UK</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Hunting High and Low</div>
+          <div class="table-cell">Take on Me</div>
+          <div class="table-cell">3:48</div>
+          <div class="table-cell">a-ha</div>
+          <div class="table-cell">1985</div>
+          <div class="table-cell">Warner Bros.</div>
+          <div class="table-cell">Los Angeles, CA, USA</div>
+          <div class="table-cell">Eel Pie</div>
+          <div class="table-cell">Twickenham, UK</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Duran Duran</div>
+          <div class="table-cell">Ordinary World</div>
+          <div class="table-cell">5:39</div>
+          <div class="table-cell">Duran Duran</div>
+          <div class="table-cell">1993</div>
+          <div class="table-cell">EMI Records</div>
+          <div class="table-cell">London, UK</div>
+          <div class="table-cell">Privacy Studio</div>
+          <div class="table-cell">Framingham, MA, USA</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../reveal.js/js/reveal.js"></script>
+  <script src="../../js/slides.js"></script>
+</body>
+</html>
