@@ -258,7 +258,7 @@
   a.button:link, a.button:visited {
     color: gainsboro;
   }
-  a.button:hover, a.menu-item:hover, a.button:active {
+  a.button:hover, a.button:active {
     color: white;
     background: #006fbf;
   }
