@@ -392,7 +392,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/availability.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
       {"label":"Linux III", "href":"supplement/projects/linux3.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
+      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
@@ -408,7 +408,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
       {"label":"Article", "href":"supplement/readings/processing-integrity.pdf", "filetype":"PDF"},
       {"label":"Homework", "href":"supplement/assignments/processing-integrity.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/syllabus.html#tech-report"}
+      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},

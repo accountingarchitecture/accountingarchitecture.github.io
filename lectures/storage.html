@@ -61,7 +61,7 @@
       <h2>File Systems</h2>
       <div class="flex-row">
         <div class="flex-item" style="max-width: 80%">
-          <p>The physical or logical volume is formatted with a file system. File systems provide the hierarchical folder structure common in desktop operating systems. The operating system and other applications are stored on the file system. Virtually all programs use file systems to communicate with and store data on a storage volume because of the convenience and familiarity, and interoperability of file systems. Additionally because the file system is separate from the operating system, file systems and interoperable and users can remove a storage drive from one computer and access the file system on another computer.</p>
+          <p>The physical or logical volume is formatted with a file system. File systems provide the hierarchical folder structure common in desktop operating systems. The operating system and other applications are stored on the file system. Virtually all programs use file systems to communicate with and store data on a storage volume because of the convenience and familiarity, and interoperability of file systems. Additionally because the file system is separate from the operating system, file systems are interoperable and users can remove a storage drive from one computer and access the file system on another computer.</p>
         </div>
         <div class="flex-item"><img src="../images/das.png" alt="Direct Access Storage" style="max-width: 200px"/></div>
       </div>
@@ -84,7 +84,7 @@
 
     <section>
       <h2>Relational Databases</h2>
-      <p>Many database systems for storing business data are relational databases. Each relational database contains one of more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software.</p>
+      <p>Many database systems for storing business data are relational databases. Each relational database contains one or more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software.</p>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; font-weight: bold">
           <div class="table-cell">ID</div>
@@ -203,7 +203,7 @@
       <h2>Sample E-R Diagram</h2>
       <div class="flex-row">
         <div class="flex-item" style="max-width: 80%">
-          <p>This E-R diagram shows entities with attributes and relationships with cardinalities. Each course in the catalog has a unique number and each faculty member a unique ID as primary key [PK]. These primary keys link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK/FK]. Faculty can teach at least zero and at most many scheduled courses, and each catalog entry can be scheduled at least zero and at most many times. Each scheduled course has at least one and at most one instructor and at least one and at most one catalog reference.</p>
+          <p>This E-R diagram shows entities with attributes and relationships with cardinalities. Each course in the catalog has a unique number and each faculty member a unique ID as primary key [PK]. These primary keys link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK,FK]. Faculty can teach at least zero and at most many scheduled courses, and each catalog entry can be scheduled at least zero and at most many times. Each scheduled course has at least one and at most one instructor and at least one and at most one catalog reference.</p>
         </div>
         <div class="flex-item override">
           <div>Crow's Foot Notation</div>
@@ -219,7 +219,7 @@
 
     <section>
       <h2>Accounting Records</h2>
-      <p>User views allow accounting transactions to take on the form of either journals or ledgers. Financial accounting textbooks imply that transaction processing involves recording a journal entry and then posting the entry to a ledger. However, Journal and Ledger cannot both be entities because they represent same instances. A journal is a series of financial transactions sorted by date, and a ledger is the same series of transactions grouped by account and then sorted by date. These are different views, not different entities. However, databases with especially large numbers of financial transactions may store those transactions in separate tables by date (e.g., by month), by type of asset (e.g., inventory, receivables, fixed assets), or by type of transaction (e.g., sales, purchases, cash payments, cash receipts) in order to keep individual tables small enough to manage.</p>
+      <p>User views allow accounting transactions to take on the form of either journals or ledgers. Financial accounting textbooks imply that transaction processing involves recording a journal entry and then posting the entry to a ledger. However, Journal and Ledger cannot both be entities because they represent the same instances. A journal is a series of financial transactions sorted by date, and a ledger is the same series of transactions grouped by account and then sorted by date. These are different views, not different entities. However, databases with especially large numbers of financial transactions may store those transactions in separate tables by date (e.g., by month), by type of asset (e.g., inventory, receivables, fixed assets), or by type of transaction (e.g., sales, purchases, cash payments, cash receipts) in order to keep individual tables small enough to manage.</p>
     </section>
 
     <section>
@@ -342,7 +342,7 @@
 
     <section>
       <h2>Advanced Queries</h2>
-      <p>In certain situations, users need more complex output then basic queries will allow. SELECT DISTINCT modifies the SELECT statement to return only those records with unique values for the SELECTed attributes. If the SELECT DISTINCT statement includes a single attribute, then the query returns unique values for that attribute. If the query lists two or more attributes, the query returns unique combinations of all attributes. Aliases replace the name of attributes and variables with placeholders that can make them easier to reference. Nested queries allow users to create temporary tables that provide specific records and attributes to the main query. This is especially useful when trying to filter results by the value of a summary function, which is not feasible with a single WHERE statement.</p>
+      <p>In certain situations, users need more complex output than basic queries will allow. SELECT DISTINCT modifies the SELECT statement to return only those records with unique values for the SELECTed attributes. If the SELECT DISTINCT statement includes a single attribute, then the query returns unique values for that attribute. If the query lists two or more attributes, the query returns unique combinations of all attributes. Aliases replace the name of attributes and variables with placeholders that can make them easier to reference. Nested queries allow users to create temporary tables that provide specific records and attributes to the main query. This is especially useful when trying to filter results by the value of a summary function, which is not feasible with a single WHERE statement.</p>
     </section>
 
     <section>
@@ -379,7 +379,7 @@
           <div class="table-cell" style="white-space: nowrap; font-weight: bold">
             <div>SELECT EMPLOYEEID, HOURS</div>
             <div>FROM TIMECARD</div>
-            <div>WHERE HOURS =</div> 
+            <div>WHERE HOURS =</div>
             <div>(SELECT MAX(HOURS) FROM TIMECARD);</div>
           </div>
           <div class="table-cell">Select employee ID and hours worked from the timecard table where hours worked equals the maximum hours worked entry in the table.</div>
@@ -399,7 +399,7 @@
 
     <section>
       <h2>Indexing</h2>
-      <p>In order to increase the speed of queries from a relational database, a relational database management system (RDBMS), which is software that manages a relational database, can create an index of the values in the tables. This index is similar to the index in the back of a textbook. When looking for records that match a particular value, such as a customer name, the RDBMS can find the value in the index, and the index will report which database records contain that value. This is quicker than looking through all records to find those with the desired value, just as it is quicker to use the index in a book to find pages that reference a certain topic than it is look through the entire book to find references to that topic.</p>
+      <p>In order to increase the speed of queries from a relational database, a relational database management system (RDBMS), which is software that manages a relational database, can create an index of the values in the tables. This index is similar to the index in the back of a textbook. When looking for records that match a particular value, such as a customer name, the RDBMS can find the value in the index, and the index will report which database records contain that value. This is quicker than looking through all records to find those with the desired value, just as it is quicker to use the index in a book to find pages that reference a certain topic than it is to look through the entire book to find references to that topic.</p>
     </section>
 
     <section>
@@ -420,7 +420,7 @@
 
     <section>
       <h2>Document Store</h2>
-      <p>A <em><u>document store</u></em> is a key-value store in which the data object is a text file with multiple metadata attributes and values, frequently in XML, YAML, or JavaScript Object Notation (JSON) format. Instead of storing the individual values as fields in a record of a relational table, a document store keeps all values together in a single data object.</p>
+      <p>A <em><u>document store</u></em> is a key-value store in which the data object is a text file with multiple metadata attributes and values, frequently in XML or JavaScript Object Notation (JSON) format. Instead of storing the individual values as fields in a record of a relational table, a document store keeps all values together in a single data object.</p>
       <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
         <div style="font-size: 24px">Relational Table</div>
         <div class="table" style="margin: 0">
@@ -462,7 +462,7 @@
 
     <section>
       <h2>Column Store</h2>
-      <p>A <u><em>column store</em></u> groups individual key and values into columns and then combines columns into families. A column is similar to an attribute, and a family is similar to a record. Unlike records in relational tables, different families can have different numbers of keys (i.e., attributes), and the value from the same key in different family can have a different data type.</p>
+      <p>A <u><em>column store</em></u> groups individual keys and values into columns and then combines columns into families. A column is similar to an attribute, and a family is similar to a record. Unlike records in relational tables, different families can have different numbers of keys (i.e., attributes), and the values from the same key in different families can have different data types.</p>
       <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
         <div style="font-size: 24px">Relational Table</div>
         <div class="table" style="margin: 0">
@@ -705,7 +705,7 @@
           <div class="table-cell">
             <ul>
               <li><strong>mv -v test test2</strong> (Rename file test owned by user in current folder owned by user to test2)</li>
-              <li><strong>mv -v testtxt Documents/.</strong> (Move file test owned by user in current folder to Documents folder owned by user in current folder)</li>
+              <li><strong>mv -v test Documents/.</strong> (Move file test owned by user in current folder to Documents folder owned by user in current folder)</li>
               <li><strong>sudo mv -v test /.</strong> (Move file test in current folder to root folder not owned by user)</li>
               <li><strong>mv Documents/* Downloads/.</strong> (Move contents of Documents folder owned by user in current folder to Downloads folder owned by user in current folder)</li>
               <li><strong>sudo mv -v /etc /etc_bak</strong> (Rename etc folder not owned by user in root folder not owned by user to etc_bak in root folder not owned by user)</li>
