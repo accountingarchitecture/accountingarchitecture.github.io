@@ -26,13 +26,13 @@
     <section>
       <h1>Confidentiality<br>&amp;<br>Privacy</h1>
     </section>
-    
+
     <section>
       <h2>Accounting Architecture</h2>
       <div class="flex-row">
         <div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
         <div class="flex-item" style="max-width: 65%">
-          <p>Confidentiality and privacy combine to form the second Control block in the accounting architecture framework. Unlike to the other blocks in the Control section, this block comprises two related Trust Services Criteria with a single overarching goal: to prevent unauthorized access to secret information. Although unauthorized access is also the purview of security, confidentiality and privacy address risks and control activities that extend beyond what security addresses.</p>
+          <p>Confidentiality and privacy combine to form the second Control block in the accounting architecture framework. Unlike the other blocks in the Control section, this block comprises two related Trust Services Criteria with a single overarching goal: to prevent unauthorized access to secret information. Although unauthorized access is also the purview of security, confidentiality and privacy address risks and control activities that extend beyond what security addresses.</p>
         </div>
       </div>
     </section>
@@ -92,7 +92,7 @@
       <h2>Intermediation</h2>
       <p>Intermediation involves one party interacting with another via a middleman. The decision to rely on intermediation to communicate or transact business can have multiple motivations. One motivation is convenience. For example, information intermediaries, such as debt and equity analysts, communicate information regarding firm performance to investors so that these investors will not need to engage in their own financial statement analysis. Another motivation is reliability. Financial intermediaries funnel funds from one group to another when the groups cannot trust each other. One frequent motivation is anonymity. A human intermediary can hide the identity of the party requesting access to resources. Similarly, a digital intermediary can hide the identity of a user requesting access to Internet resources.</p>
     </section>
-    
+
     <section>
       <h2>Review of the WAN</h2>
       <p>In order to access Internet (i.e., WAN) resources, a device must have a public IP address. Because of network address translation (NAT), this IP address can differ from a device's LAN address, but the public IP address is the address that the device uses to access the Internet. Similar to caller ID, when a device accesses an Internet resource (e.g., visiting a Web site), the server that hosts that resource records the public IP address of the client device in a log file. This record exposes some aspects of the identity of the user. Because the public IP can be traced to the geographic location of the client, logs can identify where the client device is, which ISP the client used to connect to the Internet, and, if applicable, on which company's LAN the device resides.</p>
@@ -138,7 +138,7 @@
 
     <section>
       <h2>Two Forms of Encryption</h2>
-      <p>Encryption keys can either be <u><em>symmetric</em></u> or <u><em>asymmetric</em></u>. In symmetric, or private key, encryption, the encryption and decryption keys are the same, and both the sender and the recipient must have the same key. The difficulty with this form of encryption is that the sender must find a way to share the decryption key with the recipient without it falling into unauthorized hands. In asymmetric, or public key, encryption, the key to encrypt the data is publicly distributed and a paired private key is used for decryption. The sender encrypts the message with the recipient's public key, and the recipient decrypts the message with recipient's own private key. Public key encryption is more secure because users never share private keys, but this method of encryption takes longer and both encryption and decryption require more processing power.</p>
+      <p>Encryption keys can either be <u><em>symmetric</em></u> or <u><em>asymmetric</em></u>. In symmetric, or private key, encryption, the encryption and decryption keys are the same, and both the sender and the recipient must have the same key. The difficulty with this form of encryption is that the sender must find a way to share the decryption key with the recipient without it falling into unauthorized hands. In asymmetric, or public key, encryption, the key to encrypt the data is publicly distributed and a paired private key is used for decryption. The sender encrypts the message with the recipient's public key, and the recipient decrypts the message with the recipient's own private key. Public key encryption is more secure because users never share private keys, but this method of encryption takes longer and both encryption and decryption require more processing power.</p>
     </section>
 
     <section>
@@ -156,7 +156,7 @@
       <h2>Cryptographic Hash</h2>
       <p>Even though cipher text is not human- or computer-readable, it can still provide useful information even when decryption is not possible. In fact, some encryption protocols are designed to convert data into a short cipher text that cannot be decrypted. This is called one-way encryption and the cipher text is called a <u><em>cryptographic hash</em></u> or a checksum. The purpose of a hash is not to protect a message in transit but rather to verify the integrity of the data. Because hash encryption protocols use a single key that is common to all users of the protocol, any attempt to create a hash of the same content will result in the same hash. However, even a slight modification to the data will result in a different hash.</p>
     </section>
-    
+
     <section>
       <h2>Tamper-proof</h2>
       <div class="flex-row">
@@ -182,12 +182,12 @@
       <!--Copyright Alphabet Inc.-->
       <div class="override"><img src="../images/collision.png" alt="SHA-1 Collision"/></div>
     </section>
-    
+
     <section>
       <h2>Digital Signature</h2>
       <div class="flex-row">
         <div class="flex-item" style="max-width: 70%">
-          <p>Another benefit of encrypted cipher text is its ability to identify the sender. Because a public-private key pair is unique to a single user, they can confirm the senders identity by allowing the sender to attach a <u><em>digital signature</em></u> to the message. (This is different from the &ldquo;digital signature&rdquo; that cardholders draw on a screen after swiping a credit card.) A sender creates a cryptographic digital signature by (1) creating a hash of the message and (2) encrypting the hash with the sender's own private key.</p>
+          <p>Another benefit of encrypted cipher text is its ability to identify the sender. Because a public-private key pair is unique to a single user, they can confirm the sender's identity by allowing the sender to attach a <u><em>digital signature</em></u> to the message. (This is different from the &ldquo;digital signature&rdquo; that cardholders draw on a screen after swiping a credit card.) A sender creates a cryptographic digital signature by (1) creating a hash of the message and (2) encrypting the hash with the sender's own private key.</p>
         </div>
         <div class="flex-item"><img src="../images/signing.png" alt="Digital Signature" style="max-width: 300px"/></div>
       </div>
@@ -198,14 +198,14 @@
       <div class="flex-row">
         <div class="flex-item"><img src="../images/signature-verification.png" alt="Verify the Signature" style="max-width: 300px"/></div>
         <div class="flex-item" style="max-width: 70%">
-          <p>The sender then transmits the message and the signature to the recipient. The recipient (1) creates a hash of the message, (2) decrypts the signature using the sender's public key and (3) compares the hash with the decrypted signature. If they are equal, then the sender's identity is confirmed <em>and</em> the message has not been modified in transit. If they are different, then either the message has been modified or the sender is not who he/she claims to be.</p>
+          <p>The sender then transmits the message and the signature to the recipient. The recipient (1) creates a hash of the message, (2) decrypts the signature using the sender's public key and (3) compares the hash with the decrypted signature. If they are equal, then the sender's identity is confirmed <em>and</em> the message has not been modified in transit. If they are different, then either the message has been modified or the sender is not who the sender claims to be.</p>
         </div>
       </div>
     </section>
 
     <section>
       <h2>Who Are You?</h2>
-      <p>Unforunately, the recipient of a message cannot know that the owner of the private key is who the owner claims to be in real life. What's to stop Eve from creating a public-private key pair and sign a message claiming to be Bob? The public key that Eve shares claiming to be Bob will verify the digital signature, and Alice will think that she is communicating with Bob. Someone else needs to verify that the public key that Bob shares is really Bob and the public key that Eve shares is not Bob. The solution is for a trusted agent to verify Bob's identity. The trusted agent, called a <u><em>certificate authority</em></u> (CA) issues a <u><em>certificate</em></u> that identifies that public key that was created by the real Bob. Alice can know which public key is Bob's by looking reading the certificate associated with any public key claiming to be from Bob. This is how cryptography promotes authentication.</p>
+      <p>Unfortunately, the recipient of a message cannot know that the owner of the private key is who the owner claims to be in real life. What's to stop Eve from creating a public-private key pair and sign a message claiming to be Bob? The public key that Eve shares claiming to be Bob will verify the digital signature, and Alice will think that she is communicating with Bob. Someone else needs to verify that the public key that Bob shares is really Bob and the public key that Eve shares is not Bob. The solution is for a trusted agent to verify Bob's identity. The trusted agent, called a <u><em>certificate authority</em></u> (CA) issues a <u><em>certificate</em></u> that identifies the public key that was created by the real Bob. Alice can know which public key is Bob's by reading the certificate associated with any public key claiming to be from Bob. This is how cryptography promotes authentication.</p>
     </section>
 
     <section>
@@ -220,7 +220,7 @@
 
     <section>
       <h2>Man-In-The-Middle</h2>
-      <p>The combination of keys and certificates protects Internet users from <u><em>man-in-the-middle</em></u> (MITM) attacks, in which a server fraudulently poses as a trusted server (e.g., a fake version of Amazon.com) in order to intercept data meant for the trusted server and obtain confidential information. Encryption keys do not protect data from these attacks because the user communicates with the fraudulent server using the fraudulent server's keys. Because a certificate authority would not be fooled by a fraudulent server, only the trusted server will have the certificate associated with the trusted server's address. Web browsers automatically check the certificate of an HTTPS site to confirm that it matches the URL and that it was issued by a trusted certificate authority.</p>
+      <p>The combination of keys and certificates protects Internet users from <u><em>man-in-the-middle</em></u> (MITM) attacks, in which a malicious server fraudulently poses as a trusted server (e.g., a fake version of Amazon.com) in order to intercept data meant for the trusted server and obtain confidential information. Encryption keys do not protect data from these attacks because the user communicates with the fraudulent server using the fraudulent server's keys. Because a certificate authority would not be fooled by a fraudulent server, only the trusted server will have the certificate associated with the trusted server's address. Web browsers automatically check the certificate of an HTTPS site to confirm that it matches the URL and that it was issued by a trusted certificate authority.</p>
     </section>
 
     <section>

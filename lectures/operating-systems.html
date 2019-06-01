@@ -49,7 +49,7 @@
 
     <section>
       <h2>Unintended Consequences</h2>
-      <p>The original creator of the most successful enterprise-grade OS had not intended to develop the software for enterprise use. This is one of the marks of crowdsourcing and open sourcing: the influence of the community at large over the final product. Eric Raymond illustrates this effect in his book <u>The Cathedral and the Bazaar</u>. The cathedral represents a development model in which the creator determines the direction of the product, and the bazaar represents a development model in which the community jointly determines the direction of the product. (Many understand this to be a comparison between closed and open source development, but it is actually a comparison of two open source products.) Because of the open mentality, the community grew this OS project to be much larger than the creator had envisioned.</p>
+      <p>The original creator of the most successful enterprise-grade OS had not intended to develop the software for enterprise use. This is one of the hallmarks of crowdsourcing and open sourcing: the influence of the community at large over the final product. Eric Raymond illustrates this effect in his book <u>The Cathedral and the Bazaar</u>. The cathedral represents a development model in which the creator determines the direction of the product, and the bazaar represents a development model in which the community jointly determines the direction of the product. (Many understand this to be a comparison between closed and open source development, but it is actually a comparison of two open source products.) Because of the open mentality, the community grew this OS project to be much larger than the creator had envisioned.</p>
     </section>
 
     <section>
@@ -82,7 +82,7 @@
     <section>
       <h2>OS Importance</h2>
       <p>DARPA's decision to fund Berkeley's CSRG highlights the importance of the operating system's capabilities for facilitating an information system. When DARPA approached the CSRG, no operating system existed that would have supported the ARPAnet experiment. DARPA had reason to believe that BSD UNIX would be the best candidate to provide the necessary functionality.</p>
-      <p>Selecting the right operating system may have been more crucial then because operating systems differed more significantly, but today, companies continue to make similar evaluations. The majority have concluded that open source provides the best operating system for their specific information system needs.</p> 
+      <p>Selecting the right operating system may have been more crucial then because operating systems differed more significantly, but today, companies continue to make similar evaluations. The majority have concluded that open source provides the best operating system for their specific information system needs.</p>
     </section>
 
     <section>
@@ -97,7 +97,7 @@
 
     <section>
       <h2>After the Suit</h2>
-      <p>Berkeley was finally exonerated, and the court only required minor changes to the BSD source code. The resulting code was released as 4.4BSD-lite. Unfortunately, the legal uncertainty during the two-year suit encouraged many BSD community members and developers to transition to a new, alternative open source, UNIX-like operating system called Linux. However, BSD remains widely used and supported, and many flavors (i.e., operatings systems based on BSD) exist. The most prominent are FreeBSD, NetBSD, OpenBSD (focused on security) and macOS. Furthermore, most operating systems, including Microsoft Windows, use network tools from BSD. In 2006, InformationWeek rated 4BSD as the &ldquo;Greatest Software Ever Written&rdquo; and the &ldquo;Theoretical undergirder of the Internet.&rdquo;</p>
+      <p>Berkeley was finally exonerated, and the court only required minor changes to the BSD source code. The resulting code was released as 4.4BSD-lite. Unfortunately, the legal uncertainty during the two-year suit encouraged many BSD community members and developers to transition to a new, alternative open source, UNIX-like operating system called Linux. However, BSD remains widely used and supported, and many flavors (i.e., operatings systems based on BSD) exist. The most prominent are FreeBSD, NetBSD, OpenBSD (focused on security) and macOS. Furthermore, most operating systems, including Microsoft Windows, use network tools from BSD. In 2006, InformationWeek rated 4BSD as the &ldquo;Greatest Software Ever Written&rdquo; and the &ldquo;Theoretical Undergirder of the Internet.&rdquo;</p>
     </section>
 
     <section>
@@ -130,7 +130,7 @@
 
     <section>
       <h2>Userland</h2>
-      <p>Userland is the part of the operating system that user interacts with. The user interacts with userland by means of the <u><em>shell</em></u>, which provides the user with either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computers and mobile devices have graphical shells, but the vast majority of servers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
+      <p>Userland is the part of the operating system that the user interacts with. The user interacts with userland by means of the <u><em>shell</em></u>, which provides the user with either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computers and mobile devices have graphical shells, but the vast majority of servers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
       <div class="flex-row">
         <div class="flex-item override"><img src="../images/bash.png" alt="Bash Shell" style="max-height: 250px; margin-top: 0"/></div>
         <div class="flex-item override"><img src="../images/gnome.png" alt="GNOME Shell" style="max-height: 250px; margin-top: 0"/></div>
@@ -149,7 +149,7 @@
 
     <section>
       <h2>Command Line</h2>
-      <p>Linux graphical shells, also called desktop environments or window managers, function similar to the graphical shells of other desktop operating systems. Much of the power of Linux is in the text shell, and system administrators almost exclusively use the command line in a terminal to manage Linux computers. Knowledge of Linux terminal commands is a valuable competency for an accounting architect. The most basic commands are the same across all Linux distributions, as well as BSD and UNIX. As a result, familiarity with a few line commands can immediately unlock basic functionality of most enterprise-grade operating systems. More advanced commands, such as how to control system daemons or the package manager, vary from distribution to distribution.</p>
+      <p>Linux graphical shells, also called desktop environments or window managers, function similarly to the graphical shells of other desktop operating systems. Much of the power of Linux is in the text shell, and system administrators almost exclusively use the command line in a terminal to manage Linux computers. Knowledge of Linux terminal commands is a valuable competency for an accounting architect. The most basic commands are the same across all Linux distributions, as well as BSD and UNIX. As a result, familiarity with a few line commands can immediately unlock basic functionality of most enterprise-grade operating systems. More advanced commands, such as how to control system daemons or the package manager, vary from distribution to distribution.</p>
     </section>
 
     <section>
@@ -160,7 +160,7 @@
 
     <section>
       <h2>Dependencies</h2>
-      <p>Software applications rarely include all code necessary perform their intended functions. One reason for this is that multiple applications can share the same functionality and duplicating the code would be inefficient. As a result, many applications rely on software <u><em>libraries</em></u>. Just as a physical library provides a shared store of knowledge, a software library provides applications with a shared store of functionality.</p>
+      <p>Software applications rarely include all code necessary to perform their intended functions. One reason for this is that multiple applications can share the same functionality and duplicating the code would be inefficient. As a result, many applications rely on software <u><em>libraries</em></u>. Just as a physical library provides a shared store of knowledge, a software library provides applications with a shared store of functionality.</p>
       <p>Libraries that an application needs in order to function properly represent <u><em>dependencies</em></u> of that application. Many package managers identify and install all dependencies when installing a software application. This makes software administration much easier for the user.</p>
     </section>
 
