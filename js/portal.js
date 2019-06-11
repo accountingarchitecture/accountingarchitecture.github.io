@@ -256,7 +256,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/information.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
       {"label":"Homework", "href":"supplement/assignments/information.html"},
-      {"label":"AI Report Instructions", "href":"supplement/syllabus/syllabus.html#ai-report"}
+      {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"3", "time":"23.59"},
@@ -272,7 +272,7 @@ var myModules = [
       {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
       {"label":"Homework", "href":"supplement/assignments/hardware.html"},
       {"label":"Diagram II", "href":"supplement/projects/diagram2.html"},
-      {"label":"AI Report Instructions", "href":"supplement/syllabus/syllabus.html#ai-report"}
+      {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"}
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
