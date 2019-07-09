@@ -706,7 +706,7 @@
             <ul>
               <li><strong>mv -v test test2</strong> (Rename file test owned by user in current folder owned by user to test2)</li>
               <li><strong>mv -v test Documents/.</strong> (Move file test owned by user in current folder to Documents folder owned by user in current folder)</li>
-              <li><strong>sudo mv -v test /.</strong> (Move file test in current folder to root folder not owned by user)</li>
+              <li><strong>sudo mv -v test /usr/.</strong> (Move file test in current folder to usr folder in root folder not owned by user)</li>
               <li><strong>mv Documents/* Downloads/.</strong> (Move contents of Documents folder owned by user in current folder to Downloads folder owned by user in current folder)</li>
               <li><strong>sudo mv -v /etc /etc_bak</strong> (Rename etc folder not owned by user in root folder not owned by user to etc_bak in root folder not owned by user)</li>
               <li><strong>mv -v Music Downloads/mymusic</strong> (Move Music folder owned by user in current folder to Downloads folder owned by user in current folder and rename to mymusic)</li>
@@ -742,7 +742,7 @@
           <div class="table-cell">
             <ul>
               <li><strong>cp -vr Documents Downloads/.</strong> (Copy Documents folder in current folder to Downloads folder owned by user in current folder)</li>
-              <li><strong>sudo cp -vr /etc /etc_bak</strong> (Copy etc folder in root folder to root folder not owned by user and name etc_bak)</li>
+              <li><strong>sudo cp -vr my_etc /etc_bak</strong> (Copy my_etc folder in current folder to root folder not owned by user and name etc_bak)</li>
               <li><strong>cp -vr Music /var/mymusic</strong> (Copy Music folder in current folder to var folder not owned by user in root folder and name mymusic)</li>
             </ul>
           </div>
