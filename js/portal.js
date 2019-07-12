@@ -212,7 +212,7 @@ var myModules = [
       {"label":"Academic Integrity", "href":"supplement/syllabus/#integrity"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"1"},
+      {"deliverable":"Quiz", "deadline":"0"},
     ],
   },
   {"title":"Professionalism",
@@ -222,13 +222,13 @@ var myModules = [
       {"label":"Homework", "href":"supplement/assignments/professionalism.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"September 4, 2019", "topics":[
+  {"date":"September 2, 2019", "topics":[
   {"title":"Accounting Architecture",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/coins.html"},
@@ -236,8 +236,9 @@ var myModules = [
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/september-2018-how-to-master-digital-age-competencies/", "filetype":"PDF"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Puzzle", "deadline":"4"},
+      {"deliverable":"NO CLASS", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Puzzle", "deadline":"6"},
     ],
   },
   ],
@@ -251,7 +252,8 @@ var myModules = [
       {"label":"Diagram I", "href":"supplement/projects/diagram1.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"-Orgs and Masters-", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
       {"deliverable":"Diagram I", "deadline":"6"},
     ],
@@ -284,7 +286,8 @@ var myModules = [
       {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"NO CLASS", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
       {"deliverable":"AI Report", "deadline":"6"},
     ],
@@ -299,10 +302,14 @@ var myModules = [
       {"label":"Homework", "href":"supplement/assignments/open-source.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"-AI Review-", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
     ],
   },
+  ],
+  },
+  {"date":"October 7, 2019", "topics":[
   {"title":"Software: Operating Systems",
     "nav":[
       {"label":"Lecture", "href":"lectures/operating-systems.html"},
@@ -310,13 +317,14 @@ var myModules = [
       {"label":"Linux I", "href":"supplement/projects/linux1.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Linux I", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"October 7, 2019", "topics":[
+  {"date":"October 14, 2019", "topics":[
   {"title":"Storage",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
@@ -325,14 +333,16 @@ var myModules = [
       {"label":"Linux II", "href":"supplement/projects/linux2.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"NO CLASS", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
       {"deliverable":"Puzzle", "deadline":"5"},
       {"deliverable":"Linux II", "deadline":"5"},
     ],
   },
   ],
   },
-  {"date":"October 16, 2019", "topics":[
+  {"date":"October 21, 2019", "topics":[
   {"title":"Services",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/robbers.html"},
@@ -341,14 +351,16 @@ var myModules = [
       {"label":"Diagram III", "href":"supplement/projects/diagram3.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"-Why This Matters-", "deadline":"0", "time":"12.40"},
       {"deliverable":"Puzzle", "deadline":"4"},
       {"deliverable":"Diagram III", "deadline":"4"},
     ],
   },
   ],
   },
-  {"date":"October 21, 2019", "topics":[
+  {"date":"October 28, 2019", "topics":[
   {"title":"Risk &amp; Control",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/teasers.html"},
@@ -357,14 +369,16 @@ var myModules = [
       {"label":"Analytics I", "href":"supplement/projects/analytics1.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Puzzle", "deadline":"6"},
       {"deliverable":"Analytics I", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"October 28, 2019", "topics":[
+  {"date":"November 4, 2019", "topics":[
   {"title":"Security",
     "nav":[
       {"label":"Lecture", "href":"lectures/security.html"},
@@ -373,14 +387,16 @@ var myModules = [
       {"label":"Analytics II", "href":"supplement/projects/analytics2.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Homework", "deadline":"6"},
       {"deliverable":"Analytics II", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"November 4, 2019", "topics":[
+  {"date":"November 11, 2019", "topics":[
   {"title":"Confidentiality &amp; Privacy",
     "nav":[
       {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
@@ -389,49 +405,53 @@ var myModules = [
       {"label":"Analytics III", "href":"supplement/projects/analytics3.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"-Project Review-", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Homework", "deadline":"6"},
       {"deliverable":"Analytics III", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"November 11, 2019", "topics":[
+  {"date":"November 18, 2019", "topics":[
   {"title":"Availability",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/math-facts.html"},
       {"label":"Lecture", "href":"lectures/availability.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
       {"label":"Linux III", "href":"supplement/projects/linux3.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Puzzle", "deadline":"6"},
       {"deliverable":"Linux III", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"November 18, 2019", "topics":[
+  {"date":"November 25, 2019", "topics":[
   {"title":"Processing Integrity",
     "nav":[
       {"label":"Puzzle", "href":"supplement/puzzles/checkmate.html"},
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
       {"label":"Article", "href":"supplement/readings/processing-integrity.pdf", "filetype":"PDF"},
       {"label":"Homework", "href":"supplement/assignments/processing-integrity.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"NO CLASS", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Presentations", "deadline":"7", "time":"12.40"},
       {"deliverable":"Puzzle", "deadline":"9"},
       {"deliverable":"Homework", "deadline":"9"},
-      {"deliverable":"Tech Report", "deadline":"9"},
     ],
   },
   ],
   },
-  {"date":"December 11, 2019", "label":"Final Exam", "topics":[
+  {"date":"December 6, 2019", "label":"Exam Week", "topics":[
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Exam Prep", "href":"supplement/exams/exam-prep.html"},
@@ -439,9 +459,9 @@ var myModules = [
       {"label":"Final Homework", "href":"supplement/assignments/final.html"},
     ],
     "due":[
-      {"deliverable":"Exam Start", "deadline":"0", "time":"10.00"},
-      {"deliverable":"Exam End", "deadline":"0", "time":"12.00"},
-      {"deliverable":"Final Homework", "deadline":"0", "time":"12.30"},
+      {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
+      {"deliverable":"Exam End", "deadline":"5", "time":"12.00"},
+      {"deliverable":"Final Homework", "deadline":"5", "time":"12.30"},
     ],
   },
   ],
