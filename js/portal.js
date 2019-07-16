@@ -222,6 +222,7 @@ var myModules = [
       {"label":"Homework", "href":"supplement/assignments/professionalism.html"},
     ],
     "due":[
+      {"deliverable":"Guest Lecture", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
     ],
@@ -252,7 +253,7 @@ var myModules = [
       {"label":"Diagram I", "href":"supplement/projects/diagram1.html"},
     ],
     "due":[
-      {"deliverable":"-Orgs and Masters-", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Guest Lecture", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
       {"deliverable":"Diagram I", "deadline":"6"},
@@ -270,7 +271,9 @@ var myModules = [
       {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Guest Lecture", "deadline":"0", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Guest Lecture", "deadline":"2", "time":"12.40"},
       {"deliverable":"Homework", "deadline":"6"},
       {"deliverable":"Diagram II", "deadline":"6"},
     ],
@@ -302,7 +305,6 @@ var myModules = [
       {"label":"Homework", "href":"supplement/assignments/open-source.html"},
     ],
     "due":[
-      {"deliverable":"-AI Review-", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Homework", "deadline":"6"},
     ],
@@ -353,7 +355,6 @@ var myModules = [
     "due":[
       {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"-Why This Matters-", "deadline":"0", "time":"12.40"},
       {"deliverable":"Puzzle", "deadline":"4"},
       {"deliverable":"Diagram III", "deadline":"4"},
     ],
@@ -405,7 +406,6 @@ var myModules = [
       {"label":"Analytics III", "href":"supplement/projects/analytics3.html"},
     ],
     "due":[
-      {"deliverable":"-Project Review-", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Homework", "deadline":"6"},
