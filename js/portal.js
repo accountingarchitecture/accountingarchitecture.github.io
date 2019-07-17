@@ -222,8 +222,8 @@ var myModules = [
       {"label":"Homework", "href":"supplement/assignments/professionalism.html"},
     ],
     "due":[
-      {"deliverable":"Guest Lecture", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Guest Lecture", "deadline":"2", "time":"12.40"},
       {"deliverable":"Homework", "deadline":"6"},
     ],
   },
@@ -300,12 +300,14 @@ var myModules = [
   {"date":"September 30, 2019", "topics":[
   {"title":"Software: Open Source",
     "nav":[
+      {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
       {"label":"Lecture", "href":"lectures/open-source.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/advantages-of-open-source-5-stats"},
       {"label":"Homework", "href":"supplement/assignments/open-source.html"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Puzzle", "deadline":"6"},
       {"deliverable":"Homework", "deadline":"6"},
     ],
   },
@@ -321,7 +323,7 @@ var myModules = [
     "due":[
       {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Linux I", "deadline":"6"},
+      {"deliverable":"Linux I", "deadline":"4"},
     ],
   },
   ],
@@ -329,7 +331,6 @@ var myModules = [
   {"date":"October 14, 2019", "topics":[
   {"title":"Storage",
     "nav":[
-      {"label":"Puzzle", "href":"supplement/puzzles/logic-problem.html"},
       {"label":"Lecture", "href":"lectures/storage.html"},
       {"label":"Article", "href":"http://www.bbc.com/future/story/20190104-are-you-a-digital-hoarder?ocid=global_future_rss"},
       {"label":"Linux II", "href":"supplement/projects/linux2.html"},
@@ -338,8 +339,7 @@ var myModules = [
       {"deliverable":"NO CLASS", "deadline":"0", "time":"12.40"},
       {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-      {"deliverable":"Puzzle", "deadline":"5"},
-      {"deliverable":"Linux II", "deadline":"5"},
+      {"deliverable":"Linux II", "deadline":"6"},
     ],
   },
   ],
@@ -355,8 +355,8 @@ var myModules = [
     "due":[
       {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Puzzle", "deadline":"4"},
-      {"deliverable":"Diagram III", "deadline":"4"},
+      {"deliverable":"Puzzle", "deadline":"6"},
+      {"deliverable":"Diagram III", "deadline":"6"},
     ],
   },
   ],
