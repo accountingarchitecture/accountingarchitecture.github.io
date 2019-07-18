@@ -460,8 +460,8 @@ var myModules = [
     ],
     "due":[
       {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
-      {"deliverable":"Exam End", "deadline":"5", "time":"12.00"},
-      {"deliverable":"Final Homework", "deadline":"5", "time":"12.30"},
+      {"deliverable":"Exam End", "deadline":"5", "time":"11.15"},
+      {"deliverable":"Final Homework", "deadline":"5", "time":"12.00"},
     ],
   },
   ],
