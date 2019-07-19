@@ -52,7 +52,7 @@
         <li>How many employees work at each location?</li>
         <p style="margin: 0">SELECT LOCATION, COUNT(ID) FROM EMPLOYEE GROUP BY LOCATION;</p>
         <li>Which employees processed invoices?</li>
-        <p style="margin: 0">SELECT DISTINCT B.NAME FROM INVOICE AS A JOIN CUSTOMER AS B<br>ON A.PROCESSOR = B.USERNAME;</p>
+        <p style="margin: 0">SELECT DISTINCT B.NAME FROM INVOICE AS A JOIN EMPLOYEE AS B<br>ON A.PROCESSOR = B.USERNAME;</p>
         <li>Which, if any, receipt(s) have a different quantity of raw materials delivered than were ordered in the purchase order?</li>
         <p style="margin: 0">SELECT A.ID, A.PO, A.QUANTITY - B.QUANTITY FROM RECEIPT AS A JOIN PURCHASE AS B<br>ON A.PO = B.ID WHERE A.QUANTITY != B.QUANTITY;</p>
 
