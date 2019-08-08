@@ -25,9 +25,9 @@
   <div class="slides">
     <section style="font-size: 30px">
       <h3>Interactive Assignment</h3>
-      <p>Database normalization is necessary to ensure data processing integrity. This assignment will give you practice normalizing a non-normalized database. Imagine that your client is a radio station. The client has given you a few records from their non-normalized database, and you need to convert the single non-normalized table into four tables that satisfy third normal form (3NF). The next screen displays the snippet of the client's database. Follow these steps to prepare a correct solution:</p>
+      <p>Database normalization is necessary to ensure data processing integrity. This assignment will give you practice normalizing a non-normalized database. Imagine that your client is a radio station. The client has given you a few records from their non-normalized database, and you need to convert the single non-normalized table into three tables that satisfy third normal form (3NF). The next screen displays the snippet of the client's database. Follow these steps to prepare a correct solution:</p>
       <ol>
-        <li>Divide the attributes into four separate tables to resolve all dependencies and satisfy 3NF.</li>
+        <li>Divide the attributes into three separate tables to resolve all dependencies and satisfy 3NF.</li>
         <li>Identify and label the primary key for each table. Do not pick an attribute as primary key that may be duplicated (e.g., more than one song may have the same name). If necessary, create a new attribute with an ID for each record in the table.</li>
         <li>Include the primary key from one table as a foreign key in another table to link the data in each table together.</li>
       </ol>
@@ -36,7 +36,7 @@
 
     <section>
       <h3>Non-normalized Database</h3>
-      <div class="table" style="font-size: 18px">
+      <div class="table" style="font-size: 24px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Album Name</div>
           <div class="table-cell" style="font-weight: bold">Song Title</div>
@@ -44,8 +44,6 @@
           <div class="table-cell" style="font-weight: bold">Artist</div>
           <div class="table-cell" style="font-weight: bold">Album Year</div>
           <div class="table-cell" style="font-weight: bold">Label</div>
-          <div class="table-cell" style="font-weight: bold">Address</div>
-          <div class="table-cell" style="font-weight: bold">Studio</div>
           <div class="table-cell" style="font-weight: bold">Address</div>
         </div>
         <div class="table-row" style="background-color: white">
@@ -56,8 +54,6 @@
           <div class="table-cell">1967</div>
           <div class="table-cell">Parlophone</div>
           <div class="table-cell">London, UK</div>
-          <div class="table-cell">EMI Studios</div>
-          <div class="table-cell">London, UK</div>
         </div>
         <div class="table-row" style="background-color: lightgray">
           <div class="table-cell">Sgt. Pepper's Lonely Hearts Club Band</div>
@@ -66,8 +62,6 @@
           <div class="table-cell">The Beatles</div>
           <div class="table-cell">1967</div>
           <div class="table-cell">Parlophone</div>
-          <div class="table-cell">London, UK</div>
-          <div class="table-cell">EMI Studios</div>
           <div class="table-cell">London, UK</div>
         </div>
         <div class="table-row" style="background-color: white">
@@ -78,8 +72,6 @@
           <div class="table-cell">1969</div>
           <div class="table-cell">Apple Records</div>
           <div class="table-cell">London, UK</div>
-          <div class="table-cell">EMI Studios</div>
-          <div class="table-cell">London, UK</div>
         </div>
         <div class="table-row" style="background-color: lightgray">
           <div class="table-cell">Hunting High and Low</div>
@@ -89,8 +81,6 @@
           <div class="table-cell">1985</div>
           <div class="table-cell">Warner Bros.</div>
           <div class="table-cell">Los Angeles, CA, USA</div>
-          <div class="table-cell">Eel Pie</div>
-          <div class="table-cell">Twickenham, UK</div>
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell">Duran Duran</div>
@@ -100,8 +90,6 @@
           <div class="table-cell">1993</div>
           <div class="table-cell">EMI Records</div>
           <div class="table-cell">London, UK</div>
-          <div class="table-cell">Privacy Studio</div>
-          <div class="table-cell">Framingham, MA, USA</div>
         </div>
       </div>
     </section>
