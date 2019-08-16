@@ -311,11 +311,6 @@
   }
 
 /********** Media Queries **********/
-  @media screen and (max-width: 1100px) {
-    .module {
-      width: 97%;
-    }
-  }
   @media screen and (max-width: 950px) {
     #calendar {
       min-width: 270px;
