@@ -247,12 +247,12 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/business-model.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/ai-enterprise-8-myths-debunked"},
-      {"label":"Flowchart Narration", "href":"supplement/assignments/flowchart-narration.html"},
+      {"label":"Diagram Narration", "href":"supplement/assignments/diagram-narration.html"},
     ],
     "due":[
       {"deliverable":"Guest Lecture", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Flowchart Narration", "deadline":"6"},
+      {"deliverable":"Diagram Narration", "deadline":"6"},
     ],
   },
   ],
