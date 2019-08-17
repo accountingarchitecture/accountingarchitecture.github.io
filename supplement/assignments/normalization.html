@@ -23,19 +23,59 @@
 <body>
   <div class="reveal">
   <div class="slides">
-    <section style="font-size: 30px">
+    <section>
       <h3>Normalization</h3>
-      <p>Database normalization is necessary to ensure data processing integrity. This assignment will give you practice normalizing a non-normalized database. Imagine that your client is a radio station. The client has given you a few records from their non-normalized database, and you need to convert the single non-normalized table into three tables that satisfy third normal form (3NF). The next screen displays the snippet of the client's database. Follow these steps to prepare a correct solution:</p>
+      <p>Database normalization is necessary to ensure data processing integrity. This assignment will give you practice normalizing multiple non-normalized databases. Each of the next screens has either a single non-normalized database or an E-R diagram of a non-normalized database. Some of the databases on the following screens are in the lecture, and you view the set of normalized tables in the lecture after you have created your own in order to verify its accuracy and completeness. However, this assignment will not be useful to you in learning to normalize databases unless you draft your solution first and only look at the solution in the lecture afterwards.</p>
+    </section>
+
+    <section style="font-size: 32px">
+      <h3>Steps</h3>
+      <p>Follow these steps for each screen in order to identify a set of tables that satisfy third normal form (3NF) for each database:</p>
       <ol>
-        <li>Divide the attributes into three separate tables to resolve all dependencies and satisfy 3NF.</li>
-        <li>Identify and label the primary key for each table. Do not pick an attribute as primary key that may be duplicated (e.g., more than one song may have the same name). If necessary, create a new attribute with an ID for each record in the table.</li>
-        <li>Include the primary key from one table as a foreign key in another table to link the data in each table together.</li>
+        <li>Divide the database attributes into separate tables to resolve all dependencies and satisfy 3NF. No need to draw anything fancy, you can simply create lists of attributes (without any cell values), one list for each normalized table with a table name at the top of the list.</li>
+        <li>Identify and label the primary key with a PK for each table. Do not pick an attribute as primary key that may be duplicated. If necessary, create a new attribute with an ID for each record in the table.</li>
+        <li>Link the normalized tables together by including the primary key from one table as a foreign key in another table and label it with an FK.</li>
       </ol>
-      <p>Create your normalized tables in a spreadsheet program with primary and foreign keys correctly labeled. Export your spreadsheet to PDF, and upload it to Dropbox on eCourseware.</p>
+      <p>Create your normalized tables in a word processor document. Export your document to PDF, and upload it to Dropbox on eCourseware.</p>
     </section>
 
     <section>
-      <h3>Non-normalized Database</h3>
+      <h2>Database 1</h2>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Name</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Diagram 2</h2>
+      <div class="table" style="margin-bottom: 40px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Employee ID</div>
+          <div class="table-cell" style="font-weight: bold">Employee Name</div>
+          <div class="table-cell" style="font-weight: bold">Department ID</div>
+          <div class="table-cell" style="font-weight: bold">Department Name</div>
+          <div class="table-cell" style="font-weight: bold">Branch Name</div>
+          <div class="table-cell" style="font-weight: bold">Branch City</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">1</div>
+          <div class="table-cell">John Smith</div>
+          <div class="table-cell">A7</div>
+          <div class="table-cell">Administration</div>
+          <div class="table-cell">Central</div>
+          <div class="table-cell">Cupertino</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Database 3</h3>
       <div class="table" style="font-size: 24px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Album Name</div>
@@ -92,6 +132,12 @@
           <div class="table-cell">London, UK</div>
         </div>
       </div>
+    </section>
+
+    <section>
+      <h2>Database 4</h2>
+      <div class="override"><a href="../../images/unnormalized.png" target="_blank" rel="noopener" aria-label="Image opens in new window"><img src="../../images/unnormalized.png" alt="Unnormalized Table" style="max-height: 550px"/></a></div>
+      <p style="text-align: center">(Clicking on the image will open it in a new window.)</p>
     </section>
   </div>
   </div>
