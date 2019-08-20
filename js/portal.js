@@ -262,14 +262,14 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/information.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
-      {"label":"XML Tutorial", "href":"supplement/assignments/xml-tutorial.html"},
+      {"label":"Classification", "href":"supplement/assignments/classification.html"},
       {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
     ],
     "due":[
       {"deliverable":"Guest Lecture", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Guest Lecture", "deadline":"2", "time":"12.40"},
-      {"deliverable":"XML Tutorial", "deadline":"6"},
+      {"deliverable":"Classification", "deadline":"6"},
     ],
   },
   ],
