@@ -443,9 +443,8 @@ var myModules = [
   {"date":"December 6, 2019", "label":"Exam Week", "topics":[
   {"title":"Final Exam... and Beyond!",
     "nav":[
-      {"label":"Exam Prep", "href":"supplement/exams/exam-prep.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
-      {"label":"Final Homework", "href":"supplement/assignments/final.html"},
+      {"label":"Final Homework", "href":"supplement/assignments/final-homework.html"},
     ],
     "due":[
       {"deliverable":"Final Exam Start", "deadline":"5", "time":"10.00"},
