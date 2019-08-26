@@ -182,11 +182,12 @@
         overflow: auto;
       }
       a[target="_blank"]::after {
-        content: "\a0\a0\a0\a0";
-        background: url(external-link.png) no-repeat;
+        background-image: url('external-link.png');
         background-size: 16px 17px;
-        color: white;
-        text-decoration: none !important;
+        display: inline-block;
+        width: 16px;
+        height: 17px;
+        content: "";
       }
     }
     @media screen and (min-width: 950px) {
