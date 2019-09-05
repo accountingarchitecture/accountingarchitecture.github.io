@@ -237,7 +237,8 @@ var myModules = [
     ],
     "due":[
       {"deliverable":"NO CLASS", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"}
+      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Guest Lecture", "deadline":"2", "time":"12.40"},
     ],
   },
   ],
