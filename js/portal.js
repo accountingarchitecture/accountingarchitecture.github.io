@@ -285,7 +285,7 @@ var myModules = [
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Flowchart Drawing", "deadline":"4"},
+      {"deliverable":"Flowchart Drawing", "deadline":"6"},
       {"deliverable":"AI Report", "deadline":"6"},
     ],
   },
