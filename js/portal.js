@@ -350,6 +350,7 @@ var myModules = [
     "due":[
       {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"DB Installation", "deadline":"6"},
     ],
   },
@@ -363,7 +364,6 @@ var myModules = [
       {"label":"SQL Tutorial", "href":"supplement/assignments/sql-tutorial.html"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"SQL Tutorial", "deadline":"6"},
