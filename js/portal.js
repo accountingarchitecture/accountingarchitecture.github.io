@@ -319,6 +319,7 @@ var myModules = [
     "due":[
       {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Linux Software", "deadline":"4"},
     ],
   },
@@ -333,7 +334,6 @@ var myModules = [
     ],
     "due":[
       {"deliverable":"NO CLASS", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
       {"deliverable":"Linux Storage", "deadline":"6"},
     ],
