@@ -297,7 +297,6 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/open-source.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/advantages-of-open-source-5-stats"},
       {"label":"Open Alternatives", "href":"supplement/assignments/open-alternatives.html"},
-      {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
     ],
     "due":[
       {"deliverable":"Exam Start", "deadline":"0", "time":"12.00"},
