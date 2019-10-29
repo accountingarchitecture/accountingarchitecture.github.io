@@ -144,12 +144,17 @@
 
     <section>
       <h2>Package Managers</h2>
-      <p>One of the trademarks of BSD and Linux is the package manager. The package manager manages the installation and updating of all software in the operating system, including the operating system kernel. The benefit of a package manager is two-fold. First, the package manager provides the user with access to a vast collection of software repositories (i.e., data stores) that contain most applications the user would need. Linux and BSD users rarely need to search the Web for applications to download and install because the software repos often have a solution. Second, the package manager provides a single solution for keeping all applications and the operating system itself up to date. The command line is the primary interface for the package manager.</p>
+      <p>One of the trademarks of BSD and Linux is the <u><em>package manager</em></u>. The package manager manages the installation and updating of all software packages in the operating system. Each software <u><em>package</em></u> contains one or more applications. The benefit of a package manager is two-fold. First, the package manager provides the user with access to a vast collection of software repositories (i.e., data stores) that contain most applications the user would need. Linux and BSD users rarely need to search the Web for applications to download and install because the software repos often have a solution. Second, the package manager provides a single solution for keeping all applications and the operating system itself up to date. The command line is the primary interface for the package manager.</p>
     </section>
 
     <section>
       <h2>Command Line</h2>
       <p>Linux graphical shells, also called desktop environments or window managers, function similarly to the graphical shells of other desktop operating systems. Much of the power of Linux is in the text shell, and system administrators almost exclusively use the command line in a terminal to manage Linux computers. Knowledge of Linux terminal commands is a valuable competency for an accounting architect. The most basic commands are the same across all Linux distributions, as well as BSD and UNIX. As a result, familiarity with a few line commands can immediately unlock basic functionality of most enterprise-grade operating systems. More advanced commands, such as how to control system daemons or the package manager, vary from distribution to distribution.</p>
+    </section>
+
+    <section>
+      <h2>Commands and Applications</h2>
+      <p>Both graphical and text shells provide users with convenient methods for launching applications. In graphical shells, this method often includes icons or launchers. In text shells, this method involves the use of <u><em>commands</em></u>, hence the term &ldquo;command line.&rdquo; The terms &ldquo;command&rdquo; and &ldquo;application&rdquo; may be used interchangeably, just as the terms &ldquo;icon&rdquo; and &ldquo;application&rdquo; may be used interchangeably, but they are not synonymous. Icons and commands are executable files that contain the instructions for launching applications. In a text shell, these commands often have the same name as the application to make finding the command and launching the application easier. Likewise, a software package may have the same name as the application, or one of the applications, it contains. However, this is not always the case.</p>
     </section>
 
     <section>
@@ -206,38 +211,38 @@
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell" style="white-space: nowrap"><strong>sudo apt update</strong></div>
-          <div class="table-cell">Update repository list to identify newest version of all applications</div>
+          <div class="table-cell">Update repository list to identify the newest version of all software packages</div>
           <div class="table-cell"></div>
         </div>
         <div class="table-row" style="background-color: lightgray">
           <div class="table-cell" style="white-space: nowrap"><strong>sudo apt upgrade</strong></div>
-          <div class="table-cell">Upgrade all installed applications to newest versions</div>
+          <div class="table-cell">Upgrade all installed software packages to their newest versions</div>
           <div class="table-cell"></div>
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell" style="white-space: nowrap"><strong>apt search</strong></div>
-          <div class="table-cell">Look for application in repositories</div>
+          <div class="table-cell">Look for package in repositories</div>
           <div class="table-cell">
             <ul>
-              <li><strong>apt search music player</strong> (Find all applications with the words music player in the name or description)</li>
+              <li><strong>apt search music player</strong> (Find all software packages with the words music player in the name or description)</li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
           <div class="table-cell" style="white-space: nowrap"><strong>sudo apt install</strong></div>
-          <div class="table-cell">Install application</div>
+          <div class="table-cell">Install software package</div>
           <div class="table-cell">
             <ul>
-              <li><strong>sudo apt install mysql-server</strong> (Install application named mysql-server)</li>
+              <li><strong>sudo apt install mysql-server</strong> (Install software package named mysql-server)</li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell" style="white-space: nowrap"><strong>sudo apt remove</strong></div>
-          <div class="table-cell">Uninstall application</div>
+          <div class="table-cell">Uninstall software package</div>
           <div class="table-cell">
             <ul>
-              <li><strong>sudo apt remove man-db</strong> (Remove application named man-db)</li>
+              <li><strong>sudo apt remove man-db</strong> (Uninstall software package named man-db)</li>
             </ul>
           </div>
         </div>
@@ -254,19 +259,19 @@
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell" style="white-space: nowrap"><strong>which</strong></div>
-          <div class="table-cell">Print path to installed application to terminal or print nothing if application is not installed</div>
+          <div class="table-cell">Print file path of a command to the terminal (or print nothing if the application containing that command is not installed)</div>
           <div class="table-cell">
             <ul>
-              <li><strong>which nano</strong> (Print path to nano, e.g., /bin/nano, to terminal or print nothing if nano is not installed)</li>
+              <li><strong>which nano</strong> (Print file path to the nano command, e.g., /bin/nano, to terminal or print nothing if the nano application is not installed)</li>
             </ul>
           </div>
         </div>
         <div class="table-row" style="background-color: lightgray">
           <div class="table-cell" style="white-space: nowrap"><strong>man</strong></div>
-          <div class="table-cell">Open manual page for application</div>
+          <div class="table-cell">Open manual page for a command</div>
           <div class="table-cell">
             <ul>
-              <li><strong>man apt</strong> (Open manual page for the apt application)</li>
+              <li><strong>man apt</strong> (Open manual page for the apt command)</li>
               <li><strong>q</strong> (Close manual page)</li>
             </ul>
           </div>
@@ -286,11 +291,11 @@
         </div>
         <div class="table-row" style="background-color: white">
           <div class="table-cell"><strong>|</strong> (Called a &ldquo;pipe.&rdquo; Made by pressing SHIFT-Backslash)</div>
-          <div class="table-cell">Pass the output from one application to another</div>
+          <div class="table-cell">Pass the output from one command to another</div>
           <div class="table-cell">
             <ul>
-              <li><strong>sudo apt update | less</strong> (Send the output of sudo apt update to the application named less)</li>
-              <li><strong>echo "10+2" | bc</strong> (Send 10+2 to the terminal calculator application bc)</li>
+              <li><strong>sudo apt update | less</strong> (Send the output of sudo apt update to the less command)</li>
+              <li><strong>echo "10+2" | bc</strong> (Send the text 10+2 to the bc command)</li>
             </ul>
           </div>
         </div>
