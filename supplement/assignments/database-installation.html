@@ -31,23 +31,32 @@
     <section>
       <h3>Install MySQL</h3>
       <ol>
-        <li>Verify that your container has the dialog and logger applications installed. Install them, if necessary. (NB: Logger is part of the bsdutils package.)</li>
-        <li>Search for the MySQL database server metapackage.</li>
-        <li>Install the MySQL database server metapackage. During the install, you will see a dialog window asking for a password for the database root user. Enter a password that is easy for you to remember. You will not receive a visual feedback as you type the password (i.e., the screen will not move the cursor or show any asterisks to represent the password characters). Press ENTER when you have finished typing the password. On the next dialog screen, type your password again to confirm and press ENTER.</li>
-        <li>Use systemd to check the status of the MySQL server.</li>
-        <li>Start the MySQL server.</li>
-        <li>Enable the MySQL server to launch when you boot the container.</li>
+        <li>Verify that your container has the applications containing the dialog and logger commands installed. If not, install their respective packages. (NB: Logger is part of the bsdutils package.)</li>
+        <li>Search for a package name using the search terms "MySQL database server metapackage" (without quotes).</li>
+        <li>Install the package from the previous step. (NB: During the install, you will see a dialog window asking for a password for the database root user. Enter a password that is easy for you to remember. You will not receive a visual feedback as you type the password (i.e., the screen will not move the cursor or show any asterisks to represent the password characters). Press ENTER when you have finished typing the password. On the next dialog screen, type your password again to confirm and press ENTER.)</li>
       </ol>
     </section>
 
     <section>
-      <h3>Create and Import Database</h3>
-      <ol start="7">
+      <h3>Create Database</h3>
+      <ol start="4">
+        <li>Use systemd to check the status of the MySQL server.</li>
+        <li>Start the MySQL server.</li>
+        <li>Set the MySQL server to launch on boot up.</li>
         <li>Log in to your MySQL database server as the root user. When prompted, enter the root user password that you created when installing mysql-server into the password prompt. For security reasons, there will be no visual feedback as you type the password. Press ENTER after typing the password.</li>
         <li>Create a database and name it &ldquo;company&rdquo; (without quotes).</li>
+        <li>List all MySQL databases to confirm that you successfully created the company database.</li>
         <li>Exit MySQL.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Import Database</h3>
+      <ol start="11">
         <li>Download the database file from https://bit.ly/2Zq9qsq to your container and name it &ldquo;company.sql&rdquo; (without quotes).</li>
-        <li>Import the database file into MySQL by using the UNIX philosophy to redirect the company.sql file to the MySQL login command. Use the root user and the name of the database that you created in the login command. (NB: Mysql is the application and company.sql is the file.)</li>
+        <li>Import the database file into MySQL by using the UNIX philosophy to redirect the company.sql file to the MySQL login command. Use the root user and the name of the database that you created in the login command. (NB: mysql is the command and company.sql is the file.)</li>
+        <li>Log in to the company database as the root user.</li>
+        <li>List all tables in the company database. (NB: If no tables are listed, then you have made an error in a previous step.)</li>
       </ol>
     </section>
   </div>
