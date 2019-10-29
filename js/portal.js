@@ -296,14 +296,14 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/open-source.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/advantages-of-open-source-5-stats"},
-      {"label":"Open Alternatives", "href":"supplement/assignments/open-alternatives.html"},
+      {"label":"Open Solutions", "href":"supplement/assignments/open-solutions.html"},
     ],
     "due":[
       {"deliverable":"Exam Start", "deadline":"0", "time":"12.00"},
       {"deliverable":"Last Appointment", "deadline":"0", "time":"14.00"},
       {"deliverable":"Exam End", "deadline":"0", "time":"15.30"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Open Alternatives", "deadline":"6"},
+      {"deliverable":"Open Solutions", "deadline":"6"},
     ],
   },
   ],
