@@ -427,30 +427,30 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
       {"label":"Article", "href":"supplement/readings/processing-integrity.pdf", "filetype":"PDF"},
-      {"label":"E-R Drawing", "href":"supplement/assignments/er-drawing.html"},
       {"label":"Normalization", "href":"supplement/assignments/normalization.html"},
+      {"label":"E-R Drawing", "href":"supplement/assignments/er-drawing.html"},
     ],
     "due":[
       {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
       {"deliverable":"NO CLASS", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Normalization", "deadline":"6"},
       {"deliverable":"E-R Drawing", "deadline":"8"},
-      {"deliverable":"Normalization", "deadline":"8"},
     ],
   },
   ],
   },
-  {"date":"December 6, 2019", "label":"Exam Week", "topics":[
+  {"date":"December 4, 2019", "label":"Final Exam", "topics":[
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
       {"label":"Final Homework", "href":"supplement/assignments/final-homework.html"},
     ],
     "due":[
-      {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
-      {"deliverable":"Last Appointment", "deadline":"5", "time":"11.00"},
-      {"deliverable":"Exam End", "deadline":"5", "time":"13.30"},
-      {"deliverable":"Final Homework", "deadline":"5", "time":"14.00"},
+      {"deliverable":"Exam Start", "deadline":"0", "time":"12.00"},
+      {"deliverable":"Last Appointment", "deadline":"0", "time":"14.00"},
+      {"deliverable":"Exam End", "deadline":"0", "time":"15.30"},
+      {"deliverable":"Final Homework", "deadline":"0", "time":"16.00"},
     ],
   },
   ],
