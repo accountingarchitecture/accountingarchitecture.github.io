@@ -440,17 +440,17 @@ var myModules = [
   },
   ],
   },
-  {"date":"December 4, 2019", "label":"Final Exam", "topics":[
+  {"date":"December 11, 2019", "label":"Final Exam", "topics":[
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
       {"label":"Final Homework", "href":"supplement/assignments/final-homework.html"},
     ],
     "due":[
-      {"deliverable":"Exam Start", "deadline":"0", "time":"12.00"},
-      {"deliverable":"Last Appointment", "deadline":"0", "time":"14.00"},
-      {"deliverable":"Exam End", "deadline":"0", "time":"15.30"},
-      {"deliverable":"Final Homework", "deadline":"0", "time":"16.00"},
+      {"deliverable":"Exam Start", "deadline":"0", "time":"10.00"},
+      {"deliverable":"Last Appointment", "deadline":"0", "time":"12.00"},
+      {"deliverable":"Exam End", "deadline":"0", "time":"13.30"},
+      {"deliverable":"Final Homework", "deadline":"0", "time":"14.00"},
     ],
   },
   ],
