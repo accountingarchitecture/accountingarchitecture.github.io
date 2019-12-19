@@ -48,9 +48,9 @@ function schedule(modules) {
       if(modules[i].topics[j].hasOwnProperty('due')) {
         for(k = 0; k < modules[i].topics[j].due.length; k++) {
           if(modules[i].topics[j].due[k].hasOwnProperty('time')) {
-            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + (modules[i].topics[j].due[k].time.split(/[.]/)[0] * 3600000 + modules[i].topics[j].due[k].time.split(/[.]/)[1] * 60000));
+            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + (modules[i].topics[j].due[k].time.split(/[.]/)[0] * 3600000 + modules[i].topics[j].due[k].time.split(/[.]/)[1] * 60000) - (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'start') * 3600000));
           } else {
-            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999);
+            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999 - (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'start') * 3600000));
           }
           if(dueDate > currentDate && isHomeOrArchive() == 'Home') {
             deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + ' @ ' + dueDate.toString().split(' ')[4].split(':')[0] + '.' + dueDate.toString().split(' ')[4].split(':')[1] +'</dd>';
@@ -98,9 +98,9 @@ function isCurrentOrArchived(module) {
       if(module.topics[r].hasOwnProperty('due')) {
         for(q = 0; q < module.topics[r].due.length; q++) {
           if(module.topics[r].due[q].hasOwnProperty('time')) {
-            dueDate = new Date(Date.parse(module.date) + (module.topics[r].due[q].deadline * 86400000) + (module.topics[r].due[q].time.split(/[.]/)[0] * 3600000 + module.topics[r].due[q].time.split(/[.]/)[1] * 60000));
+            dueDate = new Date(Date.parse(module.date) + (module.topics[r].due[q].deadline * 86400000) + (module.topics[r].due[q].time.split(/[.]/)[0] * 3600000 + module.topics[r].due[q].time.split(/[.]/)[1] * 60000) - (module.topics[r].due[q].hasOwnProperty('dst') && (module.topics[r].due[q].dst == 'start') * 3600000));
           } else {
-            dueDate = new Date(Date.parse(module.date) + (module.topics[r].due[q].deadline * 86400000) + 86399999);
+            dueDate = new Date(Date.parse(module.date) + (module.topics[r].due[q].deadline * 86400000) + 86399999 - (module.topics[r].due[q].hasOwnProperty('dst') && (module.topics[r].due[q].dst == 'start') * 3600000));
           }
           if(dueDate > currentDate) return 'current';
           else if(r == module.topics.length - 1 && q == module.topics[r].due.length - 1) return 'archived';
@@ -204,7 +204,7 @@ document.getElementById('calendar').addEventListener('click', function(e) {
 
 // Content
 var myModules = [
-  {"date":"August 26, 2019", "topics":[
+  {"date":"January 21, 2020", "topics":[
   {"title":"Getting Started",
     "nav":[
       {"label":"Syllabus", "href":"supplement/syllabus/"},
@@ -222,28 +222,22 @@ var myModules = [
       {"label":"Professional Email", "href":"supplement/assignments/professional-email.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Guest Lecture", "deadline":"2", "time":"12.40"},
-      {"deliverable":"Professional Email", "deadline":"6"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Professional Email", "deadline":"5"},
     ],
   },
   ],
   },
-  {"date":"September 2, 2019", "topics":[
+  {"date":"January 27, 2020", "topics":[
   {"title":"Accounting Architecture",
     "nav":[
       {"label":"Lecture", "href":"lectures/accounting-architecture.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/september-2018-how-to-master-digital-age-competencies/", "filetype":"PDF"},
     ],
     "due":[
-      {"deliverable":"NO CLASS", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Guest Lecture", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"2"},
     ],
   },
-  ],
-  },
-  {"date":"September 9, 2019", "topics":[
   {"title":"Business Model",
     "nav":[
       {"label":"Lecture", "href":"lectures/business-model.html"},
@@ -251,14 +245,13 @@ var myModules = [
       {"label":"Diagram Narration", "href":"supplement/assignments/diagram-narration.html"},
     ],
     "due":[
-      {"deliverable":"Guest Lecture", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Quiz", "deadline":"4"},
       {"deliverable":"Diagram Narration", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"September 16, 2019", "topics":[
+  {"date":"February 3, 2020", "topics":[
   {"title":"Information",
     "nav":[
       {"label":"Lecture", "href":"lectures/information.html"},
@@ -267,15 +260,13 @@ var myModules = [
       {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
     ],
     "due":[
-      {"deliverable":"Guest Lecture", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Guest Lecture", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Classification", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"September 23, 2019", "topics":[
+  {"date":"February 10, 2020", "topics":[
   {"title":"Hardware",
     "nav":[
       {"label":"Lecture", "href":"lectures/hardware.html"},
@@ -284,31 +275,32 @@ var myModules = [
       {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Flowchart Drawing", "deadline":"6"},
-      {"deliverable":"AI Report", "deadline":"6"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Flowchart Drawing", "deadline":"4"},
+      {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
+      {"deliverable":"Last Appointment", "deadline":"5", "time":"22.00"},
+      {"deliverable":"Exam End", "deadline":"5"},
     ],
   },
   ],
   },
-  {"date":"September 30, 2019", "topics":[
+  {"date":"February 17, 2020", "topics":[
   {"title":"Software: Open Source",
     "nav":[
       {"label":"Lecture", "href":"lectures/open-source.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/advantages-of-open-source-5-stats"},
       {"label":"Open Solutions", "href":"supplement/assignments/open-solutions.html"},
+      {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
     ],
     "due":[
-      {"deliverable":"Exam Start", "deadline":"0", "time":"12.00"},
-      {"deliverable":"Last Appointment", "deadline":"0", "time":"14.00"},
-      {"deliverable":"Exam End", "deadline":"0", "time":"15.30"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
+      {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Open Solutions", "deadline":"6"},
+      {"deliverable":"AI Report", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"October 7, 2019", "topics":[
+  {"date":"February 24, 2020", "topics":[
   {"title":"Software: Operating Systems",
     "nav":[
       {"label":"Lecture", "href":"lectures/operating-systems.html"},
@@ -316,15 +308,13 @@ var myModules = [
       {"label":"Linux Software", "href":"supplement/assignments/linux-software.html"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
-      {"deliverable":"Linux Software", "deadline":"4"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Linux Software", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"October 14, 2019", "topics":[
+  {"date":"March 2, 2020", "topics":[
   {"title":"Storage",
     "nav":[
       {"label":"Lecture", "href":"lectures/storage.html"},
@@ -332,14 +322,13 @@ var myModules = [
       {"label":"Linux Storage", "href":"supplement/assignments/linux-storage.html"},
     ],
     "due":[
-      {"deliverable":"NO CLASS", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"2", "time":"23.59"},
-      {"deliverable":"Linux Storage", "deadline":"6"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Linux Storage", "deadline":"6", "dst":"start"},
     ],
   },
   ],
   },
-  {"date":"October 21, 2019", "topics":[
+  {"date":"March 16, 2020", "topics":[
   {"title":"Services",
     "nav":[
       {"label":"Lecture", "href":"lectures/services.html"},
@@ -347,66 +336,64 @@ var myModules = [
       {"label":"DB Installation", "href":"supplement/assignments/database-installation.html"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"DB Installation", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"October 28, 2019", "topics":[
+  {"date":"March 23, 2020", "topics":[
   {"title":"Risk &amp; Control",
     "nav":[
       {"label":"Lecture", "href":"lectures/risk-and-control.html"},
       {"label":"Article", "href":"supplement/readings/risk-and-control.pdf", "filetype":"PDF"},
       {"label":"SQL Tutorial", "href":"supplement/assignments/sql-tutorial.html"},
+      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
+      {"deliverable":"Last Appointment", "deadline":"5", "time":"22.00"},
+      {"deliverable":"Exam End", "deadline":"5"},
       {"deliverable":"SQL Tutorial", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"November 4, 2019", "topics":[
+  {"date":"March 30, 2020", "topics":[
   {"title":"Security",
     "nav":[
       {"label":"Lecture", "href":"lectures/security.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/technology-47974583"},
       {"label":"Password Security", "href":"supplement/assignments/password-security.html"},
-    ],
-    "due":[
-      {"deliverable":"Exam Start", "deadline":"0", "time":"12.00"},
-      {"deliverable":"Last Appointment", "deadline":"0", "time":"14.00"},
-      {"deliverable":"Exam End", "deadline":"0", "time":"15.30"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
-      {"deliverable":"Password Security", "deadline":"6"},
-    ],
-  },
-  ],
-  },
-  {"date":"November 11, 2019", "topics":[
-  {"title":"Confidentiality &amp; Privacy",
-    "nav":[
-      {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
-      {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
-      {"label":"FERPA Tutorial", "href":"supplement/assignments/ferpa-tutorial.html"},
       {"label":"DB Queries", "href":"supplement/assignments/database-queries.html"},
+      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
-      {"deliverable":"FERPA Tutorial", "deadline":"6"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Password Security", "deadline":"6"},
       {"deliverable":"DB Queries", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"November 18, 2019", "topics":[
+  {"date":"April 6, 2020", "topics":[
+  {"title":"Confidentiality &amp; Privacy",
+    "nav":[
+      {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
+      {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
+      {"label":"FERPA Tutorial", "href":"supplement/assignments/ferpa-tutorial.html"},
+      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
+    ],
+    "due":[
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"FERPA Tutorial", "deadline":"6"},
+      {"deliverable":"Tech Report", "deadline":"6"},
+    ],
+  },
+  ],
+  },
+  {"date":"April 13, 2020", "topics":[
   {"title":"Availability",
     "nav":[
       {"label":"Lecture", "href":"lectures/availability.html"},
@@ -414,33 +401,29 @@ var myModules = [
       {"label":"Version Control", "href":"supplement/assignments/version-control.html"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Version Control", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"November 25, 2019", "topics":[
+  {"date":"April 20, 2020", "topics":[
   {"title":"Processing Integrity",
     "nav":[
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
       {"label":"Article", "href":"supplement/readings/processing-integrity.pdf", "filetype":"PDF"},
-      {"label":"Normalization", "href":"supplement/assignments/normalization.html"},
       {"label":"E-R Drawing", "href":"supplement/assignments/er-drawing.html"},
+      {"label":"Normalization", "href":"supplement/assignments/normalization.html"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"0", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1", "time":"23.59"},
-      {"deliverable":"NO CLASS", "deadline":"2", "time":"12.40"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"E-R Drawing", "deadline":"6"},
       {"deliverable":"Normalization", "deadline":"6"},
-      {"deliverable":"E-R Drawing", "deadline":"8"},
     ],
   },
   ],
   },
-  {"date":"December 11, 2019", "label":"Final Exam", "topics":[
+  {"date":"May 2, 2020", "label":"Final Exam", "topics":[
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
@@ -448,9 +431,9 @@ var myModules = [
     ],
     "due":[
       {"deliverable":"Exam Start", "deadline":"0", "time":"10.00"},
-      {"deliverable":"Last Appointment", "deadline":"0", "time":"12.00"},
-      {"deliverable":"Exam End", "deadline":"0", "time":"13.30"},
-      {"deliverable":"Final Homework", "deadline":"0", "time":"14.00"},
+      {"deliverable":"Last Appointment", "deadline":"0", "time":"22.00"},
+      {"deliverable":"Exam End", "deadline":"0"},
+      {"deliverable":"Final Homework", "deadline":"2"},
     ],
   },
   ],
