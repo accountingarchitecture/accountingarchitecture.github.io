@@ -272,6 +272,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/hardware.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
       {"label":"Flowchart Drawing", "href":"supplement/assignments/flowchart-drawing.html"},
+      {"label":"ProctorU Instructions", "href":"supplement/syllabus/#proctoru"},
       {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
     ],
     "due":[
@@ -347,6 +348,7 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/risk-and-control.html"},
       {"label":"Article", "href":"supplement/readings/risk-and-control.pdf", "filetype":"PDF"},
+      {"label":"ProctorU Instructions", "href":"supplement/syllabus/#proctoru"},
       {"label":"SQL Tutorial", "href":"supplement/assignments/sql-tutorial.html"},
       {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
     ],
@@ -427,6 +429,7 @@ var myModules = [
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
+      {"label":"ProctorU Instructions", "href":"supplement/syllabus/#proctoru"},
       {"label":"Final Homework", "href":"supplement/assignments/final-homework.html"},
     ],
     "due":[
