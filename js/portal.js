@@ -37,6 +37,7 @@ function builder(modules) {
 // Build Calendar HTML
 function schedule(modules) {
   document.getElementById('calendar').innerHTML = '';
+  document.getElementById('sidebar-calendar').innerHTML = '';
   currentDate = new Date();
   var calendar = '';
   for(i = 0; i < modules.length; i++) {
@@ -77,6 +78,7 @@ function schedule(modules) {
   if(calendar == '' && isHomeOrArchive() == 'Home') calendar = '<dl><dt>No future assignments.</dt></dl>';
   else if(calendar == '' && isHomeOrArchive() == 'Archive') calendar = '<dl><dt>No past assignments.</dt></dl>';
   document.getElementById('calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule" class="hide">' + calendar + '</div>';
+  document.getElementById('sidebar-calendar').innerHTML = '<h2 class="calendar">Schedule</h2><div id="schedule">' + calendar + '</div>';
 }
 
 // Test for current page
