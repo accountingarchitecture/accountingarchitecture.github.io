@@ -166,7 +166,7 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 
 // Open sidebar
 document.getElementById('menuicon').addEventListener('click', function(e) {
-  document.getElementById('sidebar').style.width='300px';
+  document.getElementById('sidebar').style.width='290px';
 });
 
 // Close sidebar
@@ -178,18 +178,24 @@ document.getElementById('closeicon').addEventListener('click', function(e) {
 document.getElementById('sidebar-links').addEventListener('click', function(e) {
   // Keep link to current page highlighted
   menuItem = document.getElementById('sidebar-links').getElementsByTagName('a');
+  var touched = false;
   for(i = 0; i < menuItem.length; i++) {
-    if(e.target == menuItem[i]) {
-      menuItem[i].className='menu-item current';
-      document.getElementById('menu-links').getElementsByTagName('a')[i].className='menu-item current';
-    } else {
-      menuItem[i].className='menu-item';
-      document.getElementById('menu-links').getElementsByTagName('a')[i].className='menu-item';
-    }
+    if(e.target == menuItem[i]) touched = true;
   }
-  // Load topics for current page
-  builder(myModules);
-  schedule(myModules);
+  if(Boolean(touched)) {
+    for(i = 0; i < menuItem.length; i++) {
+      if(e.target == menuItem[i]) {
+        menuItem[i].className='menu-item current';
+        document.getElementById('menu-links').getElementsByTagName('a')[i].className='menu-item current';
+      } else {
+        menuItem[i].className='menu-item';
+        document.getElementById('menu-links').getElementsByTagName('a')[i].className='menu-item';
+      }
+    }
+    // Load topics for current page
+    builder(myModules);
+    schedule(myModules);
+  }
 });
 
 // How to expand topic content
@@ -220,19 +226,6 @@ document.getElementById('content').addEventListener('click', function(e) {
       }
     } else if(e.target == topics[i].getElementsByClassName('title')[0] && topics[i].getElementsByClassName('title')[0].className == 'title expand') {
       closeTopic(topics[i]);
-    }
-  }
-});
-
-// Toggle schedule on click on small screen
-document.getElementById('calendar').addEventListener('click', function(e) {
-  if(e.target == document.getElementById('calendar').getElementsByTagName('h2')[0]) {
-    if(document.getElementById('calendar').getElementsByTagName('h2')[0].className !='calendar show') {
-      document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar show';
-      document.getElementById('schedule').className='';
-    } else {
-      document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
-      document.getElementById('schedule').className='hide';
     }
   }
 });
