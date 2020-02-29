@@ -148,8 +148,13 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
   // Keep link to current page highlighted
   menuItem = document.getElementById('menu-links').getElementsByTagName('a');
   for(i = 0; i < menuItem.length; i++) {
-    if(e.target == menuItem[i]) menuItem[i].className='menu-item current';
-    else menuItem[i].className='menu-item';
+    if(e.target == menuItem[i]) {
+      menuItem[i].className='menu-item current';
+      document.getElementById('sidebar-links').getElementsByTagName('a')[i].className='menu-item current';
+    } else {
+      menuItem[i].className='menu-item';
+      document.getElementById('sidebar-links').getElementsByTagName('a')[i].className='menu-item';
+    }
   }
   // Load topics for current page
   builder(myModules);
@@ -157,6 +162,34 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
   // Hide schedule if expanded on small screen
   document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
   document.getElementById('schedule').className='hide';
+});
+
+// Open sidebar
+document.getElementById('menuicon').addEventListener('click', function(e) {
+  document.getElementById('sidebar').style.width='300px';
+});
+
+// Close sidebar
+document.getElementById('closeicon').addEventListener('click', function(e) {
+  document.getElementById('sidebar').style.width='0';
+});
+
+// Toggle topics and current page link on click in sidebar
+document.getElementById('sidebar-links').addEventListener('click', function(e) {
+  // Keep link to current page highlighted
+  menuItem = document.getElementById('sidebar-links').getElementsByTagName('a');
+  for(i = 0; i < menuItem.length; i++) {
+    if(e.target == menuItem[i]) {
+      menuItem[i].className='menu-item current';
+      document.getElementById('menu-links').getElementsByTagName('a')[i].className='menu-item current';
+    } else {
+      menuItem[i].className='menu-item';
+      document.getElementById('menu-links').getElementsByTagName('a')[i].className='menu-item';
+    }
+  }
+  // Load topics for current page
+  builder(myModules);
+  schedule(myModules);
 });
 
 // How to expand topic content
