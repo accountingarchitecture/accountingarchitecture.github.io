@@ -177,9 +177,14 @@
     background-color: black;
     margin: 3px 20px;
   }
+  .menuicon .spacer {
+    visibility: hidden;
+  }
+
+/********** Sidebar **********/
   #sidebar {
     height: 100%;
-    width: 300px;
+    width: 0px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -191,14 +196,20 @@
     font: 15px/25px Arial, sans-serif;
     text-align: center;
   }
-  #sidebar-calendar {
-    color: black;
-  }
   #closeicon {
     cursor: pointer;
     width: 14px;
     padding: 0px 15px;
     font: 28px/38px Arial, sans-serif;
+  }
+  #sidebar a {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+  #sidebar-calendar {
+    color: black;
   }
 
 /********** Topics **********/
@@ -365,23 +376,19 @@
     #menu-bar {
       border: initial;
     }
-    #logo > img {
-      max-height: 35px;
-      margin-top: 5px;
-    }
     #branding {
       margin-left: auto;
       margin-right: auto;
+    }
+    #logo > img {
+      max-height: 35px;
+      margin-top: 5px;
     }
     h1 {
       font-size: 15px;
     }
     #menu-links {
       display: none;
-      -webkit-flex: 1 1 50%;
-      flex: 1 1 50%;
-      -webkit-justify-content: center;
-      justify-content: center;
     }
     #menuicon {
       display: block;
@@ -430,5 +437,24 @@
     }
     h3 {
       font: 27px/34px Arial, sans-serif;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .menuicon .spacer {
+      display: none;
+    }
+    #branding {
+      -webkit-flex: 1 1 100%;
+      flex: 1 1 100%;
+    }
+    #logo > img {
+      max-height: 25px;
+      margin-top: 5px;
+    }
+    h1 {
+      font-size: 12px;
+    }
+    #menuicon {
+      margin-left: auto;
     }
   }
