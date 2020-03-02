@@ -107,8 +107,8 @@
   #menu {
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
     -webkit-justify-content: space-between;
     justify-content: space-between;
     -webkit-align-items: center;
@@ -397,6 +397,7 @@
     }
     h1 {
       font-size: 15px;
+      text-align: center;
     }
     #menu-links {
       display: none;
@@ -437,19 +438,27 @@
       font: 27px/34px Arial, sans-serif;
     }
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     .spacer {
       display: none;
+    }
+    #branding {
+      margin-left: 12px;
     }
     #logo > img {
       max-height: 25px;
       margin-top: 5px;
     }
     h1 {
-      font-size: 13px;
+      font-size: 14px;
     }
     .menuicon {
       margin-left: 15px;
       margin-right: 15px;
+    }
+  }
+  @media screen and (max-width: 340px) {
+    #logo > img {
+      margin-right: 12px;
     }
   }
