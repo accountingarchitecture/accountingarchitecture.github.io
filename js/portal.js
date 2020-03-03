@@ -166,7 +166,7 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
 
 // Open sidebar
 document.getElementById('menuicon').addEventListener('click', function(e) {
-  document.getElementById('sidebar').style.width='290px';
+  document.getElementById('sidebar').style.width='225px';
 });
 
 // Close sidebar
