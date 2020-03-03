@@ -159,9 +159,6 @@ document.getElementById('menu-links').addEventListener('click', function(e) {
   // Load topics for current page
   builder(myModules);
   schedule(myModules);
-  // Hide schedule if expanded on small screen
-  document.getElementById('calendar').getElementsByTagName('h2')[0].className='calendar';
-  document.getElementById('schedule').className='hide';
 });
 
 // Open sidebar
