@@ -53,12 +53,12 @@ function schedule(modules) {
           } else {
             dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999 - (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'start') * 3600000));
           }
-          if(dueDate > currentDate && isHomeOrArchive() == 'Home') {
-            deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + ' @ ' + dueDate.toString().split(' ')[4].split(':')[0] + '.' + dueDate.toString().split(' ')[4].split(':')[1] +'</dd>';
-            hasDeliverable = true;
-            hasTopicWithDeliverable = true;
-          } else if(dueDate < currentDate && isHomeOrArchive() == 'Archive') {
-            deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : ' + dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + ' @ ' + dueDate.toString().split(' ')[4].split(':')[0] + '.' + dueDate.toString().split(' ')[4].split(':')[1] +'</dd>';
+          if((dueDate > currentDate && isHomeOrArchive() == 'Home') || (dueDate < currentDate && isHomeOrArchive() == 'Archive')) {
+            deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : '
+            if(modules[i].topics[j].due[k].deliverable.includes('<s>'))
+              deliverables += dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + ' @ ' + dueDate.toString().split(' ')[4].split(':')[0] + '.' + dueDate.toString().split(' ')[4].split(':')[1] + '</s></dd>';
+            else
+              deliverables += dueDate.toString().split(' ')[1] + ' ' + dueDate.toString().split(' ')[2] + ' @ ' + dueDate.toString().split(' ')[4].split(':')[0] + '.' + dueDate.toString().split(' ')[4].split(':')[1] +'</dd>';
             hasDeliverable = true;
             hasTopicWithDeliverable = true;
           }
@@ -354,7 +354,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"March 16, 2020", "topics":[
+  {"date":"March 23, 2020", "topics":[
   {"title":"Services",
     "nav":[
       {"label":"Lecture", "href":"lectures/services.html"},
@@ -368,14 +368,14 @@ var myModules = [
   },
   ],
   },
-  {"date":"March 23, 2020", "topics":[
+  {"date":"March 30, 2020", "topics":[
   {"title":"Risk &amp; Control",
     "nav":[
       {"label":"Lecture", "href":"lectures/risk-and-control.html"},
       {"label":"Article", "href":"supplement/readings/risk-and-control.pdf", "filetype":"PDF"},
       {"label":"ProctorU Instructions", "href":"supplement/syllabus/#proctoru"},
       {"label":"SQL Tutorial", "href":"supplement/assignments/sql-tutorial.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
+      {"label":"<s>Tech Report Instructions</s>", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -387,14 +387,14 @@ var myModules = [
   },
   ],
   },
-  {"date":"March 30, 2020", "topics":[
+  {"date":"April 6, 2020", "topics":[
   {"title":"Security",
     "nav":[
       {"label":"Lecture", "href":"lectures/security.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/technology-47974583"},
       {"label":"Password Security", "href":"supplement/assignments/password-security.html"},
       {"label":"DB Queries", "href":"supplement/assignments/database-queries.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
+      {"label":"<s>Tech Report Instructions</s>", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -404,23 +404,20 @@ var myModules = [
   },
   ],
   },
-  {"date":"April 6, 2020", "topics":[
+  {"date":"April 13, 2020", "topics":[
   {"title":"Confidentiality &amp; Privacy",
     "nav":[
       {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
       {"label":"FERPA Tutorial", "href":"supplement/assignments/ferpa-tutorial.html"},
-      {"label":"Tech Report Instructions", "href":"supplement/syllabus/#tech-report"},
+      {"label":"<s>Tech Report Instructions</s>", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Quiz", "deadline":"1"},
       {"deliverable":"FERPA Tutorial", "deadline":"6"},
-      {"deliverable":"Tech Report", "deadline":"6"},
+      {"deliverable":"<s>Tech Report", "deadline":"6"},
     ],
   },
-  ],
-  },
-  {"date":"April 13, 2020", "topics":[
   {"title":"Availability",
     "nav":[
       {"label":"Lecture", "href":"lectures/availability.html"},
@@ -428,7 +425,7 @@ var myModules = [
       {"label":"Version Control", "href":"supplement/assignments/version-control.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Quiz", "deadline":"3"},
       {"deliverable":"Version Control", "deadline":"6"},
     ],
   },
