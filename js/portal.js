@@ -229,7 +229,7 @@ document.getElementById('content').addEventListener('click', function(e) {
 
 // Content
 var myModules = [
-  {"date":"January 21, 2020", "topics":[
+  {"date":"August 17, 2020", "topics":[
   {"title":"Getting Started",
     "nav":[
       {"label":"Syllabus", "href":"supplement/syllabus/"},
@@ -253,7 +253,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"January 27, 2020", "topics":[
+  {"date":"August 24, 2020", "topics":[
   {"title":"Accounting Architecture",
     "nav":[
       {"label":"Lecture", "href":"lectures/accounting-architecture.html"},
@@ -276,7 +276,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"February 3, 2020", "topics":[
+  {"date":"August 31, 2020", "topics":[
   {"title":"Information",
     "nav":[
       {"label":"Lecture", "href":"lectures/information.html"},
@@ -291,7 +291,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"February 10, 2020", "topics":[
+  {"date":"September 9, 2020", "topics":[
   {"title":"Hardware",
     "nav":[
       {"label":"Lecture", "href":"lectures/hardware.html"},
@@ -310,7 +310,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"February 17, 2020", "topics":[
+  {"date":"September 14, 2020", "topics":[
   {"title":"Software: Open Source",
     "nav":[
       {"label":"Lecture", "href":"lectures/open-source.html"},
@@ -326,7 +326,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"February 24, 2020", "topics":[
+  {"date":"September 21, 2020", "topics":[
   {"title":"Software: Operating Systems",
     "nav":[
       {"label":"Lecture", "href":"lectures/operating-systems.html"},
@@ -340,7 +340,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"March 2, 2020", "topics":[
+  {"date":"September 28, 2020", "topics":[
   {"title":"Storage",
     "nav":[
       {"label":"Lecture", "href":"lectures/storage.html"},
@@ -354,7 +354,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"March 23, 2020", "topics":[
+  {"date":"October 5, 2020", "topics":[
   {"title":"Services",
     "nav":[
       {"label":"Lecture", "href":"lectures/services.html"},
@@ -368,14 +368,13 @@ var myModules = [
   },
   ],
   },
-  {"date":"March 30, 2020", "topics":[
+  {"date":"October 12, 2020", "topics":[
   {"title":"Risk &amp; Control",
     "nav":[
       {"label":"Lecture", "href":"lectures/risk-and-control.html"},
       {"label":"Article", "href":"supplement/readings/risk-and-control.pdf", "filetype":"PDF"},
       {"label":"ProctorU Instructions", "href":"supplement/syllabus/#proctoru"},
       {"label":"SQL Tutorial", "href":"supplement/assignments/sql-tutorial.html"},
-      {"label":"<s>Tech Report Instructions</s>", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -387,14 +386,13 @@ var myModules = [
   },
   ],
   },
-  {"date":"April 6, 2020", "topics":[
+  {"date":"October 19, 2020", "topics":[
   {"title":"Security",
     "nav":[
       {"label":"Lecture", "href":"lectures/security.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/technology-47974583"},
       {"label":"Password Security", "href":"supplement/assignments/password-security.html"},
       {"label":"DB Queries", "href":"supplement/assignments/database-queries.html"},
-      {"label":"<s>Tech Report Instructions</s>", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -404,20 +402,21 @@ var myModules = [
   },
   ],
   },
-  {"date":"April 13, 2020", "topics":[
+  {"date":"October 26, 2020", "topics":[
   {"title":"Confidentiality &amp; Privacy",
     "nav":[
       {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
       {"label":"FERPA Tutorial", "href":"supplement/assignments/ferpa-tutorial.html"},
-      {"label":"<s>Tech Report Instructions</s>", "href":"supplement/syllabus/#tech-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1"},
       {"deliverable":"FERPA Tutorial", "deadline":"6"},
-      {"deliverable":"<s>Tech Report", "deadline":"6"},
     ],
   },
+  ],
+  },
+  {"date":"November 2, 2020", "topics":[
   {"title":"Availability",
     "nav":[
       {"label":"Lecture", "href":"lectures/availability.html"},
@@ -431,7 +430,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"April 20, 2020", "topics":[
+  {"date":"November 9, 2020", "topics":[
   {"title":"Processing Integrity",
     "nav":[
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
@@ -447,7 +446,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"May 2, 2020", "label":"Final Exam", "topics":[
+  {"date":"November 16, 2020", "label":"Final Exam", "topics":[
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
