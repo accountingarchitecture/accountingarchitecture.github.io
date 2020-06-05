@@ -232,9 +232,9 @@ var myModules = [
   {"date":"August 17, 2020", "topics":[
   {"title":"Getting Started",
     "nav":[
-      {"label":"Syllabus", "href":"supplement/syllabus/"},
-      {"label":"Email Policy", "href":"supplement/syllabus/#email"},
-      {"label":"Academic Integrity", "href":"supplement/syllabus/#integrity"},
+      {"label":"Syllabus", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/"},
+      {"label":"Email Policy", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#email"},
+      {"label":"Academic Integrity", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#integrity"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"0"},
@@ -282,7 +282,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/information.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
       {"label":"Classification", "href":"supplement/assignments/classification.html"},
-      {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
+      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -297,8 +297,8 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/hardware.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
       {"label":"Flowchart Drawing", "href":"supplement/assignments/flowchart-drawing.html"},
-      {"label":"ProctorU Instructions", "href":"supplement/syllabus/#proctoru"},
-      {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
+      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -316,7 +316,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/open-source.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/advantages-of-open-source-5-stats"},
       {"label":"Open Solutions", "href":"supplement/assignments/open-solutions.html"},
-      {"label":"AI Report Instructions", "href":"supplement/syllabus/#ai-report"},
+      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -373,7 +373,7 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/risk-and-control.html"},
       {"label":"Article", "href":"supplement/readings/risk-and-control.pdf", "filetype":"PDF"},
-      {"label":"ProctorU Instructions", "href":"supplement/syllabus/#proctoru"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
       {"label":"SQL Tutorial", "href":"supplement/assignments/sql-tutorial.html"},
     ],
     "due":[
@@ -450,7 +450,7 @@ var myModules = [
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
-      {"label":"ProctorU Instructions", "href":"supplement/syllabus/#proctoru"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
       {"label":"Final Homework", "href":"supplement/assignments/final-homework.html"},
     ],
     "due":[
