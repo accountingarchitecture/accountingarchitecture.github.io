@@ -49,9 +49,9 @@ function schedule(modules) {
       if(modules[i].topics[j].hasOwnProperty('due')) {
         for(k = 0; k < modules[i].topics[j].due.length; k++) {
           if(modules[i].topics[j].due[k].hasOwnProperty('time')) {
-            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + (modules[i].topics[j].due[k].time.split(/[.]/)[0] * 3600000 + modules[i].topics[j].due[k].time.split(/[.]/)[1] * 60000) - (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'start') * 3600000));
+            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + (modules[i].topics[j].due[k].time.split(/[.]/)[0] * 3600000 + modules[i].topics[j].due[k].time.split(/[.]/)[1] * 60000) - (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'start') * 3600000) + (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'end') * 3600000));
           } else {
-            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999 - (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'start') * 3600000));
+            dueDate = new Date(Date.parse(modules[i].date) + (modules[i].topics[j].due[k].deadline * 86400000) + 86399999 - (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'start') * 3600000) + (modules[i].topics[j].due[k].hasOwnProperty('dst') && (modules[i].topics[j].due[k].dst == 'end') * 3600000));
           }
           if((dueDate > currentDate && isHomeOrArchive() == 'Home') || (dueDate < currentDate && isHomeOrArchive() == 'Archive')) {
             deliverables += '<dd>' + modules[i].topics[j].due[k].deliverable + ' : '
@@ -301,7 +301,7 @@ var myModules = [
       {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Quiz", "deadline":"1"},
       {"deliverable":"Flowchart Drawing", "deadline":"4"},
       {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
       {"deliverable":"Last Appointment", "deadline":"5", "time":"22.00"},
@@ -345,11 +345,13 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/storage.html"},
       {"label":"Article", "href":"http://www.bbc.com/future/story/20190104-are-you-a-digital-hoarder?ocid=global_future_rss"},
+      {"label":"E-R Diagrams", "href":"supplement/assignments/er-drawing.html"},
       {"label":"Linux Storage", "href":"supplement/assignments/linux-storage.html"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
-      {"deliverable":"Linux Storage", "deadline":"6", "dst":"start"},
+      {"deliverable":"E-R Diagrams", "deadline":"6"},
+      {"deliverable":"Linux Storage", "deadline":"6"},
     ],
   },
   ],
@@ -410,8 +412,8 @@ var myModules = [
       {"label":"FERPA Tutorial", "href":"supplement/assignments/ferpa-tutorial.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"1"},
-      {"deliverable":"FERPA Tutorial", "deadline":"6"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"FERPA Tutorial", "deadline":"6", "dst":"end"},
     ],
   },
   ],
@@ -424,7 +426,7 @@ var myModules = [
       {"label":"Version Control", "href":"supplement/assignments/version-control.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"3"},
+      {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Version Control", "deadline":"6"},
     ],
   },
@@ -435,12 +437,10 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
       {"label":"Article", "href":"supplement/readings/processing-integrity.pdf", "filetype":"PDF"},
-      {"label":"E-R Drawing", "href":"supplement/assignments/er-drawing.html"},
       {"label":"Normalization", "href":"supplement/assignments/normalization.html"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
-      {"deliverable":"E-R Drawing", "deadline":"6"},
       {"deliverable":"Normalization", "deadline":"6"},
     ],
   },
