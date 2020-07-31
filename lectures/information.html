@@ -114,6 +114,11 @@
     </section>
 
     <section>
+      <h2>More Important Than You Might Think</h2>
+      <p>Sometimes we might overlook the importance of metadata because our brains seem good at describing and identifying objects in the real world. We may feel that our own senses are sufficient without the help of metadata, but what happens to a computer with no senses if objects have no metadata? What happens if someone wants to stream a video, but the video has no assigned metadata. How would the user find it? The user interface would not know how to find a video that does not have a name assigned to it. Or worse, what happens if someone wants to stream a video, but the video's metadata is wrong? The interface does not know whether the video's name is correct, only what the assigned video name is. No user wants to watch a random movie that the interface thinks is right.</p>
+    </section>
+
+    <section>
       <h2>ATTRIBUTE : value</h2>
       <p>Metadata relies on pairs of <u><em>attributes</em></u> and <u><em>values</em></u>. An attribute is a characteristic of a data object. Each attribute takes on a different value for each data object. For example, a book may have the attributes title, author, year, and publisher, and a specific book would have the following attribute-value pairs:</p>
       <ul style="list-style-type: none; display: inline-block">
@@ -139,6 +144,70 @@
           &lt;/metadata&gt;
         </li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Tagging a Journal Entry</h2>
+      <p>XML is versatile enough to tag data of all sorts. For example, a journal entry recording an economic event needs metadata so that a computer system can understand it, and XML is one way to tag that journal entry. Journal entries need several metadata attributes. Accrual accounting principles dictate the month, day, and year of the transaction be recorded and precise. Double-entry accounting requires knowing which accounts are affected by the transaction, what the dollar amount of the change is, and whether the change is a debit or a credit. When using XML, it must be clear which dollar amount applies to which account and which account had a debit and which had a credit. Additionally, XML does not understand formatting in numbers or dates, so commas in numerical values or slashes in date values are inappropriate.</p>
+    </section>
+
+    <section>
+      <h2>From Journal Entry to XML</h2>
+      <div class="table" style="border: initial; font-size: 28px">
+        <div class="table-row">
+          <div class="table-cell">8/31/20X1</div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">Accounts receivable</div>
+          <div class="table-cell" style="text-align: right">2,495</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">Cost of goods sold</div>
+          <div class="table-cell" style="text-align: right">2,200</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell" style="padding-left: 100px">Revenue</div>
+          <div class="table-cell"></div>
+          <div class="table-cell" style="text-align: right">2,495</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell" style="padding-left: 100px">Inventory</div>
+          <div class="table-cell"></div>
+          <div class="table-cell" style="text-align: right">2,200</div>
+        </div>
+      </div>
+      <hr>
+      <ul style="list-style-type: none; display: inline-block; font-size: 28px">
+        <li>&lt;metadata&gt;
+          <ul style="list-style-type: none">
+            <li>&lt;year&gt;20X1-08-31&lt;/year&gt;</li>
+            <li>&lt;debits&gt;
+              <ul style="list-style-type: none">
+                <li>&lt;AccountsReceivable&gt;2495&lt;/AccountsReceivable&gt;</li>
+                <li>&lt;CostOfGoodsSold&gt;2200&lt;/CostOfGoodsSold&gt;</li>
+              </ul>
+            </li>
+            <li>&lt;/debits&gt;</li>
+            <li>&lt;credits&gt;
+              <ul style="list-style-type: none">
+                <li>&lt;Revenue&gt;2495&lt;/Revenue&gt;</li>
+                <li>&lt;Inventory&gt;2200&lt;/Inventory&gt;</li>
+              </ul>
+            </li>
+            <li>&lt;/credits&gt;</li>
+          </ul>
+          &lt;/metadata&gt;
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Some Explanation</h2>
+      <p>Since XML understands dates, the journal entry can have a single date attribute. Alternatively, three separate attributes for month, day, and year would be acceptable. (Some classification choices are a matter of preference.) The most widely accepted XML date datatype is YYYY-MM-DD. Having multiple levels of XML tags (i.e., nested tags) is useful for grouping certain attributes together (e.g., all debits and all credits). Account names can be useful XML attributes because they are unique&mdash;unique attributes allow XML to understand what is the same and what is different&mdash;and because the dollar values create an easy mapping from account to change in that account. Number formatting is not appropriate, so commas are excluded from XML values, but XML values can contain decimal points and minus signs.</p>
     </section>
 
     <section>
