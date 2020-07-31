@@ -345,7 +345,7 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/storage.html"},
       {"label":"Article", "href":"http://www.bbc.com/future/story/20190104-are-you-a-digital-hoarder?ocid=global_future_rss"},
-      {"label":"E-R Diagrams", "href":"supplement/assignments/er-drawing.html"},
+      {"label":"E-R Diagrams", "href":"supplement/assignments/entity-relationships.html"},
       {"label":"Linux Storage", "href":"supplement/assignments/linux-storage.html"},
     ],
     "due":[

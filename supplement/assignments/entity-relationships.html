@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Assignment</title>
+
+  <meta name="author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../../images/memphis.ico" type="image/x-icon" sizes="32x32">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Personalized CSS -->
+  <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+  <div class="reveal">
+  <div class="slides">
+    <section>
+      <h3>Entity Relationships - Intro</h3>
+      <p>This assignment will give you practice understanding entity relationships and drawing an entity-relationship (E-R) diagram. Knowing how to read and write E-R diagrams allows you to communicate with others about the structure of databases. The next screen asks several questions about minimum and maximum relationship between various entities. Write your solutions in a word processor file. The final screen displays an E-R diagram, and you should make a copy of it using the diagramming software of your choice. <a href="https://www.draw.io/" target="_blank" rel="noopener" aria-label="Website opens in new window">Draw.io</a> is a free, online diagramming tool that you may use, but you may choose another software tool if you prefer. You can find a helpful tutorial on drawing E-R diagrams on the <a href="https://about.draw.io/entity-relationship-diagrams-with-draw-io/" target="_blank" rel="noopener" aria-label="Website opens in new window">Draw.io website</a>. If you use Draw.io, all required shapes will be in the Entity Relation template. When you have completed your flowchart, export the files to PDF, and upload them to Dropbox on eCourseware.</p>
+    </section>
+    
+    <section style="font-size: 28px">
+      <h3>Cardinalities</h3>
+      <p>(NB: Cardinality describes the relationship between an instance of one entity and the instances of another entity. The minimum cardinality of the relationship between two entities is zero, one, or many. The maximum cardinality of the relationship between two entities is one or many.)</p>
+      <ol>
+        <li>A single customer (i.e., one instance of the Customer entity) can have placed at least how many sales orders (i.e., instances of the Sales Order entity) and at most how many sales orders?</li>
+        <li>A single sales order has at least how many customers and at most how many customers?</li>
+        <li>A single sales order has at least how many different types of items (i.e., instances of the Inventory entity; a wrench could be one type and a TV could be another type; two of the same TV would be only one type) and at most how many different types of items?</li>
+        <li>A single item type (i.e., any physical copy of the same inventory item, such as any Playstation) can be on at least how many sales orders and at most how many sales orders?</li>
+        <li>A single music album can have at least how many songs and at most how many songs?</li>
+        <li>A single song can be on at least how many albums and at most how many albums?</li>
+        <li>A single music album can have at least how many artists and at most how many artists?</li>
+        <li>A single artist can have at least how many albums and at most how many albums?</li>
+      </ol>
+    </section>
+    
+    <section>
+      <h3>E-R Diagram</h3>
+      <div class="override"><a href="../../images/diagram3.png" target="_blank" aria-label="Image opens in new window"><img src="../../images/diagram3.png" alt="Diagram III E-R Diagram" style="max-height: 550px"/></a>
+      <p style="text-align: center">(Clicking on the flowchart will open it in a new window.)</p>
+    </section>
+  </div>
+  </div>
+
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../reveal.js/js/reveal.js"></script>
+  <script src="../../js/slides.js"></script>
+</body>
+</html>
