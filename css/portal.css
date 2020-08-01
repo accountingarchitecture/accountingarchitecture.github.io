@@ -392,7 +392,7 @@
       margin-right: auto;
     }
     #logo > img {
-      max-height: 35px;
+      max-height: 25px;
       margin-top: 5px;
     }
     h1 {
@@ -444,10 +444,6 @@
     }
     #branding {
       margin-left: 12px;
-    }
-    #logo > img {
-      max-height: 25px;
-      margin-top: 5px;
     }
     h1 {
       font-size: 14px;
