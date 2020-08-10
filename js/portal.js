@@ -282,11 +282,13 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/information.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
       {"label":"Classification", "href":"supplement/assignments/classification.html"},
+      {"label":"Flowchart Drawing", "href":"supplement/assignments/flowchart-drawing.html"},
       {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Classification", "deadline":"6"},
+      {"deliverable":"Flowchart Drawing", "deadline":"6"},
     ],
   },
   ],
@@ -296,16 +298,14 @@ var myModules = [
     "nav":[
       {"label":"Lecture", "href":"lectures/hardware.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
-      {"label":"Flowchart Drawing", "href":"supplement/assignments/flowchart-drawing.html"},
       {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
       {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"1"},
-      {"deliverable":"Flowchart Drawing", "deadline":"4"},
-      {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
-      {"deliverable":"Last Appointment", "deadline":"5", "time":"22.00"},
-      {"deliverable":"Exam End", "deadline":"5"},
+      {"deliverable":"Exam Start", "deadline":"3", "time":"10.00"},
+      {"deliverable":"Last Appointment", "deadline":"4", "time":"22.00"},
+      {"deliverable":"Exam End", "deadline":"4"},
     ],
   },
   ],
@@ -381,8 +381,8 @@ var myModules = [
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
-      {"deliverable":"Last Appointment", "deadline":"5", "time":"22.00"},
-      {"deliverable":"Exam End", "deadline":"5"},
+      {"deliverable":"Last Appointment", "deadline":"6", "time":"22.00"},
+      {"deliverable":"Exam End", "deadline":"6"},
       {"deliverable":"SQL Tutorial", "deadline":"6"},
     ],
   },
@@ -446,7 +446,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"November 16, 2020", "label":"Final Exam", "topics":[
+  {"date":"November 18, 2020", "label":"Final Exam", "topics":[
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
@@ -457,7 +457,7 @@ var myModules = [
       {"deliverable":"Exam Start", "deadline":"0", "time":"10.00"},
       {"deliverable":"Last Appointment", "deadline":"0", "time":"22.00"},
       {"deliverable":"Exam End", "deadline":"0"},
-      {"deliverable":"Final Homework", "deadline":"2"},
+      {"deliverable":"Final Homework", "deadline":"0"},
     ],
   },
   ],
