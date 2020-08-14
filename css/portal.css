@@ -133,7 +133,7 @@
   }
   #logo > img {
     max-height: 50px;
-    margin-top: 5px;
+    margin: 5px 5px 0 5px;
   }
   #menu-links {
     -webkit-flex: 0 0 auto;
