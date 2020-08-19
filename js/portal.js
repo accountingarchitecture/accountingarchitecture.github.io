@@ -377,6 +377,7 @@ var myModules = [
       {"label":"Article", "href":"supplement/readings/risk-and-control.pdf", "filetype":"PDF"},
       {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
       {"label":"SQL Tutorial", "href":"supplement/assignments/sql-tutorial.html"},
+      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -395,6 +396,7 @@ var myModules = [
       {"label":"Article", "href":"https://www.bbc.com/news/technology-47974583"},
       {"label":"Password Security", "href":"supplement/assignments/password-security.html"},
       {"label":"DB Queries", "href":"supplement/assignments/database-queries.html"},
+      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -410,10 +412,12 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
       {"label":"FERPA Tutorial", "href":"supplement/assignments/ferpa-tutorial.html"},
+      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"FERPA Tutorial", "deadline":"6", "dst":"end"},
+      {"deliverable":"Tech Report", "deadline":"6", "dst":"end"},
     ],
   },
   ],
