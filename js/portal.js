@@ -349,6 +349,7 @@ var myModules = [
       {"label":"Linux Storage", "href":"supplement/assignments/linux-storage.html"},
     ],
     "due":[
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"E-R Diagrams", "deadline":"6"},
       {"deliverable":"Linux Storage", "deadline":"6"},
@@ -364,6 +365,7 @@ var myModules = [
       {"label":"DB Installation", "href":"supplement/assignments/database-installation.html"},
     ],
     "due":[
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"DB Installation", "deadline":"6"},
     ],
@@ -399,6 +401,7 @@ var myModules = [
       {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
     ],
     "due":[
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Password Security", "deadline":"6"},
       {"deliverable":"DB Queries", "deadline":"6"},
@@ -415,6 +418,7 @@ var myModules = [
       {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
     ],
     "due":[
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"FERPA Tutorial", "deadline":"6", "dst":"end"},
       {"deliverable":"Tech Report", "deadline":"6", "dst":"end"},
@@ -430,6 +434,7 @@ var myModules = [
       {"label":"Version Control", "href":"supplement/assignments/version-control.html"},
     ],
     "due":[
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Version Control", "deadline":"6"},
     ],
@@ -444,6 +449,7 @@ var myModules = [
       {"label":"Normalization", "href":"supplement/assignments/normalization.html"},
     ],
     "due":[
+      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Normalization", "deadline":"6"},
     ],
