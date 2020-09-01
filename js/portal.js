@@ -283,6 +283,7 @@ var myModules = [
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
       {"label":"Classification", "href":"supplement/assignments/classification.html"},
       {"label":"Flowchart Drawing", "href":"supplement/assignments/flowchart-drawing.html"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
       {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
     ],
     "due":[
@@ -363,6 +364,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/services.html"},
       {"label":"Article", "href":"https://www.oracle.com/applications/erp/what-is-erp.html"},
       {"label":"DB Installation", "href":"supplement/assignments/database-installation.html"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
     ],
     "due":[
       {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
@@ -432,6 +434,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/availability.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
       {"label":"Version Control", "href":"supplement/assignments/version-control.html"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
     ],
     "due":[
       {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
@@ -447,6 +450,7 @@ var myModules = [
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
       {"label":"Article", "href":"supplement/readings/processing-integrity.pdf", "filetype":"PDF"},
       {"label":"Normalization", "href":"supplement/assignments/normalization.html"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
     ],
     "due":[
       {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
