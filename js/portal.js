@@ -15,7 +15,7 @@ function builder(modules) {
             if(!isExam(modules) || (modules[i].topics[j].nav[k].label != "Article" && modules[i].topics[j].nav[k].label != "Exam Prep")) {
               navbuttons += '<a class="button" href="' + modules[i].topics[j].nav[k].href + '" target="_blank" rel="noopener" aria-label="';
               if(modules[i].topics[j].nav[k].hasOwnProperty('filetype')) navbuttons += modules[i].topics[j].nav[k].filetype + ' opens in new window"';
-              else navbuttons += 'aria-label="Website opens in new window"';
+              else navbuttons += 'Website opens in new window"';
               navbuttons += '>' + modules[i].topics[j].nav[k].label + '</a>';
             }
           }
