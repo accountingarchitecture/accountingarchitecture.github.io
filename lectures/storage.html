@@ -127,7 +127,7 @@
 
     <section>
       <h2>Database Components</h2>
-      <p>In a relational database, each table or relation represents an <u><em>entity</em></u>, which is either a person (e.g., Customer or Employee), an asset (e.g., Inventory) or a data object (e.g., Invoice). Rows or records represent instances of an entity (e.g., a specific customer or a specific invoice). Columns or attributes represent characteristics of an entity (e.g., customer name or inventory SKU). Cells represent characteristics of an instance (e.g., the address of a specific employee or the date on a specific invoice).This structure is no different from the structure of a flat file database. However, the strength of a relational database is in the relationships between the database tables. Relationships between tables represent interactions between entities. The relational database model stores data by entity while relating it to data from other entities.</p>
+      <p>In a relational database, each table or relation represents an <u><em>entity</em></u>, which is either a person (e.g., Customer or Employee), an account (e.g., Inventory or Notes Payable) or a data object (e.g., Invoice or Purchase Order). Rows or records represent <u><em>instances</em></u> of an entity (e.g., a specific customer or a specific invoice). Columns or attributes represent characteristics of an entity (e.g., customer name or inventory SKU). Cells represent characteristics of an instance (e.g., the address of a specific employee or the date on a specific invoice). This structure is no different from the structure of a flat file database. However, the strength of a relational database is in the relationships between the database tables. Relationships between tables represent interactions between entities.</p>
     </section>
 
     <section>
@@ -182,7 +182,7 @@
 
     <section>
       <h2>Entity-Relationship Diagrams</h2>
-      <p>The entity-relationship (E-R) diagram is the standard for modeling relational databases. Multiple E-R diagramming conventions exist that present the same data in different ways. The primary components of an E-R diagram are database entities and the relationships between them. A <u><em>relationship</em></u> is a link between entities that can be described as a verb of one entity acting on another (e.g., Customer Has Account or Employee Creates Receiving Report). E-R diagrams can also portray the attributes of each entity.</p>
+      <p>The entity-relationship (E-R) diagram is the standard for modeling relational databases. Multiple E-R diagramming conventions exist that present the same data in different ways. The primary components of an E-R diagram are database entities and the relationships between them. A <u><em>relationship</em></u> is a link between entities that can be described as a verb of one entity acting on another (e.g., Customer Has Account or Employee Creates Receiving Report). E-R diagrams can also portray the attributes of each entity. By convention, entities are capitalized singular nouns (e.g., Customer) and relationships are present tense verbs (e.g., creates).</p>
       <div class="flex-row">
       <div class="flex-item" style="max-width: 50%">E-R Diagram (without Attributes) in Chen Notation</div>
       <div class="override"><img src="../images/simple-chen-er.png" alt="Simple E-R Diagram with 3 Entities in Chen Notation" style="max-height: 250px"/></div>
@@ -190,24 +190,45 @@
     </section>
 
     <section>
-      <h2>Foreign Keys</h2>
-      <p>Because primary keys uniquely identify an instance of an entity, they also serve to link entities together to implement relationships. Creating a relationship between two tables in a relational database involves taking the primary key from the table that represents the acting entity and placing it in the table that represents the entity being acted upon as a <u><em>foreign key</em></u>. A foreign key is a special attribute that can only take values of the primary key it links to, in order to show which instance of one entity relates to which instance of another. For example, Employee might include Employee ID as a primary key, and Sales Order could include Employee ID as a foreign key to identify the employee who initiated the sales order.</p>
+      <h2>Cardinalities</h2>
+      <p>The magnitude of the potential relationships between an instance of one entity and the instances of another is <u><em>cardinality</em></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. Minimum cardinalities can be either zero or one, and they demonstrate the smallest number of instances of one entity a single instance of another entity can act upon. Maximum cardinalities can be either one or many, and they demonstrate the smallest number of instances of one entity a single instance of another entity can act upon. For example, a customer (i.e., one instances of the Customer entity) can create at least (minimum) one and at most (maximum) many sales orders (i.e., instances of the Sales Order entity), and each sales order has at least one and at most one customer.</p>
     </section>
 
     <section>
-      <h2>Cardinalities</h2>
-      <p>The magnitude of the potential relationships between an instance of one entity and the instances of another is <u><em>cardinality</em></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. Minimum cardinalities can be either zero or one, and they demonstrate that an instance of one entity is associated with at least zero instances or at least one instance of another entity . Maximum cardinalities can be either one or many, and they demonstrate that an instance of one entity is associated with at most one instance or at most many instances of another entity. For example, a customer is associated with at least (minimum) one and at most (maximum) many sales, and each sale is associated with at least one and at most one customer.</p>
+      <h2>Cardinality Conventions</h2>
+      <div class="flex-row">
+        <div class="flex-item override" style="max-width: 18%">
+          <div>Chen Notation</div>
+          <img src="../images/simple-chen-card.png" style="max-height: 350px" alt="Sample E-R Diagram with Cardinalities in Chen Notation"/>
+        </div>
+        <div class="flex-item" style="max-width: 65%; margin-left: 20px">
+          <p>E-R diagrams display relationship cardinalities opposite the entity to which the cardinalities refer. For example, each instance of the Carrier entity delivers at least zero shipments and at most many instances of the Shipment entity, whereas each instance of the Shipment entity is delivered by at least one and at most one instance of the Carrier entity. Using common terms, each carrier delivers at least zero and at most many shipments, and each shipment is delivered by exactly one (at least one and at most one) carrier.</p>
+        </div>
+        <div class="flex-item override" style="max-width: 18%">
+          <div>Crow's Foot Notation</div>
+          <img src="../images/simple-crow-card.png" style="max-height: 350px" alt="Sample E-R Diagram with Cardinatilities in Crow's Foot Notation"/>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Which One Is Correct?</h2>
+      <p>When it comes to determining cardinalities, the answer is not always clear. What is the minimum number of sales orders a customer can place? What is the maximum number of carriers that can deliver a single shipment? The purpose of cardinalities is first and foremost to design a database system, so the answer may be governed more by database needs than by reality. A delivery can have multiple carriers, but the database may only need to track the first or last carrier, in which case the maximum cardinality is one, not many. A customer may normally be someone who has already made a purchase, but if the company needs to be able to create a customer account before the customer's first purchase, then the minimum cardinality needs to be zero, not one. Cardinalities should be realistic, and they should support the company's data collection needs.</p>
+    </section>
+
+    <section>
+      <h2>Foreign Keys</h2>
+      <p>Because primary keys uniquely identify an instance of an entity, they also serve to link entities together to implement relationships. Creating a relationship between two tables in a relational database involves taking the primary key from the table that represents the acting entity and placing it in the table that represents the entity being acted upon as a <u><em>foreign key</em></u>. A foreign key is a special attribute that can only take values of the primary key it links to, in order to show which instance of one entity acts upon which instances of the other. For example, the Employee entity might include Employee ID as a primary key. The Employee entity and the Sales Order entity have a relationship because Employee creates Sales Order. The Sales Order would include Employee ID as a foreign key to identify the Employee instance who created the sales order instance.</p>
     </section>
 
     <section>
       <h2>Sample E-R Diagram</h2>
       <div class="flex-row">
-        <div class="flex-item" style="max-width: 80%">
-          <p>This E-R diagram shows entities with attributes and relationships with cardinalities. Each course in the catalog has a unique number and each faculty member a unique ID as primary key [PK]. These primary keys link faculty and catalog entries to specific courses in the schedule through foreign keys [FK]. Schedule has a composite key, so course number is both a primary and a foreign key [PK,FK]. Faculty can teach at least zero and at most many scheduled courses, and each catalog entry can be scheduled at least zero and at most many times. Each scheduled course has at least one and at most one instructor and at least one and at most one catalog reference.</p>
+        <div class="flex-item" style="max-width: 85%">
+          <p>This E-R diagram shows three entities with attributes and relationships for the database of a hypothetical car dealership. Manufacturer builds Car, and Customer purchases Car. The primary key for Manufacturer is Name because car companies have unique names. Manufacturer Name is a foreign key in the Car entity to link each car to its manufacturer. The primary key for Customer is Customer ID. Customer ID is a foreign key in the Car entity to link each car to its purchaser. Each manufacturer builds at least one and at most many cars, and each customer purchases at least one and at most many cars. Each car is built by exactly one manufacturer and has at least zero and at most one buyer.</p>
         </div>
         <div class="flex-item override">
-          <div>Crow's Foot Notation</div>
-          <img src="../images/sample-er.png" style="max-height: 500px" alt="Sample E-R Diagram with 3 Entities in Crow's Foot Notation"/>
+          <img src="../images/sample-er.png" style="max-height: 600px" alt="Sample E-R Diagram with 3 Entities in Crow's Foot Notation"/>
         </div>
       </div>
     </section>
