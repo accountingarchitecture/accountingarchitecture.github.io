@@ -255,12 +255,15 @@
     margin-right: auto;
   }
   .week > .label {
+    -webkit-flex: 1 1 50%;
+    flex: 1 1 50%;
     text-align: left;
-    width: 50%;
   }
   .week > .date {
+    -webkit-flex: 1 1 50%;
+    flex: 1 1 50%;
+    text-align: left;
     text-align: right;
-    width: 50%;
   }
   .topic {
     border-top: 1px solid rgba(0,0,0,.06);
