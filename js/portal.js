@@ -303,6 +303,7 @@ var myModules = [
       {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
     ],
     "due":[
+      {"deliverable":"Exam Review", "deadline":"1", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"1"},
       {"deliverable":"Exam Start", "deadline":"3", "time":"10.00"},
       {"deliverable":"Last Appointment", "deadline":"4", "time":"22.00"},
@@ -384,6 +385,7 @@ var myModules = [
       {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
     ],
     "due":[
+      {"deliverable":"Exam Review", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
       {"deliverable":"Last Appointment", "deadline":"6", "time":"22.00"},
@@ -468,6 +470,7 @@ var myModules = [
       {"label":"Final Homework", "href":"supplement/assignments/final-homework.html"},
     ],
     "due":[
+      {"deliverable":"Exam Review", "deadline":"-2", "time":"12.40"},
       {"deliverable":"Exam Start", "deadline":"0", "time":"10.00"},
       {"deliverable":"Last Appointment", "deadline":"0", "time":"22.00"},
       {"deliverable":"Exam End", "deadline":"0"},
