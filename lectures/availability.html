@@ -90,17 +90,22 @@
 
     <section>
       <h2>Clusters and Backups</h2>
-      <p>In addition to addressing a number of risks introduced by relying on vendors to provide power and network connectivity, redundancy also protects against additional risks solely within the entity's control. A distributed computing cluster, in addition to increasing availability by adding additional computing power, allows alternative servers to take over when one server fails. <u><em>Backups</em></u> create duplicates of data on file and database systems in case storage volumes become corrupted or data becomes unintentionally or nefariously deleted, altered, or locked. Regardless of the size or perceived importance of an information system, data backups are a vital control activity. Different backup techniques exist to create data duplicates to satisfy different needs for <u><em>disaster recovery</em></u> (i.e., restoring data and functionality following a loss of availability).</p>
+      <p>In addition to addressing a number of risks introduced by relying on vendors to provide power and network connectivity, redundancy also protects against additional risks solely within the entity's control. A distributed computing cluster, in addition to increasing availability by adding additional computing power, allows alternative servers to take over when one server fails. <u><em>Backups</em></u> create duplicates of data on file and database systems in case storage volumes become corrupted or data becomes unintentionally or nefariously deleted, altered, or locked. Regardless of the size or perceived importance of an information system, data backups are a vital control activity. Different backup techniques exist to create data duplicates to satisfy different needs for disaster recovery (i.e., restoring data and functionality following a loss of availability).</p>
     </section>
 
     <section>
-      <h2>Back Me Up</h2>
+      <h2>Back It Up</h2>
       <p>Two common backup methods are full and incremental. <u><em>Full backups</em></u> create a complete copy of all data during each backup. As a result, each subsequent backup contains the data stored in all earlier backups. Because it is generally good practice to keep more than one backup (e.g., three weeks of daily backups) full backups can quickly become infeasibly large, and backing up a large data volume can take a long time. <u><em>Incremental backups</em></u> only store the changes since the previous backup, also called deltas. Backing up deltas takes less time than backing up an entire volume, but in order to restore an entire incremental backup, it is necessary to restore every delta since the beginning of time. The restoration process can become infeasibly time-consuming.</p>
     </section>
 
     <section>
       <h2>Easier is not Better</h2>
       <p>One option for reducing the size of full backups or the restoration time of incremental backups is to decrease the frequency of backups (e.g., once a week, instead of once a day). The problem with this option is that the likelihood of data loss will not decrease, but the exposure to a loss will increase, perhaps to an unacceptable level. For example, if the current policy is daily backups and a storage volume fails immediately before that day's backup, at most 24 hours worth of data is irreplaceable. If that policy changes to weekly backups and a storage volume fails immediately before that week's backup, as much as 168 hours of data is lost! For a large company, that may be hundreds of millions of database records. The solution to more efficient disaster recovery should not be a riskier backup plan.</p>
+    </section>
+
+    <section>
+      <h2>One Thing Internal Auditors Do</h2>
+      <p>The level of acceptable risk from data loss and the resulting backup plan should not be determined by the employees responsible for making the backups. Instead, the backup plan should be part of a company's <u><em>disaster recovery plan</em></u> (DRP) or <u><em>business continuity plan</em></u> (BCP). These plans detail how to maintain an acceptable level of business operations during a disaster (e.g., natural disaster, network outage, fire, etc) and how to return to full operations after a disaster. Internal auditors are responsible for ensuring that BCPs and DRPs are designed to avoid unacceptably high levels of risk, and they are also responsible for testing these plans to ensure that they are up to date and would function as intended in case of a real emergency.</p>
     </section>
 
     <section>
