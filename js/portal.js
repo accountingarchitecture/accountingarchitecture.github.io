@@ -229,15 +229,15 @@ document.getElementById('content').addEventListener('click', function(e) {
 
 // Content
 var myModules = [
-  {"date":"August 17, 2020", "topics":[
+  {"date":"January 19, 2021", "topics":[
   {"title":"Getting Started",
     "nav":[
-      {"label":"Syllabus", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/"},
-      {"label":"Email Policy", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#email"},
-      {"label":"Academic Integrity", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#integrity"},
+      {"label":"Syllabus", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/"},
+      {"label":"Email Policy", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#email"},
+      {"label":"Academic Integrity", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#integrity"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"0"},
+      {"deliverable":"Quiz", "deadline":"1"},
     ],
   },
   {"title":"Professionalism",
@@ -247,13 +247,13 @@ var myModules = [
       {"label":"Professional Email", "href":"supplement/assignments/professional-email.html"},
     ],
     "due":[
-      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Quiz", "deadline":"3"},
       {"deliverable":"Professional Email", "deadline":"5"},
     ],
   },
   ],
   },
-  {"date":"August 24, 2020", "topics":[
+  {"date":"January 25, 2021", "topics":[
   {"title":"Accounting Architecture",
     "nav":[
       {"label":"Lecture", "href":"lectures/accounting-architecture.html"},
@@ -276,15 +276,15 @@ var myModules = [
   },
   ],
   },
-  {"date":"August 31, 2020", "topics":[
+  {"date":"February 1, 2021", "topics":[
   {"title":"Information",
     "nav":[
       {"label":"Lecture", "href":"lectures/information.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-draining-the-data-swamp/"},
       {"label":"Classification", "href":"supplement/assignments/classification.html"},
       {"label":"Flowchart Drawing", "href":"supplement/assignments/flowchart-drawing.html"},
-      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
-      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#proctoru"},
+      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#ai-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -294,31 +294,30 @@ var myModules = [
   },
   ],
   },
-  {"date":"September 9, 2020", "topics":[
+  {"date":"February 8, 2021", "topics":[
   {"title":"Hardware",
     "nav":[
       {"label":"Lecture", "href":"lectures/hardware.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2016/11/should-cios-have-technology-background"},
-      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
-      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#proctoru"},
+      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#ai-report"},
     ],
     "due":[
-      {"deliverable":"Exam Review", "deadline":"1", "time":"12.40"},
-      {"deliverable":"Quiz", "deadline":"1"},
-      {"deliverable":"Exam Start", "deadline":"3", "time":"10.00"},
-      {"deliverable":"Last Appointment", "deadline":"4", "time":"22.00"},
-      {"deliverable":"Exam End", "deadline":"4"},
+      {"deliverable":"Quiz", "deadline":"2"},
+      {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
+      {"deliverable":"Last Appointment", "deadline":"6", "time":"22.00"},
+      {"deliverable":"Exam End", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"September 14, 2020", "topics":[
+  {"date":"February 15, 2021", "topics":[
   {"title":"Software: Open Source",
     "nav":[
       {"label":"Lecture", "href":"lectures/open-source.html"},
       {"label":"Article", "href":"https://enterprisersproject.com/article/2019/4/advantages-of-open-source-5-stats"},
       {"label":"Open Solutions", "href":"supplement/assignments/open-solutions.html"},
-      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#ai-report"},
+      {"label":"AI Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#ai-report"},
     ],
     "due":[
       {"deliverable":"Quiz", "deadline":"2"},
@@ -328,7 +327,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"September 21, 2020", "topics":[
+  {"date":"February 22, 2021", "topics":[
   {"title":"Software: Operating Systems",
     "nav":[
       {"label":"Lecture", "href":"lectures/operating-systems.html"},
@@ -342,7 +341,7 @@ var myModules = [
   },
   ],
   },
-  {"date":"September 28, 2020", "topics":[
+  {"date":"March 1, 2021", "topics":[
   {"title":"Storage",
     "nav":[
       {"label":"Lecture", "href":"lectures/storage.html"},
@@ -351,7 +350,6 @@ var myModules = [
       {"label":"Linux Storage", "href":"supplement/assignments/linux-storage.html"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"E-R Diagrams", "deadline":"6"},
       {"deliverable":"Linux Storage", "deadline":"6"},
@@ -359,33 +357,31 @@ var myModules = [
   },
   ],
   },
-  {"date":"October 5, 2020", "topics":[
+  {"date":"March 10, 2021", "topics":[
   {"title":"Services",
     "nav":[
       {"label":"Lecture", "href":"lectures/services.html"},
       {"label":"Article", "href":"https://www.oracle.com/applications/erp/what-is-erp.html"},
       {"label":"DB Installation", "href":"supplement/assignments/database-installation.html"},
-      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#proctoru"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
-      {"deliverable":"DB Installation", "deadline":"6"},
+      {"deliverable":"DB Installation", "deadline":"4", "dst":"start"},
     ],
   },
   ],
   },
-  {"date":"October 12, 2020", "topics":[
+  {"date":"March 15, 2021", "topics":[
   {"title":"Risk &amp; Control",
     "nav":[
       {"label":"Lecture", "href":"lectures/risk-and-control.html"},
       {"label":"Article", "href":"supplement/readings/risk-and-control.pdf", "filetype":"PDF"},
-      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#proctoru"},
       {"label":"SQL Tutorial", "href":"supplement/assignments/sql-tutorial.html"},
-      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
+      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#tech-report"},
     ],
     "due":[
-      {"deliverable":"Exam Review", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Exam Start", "deadline":"5", "time":"10.00"},
       {"deliverable":"Last Appointment", "deadline":"6", "time":"22.00"},
@@ -395,17 +391,16 @@ var myModules = [
   },
   ],
   },
-  {"date":"October 19, 2020", "topics":[
+  {"date":"March 22, 2021", "topics":[
   {"title":"Security",
     "nav":[
       {"label":"Lecture", "href":"lectures/security.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/technology-47974583"},
       {"label":"Password Security", "href":"supplement/assignments/password-security.html"},
       {"label":"DB Queries", "href":"supplement/assignments/database-queries.html"},
-      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
+      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#tech-report"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Password Security", "deadline":"6"},
       {"deliverable":"DB Queries", "deadline":"6"},
@@ -413,68 +408,64 @@ var myModules = [
   },
   ],
   },
-  {"date":"October 26, 2020", "topics":[
+  {"date":"March 29, 2021", "topics":[
   {"title":"Confidentiality &amp; Privacy",
     "nav":[
       {"label":"Lecture", "href":"lectures/confidentiality-and-privacy.html"},
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/july-2018-blockchain-disruption-and-opportunity/"},
       {"label":"FERPA Tutorial", "href":"supplement/assignments/ferpa-tutorial.html"},
-      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#tech-report"},
+      {"label":"Tech Report Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#tech-report"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
-      {"deliverable":"FERPA Tutorial", "deadline":"6", "dst":"end"},
-      {"deliverable":"Tech Report", "deadline":"6", "dst":"end"},
+      {"deliverable":"FERPA Tutorial", "deadline":"6"},
+      {"deliverable":"Tech Report", "deadline":"9"},
     ],
   },
   ],
   },
-  {"date":"November 2, 2020", "topics":[
+  {"date":"April 12, 2021", "topics":[
   {"title":"Availability",
     "nav":[
       {"label":"Lecture", "href":"lectures/availability.html"},
       {"label":"Article", "href":"https://www.bbc.com/news/business-46862214"},
       {"label":"Version Control", "href":"supplement/assignments/version-control.html"},
-      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#proctoru"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
       {"deliverable":"Version Control", "deadline":"6"},
     ],
   },
   ],
   },
-  {"date":"November 9, 2020", "topics":[
+  {"date":"April 19, 2021", "topics":[
   {"title":"Processing Integrity",
     "nav":[
       {"label":"Lecture", "href":"lectures/processing-integrity.html"},
       {"label":"Article", "href":"supplement/readings/processing-integrity.pdf", "filetype":"PDF"},
       {"label":"Normalization", "href":"supplement/assignments/normalization.html"},
-      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#proctoru"},
     ],
     "due":[
-      {"deliverable":"Presentations", "deadline":"2", "time":"12.40"},
       {"deliverable":"Quiz", "deadline":"2"},
-      {"deliverable":"Normalization", "deadline":"6"},
+      {"deliverable":"Normalization", "deadline":"8"},
     ],
   },
   ],
   },
-  {"date":"November 18, 2020", "label":"Final Exam", "topics":[
+  {"date":"April 30, 2021", "label":"Final Exam", "topics":[
   {"title":"Final Exam... and Beyond!",
     "nav":[
       {"label":"Article", "href":"https://sfmagazine.com/post-entry/june-2018-embracing-the-new-world-of-work/"},
-      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-001-2020f/#proctoru"},
+      {"label":"ProctorU Instructions", "href":"https://accountingarchitecture.github.io/syllabi/acct-4020-m50-2021s/#proctoru"},
       {"label":"Final Homework", "href":"supplement/assignments/final-homework.html"},
     ],
     "due":[
-      {"deliverable":"Exam Review", "deadline":"-2", "time":"12.40"},
       {"deliverable":"Exam Start", "deadline":"0", "time":"10.00"},
-      {"deliverable":"Last Appointment", "deadline":"0", "time":"22.00"},
-      {"deliverable":"Exam End", "deadline":"0"},
-      {"deliverable":"Final Homework", "deadline":"0"},
+      {"deliverable":"Last Appointment", "deadline":"6", "time":"22.00"},
+      {"deliverable":"Exam End", "deadline":"6"},
+      {"deliverable":"Final Homework", "deadline":"6"},
     ],
   },
   ],
