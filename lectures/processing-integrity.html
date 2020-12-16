@@ -140,7 +140,7 @@
 
     <section>
       <h2>Repeating Groups</h2>
-      <p>Both partial and transitive dependencies create repeating groups. The values in the field or fields that rely on only part of a composite key in a partial dependency are unnecessarily repeated each time that part of the offending attribute in the composite key repeats. The existence of a composite key is evidence that the individual attributes repeat, and making another attribute dependent on it forces that attribute also to repeat. Similarly, in a transitive dependency, any non-key attribute can, and likely will, repeat in a database table. Any attribute that is dependent on a repeating attribute will also repeat. Partial and transitive dependencies are effectively equivalent; they only differ by whether the offending attribute is part of a key or not. The redundancies from these dependencies cause <u><em>create</em></u>, <u><em>update</em></u>, and <u><em>delete anomalies</em></u>.</p>
+      <p>Both partial and transitive dependencies create <u><em>repeating groups</em></u>. The values in the field or fields that rely on only part of a composite key in a partial dependency are unnecessarily repeated each time that part of the offending attribute in the composite key repeats. The existence of a composite key is evidence that the individual attributes repeat, and making another attribute dependent on it forces that attribute also to repeat. Similarly, in a transitive dependency, any non-key attribute can, and likely will, repeat in a database table. Any attribute that is dependent on a repeating attribute will also repeat. Partial and transitive dependencies are effectively equivalent; they only differ by whether the offending attribute is part of a key or not. The redundancies from these dependencies cause <u><em>create</em></u>, <u><em>update</em></u>, and <u><em>delete anomalies</em></u>.</p>
     </section>
 
     <section>
@@ -234,9 +234,200 @@
     </section>
 
     <section>
+      <h2>How Not to Normalize</h2>
+      <p>Normalization removes harmful redundancies, but not all methods to reduce redundancy are equally positive. Methods to reduce data redundancy must also follow database design best practices. The following Inventory table has redundant vendor information for each inventory item.</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Name</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">0001</div>
+          <div class="table-cell">Spark Plug</div>
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">00X4</div>
+          <div class="table-cell">Distributor Cap</div>
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">0275</div>
+          <div class="table-cell">Drill Bits</div>
+          <div class="table-cell">Remington</div>
+          <div class="table-cell">123 Tool Drive</div>
+          <div class="table-cell">888-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">044C</div>
+          <div class="table-cell">Spark Plug Wires</div>
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">1A76</div>
+          <div class="table-cell">Miter Saw</div>
+          <div class="table-cell">Remington</div>
+          <div class="table-cell">123 Tool Drive</div>
+          <div class="table-cell">888-555-1234</div>
+        </div>
+      </div>
+      <p>One method to remove the repeating group is to convert this Inventory table into a Vendor table with a single record for each vendor and all of its inventory, but is it a viable solution?</p>
+    </section>
+
+    <section>
+      <h2>Raising New Problems</h2>
+      <p>The method of converting the Inventory table with SKU as primary key and vendor details as non-key attributes into a Vendor table with Vendor Name as primary key and inventory details as non-key attributes would look something like the following table.</p>
+      <div class="table" style="font-size: 16px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Vendor Name</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+          <div class="table-cell">0001</div>
+          <div class="table-cell">Spark Plug</div>
+          <div class="table-cell">00X4</div>
+          <div class="table-cell">Distributor Cap</div>
+          <div class="table-cell">044C</div>
+          <div class="table-cell">Spark Plug Wires</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Remington</div>
+          <div class="table-cell">123 Tool Drive</div>
+          <div class="table-cell">888-555-1234</div>
+          <div class="table-cell">0275</div>
+          <div class="table-cell">Drill Bits</div>
+          <div class="table-cell">1A76</div>
+          <div class="table-cell">Miter Saw</div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>
+        </div>
+      </div>
+      <p>Now, no more vendor data is repeated across rows, but each vendor has multiple items. Is it acceptable to duplicate the SKU and Description attributes in a single table? If so, how many copies the columns SKU and Description should this table have?</p>
+    </section>
+
+    <section>
+      <h2>Who's On First?</h2>
+      <p>To answer the first question, an RDBMS <em>cannot</em> accept multiple attributes with the same name. If the same table had multiple columns with the same attribute name, the RDBMS would not know where the store data to or pull data from when one of the columns are referenced. The solution to this problem could be to number each of the columns sequentially resulting in the following table.</p>
+      <div class="table" style="font-size: 16px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Vendor Name</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+          <div class="table-cell" style="font-weight: bold">SKU 1</div>
+          <div class="table-cell" style="font-weight: bold">Description 1</div>
+          <div class="table-cell" style="font-weight: bold">SKU 2</div>
+          <div class="table-cell" style="font-weight: bold">Description 2</div>
+          <div class="table-cell" style="font-weight: bold">SKU 3</div>
+          <div class="table-cell" style="font-weight: bold">Description 3</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+          <div class="table-cell">0001</div>
+          <div class="table-cell">Spark Plug</div>
+          <div class="table-cell">00X4</div>
+          <div class="table-cell">Distributor Cap</div>
+          <div class="table-cell">044C</div>
+          <div class="table-cell">Spark Plug Wires</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Remington</div>
+          <div class="table-cell">123 Tool Drive</div>
+          <div class="table-cell">888-555-1234</div>
+          <div class="table-cell">0275</div>
+          <div class="table-cell">Drill Bits</div>
+          <div class="table-cell">1A76</div>
+          <div class="table-cell">Miter Saw</div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>
+        </div>
+      </div>
+      <p>In this table, each column has a unique name. However, the second question still remains. How many columns does this table need?</p>
+    </section>
+
+    <section>
+      <h2>Planning for the Future</h2>
+      <p>The two vendors in this table each have different amounts of inventory. The first vendor has three inventory items and the second has two. If the table includes three copies of the SKU and Description column, then the table is just the right length for the first record. The table is too long for the second record, and the table would be too short for a record for a future vendor carrying more than three inventory items. Inconsistent record length is not a best practice for relational database design, so having blank fields for SKU 3 and Description 3 for the second vendor is a problem.  Not being able to add all of the inventory items for a future vendor who carries more than three items is a really big problem. (As an aside, the ability to accommodate inconsistent record length is one benefit of NoSQL databases, especially column stores.)</p>
+    </section>
+
+    <section>
+      <h2>One Size Fits All</h2>
+      <p>It is not feasible to add more SKU and Description columns after designing the database in order to accommodate vendors with higher numbers of inventory items. It is also not best practice to simply include the largest number of columns that might be necessary when first designing the database because the resulting table would be too long for most or all records. Besides, how is it possible to know how many columns will be necessary? Is 10 enough? How about 100? Or, is it 1,000? The only solution to the problem of designing a database that includes vendors with varying numbers of inventory items is to let each inventory item be its own row. Then, it will be possible to add or subtract rows of inventory items at any point.</p>
+    </section>
+
+    <section>
+      <h2>How to Normalize</h2>
+      <p>If the only solution is to let each inventory item be its own row, then the database must have an Inventory table.</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Name</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">0001</div>
+          <div class="table-cell">Spark Plug</div>
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">00X4</div>
+          <div class="table-cell">Distributor Cap</div>
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">0275</div>
+          <div class="table-cell">Drill Bits</div>
+          <div class="table-cell">Remington</div>
+          <div class="table-cell">123 Tool Drive</div>
+          <div class="table-cell">888-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">044C</div>
+          <div class="table-cell">Spark Plug Wires</div>
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">1A76</div>
+          <div class="table-cell">Miter Saw</div>
+          <div class="table-cell">Remington</div>
+          <div class="table-cell">123 Tool Drive</div>
+          <div class="table-cell">888-555-1234</div>
+        </div>
+      </div>
+      <p>However, this table reintroduces the same problem of repeating vendor groups. The solution does not involve converting the Inventory table with non-key vendor attributes into a Vendor table with non-key inventory attributes. Instead, the solution is to separate the current Inventory table into multiple tables, one for each database entity.</p>
+    </section>
+
+    <section>
       <h2>Split</h2>
-      <p>The anomalies is this Inventory table occur because of the decision to store inventory and vendor information together. Normalization splits the original table into two with Vendor Name as the primary key of the newly created Vendor table and a foreign key in the Inventory table. Creating, updating, and deleting vendor data becomes independent of the data in Inventory table:</p>
-      <p></p>
+      <p>The anomalies is this Inventory table occur because of the decision to store inventory and vendor information together. Normalization is the process of splitting tables with multiple entities into multiple tables, each with a single entity. Here, normalization splits the original table into an Inventory table with inventory attributes and a Vendor table with vendor attributes.</p>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">SKU</div>
@@ -247,22 +438,168 @@
         </div>
       </div>
       <p style="text-align: center; font-size: 65px; margin-top: 0; margin-bottom: 0">&#8681;</p>
-          <div>Inventory Table</div>
-          <div class="table" style="margin-bottom: 20px">
-            <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-              <div class="table-cell" style="font-weight: bold">SKU</div>
-              <div class="table-cell" style="font-weight: bold">Description</div>
-              <div class="table-cell" style="font-weight: bold">Vendor Name</div>
-            </div>
-          </div>
-          <div>Vendor Table</div>
-          <div class="table">
-            <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
-              <div class="table-cell" style="font-weight: bold">Vendor Name</div>
-              <div class="table-cell" style="font-weight: bold">Vendor Address</div>
-              <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
-            </div>
-          </div>
+      <div>Inventory Table</div>
+      <div class="table" style="margin-bottom: 20px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+        </div>
+      </div>
+      <div>Vendor Table</div>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Vendor Name</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>New Database</h2>
+      <p>Populating these two tables with the data for both vendors and all inventory items results in the following database with SKU and Vendor Name as primary keys for their respective tables.</p>
+      <div>Inventory Table</div>
+      <div class="table" style="margin-bottom: 20px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">0001</div>
+          <div class="table-cell">Spark Plug</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">00X4</div>
+          <div class="table-cell">Distributor Cap</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">0275</div>
+          <div class="table-cell">Drill Bits</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">044C</div>
+          <div class="table-cell">Spark Plug Wires</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">1A76</div>
+          <div class="table-cell">Miter Saw</div>
+        </div>
+      </div>
+      <div>Vendor Table</div>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Vendor Name</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Bosch</div>
+          <div class="table-cell">123 Sparky Way</div>
+          <div class="table-cell">800-555-1234</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Remington</div>
+          <div class="table-cell">123 Tool Drive</div>
+          <div class="table-cell">888-555-1234</div>
+        </div>
+      </div>
+      <p style="text-align: center">Are these tables now normalized?</p>
+    </section>
+
+    <section>
+      <h2>Test the Solution</h2>
+      <p>Whether the new database is normalized (i.e., 3NF) depends on whether the database avoids partial and transitory dependencies, as well as create, update, and delete anomalies. This database has no partial dependencies because neither of the tables has a composite key. The database also has no transitive dependencies because all non-key inventory attributes (i.e., Description) are dependent on the primary key (i.e., SKU) and all non-key vendor attributes (i.e., Vendor Address and Vendor Phone) are dependent on the primary key (i.e., Vendor Name). Because adding a vendor without any inventory items is now feasible, the database has no create anomalies; without any repeating groups, the database has no update anomalies; and deleting an inventory item will never delete vendor data, the database has no delete anomalies.</p>
+    </section>
+
+    <section>
+      <h2>Where Are My Keys?</h2>
+      <p>However, this database still has one problem. The strength of a relational database is the ability to link tables together, but these tables have no links.</p>
+      <div>Inventory Table</div>
+      <div class="table" style="margin-bottom: 20px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+        </div>
+      </div>
+      <div>Vendor Table</div>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Vendor Name</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+        </div>
+      </div>
+      <p>Each inventory item is sold by some vendor, but which inventory item comes from which vendor? The only way to retain that data is to link these two tables using foreign keys. Either the primary key from the Inventory table is included in the Vendor table as a foreign key, or vice versa.</p>
+    </section>
+
+    <section>
+      <h2>Which Way to Go?</h2>
+      <p>It is important to include the correct primary key from one table as a foreign key in the other table. Fortunately, it is not difficult to make the right choice because the answer is embedded in the maximum cardinalities of the relationship between the entities of the two tables. If the relationship is one-to-one, then it does not matter which table's primary key becomes a foreign key in the other table. If the relationship is one-to-many (or many-to-one), then the primary key of the table on the &ldquo;one&rdquo; side becomes a foreign key of the table on the &ldquo;many&rdquo; side. The relationship between Inventory and Vendor is many-to-one. Each inventory item is carried by at most &ldquo;one&rdquo; vendor, and each vendor carries at most &ldquo;many&rdquo; inventory items. As a result, the primary key from the Vendor table becomes a foreign key in the Inventory table.</p>
+    </section>
+
+    <section>
+      <h2>Don't Get It Twisted</h2>
+      <p>Once all keys are in place, the tables are linked so that each inventory item references its respective vendor.</p>
+      <div>Inventory Table</div>
+      <div class="table" style="margin-bottom: 20px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU [PK]</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Name [FK]</div>
+        </div>
+      </div>
+      <div>Vendor Table</div>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Vendor Name [PK]</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+        </div>
+      </div>
+      <p>What happens if the primary key of the Inventory table (SKU) is used as a foreign key in the Vendor table, instead? The Vendor table would need to have one SKU foreign key attribute for each inventory item carried by the vendor. This setup reintroduces the same problem of including all of the data in one single Vendor table with multiple SKU and Description columns.</p>
+    </section>
+
+    <section>
+      <h2>Many to Many</h2>
+      <p>If multiple vendors can supply the same inventory item and each vendor can supply multiple inventory items, then the relationship between the Vendor entity and the Inventory entity is many-to-many, instead of many-to-one. If the relationship is many-to-many, then there is no immediate solution for picking a primary key to serve as foreign key because there is no &ldquo;one&rdquo; side of the relationship. A <u><em>linking table</em></u> links two tables with a many-to-many relationship together. The primary key from each of the two tables becomes part of a composite primary key in the linking table with one unique record for each vendor-item pair. These two primary keys also represent foreign keys, linking the linking table to each original table.</p>
+    </section>
+
+    <section>
+      <h2>Linking Tables</h2>
+      <p>The Vendor table and the Vendor-Inventory linking table have a many-to-one relationship. Each vendor can have &ldquo;many&rdquo; vendor-inventory pairs, one for each item carried by the vendor; each vendor-inventory pair is only for &ldquo;one&rdquo; vendor. Likewise, each inventory item can have &ldquo;many&rdquo; vendor-inventory pairs, one for each vendor that carries that item; each vendor-inventory pair is for only &ldquo;one&rdquo; inventory item. As a result, the linking table has converted one many-to-many relationship into two one-to-many relationships. The primary keys from each table on the &ldquo;one&rdquo; side (i.e., Vendor and Inventory) become foreign keys on &ldquo;many&rdquo; side (i.e., the Vendor-Inventory linking table). This is why the individual attributes of the composite primary key in the linking table are simultaneously primary keys and foreign keys.</p>
+    </section>
+
+    <section>
+      <h2>Database with Linking Tables</h2>
+      <p>A 3NF database with a many-to-many relationship between the Inventory and Vendor entities comprises three tables with one linkind table.</p>
+      <div>Inventory Table</div>
+      <div class="table" style="margin-bottom: 20px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU [PK]</div>
+          <div class="table-cell" style="font-weight: bold">Description</div>
+        </div>
+      </div>
+      <div>Vendor-Inventory Linking Table</div>
+      <div class="table" style="margin-bottom: 20px">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">SKU [PK/FK]</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Name [PK/FK]</div>
+        </div>
+      </div>
+      <div>Vendor Table</div>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
+          <div class="table-cell" style="font-weight: bold">Vendor Name [PK]</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Address</div>
+          <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
+        </div>
+      </div>
+      <p>The linking table has no other attributes. Would Description, Vendor Address, or Vendor Name be acceptable attributes of the linking table?</p>
+    </section>
+
+    <section>
+      <h2>Partial Dependencies</h2>
+      <p>The repeating vendor groups in the non-normalized database originally resulted from transitive dependencies. Vendor details depended on the non-key attribute Vendor Name. The normalization process did not remove any partial dependencies because no tables had composite keys. Now, the linking table has a composite key, so adding non-key attributes to this table can create new partial dependencies. Since Description only depends on SKU and since Vendor Address and Vendor Phone only depend on Vendor Name, adding any of these to the linking table would introduce partial dependencies to this table. Any non-key attributes in a linking table must depend on both key attributes.</p>
     </section>
 
     <section>
