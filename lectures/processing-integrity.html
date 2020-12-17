@@ -8,13 +8,14 @@
   <meta name="author" content="Joshua G. Coyne, PhD">
   <link rel="icon" href="../images/logo.png" type="image/x-icon" sizes="32x32">
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.01, maximum-scale=1.01, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
-  <link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="../reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/dist/theme/sky.css" id="theme">
 
   <!-- Personalized CSS -->
   <link rel="stylesheet" href="../css/slides.css">
@@ -534,7 +535,7 @@
 
     <section>
       <h2>Which Way to Go?</h2>
-      <p>It is important to include the correct primary key from one table as a foreign key in the other table. Fortunately, it is not difficult to make the right choice because the answer is embedded in the maximum cardinalities of the relationship between the entities of the two tables. If the relationship is one-to-one, then it does not matter which table's primary key becomes a foreign key in the other table. If the relationship is one-to-many (or many-to-one), then the primary key of the table on the &ldquo;one&rdquo; side becomes a foreign key of the table on the &ldquo;many&rdquo; side. The relationship between Inventory and Vendor is many-to-one. Each inventory item is carried by at most &ldquo;one&rdquo; vendor, and each vendor carries at most &ldquo;many&rdquo; inventory items. As a result, the primary key from the Vendor table becomes a foreign key in the Inventory table.</p>
+      <p>It is important to include the correct primary key from one table as a foreign key in the other table. Fortunately, it is not difficult to make the right choice because the answer is embedded in the maximum cardinalities of the relationship between the entities of the two tables. If the relationship is one-to-one, then it does not matter which table's primary key becomes a foreign key in the other table. If the relationship is one-to-many (or many-to-one), then the primary key of the table on the &ldquo;one&rdquo; side becomes a foreign key of the table on the &ldquo;many&rdquo; side. If each inventory item is carried by at most &ldquo;one&rdquo; vendor and each vendor carries at most &ldquo;many&rdquo; inventory items, then the relationship between Inventory and Vendor is many-to-one. The primary key from the Vendor table becomes a foreign key in the Inventory table.</p>
     </section>
 
     <section>
@@ -741,8 +742,7 @@
   </div>
 
   <script src="../js/jquery.min.js"></script>
-  <script src="../reveal.js/js/reveal.js"></script>
+  <script src="../reveal.js/dist/reveal.js"></script>
   <script src="../js/slides.js"></script>
-  <script src="../js/printing.js"></script>
 </body>
 </html>
