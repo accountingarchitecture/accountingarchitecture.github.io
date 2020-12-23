@@ -139,14 +139,14 @@
     <section>
       <h2>First Character</h2>
       <p>Symbolic notation uses nine characters or three triads to identify permissions. Each triad applies to one type of user, first user, then group, then others. However, the symbolic notation string contains ten total characters. The first character identifies the file type. Frequently, this will be a regular file (-), a folder or directory (d), or a link (l) to another regular file or folder, although other file types also exist.</p>
-      <img src="../images/symbolic-notation.png" alt="Permissions in Symbolic Notation"/>
+      <img class="print-centered" src="../images/symbolic-notation.png" alt="Permissions in Symbolic Notation"/>
       <p>This image shows symbolic permissions, as well as user and group for one folder, one link and one regular file. In this case, ubuntu is the name of the owner, and the name of the group is also ubuntu.)</p>
     </section>
 
     <section>
       <h2>Octal Permissions</h2>
       <p>Numeric notation, frequently referred to as octal or octet permissions, uses base-8 notation to report permissions. In this notation, &lsquo;read&rsquo; receives a value of 4, &lsquo;write&rsquo; a value of 2, and &lsquo;execute&rsquo; a value of 1. These are added together to obtain one value for each of three significant digits. The first digit reports user permissions, the second reports group permissions, and the third reports others permissions.</p>
-      <img src="../images/numeric-notation.png" alt="Permissions in Numeric Notation"/>
+      <img class="print-centered" src="../images/numeric-notation.png" alt="Permissions in Numeric Notation"/>
       <p>(This image shows the same files with the permissions as the previous image for purposes of comparing numeric and symbolic notation.)
     </section>
 
@@ -158,7 +158,7 @@
     <section>
       <h2>Sudo</h2>
       <p>A normal user must obtain root privileges in order to alter the system (i.e., edit and delete system files or install applications). In UNIX-like systems, this is often done by prepending &lsquo;sudo&rsquo; to any command that requires elevated privileges. (For example, sudo is only necessary for chown and chmod commands if the user has no write access to the file or folder or its contents.)</p>
-      <div class="override"><a href="http://xkcd.com/license.html" target="_blank" aria-label="Website opens in new window"><img src="https://imgs.xkcd.com/comics/sandwich.png" alt="XKCD"/></a></div>
+      <div class="override"><a href="http://xkcd.com/license.html" target="_blank" aria-label="Website opens in new window"><img  class="print-centered"src="https://imgs.xkcd.com/comics/sandwich.png" alt="XKCD"/></a></div>
     </section>
 
     <section>
@@ -281,7 +281,7 @@
     <section>
       <h2>Security is Everyone's Problem</h2>
       <p>Security is the foundation of the Trust Services framework, and it is the first step toward internal control of an information system. As a wise person once said, &ldquo;No computing environment is invulnerable. The only secure system is one that is not connected to anything, locked in a secure room, and turned off.&rdquo; Because control is necessary to combat risks, security should be everyone's responsibility.</p>
-      <blockquote>Every company should have a team focused on security but it shouldn't end there. Security needs to be the responsibility of everyone.<br> &ndash; George Papayiannis, CTO, Vena Solutions</blockquote>
+      <blockquote class="print-centered">Every company should have a team focused on security but it shouldn't end there. Security needs to be the responsibility of everyone.<br> &ndash; George Papayiannis, CTO, Vena Solutions</blockquote>
     </section>
 
     <section>
@@ -290,7 +290,7 @@
 
     <section>
       <h2>Permission and Ownership Commands</h2>
-      <div class="table">
+      <div class="table print-smaller">
         <div class="table-row" style="background-color: lightgray; font-weight: bold">
           <div class="table-cell">Command</div>
           <div class="table-cell">Function</div>

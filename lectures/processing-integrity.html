@@ -237,7 +237,7 @@
     <section>
       <h2>How Not to Normalize</h2>
       <p>Normalization removes harmful redundancies, but not all methods to reduce redundancy are equally positive. Methods to reduce data redundancy must also follow database design best practices. The following Inventory table has redundant vendor information for each inventory item.</p>
-      <div class="table">
+      <div class="table wide-table">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">SKU</div>
           <div class="table-cell" style="font-weight: bold">Description</div>
@@ -287,7 +287,7 @@
     <section>
       <h2>Raising New Problems</h2>
       <p>The method of converting the Inventory table with SKU as primary key and vendor details as non-key attributes into a Vendor table with Vendor Name as primary key and inventory details as non-key attributes would look something like the following table.</p>
-      <div class="table" style="font-size: 16px">
+      <div class="table wide-table" style="font-size: 16px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Vendor Name</div>
           <div class="table-cell" style="font-weight: bold">Vendor Address</div>
@@ -310,7 +310,7 @@
           <div class="table-cell">044C</div>
           <div class="table-cell">Spark Plug Wires</div>
         </div>
-        <div class="table-row" style="background-color: white">
+        <div class="table-row" style="background-color: lightgray">
           <div class="table-cell">Remington</div>
           <div class="table-cell">123 Tool Drive</div>
           <div class="table-cell">888-555-1234</div>
@@ -328,7 +328,7 @@
     <section>
       <h2>Who's On First?</h2>
       <p>To answer the first question, an RDBMS <em>cannot</em> accept multiple attributes with the same name. If the same table had multiple columns with the same attribute name, the RDBMS would not know where the store data to or pull data from when one of the columns are referenced. The solution to this problem could be to number each of the columns sequentially resulting in the following table.</p>
-      <div class="table" style="font-size: 16px">
+      <div class="table wide-table" style="font-size: 16px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Vendor Name</div>
           <div class="table-cell" style="font-weight: bold">Vendor Address</div>
@@ -351,7 +351,7 @@
           <div class="table-cell">044C</div>
           <div class="table-cell">Spark Plug Wires</div>
         </div>
-        <div class="table-row" style="background-color: white">
+        <div class="table-row" style="background-color: lightgray">
           <div class="table-cell">Remington</div>
           <div class="table-cell">123 Tool Drive</div>
           <div class="table-cell">888-555-1234</div>
@@ -438,15 +438,15 @@
           <div class="table-cell" style="font-weight: bold">Vendor Phone</div>
         </div>
       </div>
-      <p style="text-align: center; font-size: 65px; margin-top: 0; margin-bottom: 0">&#8681;</p>
-      <div>Inventory Table</div>
+      <p class="print-centered" style="text-align: center; font-size: 65px; margin-top: 0; margin-bottom: 0">&#8681;</p>
+      <div class="print-centered">Inventory Table</div>
       <div class="table" style="margin-bottom: 20px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">SKU</div>
           <div class="table-cell" style="font-weight: bold">Description</div>
         </div>
       </div>
-      <div>Vendor Table</div>
+      <div class="print-centered">Vendor Table</div>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Vendor Name</div>
@@ -459,7 +459,7 @@
     <section>
       <h2>New Database</h2>
       <p>Populating these two tables with the data for both vendors and all inventory items results in the following database with SKU and Vendor Name as primary keys for their respective tables.</p>
-      <div>Inventory Table</div>
+      <div class="print-centered">Inventory Table</div>
       <div class="table" style="margin-bottom: 20px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">SKU</div>
@@ -486,7 +486,7 @@
           <div class="table-cell">Miter Saw</div>
         </div>
       </div>
-      <div>Vendor Table</div>
+      <div class="print-centered">Vendor Table</div>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Vendor Name</div>
@@ -504,7 +504,7 @@
           <div class="table-cell">888-555-1234</div>
         </div>
       </div>
-      <p style="text-align: center">Are these tables now normalized?</p>
+      <p class="print-centered" style="text-align: center">Are these tables now normalized?</p>
     </section>
 
     <section>
@@ -515,14 +515,14 @@
     <section>
       <h2>Where Are My Keys?</h2>
       <p>However, this database still has one problem. The strength of a relational database is the ability to link tables together, but these tables have no links.</p>
-      <div>Inventory Table</div>
+      <div class="print-centered">Inventory Table</div>
       <div class="table" style="margin-bottom: 20px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">SKU</div>
           <div class="table-cell" style="font-weight: bold">Description</div>
         </div>
       </div>
-      <div>Vendor Table</div>
+      <div class="print-centered">Vendor Table</div>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Vendor Name</div>
@@ -541,7 +541,7 @@
     <section>
       <h2>Don't Get It Twisted</h2>
       <p>Once all keys are in place, the tables are linked so that each inventory item references its respective vendor.</p>
-      <div>Inventory Table</div>
+      <div class="print-centered">Inventory Table</div>
       <div class="table" style="margin-bottom: 20px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">SKU [PK]</div>
@@ -549,7 +549,7 @@
           <div class="table-cell" style="font-weight: bold">Vendor Name [FK]</div>
         </div>
       </div>
-      <div>Vendor Table</div>
+      <div class="print-centered">Vendor Table</div>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Vendor Name [PK]</div>
@@ -573,21 +573,21 @@
     <section>
       <h2>Database with Linking Tables</h2>
       <p>A 3NF database with a many-to-many relationship between the Inventory and Vendor entities comprises three tables with one linkind table.</p>
-      <div>Inventory Table</div>
+      <div class="print-centered">Inventory Table</div>
       <div class="table" style="margin-bottom: 20px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">SKU [PK]</div>
           <div class="table-cell" style="font-weight: bold">Description</div>
         </div>
       </div>
-      <div>Vendor-Inventory Linking Table</div>
+      <div class="print-centered">Vendor-Inventory Linking Table</div>
       <div class="table" style="margin-bottom: 20px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">SKU [PK/FK]</div>
           <div class="table-cell" style="font-weight: bold">Vendor Name [PK/FK]</div>
         </div>
       </div>
-      <div>Vendor Table</div>
+      <div class="print-centered">Vendor Table</div>
       <div class="table">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Vendor Name [PK]</div>

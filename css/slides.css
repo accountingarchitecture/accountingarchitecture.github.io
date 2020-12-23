@@ -15,6 +15,10 @@
   padding: 0 30px;
   text-align: left;
 }
+.reveal .wide-table .table-cell {
+  padding: 0 15px;
+}
+
 
 /***** Override Default Settings *****/
 .reveal {
@@ -50,11 +54,22 @@
 .reveal .slides ul, .reveal .slides ol, .reveal .slides dl {
   display: block;
 }
+html:not(.print-pdf) ul, html:not(.print-pdf) ol, html:not(.print-pdf) dl {
+  margin: 0 0 0 1em;
+}
 .reveal .slides h1 {
   font-size: 2.11em;
 }
 .reveal .slides h2 {
   font-size: 1.55em;
+}
+html:not{.print-pdf} .reveal .print-centered {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+html:not{.print-pdf} .reveal .print-right {
+  text-align: right !important;
 }
 
 /***** Flexbox Containers *****/
@@ -138,3 +153,32 @@
   font-variant: small-caps;
 }
 
+/********** Printing **********/
+@media print {
+  html:not(.print-pdf) h1, html:not(.print-pdf) h2 {
+    text-align: center;
+  }
+  html:not(.print-pdf) h1 {
+    font-size: 2.11em !important;
+  }
+  html:not(.print-pdf) .reveal section img {
+    border: 0;
+  }
+  html:not(.print-pdf) .reveal blockquote {
+    font-size: 20pt !important;
+  }
+  html:not(.print-pdf) .reveal dl {
+    font-size: 20pt !important;
+  }
+  html:not(.print-pdf) .reveal a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  html:not(.print-pdf) .reveal .print-smaller, html:not(.print-pdf) .reveal .print-smaller li {
+    font-size: 13.5pt !important;
+  }
+  html:not(.print-pdf) .reveal p, html:not(.print-pdf) .reveal ul, html:not(.print-pdf) .reveal ol, html:not(.print-pdf) .reveal dl {
+    margin-bottom: 10px;
+  }
+}
