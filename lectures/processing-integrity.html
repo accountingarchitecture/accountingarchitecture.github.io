@@ -322,12 +322,12 @@
           <div class="table-cell"></div>
         </div>
       </div>
-      <p>Now, no more vendor data is repeated across rows, but each vendor has multiple items. Is it acceptable to duplicate the SKU and Description attributes in a single table? If so, how many copies the columns SKU and Description should this table have?</p>
+      <p>Now, no more vendor data is repeated across rows, but each vendor has multiple items. Is it acceptable to duplicate the SKU and Description attributes in a single table? If so, how many copies of the columns SKU and Description should this table have?</p>
     </section>
 
     <section>
       <h2>Who's On First?</h2>
-      <p>To answer the first question, an RDBMS <em>cannot</em> accept multiple attributes with the same name. If the same table had multiple columns with the same attribute name, the RDBMS would not know where the store data to or pull data from when one of the columns are referenced. The solution to this problem could be to number each of the columns sequentially resulting in the following table.</p>
+      <p>To answer the first question, an RDBMS <em>cannot</em> accept multiple attributes with the same name. If the same table had multiple columns with the same attribute name, the RDBMS would not know where to store data or pull data when one of the columns is referenced. The solution to this problem could be to number each of the columns sequentially resulting in the following table.</p>
       <div class="table wide-table" style="font-size: 16px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
           <div class="table-cell" style="font-weight: bold">Vendor Name</div>
@@ -509,7 +509,7 @@
 
     <section>
       <h2>Test the Solution</h2>
-      <p>Whether the new database is normalized (i.e., 3NF) depends on whether the database avoids partial and transitory dependencies, as well as create, update, and delete anomalies. This database has no partial dependencies because neither of the tables has a composite key. The database also has no transitive dependencies because all non-key inventory attributes (i.e., Description) are dependent on the primary key (i.e., SKU) and all non-key vendor attributes (i.e., Vendor Address and Vendor Phone) are dependent on the primary key (i.e., Vendor Name). Because adding a vendor without any inventory items is now feasible, the database has no create anomalies; without any repeating groups, the database has no update anomalies; and deleting an inventory item will never delete vendor data, the database has no delete anomalies.</p>
+      <p>Whether the new database is normalized (i.e., 3NF) depends on whether the database avoids partial and transitory dependencies, as well as create, update, and delete anomalies. This database has no partial dependencies because neither of the tables has a composite key. The database also has no transitive dependencies because all non-key inventory attributes (i.e., Description) are dependent on the primary key (i.e., SKU) and all non-key vendor attributes (i.e., Vendor Address and Vendor Phone) are dependent on the primary key (i.e., Vendor Name). Because adding a vendor without any inventory items is now feasible, the database has no create anomalies; without any repeating groups, the database has no update anomalies; and since deleting an inventory item will never delete vendor data, the database has no delete anomalies.</p>
     </section>
 
     <section>
@@ -572,7 +572,7 @@
 
     <section>
       <h2>Database with Linking Tables</h2>
-      <p>A 3NF database with a many-to-many relationship between the Inventory and Vendor entities comprises three tables with one linkind table.</p>
+      <p>A 3NF database with a many-to-many relationship between the Inventory and Vendor entities comprises three tables with one linking table.</p>
       <div class="print-centered">Inventory Table</div>
       <div class="table" style="margin-bottom: 20px">
         <div class="table-row" style="background-color: lightgray; border-bottom: 1px solid black">
