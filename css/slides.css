@@ -71,6 +71,9 @@ html:not{.print-pdf} .reveal .print-centered {
 html:not{.print-pdf} .reveal .print-right {
   text-align: right !important;
 }
+.reveal .print-iframe {
+  display: none;
+}
 
 /***** Flexbox Containers *****/
 .reveal .flex-column {
@@ -180,5 +183,11 @@ html:not{.print-pdf} .reveal .print-right {
   }
   html:not(.print-pdf) .reveal p, html:not(.print-pdf) .reveal ul, html:not(.print-pdf) .reveal ol, html:not(.print-pdf) .reveal dl {
     margin-bottom: 10px;
+  }
+  .reveal .screen-iframe {
+    display: none;
+  }
+  .reveal .print-iframe {
+    display: inline;
   }
 }
