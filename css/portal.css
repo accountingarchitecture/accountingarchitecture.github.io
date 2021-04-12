@@ -154,14 +154,12 @@
     font-size: 15px;
     line-height: 25px;
     cursor: pointer;
-    padding: 5px 30px;
-    color: lightgray;
-  }
-  .menu-item:hover {
+    margin: 5px 30px;
     color: #404040;
   }
-  .menu-item.current {
-    color: inherit;
+  .menu-item:hover, .menu-item.current {
+    border-bottom: 2px solid #3292aa;
+    margin-top: 6px;
   }
   #menuicon {
     cursor: pointer;
