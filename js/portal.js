@@ -147,18 +147,24 @@ function isExam(modules) {
 document.getElementById('menu-links').addEventListener('click', function(e) {
   // Keep link to current page highlighted
   menuItem = document.getElementById('menu-links').getElementsByTagName('a');
+  var touched = false;
   for(i = 0; i < menuItem.length; i++) {
-    if(e.target == menuItem[i]) {
-      menuItem[i].className='menu-item current';
-      document.getElementById('sidebar-links').getElementsByTagName('a')[i].className='menu-item current';
-    } else {
-      menuItem[i].className='menu-item';
-      document.getElementById('sidebar-links').getElementsByTagName('a')[i].className='menu-item';
-    }
+    if(e.target == menuItem[i]) touched = true;
   }
-  // Load topics for current page
-  builder(myModules);
-  schedule(myModules);
+  if(Boolean(touched)) {
+    for(i = 0; i < menuItem.length; i++) {
+      if(e.target == menuItem[i]) {
+        menuItem[i].className='menu-item current';
+        document.getElementById('sidebar-links').getElementsByTagName('a')[i].className='menu-item current';
+      } else {
+        menuItem[i].className='menu-item';
+        document.getElementById('sidebar-links').getElementsByTagName('a')[i].className='menu-item';
+      }
+    }
+    // Load topics for current page
+    builder(myModules);
+    schedule(myModules);
+  }
 });
 
 // Open sidebar
