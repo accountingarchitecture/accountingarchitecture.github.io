@@ -113,7 +113,7 @@
     justify-content: space-between;
     -webkit-align-items: center;
     align-items: center;
-    font: 16px/23px Arial, sans-serif;
+    font: 16px/30px Arial, sans-serif;
     font-weight: bold;
     color: black;
     margin-left: auto;
@@ -173,7 +173,7 @@
     width: 14px;
     height: 2px;
     background-color: black;
-    margin: 6px 0;
+    margin: 4px 0;
   }
   .spacer {
     visibility: hidden;
@@ -199,7 +199,8 @@
     cursor: pointer;
     width: 14px;
     padding: 0px 15px;
-    font: 28px/38px Arial, sans-serif;
+    font: 30px/38px Arial, sans-serif;
+    font-weight: bold;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
   #sidebar h2, #sidebar a {
@@ -454,12 +455,14 @@
       font-size: 14px;
     }
   }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 355px) {
+    #menu {
+      line-height: 20px;
+    }
     #logo > img {
       margin-right: 12px;
     }
-    .menuicon {
-      height: 2px;
-      margin: 5px 0;
+    #closeicon {
+      font-weight: initial;
     }
   }
