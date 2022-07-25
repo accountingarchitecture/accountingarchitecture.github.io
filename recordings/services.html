@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Services</title>
+
+  <meta name="author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../images/logo.png" type="image/x-icon" sizes="32x32">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/dist/theme/sky.css" id="theme">
+
+  <!-- Personalized CSS -->
+  <link rel="stylesheet" href="../css/slides.css">
+</head>
+
+<body>
+  <div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>Services</h1>
+    </section>
+
+    <section>
+      <h2>Accounting Architecture</h2>
+      <div class="flex-row">
+        <div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
+        <div class="flex-item" style="max-width: 65%">
+          <p>The Services block of the Technology section of accounting architecture comprises networking and cloud computing. Services rely on the same technologies as the Hardware, Software, and Storage blocks, but in a networked environment. This is the environment in which our connected devices primarily function. The purpose of Services is to share the hardware, software, and storage with multiple users in multiple locations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>A Brief History</h2>
+      <p>Historically, individual computers were <u><em>thin clients</em></u>&mdash;dumb terminals&mdash;that allowed for use of <u><em>server-side</em></u> software run on a centralized server. Server hardware was large and expensive, and in order to use that hardware efficiently, multiple dumb terminals shared the computing power. As processing power became less expensive, manufacturers created personal computers&mdash;<u><em>fat clients</em></u> or smart terminals&mdash;that could function independently using <u><em>client-side</em></u> software. Desktops and laptop computers continue to follow this model, but with the advent of the Internet and the sharp reduction in data transmission costs, we have readopted the original model of servers and thin clients with computing devices that derive their main functionality from Web servers.</p>
+    </section>
+
+    <section>
+      <h2>What is a Cloud?</h2>
+      <p><u><em>Cloud computing</em></u> is the buzz word for the current server-client model, in which all computing devices are connected to the Internet virtually all of the time. Although the term may seem nebulous&mdash;no pun intended&mdash;it simply means that the applications, storage, and processing power used by a computing device are in a remote physical location on one or more servers, instead of on the local device. The cloud computing model is consistent with the current line of thin client hardware, such as smartphones and tablets, but it is inconsistent with continued reliance on high-powered workstations. One explanation for this is that users seem unwilling to abandon client-side applications completely, perhaps out of the desire to have some independence from the Internet. Even mobile device users prefer to have a library of client-side software.</p>
+    </section>
+
+    <section>
+      <h2>Edge Computing</h2>
+      <p>Another reason for the use of high-powered clients is the need for real-time data processing, especially for artificial intelligence. For example, a self-driving car needs to evaluate images of the road in real-time. Sending data to the cloud and waiting for a response would take too long. As a result, manufacturers have begun to increase device processing power by adding AI coprocessors. Local processing, especially local processing with coprocessors, is called <u><em>edge computing</em></u> because it occurs at the <em>edge</em> of the cloud (i.e., on a local device). However, this behavior is simply another cycle in the history of computing. When processing power and storage are expensive, we rely heavily on server-side computing; when processing power and storage becomes less expensive, we revert to client-side, or edge, computing.</p>
+    </section>
+
+    <section>
+      <h2>Server Clusters</h2>
+      <p>Parallel computing involves including multiple CPUs or CPU cores on the same motherboard. This is the standard for most computing devices today. <u><em>Distributed computing</em></u>, on the other hand, involves combining multiple computers together in a network or cluster to share a processing task. Any computer, even a tiny SBC, can play the role of the server in a cloud, but the demands placed on a cloud (e.g., the number of users watching Netflix simultaneously) frequently exceeds the abilities of a single computer. Many clouds are supported by a server cluster, not a single server. Some large clouds are supported by a single server, but in those cases, the single server may be a mainframe.</p>
+    </section>
+
+    <section>
+      <h2>Mainframes</h2>
+      <div class="flex-row">
+        <div class="flex-item override"><img src="../images/mainframe.jpg" alt="Mainframe" style="max-height: 500px"/></div>
+        <div class="flex-item" style="max-width: 60%">
+          <p>In the old server-client model, the servers were called mainframes. Today, mainframes still exist as giant server-rack-sized computers. Mainframes have begun to replace lower-powered servers in larger clouds that utilize hundreds of clustered servers. One mainframe can have the processing power of as many as 200+ individual servers at a fraction of the hardware cost.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Networks</h2>
+      <p>Computing devices access these servers by virtue of networks. <em><u>Local area networks</u></em> (LANs) connect devices in the same geographical location, such as a residence or office, whereas <u><em>wide area networks</em></u> (WANs), such as the Internet, connect devices in different locations. The Internet is the WAN that allows devices to access the World Wide Web, which is the data that is stored on Internet-connected servers in various locations.</p>
+      <p>LANs use <u><em>routers</em></u> and <u><em>switches</em></u> to connect devices to each other with Category 5E and 6 (Ethernet) cables and wireless fidelity (Wi-Fi). <u><em>Modems</em></u>, or radios, connected to Internet service providers (ISP) by coaxial cable, phone lines, satellite, cell towers, and fiber optics, allow devices to connect to a WAN.</p>
+    </section>
+
+    <section>
+      <h2>TCP/IP</h2>
+      <p>The open standard <u><em>Internet protocol suite</em></u> is the set of protocols currently used to allow network devices to communicate with each other. The two most important protocols are the Transmission Control Protocol (TCP) and the Internet Protocol (IP). Together these protocols give the suite its common name: TCP/IP. The Internet Protocol dictates the form of the network address (i.e., IP address) issued to a computer's network interface card (NIC). This IP address can change each time a NIC connects to a network. Each NIC also has a unique media access control (MAC) address, which is essentially the NIC hardware's serial number. This remains the same regardless of the network, although it can be changed (i.e., masked) with the correct software.</p>
+    </section>
+
+    <section>
+      <h2>IPv4</h2>
+      <p>The Internet protocol has two common versions. IPv4 has been the standard since 1983. It uses 4 three-digit numbers, each within the range from 0 to 255, to identify a unique network address (e.g., 192.168.001.010). This allows for just over 4 billion addresses. Because of the drastic increase in network devices, almost all available IPv4 addresses are in use. In order to address this shortage of available addresses, LANs create sub-networks, and devices within a LAN use the same addresses as devices on other LANs. Network Address Translation (NAT) allows all the devices on a LAN to communicate with the Internet using the same WAN address by redirecting network traffic back and forth between devices on the LAN and the WAN.</p>
+    </section>
+
+    <section>
+      <h2>LAN Example</h2>
+      <img class="print-centered" src="../images/lan.png" alt="Two LANs and a WAN"/>
+      <p>This graphic demonstrates the repeated use of IPv4 addresses in a LAN using NAT. Devices H1, H2, and R1 all share the WAN address 128.195.4.119, and H3, H4, and R2 share 128.143.71.21. Each device receives its own LAN address (e.g., R1: 10.0.1.1, H1: 10.0.1.2, and H2: 10.0.1.3).</p>
+    </section>
+
+    <section>
+      <h2>IPv6</h2>
+      <p>NAT resolves some of the immediate issues of the small number of IPv4 addresses, but the problem of address exhaustion remains. On February 3, 2011, the final block of IPv4 addresses were allocated. Devices can still receive WAN addresses because not all of the addresses in these blocks are currently in use, but it is evidence of impending difficulties. The increase in Internet users and mobile devices since 2011 has only served to exacerbate the address constraint. In response to this problem, the Internet Engineering Task Force (IETF) introduced IPv6 in 1998 with 340 trillion trillion trillion IP addresses. IPv6 reached commercial deployment in 2006, but the majority of modems, ISPs, and Web servers continue to use IPv4.</p>
+    </section>
+
+    <section>
+      <h2>Learning by Wealth</h2>
+      <p>If the number of devices trying to connect to the Internet exceeds the number of available IP addresses, then devices will not be able to connect to the Internet at will. Needing to wait until a device disconnects from the Internet before connecting another is more than merely inefficient, it poses two significant problems. First, with an ever-increasing number of always-on devices, fewer devices ever disconnect from the Internet at all. Second, if access to the Web is a limited resource, then it will be allocated based on wealth. This has a profound implication on access to learning. The Web is the most vast library of knowledge available. If poorer individuals, communities, and countries have reduced access or no access at all to it, then they have drastically reduced opportunities for learning. Wealth should not determine access to learning.</p>
+    </section>
+
+    <section>
+      <h2>Ports</h2>
+      <p>In addition to an IP address, each NIC also has 131,072 ports or sockets: 65,536 TCP ports and 65,536 UDP ports. These ports direct network traffic. Each port allows for a single stream of network traffic to or from a NIC, in the same sense that a physical port allows one ship to load or unload cargo at a time. Services listen (i.e., receive network communication) and transmit (i.e., send network communication) via their assigned ports. Many services run on pre-determined ports. For example, Voice over Internet Protocol (VoIP), one protocol for making Internet phone calls, frequently uses UDP port 5060; Web servers (HTTP) often use TCP port 80; and the Simple Mail Transfer Protocol (SMTP) uses TCP port 25 to send email.</p>
+    </section>
+
+    <section>
+      <h2>DNS</h2>
+      <p>Closely related to the Internet Protocol address is the Domain Name System (DNS). Each file in the World Wide Web has a unique Uniform Resource Locator (URL). This URL combines the scheme or transfer protocol (e.g., HTTP or HTTPS to display HTML documents or FTP for shared files and folders), the address of the host (i.e., the server where the content is stored), and the path to the specific file. It is not feasible to remember the IP addresses of Internet hosts, but it is easy to remember hostnames. DNS servers store an index that pairs hostnames with IP addresses (e.g., google.com with 216.058.218.110) so that Web content is findable by scheme:https, hostname:en.wikipedia.org, and path:/wiki/Main_Page without needing to remember the IP address.</p>
+    </section>
+
+    <section>
+      <h2>Cloud as a Service</h2>
+      <p>In a cloud computing environment, computing power (CPU and RAM), storage, and content is made available to the user as a service. This is very similar to the services used by an operating system kernel to provide user applications with access to the hardware. Kernel services and services in cloud computing both rely on daemons to provide the user with access to resources. Common examples include Apache HTTP Server for hosting (i.e., providing access to) Web pages, NFS for hosting a shared file system, CalDAV for hosting shared calendars, and IMAP and SMTP for sending and receiving email. Additionally, RDBMSs include daemons for sharing relational databases.</p>
+    </section>
+
+    <section>
+      <h2>Service Levels</h2>
+      <div class="flex-row">
+        <!--CC BY-SA 3.0 Attribution: Sam Johnston-->
+        <div class="flex-item override"><img src="../images/cloud.png" alt="Cloud Computing"/></div>
+        <div class="flex-item" style="max-width: 50%">
+          <p>A cloud's <u><em>service level</em></u> determines what is made available to the user as a service. Traditionally, three service levels existed: <u><em>Infrastructure as a Service</em></u> (IaaS), <u><em>Platform as a Service</em></u> (PaaS), and <u><em>Software as a Service</em></u> (SaaS), but newer alternatives to these have emerged as newer technologies and more specialized needs have identified additional value-added service opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>IaaS</h2>
+      <p>Many corporate-grade clouds provide Infrastructure as a Service. This service level usually involves providing one or more <u><em>virtual machines</em></u>. IaaS is essentially a replacement for a physical server or workstation. It also provides the user with the most flexibility of the three service levels.</p>
+      <p><u><em>Virtualization</em></u> allows software to assume the role of hardware. Instead of a kernel communicating directly with the computer hardware, a virtualized operating system sits in a virtual machine, and its kernel communicates with a <u><em>hypervisor</em></u> which communicates with the computer hardware. The underlying system is the <u><em>host</em></u>, and the virtualized system is the <u><em>guest</em></u>. Virtualization allows for sharing computer hardware with multiple operating systems.</p>
+    </section>
+
+    <section>
+      <h2>PaaS and Serverless Computing</h2>
+      <p>Platform as a Service provides a much more specialized environment. It usually includes enough infrastructure to develop and deploy (i.e., run) one or more cloud-based applications. The popularity of cloud-based applications (e.g., for use on mobile devices) has given rise to <u><em>serverless computing</em></u>, which is an adaptation of PaaS. Despite its poorly selected name, serverless computing does, in fact, use servers. PaaS and serverless computing both include a platform for application development and deployment. However, with PaaS, the user pays (e.g., per month) to use the environment, and the user deploys and monitors the application, bit with serverless computing, the user only pays (e.g., per second) when the application is in use, and the vendor deploys and monitors the application.</p>
+    </section>
+
+    <section>
+      <h2>SaaS</h2>
+      <p>Software as a Service is the service level with which Web users are most familiar, even if they are not familiar with the term. The World Wide Web is essentially a combination of SaaS offerings. Netflix, Google Docs, YouTube, Instagram, Facebook, Twitter, and other social media interfaces, and even online email inboxes and search engines are examples of SaaS. The primary benefits of SaaS are (1) the ability for multiple end-users to access the same application without needing to install, update, or maintain a local copy of the application, and (2) the ability to have the application draw its computing needs from a powerful, centralized server, instead of requiring each end-user's computer to have computing power sufficient to support the entire application. Whereas other service levels are for content creators, SaaS is for content users.</p>
+    </section>
+
+    <section>
+      <h2>Other-aaS</h2>
+      <p>Several newer service levels provide functionality previously not available as a service. Two popular examples are <u><em>Database as a Service</em></u> (DBaaS) and <u><em>Container as a Service</em></u> (CaaS).</p>
+      <p>Some companies wish to host their own online applications in-house but decide to outsource the database functionality because of the high demand frequent online transactions common to Big Data and eCommerce place on the database server. DBaaS is a convenient solution for these companies.</p>
+      <p>CaaS provides the user with a single container. Containers are particularly useful for software development because they ensure that all developers have an identical computing environment.</p>
+    </section>
+
+    <section>
+      <h2>Containerization</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 62%">
+          <p><u><em>Containerization</em></u> is a newer alternative to virtualization. Virtualization shares computer hardware across a number of virtual machines containing full operating systems. Containerization shares one operating system kernel across a number of containers containing just enough software to perform one function (e.g., run one application). These leaner containers avoid the unnecessary, redundant resource consumption of virtual machines.</p>
+        </div>
+        <!--Copyright 1999-2016 QuinStreet, Inc. All rights reserved.-->
+        <div class="flex-item"><img src="../images/containerization.jpg" alt="Containerization"/>
+    </section>
+
+    <section>
+      <h2>Public Clouds</h2>
+      <p>The collection of hardware and software servers in a cloud computing environment (i.e., a cloud) can be public or private. <u><em>Public clouds</em></u> are hosted by third parties and made available through Internet access. The benefit of public clouds is the outsourced responsibility for purchasing and maintaining server and network hardware. This can reduce both IT procurement costs, as well as IT staffing costs. Public cloud providers rent space on shared server hardware to customers based on their desired service level. The two most well-known public clouds are Amazon AWS and Microsoft Azure.</p>
+      <p>(As an aside, Amazon provides Netflix with an IaaS to host their video platform, which Netflix, in turn, provides to viewers as a SaaS.)</p>
+    </section>
+
+    <section>
+      <h2>Private Clouds</h2>
+      <p>However, not everyone is interested in sharing server hardware or in allowing another vendor access to private data. As a result, <u><em>private clouds</em></u> have become increasingly popular. Private clouds are servers that are hosted on the company's own LAN. Private clouds require more effort but also provide greater control and flexibility. Although any server-based computing can constitute private cloud computing, some software offerings focus specifically on supporting multi-functional private clouds. These offerings provide a collection of tools, including virtual machines, containers, email servers, file and database servers, etc. This type of solution is especially useful in a distributed computing environment because the software can utilize the hardware of multiple servers in a single cloud.</p>
+    </section>
+
+    <section>
+      <h2>Hybrid Clouds</h2>
+      <p>Sometimes a single type of cloud is not flexible enough to meet the needs of the same company for different data at different times. In these situations, companies can benefit from <u><em>hybrid clouds</em></u> that rely on private clouds for some functionality (e.g., private data or internally facing systems, such as data analytics or HR systems) and public clouds for other functionality (e.g., customer-facing Web sites, applications, and databases). The demand placed on customer-facing systems can vary over time. When companies host these systems in a private cloud, they may not have sufficient resources to accommodate peak capacity. Companies can supplement their private cloud capacity with &ldquo;cloud bursting&rdquo; or &ldquo;bursting out to a public cloud&rdquo; by adding public cloud resources to a hybrid cloud environment.</p>
+    </section>
+
+    <section>
+      <h2>Open Source in the Cloud</h2>
+      <p>Open source software dominates cloud computing. Most prominent public and private cloud offerings are open source. Ubuntu Linux is the number one operating system for the cloud&mdash;not the number one Linux distribution, the number one operating system&mdash;even on Microsoft's Azure platform, and the most popular databases in the cloud are open source. The primary reason for the popularity of open source in cloud computing is customizability. Firms have unique processes with unique informational needs, and they want to be able to customize the information system to meet their unique needs. This is one reason why private clouds thrive while ERP adoption diminishes.</p>
+    </section>
+
+    <section>
+      <h2>File Shares</h2>
+      <p><u><em>File sharing</em></u> is one of the oldest forms of cloud computing. Users frequently think of file sharing specifically as peer-to-peer file sharing, which involves a single user sharing content with another single user. However, file sharing in cloud computing involves a centralized file server that provides access to a network-based file system so that users and applications can access the same content from multiple devices. In a distributed computing environment, multiple servers provide a single <u><em>distributed file system</em></u>. Three common file server daemons are the File Transfer Protocol (FTP) daemon, the Network File System (NFS) daemon, and the Server Message Block (SMB) daemon. NFS and SMB provide users with file systems that they can mount like local file systems or removable media.</p>
+    </section>
+
+    <section>
+      <h2>Database Servers</h2>
+      <p><u><em>Database servers</em></u> are also a very common component of cloud computing. Relational database management systems combine a database server with a database client. The database server daemon collates data from the file system in order to present it to the database client in a centralized manner. The database server can be on the same device as the database client, or the database server can be on a different network-connected device. The database client treats local and remote database servers the same. Cloud-based database servers are the preferred storage solution for many cloud-based applications because they can provide application data better than a cloud-based file system. They are also useful for providing data analysts with access to datasets that are too large to store on their personal computers.</p>
+    </section>
+
+    <section>
+      <h2>Enterprise Resource Planning</h2>
+      <p><u><em>Enterprise Resource Planning</em></u> (ERP) is an early example of private cloud computing that remains in use today in many large organizations. The goal of ERP systems is to have centralized data stores and standardized data entry and reporting systems for traditional business data (e.g., HR, finance, and accounting). ERP sprang out of earlier efforts by manufacturing companies to track the consumption of materials using <u><em>Material Requirements Planning</em></u> (MRP) and later <u><em>Manufacturing Resource Planning</em></u> (MRP II). Successful implementations of MRP and MRP II prompted their expansion to consider additional resources beyond manufacturing materials, including human resources. Oracle and SAP are the two most prominent vendors in this arena.</p>
+    </section>
+
+    <section>
+      <h2>ERP Adoption and Development</h2>
+      <p>ERP adoption became popular in the 1990's. Adoptions cost considerable time and money because of the need to adapt business processes to ERP specifications or to customize ERP modules to match existing processes. Regardless, the belief at the time was that the best ERP system would create the most profitable company. ERP systems also provide value by supporting accounting regulatory compliance. ERP vendors continue to add modules that share more data with more business partners, including the addition of external business partners in what has been coined Extended ERP or ERP II, to accommodate ever-changing information needs and cloud computing capabilities. Companies continue to build on the functionality of ERP systems by sharing ERP data with other parts of a larger private or public computing cloud.</p>
+    </section>
+
+    <section>
+      <h2>ERP Modules</h2>
+      <!--CC BY-SA 3.0 Attribution: Shing Hin Yeung-->
+      <img class="print-centered" src="../images/erp-modules.png" alt="ERP Modules" style="max-height: 600px"/>
+    </section>
+
+    <section>
+      <h2>IoT</h2>
+      <p>A newer manifestation of cloud computing is the <u><em>Internet of Things</em></u>. Just like &ldquo;cloud computing&rdquo; and &ldquo;data analytics&rdquo;, this term has become a buzz word, but the underlying concept is quite straightforward. Historically, the premise of the Internet was that users access remote content directly. However, as the number of connected devices and the availability of networks have increased and the cost of data transmission has decreased, connected devices (i.e., smart devices) have begun to communicate with each other without human interaction. For example, a smart thermostat may receive temperature data from a weather station and turn on the air conditioning, or a smart automobile may send diagnostic statistics to the manufacturer to predict maintenance needs. Much of Big Data is the data that these IoT devices generate.</p>
+    </section>
+
+    <section>
+      <h2>Outnumbered</h2>
+      <!--Copyright 2014 Cisco and/or its affiliates. All rights reserved.-->
+      <img class="print-centered" src="../images/iot.png" alt="IoT" style="max-height: 600px"/>
+    </section>
+
+    <section>
+      <h2>Cloud is for Information</h2>
+      <p>The proliferation of cloud-based apps and IoT devices has reinforced the importance of data and information. As a result, a primary role of cloud computing is to gather data, especially Big Data, from current and potential customers. Mobile devices, wearables, sensors, and smart home devices are constantly connected to the Internet. Consumers use these because they provide access to resources, content, services, and conveniences, and business entities benefit by learning more about consumer behavior. A well-designed cloud captures this data and makes it available for analysis. The Big Data promise is that the answers inside this massive amount of data can lead to a competitive advantage.</p>
+    </section>
+
+    <section>
+      <h2>Appendix:<br>Linux Server Commands</h2>
+    </section>
+
+    <section>
+      <h2>File Share Commands</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>wget</strong></div>
+          <div class="table-cell">Download a file from the World Wide Web (Literally: World Wide Web get)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>wget&nbsp;accountingarchitecture.github.io/index.html</strong> (Download a copy of index.html from accountingarchitecture.github.io)</li>
+              <li><strong>wget&nbsp;&#8209;O&nbsp;file.txt&nbsp;https://goo.gl/Ae3Sxv</strong> (Download a copy of Ae3Sxv from goo.gl and save it as file.txt; NB: That is a capital O, not a zero.)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>curl</strong></div>
+          <div class="table-cell">Download a file from the World Wide Web (Literally: Client URL Request Library)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>curl&nbsp;&#8209;LO&nbsp;accountingarchitecture.github.io/index.html</strong> (Download a copy of index.html from accountingarchitecture.github.io; NB: That is a capital O, not a zero.)</li>
+              <li><strong>curl&nbsp;&#8209;Lo&nbsp;file.txt&nbsp;https://goo.gl/Ae3Sxv</strong> (Download a copy of Ae3Sxv from goo.gl and save it as file.txt)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>These commands are popular tools for downloading files from the Web Wide Web to the command line. The URL does not need to be for a file share necessarily, it can also use the HTTP protocol.</p>
+    </section>
+
+    <section>
+      <h3>Database Server Commands</h3>
+      <p>MySQL is a relational database management system that powers many database servers. In addition to knowing how to retrieve data from a relational database, knowing how to navigate the database server is necessary to perform useful data analysis.</p>
+      <div class="table wide-table print-smaller" style="font-size: 20px">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Example</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>show databases;</strong></div>
+          <div class="table-cell">List all databases</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap"><strong>create database;</strong></div>
+          <div class="table-cell">Create new, empty database</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>create database homework;</strong> (Create new, empty database named homework)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>use;</strong></div>
+          <div class="table-cell">Open database</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>use client;</strong> (Open database named client)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>show tables;</strong></div>
+          <div class="table-cell">List all tables in current database</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"> <strong>describe;</strong></div>
+          <div class="table-cell">List all table attributes with data types and keys</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>describe PURCHASE;</strong> (Print a list of all attributes from PURCHASE table)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>quit;</strong></div>
+          <div class="table-cell">Exit MySQL</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>mysql -u -p</strong></div>
+          <div class="table-cell">Log in to MySQL server (will prompt for password)</div>
+          <div class="table-cell" style="width: 48%">
+            <ul>
+              <li><strong>mysql -u root -p</strong> (Log in to MySQL server as root user)</li>
+              <li><strong>mysql -u joe -p</strong> (Log in to MySQL server as user joe)</li>
+              <li><strong>mysql -u joe -p payroll</strong> (Log in to payroll database on MySQL server as user joe)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Systemd Commands</h2>
+      <p>Systemd is a service that controls other services (i.e., servers), and many different Linux distros use it. Because so much operating system functionality relies on services, knowing basic systemd commands is vital toward using Linux effectively.</p>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>sudo systemctl start</strong></div>
+          <div class="table-cell">Start a service</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo systemctl start apache.service</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>sudo systemctl stop</strong></div>
+          <div class="table-cell">Stop a service</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo systemctl stop sshd.service</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>sudo systemctl status</strong></div>
+          <div class="table-cell">Check whether a service is running</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo systemctl status mysql.service</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>sudo systemctl enable</strong></div>
+          <div class="table-cell">Set a service to start automatically on boot up</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo systemctl enable samba.service</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap"><strong>sudo systemctl disable</strong></div>
+          <div class="table-cell">Prevent a service from starting automatically on boot up</div>
+          <div class="table-cell" style="white-space: nowrap">
+            <ul>
+              <li><strong>sudo systemctl disable minidlna.service</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../reveal.js/dist/reveal.js"></script>
+  <script src="../js/slides.js"></script>
+</body>
+</html>

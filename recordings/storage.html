@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Storage</title>
+
+  <meta name="author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../images/logo.png" type="image/x-icon" sizes="32x32">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/dist/theme/sky.css" id="theme">
+
+  <!-- Personalized CSS -->
+  <link rel="stylesheet" href="../css/slides.css">
+</head>
+
+<body>
+  <div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>Storage</h1>
+    </section>
+
+    <section>
+      <h2>Accounting Architecture</h2>
+      <div class="flex-row">
+        <div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
+        <div class="flex-item" style="max-width: 65%">
+          <p>The Storage block of accounting architecture builds on both the Hardware and Software blocks because digital storage comprises a combination of hardware and software components. The storage drives represent the storage hardware, and file and database systems represent the storage software. Together, storage hardware and software serve to operationalize the Storage step in the information life cycle.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Types of Storage Systems</h2>
+      <ul>
+        <li><u><em>File systems</em></u> store data in separate files and folders.</li>
+        <li><u><em>Database systems</em></u> store all data in a single location.</li>
+      </ul>
+      <p>These two storage systems predate digital storage. Paper documents and folders in a filing cabinet is a physical file system, and a card catalog in a library is an example of a physical database system. The same principles apply to digital storage, and although the software portion of digital storage is the most visible from the users' perspective, the storage system begins with hardware. Digital storage hardware is analogous to the filing cabinet in a physical file system.</p>
+    </section>
+
+    <section>
+      <h2>Physical and Logical Volumes</h2>
+      <p>Digital storage begins with the physical storage drive. Data on the drive is stored in either a <u><em>physical</em></u> or a <u><em>logical volume</em></u>. A physical volume, or <u><em>partition</em></u>, uses all or part of the storage capacity of a single drive. Physical volumes are static, so they cannot grow as storage needs increase. Logical volumes are more flexible. Logical volumes are formed by combining one or more physical volumes into a <u><em>volume group</em></u>. Volume groups can comprise one or more storage drives. One or more logical volumes are formed from the storage capacity in the volume group. As long as the volume group has free space, existing logical volumes can expand to include more storage from the volume group. Volume groups are also resizable. Additional physical volumes can be added to an existing volume group to increase available storage capacity.</p>
+    </section>
+
+    <section>
+      <h2>From Physical to Logical</h2>
+      <!--License: CC-BY 2.0 Attribution: Sarmed Rahman-->
+      <img class="print-centered" src="../images/lvm.png" alt="LVM" style="max-height: 550px"/>
+    </section>
+
+    <section>
+      <h2>File Systems</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 80%">
+          <p>The physical or logical volume is formatted with a file system. File systems provide the hierarchical folder structure common in desktop operating systems. The operating system and other applications are stored on the file system. Virtually all programs use file systems to communicate with and store data on a storage volume because of the convenience and familiarity, and interoperability of file systems. Additionally because the file system is separate from the operating system, file systems are interoperable and users can remove a storage drive from one computer and access the file system on another computer.</p>
+        </div>
+        <div class="flex-item"><img src="../images/das.png" alt="Direct Access Storage" style="max-width: 200px"/></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Storage Drive to File System</h2>
+      <img class="print-centered" src="../images/file-system.png" style="width: 800px" alt="Hierarchical Model of Storage from Drive to File System"/>
+    </section>
+
+    <section>
+      <h2>From File System to Database System</h2>
+      <p>The role of a database system is to collate data and present it in a centralized manner. In the example of the library card catalog, a physical database system functions as an alternative to a file system. However, in digital storage, this is not the case. A digital database system is an application, which runs on an operating system, which sits on a file system. In the current computing world, database systems are not an alternative to file systems, rather they collate data stored on a file system and present it as if it were stored in a centralized manner. Many software applications are database systems. Music players are a common example. The individual song files are stored in separate files and folders on a file system. The music player collates the songs and provides the user with a single library.</p>
+    </section>
+
+    <section>
+      <h2>Flat File Databases</h2>
+      <p>The simplest databases are <u><em>flat files</em></u>. A flat file database is a single file that contains only data with each row representing a single record. Spreadsheets and comma- or tab-delimited files (CSV or TXT) are examples of flat files. In flat file databases, all data is stored in a single table. These are popular for storing small datasets because they place no restrictions on the form of the data. As a result, adding additional records tends to be quick and easy. Additionally, many users are familiar with applications that read flat files, such as Microsoft Excel. The largest drawback of flat files is an inability to create relationships between data in different tables. Additionally, flat file databases have none of the functionality necessary to support data integrity in a large-scale enterprise-grade information system.</p>
+    </section>
+
+    <section>
+      <h2>Relational Databases</h2>
+      <p>Many database systems for storing business data are relational databases. Each relational database contains one or more two-dimensional <em><u>tables</u></em>. The technical name for a table is a <u><em>relation</em></u>, hence <em>relational database</em>. These tables are similar to spreadsheets found in office software.</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">ID</div>
+          <div class="table-cell">First Name</div>
+          <div class="table-cell">Last Name</div>
+          <div class="table-cell">Job Title</div>
+          <div class="table-cell">Email</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">1</div>
+          <div class="table-cell">John</div>
+          <div class="table-cell">Smith</div>
+          <div class="table-cell">Manager</div>
+          <div class="table-cell">john.smith@abc.xyz</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">2</div>
+          <div class="table-cell">Mary</div>
+          <div class="table-cell">Higgins</div>
+          <div class="table-cell">CEO</div>
+          <div class="table-cell">mary.higgins@abc.xyz</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">3</div>
+          <div class="table-cell">Jack</div>
+          <div class="table-cell">Tuttle</div>
+          <div class="table-cell">Janitor</div>
+          <div class="table-cell"></div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">4</div>
+          <div class="table-cell">Janine</div>
+          <div class="table-cell">Cray</div>
+          <div class="table-cell"></div>
+          <div class="table-cell">janine.cray@abc.xyz</div>
+        </div>
+      </div>
+      <p>The individual rows in the relations are called <u><em>records</em></u> or <u><em>tuples</em></u>. The individual columns are called <u><em>attributes</em></u> or <em><u>fields</u></em>. The intersection of a row and a column is a <em><u>cell</u></em>. Cells hold a single value.</p>
+    </section>
+
+    <section>
+      <h2>Database Components</h2>
+      <p>In a relational database, each table or relation represents an <u><em>entity</em></u>, which is either a person (e.g., Customer or Employee), an account (e.g., Inventory or Notes Payable) or a data object (e.g., Invoice or Purchase Order). Rows or records represent <u><em>instances</em></u> of an entity (e.g., a specific customer or a specific invoice). Columns or attributes represent characteristics of an entity (e.g., customer name or inventory SKU). Cells represent characteristics of an instance (e.g., the address of a specific employee or the date on a specific invoice). This structure is no different from the structure of a flat file database. However, the strength of a relational database is in the relationships between the database tables. Relationships between tables represent interactions between entities.</p>
+    </section>
+
+    <section>
+      <h2>Primary Keys</h2>
+      <p>Each record in a table must have a unique identifier. Without it, it would not be possible to locate and retrieve a specific instance of an entity. This unique identifier is a <u><em>primary key</em></u>. Frequently, a primary key is a single entity attribute. It may be a characteristic inherent to an entity (e.g., telephone number, user login, SSN, etc.), or it may simply be an incremented ID number (e.g., 00001, 00002, 00003, etc.). As a unique identifier, each value of a primary key can only occur once per table. Sometimes no single attribute uniquely identifies an instance of an entity. For example, neither Semester nor Year nor Course Name nor Section uniquely identify an instance of a course, but the combination of Semester and Year and Course Name and Section can. Primary keys that comprise multiple attributes are <u><em>composite keys</em></u>.</p>
+    </section>
+
+    <section>
+      <h2>Data Types</h2>
+      <p>All cells for a single attribute must have the same <u><em>data type</em></u>. This type determines the characteristics of the data, as well as any available operations.</p>
+      <div class="table">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Type name</div>
+          <div class="table-cell">Usage</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Boolean</div>
+          <div class="table-cell">True/False</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Char</div>
+          <div class="table-cell">Single alphanumeric character</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">String</div>
+          <div class="table-cell">Series of chars</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Integer</div>
+          <div class="table-cell">Whole number</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell">Double</div>
+          <div class="table-cell">Decimal number</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell">Date</div>
+          <div class="table-cell">Year, month, and day</div>
+        </div>
+      </div>
+      <p>Numerical data types support arithmetic and statistical functions, such as addition, subtraction, and average. String data types support pattern matching. Date types and numerical types both support comparisons (e.g., greater than or less than).</p>
+    </section>
+
+    <section>
+      <h2>Structure Models</h2>
+      <ul>
+        <li><u><em>Activity models</em></u> describe a series of processes that comprise a system.</li>
+        <li><u><em>Structure models</em></u> describe the characteristics of people, assets, and data and their relationships with one another.</li>
+      </ul>
+      <p>Designing a relational database involves identifying all relevant entities, their attributes, and the relationships between those entities. Activity diagrams of business processes are useful for identifying people, assets, and data objects that become entities. Entities are the foundation for a structural model of a relational database that stores instances and attributes of these entities. A structural model shows how entities relate to one another.</p>
+    </section>
+
+    <section>
+      <h2>Entity-Relationship Diagrams</h2>
+      <p>The entity-relationship (E-R) diagram is the standard for modeling relational databases. Multiple E-R diagramming conventions exist that present the same data in different ways. The primary components of an E-R diagram are database entities and the relationships between them. A <u><em>relationship</em></u> is a link between entities that can be described as a verb of one entity acting on another (e.g., Customer Has Account or Employee Creates Receiving Report). E-R diagrams can also portray the attributes of each entity. By convention, entities are capitalized singular nouns (e.g., Customer) and relationships are present tense verbs (e.g., creates).</p>
+      <div class="flex-row">
+      <div class="flex-item print-smaller" style="max-width: 50%">E-R Diagram (without Attributes) in Chen Notation</div>
+      <div class="override"><img src="../images/simple-chen-er.png" alt="Simple E-R Diagram with 3 Entities in Chen Notation" style="max-height: 250px"/></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cardinalities</h2>
+      <p>The magnitude of the potential relationships between an instance of one entity and the instances of another is <u><em>cardinality</em></u>. Cardinalities have three potential values: zero, one, and many. Cardinalities also have two bounds: minimum and maximum. Minimum cardinalities can be either zero or one, and they demonstrate the smallest number of instances of one entity a single instance of another entity can act upon. Maximum cardinalities can be either one or many, and they demonstrate the smallest number of instances of one entity a single instance of another entity can act upon. For example, a customer (i.e., one instances of the Customer entity) can create at least (minimum) one and at most (maximum) many sales orders (i.e., instances of the Sales Order entity), and each sales order has at least one and at most one customer.</p>
+    </section>
+
+    <section>
+      <h2>Cardinality Conventions</h2>
+      <div class="flex-row">
+        <div class="flex-item override" style="max-width: 18%">
+          <div class="print-smaller">Chen Notation</div>
+          <img src="../images/simple-chen-card.png" style="max-height: 350px" alt="Sample E-R Diagram with Cardinalities in Chen Notation"/>
+        </div>
+        <div class="flex-item" style="max-width: 65%; margin-left: 20px">
+          <p>E-R diagrams display relationship cardinalities opposite the entity to which the cardinalities refer. For example, each instance of the Carrier entity delivers at least zero shipments and at most many instances of the Shipment entity, whereas each instance of the Shipment entity is delivered by at least one and at most one instance of the Carrier entity. Using common terms, each carrier delivers at least zero and at most many shipments, and each shipment is delivered by exactly one (at least one and at most one) carrier.</p>
+        </div>
+        <div class="flex-item override" style="max-width: 18%">
+          <div class="print-smaller">Crow's Foot Notation</div>
+          <img src="../images/simple-crow-card.png" style="max-height: 350px" alt="Sample E-R Diagram with Cardinatilities in Crow's Foot Notation"/>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Which One Is Correct?</h2>
+      <p>When it comes to determining cardinalities, the answer is not always clear. What is the minimum number of sales orders a customer can place? What is the maximum number of carriers that can deliver a single shipment? The purpose of cardinalities is first and foremost to design a database system, so the answer may be governed more by database needs than by reality. A delivery can have multiple carriers, but the database may only need to track the first or last carrier, in which case the maximum cardinality is one, not many. A customer may normally be someone who has already made a purchase, but if the company needs to be able to create a customer account before the customer's first purchase, then the minimum cardinality needs to be zero, not one. Cardinalities should be realistic, and they should support the company's data collection needs.</p>
+    </section>
+
+    <section>
+      <h2>Foreign Keys</h2>
+      <p>Because primary keys uniquely identify an instance of an entity, they also serve to link entities together to implement relationships. Creating a relationship between two tables in a relational database involves taking the primary key from the table that represents the acting entity and placing it in the table that represents the entity being acted upon as a <u><em>foreign key</em></u>. A foreign key is a special attribute that can only take values of the primary key it links to, in order to show which instance of one entity acts upon which instances of the other. For example, the Employee entity might include Employee ID as a primary key. The Employee entity and the Sales Order entity have a relationship because Employee creates Sales Order. The Sales Order would include Employee ID as a foreign key to identify the Employee instance who created the sales order instance.</p>
+    </section>
+
+    <section>
+      <h2>Sample E-R Diagram</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 85%">
+          <p>This E-R diagram shows three entities with attributes and relationships for the database of a hypothetical car dealership. Manufacturer builds Car, and Customer purchases Car. The primary key for Manufacturer is Name because car companies have unique names. Manufacturer Name is a foreign key in the Car entity to link each car to its manufacturer. The primary key for Customer is Customer ID. Customer ID is a foreign key in the Car entity to link each car to its purchaser. Each manufacturer builds at least one and at most many cars, and each customer purchases at least one and at most many cars. Each car is built by exactly one manufacturer and has at least zero and at most one buyer.</p>
+        </div>
+        <div class="flex-item override">
+          <img src="../images/sample-er.png" style="max-height: 600px" alt="Sample E-R Diagram with 3 Entities in Crow's Foot Notation"/>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>User Views</h2>
+      <p>Not every important object is an entity, and not every relevant characteristic is an attribute. Some objects and characteristics are combinations or subsets of existing entities or attributes. An example of the combination of existing attributes might be a calculation. For example, Total Cost is Unit Cost &times; Quantity Sold; Unit Cost and Quantity Sold are attributes, but Total Cost, their product, is not. Subsets of existing entities are often collections of some of the instances in an entity. For example, Supervisor would not be an entity because it would simply be a subset of the Employee entity&mdash;some employees are supervisors. These objects and characteristics become <em><u>user views</u></em> because they are not stored in the database but can be provided to the user through <em><u>queries</u></em>, which retrieve or calculate data based on specific criteria.</p>
+    </section>
+
+    <section>
+      <h2>Accounting Records</h2>
+      <p>User views allow accounting transactions to take on the form of either journals or ledgers. Financial accounting textbooks imply that transaction processing involves recording a journal entry and then posting the entry to a ledger. However, Journal and Ledger cannot both be entities because they represent the same instances. A journal is a series of financial transactions sorted by date, and a ledger is the same series of transactions grouped by account and then sorted by date. These are different views, not different entities. However, databases with large numbers of financial transactions may store transactions in separate tables by date (e.g., by month), by type of asset (e.g., inventory, receivables, fixed assets), or by type of transaction (e.g., sales, purchases, cash payments, cash receipts).</p>
+    </section>
+
+    <section>
+      <h2>SQL</h2>
+      <p><u><em>Structured Query Language</em></u> (SQL) is the language for interacting with relational databases to create, modify, and retrieve data. Because of the prevalence of relational databases and because of the simplicity of its syntax, SQL has been and continues to be a popular tool, and an increasing number of Big Data and data analytics systems have added support for this language.</p>
+      <p>A query is a single request for data. An SQL query SELECTs a certain number of attributes FROM one table or multiple tables by JOINing the tables ON common attributes (e.g., primary and foreign keys). SQL can limit the records returned by the query to only those WHERE a specific condition is true. Results can be ORDERed BY an attribute's values in either ascending or descending order.</p>
+    </section>
+
+    <section>
+      <h2>SQL Examples</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Examples</div>
+          <div class="table-cell">Explanation</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT * FROM PURCHASE;</div>
+          </div>
+          <div class="table-cell">Select all attributes and all records from the purchase table</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT FIRSTNAME, LASTNAME</div>
+            <div>FROM CUSTOMER;</div>
+          </div>
+          <div class="table-cell">Select firstname and lastname attributes and all records from the customer table</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT CUSTOMERID, CUSTOMERNAME, AMOUNT</div>
+            <div>FROM ACCOUNTSPAYABLE</div>
+            <div>ORDER BY AMOUNT;</div>
+          </div>
+          <div class="table-cell">Select customerid, customername, and amount attributes and all records from the accountspayable table and sort by amount in ascending order</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT PROJECTNAME, BUDGET</div>
+            <div>FROM PROJECT</div>
+            <div>WHERE BUDGET > 10000;</div>
+          </div>
+          <div class="table-cell">Select projectname and budget attributes and records with a budget greater than 10000 from the project table</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="font-weight: bold">
+            <div>SELECT EMPLOYEE.ID, EMPLOYEE.LASTNAME, PROJECT.NAME, PROJECT.MANAGERID</div>
+            <div>FROM EMPLOYEE JOIN PROJECT</div>
+            <div>ON EMPLOYEE.ID = PROJECT.MANAGERID;</div>
+          </div>
+          <div class="table-cell">Select ID and and lastname attributes from the employee table and name and managerid attributes from the project table and records from both tables where ID and managerid match</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>SQL Rules</h3>
+      <p>SQL syntax is not complicated, but it has certain strict rules, and SQL is not tolerant of syntax errors:</p>
+      <ul>
+        <li>SQL queries can span multiple lines, but they always end in a semicolon.</li>
+        <li>Attribute lists in a SELECT statement are comma-delimited with no comma after the final attribute in the list before the FROM statement.</li>
+        <li>WHERE statements use a boolean test which can be &gt; (greater than), &lt; (less than), = (equal), != (not equal), or IS NULL (missing value). If the data type of the variable is a string type, then the test value must have quotes around it (e.g., NAME = 'John').</li>
+        <li>When using ORDER BY, it must be at the end of the query.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>SQL Analysis</h2>
+      <p>Basic SQL queries serve primarily to retrieve data for subsequent analysis. However, SQL can also perform some data analysis by calculating descriptive or summary statistics on table attributes. Summary statistics summarize a set of records. COUNT returns the number of records; SUM adds the values of a numerical attribute together; MIN, MAX, and AVG return the minimum, maximum, and average values of a numerical attribute, respectively. The query can calculate these statistics for an entire dataset or GROUPed BY an attribute's values. When grouping results, the query returns a summary statistic for each group. The query can also filter the results by selecting only those groups HAVING a specific condition (similar to a WHERE statement).</p>
+    </section>
+
+    <section>
+      <h2>Summary Functions and Grouping</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Examples</div>
+          <div class="table-cell">Explanation</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT COUNT(ID)</div>
+            <div>FROM INVOICE;</div>
+          </div>
+          <div class="table-cell">Count the number of records with an ID in the invoice table</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT SUM(HOURS)</div>
+            <div>FROM PROJECT;</div>
+          </div>
+          <div class="table-cell">Add the values in hours attribute in the project table</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT INVENTORYSKU, AVG(COST)</div>
+            <div>FROM PURCHASE</div>
+            <div>GROUP BY INVENTORYSKU;</div>
+          </div>
+          <div class="table-cell">Select inventorysku attribute and calculate average cost of each SKU in the purchase table</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT YEAR, MIN(AMOUNT), MAX(AMOUNT)</div>
+            <div>FROM BUDGET</div>
+            <div>GROUP BY YEAR;</div>
+          </div>
+          <div class="table-cell">Select year attributes and calculate the minimum and maximum amounts for each year from the budget table</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="font-weight: bold">
+            <div>SELECT EMPLOYEEID, COUNT(TRANSACTIONID), SUM(AMOUNT)</div>
+            <div>FROM PROCUREMENT</div>
+            <div>GROUP BY EMPLOYEEID</div>
+            <div>HAVING COUNT(TRANSACTIONID) > 10;</div>
+          </div>
+          <div class="table-cell">Select employeeid attribute, count the number of transactions, and add their amounts by employeeid for any employeeids with more than 10 transactions from the procurement table</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Advanced Queries</h2>
+      <p>In certain situations, users need more complex output than basic queries will allow. SELECT DISTINCT modifies the SELECT statement to return only those records with unique values for the SELECTed attributes. If the SELECT DISTINCT statement includes a single attribute, then the query returns unique values for that attribute. If the query lists two or more attributes, the query returns unique combinations of all attributes. Aliases replace the name of attributes and variables with placeholders that can make them easier to reference. Nested queries allow users to create temporary tables that provide specific records and attributes to the main query. This is especially useful when trying to filter results by the value of a summary function, which is not feasible with a single WHERE statement.</p>
+    </section>
+
+    <section>
+      <h2>Distinct, Aliases, and Nesting</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Examples</div>
+          <div class="table-cell">Explanation</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT DISTINCT EMPLOYEEID</div>
+            <div>FROM INVOICE;</div>
+          </div>
+          <div class="table-cell">Select employee IDs from the invoice table without any duplicates.</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT SUM(HOURS) AS TOTALHOURS</div>
+            <div>FROM PROJECT;</div>
+          </div>
+          <div class="table-cell">Add the values in hours attribute in the project table and label the output attribute TotalHours</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="font-weight: bold">
+            <div>SELECT A.ID, A.LASTNAME, B.NAME, B.MANAGERID</div>
+            <div>FROM EMPLOYEE AS A</div>
+            <div>JOIN PROJECT AS B</div>
+            <div>ON A.ID = B.MANAGERID;</div>
+          </div>
+          <div class="table-cell">Select ID and and lastname attributes from the employee table using A as an alias for the table name and name and managerid attributes from the project table using B as an alias for the table name and records from both tables where ID and managerid match</div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="white-space: nowrap; font-weight: bold">
+            <div>SELECT EMPLOYEEID, HOURS</div>
+            <div>FROM TIMECARD</div>
+            <div>WHERE HOURS =</div>
+            <div>(SELECT MAX(HOURS) FROM TIMECARD);</div>
+          </div>
+          <div class="table-cell">Select employee ID and hours worked from the timecard table where hours worked equals the maximum hours worked entry in the table.</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell" style="font-weight: bold">
+            <div>SELECT * FROM</div>
+            <div>(SELECT DISTINCT CREATOR, APPROVER</div>
+            <div>FROM PURCHASE) AS A</div>
+            <div>GROUP BY CREATOR</div>
+            <div>HAVING COUNT(APPROVER) = 1;</div>
+          </div>
+          <div class="table-cell">Select all pairs of creators and approvers where the creator always has the same approver from a list of all unique pairs of creators and approvers.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Indexing</h2>
+      <p>In order to increase the speed of queries from a relational database, a relational database management system (RDBMS), which is software that manages a relational database, can create an index of the values in the tables. This index is similar to the index in the back of a textbook. When looking for records that match a particular value, such as a customer name, the RDBMS can find the value in the index, and the index will report which database records contain that value. This is quicker than looking through all records to find those with the desired value, just as it is quicker to use the index in a book to find pages that reference a certain topic than it is to look through the entire book to find references to that topic.</p>
+    </section>
+
+    <section>
+      <h2>OLAP</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 70%">
+          <p><u><em>Online analytical processing</em></u> (OLAP) is another method for increasing query speed. OLAP creates either a pre-calculated hypercube (MOLAP) or a series of interconnected relational tables (ROLAP) from a existing database. Users can then quickly perform multidimensional queries, such as sales by quarter by location, with the added ability of <u><em>rolling up</em></u> for an aggregated view (e.g., sales <em>by year</em> by location), <u><em>drilling down</em></u> for a granular view (e.g., sales <em>by month</em> by location), and <u><em>slicing</em></u> and <u><em>dicing</em></u> to filter results along a dimension (e.g., sales <em>for Q1</em> by location).</p>
+        </div>
+        <div class="flex-item"><img src="../images/olap.jpg" alt="OLAP Cube" style="max-width: 275px"/></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Non-relational Databases</h2>
+      <p>For several decades, RDBMSs have been the data store of choice for business data. However, Web commerce has created the need for database solutions that can add data quickly and can increase in size to accommodate very large datasets. These solutions fall into a class of non-relational databases, also called NoSQL. These databases abandon the principles of relational databases in favor of alternative models. Many NoSQL databases are key-value stores.</p>
+      <p>A <u><em>key-value store</em></u> pairs unique keys with data objects. The data object can be anything from a single number to an entire file. The role of the key-value store is to facilitate efficient storing and retrieval of values (i.e., data objects) by their keys. Two common types of key-value stores are document stores and column stores.</p>
+    </section>
+
+    <section>
+      <h2>Document Store</h2>
+      <p>A <em><u>document store</u></em> is a key-value store in which the data object is a text file with multiple metadata attributes and values, frequently in XML or JavaScript Object Notation (JSON) format. Instead of storing the individual values as fields in a record of a relational table, a document store keeps all values together in a single data object.</p>
+      <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+        <div style="font-size: 24px">Relational Table</div>
+        <div class="table" style="margin: 0">
+          <div class="table-row" style="background-color: lightgray; font-weight: bold">
+            <div class="table-cell">ID</div>
+            <div class="table-cell">First Name</div>
+            <div class="table-cell">Last Name</div>
+            <div class="table-cell">Job Title</div>
+            <div class="table-cell">Email</div>
+          </div>
+          <div class="table-row" style="background-color: white">
+            <div class="table-cell">1</div>
+            <div class="table-cell">John</div>
+            <div class="table-cell">Smith</div>
+            <div class="table-cell">Manager</div>
+            <div class="table-cell">john.smith@abc.xyz</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+        <div style="font-size: 24px">Document Store</div>
+        <div class="table" style="margin: 0">
+          <div class="table-row" style="background-color: lightgray; font-weight: bold">
+            <div class="table-cell">Key</div>
+            <div class="table-cell">Value</div>
+          </div>
+          <div class="table-row" style="background-color: white">
+            <div class="table-cell">1</div>
+            <div class="table-cell">
+              <div>&lt;Firstname&gt;John&lt;/Firstname&gt;</div>
+              <div>&lt;Lastname&gt;Smith&lt;/Lastname&gt;</div>
+              <div>&lt;Jobtitle&gt;Manager&lt;/Jobtitle&gt;</div>
+              <div>&lt;Email&gt;john.smith@abc.xyz&lt;/Email&gt;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Column Store</h2>
+      <p>A <u><em>column store</em></u> groups individual keys and values into columns and then combines columns into families. A column is similar to an attribute, and a family is similar to a record. Unlike records in relational tables, different families can have different numbers of keys (i.e., attributes), and the values from the same key in different families can have different data types.</p>
+      <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-start; align-items: flex-start">
+        <div style="font-size: 24px">Relational Table</div>
+        <div class="table" style="margin: 0">
+          <div class="table-row" style="background-color: lightgray; font-weight: bold">
+            <div class="table-cell">ID</div>
+            <div class="table-cell">First Name</div>
+            <div class="table-cell">Last Name</div>
+            <div class="table-cell">Job Title</div>
+            <div class="table-cell">Email</div>
+          </div>
+          <div class="table-row" style="background-color: white">
+            <div class="table-cell">3</div>
+            <div class="table-cell">Jack</div>
+            <div class="table-cell">Tuttle</div>
+            <div class="table-cell">Janitor</div>
+            <div class="table-cell"></div>
+          </div>
+          <div class="table-row" style="background-color: lightgray">
+            <div class="table-cell">4</div>
+            <div class="table-cell">Janine</div>
+            <div class="table-cell">Cray</div>
+            <div class="table-cell"></div>
+            <div class="table-cell">janine.cray@abc.xyz</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-column" style="-webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: flex-end; align-items: flex-end">
+        <div style="font-size: 24px">Column Store</div>
+        <div class="table" style="margin: 0">
+          <div class="table-row" style="background-color: white; font-weight: bold">
+            <div class="table-cell">ID</div>
+            <div class="table-cell">First Name</div>
+            <div class="table-cell">Last Name</div>
+            <div class="table-cell">Job Title</div>
+          </div>
+          <div class="table-row" style="background-color: white">
+            <div class="table-cell">3</div>
+            <div class="table-cell">Jack</div>
+            <div class="table-cell">Tuttle</div>
+            <div class="table-cell">Janitor</div>
+          </div>
+          <div class="table-row" style="background-color: lightgray; font-weight: bold">
+            <div class="table-cell">ID</div>
+            <div class="table-cell">First Name</div>
+            <div class="table-cell">Last Name</div>
+            <div class="table-cell">Email</div>
+          </div>
+          <div class="table-row" style="background-color: lightgray">
+            <div class="table-cell">4</div>
+            <div class="table-cell">Janine</div>
+            <div class="table-cell">Cray</div>
+            <div class="table-cell">janine.cray@abc.xyz</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Graph Database</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 55%">
+          <p>With the advent of social media, graph databases have become a popular NoSQL model. A <u><em>graph database</em></u> uses nodes, edges, and properties to emphasize the relationships between objects. Each node is an object with one or more attributes similar to a row in a relational database. Edges connect nodes to describe how nodes relate to one another. Graph databases are similar to relational databases, but the emphasis is on the relationships.</p>
+        </div>
+        <div class="flex-item override"><img src="../images/graph-database.png" alt="Graph Database"/></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Benefits of NoSQL Databases</h2>
+      <ul>
+        <li><u><em>Volume</em></u>: Because of the simplicity of each record in the database, NoSQL databases are designed to store many more records than their relational counterparts.</li>
+        <li><u><em>Velocity</em></u>: Relational databases must find each field, perhaps across multiple tables, to add and retrieve records. NoSQL databases take the data input and simply append it to the end of the store.</li>
+        <li><u><em>Variety</em></u>: Unlike relational databases which primarily store simple data types, NoSQL databases can store any data object. As a result, they are useful for pairing metadata with supporting documentation (e.g., invoice information with a scanned image of the original paper invoice).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Just So Fresh And Clean</h2>
+      <p>Accountants have a long tradition of storing economic data in paper journals and ledgers. Databases have replaced paper journals and ledgers, but databases are more than digital ledgers. Flat file databases are popular because of their ease of use, but they have drawbacks over relational and NoSQL databases. Relational databases promote data integrity by grouping data by entity and by requiring attributes to have a uniform data type. Clean data from well-designed relational databases results in better analytics. NoSQL databases promote eCommerce and Big Data analytics by storing and retrieving larger datasets faster. Proper storage solutions are necessary for data retrieval and analysis that results in reports for internal and external stakeholders that effectively support strategic decision making.</p>
+    </section>
+
+    <section>
+      <h2>Appendix:<br>Linux Storage Commands</h2>
+    </section>
+
+    <section>
+      <h2>Navigation Command</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>cd</strong></div>
+          <div class="table-cell">Navigate to folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>cd /</strong> (Navigate to top-level folder, called root)</li>
+              <li><strong>cd /usr</strong> (Navigate to usr folder in root folder)</li>
+              <li><strong>cd /var/www</strong> (Navigate to www folder in var folder in root folder)</li>
+              <li><strong>cd Documents</strong> (Navigate to Documents folder in current folder)</li>
+              <li><strong>cd Music/Playlists</strong> (Navigate to Playlists folder in Music folder in current folder)</li>
+              <li><strong>cd ..</strong> (Navigate to parent folder)</li>
+              <li><strong>cd ~</strong> (Navigate to home folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>pwd</strong></div>
+          <div class="table-cell">Print current folder to terminal</div>
+          <div class="table-cell"></div>
+        </div>
+      </div>
+      <p>(NB: In Linux, file and folder names are case sensitive. Also, the <strong>cd</strong> command will not print any output to the terminal. Using the <strong>pwd</strong> command can confirm successful navigation.)
+    </section>
+
+    <section>
+      <h2>Creation Commands</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>touch</strong> (<strong>sudo touch</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell">Create file (only prints output to terminal in the case of a error)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>touch test</strong> (Create file test in current folder owned by user)</li>
+              <li><strong>sudo touch /test</strong> (Create file test in root folder not owned by user)</li>
+              <li><strong>touch Downloads/test</strong> (Create file test in Downloads folder owned by user in current folder)</li>
+              <li><strong>sudo touch /opt/test</strong> (Create file test in opt folder not owned by user in root folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>mkdir -v</strong> (<strong>sudo mkdir -v</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell">Create folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>mkdir -v Documents</strong> (Create Documents folder in current folder owned by user)</li>
+              <li><strong>mkdir -v Videos/playlist</strong> (Create folder playlist in Video folder owned by user in current folder)</li>
+              <li><strong>sudo mkdir -v /bin/test</strong> (Create test folder in bin folder not owned by user in root folder)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Data Output Commands</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>ls</strong> (Read: lowercase &ldquo;ell&rdquo; followed by an &ldquo;ess,&rdquo; not an uppercase &ldquo;aye&rdquo;)</div>
+          <div class="table-cell">List contents of a folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>ls</strong> (List contents of current folder)</li>
+              <li><strong>ls /etc</strong> (List contents of etc folder in root folder)</li>
+              <li><strong>ls Desktop/storage</strong> (List contents of storage folder Desktop folder in current folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>echo</strong></div>
+          <div class="table-cell">Print contents of a string (in quotes) to terminal</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>echo "Linux is great!"</strong> (Print Linux is great! to terminal)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>cat</strong></div>
+          <div class="table-cell">Print contents of text file to terminal</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>cat test</strong> (Print contents of file test in current folder to terminal window)</li>
+              <li><strong>cat /etc/smb.conf</strong> (Print contents of file smb.conf in etc folder in root folder to terminal window)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>(NB: The <strong>ls</strong> command is useful after performing any other storage-related Linux command to confirm that any intended changes were successful.)</p>
+    </section>
+
+    <section>
+      <h2>More UNIX Philosophy</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Character</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>&gt;</strong> or <strong>&lt;</strong> (Called a &ldquo;redirect.&rdquo;)</div>
+          <div class="table-cell">Pass the output of a command to a file or pass the contents of a text file to a command (passing to a file creates the file, if it does not exist, or <em>replaces</em> the contents of the file, if it already exists; the command comes first in the sequence and the file second; the direction of the arrow determines whether the output is passed to the command or the file)</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>ls &gt; output</strong> (Pass the output from ls command to file output)</li>
+              <li><strong>cat test &gt; test2</strong> (Pass the output from printing file test to file test2)</li>
+              <li><strong>echo "Testing..." &gt; test</strong> (Pass the string Testing... to file test)</li>
+              <li><strong>cat &lt; test</strong> (Pass the contents of file test to cat command)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>&gt;&gt;</strong></div>
+          <div class="table-cell">Pass the output of a command to a file (passing to a file creates the file, if it does not exist, or <em>appends</em> the contents of the file, if it already exists)</div>
+          <div class="table-cell" style="width: 40%">
+            <ul>
+              <li><strong>ls &gt;&gt; output</strong> (Pass the output from ls command to file output)</li>
+              <li><strong>echo "Testing..." &gt;&gt; test</strong> (Pass the string Testing... to file test)</li>
+              <li><strong>cat test &gt;&gt; test2</strong> (Pass the output from printing file test to file test2)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>(NB: Using redirects will generally not print any output to the terminal.)</p>
+    </section>
+
+    <section>
+      <h2>Move/Rename Command</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>mv -v</strong> (<strong>sudo mv -v</strong>, if source file or folder or destination folder is not owned by user)</div>
+          <div class="table-cell">Move or rename file or folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>mv -v test test2</strong> (Rename file test owned by user in current folder owned by user to test2)</li>
+              <li><strong>mv -v test Documents/.</strong> (Move file test owned by user in current folder to Documents folder owned by user in current folder)</li>
+              <li><strong>sudo mv -v test /usr/.</strong> (Move file test in current folder to usr folder in root folder not owned by user)</li>
+              <li><strong>mv Documents/* Downloads/.</strong> (Move contents of Documents folder owned by user in current folder to Downloads folder owned by user in current folder)</li>
+              <li><strong>sudo mv -v /etc /etc_bak</strong> (Rename etc folder not owned by user in root folder not owned by user to etc_bak in root folder not owned by user)</li>
+              <li><strong>mv -v Music Downloads/mymusic</strong> (Move Music folder owned by user in current folder to Downloads folder owned by user in current folder and rename to mymusic)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Copy Command</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>cp -v</strong> (<strong>sudo cp -v</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell">Copy file</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>cp -v test test2</strong> (Copy file test in current folder to current folder owned by user and name test2)</li>
+              <li><strong>cp -v test Documents/.</strong> (Copy file test in current folder to Documents folder owned by user in current folder)</li>
+              <li><strong>sudo cp -v test /.</strong> (Copy file test in current folder to root folder not owned by user)</li>
+              <li><strong>cp -v Documents/* Downloads/.</strong> (Copy contents of Documents folder in current folder to Downloads folder owned by user in current folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>cp -vr</strong> (<strong>sudo cp -vr</strong>, if destination folder is not owned by user)</div>
+          <div class="table-cell">Copy folder</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>cp -vr Documents Downloads/.</strong> (Copy Documents folder in current folder to Downloads folder owned by user in current folder)</li>
+              <li><strong>sudo cp -vr my_etc /etc_bak</strong> (Copy my_etc folder in current folder to root folder not owned by user and name etc_bak)</li>
+              <li><strong>cp -vr Music /var/mymusic</strong> (Copy Music folder in current folder to var folder not owned by user in root folder and name mymusic)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Delete Command</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>rm -v</strong> (<strong>sudo rm -v</strong>, if file is not owned by user)</div>
+          <div class="table-cell">Delete file</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>rm -v test</strong> (Delete file test in current folder owned by user)</li>
+              <li><strong>rm -v Documents/test</strong> (Delete file test owned by user in Documents folder in current folder)</li>
+              <li><strong>sudo rm -v /etc/test</strong> (Delete file test not owned by user in etc folder in root folder)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>rm -vrf</strong> (<strong>sudo rm -vrf</strong>, if folder or its contents are not owned by user)</div>
+          <div class="table-cell">Delete folder and its contents</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>rm -vrf Downloads/.</strong> (Delete Downloads folder and all of its contents owned by user in current folder)</li>
+              <li><strong>rm -vrf Music/playlist</strong> (Delete playlist folder and all of its contents owned by user in Music folder in current folder)</li>
+              <li><strong>sudo rm -vrf /opt/test</strong> (Delete test folder and all of its contents not owned by user in opt folder in root folder)</li>
+              <li><strong>sudo rm -vrf /</strong> (Delete root folder and all of its contents not owned by user; this command should never be run as it will delete everything on the file system)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>File Retrieval Commands</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray; font-weight: bold">
+          <div class="table-cell">Command</div>
+          <div class="table-cell">Function</div>
+          <div class="table-cell">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>sudo find</strong></div>
+          <div class="table-cell">Find file or folder by name</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>sudo find . -name test</strong> (Search in current folder and all sub-folders for any file with name test)</li>
+              <li><strong>sudo find / -name test</strong> (Search in root folder and all sub-folders for any file with name test)</li>
+              <li><strong>sudo find /etc -iname test</strong> (Search case-insensitive in etc folder in root folder and all sub-folders for any file with name test)</li>
+              <li><strong>sudo find . -iname *test*</strong> (Search case-insensitive in current folder and all sub-folders for any file or folder with name containing string test)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell"><strong>grep</strong></div>
+          <div class="table-cell">Find text file by contents</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>grep test .</strong> (Search in current folder for any text file containing string test)</li>
+              <li><strong>grep -i test /</strong> (Search case-insensitive in root folder for any text file containing string test)</li>
+              <li><strong>grep -R test ~</strong> (Search in home folder and all sub-folders for any text file containing string test)</li>
+              <li><strong>grep -iR test /bin</strong> (Search case-insensitive in bin folder in root folder and all sub-folders for any text file containing string test)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Regex File Retrieval Command</h2>
+      <div class="table print-smaller">
+        <div class="table-row" style="background-color: lightgray">
+          <div class="table-cell" style="font-weight: bold">Command</div>
+          <div class="table-cell" style="font-weight: bold">Function</div>
+          <div class="table-cell" style="font-weight: bold">Examples</div>
+        </div>
+        <div class="table-row" style="background-color: white">
+          <div class="table-cell"><strong>egrep</strong></div>
+          <div class="table-cell">Find text file by contents using regular expressions</div>
+          <div class="table-cell">
+            <ul>
+              <li><strong>egrep '[0-9]{3}-[0-9]{4}' .</strong> (Search in current folder for any text file containing a seven-digit phone number XXX-XXXX)</li>
+              <li><strong>egrep '[A-Za-z]+ [0-9]{1,2}, [0-9]{4}' /</strong> (Search in root folder for any text file containing a date formatted Month Day, Year)</li>
+              <li><strong>egrep -R '[0-9]{1},[0-9]{3},[0-9]{3}' ~</strong> (Search in home folder and all sub-folders for any text file containing a number in the millions)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>Regex Primer</div>
+      <div class="flex-row top">
+        <div class="flex-item" style="max-width: 55%">
+          <div>Characters</div>
+          <div class="table">
+            <div class="table-row" style="background-color: lightgray; font-weight: bold">
+              <div class="table-cell">Expression</div>
+              <div class="table-cell">Definition</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">[a-z]</div>
+              <div class="table-cell">Any lowercase letter</div>
+            </div>
+            <div class="table-row" style="background-color: lightgray">
+              <div class="table-cell">[A-Z]</div>
+              <div class="table-cell">Any uppercase letter</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">[0-9]</div>
+              <div class="table-cell">Any single digit</div>
+            </div>
+            <div class="table-row" style="background-color: lightgray">
+              <div class="table-cell" style="white-space: nowrap">[A-Za-z0-9-_]</div>
+              <div class="table-cell">Any uppercase or lowercase letter, single digit, hyphen, or underscore</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item">
+          <div>Quantifiers</div>
+          <div class="table">
+            <div class="table-row" style="background-color: lightgray; font-weight: bold">
+              <div class="table-cell">Expression</div>
+              <div class="table-cell">Definition</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">+</div>
+              <div class="table-cell">One or more times</div>
+            </div>
+            <div class="table-row" style="background-color: lightgray">
+              <div class="table-cell">*</div>
+              <div class="table-cell">Zero or more times</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">?</div>
+              <div class="table-cell">Zero or one time</div>
+            </div>
+            <div class="table-row" style="background-color: lightgray">
+              <div class="table-cell">{3}</div>
+              <div class="table-cell">Exactly 3 times</div>
+            </div>
+            <div class="table-row" style="background-color: white">
+              <div class="table-cell">{3,5}</div>
+              <div class="table-cell">3 or 5 times</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../reveal.js/dist/reveal.js"></script>
+  <script src="../js/slides.js"></script>
+</body>
+</html>

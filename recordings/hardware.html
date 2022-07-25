@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Hardware</title>
+
+  <meta name="author" content="Joshua G. Coyne, PhD">
+  <link rel="icon" href="../images/logo.png" type="image/x-icon" sizes="32x32">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/dist/theme/sky.css" id="theme">
+
+  <!-- Personalized CSS -->
+  <link rel="stylesheet" href="../css/slides.css">
+</head>
+
+<body>
+  <div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>Hardware</h1>
+    </section>
+
+    <section>
+      <h2>Accounting Architecture</h2>
+      <div class="flex-row">
+        <div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
+        <div class="flex-item" style="max-width: 65%">
+          <p>The Information section of the accounting architecture framework explains what a system should <em>do</em>. The Technology section explains what a system should <em>be</em>. Although the information life cycle can apply to both digital and non-digital information systems, the Technology section focuses on the components of a digital information system. The reason for this focus should be clear: enterprise-grade information systems are digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technology Roadmap</h2>
+      <p>The Technology section of the accounting architecture framework comprises four aspects of information technology:</p>
+      <ol>
+        <li><u><em>Hardware</em></u>: physical components of the information system</li>
+        <li><u><em>Software</em></u>: operating systems, programming languages, and applications</li>
+        <li><u><em>Storage</em></u>: data stores</li>
+        <li><u><em>Services</em></u>: networking and cloud computing</li>
+      </ol>
+      <p>All four aspects are interdependent, and each plays a vital role in enterprise-grade information systems. Hardware is the most basic and foundational part of an information system. Without hardware, nothing else is possible, although some interesting exceptions to this rule exist...</p>
+    </section>
+
+    <section>
+      <h2>Who Cares?</h2>
+      <p>It may be easy for accountants to intuit the importance of the Compliance and Business Model blocks of the Environment section because these relate directly to traditional accounting tasks. The value of understanding the information life cycle may be somewhat less obvious but still related to the familiar accounting roles of recording transactions and reporting business information. On the other hand, the Technology section may seem irrelevant to accountants because information technology is the purview of a completely separate profession. However, in order to ensure that the information system fills its intended roles, accounting architects must understand what tools allow an information system to fill its intended roles. To use an analogy, it is insufficient to know how the puzzle should look, if the builder cannot identify the correct pieces.</p>
+    </section>
+
+    <section>
+      <h2>What It's Made Of</h2>
+      <p>An information system is an accumulation of different types of computing devices. Users interact with information systems via laptops, workstations (i.e., personal computers), mobile devices, wearables, etc. Information systems also include back-end servers to make content available to users that is not stored on their personal computing devices. The specific roles of these hardware devices is the focus of the Services block of accounting architecture. Although these devices look different and serve different purposes, the hardware inside of them is actually quite similar. As a result, understanding the make-up of even one computing device in an information system can go a long way toward understanding the hardware make-up of an entire information system.</p>
+    </section>
+
+    <section>
+      <h2>Learning by Doing</h2>
+      <p>Understanding the components of a single computing device is a useful first step toward understanding the components of an information system. Pretending to build a computer is a useful method for learning the components of a computing device and discovering what each component does. Even though this method includes a discussion of some hardware components that are mostly irrelevant to accountants, after completing this walkthrough, a computer ceases to be a black box and instead becomes a collection of interconnected tools in the hands of an accounting architect.</p>
+    </section>
+
+    <section>
+      <h2>What to Build</h2>
+      <p>For the purpose of demonstrating the hardware components of a sample computing device, workstations and servers are excellent candidates for three reasons. First, the hardware make-up of both workstations and servers are essentially identical and simpler to understand than some other computing devices. Second, because these are much larger than mobile or wearable devices, the individual components are more easily recognized and studied. Third, the general hardware make-up of servers and workstations has not changed in decades, so many information systems include computers similar to what this walkthrough will demonstrate.</p>
+    </section>
+
+    <section>
+      <h2>Ingredients List</h2>
+      <p>Depending on its function, a server or workstation may not need all of these components, but it often includes the following:</p>
+      <ol style="display: inline-block; font-weight: bold">
+        <li>Central Processing Unit (CPU)</li>
+        <li>Motherboard</li>
+        <li>Random-access Memory (RAM)</li>
+        <li>Storage Drive</li>
+        <li>Graphics Processing Unit (GPU)</li>
+        <li>Power Supply Unit (PSU)</li>
+        <li>Case</li>
+      </ol>
+      <p>It is not necessary to build a computer in this order, but the components are interrelated, and this list places the more important components higher up.</p>
+    </section>
+
+    <section>
+      <h2>Central Processing Unit</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 70%">
+          <p>The <em><u>central processing unit</u></em> (CPU) carries out the computer instructions by fetching data from memory, performing an operation on the data, and returning the result of the operation to memory. This is the brain of the computer, and the computer's ability to process data is primarily driven by how powerful the CPU is. No other hardware component can compensate for a CPU that provides insufficient processing power. Important considerations when choosing a CPU are <u><em>architecture</em></u> and <u><em>speed</em></u>.</p>
+        </div>
+      <!--License: CC-BY-SA 2.0 Attribution: Andrew Dunn-->
+        <div class="flex-item"><img src="../images/cpu.jpg" alt="CPU" style="max-height: 250px"/></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Architecture</h2>
+      <p>The manner in which the CPU interprets computer instructions depends on the <u><em>instruction set architecture</em></u> (ISA). The ISA is the set of operations the CPU can perform on the data it has fetched. Software that runs on one architecture is inherently incompatible (i.e., will not run) with any other. Since the inception of the CPU, manufacturers have offered many different architectures, but currently, two are the most prominent: x86 and ARM. x86 processors rely on <u><em>complex instruction set computing</em></u> (CISC) instruction set architecture, whereas ARM processors utilize the more limited <u><em>reduced instruction set computing</em></u> (RISC) instruction set architecture.</p>
+    </section>
+
+    <section>
+      <h2>X86 and ARM</h2>
+      <p>In 1978, Intel released the 8086 processor, which launched the x86 line of processors which Intel continues to offer as the most popular architecture in personal computers and many servers. Advanced Micro Devices is also well known for their x86-compatible lines of processors.</p>
+      <p>Unlike Intel, SoftBank and its subsidiary ARM Holdings are not manufacturers. Instead, they license their intellectual property to other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. Because of the smaller instruction set, ARM processors require less electricity than x86 processors, which makes them the popular choice for mobile devices.</p>
+    </section>
+
+    <section>
+      <h2>Word Length</h2>
+      <p>Computer processing also depends on <u><em>word length</em></u> or the number of bits the CPU can process at once. The longer the word length, the more data the CPU can process at the same time. Most processors sold currently have 64-bit word length. The 64-bit architecture is frequently labeled by the abbreviation x64 or x86_64 to signify its x86 ISA or ARM64 to signify its ARM ISA. Until recently, the most common processor word length was 32 bits, and despite the transition to 64-bit processors, surprisingly, many software applications continue to be written for 32-bit processors. The transition to 64-bit processors has both increased processing power and overcome multiple limitations faced by 32-bit processors.</p>
+    </section>
+
+    <section>
+      <h2>Limitations</h2>
+      <p>One of the limitations of 32-bit processors is that they only support 3.2 gigabytes of <u><em>random-access memory</em></u> (RAM). Prior to the introduction of 64-bit processors, manufacturers would add <u><em>physical address extension</em></u> to 32-bit processors that would remove the 3.2 GB cap. 64-bit processors, on the other hand, can accommodate up to 16 exabytes of memory.</p>
+      <p>Compatibility is another limitation. Just as software written for one ISA is incompatible with another, software written for one word length is incompatible with another. Software written for x86_64 or ARM64 will not run on their 32-bit counterparts. Fortunately, with some help, software written for x86 or ARM can run on their 64-bit counterparts.</p>
+    </section>
+
+    <section>
+      <h2>Real-world Problem</h2>
+      <p>Unfortunately, the limitations of 32-bit word length extend beyond processing speed and memory caps. Before the year 2000, in order to conserve data storage, software applications relied on two-digit years. As a result, it was not clear how computers would interpret 00 on January 1, 2000. This was known at the Y2K bug. The Y2K38 bug is similar. 32-bit applications count time in seconds starting on January 1, 1970, and will not be able to report time past 03:14:08 on January 19, 2038. A transition to 64-bit timestamps is necessary to overcome this limitation.</p>
+      <img class="print-centered" src="../images/Year_2038_problem.gif" alt="Y2K38"/>
+    </section>
+
+    <section>
+      <h2>How Fast?</h2>
+      <p>Both word length and instruction set affect the efficiency and speed of a processor, but the common measures of processor speed are <u><em>clock speed</em></u> and <u><em>instructions per second</em></u> or <u><em>floating-point operations per second</em></u> (FLOPS). The most familiar of these is clock speed or the number of cycles per second, which is calculated in Hertz. This is the metric used in computer and CPU advertisements. A cycle is the period of time in which the processor can execute an instruction. Because processors may be able to execute more than one instruction per cycle, a more useful measure of performance may be instructions per second which is the product of clock speed and instructions per cycle.</p>
+    </section>
+
+    <section>
+      <h2>Multi-core Processors</h2>
+      <p>CPU clock speeds have increased dramatically in the last three decades. However, it is not possible to increase clock speed forever. Moore's Law predicts that processor performance would double every 18 months, but it would not be possible to keep up with this prediction by increasing the power of a single processor. Instead, manufacturers add additional CPUs to one computer or additional cores to a single CPU to improve performance with <u><em>parallel processing</em></u>. Current CPUs can have as many as ten or more cores. The theoretical upper bound of the FLOPS of a multi-core processor is the FLOPS of a single core multiplied by the number of cores, but realized performance is always less because of both hardware and software constraints.</p>
+    </section>
+
+    <section>
+      <h2>Motherboard</h2>
+        <!--License: CC-BY-SA Attribution: Moxfyre at en.wikipedia-->
+        <div class="override"><img class="print-centered" src="../images/motherboard.png" alt="Motherboard" style="max-height: 600px"/></div>
+    </section>
+
+    <section>
+      <h2>Keeping It All Together</h2>
+        <p>The second component to select is the <u><em>motherboard</em></u>. The motherboard is a circuit board that holds the system components and allows communication between them. Most motherboards also maintain a hardware clock so that the computer can keep time while turned off. Some motherboards also include integrated audio and network chips, as well as audio, video, and network connectors for speakers, monitors, microphones, network cables, etc. These additional motherboard components conveniently reduce the number of additional components necessary to build a complete computer. The type of <u><em>CPU socket</em></u> restricts the number of available motherboards because different CPUs fit into different sockets.</p>
+    </section>
+
+    <section>
+      <h2>Never Forget</h2>
+      <p>In addition to a CPU, each computer requires <u><em>random-access memory</em></u> (RAM). RAM, frequently referred to simply as memory, is a type of volatile computer storage&mdash;volatile means that it requires electricity to store data&mdash;that allows for fast retrieval of data. The greater the amount of memory, the faster the computer can operate because it can store more data in this fast-retrieval repository. Currently, RAM takes on the form of double data rate synchronous dynamic random-access memory (DDR SDRAM). The motherboard determines RAM <u><em>size</em></u>, <u><em>capacity</em></u>, and <u><em>speed</em></u>.</p>
+      <!--License: CC-BY 2.5 Attribution: Royan-->
+      <img class="print-centered" src="../images/ram.jpg" alt="RAM" style="max-height: 150px"/>
+    </section>
+
+    <section>
+      <h2>Multiplicity</h2>
+      <p>An individual stick of memory comes in two sizes: dual in-line memory module (DIMM) or small outline dual in-line memory module (SO-DIMM). The former is generally for motherboards in workstations and servers, and the latter is for motherboards in notebooks, smaller form-factor personal computers, and network hardware. The motherboard's memory slots also determine maximum memory capacity and speed. Memory sticks commonly have capacities of 2GB, 4GB, 8GB or 16GB, and motherboards generally have slots for either two or four memory sticks. It is not necessary to fill all slots, nor is it necessary for all sticks to have the same capacity or speed. The computer will have access to the total sum of memory across all sticks; however, the computer will function at the speed of the slowest DIMM.</p>
+    </section>
+
+    <section>
+      <h2>Two Limitations</h2>
+      <p>The purpose of RAM is to provide the CPU with a fast data store. However, RAM has two limitations. First, volatility creates risk. Anything stored on RAM is lost if the computer loses power. As a result, RAM is not the best choice for permanent data storage, and computers with large amounts of RAM often find much of the memory completely unused because the computer can only use a relatively small amount of temporary storage at a time.</p>
+      <p>Second, fast is simply not fast enough. Although RAM allows for fast data retrieval, it cannot supply data to the CPU as fast as the CPU can process it, so RAM always creates a bottleneck for computer processing. Selecting a motherboard that supports faster RAM can help to reduce this bottleneck.</p>
+    </section>
+
+    <section>
+      <h2>Hard &ne; Solid</h2>
+      <div class="flex-row">
+        <div class="flex-item" style="max=width: 65%">
+          <p>In addition to volatile storage, a computer needs non-volatile storage. Traditionally, non-volatile storage took the form of <u><em>hard disk drives</em></u> (HDD), which had multiple magnetized spinning disks and an arm to read those disks. Recently, <u><em>solid-state drives</em></u> (SSD) have become increasingly popular. Solid-state drives generally use NAND flash memory, instead of disks, and can read and write data much more quickly. The speed with which the motherboard can access data from the drive is calculated in gigabits per second.</p>
+        </div>
+        <!--License: CC-BY-SA 3.0 Attribution: Evan-Amos-->
+        <div class="flex-item">
+          <img src="../images/hdd.jpg" alt="HDD" style="margin-bottom: 30px"/>
+        <!--License: CC-BY-SA 3.0 Attribution: D-Kuru-->
+          <img src="../images/ssd.jpg" alt="SSD"/>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Swapping</h2>
+      <p>Although many computer devices have more RAM than is necessary, some devices, especially in past decades, have insufficient RAM for some heavier computing tasks. Virtual memory overcomes this problem by reserving a portion of a non-volatile storage drive as secondary memory, called <u><em>swap space</em></u>. If the physical memory becomes full, the operating system can move some of the data stored in physical memory to the swap space in order to free up physical memory in a process called <u><em>paging</em></u> or <u><em>swapping</em></u>. Unfortunately, accessing data from storage drives is very slow, and the computer can become unresponsive. One additional benefit of swap space is the ability to hibernate computers because hibernation requires transferring all data in RAM to non-volatile storage until the computer is awakened.</p>
+    </section>
+
+    <section>
+      <h2>Seeing is Believing</h2>
+      <p>Although not necessary, many computers also contain a video card. These cards contain their own processing unit, called a graphical processing unit (GPU) and their own RAM (GDDR or SGRAM). These cards can draw graphical applications more quickly than a CPU. Many current computers require no video card because newer processors (e.g. i3 Intel processors) have both CPU cores and GPU cores. Graphics cards contain ports for connecting monitors, and motherboards also contain these ports for use with CPU-integrated graphics. Servers, which generally use no graphical applications, generally need no graphics card or GPUs.</p>
+    </section>
+
+    <section>
+      <h2>Coprocessors</h2>
+      <p>GPUs are one form of <u><em>coprocessor</em></u>, meaning they process data alongside the CPU. Because graphics cards generally have many GPU cores (100+), whereas CPUs frequently have between 2 and 8 cores, GPUs are useful for repeatedly performing simple operations. The GPU cores cannot perform many of the complex tasks that CPUs can handle, but their ability to share simple tasks across a plethora of cores allows them to perform some tasks more efficiently than their CPU counterparts, such as drawing graphics and analyzing data. This is particularly useful for Big Data analytics, which involves repetitious processing of bits of data. Another form of coprocessor is the AI processor, which provides devices with artificial intelligence capabilities, such as human language recognition.</p>
+    </section>
+
+    <section>
+      <h2>Powering It All</h2>
+      <div class="flex-row">
+        <!--License: CC-BY-SA 3.0 Attribution: Danrok-->
+        <div class="flex-item"><img src="../images/psu.jpg" alt="Power Supply" style="max-height: 200px"/></div>
+        <div class="flex-item" style="max-width: 65%">
+          <p>All computer components need electricity. A <u><em>power supply unit</em></u> (PSU) provides that electricity by connecting directly to storage drives and indirectly to the components through the motherboard. Different computers with different CPUs, GPUs, RAM, etc., require different amounts of electricity, but for a standard workstation or server 600 watts can suffice. Providing insufficient electricity will cause the computer to malfunction, but it can also damage the individual components.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Boxing It Up</h2>
+      <p>A computer case encloses the computer components in a single metal or plastic shell. It provides a convenient method for storing all the components together, as well as protecting them. A case is also nicer looking than a collection of loose computer parts. Beyond aesthetics, two primary considerations when selecting a case are (1) motherboard and PSU size and (2) rackability. Rackability applies primarily to servers. Server racks are specially designed closets for storing computers in thin cases. One convenience of server racks is the ability to stack dozens of computers on top of each other to save space. Racks may additionally include locked doors to restrict physical access to the servers.</p>
+    </section>
+
+    <section>
+      <h2>Too Hot</h2>
+      <p>As computers work, they generate heat and require cooling fans. Motherboards include holes for mounting a fan above a CPU, and graphics cards and PSUs have their own cooling fans. Computer cases may also have additional fans for venting the interior of the case. However, for some devices (e.g., mobile devices), users would not want fan noise. Instead, these devices can use heatsinks, which are metal filters which silently wick heat away these devices. Also, SSDs are silent alternatives to the spinning disks in an HDD.</p>
+        <!--License: GFDL 1.2 Attribution: fir0002-->
+        <img class="print-centered" src="../images/heatsink.jpg" alt="Heatsink" style="max-height: 225px"/>
+    </section>
+
+    <section>
+      <h2>How Would This Be Different for Mobile Devices?</h2>
+      <p>Although mobile devices, such as smartphones and tablets, include the same set of components as workstations and servers, the configuration looks different on the inside to conserve on space and energy. For example, instead of including a CPU, DIMMs of memory, and a graphics card, these devices have a <u><em>System on a Chip</em></u> (SoC), in which CPU cores, memory, GPU cores, and sometimes cell radios, are combined into a single chip. Many, though not all, of these use ARM processors because they further reduce energy consumption and generate less heat. However, Intel has fervently reduced the energy gap between x86 and ARM processors in an attempt to become more attractive to manufacturers of mobile devices.</p>
+    </section>
+
+    <section>
+      <h2>SoC is for SBC</h2>
+      <p>One common use for System on a Chip is Single Board Computers (SBCs). SBC motherboards have all components (CPU, GPU, RAM, etc.) soldered onto the board. These take less space and use less energy than traditional motherboards. Tablets and smartphones use SBCs, but the most prominent example of an SBC is the Raspberry Pi, which was designed as an inexpensive computer to increase students' ability to learn computer programming. Since 2012, more than 5 million units have sold.</p>
+      <!--License: CC-BY-SA 4.0 Attribution: Multicherry-->
+      <img class="print-centered" src="../images/raspberrypi.jpg" alt="Raspberry Pi" style="max-height: 200px"/>
+    </section>
+
+    <section>
+      <h2>Just a Springboard</h2>
+      <p>Hardware is the first step in designing the technology of an information system, but it is just a vessel. The hardware sets some limitations on what the information system can do, but the information system needs more in order to unlock the power of the computer hardware. Software unlocks the processing power, Storage utilizes the storage drive, and Services leverage networks to allow computers to communicate with one another. Accounting architecture combines all four blocks of the Technology section into a fully functional information system.</p>
+    </section>
+  </div>
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../reveal.js/dist/reveal.js"></script>
+  <script src="../js/slides.js"></script>
+</body>
+</html>
