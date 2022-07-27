@@ -5,7 +5,7 @@
 
   <title>Hardware</title>
 
-  <meta name="author" content="Joshua G. Coyne, PhD">
+  <meta name="author" content="Joshua G. Coyne, Ph.D., CISA">
   <link rel="icon" href="../images/logo.png" type="image/x-icon" sizes="32x32">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,18 +36,6 @@
           <p>The Information section of the architecture framework explains what a system should <em>do</em>. The Technology section explains what a system should <em>be</em>. Although the information life cycle can apply to both digital and non-digital information systems, the Technology section focuses on the components of a digital information system. The reason for this focus should be clear: enterprise-grade information systems are digital.</p>
         </div>
       </div>
-    </section>
-
-    <section>
-      <h2>Technology Roadmap</h2>
-      <p>The Technology section of the architecture framework comprises four aspects of information technology:</p>
-      <ol>
-        <li><u><em>Hardware</em></u>: physical components of the information system</li>
-        <li><u><em>Software</em></u>: operating systems, programming languages, and applications</li>
-        <li><u><em>Storage</em></u>: data stores</li>
-        <li><u><em>Services</em></u>: networking and cloud computing</li>
-      </ol>
-      <p>All four aspects are interdependent, and each plays a vital role in enterprise-grade information systems. Hardware is the most basic and foundational part of an information system. Without hardware, nothing else is possible, although some interesting exceptions to this rule exist...</p>
     </section>
 
     <section>
@@ -82,18 +70,17 @@
 
     <section>
       <h2>Central Processing Unit</h2>
-      <p>The <em><u>central processing unit</u></em> (CPU) carries out the computer instructions by fetching data from memory, performing an operation on the data, and returning the result of the operation to memory. This is the brain of the computer, and the computer's ability to process data is primarily driven by how powerful the CPU is. No other hardware component can compensate for a CPU that provides insufficient processing power. Important considerations when choosing a CPU are <u><em>architecture</em></u> and <u><em>speed</em></u>.</p>
+      <div class="flex-row">
+        <div class="flex-item" style="max-width: 70%">
+          <p>The <em><u>central processing unit</u></em> (CPU) carries out the computer instructions by fetching data from memory, performing an operation on the data, and returning the result of the operation to memory. This is the brain of the computer, and the computer's ability to process data is primarily driven by how powerful the CPU is. No other hardware component can compensate for a CPU that provides insufficient processing power. Important considerations when choosing a CPU are <u><em>architecture</em></u> and <u><em>speed</em></u>.</p>
+        </div>
+        <div class="flex-item"><img src="../images/pexels-pixabay-40879.jpg" alt="CPU" style="max-height: 250px"/></div>
+      </div>
     </section>
 
     <section>
       <h2>ISA</h2>
       <p>The manner in which the CPU interprets computer instructions depends on the <u><em>instruction set architecture</em></u> (ISA). The ISA is the set of operations the CPU can perform on the data it has fetched. Software that runs on one architecture is inherently incompatible (i.e., will not run) with any other. Since the inception of the CPU, manufacturers have offered many different architectures, but currently, two are the most prominent: x86 and ARM. x86 processors rely on <u><em>complex instruction set computing</em></u> (CISC) instruction set architecture, whereas ARM processors utilize the more limited <u><em>reduced instruction set computing</em></u> (RISC) instruction set architecture.</p>
-    </section>
-
-    <section>
-      <h2>X86 and ARM</h2>
-      <p>In 1978, Intel released the 8086 processor, which launched the x86 line of processors which Intel continues to offer as the most popular architecture in personal computers and many servers. Advanced Micro Devices is also well known for their x86-compatible lines of processors.</p>
-      <p>Unlike Intel, SoftBank and its subsidiary ARM Holdings are not manufacturers. Instead, they license their intellectual property to other manufacturers, such as Broadcom, Qualcomm, Samsung, Freescale, etc. Because of the smaller instruction set, ARM processors require less electricity than x86 processors, which makes them the popular choice for mobile devices.</p>
     </section>
 
     <section>
@@ -128,8 +115,14 @@
     </section>
 
     <section>
+      <h2>Motherboard</h2>
+      <div class="override"><img class="print-centered" src="../images/pexels-athena-2582935.jpg" alt="Motherboard" style="max-height: 600px"/></div>
+    </section>
+
+    <section>
       <h2>Never Forget</h2>
       <p>In addition to a CPU, each computer requires <u><em>random-access memory</em></u> (RAM). RAM, frequently referred to simply as memory, is a type of volatile computer storage&mdash;volatile means that it requires electricity to store data&mdash;that allows for fast retrieval of data. The greater the amount of memory, the faster the computer can operate because it can store more data in this fast-retrieval repository. Currently, workstation RAM often takes on the form of double data rate synchronous dynamic random-access memory (DDR SDRAM) or its low-powered counterpart (LPDDR SDRAM). The motherboard determines RAM <u><em>size</em></u>, <u><em>capacity</em></u>, and <u><em>speed</em></u>.</p>
+      <img class="print-centered" src="../images/pexels-andrey-matveev-6373758.jpg" alt="RAM" style="max-height: 150px"/>
     </section>
 
     <section>
@@ -146,6 +139,7 @@
     <section>
       <h2>Hard &ne; Solid</h2>
       <p>In addition to volatile storage, a computer needs non-volatile storage. Traditionally, non-volatile storage took the form of <u><em>hard disk drives</em></u> (HDD), which had multiple magnetized spinning disks and an arm to read those disks. Recently, <u><em>solid-state drives</em></u> (SSD) have become increasingly popular. Solid-state drives generally use non-volatile flash memory, instead of disks, and can read and write data much more quickly. SSDs are silent alternatives to the spinning disks in an HDD. The speed with which the motherboard can access data from the drive is calculated in gigabits per second.</p>
+      <img src="../images/pexels-pixabay-33278.jpg" alt="HDD" style="max-height: 175px"/>
     </section>
 
     <section>
@@ -176,6 +170,7 @@
     <section>
       <h2>Too Hot</h2>
       <p>As computers work, they generate heat and require cooling fans. Motherboards include holes for mounting a fan above a CPU, and graphics cards and PSUs have their own cooling fans. Computer cases may also have additional fans for venting the interior of the case. However, for some devices (e.g., mobile devices), users would not want fan noise. Instead, these devices can use heatsinks, which are metal filters which silently wick heat away these devices.</p>
+      <img class="print-centered" src="../images/pexels-armando-are-6385892.jpg" alt="Fan" style="max-height: 225px"/>
     </section>
 
     <section>
@@ -186,6 +181,7 @@
     <section>
       <h2>SoC is for SBC</h2>
       <p>One common use for System on a Chip is Single Board Computers (SBCs). SBC motherboards have all components (CPU, GPU, RAM, etc.) soldered onto the board. These take less space and use less energy than traditional motherboards. Tablets and smartphones use SBCs, but one intriguing example of an SBC is the Raspberry Pi, which was designed as an inexpensive computer to increase students' ability to learn computer programming. Since 2012, more than 30 million units have sold.</p>
+      <img class="print-centered" src="../images/pexels-alessandro-oliverio-1472443.jpg" alt="Raspberry Pi" style="max-height: 200px"/>
     </section>
 
     <section>
