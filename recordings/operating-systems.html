@@ -5,7 +5,7 @@
 
   <title>Operating Systems</title>
 
-  <meta name="author" content="Joshua G. Coyne, PhD">
+  <meta name="author" content="Joshua G. Coyne, Ph.D., CISA">
   <link rel="icon" href="../images/logo.png" type="image/x-icon" sizes="32x32">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,11 +36,6 @@
           <p>Software is a fundamental part of technology. Software performs all of the automated tasks and facilitates the manual tasks in the information system. Software stores and retrieves data; software analyzes and generates reports. Without software, none of the other technology components could serve their intended purpose. The <u><em>operating system</em></u> (OS) is a fundamental piece of software. It provides a platform for the functionality of the information system.</p>
         </div>
       </div>
-    </section>
-
-    <section>
-      <h2>Nothing &lsquo;Just Works&rsquo;</h2>
-      <p>Users of personal computers and mobile devices frequently report that their motivation for selecting a particular operating system or platform was that it &ldquo;just works.&rdquo; This is sufficient for an end user because the purpose of the operating system is to facilitate the functionality of the information system by getting out of the user's way. The user should be as little aware of the operating system as possible, and in many situations, especially with Web content, the user never interacts with the operating system at all. An accounting architect, on the other hand, must direct the operating system to meet the users' needs. As a result, the ability to participate in systems design and maintenance relies in large part on familiarity with enterprise-grade operating systems. </p>
     </section>
 
     <section>
@@ -81,12 +76,6 @@
     </section>
 
     <section>
-      <h2>OS Importance</h2>
-      <p>DARPA's decision to fund Berkeley's CSRG highlights the importance of the operating system's capabilities for facilitating an information system. When DARPA approached the CSRG, no operating system existed that would have supported the ARPAnet experiment. DARPA had reason to believe that BSD UNIX would be the best candidate to provide the necessary functionality.</p>
-      <p>Selecting the right operating system may have been more crucial then because operating systems differed more significantly, but today, companies continue to make similar evaluations. The majority have concluded that open source provides the best operating system for their specific information system needs.</p>
-    </section>
-
-    <section>
       <h2>An Open Standard</h2>
       <p>Despite the appeal of both System V UNIX and BSD UNIX, disputes arose between the programming communities. In an attempt to reconcile differences, the Institute of Electrical and Electronics Engineers (IEEE) developed a set of <u><em>Portable Operating System Interface</em></u> (POSIX) standards based on System V UNIX which continue to govern UNIX and UNIX-like operating systems today. The list of POSIX-certified operating systems currently contains the three most prominent UNIX offerings: IBM AIX, HP-UX and Oracle Solaris. Although BSD is not POSIX-certified, it is mostly POSIX compliant. Today, the POSIX standard continues to be a valuable standard for enterprise-grade open source operating systems.</p>
     </section>
@@ -108,13 +97,7 @@
 
     <section>
       <h2>Operating System</h2>
-      <div class="flex-row">
-        <div class="flex-item" style="max-width: 75%">
-          <p>Operating systems include a <u><em>kernel</em></u> and <u><em>userland</em></u>. They also rely on two additional supporting tools: a <u><em>firmware interface</em></u> and a <u><em>bootloader</em></u>. In order to keep the operating system out of the user's way, many operating systems package the kernel, userland, and bootloader together. Linux and BSD are modular. They each only have one kernel, but they offer multiple different userland environments and bootloaders. Modularity is a key characteristic of an open system. It allows the users to create different systems by choosing different combinations of tools.</p>
-        </div>
-        <!--License: CC-BY-SA 3.0 Attribution: Golftheman-->
-        <div class="flex-item override"><img src="../images/operating_system.png" alt="Operating System" style="max-height: 450px"/></div>
-      </div>
+      <p>Operating systems include a <u><em>kernel</em></u> and <u><em>userland</em></u>. They also rely on two additional supporting tools: a <u><em>firmware interface</em></u> and a <u><em>bootloader</em></u>. In order to keep the operating system out of the user's way, many operating systems package the kernel, userland, and bootloader together. Linux and BSD are modular. They each only have one kernel, but they offer multiple different userland environments and bootloaders. Modularity is a key characteristic of an open system. It allows the users to create different systems by choosing different combinations of tools.</p>
     </section>
 
     <section>
@@ -132,10 +115,6 @@
     <section>
       <h2>Userland</h2>
       <p>Userland is the part of the operating system that the user interacts with. The user interacts with userland by means of the <u><em>shell</em></u>, which provides the user with either a text-based user interface, commonly referred to as a terminal or a console, or a graphical user interface (GUI). Almost all personal computers and mobile devices have graphical shells, but the vast majority of servers only have terminals. These shells receive commands from the user, and they provide user applications when requested.</p>
-      <div class="flex-row">
-        <div class="flex-item override"><img src="../images/bash.png" alt="Bash Shell" style="max-height: 250px; margin-top: 0"/></div>
-        <div class="flex-item override"><img src="../images/gnome.png" alt="GNOME Shell" style="max-height: 250px; margin-top: 0"/></div>
-      </div>
     </section>
 
     <section>
@@ -155,7 +134,7 @@
 
     <section>
       <h2>Command Line</h2>
-      <p>Linux graphical shells, also called desktop environments or window managers, function similarly to the graphical shells of other desktop operating systems. Much of the power of Linux is in the text shell, and system administrators almost exclusively use the command line in a terminal to manage Linux computers. Knowledge of Linux terminal commands is a valuable competency for an accounting architect. The most basic commands are the same across all Linux distributions, as well as BSD and UNIX. As a result, familiarity with a few line commands can immediately unlock basic functionality of most enterprise-grade operating systems. More advanced commands, such as how to control system daemons or the package manager, vary from distribution to distribution.</p>
+      <p>Linux graphical shells, also called desktop environments or window managers, function similarly to the graphical shells of other desktop operating systems. Much of the power of Linux is in the text shell, and system administrators almost exclusively use the command line in a terminal to manage Linux computers. Knowledge of Linux terminal commands is a valuable competency. The most basic commands are the same across all Linux distributions, as well as BSD and UNIX. As a result, familiarity with a few line commands can immediately unlock basic functionality of most enterprise-grade operating systems. More advanced commands, such as how to control system daemons or the package manager, vary from distribution to distribution.</p>
     </section>
 
     <section>
@@ -181,12 +160,6 @@
     </section>
 
     <section>
-      <h2>Putting It All Together</h2>
-      <!--License: CC-BY-SA 3.0 Attribution: Shmuel Csaba Otto Traian-->
-      <div class="override"><img src="../images/input-output-loop.png" alt="I/O Loop" style="max-height: 600px"/></div>
-    </section>
-
-    <section>
       <h2>Powering the Software</h2>
       <p>The operating system is a complex collection of kernel and userland tools. Designers and maintainers of information systems must understand operating system administration and functionality, but not for the sake of the operating system itself. The purpose of the operating system is to power the information system applications, provide data storage, and serve and process data for the users.</p>
       <p>Most companies have chosen Linux as the operating system of choice for their information system. The Linux kernel is one of the most successful open source projects. More than 13,000 developers contribute more than 4,500 lines of code per day. It powers the Android operating system and the Web services of Netflix, Amazon, Google, and many others.</p>
@@ -205,112 +178,6 @@
     <section>
       <h2>A Heads Up Would Have Been Nice</h2>
       <p>Tanenbaum, after hearing that his OS is now the most widely used in the world, simply said, &ldquo;This was a complete surprise. I don't mind, of course, and was not expecting any kind of payment since that is not required. There isn't even any suggestion in the license that it would be appreciated. The only thing that would have been nice is that after the project had been finished and the chip deployed, that someone from Intel would have told me, just as a courtesy, that MINIX was now probably the most widely used operating system in the world on x86 computers. That certainly wasn't required in any way, but I think it would have been polite to give me a heads up, that's all.&rdquo;</p>
-    </section>
-
-    <section>
-      <h2>Appendix:<br>Linux Commands for Software and Package Management</h2>
-    </section>
-
-    <section>
-      <h2>Software Management Commands</h2>
-      <p style="font-size: 30px">Apt is a DEB-based package manager. Although not all Linux distributions are DEB-based, simply knowing how to install and upgrade software on a DEB-based Linux distro is an excellent start to understanding how to manage, use, and interact with Linux:</p>
-      <div class="table wide-table print-smaller">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt update</strong></div>
-          <div class="table-cell">Update repository list to identify the newest version of all software packages</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt upgrade</strong></div>
-          <div class="table-cell">Upgrade all installed software packages to their newest versions</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>apt search</strong></div>
-          <div class="table-cell">Look for package in repositories</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>apt search music player</strong> (Find all software packages with the words music player in the name or description)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt install</strong></div>
-          <div class="table-cell">Install software package</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>sudo apt install mysql-server</strong> (Install software package named mysql-server)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>sudo apt remove</strong></div>
-          <div class="table-cell">Uninstall software package</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>sudo apt remove man-db</strong> (Uninstall software package named man-db)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Software Help Commands</h2>
-      <div class="table wide-table">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>which</strong></div>
-          <div class="table-cell">Print file path of a command to the terminal (or print nothing if the application containing that command is not installed)</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>which nano</strong> (Print file path to the nano command, e.g., /bin/nano, to terminal or print nothing if the nano application is not installed)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>man</strong></div>
-          <div class="table-cell">Open manual page for a command</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>man apt</strong> (Open manual page for the apt command)</li>
-              <li><strong>q</strong> (Close manual page)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p>(NB: The <strong>which</strong> command is most useful for determining whether an application is already installed. The path to the application is generally less useful, but whether <strong>which</strong> prints something or nothing to the terminal is a good test for whether an application is installed.)</p>
-    </section>
-
-    <section>
-      <h2>UNIX Philosophy</h2>
-      <p>The UNIX philosophy encourages software developers to make small programs that can perform a single task. The power of UNIX-like operating systems is in the ability to chain functions by passing the output of one program or file to another using certain special characters:</p>
-      <div class="table wide-table">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Character</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell"><strong>|</strong> (Called a &ldquo;pipe.&rdquo; Made by pressing SHIFT-Backslash)</div>
-          <div class="table-cell">Pass the output from one command to another</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>sudo apt update | less</strong> (Send the output of sudo apt update to the less command)</li>
-              <li><strong>echo "10+2" | bc</strong> (Send the text 10+2 to the bc command)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
   </div>
   </div>
