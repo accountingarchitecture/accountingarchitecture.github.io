@@ -5,7 +5,7 @@
 
   <title>Availability</title>
 
-  <meta name="author" content="Joshua G. Coyne, PhD">
+  <meta name="author" content="Joshua G. Coyne, Ph.D., CISA">
   <link rel="icon" href="../images/logo.png" type="image/x-icon" sizes="32x32">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,7 +29,7 @@
     </section>
 
     <section>
-      <h2>Accounting Architecture</h2>
+      <h2>Architecture</h2>
       <div class="flex-row">
         <div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
         <div class="flex-item" style="max-width: 65%">
@@ -105,8 +105,8 @@
     </section>
 
     <section>
-      <h2>One Thing Internal Auditors Do</h2>
-      <p>The level of acceptable risk from data loss and the resulting backup plan should not be determined by the employees responsible for making the backups. Instead, the backup plan should be part of a company's <u><em>disaster recovery plan</em></u> (DRP) or <u><em>business continuity plan</em></u> (BCP). These plans detail how to maintain an acceptable level of business operations during a disaster (e.g., natural disaster, network outage, fire, etc) and how to return to full operations after a disaster. Internal auditors are responsible for ensuring that BCPs and DRPs are designed to avoid unacceptably high levels of risk, and they are also responsible for testing these plans to ensure that they are up to date and would function as intended in case of a real emergency.</p>
+      <h2>One Thing IT Auditors Do</h2>
+      <p>The level of acceptable risk from data loss and the resulting backup plan should not be determined by the employees responsible for making the backups. Instead, the backup plan should be part of a company's <u><em>disaster recovery plan</em></u> (DRP) or <u><em>business continuity plan</em></u> (BCP). These plans detail how to maintain an acceptable level of business operations during a disaster (e.g., natural disaster, network outage, fire, etc) and how to return to full operations after a disaster. IT auditors are responsible for ensuring that BCPs and DRPs are designed to avoid unacceptably high levels of risk, and they are also responsible for testing these plans to ensure that they are up to date and would function as intended in case of a real emergency.</p>
     </section>
 
     <section>
@@ -165,159 +165,8 @@
     </section>
 
     <section>
-      <h2>Big Picture</h2>
-      <p>A complete cloud-based information system includes multiple components that satisfy the needs of both internal and external stakeholders by operationalizing the information life cycle or Big Data life cycle. First, externally facing, department-specific databases facilitate specialized data collection. Second, one large-scale data store receives a converted copy of the data from each first-stage database and stores it in a centralized location. Third, departments receive curated data back for analysis and reporting.</p>
-      <div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-    </section>
-
-    <section>
-      <h2>Acquisition</h2>
-      <p>One of the primary roles of cloud computing for a firm's information system is data acquisition. In many cases, this involves a customer-facing <u><em>online transaction processing</em></u> (OLTP) system. OLTP systems are database systems that support high-frequency online customer transactions, such as sales order creation or banking transactions. The primary purpose of an OLTP system is to ensure that an online system is always available to receive additional data.</p>
-      <div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-    </section>
-
-    <section>
-      <h2>Integration</h2>
-      <p>Because the OLTP systems can have different configurations, the data from each may not be in a uniform format. Before archiving the data, conversion is likely necessary. (This is in addition to any conversion that may be necessary prior to initial entry into the OLTP system.) The staging area provides an intermediate store where data is cleaned and converted. This process is called ETL (Extract, Transform, and Load).</p>
-      <div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-    </section>
-
-    <section>
-      <h2>Clean Up</h2>
-      <p>Expertise in data analytics is currently a desirable skill, but one of the precursors to useful data analytics is good data. One of the benefits of understanding the information life cycle is the ability to design systems that will ensure good data for analytics, but for pre-existing systems, sometimes the only solution is to take the data as given. As a result, data specialists confess that a large part of their job is cleaning data (e.g., looking for likely errors, finding duplicate data, matching records in one store with the records in another). It is not fun, but it is necessary.</p>
-      <div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-    </section>
-
-    <section>
-      <h2>Data Warehouse and Marts</h2>
-      <p>The <u><em>data warehouse</em></u> receives clean data from staging and stores it. <u><em>Data marts</em></u> are small warehouses that store department-specific data for analysis. The warehouse and marts serve two special purposes. First, they allow OLTP systems to remain unencumbered when performing resource-intensive data analysis. Second, they can store pre-calculated OLAP cubes and MapReduce statistics in addition to the original data.</p>
-      <div class="override"><img src="../images/warehouse.png" alt="Data Warehouse"/></div>
-    </section>
-
-    <section>
-      <h2>In Or Out?</h2>
-      <p>With an increase in desire and capacity to perform real-time data analytics, this traditional four-step data warehouse model has fallen out of favor. Some have even asserted that the data warehouse is a thing of the past, but this is likely an overstatement. Newer tools allow for real-time analysis of data on OLTP systems, and greater processing power has made this a possibility without overloading the OLTP system and making it unavailable for data acquisition. However, these tools have not completely replaced the need for data warehouses when analysis requires data from multiple OLTP systems; when the analysis requires resource-intensive pre-calculation, such as MOLAP or MapReduce; or when the answers sought are not needed in real time.</p>
-    </section>
-
-    <section>
       <h2>Only if It's Available</h2>
-      <p>Information and IT security are hot topics because of the frequency of cyber incidents, but many of these incidents threaten availability by bringing down systems and destroying data. In addition to losing business and access to valuable data for analytics, unavailable systems or data can pose compliance risks. Accounting regulation has strict rules about the preservation of accounting data. For example, tax authorities can audit the past three years' returns; financial statements require presentation of prior years' numbers for comparability; restatements or the adoption of new standards may require retroactive adjustments. Additionally, internal and external stakeholders have expectations regarding the availability of systems for data entry, retrieval, analysis, and use. Only available systems can make money.</p>
-    </section>
-
-    <section>
-      <h2>Appendix:<br>Linux Backup Commands</h2>
-    </section>
-
-    <section>
-      <h2>Git Commands</h2>
-      <p style="font-size: 32px">Git is currently the most widely used VCS, used for, among other things, the source code for the Linux kernel. These are some basic git line commands:</p>
-      <div class="table wide-table print-smaller" style="font-size: 20px">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>git clone</strong></div>
-          <div class="table-cell">Create a local copy of a cloud git repository (i.e., data store)</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>git clone https://github.com/hakimel/reveal.js.git</strong></li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>git pull</strong></div>
-          <div class="table-cell">Update local repository for any changes made to cloud repository</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>git status</strong></div>
-          <div class="table-cell">List local repository changes</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>git add -v</strong></div>
-          <div class="table-cell">Stage local changes to be added to the local repository</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>git add -v test</strong> (Stage file test)</li>
-              <li><strong>git add -v lectures/*</strong> (Stage all files in lectures folder)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>git commit -m</strong></div>
-          <div class="table-cell">Commit staged changes to local repository with a commit message</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>git commit -m "Fix errata"</strong> (Add staged changes to local repository with commit message Fix errata)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>git branch</strong></div>
-          <div class="table-cell">Print the name of the current branch</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>git remote</strong></div>
-          <div class="table-cell">Print the name of the cloud repository</div>
-          <div class="table-cell"></div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>git push -vu</strong></div>
-          <div class="table-cell">Upload local changes to cloud repository</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>git push -vu origin main</strong> (Push changes in the local main branch to cloud repository named origin)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Archive Commands</h2>
-      <div class="table print-smaller" style="font-size: 22px">
-        <div class="table-row" style="background-color: lightgray; font-weight: bold">
-          <div class="table-cell">Command</div>
-          <div class="table-cell">Function</div>
-          <div class="table-cell">Examples</div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>zip</strong></div>
-          <div class="table-cell">Create a ZIP archive</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>zip archbac.zip test1 test2 test3</strong> (Create ZIP archive archbac from copy of files test1, test2, and test3)</li>
-              <li><strong>zip archbac.zip testfolder</strong> (Create ZIP archive archbac from copy of folder testfolder)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: lightgray">
-          <div class="table-cell" style="white-space: nowrap"><strong>unzip</strong></div>
-          <div class="table-cell">List contents in or extract contents from a ZIP archive</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>unzip -l archbac.zip</strong> (List contents of ZIP archive archbac; lowercase &ldquo;ell&rdquo;)</li>
-              <li><strong>unzip archbac.zip</strong> (Extract contents of ZIP archive archbac into current folder)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-row" style="background-color: white">
-          <div class="table-cell" style="white-space: nowrap"><strong>tar</strong></div>
-          <div class="table-cell">Create, list contents in, or extract contents from TAR archive</div>
-          <div class="table-cell">
-            <ul>
-              <li><strong>tar cvf archbac.tar test1 test2 test3</strong> (Create TAR archive archbac from copy of files test1, test2, and test3)</li>
-              <li><strong>tar cvf archbac.tar testfolder</strong> (Create TAR archive archbac from copy of folder testfolder)</li>
-              <li><strong>tar tvf archbac.tar</strong> (List contents of TAR archive archbac)</li>
-              <li><strong>tar xvf archbac.tar</strong> (Extract contents of TAR archive archbac)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <p>Information and IT security are hot topics because of the frequency of cyber incidents, but many of these incidents threaten availability by bringing down systems and destroying data. In addition to losing business and access to valuable data for analytics, unavailable systems or data can pose compliance risks. Additionally, internal and external stakeholders have expectations regarding the availability of systems for data entry, retrieval, analysis, and use. Only available systems can make money.</p>
     </section>
   </div>
   </div>
