@@ -5,7 +5,7 @@
 
   <title>Confidentiality &amp; Privacy</title>
 
-  <meta name="author" content="Joshua G. Coyne, PhD">
+  <meta name="author" content="Joshua G. Coyne, Ph.D., CISA">
   <link rel="icon" href="../images/logo.png" type="image/x-icon" sizes="32x32">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,11 +29,11 @@
     </section>
 
     <section>
-      <h2>Accounting Architecture</h2>
+      <h2>Architecture</h2>
       <div class="flex-row">
         <div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
         <div class="flex-item" style="max-width: 65%">
-          <p>Confidentiality and privacy combine to form the second Control block in the accounting architecture framework. Unlike the other blocks in the Control section, this block comprises two related Trust Services Criteria with a single overarching goal: to prevent unauthorized access to secret information. Although unauthorized access is also the purview of security, confidentiality and privacy address risks and control activities that extend beyond what security addresses.</p>
+          <p>Confidentiality and privacy combine to form the second Control block in the architecture framework. Unlike the other blocks in the Control section, this block comprises two related Trust Services Criteria with a single overarching goal: to prevent unauthorized access to secret information. Although unauthorized access is also the purview of security, confidentiality and privacy address risks and control activities that extend beyond what security addresses.</p>
         </div>
       </div>
     </section>
@@ -75,16 +75,6 @@
     </section>
 
     <section>
-      <h2>Confidentiality/Privacy and Compliance</h2>
-      <div class="flex-row">
-        <div class="flex-item" style="max-width: 65%">
-          <p>Internal controls protect digital resources in the information system owned by either the firm itself or third parties. As a result, Compliance is particularly applicable to the Confidentiality &amp; Privacy block of the architecture. From the perspective of accountants, much of Compliance revolves around financial accounting, auditing, and tax regulations. However, Compliance also includes the laws and private contracts that dictate the protection of trade secrets, customer data, intellectual property, etc.</p>
-        </div>
-        <div class="flex-item override"><img src="../images/arch.png" alt="Accounting Architecture Model" style="max-width: 300px"/></div>
-      </div>
-    </section>
-
-    <section>
       <h2>Rights Management</h2>
       <p>Intellectual property licenses dictate approved use of licensed content. Maintenance of rights metadata prevents unauthorized access and ensures prompt deletion of content with expired licenses. As a result, rights management is a required compliance activity when using licensed content. This practice applies not only to proprietary content, but also to open source. Because open source licenses are licenses, rights management is necessary to comply with the license requirements. This frequently involves correct attribution (i.e., including the name of the original creator with the product) and reciprocation (i.e., using a license for internal modifications that is compatible with the original license).</p>
     </section>
@@ -107,8 +97,6 @@
     <section>
       <h2>Proxy Servers and Firewalls</h2>
       <p>Firewalls keep unauthorized WAN users from accessing LAN servers, but they can also keep LAN users from accessing certain WAN resources. For example, if a university wanted to prevent its employees from accessing social media sites, a firewall could block access to these sites from university computers. Proxy servers can circumvent these restrictions because to the university's firewall the client only accessed a proxy server, not a social media site.</p>
-      <!--License: CC-BY-SA 4.0 Attribution: Milesjpool-->
-      <div class="override"><img class="print-centered" src="../images/proxy-firewall.png" alt="Proxy Server through Firewall" style="max-height: 275px"/></div>
     </section>
 
     <section>
@@ -119,17 +107,11 @@
     <section>
       <h2>VPN</h2>
       <p><u><em>Virtual private network</em></u> (VPN) servers are similar to proxy servers in that they serve as an intermediary between a client and the Internet. However, VPN servers have a particular advantage over proxy servers, and that is that VPN servers use <u><em>encryption</em></u> to protect the communication between VPN server and client. As a result, VPN is a popular method for giving teleworkers secure access to corporate networks in order to access file shares, databases, or other servers.</p>
-      <div class="flex-row">
-        <!--License: Copyright Fossbytes, 2017-->
-        <div class="flex-item"><img src="../images/proxy-server.png" alt="Unecrypted Proxy Server"/></div>
-        <!--License: Copyright Fossbytes, 2017-->
-        <div class="flex-item"><img src="../images/vpn.png" alt="Encrpyted VPN"/></div>
-      </div>
     </section>
 
     <section>
       <h2>Eavesdropping</h2>
-      <p>Because the standard for network communication is plain text, anyone who can intercept a message (e.g., requesting a Web page, entering data into username and password or form fields, etc.) can read it. Strong RADIUS authentication protocols restrict access to a LAN in order to prevent network sniffing on the LAN, but anyone can connect to the Internet and sniff (i.e., eavesdrop) on communication between clients and Internet servers. Access controls cannot prevent unauthorized access to communication over the Internet. By encrypting communication to and from a client, VPN servers ensure that anyone who eavesdrops will not be able to interpret the communication. Consequently, VPNs are also a popular choice for preserving confidentiality when using public Wi-Fi networks (e.g., coffee shops).</p>
+      <p>Because the standard for network communication is plain text, anyone who can intercept a message (e.g., requesting a Web page, entering data into username and password or form fields, etc.) can read it. Strong authentication protocols restrict access to a LAN in order to prevent network sniffing on the LAN, but anyone can connect to the Internet and sniff (i.e., eavesdrop) on communication between clients and Internet servers. Access controls cannot prevent unauthorized access to communication over the Internet. By encrypting communication to and from a client, VPN servers ensure that anyone who eavesdrops will not be able to interpret the communication. Consequently, VPNs are also a popular choice for preserving confidentiality when using public Wi-Fi networks (e.g., coffee shops).</p>
     </section>
 
     <section>
@@ -165,12 +147,7 @@
 
     <section>
       <h2>Tamper-proof</h2>
-      <div class="flex-row">
-        <div class="flex-item" style="max-width: 60%">
-          <p>Calculating a hash after receiving a file and comparing it to a hash that the sender separately provides will reveal whether the file has been modified. For example, if a hacker gains access to and adds a virus to an online file, then users who download and launch the file can become infected. If the creator of the file provides a hash of the original file and users calculate a hash of the downloaded file, they would learn that the file had become corrupted and delete it.</p>
-        </div>
-        <div class="flex-item override"><img src="../images/checksum.png" alt="Checksum Verifying Download"/></div>
-      </div>
+      <p>Calculating a hash after receiving a file and comparing it to a hash that the sender separately provides will reveal whether the file has been modified. For example, if a hacker gains access to and adds a virus to an online file, then users who download and launch the file can become infected. If the creator of the file provides a hash of the original file and users calculate a hash of the downloaded file, they would learn that the file had become corrupted and delete it.</p>
     </section>
 
     <section>
@@ -185,28 +162,16 @@
     <section>
       <h2>When Worlds Collide</h2>
       <p>Hashing has a flaw. The total number of potential hashes is much smaller than the total number of different files imaginable. As a result, multiple files must have the same hash at some point. A <u><em>collision</em></u> is when two different files generate the same hash. Once a hashing algorithm causes a collision, it should no longer be used.</p>
-      <!--Copyright Alphabet Inc.-->
-      <div class="override"><img class="print-centered" src="../images/collision.png" alt="SHA-1 Collision"/></div>
     </section>
 
     <section>
       <h2>Digital Signature</h2>
-      <div class="flex-row">
-        <div class="flex-item" style="max-width: 70%">
-          <p>Another benefit of encrypted cipher text is its ability to identify the sender. Because a public-private key pair is unique to a single user, they can confirm the sender's identity by allowing the sender to attach a <u><em>digital signature</em></u> to the message. (This is different from the &ldquo;digital signature&rdquo; that cardholders draw on a screen after swiping a credit card.) A sender creates a cryptographic digital signature by (1) creating a hash of the message and (2) encrypting the hash with the sender's own private key.</p>
-        </div>
-        <div class="flex-item"><img src="../images/signing.png" alt="Digital Signature" style="max-width: 300px"/></div>
-      </div>
+      <p>Another benefit of encrypted cipher text is its ability to identify the sender. Because a public-private key pair is unique to a single user, they can confirm the sender's identity by allowing the sender to attach a <u><em>digital signature</em></u> to the message. (This is different from the &ldquo;digital signature&rdquo; that cardholders draw on a screen after swiping a credit card.) A sender creates a cryptographic digital signature by (1) creating a hash of the message and (2) encrypting the hash with the sender's own private key.</p>
     </section>
 
     <section>
       <h2>Verify the Signature</h2>
-      <div class="flex-row">
-        <div class="flex-item"><img src="../images/signature-verification.png" alt="Verify the Signature" style="max-width: 300px"/></div>
-        <div class="flex-item" style="max-width: 70%">
-          <p>The sender then transmits the message and the signature to the recipient. The recipient (1) creates a hash of the message, (2) decrypts the signature using the sender's public key and (3) compares the hash with the decrypted signature. If they are equal, then the sender's identity is confirmed <em>and</em> the message has not been modified in transit. If they are different, then either the message has been modified or the sender is not who the sender claims to be.</p>
-        </div>
-      </div>
+      <p>The sender then transmits the message and the signature to the recipient. The recipient (1) creates a hash of the message, (2) decrypts the signature using the sender's public key and (3) compares the hash with the decrypted signature. If they are equal, then the sender's identity is confirmed <em>and</em> the message has not been modified in transit. If they are different, then either the message has been modified or the sender is not who the sender claims to be.</p>
     </section>
 
     <section>
